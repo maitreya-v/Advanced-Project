@@ -6,7 +6,7 @@ import streamlit.components.v1 as components
 from pyvis.network import Network
 
 # Set the page configuration.
-st.set_page_config(page_title="Chronological Causal Graph Explorer", layout="wide")
+st.set_page_config(page_title="ADHD(underlying condition) and Diagnosis Status Causal Analysis", layout="wide")
 
 # Store the exact snapshot data from the uploaded yearly graph files.
 YEAR_DATA = {
@@ -2262,9 +2262,9 @@ div.vis-tooltip {
     return graph_html
 
 # Show the page title.
-st.title("Chronological Causal Graph Explorer")
+st.title("ADHD(underlying condition) and Diagnosis Status Causal Analysis")
 # Show a short description.
-st.caption("Use the slider to switch between fixed yearly snapshots. Node positions stay fixed within each snapshot for easier comparison.")
+# st.caption("Use the slider to switch between fixed yearly snapshots. Node positions stay fixed within each snapshot for easier comparison.")
 
 # Create the sidebar controls.
 st.sidebar.header("Controls")
