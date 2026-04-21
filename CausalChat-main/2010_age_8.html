@@ -1,0 +1,163 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 800px;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#1f77b4", "fixed": true, "font": {"color": "black", "size": 18}, "id": "ADHD", "label": "ADHD (Underlying Disorder)", "physics": false, "shape": "dot", "size": 45, "title": "Node: ADHD\nCluster: CORE\nDescription: Core disorder / final outcomes", "x": 0, "y": 0}, {"color": "#1f77b4", "fixed": true, "font": {"color": "black", "size": 18}, "id": "Diagnosis Status", "label": "Diagnosis Status", "physics": false, "shape": "dot", "size": 40, "title": "Node: Diagnosis Status\nCluster: CORE\nDescription: Core disorder / final outcomes", "x": 0, "y": 350}, {"color": "#dddddd", "fixed": true, "font": {"color": "black", "size": 13}, "id": "Age", "label": "Age", "physics": false, "shape": "dot", "size": 25, "title": "Node: Age\nCluster: FACTOR\nDescription: Observed variable", "x": -500, "y": -200}, {"color": "#bcbd22", "fixed": true, "font": {"color": "black", "size": 13}, "id": "Gender", "label": "Gender", "physics": false, "shape": "dot", "size": 25, "title": "Node: Gender\nCluster: BIAS\nDescription: Social-cultural bias / latent variables", "x": -380, "y": -200}, {"color": "#2ca02c", "fixed": true, "font": {"color": "black", "size": 13}, "id": "Genetic Risk", "label": "Genetic Risk", "physics": false, "shape": "dot", "size": 25, "title": "Node: Genetic Risk\nCluster: CLINICAL\nDescription: Clinical symptom pathway variables", "x": -300, "y": -80}, {"color": "#2ca02c", "fixed": true, "font": {"color": "black", "size": 13}, "id": "Symptom Severity", "label": "Symptom Severity", "physics": false, "shape": "dot", "size": 25, "title": "Node: Symptom Severity\nCluster: CLINICAL\nDescription: Clinical symptom pathway variables", "x": -200, "y": -200}, {"color": "#2ca02c", "fixed": true, "font": {"color": "black", "size": 13}, "id": "Symptom Type", "label": "Symptom Type", "physics": false, "shape": "dot", "size": 25, "title": "Node: Symptom Type\nCluster: CLINICAL\nDescription: Clinical symptom pathway variables", "x": -200, "y": -80}, {"color": "#2ca02c", "fixed": true, "font": {"color": "black", "size": 13}, "id": "Functional Impairment", "label": "Functional Impairment", "physics": false, "shape": "dot", "size": 25, "title": "Node: Functional Impairment\nCluster: CLINICAL\nDescription: Clinical symptom pathway variables", "x": -300, "y": 300}, {"color": "#8c564b", "fixed": true, "font": {"color": "black", "size": 13}, "id": "Parental Awareness", "label": "Parental Awareness", "physics": false, "shape": "dot", "size": 25, "title": "Node: Parental Awareness\nCluster: FAMILY\nDescription: Family response pathway", "x": -500, "y": 200}, {"color": "#8c564b", "fixed": true, "font": {"color": "black", "size": 13}, "id": "Parental Denial", "label": "Parental Denial", "physics": false, "shape": "dot", "size": 25, "title": "Node: Parental Denial\nCluster: FAMILY\nDescription: Family response pathway", "x": -620, "y": 120}, {"color": "#8c564b", "fixed": true, "font": {"color": "black", "size": 13}, "id": "Parenting Style", "label": "Parenting Style", "physics": false, "shape": "dot", "size": 25, "title": "Node: Parenting Style\nCluster: FAMILY\nDescription: Family response pathway", "x": -500, "y": 80}, {"color": "#8c564b", "fixed": true, "font": {"color": "black", "size": 13}, "id": "Family Stress", "label": "Family Stress", "physics": false, "shape": "dot", "size": 25, "title": "Node: Family Stress\nCluster: FAMILY\nDescription: Family response pathway", "x": -380, "y": 130}, {"color": "#8c564b", "fixed": true, "font": {"color": "black", "size": 13}, "id": "Household Stability", "label": "Household Stability", "physics": false, "shape": "dot", "size": 25, "title": "Node: Household Stability\nCluster: FAMILY\nDescription: Family response pathway", "x": -500, "y": 320}, {"color": "#17becf", "fixed": true, "font": {"color": "black", "size": 13}, "id": "Teacher Referral Rate", "label": "Teacher Referral Rate", "physics": false, "shape": "dot", "size": 25, "title": "Node: Teacher Referral Rate\nCluster: SCHOOL\nDescription: School / institutional pathway", "x": -100, "y": -420}, {"color": "#17becf", "fixed": true, "font": {"color": "black", "size": 13}, "id": "Classroom Size", "label": "Classroom Size", "physics": false, "shape": "dot", "size": 25, "title": "Node: Classroom Size\nCluster: SCHOOL\nDescription: School / institutional pathway", "x": 100, "y": -500}, {"color": "#17becf", "fixed": true, "font": {"color": "black", "size": 13}, "id": "Education System Pressure", "label": "Education System Pressure", "physics": false, "shape": "dot", "size": 25, "title": "Node: Education System Pressure\nCluster: SCHOOL\nDescription: School / institutional pathway", "x": 420, "y": -520}, {"color": "#17becf", "fixed": true, "font": {"color": "black", "size": 13}, "id": "School Resources", "label": "School Resources", "physics": false, "shape": "dot", "size": 25, "title": "Node: School Resources\nCluster: SCHOOL\nDescription: School / institutional pathway", "x": 300, "y": -380}, {"color": "#17becf", "fixed": true, "font": {"color": "black", "size": 13}, "id": "School Labeling Bias", "label": "School Labeling Bias", "physics": false, "shape": "dot", "size": 25, "title": "Node: School Labeling Bias\nCluster: SCHOOL\nDescription: School / institutional pathway", "x": 120, "y": -340}, {"color": "#17becf", "fixed": true, "font": {"color": "black", "size": 13}, "id": "Peer Comparison", "label": "Peer Comparison", "physics": false, "shape": "dot", "size": 25, "title": "Node: Peer Comparison\nCluster: SCHOOL\nDescription: School / institutional pathway", "x": -80, "y": -520}, {"color": "#9467bd", "fixed": true, "font": {"color": "black", "size": 13}, "id": "Access to Mental Health Care", "label": "Access to Mental Health Care", "physics": false, "shape": "dot", "size": 25, "title": "Node: Access to Mental Health Care\nCluster: ACCESS\nDescription: Healthcare access / inequality pathway", "x": 500, "y": 200}, {"color": "#9467bd", "fixed": true, "font": {"color": "black", "size": 13}, "id": "Provider Availability", "label": "Provider Availability", "physics": false, "shape": "dot", "size": 25, "title": "Node: Provider Availability\nCluster: ACCESS\nDescription: Healthcare access / inequality pathway", "x": 650, "y": 80}, {"color": "#9467bd", "fixed": true, "font": {"color": "black", "size": 13}, "id": "Cost of Evaluation", "label": "Cost of Evaluation", "physics": false, "shape": "dot", "size": 25, "title": "Node: Cost of Evaluation\nCluster: ACCESS\nDescription: Healthcare access / inequality pathway", "x": 500, "y": 480}, {"color": "#9467bd", "fixed": true, "font": {"color": "black", "size": 13}, "id": "Socioeconomic Status", "label": "Socioeconomic Status", "physics": false, "shape": "dot", "size": 25, "title": "Node: Socioeconomic Status\nCluster: ACCESS\nDescription: Healthcare access / inequality pathway", "x": 650, "y": -80}, {"color": "#9467bd", "fixed": true, "font": {"color": "black", "size": 13}, "id": "Regional Resource Inequality", "label": "Regional Resource Inequality", "physics": false, "shape": "dot", "size": 25, "title": "Node: Regional Resource Inequality\nCluster: ACCESS\nDescription: Healthcare access / inequality pathway", "x": 650, "y": -250}, {"color": "#bcbd22", "fixed": true, "font": {"color": "black", "size": 13}, "id": "Stigma", "label": "Stigma", "physics": false, "shape": "dot", "size": 25, "title": "Node: Stigma\nCluster: BIAS\nDescription: Social-cultural bias / latent variables", "x": 400, "y": -300}, {"color": "#bcbd22", "fixed": true, "font": {"color": "black", "size": 13}, "id": "Cultural Norms", "label": "Cultural Norms", "physics": false, "shape": "dot", "size": 25, "title": "Node: Cultural Norms\nCluster: BIAS\nDescription: Social-cultural bias / latent variables", "x": 550, "y": -380}, {"color": "#ff4d4d", "fixed": true, "font": {"color": "black", "size": 13}, "id": "Misdiagnosis Rate", "label": "Misdiagnosis Rate", "physics": false, "shape": "dot", "size": 25, "title": "Node: Misdiagnosis Rate\nCluster: CONTROVERSIAL\nDescription: Debated or modern diagnostic pressure pathway", "x": 200, "y": 480}, {"color": "#ff4d4d", "fixed": true, "font": {"color": "black", "size": 13}, "id": "Overdiagnosis Pressure", "label": "Overdiagnosis Pressure", "physics": false, "shape": "dot", "size": 25, "title": "Node: Overdiagnosis Pressure\nCluster: CONTROVERSIAL\nDescription: Debated or modern diagnostic pressure pathway", "x": 320, "y": 520}, {"color": "#ff4d4d", "fixed": true, "font": {"color": "black", "size": 13}, "id": "Treatment Dependency", "label": "Treatment Dependency", "physics": false, "shape": "dot", "size": 25, "title": "Node: Treatment Dependency\nCluster: CONTROVERSIAL\nDescription: Debated or modern diagnostic pressure pathway", "x": -120, "y": 500}, {"color": "#1f77b4", "fixed": true, "font": {"color": "black", "size": 13}, "id": "Quality of Life", "label": "Quality of Life", "physics": false, "shape": "dot", "size": 30, "title": "Node: Quality of Life\nCluster: CORE\nDescription: Core disorder / final outcomes", "x": -500, "y": 450}, {"color": "#f5f5f5", "fixed": true, "id": "LEGEND_NODE", "label": "LEGEND\n\nGreen Edge \u2192 Positive Effect\nRed Edge \u2192 Negative Effect\nEdge Thickness \u2192 Causal Strength\n\nBlue \u2192 Core disorder / outcomes\nGreen \u2192 Clinical variables\nCyan \u2192 School pathway\nBrown \u2192 Family pathway\nPurple \u2192 Access / inequality\nYellow-Green \u2192 Social-cultural bias\nRed-Pink \u2192 Modern diagnostic pressure / debated pathway\n", "physics": false, "shape": "box", "x": 760, "y": 470}, {"color": "#f5f5f5", "fixed": true, "id": "PERSONA_DESC", "label": "GENERAL AGE GRAPH\n\n2010 \u2022 Age 8\n\nChildhood ADHD\nStrong school detection,\nhigher parental awareness,\nand more structured treatment pathways\n", "physics": false, "shape": "box", "x": 760, "y": 250}]);
+                  edges = new vis.DataSet([{"arrows": "to", "color": "green", "from": "Genetic Risk", "label": "+", "title": "Effect: Positive\nWhy: Genetic liability contributes strongly to childhood ADHD.\nStrength: 0.88", "to": "ADHD", "width": 5.28}, {"arrows": "to", "color": "green", "from": "ADHD", "label": "+", "title": "Effect: Positive\nWhy: Underlying ADHD increases symptom severity.\nStrength: 0.90", "to": "Symptom Severity", "width": 5.4}, {"arrows": "to", "color": "green", "from": "ADHD", "label": "+", "title": "Effect: Positive\nWhy: Underlying ADHD shapes visible symptom presentation.\nStrength: 0.84", "to": "Symptom Type", "width": 5.04}, {"arrows": "to", "color": "green", "from": "Age", "label": "+", "title": "Effect: Positive\nWhy: At age 8, symptoms remain visible through behavior and school adjustment.\nStrength: 0.44", "to": "Symptom Severity", "width": 2.64}, {"arrows": "to", "color": "green", "from": "Gender", "label": "+", "title": "Effect: Positive\nWhy: Gender norms still influence which childhood behaviors are noticed.\nStrength: 0.38", "to": "Symptom Type", "width": 2.2800000000000002}, {"arrows": "to", "color": "green", "from": "Symptom Severity", "label": "+", "title": "Effect: Positive\nWhy: More severe symptoms increase daily impairment.\nStrength: 0.84", "to": "Functional Impairment", "width": 5.04}, {"arrows": "to", "color": "green", "from": "Symptom Type", "label": "+", "title": "Effect: Positive\nWhy: Certain symptom styles are likely to trigger school concern.\nStrength: 0.74", "to": "Teacher Referral Rate", "width": 4.4399999999999995}, {"arrows": "to", "color": "red", "from": "Functional Impairment", "label": "-", "title": "Effect: Negative\nWhy: Impairment lowers childhood quality of life.\nStrength: 0.86", "to": "Quality of Life", "width": 5.16}, {"arrows": "to", "color": "green", "from": "Parenting Style", "label": "+", "title": "Effect: Positive\nWhy: Family response style can intensify visible symptoms.\nStrength: 0.34", "to": "Symptom Severity", "width": 2.04}, {"arrows": "to", "color": "green", "from": "Family Stress", "label": "+", "title": "Effect: Positive\nWhy: Stressful home environments can amplify symptoms.\nStrength: 0.56", "to": "Symptom Severity", "width": 3.3600000000000003}, {"arrows": "to", "color": "red", "from": "Household Stability", "label": "-", "title": "Effect: Negative\nWhy: Stable households reduce family stress.\nStrength: 0.70", "to": "Family Stress", "width": 4.199999999999999}, {"arrows": "to", "color": "red", "from": "Parental Denial", "label": "-", "title": "Effect: Negative\nWhy: Parental denial still reduces recognition, but less than in earlier decades.\nStrength: 0.62", "to": "Parental Awareness", "width": 3.7199999999999998}, {"arrows": "to", "color": "green", "from": "Peer Comparison", "label": "+", "title": "Effect: Positive\nWhy: Comparison with peers more strongly drives parent noticing.\nStrength: 0.56", "to": "Parental Awareness", "width": 3.3600000000000003}, {"arrows": "to", "color": "green", "from": "Teacher Referral Rate", "label": "+", "title": "Effect: Positive\nWhy: School concerns strongly increase parental awareness in 2010.\nStrength: 0.84", "to": "Parental Awareness", "width": 5.04}, {"arrows": "to", "color": "green", "from": "Symptom Severity", "label": "+", "title": "Effect: Positive\nWhy: Severe symptoms are likely to trigger teacher referral.\nStrength: 0.84", "to": "Teacher Referral Rate", "width": 5.04}, {"arrows": "to", "color": "green", "from": "Classroom Size", "label": "+", "title": "Effect: Positive\nWhy: Classroom structure can still intensify school concern.\nStrength: 0.42", "to": "Teacher Referral Rate", "width": 2.52}, {"arrows": "to", "color": "green", "from": "Education System Pressure", "label": "+", "title": "Effect: Positive\nWhy: Institutional pressure can increase school referrals.\nStrength: 0.56", "to": "Teacher Referral Rate", "width": 3.3600000000000003}, {"arrows": "to", "color": "green", "from": "School Resources", "label": "+", "title": "Effect: Positive\nWhy: By 2010, school resources more strongly support referral and support pathways.\nStrength: 0.62", "to": "Teacher Referral Rate", "width": 3.7199999999999998}, {"arrows": "to", "color": "green", "from": "School Labeling Bias", "label": "+", "title": "Effect: Positive\nWhy: Behavioral labeling bias still shapes referral patterns, but less than before.\nStrength: 0.62", "to": "Teacher Referral Rate", "width": 3.7199999999999998}, {"arrows": "to", "color": "green", "from": "Socioeconomic Status", "label": "+", "title": "Effect: Positive\nWhy: Higher socioeconomic status improves access to evaluation.\nStrength: 0.74", "to": "Access to Mental Health Care", "width": 4.4399999999999995}, {"arrows": "to", "color": "red", "from": "Regional Resource Inequality", "label": "-", "title": "Effect: Negative\nWhy: Regional inequality still lowers school support capacity.\nStrength: 0.66", "to": "School Resources", "width": 3.96}, {"arrows": "to", "color": "green", "from": "Provider Availability", "label": "+", "title": "Effect: Positive\nWhy: Provider supply strongly improves access by 2010.\nStrength: 0.78", "to": "Access to Mental Health Care", "width": 4.68}, {"arrows": "to", "color": "green", "from": "Access to Mental Health Care", "label": "+", "title": "Effect: Positive\nWhy: Healthcare access meaningfully improves diagnosis likelihood.\nStrength: 0.82", "to": "Diagnosis Status", "width": 4.92}, {"arrows": "to", "color": "green", "from": "Parental Awareness", "label": "+", "title": "Effect: Positive\nWhy: Parental awareness strongly supports diagnosis.\nStrength: 0.78", "to": "Diagnosis Status", "width": 4.68}, {"arrows": "to", "color": "red", "from": "Cost of Evaluation", "label": "-", "title": "Effect: Negative\nWhy: Cost remains a barrier, though less absolute than in earlier decades.\nStrength: 0.62", "to": "Diagnosis Status", "width": 3.7199999999999998}, {"arrows": "to", "color": "red", "from": "Misdiagnosis Rate", "label": "-", "title": "Effect: Negative\nWhy: Misdiagnosis still reduces accurate identification.\nStrength: 0.46", "to": "Diagnosis Status", "width": 2.7600000000000002}, {"arrows": "to", "color": "green", "from": "Overdiagnosis Pressure", "label": "+", "title": "Effect: Positive\nWhy: By 2010, overdiagnosis discourse is visible and relevant.\nStrength: 0.42", "to": "Diagnosis Status", "width": 2.52}, {"arrows": "to", "color": "green", "from": "Diagnosis Status", "label": "+", "title": "Effect: Positive\nWhy: Diagnosis more often leads into structured treatment pathways.\nStrength: 0.58", "to": "Treatment Dependency", "width": 3.4799999999999995}, {"arrows": "to", "color": "red", "from": "Treatment Dependency", "label": "-", "title": "Effect: Negative\nWhy: Treatment can meaningfully reduce impairment.\nStrength: 0.48", "to": "Functional Impairment", "width": 2.88}, {"arrows": "to", "color": "green", "from": "Cultural Norms", "label": "+", "title": "Effect: Positive\nWhy: Stigma remains, but is weaker than in 1990.\nStrength: 0.58", "to": "Stigma", "width": 3.4799999999999995}, {"arrows": "to", "color": "red", "from": "Stigma", "label": "-", "title": "Effect: Negative\nWhy: Stigma still suppresses recognition, though less strongly.\nStrength: 0.46", "to": "Diagnosis Status", "width": 2.7600000000000002}, {"arrows": "to", "color": "green", "from": "Diagnosis Status", "label": "+", "title": "Effect: Positive\nWhy: Diagnosis can improve support and quality of life much more clearly in 2010.\nStrength: 0.74", "to": "Quality of Life", "width": 4.4399999999999995}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "barnesHut": {
+            "avoidOverlap": 0,
+            "centralGravity": 0.1,
+            "damping": 0.4,
+            "gravitationalConstant": -9000,
+            "springConstant": 0.01,
+            "springLength": 220
+        },
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

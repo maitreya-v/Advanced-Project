@@ -1,0 +1,127 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 800px;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#1f77b4", "id": "ADHD", "label": "ADHD", "shape": "dot", "size": 45, "title": "\nNode: ADHD\n\nCluster: CORE\n\nDescription:\nCore disorder / final outcomes\n"}, {"color": "#1f77b4", "id": "Diagnosis Status", "label": "Diagnosis Status", "shape": "dot", "size": 40, "title": "\nNode: Diagnosis Status\n\nCluster: CORE\n\nDescription:\nCore disorder / final outcomes\n"}, {"color": "#1f77b4", "id": "Quality of Life", "label": "Quality of Life", "shape": "dot", "size": 30, "title": "\nNode: Quality of Life\n\nCluster: CORE\n\nDescription:\nCore disorder / final outcomes\n"}, {"color": "#2ca02c", "id": "Genetic Risk", "label": "Genetic Risk", "shape": "dot", "size": 25, "title": "\nNode: Genetic Risk\n\nCluster: CLINICAL\n\nDescription:\nClinical-cognitive pathway variables\n"}, {"color": "#2ca02c", "id": "Executive Function Deficit", "label": "Executive Function Deficit", "shape": "dot", "size": 25, "title": "\nNode: Executive Function Deficit\n\nCluster: CLINICAL\n\nDescription:\nClinical-cognitive pathway variables\n"}, {"color": "#17becf", "id": "Nutrition Quality", "label": "Nutrition Quality", "shape": "dot", "size": 25, "title": "\nNode: Nutrition Quality\n\nCluster: ENVIRONMENT\n\nDescription:\nEnvironmental exposure variables\n"}, {"color": "#17becf", "id": "Sleep Quality", "label": "Sleep Quality", "shape": "dot", "size": 25, "title": "\nNode: Sleep Quality\n\nCluster: ENVIRONMENT\n\nDescription:\nEnvironmental exposure variables\n"}, {"color": "#17becf", "id": "Screen Time Exposure", "label": "Screen Time Exposure", "shape": "dot", "size": 25, "title": "\nNode: Screen Time Exposure\n\nCluster: ENVIRONMENT\n\nDescription:\nEnvironmental exposure variables\n"}, {"color": "#17becf", "id": "Early Childhood Exposure", "label": "Early Childhood Exposure", "shape": "dot", "size": 25, "title": "\nNode: Early Childhood Exposure\n\nCluster: ENVIRONMENT\n\nDescription:\nEnvironmental exposure variables\n"}, {"color": "#17becf", "id": "Digital Distraction Environment", "label": "Digital Distraction Environment", "shape": "dot", "size": 25, "title": "\nNode: Digital Distraction Environment\n\nCluster: ENVIRONMENT\n\nDescription:\nEnvironmental exposure variables\n"}, {"color": "#8c564b", "id": "Parental Mental Health", "label": "Parental Mental Health", "shape": "dot", "size": 25, "title": "\nNode: Parental Mental Health\n\nCluster: FAMILY\n\nDescription:\nFamily-context variables\n"}, {"color": "#8c564b", "id": "Family History Awareness", "label": "Family History Awareness", "shape": "dot", "size": 25, "title": "\nNode: Family History Awareness\n\nCluster: FAMILY\n\nDescription:\nFamily-context variables\n"}, {"color": "#8c564b", "id": "Home Structure Stability", "label": "Home Structure Stability", "shape": "dot", "size": 25, "title": "\nNode: Home Structure Stability\n\nCluster: FAMILY\n\nDescription:\nFamily-context variables\n"}, {"color": "#2ca02c", "id": "Symptom Severity", "label": "Symptom Severity", "shape": "dot", "size": 25, "title": "\nNode: Symptom Severity\n\nCluster: CLINICAL\n\nDescription:\nClinical-cognitive pathway variables\n"}, {"color": "#2ca02c", "id": "Functional Impairment", "label": "Functional Impairment", "shape": "dot", "size": 25, "title": "\nNode: Functional Impairment\n\nCluster: CLINICAL\n\nDescription:\nClinical-cognitive pathway variables\n"}, {"color": "#9467bd", "id": "Financial Status", "label": "Financial Status", "shape": "dot", "size": 25, "title": "\nNode: Financial Status\n\nCluster: ACCESS\n\nDescription:\nSocioeconomic / healthcare access variables\n"}, {"color": "#9467bd", "id": "Race / Ethnicity", "label": "Race / Ethnicity", "shape": "dot", "size": 25, "title": "\nNode: Race / Ethnicity\n\nCluster: ACCESS\n\nDescription:\nSocioeconomic / healthcare access variables\n"}, {"color": "#9467bd", "id": "Neighborhood Quality", "label": "Neighborhood Quality", "shape": "dot", "size": 25, "title": "\nNode: Neighborhood Quality\n\nCluster: ACCESS\n\nDescription:\nSocioeconomic / healthcare access variables\n"}, {"color": "#9467bd", "id": "Access to Mental Health Care", "label": "Access to Mental Health Care", "shape": "dot", "size": 25, "title": "\nNode: Access to Mental Health Care\n\nCluster: ACCESS\n\nDescription:\nSocioeconomic / healthcare access variables\n"}, {"color": "#9467bd", "id": "Cost of Evaluation", "label": "Cost of Evaluation", "shape": "dot", "size": 25, "title": "\nNode: Cost of Evaluation\n\nCluster: ACCESS\n\nDescription:\nSocioeconomic / healthcare access variables\n"}, {"color": "#9467bd", "id": "Clinical Guidelines Evolution", "label": "Clinical Guidelines Evolution", "shape": "dot", "size": 25, "title": "\nNode: Clinical Guidelines Evolution\n\nCluster: ACCESS\n\nDescription:\nSocioeconomic / healthcare access variables\n"}, {"color": "#ff4d4d", "id": "Social Media Awareness", "label": "Social Media Awareness", "shape": "dot", "size": 25, "title": "\nNode: Social Media Awareness\n\nCluster: CONTROVERSIAL\n\nDescription:\nControversial or debated dynamics\n"}, {"color": "#ff4d4d", "id": "Self-Diagnosis Behavior", "label": "Self-Diagnosis Behavior", "shape": "dot", "size": 25, "title": "\nNode: Self-Diagnosis Behavior\n\nCluster: CONTROVERSIAL\n\nDescription:\nControversial or debated dynamics\n"}, {"color": "#ff4d4d", "id": "Overdiagnosis Pressure", "label": "Overdiagnosis Pressure", "shape": "dot", "size": 25, "title": "\nNode: Overdiagnosis Pressure\n\nCluster: CONTROVERSIAL\n\nDescription:\nControversial or debated dynamics\n"}, {"color": "#ff4d4d", "id": "Diagnosis Feedback Loop", "label": "Diagnosis Feedback Loop", "shape": "dot", "size": 25, "title": "\nNode: Diagnosis Feedback Loop\n\nCluster: CONTROVERSIAL\n\nDescription:\nControversial or debated dynamics\n"}, {"color": "#bcbd22", "id": "Stigma", "label": "Stigma", "shape": "dot", "size": 25, "title": "\nNode: Stigma\n\nCluster: BIAS\n\nDescription:\nSocial-cultural bias / latent variables\n"}, {"color": "#bcbd22", "id": "Cultural Norms", "label": "Cultural Norms", "shape": "dot", "size": 25, "title": "\nNode: Cultural Norms\n\nCluster: BIAS\n\nDescription:\nSocial-cultural bias / latent variables\n"}, {"color": "#f5f5f5", "id": "LEGEND", "label": "\nLEGEND\n\nGreen Edge \u2192 Positive Effect\nRed Edge \u2192 Negative Effect\nEdge Thickness \u2192 Causal Power\n\nNODE CLUSTERS:\nBlue \u2192 Core disorder / outcomes\nGreen \u2192 Clinical-cognitive pathway\nCyan \u2192 Environmental exposure\nBrown \u2192 Family context\nPurple \u2192 Socioeconomic / access\nYellow-Green \u2192 Social-cultural bias\nRed-Pink \u2192 Controversial dynamics\n", "physics": false, "shape": "box", "x": -900, "y": -600}, {"color": "#f5f5f5", "id": "PERSONA_DESC", "label": "\nPERSONA 1: Undiagnosed Adult\n\n\u2022 45-year-old individual\n\u2022 High stigma \u0026 cultural resistance\n\u2022 Low financial status\n\u2022 Limited healthcare access\n\nKEY DYNAMICS:\n\u2022 Underdiagnosis despite symptoms\n\u2022 Self-diagnosis influence\n\u2022 Cost and access barriers\n", "physics": false, "shape": "box", "x": 900, "y": -600}]);
+                  edges = new vis.DataSet([{"arrows": "to", "color": "green", "from": "Genetic Risk", "title": "Genetic Risk \u2192 ADHD\nEffect: +\nPower: 0.85", "to": "ADHD", "width": 6.8}, {"arrows": "to", "color": "green", "from": "ADHD", "title": "ADHD \u2192 Executive Function Deficit\nEffect: +\nPower: 0.9", "to": "Executive Function Deficit", "width": 7.2}, {"arrows": "to", "color": "red", "from": "Nutrition Quality", "title": "Nutrition Quality \u2192 Symptom Severity\nEffect: -\nPower: 0.6", "to": "Symptom Severity", "width": 4.8}, {"arrows": "to", "color": "red", "from": "Sleep Quality", "title": "Sleep Quality \u2192 Executive Function Deficit\nEffect: -\nPower: 0.7", "to": "Executive Function Deficit", "width": 5.6}, {"arrows": "to", "color": "green", "from": "Screen Time Exposure", "title": "Screen Time Exposure \u2192 Symptom Severity\nEffect: +\nPower: 0.7", "to": "Symptom Severity", "width": 5.6}, {"arrows": "to", "color": "green", "from": "Digital Distraction Environment", "title": "Digital Distraction Environment \u2192 Screen Time Exposure\nEffect: +\nPower: 0.8", "to": "Screen Time Exposure", "width": 6.4}, {"arrows": "to", "color": "red", "from": "Parental Mental Health", "title": "Parental Mental Health \u2192 Home Structure Stability\nEffect: -\nPower: 0.7", "to": "Home Structure Stability", "width": 5.6}, {"arrows": "to", "color": "red", "from": "Home Structure Stability", "title": "Home Structure Stability \u2192 Symptom Severity\nEffect: -\nPower: 0.6", "to": "Symptom Severity", "width": 4.8}, {"arrows": "to", "color": "green", "from": "Executive Function Deficit", "title": "Executive Function Deficit \u2192 Functional Impairment\nEffect: +\nPower: 0.8", "to": "Functional Impairment", "width": 6.4}, {"arrows": "to", "color": "green", "from": "Symptom Severity", "title": "Symptom Severity \u2192 Functional Impairment\nEffect: +\nPower: 0.85", "to": "Functional Impairment", "width": 6.8}, {"arrows": "to", "color": "green", "from": "Financial Status", "title": "Financial Status \u2192 Access to Mental Health Care\nEffect: +\nPower: 0.8", "to": "Access to Mental Health Care", "width": 6.4}, {"arrows": "to", "color": "red", "from": "Race / Ethnicity", "title": "Race / Ethnicity \u2192 Access to Mental Health Care\nEffect: -\nPower: 0.6", "to": "Access to Mental Health Care", "width": 4.8}, {"arrows": "to", "color": "green", "from": "Access to Mental Health Care", "title": "Access to Mental Health Care \u2192 Diagnosis Status\nEffect: +\nPower: 0.85", "to": "Diagnosis Status", "width": 6.8}, {"arrows": "to", "color": "red", "from": "Cost of Evaluation", "title": "Cost of Evaluation \u2192 Diagnosis Status\nEffect: -\nPower: 0.7", "to": "Diagnosis Status", "width": 5.6}, {"arrows": "to", "color": "green", "from": "Social Media Awareness", "title": "Social Media Awareness \u2192 Self-Diagnosis Behavior\nEffect: +\nPower: 0.7", "to": "Self-Diagnosis Behavior", "width": 5.6}, {"arrows": "to", "color": "green", "from": "Self-Diagnosis Behavior", "title": "Self-Diagnosis Behavior \u2192 Diagnosis Status\nEffect: +\nPower: 0.6", "to": "Diagnosis Status", "width": 4.8}, {"arrows": "to", "color": "green", "from": "Overdiagnosis Pressure", "title": "Overdiagnosis Pressure \u2192 Diagnosis Status\nEffect: +\nPower: 0.75", "to": "Diagnosis Status", "width": 6.0}, {"arrows": "to", "color": "green", "from": "Diagnosis Status", "title": "Diagnosis Status \u2192 Diagnosis Feedback Loop\nEffect: +\nPower: 0.7", "to": "Diagnosis Feedback Loop", "width": 5.6}, {"arrows": "to", "color": "green", "from": "Diagnosis Feedback Loop", "title": "Diagnosis Feedback Loop \u2192 Self-Diagnosis Behavior\nEffect: +\nPower: 0.6", "to": "Self-Diagnosis Behavior", "width": 4.8}, {"arrows": "to", "color": "red", "from": "Diagnosis Status", "title": "Diagnosis Status \u2192 Functional Impairment\nEffect: -\nPower: 0.6", "to": "Functional Impairment", "width": 4.8}, {"arrows": "to", "color": "red", "from": "Functional Impairment", "title": "Functional Impairment \u2192 Quality of Life\nEffect: -\nPower: 0.9", "to": "Quality of Life", "width": 7.2}, {"arrows": "to", "color": "green", "from": "Diagnosis Status", "title": "Diagnosis Status \u2192 Quality of Life\nEffect: +\nPower: 0.8", "to": "Quality of Life", "width": 6.4}, {"arrows": "to", "color": "green", "from": "Cultural Norms", "title": "Cultural Norms \u2192 Stigma\nEffect: +\nPower: 0.7", "to": "Stigma", "width": 5.6}, {"arrows": "to", "color": "red", "from": "Stigma", "title": "Stigma \u2192 Diagnosis Status\nEffect: -\nPower: 0.75", "to": "Diagnosis Status", "width": 6.0}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {"physics": {"enabled": true}, "interaction": {"hover": true, "dragNodes": true, "zoomView": true}};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

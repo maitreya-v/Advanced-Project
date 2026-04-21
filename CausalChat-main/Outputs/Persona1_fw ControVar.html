@@ -1,0 +1,127 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 800px;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#1f77b4", "font": {"color": "black"}, "id": "ADHD", "label": "ADHD", "shape": "dot", "size": 45, "title": "Type: root"}, {"color": "#ff7f0e", "font": {"color": "black"}, "id": "Diagnosis Status", "label": "Diagnosis Status", "shape": "dot", "size": 40, "title": "Type: outcome"}, {"color": "#dddddd", "font": {"color": "black"}, "id": "Age", "label": "Age", "shape": "dot", "size": 25, "title": "Type: factor"}, {"color": "#dddddd", "font": {"color": "black"}, "id": "Gender", "label": "Gender", "shape": "dot", "size": 25, "title": "Type: factor"}, {"color": "#dddddd", "font": {"color": "black"}, "id": "Genetic Risk", "label": "Genetic Risk", "shape": "dot", "size": 25, "title": "Type: factor"}, {"color": "#2ca02c", "font": {"color": "black"}, "id": "Symptom Severity", "label": "Symptom Severity", "shape": "dot", "size": 25, "title": "Type: mediator"}, {"color": "#dddddd", "font": {"color": "black"}, "id": "Symptom Type", "label": "Symptom Type", "shape": "dot", "size": 25, "title": "Type: factor"}, {"color": "#2ca02c", "font": {"color": "black"}, "id": "Comorbid Conditions", "label": "Comorbid Conditions", "shape": "dot", "size": 25, "title": "Type: mediator"}, {"color": "#2ca02c", "font": {"color": "black"}, "id": "Functional Impairment", "label": "Functional Impairment", "shape": "dot", "size": 25, "title": "Type: mediator"}, {"color": "#dddddd", "font": {"color": "black"}, "id": "Quality of Life", "label": "Quality of Life", "shape": "dot", "size": 25, "title": "Type: factor"}, {"color": "#dddddd", "font": {"color": "black"}, "id": "Parental Awareness", "label": "Parental Awareness", "shape": "dot", "size": 25, "title": "Type: factor"}, {"color": "#dddddd", "font": {"color": "black"}, "id": "Parenting Style", "label": "Parenting Style", "shape": "dot", "size": 25, "title": "Type: factor"}, {"color": "#dddddd", "font": {"color": "black"}, "id": "Family Stress", "label": "Family Stress", "shape": "dot", "size": 25, "title": "Type: factor"}, {"color": "#dddddd", "font": {"color": "black"}, "id": "Household Stability", "label": "Household Stability", "shape": "dot", "size": 25, "title": "Type: factor"}, {"color": "#dddddd", "font": {"color": "black"}, "id": "Teacher Referral Rate", "label": "Teacher Referral Rate", "shape": "dot", "size": 25, "title": "Type: factor"}, {"color": "#dddddd", "font": {"color": "black"}, "id": "Classroom Size", "label": "Classroom Size", "shape": "dot", "size": 25, "title": "Type: factor"}, {"color": "#dddddd", "font": {"color": "black"}, "id": "Academic Demands", "label": "Academic Demands", "shape": "dot", "size": 25, "title": "Type: factor"}, {"color": "#dddddd", "font": {"color": "black"}, "id": "School Resources", "label": "School Resources", "shape": "dot", "size": 25, "title": "Type: factor"}, {"color": "#dddddd", "font": {"color": "black"}, "id": "Workplace Accommodations", "label": "Workplace Accommodations", "shape": "dot", "size": 25, "title": "Type: factor"}, {"color": "#dddddd", "font": {"color": "black"}, "id": "Access to Mental Health Care", "label": "Access to Mental Health Care", "shape": "dot", "size": 25, "title": "Type: factor"}, {"color": "#dddddd", "font": {"color": "black"}, "id": "Provider Availability", "label": "Provider Availability", "shape": "dot", "size": 25, "title": "Type: factor"}, {"color": "#dddddd", "font": {"color": "black"}, "id": "Diagnostic Criteria Variability", "label": "Diagnostic Criteria Variability", "shape": "dot", "size": 25, "title": "Type: factor"}, {"color": "#dddddd", "font": {"color": "black"}, "id": "Waiting Time for Assessment", "label": "Waiting Time for Assessment", "shape": "dot", "size": 25, "title": "Type: factor"}, {"color": "#dddddd", "font": {"color": "black"}, "id": "Cost of Evaluation", "label": "Cost of Evaluation", "shape": "dot", "size": 25, "title": "Type: factor"}, {"color": "#dddddd", "font": {"color": "black"}, "id": "Gender Bias", "label": "Gender Bias", "shape": "dot", "size": 25, "title": "Type: factor"}, {"color": "#9467bd", "font": {"color": "black"}, "id": "Socioeconomic Status", "label": "Socioeconomic Status", "shape": "dot", "size": 25, "title": "Type: confounder"}, {"color": "#dddddd", "font": {"color": "black"}, "id": "Age at Diagnosis", "label": "Age at Diagnosis", "shape": "dot", "size": 25, "title": "Type: factor"}, {"color": "#dddddd", "font": {"color": "black"}, "id": "Misdiagnosis Rate", "label": "Misdiagnosis Rate", "shape": "dot", "size": 25, "title": "Type: factor"}, {"color": "#ff4d4d", "font": {"color": "black"}, "id": "Social Media Awareness", "label": "Social Media Awareness", "shape": "dot", "size": 25, "title": "Type: controversial"}, {"color": "#2ca02c", "font": {"color": "black"}, "id": "Self-Diagnosis Behavior", "label": "Self-Diagnosis Behavior", "shape": "dot", "size": 25, "title": "Type: mediator"}, {"color": "#ff4d4d", "font": {"color": "black"}, "id": "Overdiagnosis Pressure", "label": "Overdiagnosis Pressure", "shape": "dot", "size": 25, "title": "Type: controversial"}, {"color": "#9467bd", "font": {"color": "black"}, "id": "Pharmaceutical Influence", "label": "Pharmaceutical Influence", "shape": "dot", "size": 25, "title": "Type: confounder"}, {"color": "#9467bd", "font": {"color": "black"}, "id": "Insurance Incentives", "label": "Insurance Incentives", "shape": "dot", "size": 25, "title": "Type: confounder"}, {"color": "#ffd92f", "font": {"color": "black"}, "id": "Cultural Resistance to Diagnosis", "label": "Cultural Resistance to Diagnosis", "shape": "dot", "size": 25, "title": "Type: latent"}, {"color": "#2ca02c", "font": {"color": "black"}, "id": "Diagnosis Feedback Loop", "label": "Diagnosis Feedback Loop", "shape": "dot", "size": 25, "title": "Type: mediator"}, {"color": "#9467bd", "font": {"color": "black"}, "id": "Healthcare Policy Constraints", "label": "Healthcare Policy Constraints", "shape": "dot", "size": 25, "title": "Type: confounder"}, {"color": "#ffd92f", "font": {"color": "black"}, "id": "Cultural Norms", "label": "Cultural Norms", "shape": "dot", "size": 25, "title": "Type: latent"}, {"color": "#ffd92f", "font": {"color": "black"}, "id": "Stigma", "label": "Stigma", "shape": "dot", "size": 25, "title": "Type: latent"}, {"color": "#f5f5f5", "font": {"color": "black"}, "id": "LEGEND", "label": "\nLEGEND\n\nGreen Edge \u2192 Positive Effect\nRed Edge \u2192 Negative Effect\n\nBlue \u2192 Root Cause\nOrange \u2192 Outcome\nGreen \u2192 Mediator\nPurple \u2192 Confounder\nYellow \u2192 Latent\nRed-Pink \u2192 Controversial\n", "physics": false, "shape": "box"}, {"color": "#f5f5f5", "font": {"color": "black"}, "id": "Persona", "label": "\nPERSONA 1\n\n45-year-old adult\nUndiagnosed ADHD\nHigh stigma + cultural resistance\nLow SES\nSelf-diagnosis influence present\nPolicy \u0026 access barriers\n", "physics": false, "shape": "box"}]);
+                  edges = new vis.DataSet([{"arrows": "to", "color": "green", "from": "Genetic Risk", "title": "\nGenetic Risk \u2192 ADHD\n\nEffect: Positive\nCausal Power: 0.85\n", "to": "ADHD", "width": 6.8}, {"arrows": "to", "color": "green", "from": "ADHD", "title": "\nADHD \u2192 Symptom Severity\n\nEffect: Positive\nCausal Power: 0.9\n", "to": "Symptom Severity", "width": 7.2}, {"arrows": "to", "color": "green", "from": "ADHD", "title": "\nADHD \u2192 Symptom Type\n\nEffect: Positive\nCausal Power: 0.7\n", "to": "Symptom Type", "width": 5.6}, {"arrows": "to", "color": "green", "from": "ADHD", "title": "\nADHD \u2192 Functional Impairment\n\nEffect: Positive\nCausal Power: 0.9\n", "to": "Functional Impairment", "width": 7.2}, {"arrows": "to", "color": "green", "from": "ADHD", "title": "\nADHD \u2192 Comorbid Conditions\n\nEffect: Positive\nCausal Power: 0.7\n", "to": "Comorbid Conditions", "width": 5.6}, {"arrows": "to", "color": "green", "from": "Symptom Severity", "title": "\nSymptom Severity \u2192 Functional Impairment\n\nEffect: Positive\nCausal Power: 0.8\n", "to": "Functional Impairment", "width": 6.4}, {"arrows": "to", "color": "green", "from": "Symptom Type", "title": "\nSymptom Type \u2192 Functional Impairment\n\nEffect: Positive\nCausal Power: 0.6\n", "to": "Functional Impairment", "width": 4.8}, {"arrows": "to", "color": "red", "from": "Age", "title": "\nAge \u2192 Diagnosis Status\n\nEffect: Negative\nCausal Power: 0.4\n", "to": "Diagnosis Status", "width": 3.2}, {"arrows": "to", "color": "green", "from": "Socioeconomic Status", "title": "\nSocioeconomic Status \u2192 Access to Mental Health Care\n\nEffect: Positive\nCausal Power: 0.75\n", "to": "Access to Mental Health Care", "width": 6.0}, {"arrows": "to", "color": "red", "from": "Socioeconomic Status", "title": "\nSocioeconomic Status \u2192 Cost of Evaluation\n\nEffect: Negative\nCausal Power: 0.6\n", "to": "Cost of Evaluation", "width": 4.8}, {"arrows": "to", "color": "green", "from": "Access to Mental Health Care", "title": "\nAccess to Mental Health Care \u2192 Diagnosis Status\n\nEffect: Positive\nCausal Power: 0.85\n", "to": "Diagnosis Status", "width": 6.8}, {"arrows": "to", "color": "red", "from": "Cost of Evaluation", "title": "\nCost of Evaluation \u2192 Diagnosis Status\n\nEffect: Negative\nCausal Power: 0.65\n", "to": "Diagnosis Status", "width": 5.2}, {"arrows": "to", "color": "green", "from": "Cultural Norms", "title": "\nCultural Norms \u2192 Stigma\n\nEffect: Positive\nCausal Power: 0.7\n", "to": "Stigma", "width": 5.6}, {"arrows": "to", "color": "red", "from": "Stigma", "title": "\nStigma \u2192 Diagnosis Status\n\nEffect: Negative\nCausal Power: 0.75\n", "to": "Diagnosis Status", "width": 6.0}, {"arrows": "to", "color": "red", "from": "Workplace Accommodations", "title": "\nWorkplace Accommodations \u2192 Functional Impairment\n\nEffect: Negative\nCausal Power: 0.5\n", "to": "Functional Impairment", "width": 4.0}, {"arrows": "to", "color": "green", "from": "Functional Impairment", "title": "\nFunctional Impairment \u2192 Comorbid Conditions\n\nEffect: Positive\nCausal Power: 0.65\n", "to": "Comorbid Conditions", "width": 5.2}, {"arrows": "to", "color": "green", "from": "Comorbid Conditions", "title": "\nComorbid Conditions \u2192 Diagnosis Status\n\nEffect: Positive\nCausal Power: 0.75\n", "to": "Diagnosis Status", "width": 6.0}, {"arrows": "to", "color": "red", "from": "Diagnosis Status", "title": "\nDiagnosis Status \u2192 Functional Impairment\n\nEffect: Negative\nCausal Power: 0.6\n", "to": "Functional Impairment", "width": 4.8}, {"arrows": "to", "color": "red", "from": "Functional Impairment", "title": "\nFunctional Impairment \u2192 Quality of Life\n\nEffect: Negative\nCausal Power: 0.9\n", "to": "Quality of Life", "width": 7.2}, {"arrows": "to", "color": "green", "from": "Diagnosis Status", "title": "\nDiagnosis Status \u2192 Quality of Life\n\nEffect: Positive\nCausal Power: 0.8\n", "to": "Quality of Life", "width": 6.4}, {"arrows": "to", "color": "green", "from": "Social Media Awareness", "title": "\nSocial Media Awareness \u2192 Self-Diagnosis Behavior\n\nEffect: Positive\nCausal Power: 0.7\n", "to": "Self-Diagnosis Behavior", "width": 5.6}, {"arrows": "to", "color": "green", "from": "Self-Diagnosis Behavior", "title": "\nSelf-Diagnosis Behavior \u2192 Diagnosis Status\n\nEffect: Positive\nCausal Power: 0.6\n", "to": "Diagnosis Status", "width": 4.8}, {"arrows": "to", "color": "green", "from": "Pharmaceutical Influence", "title": "\nPharmaceutical Influence \u2192 Overdiagnosis Pressure\n\nEffect: Positive\nCausal Power: 0.8\n", "to": "Overdiagnosis Pressure", "width": 6.4}, {"arrows": "to", "color": "green", "from": "Overdiagnosis Pressure", "title": "\nOverdiagnosis Pressure \u2192 Diagnosis Status\n\nEffect: Positive\nCausal Power: 0.75\n", "to": "Diagnosis Status", "width": 6.0}, {"arrows": "to", "color": "red", "from": "Insurance Incentives", "title": "\nInsurance Incentives \u2192 Cost of Evaluation\n\nEffect: Negative\nCausal Power: 0.7\n", "to": "Cost of Evaluation", "width": 5.6}, {"arrows": "to", "color": "green", "from": "Insurance Incentives", "title": "\nInsurance Incentives \u2192 Diagnosis Status\n\nEffect: Positive\nCausal Power: 0.65\n", "to": "Diagnosis Status", "width": 5.2}, {"arrows": "to", "color": "red", "from": "Cultural Resistance to Diagnosis", "title": "\nCultural Resistance to Diagnosis \u2192 Diagnosis Status\n\nEffect: Negative\nCausal Power: 0.8\n", "to": "Diagnosis Status", "width": 6.4}, {"arrows": "to", "color": "green", "from": "Diagnosis Status", "title": "\nDiagnosis Status \u2192 Diagnosis Feedback Loop\n\nEffect: Positive\nCausal Power: 0.7\n", "to": "Diagnosis Feedback Loop", "width": 5.6}, {"arrows": "to", "color": "green", "from": "Diagnosis Feedback Loop", "title": "\nDiagnosis Feedback Loop \u2192 Self-Diagnosis Behavior\n\nEffect: Positive\nCausal Power: 0.6\n", "to": "Self-Diagnosis Behavior", "width": 4.8}, {"arrows": "to", "color": "red", "from": "Healthcare Policy Constraints", "title": "\nHealthcare Policy Constraints \u2192 Access to Mental Health Care\n\nEffect: Negative\nCausal Power: 0.75\n", "to": "Access to Mental Health Care", "width": 6.0}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {"interaction": {"dragNodes": true, "dragView": true, "zoomView": true, "hover": true}, "physics": {"enabled": true, "barnesHut": {"gravitationalConstant": -4000, "centralGravity": 0.3, "springLength": 180, "springConstant": 0.05, "damping": 0.6}}};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>
