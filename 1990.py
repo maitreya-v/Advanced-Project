@@ -57,6 +57,14 @@ node_positions = {
     "Maternal Nutrition": (-750, -150),
     "Prenatal Substance Exposure": (-750, 50),
     "Birth Complications": (-750, 150),
+
+        # Treatment
+    "Medication Treatment": (260, 180),
+    "Behavioral Therapy": (120, 180),
+    "Treatment Access": (760, 220),
+    "Treatment Adherence": (260, 300),
+    "School Accommodations": (120, 300),
+    "Treatment Side Effects": (760, 320),
 }
 
 # -----------------------------
@@ -184,6 +192,26 @@ edges_1990 = [
     ("Diagnosis Status", "Functional Impairment", "-", 0.50, "Diagnosis could reduce impairment through treatment or support"),
     ("Functional Impairment", "Quality of Life", "-", 0.88, "Greater impairment strongly reduced quality of life"),
     ("Diagnosis Status", "Quality of Life", "+", 0.48, "Diagnosis could improve quality of life through recognition and intervention"),
+
+        # Treatment layer
+    ("Diagnosis Status", "Medication Treatment", "+", 0.76, "By the 1990s, diagnosis more often led to medication-based treatment."),
+    ("Diagnosis Status", "Behavioral Therapy", "+", 0.58, "Diagnosis could also lead to behavioral therapy, though medication was often more central."),
+    ("Diagnosis Status", "School Accommodations", "+", 0.44, "Diagnosis could help schools justify classroom supports or accommodations."),
+    ("Access to Mental Health Care", "Treatment Access", "+", 0.82, "Access to care strongly affected whether treatment could be started."),
+    ("Socioeconomic Status", "Treatment Access", "+", 0.76, "Higher socioeconomic status improved access to ongoing treatment."),
+    ("Treatment Access", "Medication Treatment", "+", 0.84, "When treatment access was available, medication treatment became much more likely."),
+    ("Treatment Access", "Behavioral Therapy", "+", 0.66, "Treatment access also increased access to behavioral therapy."),
+    ("Stigma", "Treatment Adherence", "-", 0.58, "Stigma could reduce consistency of long-term treatment use."),
+    ("Medication Treatment", "Symptom Severity", "-", 0.68, "Medication could substantially reduce core symptom burden in many diagnosed children."),
+    ("Behavioral Therapy", "Symptom Severity", "-", 0.34, "Behavioral therapy could modestly reduce symptom expression and improve regulation."),
+    ("Behavioral Therapy", "Functional Impairment", "-", 0.46, "Behavioral therapy could improve routines, coping, and day-to-day functioning."),
+    ("School Accommodations", "Functional Impairment", "-", 0.42, "School supports could reduce academic and classroom impairment."),
+    ("Treatment Adherence", "Medication Treatment", "+", 0.60, "Consistent adherence increased the practical benefit of medication treatment."),
+    ("Treatment Adherence", "Behavioral Therapy", "+", 0.52, "Consistent participation increased the benefit of behavioral therapy."),
+    ("Medication Treatment", "Treatment Side Effects", "+", 0.48, "Medication could produce side effects that shaped tolerability."),
+    ("Treatment Side Effects", "Treatment Adherence", "-", 0.46, "Side effects could reduce persistence with treatment."),
+    ("Medication Treatment", "Quality of Life", "+", 0.30, "Effective treatment could improve quality of life through better symptom control."),
+    ("Behavioral Therapy", "Quality of Life", "+", 0.26, "Behavioral support could improve coping and family or school functioning."),
 ]
 
 for u, v, sign, strength, explanation in edges_1990:

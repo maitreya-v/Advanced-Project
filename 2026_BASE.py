@@ -72,6 +72,14 @@ node_positions = {
     "Sleep Quality": (-150, -550),
     "Physical Activity": (0, -600),
     "Screen Time": (150, -550),
+
+        # Treatment
+    "Medication Treatment": (260, 180),
+    "Behavioral Therapy": (120, 180),
+    "Treatment Access": (760, 220),
+    "Treatment Adherence": (260, 300),
+    "School Accommodations": (120, 300),
+    "Treatment Side Effects": (760, 320),
 }
 
 # -----------------------------
@@ -214,6 +222,29 @@ edges_2026 = [
     ("Screen Time", "Symptom Severity", "+", 0.40, "Excessive screen time may worsen attention and self-regulation difficulties"),
     ("ADHD", "Sleep Quality", "-", 0.64, "ADHD often disrupts sleep routines and sleep quality"),
     ("ADHD", "Screen Time", "+", 0.42, "ADHD can increase impulsive or reward-seeking media use"),
+
+
+        # Treatment layer
+    ("Diagnosis Status", "Medication Treatment", "+", 0.84, "In the 2026 context, diagnosis commonly opens the pathway to medication treatment."),
+    ("Diagnosis Status", "Behavioral Therapy", "+", 0.72, "Diagnosis can also lead to behavioral therapy, coaching, or parent-focused support."),
+    ("Diagnosis Status", "School Accommodations", "+", 0.70, "Diagnosis often supports formal school accommodations and educational planning."),
+    ("Access to Mental Health Care", "Treatment Access", "+", 0.88, "Access to care strongly affects whether treatment can be started and sustained."),
+    ("Socioeconomic Status", "Treatment Access", "+", 0.80, "Higher socioeconomic status improves the practical ability to access and continue treatment."),
+    ("Parental Awareness", "Treatment Adherence", "+", 0.34, "More informed families may support more consistent treatment follow-through."),
+    ("Treatment Access", "Medication Treatment", "+", 0.88, "When treatment access is available, medication treatment becomes highly likely."),
+    ("Treatment Access", "Behavioral Therapy", "+", 0.80, "Treatment access also improves the chance of receiving behavioral therapy or coaching."),
+    ("Stigma", "Treatment Adherence", "-", 0.46, "Stigma can still reduce willingness to continue or consistently engage with treatment."),
+    ("Medication Treatment", "Symptom Severity", "-", 0.78, "Medication can substantially reduce symptom burden in many treated individuals."),
+    ("Behavioral Therapy", "Symptom Severity", "-", 0.42, "Behavioral therapy can modestly reduce symptom expression and improve regulation."),
+    ("Behavioral Therapy", "Functional Impairment", "-", 0.58, "Behavioral therapy can reduce daily impairment through coping strategies and structure."),
+    ("School Accommodations", "Functional Impairment", "-", 0.62, "School accommodations can reduce real-world impairment even when ADHD remains present."),
+    ("Treatment Adherence", "Medication Treatment", "+", 0.70, "Consistent adherence increases the practical benefit of medication treatment."),
+    ("Treatment Adherence", "Behavioral Therapy", "+", 0.62, "Consistent participation increases the benefit of behavioral therapy."),
+    ("Medication Treatment", "Treatment Side Effects", "+", 0.52, "Medication may produce side effects that affect tolerability."),
+    ("Treatment Side Effects", "Sleep Quality", "-", 0.34, "Treatment side effects can sometimes reduce sleep quality."),
+    ("Treatment Side Effects", "Treatment Adherence", "-", 0.50, "Side effects can reduce adherence or lead to stopping treatment."),
+    ("Medication Treatment", "Quality of Life", "+", 0.40, "Effective medication can improve quality of life through better symptom control and functioning."),
+    ("Behavioral Therapy", "Quality of Life", "+", 0.38, "Behavioral support can improve quality of life through coping, routines, and better functioning."),
 ]
 
 for u, v, sign, strength, explanation in edges_2026:

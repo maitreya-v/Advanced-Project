@@ -87,6 +87,12 @@ positioned_nodes = [
     ("Misdiagnosis Rate",         200,  480),
     ("Functional Impairment",    -300,  300),
     ("Quality of Life",          -500,  450),
+
+    # Treatment — lower-right
+    ("Medication Treatment",      260,  180),
+    ("Treatment Access",          720,  220),
+    ("Treatment Adherence",       260,  300),
+    ("Treatment Side Effects",    720,  320),
 ]
 
 for node, x, y in positioned_nodes:
@@ -172,7 +178,20 @@ edges = [
     ("Gender Bias", "Teacher Referral Rate", "+", 0.74, "Gender bias can increase referral for some groups based on stereotypes."),
     ("Gender Bias", "Diagnosis Status", "+", 0.60, "Gender bias can affect who is more likely to receive a diagnosis."),
     ("Socioeconomic Status", "Access to Mental Health Care", "+", 0.80, "Higher socioeconomic status improves access to mental health care."),
-    ("Socioeconomic Status", "Cost of Evaluation", "-", 0.76, "Higher socioeconomic status reduces the effective burden of evaluation cost.")
+    ("Socioeconomic Status", "Cost of Evaluation", "-", 0.76, "Higher socioeconomic status reduces the effective burden of evaluation cost."),
+
+        # Treatment layer
+    ("Diagnosis Status", "Medication Treatment", "+", 0.58, "In the 1970s, receiving a diagnosis could lead to medication treatment, but treatment pathways were less standardized."),
+    ("Access to Mental Health Care", "Treatment Access", "+", 0.72, "Better access to care increased the chance that treatment could actually be obtained."),
+    ("Socioeconomic Status", "Treatment Access", "+", 0.68, "Families with more resources were better able to reach and sustain treatment."),
+    ("Treatment Access", "Medication Treatment", "+", 0.74, "When treatment access was available, medication use became more likely."),
+    ("Stigma", "Treatment Adherence", "-", 0.52, "Stigma could reduce willingness to continue or consistently follow treatment."),
+    ("Medication Treatment", "Symptom Severity", "-", 0.48, "Medication could reduce visible ADHD symptom burden in some diagnosed children."),
+    ("Medication Treatment", "Functional Impairment", "-", 0.34, "Treatment could reduce some school and daily-life impairment, though benefits were less consistently structured than later decades."),
+    ("Treatment Adherence", "Medication Treatment", "+", 0.46, "More consistent adherence increased the real-world effect of medication treatment."),
+    ("Medication Treatment", "Treatment Side Effects", "+", 0.42, "Medication could introduce side effects that affected comfort or continued use."),
+    ("Treatment Side Effects", "Treatment Adherence", "-", 0.40, "Side effects could reduce willingness to stay on treatment."),
+    ("Treatment Side Effects", "Quality of Life", "-", 0.18, "Side effects could slightly reduce quality of life for some patients."),
 ]
 
 for u, v, sign, strength, explanation in edges:
@@ -205,21 +224,21 @@ net.add_node(
     physics=False
 )
 
-net.add_node(
-    "Persona",
-    label="CHRONOLOGICAL HYPOTHESIS:\n\n1970s",
-    shape="box",
-    color="#f5f5f5",
-    size=30,
-    x=700, y=300,
-    font={
-        "size": 14,
-        "color": "black",
-        "face": "Arial"
-    },
-    fixed=True,
-    physics=False
-)
+# net.add_node(
+#     "Persona",
+#     label="CHRONOLOGICAL HYPOTHESIS:\n\n1970s",
+#     shape="box",
+#     color="#f5f5f5",
+#     size=30,
+#     x=700, y=300,
+#     font={
+#         "size": 14,
+#         "color": "black",
+#         "face": "Arial"
+#     },
+#     fixed=True,
+#     physics=False
+# )
 net.write_html(filename)
 
 print("Graph saved as:", filename)
