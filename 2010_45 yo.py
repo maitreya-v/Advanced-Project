@@ -29,7 +29,7 @@ group_descriptions = {
     "environment": "Environmental burden variables",
     "family": "Family-context variables",
     "access": "Healthcare access pathway",
-    "bias": "Social-cultural bias / latent variables",
+    "bias": "Social-cultural / structural bias variables",
     "controversial": "Retrospective recognition pathway",
     "factor": "Observed variable"
 }
@@ -55,15 +55,18 @@ node_groups = {
     "Family History Awareness": "family",
 
     "Financial Status": "access",
+    "Socioeconomic Status": "access",
     "Provider Availability": "access",
     "Access to Mental Health Care": "access",
     "Waiting Time for Assessment": "access",
     "Cost of Evaluation": "access",
     "Clinical Guidelines Evolution": "access",
+    "Care Coordination": "access",
 
     "Stigma": "bias",
     "Cultural Norms": "bias",
     "Race / Ethnicity": "bias",
+    "Institutional Bias": "bias",
 
     "Self-Diagnosis Behavior": "controversial",
     "Retrospective Recognition": "controversial",
@@ -94,15 +97,18 @@ positioned_nodes = [
     ("Family History Awareness", -620, -20),
 
     ("Financial Status", 650, -80),
+    ("Socioeconomic Status", 780, -130),
     ("Provider Availability", 650, 80),
     ("Access to Mental Health Care", 500, 200),
     ("Waiting Time for Assessment", 500, 350),
     ("Cost of Evaluation", 500, 480),
     ("Clinical Guidelines Evolution", 320, 420),
+    ("Care Coordination", 650, 320),
 
     ("Stigma", 400, -300),
     ("Cultural Norms", 550, -380),
     ("Race / Ethnicity", 520, -140),
+    ("Institutional Bias", 300, -240),
 
     ("Self-Diagnosis Behavior", 220, 520),
     ("Retrospective Recognition", 60, 560),
@@ -116,11 +122,13 @@ for node, x, y in positioned_nodes:
     group = node_groups.get(node, "factor")
     net.add_node(
         node,
-        label=node if node != "ADHD" else "ADHD (Underlying Disorder)",
+        label="ADHD (Underlying Disorder)" if node == "ADHD" else node,
         color=group_colors[group],
         size=45 if node == "ADHD" else 40 if node == "Diagnosis Status" else 30 if node == "Quality of Life" else 25,
-        x=x, y=y,
-        fixed=True, physics=False,
+        x=x,
+        y=y,
+        fixed=True,
+        physics=False,
         font={"size": 18 if node in ["ADHD", "Diagnosis Status"] else 13, "color": "black"},
         title=f"Node: {node}\nCluster: {group.upper()}\nDescription: {group_descriptions[group]}"
     )
@@ -142,8 +150,8 @@ edges = [
     ("Symptom Severity", "Functional Impairment", "+", 0.84, "Greater symptom burden worsens daily functioning."),
     ("Age", "Functional Impairment", "+", 0.40, "By age 45, long-term untreated difficulties can compound impairment."),
 
-    ("Sleep Quality", "Executive Function Deficit", "-", 0.64, "Better sleep can modestly reduce executive dysfunction."),
-    ("Nutrition Quality", "Symptom Severity", "-", 0.50, "Better nutrition may modestly reduce symptom severity."),
+    ("Nutrition Quality", "Symptom Severity", "-", 0.50, "Long-term nutrition impacts cognition."),
+    ("Sleep Quality", "Executive Function Deficit", "-", 0.64, "Sleep affects executive functioning."),
     ("Digital Distraction Environment", "Chronic Stress Load", "+", 0.34, "Modern distraction environments begin to contribute to stress by 2010."),
     ("Chronic Stress Load", "Symptom Severity", "+", 0.66, "Accumulated life stress can worsen symptoms in midlife."),
 
@@ -152,14 +160,19 @@ edges = [
     ("Family History Awareness", "Retrospective Recognition", "+", 0.42, "Family history can meaningfully support later-life recognition by 2010."),
 
     ("Financial Status", "Access to Mental Health Care", "+", 0.76, "Financial resources strongly affect access to care."),
+    ("Socioeconomic Status", "Access to Mental Health Care", "+", 0.74, "Socioeconomic position shapes access to care."),
     ("Provider Availability", "Waiting Time for Assessment", "-", 0.74, "More providers reduce waiting time."),
     ("Waiting Time for Assessment", "Diagnosis Status", "-", 0.46, "Long waits still reduce diagnosis, though less sharply."),
     ("Cost of Evaluation", "Diagnosis Status", "-", 0.60, "Cost still suppresses diagnosis, though less absolutely than before."),
     ("Access to Mental Health Care", "Diagnosis Status", "+", 0.76, "Access strongly helps diagnosis in 2010."),
     ("Clinical Guidelines Evolution", "Diagnosis Status", "+", 0.60, "Guideline evolution makes delayed adult recognition much more plausible."),
+    ("Access to Mental Health Care", "Care Coordination", "+", 0.58, "Access increasingly leads to coordinated care in 2010."),
+    ("Care Coordination", "Diagnosis Status", "+", 0.36, "Care coordination helps diagnosis completion."),
     ("Misdiagnosis Rate", "Diagnosis Status", "-", 0.60, "Misdiagnosis still reduces correct diagnosis status."),
-    ("Race / Ethnicity", "Access to Mental Health Care", "-", 0.54, "Structural inequities still reduce access for some groups."),
 
+    ("Race / Ethnicity", "Institutional Bias", "+", 0.58, "Structural inequities influence institutional behavior."),
+    ("Institutional Bias", "Misdiagnosis Rate", "+", 0.44, "Bias still increases some diagnostic error."),
+    ("Institutional Bias", "Diagnosis Status", "-", 0.36, "Bias still suppresses equitable access to diagnosis."),
     ("Social Media Awareness", "Self-Diagnosis Behavior", "+", 0.34, "Online awareness begins to support self-recognition by 2010."),
     ("Retrospective Recognition", "Self-Diagnosis Behavior", "+", 0.50, "Retrospective interpretation of lifelong patterns increasingly supports self-recognition."),
     ("Self-Diagnosis Behavior", "Diagnosis Status", "+", 0.36, "Self-recognition can meaningfully push toward evaluation."),
@@ -190,14 +203,16 @@ Blue → Core disorder / outcomes
 Green → Clinical-cognitive pathway
 Cyan → Environmental burden
 Brown → Family context
-Purple → Access pathway
-Yellow-Green → Social-cultural bias
-Red-Pink → Retrospective recognition
+Purple → Access / care pathway
+Yellow-Green → Social-cultural / structural bias
+Red-Pink → Retrospective recognition pathway
 """,
     shape="box",
     color="#f5f5f5",
-    x=760, y=470,
-    fixed=True, physics=False
+    x=760,
+    y=470,
+    fixed=True,
+    physics=False
 )
 
 net.add_node(
@@ -207,17 +222,19 @@ net.add_node(
 2010
 
 Retrospective-recognition model
-Guideline support, access, and self-recognition
-become structurally meaningful,
-while delayed diagnosis remains realistic
+Guideline support, access,
+self-recognition, and coordinated care
+become structurally meaningful
 """,
     shape="box",
     color="#f5f5f5",
-    x=760, y=250,
-    fixed=True, physics=False
+    x=760,
+    y=250,
+    fixed=True,
+    physics=False
 )
 
-filename = "2010_age_45_structural.html"
+filename = "2010_age_45_updated.html"
 net.write_html(filename)
 print("Graph saved as:", filename)
 webbrowser.open("file://" + os.path.realpath(filename))
