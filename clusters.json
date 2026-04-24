@@ -1,0 +1,562 @@
+{
+  "ADHD": {
+    "x": -299.33056640625,
+    "y": 496.1536560058594,
+    "domain": "core",
+    "local_domain": "clinical",
+    "confidence": 0.0,
+    "color": "#FFD1DC"
+  },
+  "Access to Mental Health Care": {
+    "x": 134.83851623535156,
+    "y": 118.51780700683594,
+    "domain": "access",
+    "local_domain": "access",
+    "confidence": 0.4,
+    "color": "#CBAACB"
+  },
+  "Age": {
+    "x": -480.33099365234375,
+    "y": 77.58450317382812,
+    "domain": "factor",
+    "local_domain": "family",
+    "confidence": 0.0,
+    "color": "#AEC6CF"
+  },
+  "Care Coordination": {
+    "x": 184.11083984375,
+    "y": 254.11318969726562,
+    "domain": "access",
+    "local_domain": "access",
+    "confidence": 0.4,
+    "color": "#CBAACB"
+  },
+  "Career Friction": {
+    "x": 20.08981704711914,
+    "y": -255.161865234375,
+    "domain": "work",
+    "local_domain": "work",
+    "confidence": 0.4,
+    "color": "#FFB7B2"
+  },
+  "Chronic Stress Load": {
+    "x": 356.6785888671875,
+    "y": 325.6311950683594,
+    "domain": "environment",
+    "local_domain": "access",
+    "confidence": 0.0,
+    "color": "#CBAACB"
+  },
+  "Classroom Size": {
+    "x": -89.44267015293278,
+    "y": 70.31133379325723,
+    "domain": "school",
+    "local_domain": "school",
+    "confidence": 0.6,
+    "color": "#FFDAC1"
+  },
+  "Clinical Guidelines Evolution": {
+    "x": 408.8568420410156,
+    "y": 518.5733032226562,
+    "domain": "access",
+    "local_domain": "controversial",
+    "confidence": 0.0,
+    "color": "#D5E1DF"
+  },
+  "Comorbid Conditions": {
+    "x": 564.431640625,
+    "y": 447.41064453125,
+    "domain": "clinical",
+    "local_domain": "clinical",
+    "confidence": 0.4,
+    "color": "#FFD1DC"
+  },
+  "Cost of Evaluation": {
+    "x": 126.8209228515625,
+    "y": 398.80792236328125,
+    "domain": "access",
+    "local_domain": "controversial",
+    "confidence": 0.4,
+    "color": "#D5E1DF"
+  },
+  "Cultural Norms": {
+    "x": -499.8910217285156,
+    "y": -146.5888671875,
+    "domain": "bias",
+    "local_domain": "bias",
+    "confidence": 1.0,
+    "color": "#F3E5AB"
+  },
+  "Diagnosis Feedback Loop": {
+    "x": 170.24244689941406,
+    "y": 485.2144775390625,
+    "domain": "controversial",
+    "local_domain": "access",
+    "confidence": 0.4,
+    "color": "#CBAACB"
+  },
+  "Diagnosis Status": {
+    "x": 281.9287109375,
+    "y": 516.24072265625,
+    "domain": "core",
+    "local_domain": "controversial",
+    "confidence": 0.0,
+    "color": "#D5E1DF"
+  },
+  "Diagnostic Criteria Variability": {
+    "x": 439.05100723127816,
+    "y": 576.4913916771607,
+    "domain": "controversial",
+    "local_domain": "clinical",
+    "confidence": 0.2,
+    "color": "#FFD1DC"
+  },
+  "Digital Distraction Environment": {
+    "x": 408.18865966796875,
+    "y": 38.66944122314453,
+    "domain": "environment",
+    "local_domain": "environment",
+    "confidence": 0.6,
+    "color": "#C7CEEA"
+  },
+  "Digital Media Exposure": {
+    "x": 509.7950134277344,
+    "y": 88.84320068359375,
+    "domain": "environment",
+    "local_domain": "environment",
+    "confidence": 0.6,
+    "color": "#C7CEEA"
+  },
+  "Digital Overload": {
+    "x": 428.7045593261719,
+    "y": 117.07563781738281,
+    "domain": "environment",
+    "local_domain": "environment",
+    "confidence": 0.6,
+    "color": "#C7CEEA"
+  },
+  "Early Life Nutrition": {
+    "x": 154.01526800063306,
+    "y": -600.0281809575049,
+    "domain": "environment",
+    "local_domain": "environment",
+    "confidence": 0.6,
+    "color": "#C7CEEA"
+  },
+  "Education System Pressure": {
+    "x": -58.78901672363281,
+    "y": 168.57891845703125,
+    "domain": "school",
+    "local_domain": "school",
+    "confidence": 0.6,
+    "color": "#FFDAC1"
+  },
+  "Educational Access": {
+    "x": -85.88174696132504,
+    "y": 120.18437085762167,
+    "domain": "access",
+    "local_domain": "school",
+    "confidence": 0.0,
+    "color": "#FFDAC1"
+  },
+  "Employment Instability": {
+    "x": -93.66896057128906,
+    "y": -266.14691162109375,
+    "domain": "work",
+    "local_domain": "family",
+    "confidence": 0.4,
+    "color": "#AEC6CF"
+  },
+  "Environmental Exposure": {
+    "x": 573.247314453125,
+    "y": 183.18722534179688,
+    "domain": "environment",
+    "local_domain": "environment",
+    "confidence": 0.6,
+    "color": "#C7CEEA"
+  },
+  "Executive Function Deficit": {
+    "x": -267.8787536621094,
+    "y": 547.21826171875,
+    "domain": "clinical",
+    "local_domain": "controversial",
+    "confidence": 0.2,
+    "color": "#D5E1DF"
+  },
+  "Family History Awareness": {
+    "x": -326.0635681152344,
+    "y": 281.2562255859375,
+    "domain": "family",
+    "local_domain": "family",
+    "confidence": 0.8,
+    "color": "#AEC6CF"
+  },
+  "Family Stress": {
+    "x": -217.1037139892578,
+    "y": 283.370361328125,
+    "domain": "family",
+    "local_domain": "family",
+    "confidence": 0.6,
+    "color": "#AEC6CF"
+  },
+  "Financial Status": {
+    "x": -275.31341552734375,
+    "y": -291.54193115234375,
+    "domain": "access",
+    "local_domain": "family",
+    "confidence": 0.2,
+    "color": "#AEC6CF"
+  },
+  "Functional Impairment": {
+    "x": -215.63490295410156,
+    "y": 540.494873046875,
+    "domain": "clinical",
+    "local_domain": "controversial",
+    "confidence": 0.2,
+    "color": "#D5E1DF"
+  },
+  "Gender": {
+    "x": -533.88720703125,
+    "y": -5.03690242767334,
+    "domain": "bias",
+    "local_domain": "bias",
+    "confidence": 0.8,
+    "color": "#F3E5AB"
+  },
+  "Gender Bias": {
+    "x": -437.3607482910156,
+    "y": -93.4167251586914,
+    "domain": "bias",
+    "local_domain": "bias",
+    "confidence": 0.8,
+    "color": "#F3E5AB"
+  },
+  "Genetic Risk": {
+    "x": 600.0,
+    "y": 267.421875,
+    "domain": "clinical",
+    "local_domain": "environment",
+    "confidence": 0.2,
+    "color": "#C7CEEA"
+  },
+  "Home Structure Stability": {
+    "x": -95.05445098876953,
+    "y": -348.0799865722656,
+    "domain": "family",
+    "local_domain": "work",
+    "confidence": 0.2,
+    "color": "#FFB7B2"
+  },
+  "Household Stability": {
+    "x": -182.9412841796875,
+    "y": -350.24273681640625,
+    "domain": "family",
+    "local_domain": "access",
+    "confidence": 0.2,
+    "color": "#CBAACB"
+  },
+  "Institutional Bias": {
+    "x": -383.0605773925781,
+    "y": -179.78993225097656,
+    "domain": "bias",
+    "local_domain": "bias",
+    "confidence": 0.6,
+    "color": "#F3E5AB"
+  },
+  "Learning Accommodations": {
+    "x": -33.057762145996094,
+    "y": 250.46517944335938,
+    "domain": "school",
+    "local_domain": "controversial",
+    "confidence": 0.2,
+    "color": "#D5E1DF"
+  },
+  "Misdiagnosis Rate": {
+    "x": 328.7244567871094,
+    "y": 583.4048461914062,
+    "domain": "controversial",
+    "local_domain": "controversial",
+    "confidence": 0.4,
+    "color": "#D5E1DF"
+  },
+  "Neighborhood Quality": {
+    "x": 12.541937828063965,
+    "y": -407.9624938964844,
+    "domain": "access",
+    "local_domain": "family",
+    "confidence": 0.0,
+    "color": "#AEC6CF"
+  },
+  "Nutrition Quality": {
+    "x": 106.21651300522629,
+    "y": -585.3557912104638,
+    "domain": "environment",
+    "local_domain": "environment",
+    "confidence": 0.6,
+    "color": "#C7CEEA"
+  },
+  "NutritionQuality2": {
+    "x": 196.32675170898438,
+    "y": -559.2418212890625,
+    "domain": "environment",
+    "local_domain": "environment",
+    "confidence": 0.6,
+    "color": "#C7CEEA"
+  },
+  "Overdiagnosis Pressure": {
+    "x": 387.9559326171875,
+    "y": 403.1998291015625,
+    "domain": "controversial",
+    "local_domain": "environment",
+    "confidence": 0.0,
+    "color": "#C7CEEA"
+  },
+  "Parental Advocacy": {
+    "x": -335.5372619628906,
+    "y": 104.06098175048828,
+    "domain": "family",
+    "local_domain": "family",
+    "confidence": 0.6,
+    "color": "#AEC6CF"
+  },
+  "Parental Awareness": {
+    "x": -382.6563720703125,
+    "y": 190.35601806640625,
+    "domain": "family",
+    "local_domain": "family",
+    "confidence": 0.8,
+    "color": "#AEC6CF"
+  },
+  "Parental Denial": {
+    "x": -318.61492919921875,
+    "y": 196.4770965576172,
+    "domain": "family",
+    "local_domain": "family",
+    "confidence": 0.8,
+    "color": "#AEC6CF"
+  },
+  "Parental Education": {
+    "x": -265.7418212890625,
+    "y": 135.54983520507812,
+    "domain": "family",
+    "local_domain": "family",
+    "confidence": 0.6,
+    "color": "#AEC6CF"
+  },
+  "Peer Comparison": {
+    "x": 144.3163604736328,
+    "y": -359.82623291015625,
+    "domain": "family",
+    "local_domain": "work",
+    "confidence": 0.2,
+    "color": "#FFB7B2"
+  },
+  "Performance Pressure": {
+    "x": 388.6171875,
+    "y": 281.45941162109375,
+    "domain": "work",
+    "local_domain": "environment",
+    "confidence": 0.0,
+    "color": "#C7CEEA"
+  },
+  "Productivity Tooling": {
+    "x": 237.96786499023438,
+    "y": -155.457763671875,
+    "domain": "work",
+    "local_domain": "work",
+    "confidence": 0.8,
+    "color": "#FFB7B2"
+  },
+  "Provider Availability": {
+    "x": 65.09062957763672,
+    "y": -39.17255401611328,
+    "domain": "access",
+    "local_domain": "work",
+    "confidence": 0.2,
+    "color": "#FFB7B2"
+  },
+  "Provider Referral Pathway": {
+    "x": 68.01753234863281,
+    "y": 12.242960929870605,
+    "domain": "work",
+    "local_domain": "access",
+    "confidence": 0.0,
+    "color": "#CBAACB"
+  },
+  "Quality of Life": {
+    "x": 10.48879623413086,
+    "y": -535.4170532226562,
+    "domain": "core",
+    "local_domain": "environment",
+    "confidence": 0.0,
+    "color": "#C7CEEA"
+  },
+  "Race / Ethnicity": {
+    "x": -600.0,
+    "y": -81.59011840820312,
+    "domain": "bias",
+    "local_domain": "bias",
+    "confidence": 0.8,
+    "color": "#F3E5AB"
+  },
+  "Remote Collaboration Demands": {
+    "x": 242.1865997314453,
+    "y": -231.15069580078125,
+    "domain": "work",
+    "local_domain": "work",
+    "confidence": 0.8,
+    "color": "#FFB7B2"
+  },
+  "Remote Work Flexibility": {
+    "x": 183.02435302734375,
+    "y": -157.0829620361328,
+    "domain": "work",
+    "local_domain": "work",
+    "confidence": 0.8,
+    "color": "#FFB7B2"
+  },
+  "Retrospective Recognition": {
+    "x": -87.39595031738281,
+    "y": 394.0918884277344,
+    "domain": "controversial",
+    "local_domain": "controversial",
+    "confidence": 0.4,
+    "color": "#D5E1DF"
+  },
+  "School Labeling Bias": {
+    "x": -311.9665832519531,
+    "y": -81.03633117675781,
+    "domain": "school",
+    "local_domain": "school",
+    "confidence": 0.4,
+    "color": "#FFDAC1"
+  },
+  "School Resources": {
+    "x": -194.60499572753906,
+    "y": 25.610660552978516,
+    "domain": "school",
+    "local_domain": "school",
+    "confidence": 0.4,
+    "color": "#FFDAC1"
+  },
+  "School Support Plan": {
+    "x": -241.81515502929688,
+    "y": -15.976524353027344,
+    "domain": "school",
+    "local_domain": "school",
+    "confidence": 0.6,
+    "color": "#FFDAC1"
+  },
+  "Self-Diagnosis Behavior": {
+    "x": 46.19057083129883,
+    "y": 498.5419616699219,
+    "domain": "controversial",
+    "local_domain": "controversial",
+    "confidence": 0.6,
+    "color": "#D5E1DF"
+  },
+  "Self-Recognition": {
+    "x": -47.1944694519043,
+    "y": 457.87762451171875,
+    "domain": "controversial",
+    "local_domain": "controversial",
+    "confidence": 0.4,
+    "color": "#D5E1DF"
+  },
+  "Sleep Quality": {
+    "x": 81.69593811035156,
+    "y": -508.04669189453125,
+    "domain": "environment",
+    "local_domain": "environment",
+    "confidence": 0.6,
+    "color": "#C7CEEA"
+  },
+  "Social Media Awareness": {
+    "x": -454.4490051269531,
+    "y": 229.01974487304688,
+    "domain": "controversial",
+    "local_domain": "family",
+    "confidence": 0.0,
+    "color": "#AEC6CF"
+  },
+  "Socioeconomic Status": {
+    "x": -349.717041015625,
+    "y": -326.0036315917969,
+    "domain": "access",
+    "local_domain": "family",
+    "confidence": 0.2,
+    "color": "#AEC6CF"
+  },
+  "Stigma": {
+    "x": -535.3366088867188,
+    "y": -102.0218276977539,
+    "domain": "bias",
+    "local_domain": "bias",
+    "confidence": 1.0,
+    "color": "#F3E5AB"
+  },
+  "Support Ecosystem": {
+    "x": -126.62139892578125,
+    "y": -92.97866821289062,
+    "domain": "work",
+    "local_domain": "school",
+    "confidence": 0.2,
+    "color": "#FFDAC1"
+  },
+  "Symptom Severity": {
+    "x": 478.86464218278434,
+    "y": 606.7382836158081,
+    "domain": "clinical",
+    "local_domain": "controversial",
+    "confidence": 0.2,
+    "color": "#D5E1DF"
+  },
+  "Symptom Type": {
+    "x": 554.281982421875,
+    "y": 544.7907104492188,
+    "domain": "clinical",
+    "local_domain": "clinical",
+    "confidence": 0.4,
+    "color": "#FFD1DC"
+  },
+  "Teacher Referral Rate": {
+    "x": 3.412628173828125,
+    "y": 44.600772857666016,
+    "domain": "school",
+    "local_domain": "access",
+    "confidence": 0.2,
+    "color": "#CBAACB"
+  },
+  "Telehealth Access": {
+    "x": 172.0235137939453,
+    "y": 65.51213073730469,
+    "domain": "access",
+    "local_domain": "access",
+    "confidence": 0.4,
+    "color": "#CBAACB"
+  },
+  "Treatment Dependency": {
+    "x": 147.68472290039062,
+    "y": 201.54360961914062,
+    "domain": "controversial",
+    "local_domain": "access",
+    "confidence": 0.0,
+    "color": "#CBAACB"
+  },
+  "Waiting Time for Assessment": {
+    "x": 48.60427474975586,
+    "y": 386.97601318359375,
+    "domain": "access",
+    "local_domain": "controversial",
+    "confidence": 0.2,
+    "color": "#D5E1DF"
+  },
+  "Workplace Accommodations": {
+    "x": 25.167560577392578,
+    "y": -147.39138793945312,
+    "domain": "work",
+    "local_domain": "work",
+    "confidence": 0.8,
+    "color": "#FFB7B2"
+  }
+}

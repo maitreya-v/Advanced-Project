@@ -1,2 +1,6 @@
 streamlit
 pyvis
+openai
+umap
+dotenv
+sentence-transformers

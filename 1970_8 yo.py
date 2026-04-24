@@ -1,6 +1,10 @@
 from pyvis.network import Network
-import webbrowser
-import os
+from graph_background_utils import save_graph_with_fuzzy_background
+import json
+import numpy as np
+import matplotlib
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
 
 net = Network(height="800px", width="100%", directed=True, bgcolor="#ffffff")
 
@@ -12,18 +16,35 @@ net.barnes_hut(
     damping=0.4
 )
 
+# keep nodes fixed, but allow panning + zooming of the whole graph
+net.set_options("""
+var options = {
+  "interaction": {
+    "dragNodes": false,
+    "dragView": true,
+    "zoomView": true
+  },
+  "physics": {
+    "enabled": false
+  }
+}
+""")
+
 # ---------------------------------------------------
-# Cluster colors
+# Domain colors
 # ---------------------------------------------------
 group_colors = {
-    "core": "#1f77b4",
-    "clinical": "#2ca02c",
-    "school": "#17becf",
-    "family": "#8c564b",
-    "access": "#9467bd",
-    "bias": "#bcbd22",
-    "environment": "#17becf",
-    "factor": "#dddddd"
+    "core": "#B5EAD7",
+    "clinical": "#FFD1DC",
+    "school": "#FFDAC1",
+    "family": "#AEC6CF",
+    "access": "#CBAACB",
+    "bias": "#F3E5AB",
+    "environment": "#C7CEEA",
+    "controversial": "#D5E1DF",
+    "work": "#FFB7B2",
+    "factor": "#D3D3D3",
+    "unknown": "#D3D3D3"
 }
 
 group_descriptions = {
@@ -34,7 +55,10 @@ group_descriptions = {
     "access": "Healthcare access / economic barriers",
     "bias": "Social-cultural / structural bias variables",
     "environment": "Environmental and developmental exposure variables",
-    "factor": "Observed variable"
+    "controversial": "Ambiguous / debated / feedback-linked variables",
+    "work": "Workplace / productivity / adult-life variables",
+    "factor": "Observed variable",
+    "unknown": "Unclassified variable"
 }
 
 node_groups = {
@@ -78,66 +102,71 @@ node_groups = {
     "Age": "factor"
 }
 
-positioned_nodes = [
-    ("ADHD", 0, 0),
-    ("Diagnosis Status", 0, 350),
+# ---------------------------------------------------
+# Read positions from JSON
+# ---------------------------------------------------
+with open("clusters.json", "r", encoding="utf-8") as f:
+    node_positions = json.load(f)
 
-    ("Age", -500, -200),
-    ("Gender", -380, -200),
-    ("Genetic Risk", -300, -80),
-    ("Symptom Severity", -200, -200),
-    ("Symptom Type", -200, -80),
-    ("Functional Impairment", -300, 300),
+positioned_nodes = []
+graph_nodes = list(node_groups.keys())
 
-    ("Parental Awareness", -500, 200),
-    ("Parental Denial", -620, 120),
-    ("Family Stress", -380, 130),
-    ("Household Stability", -500, 320),
-    ("Parental Education", -650, 250),
+for node in graph_nodes:
+    if node in node_positions:
+        x = node_positions[node]["x"]
+        y = node_positions[node]["y"]
+        # color = node_positions[node]["color"]   local domain color
+        color = group_colors.get(node_positions[node]["domain"]) #manual domain color
+        domain = node_positions[node].get("domain", "unknown")
+        local_domain = node_positions[node].get("local_domain", "unknown")
+        confidence = node_positions[node].get("confidence", 0.0)
 
-    ("Teacher Referral Rate", -100, -420),
-    ("Classroom Size", 120, -500),
-    ("School Labeling Bias", 160, -340),
+        positioned_nodes.append((node, x, y, color, domain, local_domain, confidence))
+    else:
+        print(f"Warning: '{node}' not found in clusters.json")
 
-    ("Early Life Nutrition", -450, -350),
-    ("Nutrition Quality", -200, -350),
-    ("Sleep Quality", 50, -520),
-    ("Environmental Exposure", 220, -450),
-
-    ("Access to Mental Health Care", 500, 200),
-    ("Cost of Evaluation", 500, 480),
-    ("Socioeconomic Status", 650, -50),
-    ("Financial Status", 780, -120),
-    ("Neighborhood Quality", 780, -250),
-    ("Educational Access", 500, -350),
-
-    ("Stigma", 400, -300),
-    ("Cultural Norms", 550, -380),
-    ("Race / Ethnicity", 520, -150),
-    ("Institutional Bias", 300, -250),
-
-    ("Quality of Life", -500, 450),
-]
-
-for node, x, y in positioned_nodes:
+# ---------------------------------------------------
+# Add nodes
+# background regions carry most of the grouping info
+# node borders show local domain
+# ---------------------------------------------------
+for node, x, y, col, domain, local_domain, confidence in positioned_nodes:
     group = node_groups.get(node, "factor")
+    desc = group_descriptions.get(group, "No description available")
+
     net.add_node(
         node,
         label="ADHD (Underlying Disorder)" if node == "ADHD" else node,
-        color=group_colors[group],
+        color={
+            "background": "#e6e6e6",
+            "border": col,
+            "highlight": {
+                "background": "#f2f2f2",
+                "border": col
+            }
+        },
+        borderWidth=3,
         size=45 if node == "ADHD" else 40 if node == "Diagnosis Status" else 30 if node == "Quality of Life" else 25,
         x=x,
         y=y,
         fixed=True,
         physics=False,
         font={"size": 18 if node in ["ADHD", "Diagnosis Status"] else 13, "color": "black"},
-        title=f"Node: {node}\nCluster: {group.upper()}\nDescription: {group_descriptions[group]}"
+        title=(
+            f"Node: {node}\n"
+            f"Manual Domain: {domain.upper()}\n"
+            f"Local Domain: {local_domain.upper()}\n"
+            f"Confidence: {confidence:.2f}\n"
+            f"Description: {desc}"
+        )
     )
 
+# ---------------------------------------------------
+# Add edges
+# ---------------------------------------------------
 def add_edge(u, v, sign, strength, explanation):
     net.add_edge(
         u, v,
-        label=sign,
         color="green" if sign == "+" else "red",
         width=max(2, strength * 6),
         arrows="to",
@@ -193,49 +222,11 @@ edges = [
 for edge in edges:
     add_edge(*edge)
 
-net.add_node(
-    "LEGEND_NODE",
-    label="""LEGEND
-
-Green Edge → Positive Effect
-Red Edge → Negative Effect
-Edge Thickness → Causal Strength
-
-Blue → Core disorder / outcomes
-Green → Clinical variables
-Cyan → School / environment pathway
-Brown → Family pathway
-Purple → Access / barriers
-Yellow-Green → Social-cultural / structural bias
-""",
-    shape="box",
-    color="#f5f5f5",
-    x=760,
-    y=470,
-    fixed=True,
-    physics=False
-)
-
-net.add_node(
-    "PERSONA_DESC",
-    label="""AGE 8 GENERAL GRAPH
-
-1970
-
-Discipline / labeling model
-Sparse formal care structure
-High stigma, high denial,
-and strong structural inequality
-""",
-    shape="box",
-    color="#f5f5f5",
-    x=760,
-    y=250,
-    fixed=True,
-    physics=False
-)
-
-filename = "1970_age_8_updated.html"
-net.write_html(filename)
-print("Graph saved as:", filename)
-webbrowser.open("file://" + os.path.realpath(filename))
+if __name__ == "__main__":
+    save_graph_with_fuzzy_background(
+        net=net,
+        positioned_nodes=positioned_nodes,
+        group_colors=group_colors,
+        html_filename="1970_age_8_graph.html",
+        svg_filename="1970_age_8_regions.svg"
+    )

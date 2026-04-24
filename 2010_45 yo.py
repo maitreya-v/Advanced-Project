@@ -1,4 +1,6 @@
 from pyvis.network import Network
+from graph_background_utils import save_graph_with_fuzzy_background
+import json
 import webbrowser
 import os
 
@@ -12,15 +14,35 @@ net.barnes_hut(
     damping=0.4
 )
 
+# keep nodes fixed, but allow panning + zooming of the whole graph
+net.set_options("""
+var options = {
+  "interaction": {
+    "dragNodes": false,
+    "dragView": true,
+    "zoomView": true
+  },
+  "physics": {
+    "enabled": false
+  }
+}
+""")
+
+# ---------------------------------------------------
+# Domain colors
+# ---------------------------------------------------
 group_colors = {
-    "core": "#1f77b4",
-    "clinical": "#2ca02c",
-    "environment": "#17becf",
-    "family": "#8c564b",
-    "access": "#9467bd",
-    "bias": "#bcbd22",
-    "controversial": "#ff4d4d",
-    "factor": "#dddddd"
+    "core": "#B5EAD7",
+    "clinical": "#FFD1DC",
+    "school": "#FFDAC1",
+    "family": "#AEC6CF",
+    "access": "#CBAACB",
+    "bias": "#F3E5AB",
+    "environment": "#C7CEEA",
+    "controversial": "#D5E1DF",
+    "work": "#FFB7B2",
+    "factor": "#D3D3D3",
+    "unknown": "#D3D3D3"
 }
 
 group_descriptions = {
@@ -76,67 +98,69 @@ node_groups = {
     "Age": "factor"
 }
 
-positioned_nodes = [
-    ("ADHD", 0, 0),
-    ("Diagnosis Status", 0, 350),
+# ---------------------------------------------------
+# Read positions from JSON
+# ---------------------------------------------------
+with open("clusters.json", "r", encoding="utf-8") as f:
+    node_positions = json.load(f)
 
-    ("Age", -500, -200),
-    ("Genetic Risk", -300, -80),
-    ("Executive Function Deficit", -200, -200),
-    ("Symptom Severity", -120, -80),
-    ("Functional Impairment", -300, 300),
-    ("Misdiagnosis Rate", 140, 500),
+positioned_nodes = []
+graph_nodes = list(node_groups.keys())
 
-    ("Sleep Quality", 80, -500),
-    ("Nutrition Quality", -100, -420),
-    ("Digital Distraction Environment", 300, -380),
-    ("Chronic Stress Load", 280, -500),
+for node in graph_nodes:
+    if node in node_positions:
+        x = node_positions[node]["x"]
+        y = node_positions[node]["y"]
+        # color = node_positions[node]["color"]   local domain color
+        color = group_colors.get(node_positions[node]["domain"]) #manual domain color
+        domain = node_positions[node].get("domain", "unknown")
+        local_domain = node_positions[node].get("local_domain", "unknown")
+        confidence = node_positions[node].get("confidence", 0.0)
 
-    ("Family Stress", -380, 130),
-    ("Home Structure Stability", -500, 320),
-    ("Family History Awareness", -620, -20),
+        positioned_nodes.append((node, x, y, color, domain, local_domain, confidence))
+    else:
+        print(f"Warning: '{node}' not found in clusters.json")
 
-    ("Financial Status", 650, -80),
-    ("Socioeconomic Status", 780, -130),
-    ("Provider Availability", 650, 80),
-    ("Access to Mental Health Care", 500, 200),
-    ("Waiting Time for Assessment", 500, 350),
-    ("Cost of Evaluation", 500, 480),
-    ("Clinical Guidelines Evolution", 320, 420),
-    ("Care Coordination", 650, 320),
-
-    ("Stigma", 400, -300),
-    ("Cultural Norms", 550, -380),
-    ("Race / Ethnicity", 520, -140),
-    ("Institutional Bias", 300, -240),
-
-    ("Self-Diagnosis Behavior", 220, 520),
-    ("Retrospective Recognition", 60, 560),
-    ("Diagnosis Feedback Loop", 320, 560),
-    ("Social Media Awareness", 320, -120),
-
-    ("Quality of Life", -500, 450),
-]
-
-for node, x, y in positioned_nodes:
+# ---------------------------------------------------
+# Add nodes
+# background regions carry most of the grouping info
+# node borders show local domain
+# ---------------------------------------------------
+for node, x, y, col, domain, local_domain, confidence in positioned_nodes:
     group = node_groups.get(node, "factor")
+    desc = group_descriptions.get(group, "No description available")
+
     net.add_node(
         node,
         label="ADHD (Underlying Disorder)" if node == "ADHD" else node,
-        color=group_colors[group],
+        color={
+            "background": "#e6e6e6",
+            "border": col,
+            "highlight": {
+                "background": "#f2f2f2",
+                "border": col
+            }
+        },
+        borderWidth=3,
         size=45 if node == "ADHD" else 40 if node == "Diagnosis Status" else 30 if node == "Quality of Life" else 25,
         x=x,
         y=y,
         fixed=True,
         physics=False,
         font={"size": 18 if node in ["ADHD", "Diagnosis Status"] else 13, "color": "black"},
-        title=f"Node: {node}\nCluster: {group.upper()}\nDescription: {group_descriptions[group]}"
+        title=(
+            f"Node: {node}\n"
+            f"Manual Domain: {domain.upper()}\n"
+            f"Local Domain: {local_domain.upper()}\n"
+            f"Confidence: {confidence:.2f}\n"
+            f"Description: {desc}"
+        )
     )
 
 def add_edge(u, v, sign, strength, explanation):
     net.add_edge(
         u, v,
-        label=sign,
+        # label=sign,
         color="green" if sign == "+" else "red",
         width=max(2, strength * 6),
         arrows="to",
@@ -191,50 +215,11 @@ edges = [
 for edge in edges:
     add_edge(*edge)
 
-net.add_node(
-    "LEGEND_NODE",
-    label="""LEGEND
-
-Green Edge → Positive Effect
-Red Edge → Negative Effect
-Edge Thickness → Causal Strength
-
-Blue → Core disorder / outcomes
-Green → Clinical-cognitive pathway
-Cyan → Environmental burden
-Brown → Family context
-Purple → Access / care pathway
-Yellow-Green → Social-cultural / structural bias
-Red-Pink → Retrospective recognition pathway
-""",
-    shape="box",
-    color="#f5f5f5",
-    x=760,
-    y=470,
-    fixed=True,
-    physics=False
-)
-
-net.add_node(
-    "PERSONA_DESC",
-    label="""AGE 45 GENERAL GRAPH
-
-2010
-
-Retrospective-recognition model
-Guideline support, access,
-self-recognition, and coordinated care
-become structurally meaningful
-""",
-    shape="box",
-    color="#f5f5f5",
-    x=760,
-    y=250,
-    fixed=True,
-    physics=False
-)
-
-filename = "2010_age_45_updated.html"
-net.write_html(filename)
-print("Graph saved as:", filename)
-webbrowser.open("file://" + os.path.realpath(filename))
+if __name__ == "__main__":
+    save_graph_with_fuzzy_background(
+        net=net,
+        positioned_nodes=positioned_nodes,
+        group_colors=group_colors,
+        html_filename="2010_age_45_graph.html",
+        svg_filename="2010_age_45_regions.svg"
+    )
