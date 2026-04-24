@@ -549,7 +549,7 @@ with right_col:
 
     st.divider()
     st.subheader("Node groups")
-    for group_name in selected_snapshot["ordered_groups"]:
+    for group_name in selected_snapshot["group_colors"]:
         group_color = selected_snapshot["group_colors"].get(group_name, "#dddddd")
         group_description = selected_snapshot["group_descriptions"].get(group_name, "")
         st.markdown(
