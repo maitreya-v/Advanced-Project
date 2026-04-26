@@ -14,7 +14,6 @@ net.barnes_hut(
     damping=0.4
 )
 
-# keep nodes fixed, but allow panning + zooming of the whole graph
 net.set_options("""
 var options = {
   "interaction": {
@@ -28,9 +27,6 @@ var options = {
 }
 """)
 
-# ---------------------------------------------------
-# Domain colors
-# ---------------------------------------------------
 group_colors = {
     "core": "#B5EAD7",
     "clinical": "#FFD1DC",
@@ -40,6 +36,7 @@ group_colors = {
     "bias": "#F3E5AB",
     "environment": "#C7CEEA",
     "controversial": "#D5E1DF",
+    "treatment": "#E2C2FF",
     "work": "#FFB7B2",
     "factor": "#D3D3D3",
     "unknown": "#D3D3D3"
@@ -54,6 +51,7 @@ group_descriptions = {
     "bias": "Social-cultural / structural bias variables",
     "environment": "Environmental and chronic burden variables",
     "controversial": "Diagnostic ambiguity pathway",
+    "treatment": "1990 adult treatment pathway with improving but still limited recognition of adult ADHD",
     "factor": "Observed variable"
 }
 
@@ -97,14 +95,27 @@ node_groups = {
     "Diagnostic Criteria Variability": "controversial",
     "Misdiagnosis Rate": "controversial",
 
+    "Medication Treatment": "treatment",
+    "Behavioral Therapy": "treatment",
+    "Treatment Access": "treatment",
+    "Treatment Adherence": "treatment",
+    "School Accommodations": "treatment",
+    "Treatment Side Effects": "treatment",
+
     "Age": "factor"
 }
 
-# ---------------------------------------------------
-# Read positions from JSON
-# ---------------------------------------------------
 with open("clusters.json", "r", encoding="utf-8") as f:
     node_positions = json.load(f)
+
+fallback_positions = {
+    "Medication Treatment": {"x": 260, "y": 180},
+    "Behavioral Therapy": {"x": 120, "y": 180},
+    "Treatment Access": {"x": 760, "y": 220},
+    "Treatment Adherence": {"x": 260, "y": 300},
+    "School Accommodations": {"x": 120, "y": 300},
+    "Treatment Side Effects": {"x": 760, "y": 320}
+}
 
 positioned_nodes = []
 graph_nodes = list(node_groups.keys())
@@ -113,21 +124,22 @@ for node in graph_nodes:
     if node in node_positions:
         x = node_positions[node]["x"]
         y = node_positions[node]["y"]
-        # color = node_positions[node]["color"]   local domain color
-        color = group_colors.get(node_positions[node]["domain"]) #manual domain color
-        domain = node_positions[node].get("domain", "unknown")
+        domain = node_positions[node].get("domain", node_groups.get(node, "unknown"))
         local_domain = node_positions[node].get("local_domain", "unknown")
         confidence = node_positions[node].get("confidence", 0.0)
-
+        color = group_colors.get(domain, group_colors.get(node_groups.get(node, "unknown")))
+        positioned_nodes.append((node, x, y, color, domain, local_domain, confidence))
+    elif node in fallback_positions:
+        x = fallback_positions[node]["x"]
+        y = fallback_positions[node]["y"]
+        domain = node_groups.get(node, "treatment")
+        local_domain = domain
+        confidence = 0.85
+        color = group_colors.get(domain)
         positioned_nodes.append((node, x, y, color, domain, local_domain, confidence))
     else:
         print(f"Warning: '{node}' not found in clusters.json")
 
-# ---------------------------------------------------
-# Add nodes
-# background regions carry most of the grouping info
-# node borders show local domain
-# ---------------------------------------------------
 for node, x, y, col, domain, local_domain, confidence in positioned_nodes:
     group = node_groups.get(node, "factor")
     desc = group_descriptions.get(group, "No description available")
@@ -161,8 +173,8 @@ for node, x, y, col, domain, local_domain, confidence in positioned_nodes:
 
 def add_edge(u, v, sign, strength, explanation):
     net.add_edge(
-        u, v,
-        # label=sign,
+        u,
+        v,
         color="green" if sign == "+" else "red",
         width=max(2, strength * 6),
         arrows="to",
@@ -178,9 +190,9 @@ edges = [
     ("Nutrition Quality", "Symptom Severity", "-", 0.52, "Poor nutrition worsens cognitive regulation."),
     ("Sleep Quality", "Symptom Severity", "-", 0.62, "Sleep disruption affects functioning and regulation."),
     ("Chronic Stress Load", "Symptom Severity", "+", 0.66, "Stress amplifies symptoms."),
-
     ("Age", "Symptom Severity", "+", 0.30, "At age 32, work and adult role demands increase symptom visibility."),
     ("Gender", "Symptom Type", "+", 0.34, "Gender norms affect how adult symptoms are interpreted."),
+
     ("Symptom Severity", "Functional Impairment", "+", 0.82, "Higher severity increases occupational and daily impairment."),
     ("Comorbid Conditions", "Functional Impairment", "+", 0.76, "Comorbid burden increases impairment."),
     ("Functional Impairment", "Employment Instability", "+", 0.70, "Impairment can destabilize employment."),
@@ -202,27 +214,42 @@ edges = [
     ("Race / Ethnicity", "Institutional Bias", "+", 0.66, "Structural inequities influence institutions and healthcare pathways."),
     ("Institutional Bias", "Misdiagnosis Rate", "+", 0.60, "Bias increases diagnostic errors."),
     ("Institutional Bias", "Diagnosis Status", "-", 0.52, "Bias suppresses fair diagnosis access."),
+
     ("Diagnostic Criteria Variability", "Misdiagnosis Rate", "+", 0.82, "Inconsistent diagnostic framing increases misdiagnosis."),
     ("Comorbid Conditions", "Misdiagnosis Rate", "+", 0.76, "Comorbidity obscures accurate diagnosis."),
-    ("Misdiagnosis Rate", "DiagnosisStatusTypo", "-", 0.01, "Placeholder removed."),
-]
-
-edges = [e for e in edges if e[1] != "DiagnosisStatusTypo"]
-
-edges.extend([
     ("Misdiagnosis Rate", "Diagnosis Status", "-", 0.80, "Misdiagnosis reduces correct diagnosis status."),
+
     ("Cultural Norms", "Stigma", "+", 0.76, "1990 norms still reinforce stigma, though less than in 1970."),
     ("Stigma", "Access to Mental Health Care", "-", 0.64, "Stigma suppresses help-seeking and care access."),
     ("Gender Bias", "Diagnosis Status", "+", 0.38, "Gender bias shapes who is recognized."),
     ("Gender Bias", "Misdiagnosis Rate", "+", 0.50, "Gender stereotypes increase diagnostic error."),
 
+    ("Diagnosis Status", "Medication Treatment", "+", 0.54, "By 1990, adult diagnosis can lead to medication, but adult ADHD recognition remains incomplete."),
+    ("Diagnosis Status", "Behavioral Therapy", "+", 0.42, "Adult diagnosis may connect individuals to behavioral or coping-based support."),
+    ("Access to Mental Health Care", "Treatment Access", "+", 0.62, "Mental healthcare access improves adult treatment availability."),
+    ("Provider Availability", "Treatment Access", "+", 0.58, "More providers improve adult treatment access."),
+    ("Socioeconomic Status", "Treatment Access", "+", 0.60, "Higher SES improves access to adult treatment pathways."),
+    ("Provider Referral Pathway", "Treatment Access", "+", 0.44, "Referral pathways increase the chance of treatment access."),
+    ("Treatment Access", "Medication Treatment", "+", 0.56, "Treatment access increases adult medication likelihood."),
+    ("Treatment Access", "Behavioral Therapy", "+", 0.50, "Treatment access increases availability of behavioral support."),
+    ("Behavioral Therapy", "Functional Impairment", "-", 0.36, "Behavioral therapy may reduce occupational and daily impairment."),
+    ("Medication Treatment", "Symptom Severity", "-", 0.46, "Medication can reduce adult symptom severity."),
+    ("Medication Treatment", "Functional Impairment", "-", 0.34, "Medication may reduce adult impairment."),
+    ("Treatment Adherence", "Medication Treatment", "+", 0.46, "Adherence strengthens medication effect."),
+    ("Stigma", "Treatment Adherence", "-", 0.46, "Stigma reduces continued treatment engagement."),
+    ("Medication Treatment", "Treatment Side Effects", "+", 0.42, "Medication can introduce side effects."),
+    ("Treatment Side Effects", "Treatment Adherence", "-", 0.44, "Side effects can reduce adherence."),
+    ("Treatment Side Effects", "Quality of Life", "-", 0.22, "Side effects can slightly reduce quality of life."),
+
     ("Diagnosis Status", "Functional Impairment", "-", 0.38, "Diagnosis can modestly reduce impairment through treatment or understanding."),
     ("Functional Impairment", "Quality of Life", "-", 0.88, "Impairment lowers adult quality of life."),
     ("Diagnosis Status", "Quality of Life", "+", 0.56, "Diagnosis can improve functioning and quality of life.")
-])
+]
 
 for edge in edges:
     add_edge(*edge)
+    
+
 
 if __name__ == "__main__":
     save_graph_with_fuzzy_background(

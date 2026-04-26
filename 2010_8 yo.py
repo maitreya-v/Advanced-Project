@@ -14,7 +14,6 @@ net.barnes_hut(
     damping=0.4
 )
 
-# keep nodes fixed, but allow panning + zooming of the whole graph
 net.set_options("""
 var options = {
   "interaction": {
@@ -28,9 +27,6 @@ var options = {
 }
 """)
 
-# ---------------------------------------------------
-# Domain colors
-# ---------------------------------------------------
 group_colors = {
     "core": "#B5EAD7",
     "clinical": "#FFD1DC",
@@ -40,6 +36,7 @@ group_colors = {
     "bias": "#F3E5AB",
     "environment": "#C7CEEA",
     "controversial": "#D5E1DF",
+    "treatment": "#E2C2FF",
     "work": "#FFB7B2",
     "factor": "#D3D3D3",
     "unknown": "#D3D3D3"
@@ -53,7 +50,8 @@ group_descriptions = {
     "access": "Healthcare access pathway",
     "bias": "Social-cultural / structural bias variables",
     "environment": "Environmental and developmental exposure variables",
-    "controversial": "Modern treatment and diagnostic pressure pathway",
+    "controversial": "Modern diagnostic pressure pathway",
+    "treatment": "2010 childhood treatment pathway including medication, behavioral therapy, school accommodations, access, adherence, and side effects",
     "factor": "Observed variable"
 }
 
@@ -97,17 +95,29 @@ node_groups = {
     "Sleep Quality": "environment",
     "Environmental Exposure": "environment",
 
-    "Treatment Dependency": "controversial",
     "Overdiagnosis Pressure": "controversial",
+
+    "Medication Treatment": "treatment",
+    "Behavioral Therapy": "treatment",
+    "Treatment Access": "treatment",
+    "Treatment Adherence": "treatment",
+    "School Accommodations": "treatment",
+    "Treatment Side Effects": "treatment",
 
     "Age": "factor"
 }
 
-# ---------------------------------------------------
-# Read positions from JSON
-# ---------------------------------------------------
 with open("clusters.json", "r", encoding="utf-8") as f:
     node_positions = json.load(f)
+
+fallback_positions = {
+    "Medication Treatment": {"x": 260, "y": 180},
+    "Behavioral Therapy": {"x": 120, "y": 180},
+    "Treatment Access": {"x": 760, "y": 220},
+    "Treatment Adherence": {"x": 260, "y": 300},
+    "School Accommodations": {"x": 120, "y": 300},
+    "Treatment Side Effects": {"x": 760, "y": 320}
+}
 
 positioned_nodes = []
 graph_nodes = list(node_groups.keys())
@@ -116,21 +126,22 @@ for node in graph_nodes:
     if node in node_positions:
         x = node_positions[node]["x"]
         y = node_positions[node]["y"]
-        # color = node_positions[node]["color"]   local domain color
-        color = group_colors.get(node_positions[node]["domain"]) #manual domain color
-        domain = node_positions[node].get("domain", "unknown")
+        domain = node_positions[node].get("domain", node_groups.get(node, "unknown"))
         local_domain = node_positions[node].get("local_domain", "unknown")
         confidence = node_positions[node].get("confidence", 0.0)
-
+        color = group_colors.get(domain, group_colors.get(node_groups.get(node, "unknown")))
+        positioned_nodes.append((node, x, y, color, domain, local_domain, confidence))
+    elif node in fallback_positions:
+        x = fallback_positions[node]["x"]
+        y = fallback_positions[node]["y"]
+        domain = node_groups.get(node, "treatment")
+        local_domain = domain
+        confidence = 0.85
+        color = group_colors.get(domain)
         positioned_nodes.append((node, x, y, color, domain, local_domain, confidence))
     else:
         print(f"Warning: '{node}' not found in clusters.json")
 
-# ---------------------------------------------------
-# Add nodes
-# background regions carry most of the grouping info
-# node borders show local domain
-# ---------------------------------------------------
 for node, x, y, col, domain, local_domain, confidence in positioned_nodes:
     group = node_groups.get(node, "factor")
     desc = group_descriptions.get(group, "No description available")
@@ -164,8 +175,8 @@ for node, x, y, col, domain, local_domain, confidence in positioned_nodes:
 
 def add_edge(u, v, sign, strength, explanation):
     net.add_edge(
-        u, v,
-        # label=sign,
+        u,
+        v,
         color="green" if sign == "+" else "red",
         width=max(2, strength * 6),
         arrows="to",
@@ -176,7 +187,6 @@ edges = [
     ("Genetic Risk", "ADHD", "+", 0.88, "Genetic liability contributes strongly to childhood ADHD."),
     ("ADHD", "Symptom Severity", "+", 0.90, "Underlying ADHD increases symptom severity."),
     ("ADHD", "Symptom Type", "+", 0.84, "Underlying ADHD shapes visible behavioral presentation."),
-
     ("Age", "Symptom Severity", "+", 0.44, "At age 8, symptoms are highly visible through behavior and school functioning."),
     ("Gender", "Symptom Type", "+", 0.38, "Gender norms influence which childhood behaviors are noticed."),
 
@@ -191,11 +201,6 @@ edges = [
     ("Education System Pressure", "Teacher Referral Rate", "+", 0.56, "Institutional pressure can increase school referral."),
     ("Teacher Referral Rate", "Parental Awareness", "+", 0.84, "Teacher concern strongly raises parental awareness."),
 
-    ("ParentalEducationTypo", "Parental Awareness", "+", 0.01, "Placeholder removed."),
-]
-edges = [e for e in edges if e[0] != "ParentalEducationTypo"]
-
-edges.extend([
     ("Parental Education", "Parental Awareness", "+", 0.64, "More educated parents better recognize childhood issues."),
     ("Parental Awareness", "Parental Advocacy", "+", 0.74, "Awareness increasingly leads to active parent advocacy."),
     ("Parental Advocacy", "Diagnosis Status", "+", 0.72, "Advocacy strongly supports evaluation and diagnosis."),
@@ -219,17 +224,36 @@ edges.extend([
     ("Cultural Norms", "Stigma", "+", 0.58, "Stigma remains, but weaker than in 1990."),
     ("Stigma", "Diagnosis Status", "-", 0.46, "Stigma still suppresses recognition somewhat."),
 
-    ("Diagnosis Status", "School Support Plan", "+", 0.74, "Diagnosis can lead to formalized school support structures."),
-    ("Diagnosis Status", "Treatment Dependency", "+", 0.58, "Diagnosis increasingly leads into treatment pathways."),
-    ("Treatment Dependency", "Functional Impairment", "-", 0.48, "Treatment can meaningfully reduce impairment."),
-    ("Overdiagnosis Pressure", "Diagnosis Status", "+", 0.42, "Overdiagnosis discourse is visible by 2010."),
+    ("Diagnosis Status", "Medication Treatment", "+", 0.84, "By 2010, childhood diagnosis commonly leads to medication consideration."),
+    ("Diagnosis Status", "Behavioral Therapy", "+", 0.72, "Diagnosis connects children to behavioral and parent-focused interventions."),
+    ("Diagnosis Status", "School Accommodations", "+", 0.78, "Diagnosis strongly supports formal school accommodations."),
+    ("Access to Mental Health Care", "Treatment Access", "+", 0.84, "Access to care strongly shapes treatment availability."),
+    ("Provider Availability", "Treatment Access", "+", 0.80, "Provider availability improves treatment access."),
+    ("Socioeconomic Status", "Treatment Access", "+", 0.76, "Higher SES improves treatment continuity."),
+    ("Care Coordination", "Treatment Access", "+", 0.66, "Coordinated care improves treatment access."),
+    ("Treatment Access", "Medication Treatment", "+", 0.86, "Treatment access makes medication treatment more likely."),
+    ("Treatment Access", "Behavioral Therapy", "+", 0.78, "Treatment access improves behavioral therapy availability."),
+    ("Treatment Access", "School Accommodations", "+", 0.72, "Treatment access supports school accommodation pathways."),
+    ("Medication Treatment", "Symptom Severity", "-", 0.76, "Medication can substantially reduce childhood symptom burden."),
+    ("Behavioral Therapy", "Symptom Severity", "-", 0.44, "Behavioral therapy can reduce symptom expression and self-regulation issues."),
+    ("Behavioral Therapy", "Functional Impairment", "-", 0.56, "Behavioral therapy reduces practical impairment."),
+    ("School Accommodations", "Functional Impairment", "-", 0.64, "School accommodations reduce academic impairment."),
+    ("Treatment Adherence", "Medication Treatment", "+", 0.70, "Adherence increases real-world medication benefit."),
+    ("Treatment Adherence", "Behavioral Therapy", "+", 0.62, "Participation improves behavioral therapy effect."),
+    ("Stigma", "Treatment Adherence", "-", 0.40, "Stigma can reduce consistent treatment participation."),
+    ("Medication Treatment", "Treatment Side Effects", "+", 0.50, "Medication side effects remain relevant to tolerability."),
+    ("Treatment Side Effects", "Treatment Adherence", "-", 0.46, "Side effects can reduce adherence."),
+    ("Treatment Side Effects", "Quality of Life", "-", 0.20, "Side effects can slightly reduce quality of life."),
 
+    ("Diagnosis Status", "School Support Plan", "+", 0.74, "Diagnosis can lead to formalized school support structures."),
+    ("Overdiagnosis Pressure", "Diagnosis Status", "+", 0.42, "Overdiagnosis discourse is visible by 2010."),
     ("Functional Impairment", "Quality of Life", "-", 0.86, "Impairment reduces quality of life."),
     ("Diagnosis Status", "Quality of Life", "+", 0.74, "Diagnosis can strongly improve support and quality of life.")
-])
+]
 
 for edge in edges:
     add_edge(*edge)
+
 
 if __name__ == "__main__":
     save_graph_with_fuzzy_background(

@@ -15,7 +15,7 @@ net.barnes_hut(
     spring_strength=0.01,
     damping=0.4
 )
-# keep nodes fixed, but allow panning + zooming of the whole graph
+
 net.set_options("""
 var options = {
   "interaction": {
@@ -29,9 +29,6 @@ var options = {
 }
 """)
 
-# ---------------------------------------------------
-# Domain colors
-# ---------------------------------------------------
 group_colors = {
     "core": "#B5EAD7",
     "clinical": "#FFD1DC",
@@ -41,6 +38,7 @@ group_colors = {
     "bias": "#F3E5AB",
     "environment": "#C7CEEA",
     "controversial": "#D5E1DF",
+    "treatment": "#E2C2FF",
     "work": "#FFB7B2",
     "factor": "#D3D3D3",
     "unknown": "#D3D3D3"
@@ -54,6 +52,7 @@ group_descriptions = {
     "access": "Socioeconomic / healthcare access variables",
     "bias": "Social-cultural / structural bias variables",
     "controversial": "Historically weak or minimal pathway",
+    "treatment": "Very weak midlife adult treatment pathway in 1970, limited by low recognition and stigma",
     "work": "Workplace / productivity / adult-life variables",
     "factor": "Observed variable"
 }
@@ -90,14 +89,23 @@ node_groups = {
     "Self-Diagnosis Behavior": "controversial",
     "Clinical Guidelines Evolution": "controversial",
 
+    "Medication Treatment": "treatment",
+    "Treatment Access": "treatment",
+    "Treatment Adherence": "treatment",
+    "Treatment Side Effects": "treatment",
+
     "Age": "factor"
 }
 
-# ---------------------------------------------------
-# Read positions from JSON
-# ---------------------------------------------------
 with open("clusters.json", "r", encoding="utf-8") as f:
     node_positions = json.load(f)
+
+fallback_positions = {
+    "Medication Treatment": {"x": 260, "y": 180},
+    "Treatment Access": {"x": 720, "y": 220},
+    "Treatment Adherence": {"x": 260, "y": 300},
+    "Treatment Side Effects": {"x": 720, "y": 320}
+}
 
 positioned_nodes = []
 graph_nodes = list(node_groups.keys())
@@ -106,21 +114,22 @@ for node in graph_nodes:
     if node in node_positions:
         x = node_positions[node]["x"]
         y = node_positions[node]["y"]
-        # color = node_positions[node]["color"]   local domain color
-        color = group_colors.get(node_positions[node]["domain"]) #manual domain color
-        domain = node_positions[node].get("domain", "unknown")
+        domain = node_positions[node].get("domain", node_groups.get(node, "unknown"))
         local_domain = node_positions[node].get("local_domain", "unknown")
         confidence = node_positions[node].get("confidence", 0.0)
-
+        color = group_colors.get(domain, group_colors.get(node_groups.get(node, "unknown")))
+        positioned_nodes.append((node, x, y, color, domain, local_domain, confidence))
+    elif node in fallback_positions:
+        x = fallback_positions[node]["x"]
+        y = fallback_positions[node]["y"]
+        domain = node_groups.get(node, "treatment")
+        local_domain = domain
+        confidence = 0.85
+        color = group_colors.get(domain)
         positioned_nodes.append((node, x, y, color, domain, local_domain, confidence))
     else:
         print(f"Warning: '{node}' not found in clusters.json")
 
-# ---------------------------------------------------
-# Add nodes
-# background regions carry most of the grouping info
-# node borders show local domain
-# ---------------------------------------------------
 for node, x, y, col, domain, local_domain, confidence in positioned_nodes:
     group = node_groups.get(node, "factor")
     desc = group_descriptions.get(group, "No description available")
@@ -152,13 +161,10 @@ for node, x, y, col, domain, local_domain, confidence in positioned_nodes:
         )
     )
 
-# ---------------------------------------------------
-# Add edges
-# ---------------------------------------------------
 def add_edge(u, v, sign, strength, explanation):
     net.add_edge(
-        u, v,
-        # label=sign,
+        u,
+        v,
         color="green" if sign == "+" else "red",
         width=max(2, strength * 6),
         arrows="to",
@@ -195,6 +201,18 @@ edges = [
     ("Stigma", "Diagnosis Status", "-", 0.84, "High stigma suppresses adult diagnosis."),
     ("Stigma", "Self-Diagnosis Behavior", "-", 0.68, "Stigma discourages self-recognition and help-seeking."),
 
+    ("Diagnosis Status", "Medication Treatment", "+", 0.18, "At age 45 in 1970, diagnosis rarely translated into structured ADHD medication treatment."),
+    ("Access to Mental Health Care", "Treatment Access", "+", 0.44, "Mental health access can enable treatment, but midlife adult ADHD pathways are very weak."),
+    ("Socioeconomic Status", "Treatment Access", "+", 0.50, "Higher socioeconomic status improves the chance of reaching treatment."),
+    ("Treatment Access", "Medication Treatment", "+", 0.34, "Treatment access can lead to medication, but the pathway is weak for midlife adults in 1970."),
+    ("Stigma", "Treatment Adherence", "-", 0.56, "High stigma reduces treatment continuation and help-seeking."),
+    ("Medication Treatment", "Symptom Severity", "-", 0.22, "Medication may reduce symptoms, but recognition and treatment are marginal in this age group."),
+    ("Medication Treatment", "Functional Impairment", "-", 0.18, "Medication may slightly reduce impairment, but cumulative adult burden remains strong."),
+    ("Treatment Adherence", "Medication Treatment", "+", 0.26, "Adherence is necessary for treatment effect, but continuation is difficult in this context."),
+    ("Medication Treatment", "Treatment Side Effects", "+", 0.36, "Medication can introduce side effects."),
+    ("Treatment Side Effects", "Treatment Adherence", "-", 0.46, "Side effects can reduce continued adherence."),
+    ("Treatment Side Effects", "Quality of Life", "-", 0.22, "Side effects can slightly reduce quality of life."),
+
     ("Diagnosis Status", "Functional Impairment", "-", 0.28, "Diagnosis can modestly reduce impairment through explanation or limited treatment."),
     ("Functional Impairment", "Quality of Life", "-", 0.90, "Cumulative impairment strongly lowers quality of life."),
     ("Diagnosis Status", "Quality of Life", "+", 0.46, "Diagnosis can modestly improve quality of life in midlife.")
@@ -202,6 +220,7 @@ edges = [
 
 for edge in edges:
     add_edge(*edge)
+
 
 if __name__ == "__main__":
     save_graph_with_fuzzy_background(

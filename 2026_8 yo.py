@@ -14,7 +14,6 @@ net.barnes_hut(
     damping=0.4
 )
 
-# keep nodes fixed, but allow panning + zooming of the whole graph
 net.set_options("""
 var options = {
   "interaction": {
@@ -28,9 +27,6 @@ var options = {
 }
 """)
 
-# ---------------------------------------------------
-# Domain colors
-# ---------------------------------------------------
 group_colors = {
     "core": "#B5EAD7",
     "clinical": "#FFD1DC",
@@ -40,6 +36,7 @@ group_colors = {
     "bias": "#F3E5AB",
     "environment": "#C7CEEA",
     "controversial": "#D5E1DF",
+    "treatment": "#E2C2FF",
     "work": "#FFB7B2",
     "factor": "#D3D3D3",
     "unknown": "#D3D3D3"
@@ -54,6 +51,7 @@ group_descriptions = {
     "bias": "Social-cultural / structural bias variables",
     "environment": "Environmental and developmental exposure variables",
     "controversial": "Modern diagnostic pressure / discourse pathway",
+    "treatment": "2026 childhood treatment pathway including medication, behavioral therapy, school accommodations, digital supports, telehealth, adherence, and side effects",
     "factor": "Observed variable"
 }
 
@@ -105,14 +103,31 @@ node_groups = {
     "Overdiagnosis Pressure": "controversial",
     "Social Media Awareness": "controversial",
 
+    "Medication Treatment": "treatment",
+    "Behavioral Therapy": "treatment",
+    "Treatment Access": "treatment",
+    "Treatment Adherence": "treatment",
+    "School Accommodations": "treatment",
+    "Digital Therapeutics": "treatment",
+    "Telehealth Treatment": "treatment",
+    "Treatment Side Effects": "treatment",
+
     "Age": "factor"
 }
 
-# ---------------------------------------------------
-# Read positions from JSON
-# ---------------------------------------------------
 with open("clusters.json", "r", encoding="utf-8") as f:
     node_positions = json.load(f)
+
+fallback_positions = {
+    "Medication Treatment": {"x": 260, "y": 180},
+    "Behavioral Therapy": {"x": 120, "y": 180},
+    "Treatment Access": {"x": 760, "y": 220},
+    "Treatment Adherence": {"x": 260, "y": 300},
+    "School Accommodations": {"x": 120, "y": 300},
+    "Digital Therapeutics": {"x": 480, "y": 300},
+    "Telehealth Treatment": {"x": 620, "y": 300},
+    "Treatment Side Effects": {"x": 760, "y": 320}
+}
 
 positioned_nodes = []
 graph_nodes = list(node_groups.keys())
@@ -121,21 +136,22 @@ for node in graph_nodes:
     if node in node_positions:
         x = node_positions[node]["x"]
         y = node_positions[node]["y"]
-        # color = node_positions[node]["color"]   local domain color
-        color = group_colors.get(node_positions[node]["domain"]) #manual domain color
-        domain = node_positions[node].get("domain", "unknown")
+        domain = node_positions[node].get("domain", node_groups.get(node, "unknown"))
         local_domain = node_positions[node].get("local_domain", "unknown")
         confidence = node_positions[node].get("confidence", 0.0)
-
+        color = group_colors.get(domain, group_colors.get(node_groups.get(node, "unknown")))
+        positioned_nodes.append((node, x, y, color, domain, local_domain, confidence))
+    elif node in fallback_positions:
+        x = fallback_positions[node]["x"]
+        y = fallback_positions[node]["y"]
+        domain = node_groups.get(node, "treatment")
+        local_domain = domain
+        confidence = 0.85
+        color = group_colors.get(domain)
         positioned_nodes.append((node, x, y, color, domain, local_domain, confidence))
     else:
         print(f"Warning: '{node}' not found in clusters.json")
 
-# ---------------------------------------------------
-# Add nodes
-# background regions carry most of the grouping info
-# node borders show local domain
-# ---------------------------------------------------
 for node, x, y, col, domain, local_domain, confidence in positioned_nodes:
     group = node_groups.get(node, "factor")
     desc = group_descriptions.get(group, "No description available")
@@ -169,8 +185,8 @@ for node, x, y, col, domain, local_domain, confidence in positioned_nodes:
 
 def add_edge(u, v, sign, strength, explanation):
     net.add_edge(
-        u, v,
-        # label=sign,
+        u,
+        v,
         color="green" if sign == "+" else "red",
         width=max(2, strength * 6),
         arrows="to",
@@ -181,7 +197,6 @@ edges = [
     ("Genetic Risk", "ADHD", "+", 0.88, "Genetic liability contributes strongly to childhood ADHD."),
     ("ADHD", "Symptom Severity", "+", 0.90, "Underlying ADHD increases symptom severity."),
     ("ADHD", "Symptom Type", "+", 0.84, "Underlying ADHD shapes visible behavioral presentation."),
-
     ("Age", "Symptom Severity", "+", 0.44, "At age 8, symptoms are highly visible through behavior and school functioning."),
     ("Gender", "Symptom Type", "+", 0.36, "Gender norms still influence which childhood behaviors are noticed."),
 
@@ -191,17 +206,13 @@ edges = [
     ("Environmental Exposure", "Symptom Severity", "+", 0.34, "Environmental stressors can worsen symptoms."),
     ("Digital Media Exposure", "Symptom Severity", "+", 0.40, "High digital media exposure can intensify attention dysregulation in 2026."),
 
-    ("SymptomSeverityTypo", "Functional Impairment", "+", 0.01, "Placeholder removed."),
-]
-edges = [e for e in edges if e[0] != "SymptomSeverityTypo"]
-
-edges.extend([
     ("Symptom Severity", "Functional Impairment", "+", 0.84, "More severe symptoms increase impairment."),
     ("Symptom Type", "Teacher Referral Rate", "+", 0.76, "Certain symptom patterns are likely to trigger teacher concern."),
     ("School Resources", "Teacher Referral Rate", "+", 0.74, "School resources strongly support detection in 2026."),
     ("Education System Pressure", "Teacher Referral Rate", "+", 0.54, "Institutional pressure still influences school referral."),
     ("Teacher Referral Rate", "Parental Awareness", "+", 0.88, "Teacher concerns strongly increase parental awareness."),
     ("Peer Comparison", "Parental Awareness", "+", 0.62, "Peer comparison strongly contributes to family noticing."),
+
     ("Parental Education", "Parental Awareness", "+", 0.66, "More educated parents better recognize childhood issues."),
     ("Parental Awareness", "Parental Advocacy", "+", 0.82, "Awareness readily turns into family advocacy in 2026."),
     ("Parental Advocacy", "Diagnosis Status", "+", 0.82, "Advocacy strongly supports evaluation and diagnosis."),
@@ -209,8 +220,8 @@ edges.extend([
     ("Family Stress", "Symptom Severity", "+", 0.52, "Family stress can amplify visible symptoms."),
 
     ("Diagnosis Status", "School Support Plan", "+", 0.84, "Diagnosis strongly enables formal school support."),
-    ("School Support Plan", "Learning Accommodations", "+", 0.82, "Support planning leads to more concrete learning accommodations."),
-    ("Learning Accommodations", "Functional Impairment", "-", 0.42, "Accommodations can reduce school-related impairment."),
+    ("School Support Plan", "Learning Accommodations", "+", 0.82, "Support planning leads to concrete learning accommodations."),
+    ("Learning Accommodations", "Functional Impairment", "-", 0.42, "Accommodations reduce school-related impairment."),
 
     ("Socioeconomic Status", "Access to Mental Health Care", "+", 0.76, "Higher SES improves access to evaluation."),
     ("Financial Status", "Access to Mental Health Care", "+", 0.78, "Affordability strongly controls access."),
@@ -228,18 +239,45 @@ edges.extend([
     ("Misdiagnosis Rate", "Diagnosis Status", "-", 0.40, "Misdiagnosis still reduces accurate identification."),
     ("Cultural Norms", "Stigma", "+", 0.42, "Stigma remains, but much weaker than earlier decades."),
     ("Stigma", "Diagnosis Status", "-", 0.34, "Stigma still suppresses recognition somewhat."),
-
     ("Social Media Awareness", "Parental Awareness", "+", 0.58, "Online awareness contributes to parent recognition in 2026."),
-    ("Diagnosis Status", "Treatment Dependency", "+", 0.66, "Diagnosis often leads into structured treatment pathways."),
-    ("Treatment Dependency", "Functional Impairment", "-", 0.58, "Treatment can meaningfully reduce impairment."),
-    ("Overdiagnosis Pressure", "Diagnosis Status", "+", 0.58, "Overdiagnosis discourse is highly visible in 2026."),
 
+    ("Diagnosis Status", "Treatment Access", "+", 0.88, "Diagnosis strongly opens structured treatment pathways for children in 2026."),
+    ("Access to Mental Health Care", "Treatment Access", "+", 0.88, "Healthcare access strongly controls treatment availability."),
+    ("Telehealth Access", "Telehealth Treatment", "+", 0.78, "Telehealth directly increases remote treatment options."),
+    ("Telehealth Treatment", "Treatment Access", "+", 0.70, "Telehealth expands practical treatment access."),
+    ("Provider Availability", "Treatment Access", "+", 0.84, "Provider supply strongly improves treatment access."),
+    ("Care Coordination", "Treatment Access", "+", 0.76, "Coordinated care improves treatment continuity."),
+    ("Socioeconomic Status", "Treatment Access", "+", 0.72, "Higher SES improves treatment access and continuity."),
+
+    ("Treatment Access", "Medication Treatment", "+", 0.88, "Treatment access makes medication treatment highly likely when clinically appropriate."),
+    ("Treatment Access", "Behavioral Therapy", "+", 0.82, "Treatment access enables behavioral therapy."),
+    ("Treatment Access", "School Accommodations", "+", 0.84, "Treatment access supports formal school accommodations."),
+    ("Treatment Access", "Digital Therapeutics", "+", 0.62, "Modern treatment access may include app-based or digital ADHD tools."),
+
+    ("Medication Treatment", "Symptom Severity", "-", 0.78, "Medication can substantially reduce childhood symptom burden."),
+    ("Behavioral Therapy", "Symptom Severity", "-", 0.50, "Behavioral therapy improves self-regulation and routines."),
+    ("Behavioral Therapy", "Functional Impairment", "-", 0.60, "Behavioral therapy reduces practical impairment."),
+    ("School Accommodations", "Functional Impairment", "-", 0.68, "School accommodations reduce academic impairment."),
+    ("Digital Therapeutics", "Symptom Severity", "-", 0.36, "Digital tools may modestly improve attention and structure."),
+    ("Digital Therapeutics", "Treatment Adherence", "+", 0.34, "Digital reminders and tracking can improve adherence."),
+
+    ("Treatment Adherence", "Medication Treatment", "+", 0.72, "Adherence increases real-world medication benefit."),
+    ("Treatment Adherence", "Behavioral Therapy", "+", 0.66, "Consistent participation improves therapy effect."),
+    ("Treatment Dependency", "Treatment Access", "+", 0.66, "Diagnosis often leads into structured treatment pathways."),
+    ("Treatment Dependency", "Functional Impairment", "-", 0.58, "Treatment can meaningfully reduce impairment."),
+    ("Stigma", "Treatment Adherence", "-", 0.30, "Stigma can still reduce consistent treatment participation."),
+    ("Medication Treatment", "Treatment Side Effects", "+", 0.52, "Medication side effects remain relevant to tolerability."),
+    ("Treatment Side Effects", "Treatment Adherence", "-", 0.44, "Side effects can reduce adherence."),
+    ("Treatment Side Effects", "Quality of Life", "-", 0.18, "Side effects can slightly reduce quality of life."),
+
+    ("Overdiagnosis Pressure", "Diagnosis Status", "+", 0.58, "Overdiagnosis discourse is highly visible in 2026."),
     ("Functional Impairment", "Quality of Life", "-", 0.86, "Impairment reduces quality of life."),
     ("Diagnosis Status", "Quality of Life", "+", 0.82, "Diagnosis can strongly improve support and quality of life.")
-])
+]
 
 for edge in edges:
     add_edge(*edge)
+
 
 
 if __name__ == "__main__":
