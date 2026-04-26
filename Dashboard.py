@@ -171,6 +171,20 @@ def load_all_snapshots() -> dict[int, dict[int, dict]]:
     return snapshot_map
 
 
+def get_node_ids(snapshot):
+    return {node.get("id") for node in snapshot["nodes"] if node.get("id")}
+
+
+def compare_nodes(current_snapshot, comparison_snapshot):
+    current_nodes = get_node_ids(current_snapshot)
+    comparison_nodes = get_node_ids(comparison_snapshot)
+
+    added_nodes = sorted(current_nodes - comparison_nodes)
+    removed_nodes = sorted(comparison_nodes - current_nodes)
+
+    return added_nodes, removed_nodes
+
+
 def clean_multiline_text(raw_text: str) -> str:
     if not raw_text:
         return ""
@@ -364,6 +378,7 @@ def build_regions_svg(snapshot: dict) -> tuple[str, tuple[float, float, float, f
         "environment",
         "work",
         "controversial",
+        "treatment",
         "clinical",
         "core",
         "unknown",
@@ -519,6 +534,59 @@ selected_age = st.sidebar.select_slider(
 )
 
 selected_snapshot = SNAPSHOTS[selected_year][selected_age]
+
+with st.sidebar.expander("Node Changes", expanded=False):
+    compare_mode = st.radio(
+        "Compare current graph with:",
+        ["Previous year, same age", "Previous age, same year"],
+        index=0
+    )
+
+    comparison_snapshot = None
+    comparison_label = None
+
+    if compare_mode == "Previous year, same age":
+        previous_years = [year for year in available_years if year < selected_year]
+
+        if previous_years:
+            previous_year = max(previous_years)
+
+            if selected_age in SNAPSHOTS[previous_year]:
+                comparison_snapshot = SNAPSHOTS[previous_year][selected_age]
+                comparison_label = f"{previous_year} | Age {selected_age}"
+
+    elif compare_mode == "Previous age, same year":
+        previous_ages = [age for age in year_specific_ages if age < selected_age]
+
+        if previous_ages:
+            previous_age = max(previous_ages)
+            comparison_snapshot = SNAPSHOTS[selected_year][previous_age]
+            comparison_label = f"{selected_year} | Age {previous_age}"
+
+    if comparison_snapshot is None:
+        st.info("No previous graph available for this comparison.")
+    else:
+        added_nodes, removed_nodes = compare_nodes(
+            selected_snapshot,
+            comparison_snapshot
+        )
+
+        st.caption(f"Comparing with: **{comparison_label}**")
+
+        st.markdown("**Added Nodes**")
+        if added_nodes:
+            for node in added_nodes:
+                st.success(f"+ {node}")
+        else:
+            st.write("No added nodes.")
+
+        st.markdown("**Removed Nodes**")
+        if removed_nodes:
+            for node in removed_nodes:
+                st.error(f"- {node}")
+        else:
+            st.write("No removed nodes.")
+
 graph_html = build_network_html(selected_snapshot)
 
 left_col, right_col = st.columns([4.8, 1.2])
@@ -536,15 +604,32 @@ with right_col:
     st.write(f"**Edges:** {len(selected_snapshot['edges'])}")
 
     st.divider()
-    st.subheader("Edges")
+    st.subheader("Legend")
     st.markdown(
         """
-        Green edge (+): positive effect  
-        Red edge (-): negative effect  
-        Arrow direction: source influences target  
-        Edge thickness: causal strength  
-        Hover an edge: see effect, why, and strength
-        """
+
+    **Node Border Color**  
+    Shows the node’s **manual domain** assigned in `node_groups`.
+
+    **Background Regions**  
+    Fuzzy colored areas show broader conceptual clusters generated from node positions and domain colors.
+
+    **Manual Domain**  
+    The intended category assigned in the graph file, such as clinical, access, bias, environment, treatment, school, work, or family.
+
+    **Local Domain**  
+    The cluster-based domain read from `clusters.json`. It may differ from the manual domain when a node is positioned near another conceptual region.
+
+    **Edge Colors**  
+    🟢 **Green edge (+)** → Positive causal influence  
+    🔴 **Red edge (-)** → Negative causal influence  
+
+    **Edge Direction**  
+    Arrow direction shows that the source node influences the target node.
+
+    **Edge Strength**  
+    Thicker edges indicate stronger causal influence. Width is scaled from the numeric strength value in the code.
+    """
     )
 
     st.divider()

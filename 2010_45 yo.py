@@ -14,7 +14,6 @@ net.barnes_hut(
     damping=0.4
 )
 
-# keep nodes fixed, but allow panning + zooming of the whole graph
 net.set_options("""
 var options = {
   "interaction": {
@@ -28,9 +27,6 @@ var options = {
 }
 """)
 
-# ---------------------------------------------------
-# Domain colors
-# ---------------------------------------------------
 group_colors = {
     "core": "#B5EAD7",
     "clinical": "#FFD1DC",
@@ -40,6 +36,7 @@ group_colors = {
     "bias": "#F3E5AB",
     "environment": "#C7CEEA",
     "controversial": "#D5E1DF",
+    "treatment": "#E2C2FF",
     "work": "#FFB7B2",
     "factor": "#D3D3D3",
     "unknown": "#D3D3D3"
@@ -48,11 +45,13 @@ group_colors = {
 group_descriptions = {
     "core": "Core disorder / final outcomes",
     "clinical": "Clinical-cognitive pathway variables",
-    "environment": "Environmental burden variables",
+    "environment": "Environmental and lifestyle burden variables",
     "family": "Family-context variables",
-    "access": "Healthcare access pathway",
+    "access": "Socioeconomic / healthcare access variables",
     "bias": "Social-cultural / structural bias variables",
-    "controversial": "Retrospective recognition pathway",
+    "controversial": "Delayed adult recognition pathway",
+    "treatment": "2010 midlife treatment pathway with improved adult recognition but weaker effect than childhood pathways",
+    "work": "Workplace and adult functioning pathway",
     "factor": "Observed variable"
 }
 
@@ -65,11 +64,13 @@ node_groups = {
     "Executive Function Deficit": "clinical",
     "Symptom Severity": "clinical",
     "Functional Impairment": "clinical",
+    "Comorbid Conditions": "clinical",
     "Misdiagnosis Rate": "controversial",
 
     "Sleep Quality": "environment",
     "Nutrition Quality": "environment",
-    "Digital Distraction Environment": "environment",
+    "Physical Activity": "environment",
+    "Screen Time": "environment",
     "Chronic Stress Load": "environment",
 
     "Family Stress": "family",
@@ -78,31 +79,47 @@ node_groups = {
 
     "Financial Status": "access",
     "Socioeconomic Status": "access",
+    "Neighborhood Quality": "access",
     "Provider Availability": "access",
     "Access to Mental Health Care": "access",
-    "Waiting Time for Assessment": "access",
     "Cost of Evaluation": "access",
-    "Clinical Guidelines Evolution": "access",
+    "Online Health Information": "access",
     "Care Coordination": "access",
 
     "Stigma": "bias",
     "Cultural Norms": "bias",
     "Race / Ethnicity": "bias",
     "Institutional Bias": "bias",
+    "Gender Bias": "bias",
 
     "Self-Diagnosis Behavior": "controversial",
-    "Retrospective Recognition": "controversial",
-    "Diagnosis Feedback Loop": "controversial",
-    "Social Media Awareness": "controversial",
+    "Clinical Guidelines Evolution": "controversial",
+    "Diagnostic Criteria Variability": "controversial",
+
+    "Workplace Accommodations": "work",
+    "Employment Instability": "work",
+
+    "Medication Treatment": "treatment",
+    "Behavioral Therapy": "treatment",
+    "Treatment Access": "treatment",
+    "Treatment Adherence": "treatment",
+    "Workplace Support": "treatment",
+    "Treatment Side Effects": "treatment",
 
     "Age": "factor"
 }
 
-# ---------------------------------------------------
-# Read positions from JSON
-# ---------------------------------------------------
 with open("clusters.json", "r", encoding="utf-8") as f:
     node_positions = json.load(f)
+
+fallback_positions = {
+    "Medication Treatment": {"x": 260, "y": 180},
+    "Behavioral Therapy": {"x": 120, "y": 180},
+    "Treatment Access": {"x": 760, "y": 220},
+    "Treatment Adherence": {"x": 260, "y": 300},
+    "Workplace Support": {"x": 120, "y": 300},
+    "Treatment Side Effects": {"x": 760, "y": 320}
+}
 
 positioned_nodes = []
 graph_nodes = list(node_groups.keys())
@@ -111,21 +128,22 @@ for node in graph_nodes:
     if node in node_positions:
         x = node_positions[node]["x"]
         y = node_positions[node]["y"]
-        # color = node_positions[node]["color"]   local domain color
-        color = group_colors.get(node_positions[node]["domain"]) #manual domain color
-        domain = node_positions[node].get("domain", "unknown")
+        domain = node_positions[node].get("domain", node_groups.get(node, "unknown"))
         local_domain = node_positions[node].get("local_domain", "unknown")
         confidence = node_positions[node].get("confidence", 0.0)
-
+        color = group_colors.get(domain, group_colors.get(node_groups.get(node, "unknown")))
+        positioned_nodes.append((node, x, y, color, domain, local_domain, confidence))
+    elif node in fallback_positions:
+        x = fallback_positions[node]["x"]
+        y = fallback_positions[node]["y"]
+        domain = node_groups.get(node, "treatment")
+        local_domain = domain
+        confidence = 0.85
+        color = group_colors.get(domain)
         positioned_nodes.append((node, x, y, color, domain, local_domain, confidence))
     else:
         print(f"Warning: '{node}' not found in clusters.json")
 
-# ---------------------------------------------------
-# Add nodes
-# background regions carry most of the grouping info
-# node borders show local domain
-# ---------------------------------------------------
 for node, x, y, col, domain, local_domain, confidence in positioned_nodes:
     group = node_groups.get(node, "factor")
     desc = group_descriptions.get(group, "No description available")
@@ -159,8 +177,8 @@ for node, x, y, col, domain, local_domain, confidence in positioned_nodes:
 
 def add_edge(u, v, sign, strength, explanation):
     net.add_edge(
-        u, v,
-        # label=sign,
+        u,
+        v,
         color="green" if sign == "+" else "red",
         width=max(2, strength * 6),
         arrows="to",
@@ -168,52 +186,80 @@ def add_edge(u, v, sign, strength, explanation):
     )
 
 edges = [
-    ("Genetic Risk", "ADHD", "+", 0.88, "Genetic vulnerability contributes strongly to lifelong ADHD."),
+    ("Genetic Risk", "ADHD", "+", 0.90, "Genetic vulnerability contributes strongly to lifelong ADHD."),
     ("ADHD", "Executive Function Deficit", "+", 0.90, "Underlying ADHD strongly affects executive functioning."),
+    ("ADHD", "Comorbid Conditions", "+", 0.66, "ADHD commonly co-occurs with anxiety, mood, or other conditions."),
     ("Executive Function Deficit", "Functional Impairment", "+", 0.84, "Executive dysfunction increases cumulative impairment."),
-    ("Symptom Severity", "Functional Impairment", "+", 0.84, "Greater symptom burden worsens daily functioning."),
-    ("Age", "Functional Impairment", "+", 0.40, "By age 45, long-term untreated difficulties can compound impairment."),
+    ("Symptom Severity", "Functional Impairment", "+", 0.82, "Greater symptom burden worsens daily functioning."),
+    ("Age", "Functional Impairment", "+", 0.36, "By age 45, cumulative untreated difficulties can compound impairment."),
 
-    ("Nutrition Quality", "Symptom Severity", "-", 0.50, "Long-term nutrition impacts cognition."),
-    ("Sleep Quality", "Executive Function Deficit", "-", 0.64, "Sleep affects executive functioning."),
-    ("Digital Distraction Environment", "Chronic Stress Load", "+", 0.34, "Modern distraction environments begin to contribute to stress by 2010."),
-    ("Chronic Stress Load", "Symptom Severity", "+", 0.66, "Accumulated life stress can worsen symptoms in midlife."),
+    ("Nutrition Quality", "Symptom Severity", "-", 0.46, "Long-term nutrition may support cognitive regulation."),
+    ("Sleep Quality", "Executive Function Deficit", "-", 0.66, "Sleep affects executive functioning."),
+    ("Physical Activity", "Symptom Severity", "-", 0.42, "Physical activity may reduce symptom burden."),
+    ("Screen Time", "Symptom Severity", "+", 0.30, "Screen exposure is increasingly discussed as affecting attention."),
+    ("Chronic Stress Load", "Functional Impairment", "+", 0.70, "Accumulated stress worsens outcomes."),
 
-    ("Home Structure Stability", "Family Stress", "-", 0.68, "Stable home structure reduces stress."),
-    ("Family Stress", "Chronic Stress Load", "+", 0.72, "Family stress contributes to chronic stress accumulation."),
-    ("Family History Awareness", "Retrospective Recognition", "+", 0.42, "Family history can meaningfully support later-life recognition by 2010."),
+    ("Home Structure Stability", "Family Stress", "-", 0.66, "Stable home structure reduces stress."),
+    ("Family Stress", "Chronic Stress Load", "+", 0.72, "Family stress contributes to accumulated burden."),
+    ("Family History Awareness", "Self-Diagnosis Behavior", "+", 0.42, "Family history increasingly supports self-recognition by 2010."),
 
-    ("Financial Status", "Access to Mental Health Care", "+", 0.76, "Financial resources strongly affect access to care."),
-    ("Socioeconomic Status", "Access to Mental Health Care", "+", 0.74, "Socioeconomic position shapes access to care."),
-    ("Provider Availability", "Waiting Time for Assessment", "-", 0.74, "More providers reduce waiting time."),
-    ("Waiting Time for Assessment", "Diagnosis Status", "-", 0.46, "Long waits still reduce diagnosis, though less sharply."),
-    ("Cost of Evaluation", "Diagnosis Status", "-", 0.60, "Cost still suppresses diagnosis, though less absolutely than before."),
-    ("Access to Mental Health Care", "Diagnosis Status", "+", 0.76, "Access strongly helps diagnosis in 2010."),
-    ("Clinical Guidelines Evolution", "Diagnosis Status", "+", 0.60, "Guideline evolution makes delayed adult recognition much more plausible."),
-    ("Access to Mental Health Care", "Care Coordination", "+", 0.58, "Access increasingly leads to coordinated care in 2010."),
-    ("Care Coordination", "Diagnosis Status", "+", 0.36, "Care coordination helps diagnosis completion."),
-    ("Misdiagnosis Rate", "Diagnosis Status", "-", 0.60, "Misdiagnosis still reduces correct diagnosis status."),
+    ("Financial Status", "Access to Mental Health Care", "+", 0.76, "Income strongly controls access."),
+    ("Socioeconomic Status", "Access to Mental Health Care", "+", 0.78, "Socioeconomic position shapes access to care."),
+    ("Neighborhood Quality", "Access to Mental Health Care", "+", 0.48, "Better neighborhood conditions improve resource access."),
+    ("Provider Availability", "Access to Mental Health Care", "+", 0.76, "Provider supply improves access."),
+    ("Cost of Evaluation", "Diagnosis Status", "-", 0.70, "Evaluation cost still suppresses diagnosis."),
+    ("Access to Mental Health Care", "Diagnosis Status", "+", 0.72, "Access helps adult diagnosis."),
+    ("Online Health Information", "Self-Diagnosis Behavior", "+", 0.66, "Online information increases self-recognition."),
+    ("Online Health Information", "Diagnosis Status", "+", 0.50, "Online information can lead adults to seek evaluation."),
+    ("Self-Diagnosis Behavior", "Diagnosis Status", "+", 0.48, "Self-recognition increases diagnosis-seeking."),
+    ("Clinical Guidelines Evolution", "Diagnosis Status", "+", 0.52, "Guideline evolution improves adult ADHD recognition."),
+    ("Diagnostic Criteria Variability", "Misdiagnosis Rate", "+", 0.68, "Diagnostic variation still contributes to misdiagnosis."),
+    ("Misdiagnosis Rate", "Diagnosis Status", "-", 0.66, "Misdiagnosis reduces correct diagnosis status."),
 
-    ("Race / Ethnicity", "Institutional Bias", "+", 0.58, "Structural inequities influence institutional behavior."),
-    ("Institutional Bias", "Misdiagnosis Rate", "+", 0.44, "Bias still increases some diagnostic error."),
-    ("Institutional Bias", "Diagnosis Status", "-", 0.36, "Bias still suppresses equitable access to diagnosis."),
-    ("Social Media Awareness", "Self-Diagnosis Behavior", "+", 0.34, "Online awareness begins to support self-recognition by 2010."),
-    ("Retrospective Recognition", "Self-Diagnosis Behavior", "+", 0.50, "Retrospective interpretation of lifelong patterns increasingly supports self-recognition."),
-    ("Self-Diagnosis Behavior", "Diagnosis Status", "+", 0.36, "Self-recognition can meaningfully push toward evaluation."),
-    ("Diagnosis Status", "Diagnosis Feedback Loop", "+", 0.42, "Diagnosis can influence later reinterpretation of lifelong patterns."),
-    ("Diagnosis Feedback Loop", "Retrospective Recognition", "+", 0.30, "Feedback effects increasingly reinforce later-life understanding."),
+    ("Race / Ethnicity", "Institutional Bias", "+", 0.62, "Structural inequities influence institutional and healthcare pathways."),
+    ("Institutional Bias", "Diagnosis Status", "-", 0.50, "Bias suppresses fair diagnosis."),
+    ("Race / Ethnicity", "Access to Mental Health Care", "-", 0.50, "Structural inequity persists in access pathways."),
+    ("Gender Bias", "Misdiagnosis Rate", "+", 0.44, "Gender stereotypes still contribute to diagnostic error."),
+    ("Cultural Norms", "Stigma", "+", 0.62, "Cultural beliefs shape stigma."),
+    ("Stigma", "Diagnosis Status", "-", 0.56, "Stigma suppresses adult diagnosis."),
+    ("Stigma", "Self-Diagnosis Behavior", "-", 0.44, "Stigma discourages self-recognition and help-seeking."),
 
-    ("Cultural Norms", "Stigma", "+", 0.56, "Stigma remains present, but weaker than in 1990."),
-    ("Stigma", "Diagnosis Status", "-", 0.50, "Stigma still suppresses adult diagnosis, though less strongly."),
-    ("Stigma", "Self-Diagnosis Behavior", "-", 0.38, "Stigma still discourages self-recognition and help-seeking."),
+    ("Functional Impairment", "Employment Instability", "+", 0.68, "Impairment can destabilize employment."),
+    ("Employment Instability", "Diagnosis Status", "+", 0.38, "Work problems can trigger assessment-seeking."),
+    ("Workplace Accommodations", "Functional Impairment", "-", 0.46, "Workplace accommodations can reduce impairment."),
 
-    ("Diagnosis Status", "Functional Impairment", "-", 0.50, "Diagnosis can meaningfully reduce impairment through treatment or support."),
+    ("Diagnosis Status", "Medication Treatment", "+", 0.56, "By 2010, midlife adult diagnosis can lead to medication treatment."),
+    ("Diagnosis Status", "Behavioral Therapy", "+", 0.48, "Diagnosis can connect midlife adults to behavioral support."),
+    ("Access to Mental Health Care", "Treatment Access", "+", 0.72, "Healthcare access supports treatment availability."),
+    ("Provider Availability", "Treatment Access", "+", 0.68, "Provider availability improves treatment access."),
+    ("Socioeconomic Status", "Treatment Access", "+", 0.70, "Higher SES improves treatment access and continuity."),
+    ("Online Health Information", "Treatment Adherence", "+", 0.32, "Online information can improve treatment understanding."),
+    ("Self-Diagnosis Behavior", "Treatment Access", "+", 0.46, "Self-recognition increases treatment-seeking."),
+    ("Clinical Guidelines Evolution", "Treatment Access", "+", 0.44, "Guideline evolution improves adult treatment pathways."),
+    ("Care Coordination", "Treatment Access", "+", 0.54, "Care coordination supports treatment continuity."),
+    ("Treatment Access", "Medication Treatment", "+", 0.62, "Treatment access can lead to medication."),
+    ("Treatment Access", "Behavioral Therapy", "+", 0.56, "Treatment access can enable behavioral support."),
+    ("Treatment Access", "Workplace Support", "+", 0.40, "Treatment access can support workplace accommodations."),
+    ("Medication Treatment", "Symptom Severity", "-", 0.52, "Medication can reduce symptoms, but cumulative midlife burden remains."),
+    ("Medication Treatment", "Functional Impairment", "-", 0.38, "Medication can modestly reduce midlife impairment."),
+    ("Behavioral Therapy", "Functional Impairment", "-", 0.40, "Behavioral therapy can reduce practical impairment."),
+    ("Workplace Support", "Functional Impairment", "-", 0.42, "Workplace support reduces occupational impairment."),
+    ("Treatment Adherence", "Medication Treatment", "+", 0.50, "Adherence strengthens medication effect."),
+    ("Treatment Adherence", "Behavioral Therapy", "+", 0.48, "Participation improves behavioral therapy impact."),
+    ("Stigma", "Treatment Adherence", "-", 0.48, "Stigma reduces continued treatment engagement."),
+    ("Medication Treatment", "Treatment Side Effects", "+", 0.46, "Medication can introduce side effects."),
+    ("Treatment Side Effects", "Treatment Adherence", "-", 0.48, "Side effects can reduce adherence."),
+    ("Treatment Side Effects", "Quality of Life", "-", 0.24, "Side effects can slightly reduce quality of life."),
+
+    ("Diagnosis Status", "Functional Impairment", "-", 0.44, "Diagnosis can reduce impairment through support and treatment."),
     ("Functional Impairment", "Quality of Life", "-", 0.90, "Cumulative impairment strongly lowers quality of life."),
-    ("Diagnosis Status", "Quality of Life", "+", 0.70, "Diagnosis can meaningfully improve quality of life in midlife.")
+    ("Diagnosis Status", "Quality of Life", "+", 0.60, "Diagnosis can improve quality of life in midlife.")
 ]
 
 for edge in edges:
     add_edge(*edge)
+
+
 
 if __name__ == "__main__":
     save_graph_with_fuzzy_background(

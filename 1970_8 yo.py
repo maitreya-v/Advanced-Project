@@ -16,7 +16,6 @@ net.barnes_hut(
     damping=0.4
 )
 
-# keep nodes fixed, but allow panning + zooming of the whole graph
 net.set_options("""
 var options = {
   "interaction": {
@@ -30,9 +29,6 @@ var options = {
 }
 """)
 
-# ---------------------------------------------------
-# Domain colors
-# ---------------------------------------------------
 group_colors = {
     "core": "#B5EAD7",
     "clinical": "#FFD1DC",
@@ -42,6 +38,7 @@ group_colors = {
     "bias": "#F3E5AB",
     "environment": "#C7CEEA",
     "controversial": "#D5E1DF",
+    "treatment": "#E2C2FF",
     "work": "#FFB7B2",
     "factor": "#D3D3D3",
     "unknown": "#D3D3D3"
@@ -56,6 +53,7 @@ group_descriptions = {
     "bias": "Social-cultural / structural bias variables",
     "environment": "Environmental and developmental exposure variables",
     "controversial": "Ambiguous / debated / feedback-linked variables",
+    "treatment": "Childhood treatment pathway mediated through parents, schools, and limited 1970 healthcare access",
     "work": "Workplace / productivity / adult-life variables",
     "factor": "Observed variable",
     "unknown": "Unclassified variable"
@@ -99,14 +97,23 @@ node_groups = {
     "Sleep Quality": "environment",
     "Environmental Exposure": "environment",
 
+    "Medication Treatment": "treatment",
+    "Treatment Access": "treatment",
+    "Treatment Adherence": "treatment",
+    "Treatment Side Effects": "treatment",
+
     "Age": "factor"
 }
 
-# ---------------------------------------------------
-# Read positions from JSON
-# ---------------------------------------------------
 with open("clusters.json", "r", encoding="utf-8") as f:
     node_positions = json.load(f)
+
+fallback_positions = {
+    "Medication Treatment": {"x": 260, "y": 180},
+    "Treatment Access": {"x": 720, "y": 220},
+    "Treatment Adherence": {"x": 260, "y": 300},
+    "Treatment Side Effects": {"x": 720, "y": 320}
+}
 
 positioned_nodes = []
 graph_nodes = list(node_groups.keys())
@@ -115,21 +122,22 @@ for node in graph_nodes:
     if node in node_positions:
         x = node_positions[node]["x"]
         y = node_positions[node]["y"]
-        # color = node_positions[node]["color"]   local domain color
-        color = group_colors.get(node_positions[node]["domain"]) #manual domain color
-        domain = node_positions[node].get("domain", "unknown")
+        domain = node_positions[node].get("domain", node_groups.get(node, "unknown"))
         local_domain = node_positions[node].get("local_domain", "unknown")
         confidence = node_positions[node].get("confidence", 0.0)
-
+        color = group_colors.get(domain, group_colors.get(node_groups.get(node, "unknown")))
+        positioned_nodes.append((node, x, y, color, domain, local_domain, confidence))
+    elif node in fallback_positions:
+        x = fallback_positions[node]["x"]
+        y = fallback_positions[node]["y"]
+        domain = node_groups.get(node, "treatment")
+        local_domain = domain
+        confidence = 0.85
+        color = group_colors.get(domain)
         positioned_nodes.append((node, x, y, color, domain, local_domain, confidence))
     else:
         print(f"Warning: '{node}' not found in clusters.json")
 
-# ---------------------------------------------------
-# Add nodes
-# background regions carry most of the grouping info
-# node borders show local domain
-# ---------------------------------------------------
 for node, x, y, col, domain, local_domain, confidence in positioned_nodes:
     group = node_groups.get(node, "factor")
     desc = group_descriptions.get(group, "No description available")
@@ -161,12 +169,10 @@ for node, x, y, col, domain, local_domain, confidence in positioned_nodes:
         )
     )
 
-# ---------------------------------------------------
-# Add edges
-# ---------------------------------------------------
 def add_edge(u, v, sign, strength, explanation):
     net.add_edge(
-        u, v,
+        u,
+        v,
         color="green" if sign == "+" else "red",
         width=max(2, strength * 6),
         arrows="to",
@@ -177,7 +183,6 @@ edges = [
     ("Genetic Risk", "ADHD", "+", 0.88, "Genetic liability contributes strongly to childhood ADHD."),
     ("ADHD", "Symptom Severity", "+", 0.90, "Underlying ADHD increases symptom severity."),
     ("ADHD", "Symptom Type", "+", 0.82, "Underlying ADHD shapes visible behavioral presentation."),
-
     ("Age", "Symptom Severity", "+", 0.42, "At age 8, symptoms are highly visible in daily behavior."),
     ("Gender", "Symptom Type", "+", 0.38, "Gender norms influence which childhood behaviors are noticed."),
 
@@ -190,8 +195,8 @@ edges = [
     ("Symptom Type", "Teacher Referral Rate", "+", 0.62, "Certain symptom patterns are more likely to trigger teacher concern."),
     ("Classroom Size", "Teacher Referral Rate", "+", 0.40, "Large classrooms can increase disciplinary attention."),
     ("School Labeling Bias", "Teacher Referral Rate", "+", 0.80, "Behavior is often interpreted through discipline and labeling."),
-
     ("Teacher Referral Rate", "Parental Awareness", "+", 0.60, "School concern can raise parental awareness."),
+
     ("Parental Denial", "Parental Awareness", "-", 0.82, "Denial reduces recognition of problems."),
     ("Parental Education", "Parental Awareness", "+", 0.58, "More educated parents better recognize issues."),
     ("Parental Education", "Parental Denial", "-", 0.42, "Education reduces denial probability."),
@@ -199,8 +204,8 @@ edges = [
     ("Household Stability", "Family Stress", "-", 0.70, "Stable homes reduce stress."),
     ("Household Stability", "Nutrition Quality", "+", 0.60, "Stable homes support better nutrition."),
     ("Family Stress", "Sleep Quality", "-", 0.55, "Stress disrupts sleep patterns."),
-
     ("Parental Awareness", "Diagnosis Status", "+", 0.42, "Awareness can support diagnosis, though formal systems are weak."),
+
     ("Socioeconomic Status", "Educational Access", "+", 0.72, "Higher SES improves schooling quality."),
     ("Educational Access", "Teacher Referral Rate", "+", 0.38, "Better systems may detect issues earlier."),
     ("Socioeconomic Status", "Access to Mental Health Care", "+", 0.64, "Higher SES improves access to scarce care."),
@@ -215,12 +220,26 @@ edges = [
     ("Cultural Norms", "Stigma", "+", 0.84, "1970 norms strongly reinforce stigma around behavior differences."),
     ("Stigma", "Diagnosis Status", "-", 0.82, "Stigma suppresses recognition and formal diagnosis."),
 
+    ("Diagnosis Status", "Medication Treatment", "+", 0.42, "At age 8, diagnosis could lead to medication consideration, but usually through parents and school pressure."),
+    ("Access to Mental Health Care", "Treatment Access", "+", 0.62, "Child treatment access depends on available pediatric or mental health services."),
+    ("Socioeconomic Status", "Treatment Access", "+", 0.60, "Higher-resource families are more likely to obtain childhood treatment."),
+    ("Treatment Access", "Medication Treatment", "+", 0.66, "Available treatment pathways increase the likelihood of medication use."),
+    ("Stigma", "Treatment Adherence", "-", 0.46, "Family or school stigma can reduce willingness to continue treatment."),
+    ("Medication Treatment", "Symptom Severity", "-", 0.46, "Medication may reduce visible childhood symptoms."),
+    ("Medication Treatment", "Functional Impairment", "-", 0.32, "Medication may reduce classroom and daily impairment."),
+    ("Treatment Adherence", "Medication Treatment", "+", 0.44, "Consistent adherence increases real-world treatment effect."),
+    ("Medication Treatment", "Treatment Side Effects", "+", 0.40, "Medication can introduce side effects."),
+    ("Treatment Side Effects", "Treatment Adherence", "-", 0.40, "Side effects can reduce adherence."),
+    ("Treatment Side Effects", "Quality of Life", "-", 0.18, "Side effects can slightly lower quality of life."),
+
     ("Functional Impairment", "Quality of Life", "-", 0.86, "Impairment reduces quality of life."),
     ("Diagnosis Status", "Quality of Life", "+", 0.38, "Diagnosis can modestly improve support and understanding.")
 ]
 
 for edge in edges:
     add_edge(*edge)
+    
+
 
 if __name__ == "__main__":
     save_graph_with_fuzzy_background(
