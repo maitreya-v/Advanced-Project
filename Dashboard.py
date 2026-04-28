@@ -4,7 +4,7 @@ import json
 import html
 import base64
 from io import BytesIO
-
+import time
 import numpy as np
 import matplotlib
 matplotlib.use("Agg")
@@ -462,8 +462,17 @@ window.addEventListener("load", function() {{
 
     return graph_html
 
+def extract_strength_from_title(title: str) -> float:
+    if not title:
+        return 0.0
 
-def build_network_html(snapshot: dict) -> str:
+    match = re.search(r"Strength:\s*([0-9.]+)", title)
+    if match:
+        return float(match.group(1))
+
+    return 0.0
+
+def build_network_html(snapshot: dict, strength_threshold: float) -> str:
     net = Network(height="900px", width="100%", directed=True, bgcolor="#ffffff")
 
     net.set_options(
@@ -486,19 +495,31 @@ def build_network_html(snapshot: dict) -> str:
         """
     )
 
+    # ✅ ADD ALL NODES (no filtering)
     for original_node in snapshot["nodes"]:
         node_payload = dict(original_node)
         node_id = node_payload.pop("id")
         net.add_node(node_id, **node_payload)
 
+    # ✅ FILTER ONLY EDGES (safe handling of missing strength)
     for original_edge in snapshot["edges"]:
+        strength = extract_strength_from_title(original_edge.get("title", ""))
+
+        if strength < strength_threshold:
+            continue
+
         edge_payload = dict(original_edge)
         source_id = edge_payload.pop("from")
         target_id = edge_payload.pop("to")
+
         net.add_edge(source_id, target_id, **edge_payload)
 
     graph_html = net.generate_html(notebook=False)
     graph_html = inject_background_into_html(graph_html, snapshot)
+
+    # 🔥 FORCE REFRESH
+    graph_html += f"<!-- refresh {time.time()} -->"
+
     return graph_html
 
 
@@ -533,8 +554,16 @@ selected_age = st.sidebar.select_slider(
     value=default_age,
 )
 
-selected_snapshot = SNAPSHOTS[selected_year][selected_age]
+strength_threshold = st.sidebar.slider(
+    "Minimum edge strength",
+    min_value=0.0,
+    max_value=1.0,
+    value=0.0,
+    step=0.01,
+)
 
+selected_snapshot = SNAPSHOTS[selected_year][selected_age]
+st.write(selected_snapshot["edges"][:5])
 with st.sidebar.expander("Node Changes", expanded=False):
     compare_mode = st.radio(
         "Compare current graph with:",
@@ -587,13 +616,17 @@ with st.sidebar.expander("Node Changes", expanded=False):
         else:
             st.write("No removed nodes.")
 
-graph_html = build_network_html(selected_snapshot)
+graph_html = build_network_html(selected_snapshot, strength_threshold)
 
 left_col, right_col = st.columns([4.8, 1.2])
 
 with left_col:
     st.subheader(f"Graph for {selected_year} | Age {selected_age}")
-    components.html(graph_html, height=930, scrolling=True)
+    components.html(
+    graph_html,
+    height=930,
+    scrolling=True
+)
 
 with right_col:
     st.subheader("Snapshot")
