@@ -1,10 +1,9 @@
 from pathlib import Path
 import re
-import json
-import html
 import base64
-from io import BytesIO
 import time
+import html
+
 import numpy as np
 import matplotlib
 matplotlib.use("Agg")
@@ -13,7 +12,50 @@ import streamlit as st
 import streamlit.components.v1 as components
 from pyvis.network import Network
 
+try:
+    from streamlit_js_eval import streamlit_js_eval
+except Exception:
+    streamlit_js_eval = None
+
+
 st.set_page_config(page_title="Chronological Year + Age Graph Explorer", layout="wide")
+
+st.markdown("""
+<style>
+.block-container {
+    padding-top: 3.2rem !important;
+    padding-bottom: 0rem !important;
+    padding-left: 2.25rem !important;
+    padding-right: 2.25rem !important;
+    max-width: 100% !important;
+}
+
+[data-testid="stVerticalBlock"] {
+    gap: 0.45rem !important;
+}
+
+[data-testid="stHorizontalBlock"] {
+    gap: 0.8rem !important;
+}
+
+h1, h2, h3 {
+    margin-top: 0rem !important;
+    margin-bottom: 0.3rem !important;
+    line-height: 1.15 !important;
+}
+
+iframe {
+    border: none !important;
+    margin-top: 0px !important;
+}
+
+button[data-baseweb="tab"] {
+    padding-top: 0.25rem !important;
+    padding-bottom: 0.25rem !important;
+}
+</style>
+""", unsafe_allow_html=True)
+
 
 BASE_DIR = Path(__file__).resolve().parent
 HELPER_NODE_IDS = {"LEGEND_NODE", "PERSONA_DESC", "PERIOD_NODE", "Persona", "PERSONA_NODE"}
@@ -69,6 +111,7 @@ def discover_source_files() -> dict[int, dict[int, Path]]:
 
         year = int(match.group(1))
         age = int(match.group(2))
+
         file_map.setdefault(year, {})
         file_map[year][age] = path
 
@@ -120,9 +163,11 @@ def load_snapshot_from_script(script_path: Path) -> dict:
 
     for node in fake_net.nodes:
         node_id = node.get("id")
+
         if node_id in HELPER_NODE_IDS:
             helper_text[node_id] = node.get("label", "")
             continue
+
         graph_nodes.append(node)
 
     graph_edges = list(fake_net.edges)
@@ -139,6 +184,7 @@ def load_snapshot_from_script(script_path: Path) -> dict:
 
     for node in graph_nodes:
         group_name = node_groups.get(node.get("id"))
+
         if group_name and group_name not in seen_groups and group_name in group_colors:
             ordered_groups.append(group_name)
             seen_groups.add(group_name)
@@ -165,6 +211,7 @@ def load_all_snapshots() -> dict[int, dict[int, dict]]:
 
     for year in sorted(file_map):
         snapshot_map[year] = {}
+
         for age in sorted(file_map[year]):
             snapshot_map[year][age] = load_snapshot_from_script(file_map[year][age])
 
@@ -188,8 +235,17 @@ def compare_nodes(current_snapshot, comparison_snapshot):
 def clean_multiline_text(raw_text: str) -> str:
     if not raw_text:
         return ""
+
     text = str(raw_text).replace("\r\n", "\n").replace("\r", "\n").strip()
     return re.sub(r"\n{3,}", "\n\n", text)
+
+
+def clean_text(value):
+    value = str(value)
+    value = re.sub(r"</?div[^>]*>", "", value, flags=re.IGNORECASE)
+    value = re.sub(r"</?span[^>]*>", "", value, flags=re.IGNORECASE)
+    value = re.sub(r"<[^>]+>", "", value)
+    return html.escape(value.strip())
 
 
 def parse_node_title(title_text: str) -> dict:
@@ -208,8 +264,10 @@ def parse_node_title(title_text: str) -> dict:
 
     if manual_match:
         parsed["manual_domain"] = manual_match.group(1).strip().lower()
+
     if local_match:
         parsed["local_domain"] = local_match.group(1).strip().lower()
+
     if conf_match:
         parsed["confidence"] = float(conf_match.group(1).strip())
 
@@ -225,6 +283,7 @@ def soft_weight(conf: float) -> float:
         return 0.65
     if conf >= 0.2:
         return 0.45
+
     return 0.25
 
 
@@ -283,8 +342,8 @@ def build_density_grid(domain_points, bounds, grid_size=260, sigma=120.0):
 
     xs = np.linspace(min_x, max_x, grid_size)
     ys = np.linspace(min_y, max_y, grid_size)
-    X, Y = np.meshgrid(xs, ys)
 
+    X, Y = np.meshgrid(xs, ys)
     fields = {}
 
     for domain, info in domain_points.items():
@@ -307,8 +366,10 @@ def polygon_to_svg_path(seg):
         return None
 
     parts = [f"M {seg[0][0]:.2f} {seg[0][1]:.2f}"]
+
     for pt in seg[1:]:
         parts.append(f"L {pt[0]:.2f} {pt[1]:.2f}")
+
     parts.append("Z")
     return " ".join(parts)
 
@@ -339,10 +400,13 @@ def extract_domain_polygons(X, Y, fields):
 
         for band_idx, segs in enumerate(cs.allsegs):
             opacity = opacities[min(band_idx, len(opacities) - 1)]
+
             for seg in segs:
                 if seg is None or len(seg) < 3:
                     continue
+
                 path_d = polygon_to_svg_path(seg)
+
                 if path_d:
                     polygons.append(
                         {
@@ -385,9 +449,13 @@ def build_regions_svg(snapshot: dict) -> tuple[str, tuple[float, float, float, f
     ]
 
     svg_parts = []
+
     svg_parts.append(
-        f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="{min_x:.2f} {min_y:.2f} {width:.2f} {height:.2f}" preserveAspectRatio="none">'
+        f'<svg xmlns="http://www.w3.org/2000/svg" '
+        f'viewBox="{min_x:.2f} {min_y:.2f} {width:.2f} {height:.2f}" '
+        f'preserveAspectRatio="none">'
     )
+
     svg_parts.append(
         """
 <defs>
@@ -406,6 +474,7 @@ def build_regions_svg(snapshot: dict) -> tuple[str, tuple[float, float, float, f
         polygons = domain_polygons[domain]["polygons"]
 
         svg_parts.append(f'<g id="region-{domain}" filter="url(#softBlur)">')
+
         for poly in polygons:
             svg_parts.append(
                 f'<path d="{poly["path"]}" '
@@ -413,14 +482,17 @@ def build_regions_svg(snapshot: dict) -> tuple[str, tuple[float, float, float, f
                 f'stroke="{color}" stroke-opacity="0.35" stroke-width="8" '
                 f'stroke-linejoin="round" />'
             )
+
         svg_parts.append("</g>")
 
     svg_parts.append("</svg>")
+
     return "\n".join(svg_parts), bounds
 
 
 def inject_background_into_html(graph_html: str, snapshot: dict) -> str:
     svg_text, bounds = build_regions_svg(snapshot)
+
     min_x, max_x, min_y, max_y = bounds
     width = max_x - min_x
     height = max_y - min_y
@@ -462,18 +534,26 @@ window.addEventListener("load", function() {{
 
     return graph_html
 
+
 def extract_strength_from_title(title: str) -> float:
     if not title:
         return 0.0
 
     match = re.search(r"Strength:\s*([0-9.]+)", title)
+
     if match:
         return float(match.group(1))
 
     return 0.0
 
-def build_network_html(snapshot: dict, strength_threshold: float) -> str:
-    net = Network(height="900px", width="100%", directed=True, bgcolor="#ffffff")
+
+def build_network_html(snapshot: dict, strength_threshold: float, graph_height: int) -> str:
+    net = Network(
+        height=f"{graph_height}px",
+        width="100%",
+        directed=True,
+        bgcolor="#ffffff",
+    )
 
     net.set_options(
         """
@@ -495,13 +575,11 @@ def build_network_html(snapshot: dict, strength_threshold: float) -> str:
         """
     )
 
-    # ✅ ADD ALL NODES (no filtering)
     for original_node in snapshot["nodes"]:
         node_payload = dict(original_node)
         node_id = node_payload.pop("id")
         net.add_node(node_id, **node_payload)
 
-    # ✅ FILTER ONLY EDGES (safe handling of missing strength)
     for original_edge in snapshot["edges"]:
         strength = extract_strength_from_title(original_edge.get("title", ""))
 
@@ -516,8 +594,6 @@ def build_network_html(snapshot: dict, strength_threshold: float) -> str:
 
     graph_html = net.generate_html(notebook=False)
     graph_html = inject_background_into_html(graph_html, snapshot)
-
-    # 🔥 FORCE REFRESH
     graph_html += f"<!-- refresh {time.time()} -->"
 
     return graph_html
@@ -531,11 +607,14 @@ if not SNAPSHOTS:
 
 available_years = sorted(SNAPSHOTS.keys())
 
-st.title("Chronological Year + Age Graph Explorer")
-st.caption(
-    "Choose a year and an age to switch between fixed graph snapshots. "
-    "Each snapshot is loaded directly from the year-age source graph files."
-)
+st.markdown("""
+<h2 style="margin:0; padding:0; line-height:1.15;">
+Chronological Year + Age Graph Explorer
+</h2>
+<p style="margin:3px 0 10px 0; font-size:13px; color:#9ca3af;">
+Choose a year and age to switch between fixed graph snapshots.
+</p>
+""", unsafe_allow_html=True)
 
 st.sidebar.header("Controls")
 
@@ -563,137 +642,198 @@ strength_threshold = st.sidebar.slider(
 )
 
 selected_snapshot = SNAPSHOTS[selected_year][selected_age]
-st.write(selected_snapshot["edges"][:5])
+
 with st.sidebar.expander("Node Changes", expanded=False):
     compare_mode = st.radio(
-        "Compare current graph with:",
-        ["Previous year, same age", "Previous age, same year"],
-        index=0
+        "Compare with",
+        ["Previous year", "Previous age"],
+        index=0,
+        horizontal=True,
     )
 
     comparison_snapshot = None
     comparison_label = None
 
-    if compare_mode == "Previous year, same age":
-        previous_years = [year for year in available_years if year < selected_year]
+    if compare_mode == "Previous year":
+        previous_years = [y for y in available_years if y < selected_year]
 
         if previous_years:
-            previous_year = max(previous_years)
+            prev_year = max(previous_years)
 
-            if selected_age in SNAPSHOTS[previous_year]:
-                comparison_snapshot = SNAPSHOTS[previous_year][selected_age]
-                comparison_label = f"{previous_year} | Age {selected_age}"
+            if selected_age in SNAPSHOTS[prev_year]:
+                comparison_snapshot = SNAPSHOTS[prev_year][selected_age]
+                comparison_label = f"{prev_year} | Age {selected_age}"
 
-    elif compare_mode == "Previous age, same year":
-        previous_ages = [age for age in year_specific_ages if age < selected_age]
+    else:
+        previous_ages = [a for a in year_specific_ages if a < selected_age]
 
         if previous_ages:
-            previous_age = max(previous_ages)
-            comparison_snapshot = SNAPSHOTS[selected_year][previous_age]
-            comparison_label = f"{selected_year} | Age {previous_age}"
+            prev_age = max(previous_ages)
+            comparison_snapshot = SNAPSHOTS[selected_year][prev_age]
+            comparison_label = f"{selected_year} | Age {prev_age}"
 
     if comparison_snapshot is None:
-        st.info("No previous graph available for this comparison.")
+        st.caption("No comparison available.")
+
     else:
         added_nodes, removed_nodes = compare_nodes(
             selected_snapshot,
-            comparison_snapshot
+            comparison_snapshot,
         )
 
-        st.caption(f"Comparing with: **{comparison_label}**")
+        st.caption(f"Compared with: {comparison_label}")
 
-        st.markdown("**Added Nodes**")
-        if added_nodes:
-            for node in added_nodes:
-                st.success(f"+ {node}")
+        change_tab = st.radio(
+            "Change type",
+            [f"Added ({len(added_nodes)})", f"Removed ({len(removed_nodes)})"],
+            horizontal=True,
+            label_visibility="collapsed",
+        )
+
+        active_nodes = added_nodes if change_tab.startswith("Added") else removed_nodes
+        active_color = "#86efac" if change_tab.startswith("Added") else "#fca5a5"
+        active_label = "Added Node" if change_tab.startswith("Added") else "Removed Node"
+
+        if not active_nodes:
+            st.info("No nodes in this category.")
+
         else:
-            st.write("No added nodes.")
+            selected_changed_node = st.selectbox(
+                active_label,
+                active_nodes,
+                index=0,
+            )
 
-        st.markdown("**Removed Nodes**")
-        if removed_nodes:
-            for node in removed_nodes:
-                st.error(f"- {node}")
-        else:
-            st.write("No removed nodes.")
+            st.markdown(
+                f"""
+                <div style="
+                    background:{active_color};
+                    color:#111827;
+                    padding:12px 12px;
+                    border-radius:10px;
+                    font-size:14px;
+                    font-weight:700;
+                    line-height:1.35;
+                    margin-top:8px;
+                    margin-bottom:6px;
+                    word-break:break-word;
+                    min-height:42px;
+                ">
+                    {html.escape(selected_changed_node)}
+                </div>
+                """,
+                unsafe_allow_html=True,
+            )
 
-graph_html = build_network_html(selected_snapshot, strength_threshold)
 
-left_col, right_col = st.columns([4.8, 1.2])
+if streamlit_js_eval is not None:
+    viewport_height = streamlit_js_eval(
+        js_expressions="window.innerHeight",
+        key="viewport_height",
+    )
+else:
+    viewport_height = None
 
-with left_col:
-    st.subheader(f"Graph for {selected_year} | Age {selected_age}")
-    components.html(
-    graph_html,
-    height=930,
-    scrolling=True
+try:
+    viewport_height = int(viewport_height) if viewport_height else 900
+except Exception:
+    viewport_height = 900
+
+graph_height = max(560, min(720, viewport_height - 250))
+
+graph_html = build_network_html(
+    selected_snapshot,
+    strength_threshold,
+    graph_height,
 )
 
-with right_col:
-    st.subheader("Snapshot")
-    st.write(f"**Year:** {selected_year}")
-    st.write(f"**Age:** {selected_age}")
-    st.write(f"**Source file:** `{selected_snapshot['file_name']}`")
-    st.write(f"**Nodes:** {len(selected_snapshot['nodes'])}")
-    st.write(f"**Edges:** {len(selected_snapshot['edges'])}")
+left_col, right_col = st.columns([4.8, 1.2], gap="medium")
 
-    st.divider()
-    st.subheader("Legend")
+with left_col:
     st.markdown(
-        """
-
-    **Node Border Color**  
-    Shows the node’s **manual domain** assigned in `node_groups`.
-
-    **Background Regions**  
-    Fuzzy colored areas show broader conceptual clusters generated from node positions and domain colors.
-
-    **Manual Domain**  
-    The intended category assigned in the graph file, such as clinical, access, bias, environment, treatment, school, work, or family.
-
-    **Local Domain**  
-    The cluster-based domain read from `clusters.json`. It may differ from the manual domain when a node is positioned near another conceptual region.
-
-    **Edge Colors**  
-    🟢 **Green edge (+)** → Positive causal influence  
-    🔴 **Red edge (-)** → Negative causal influence  
-
-    **Edge Direction**  
-    Arrow direction shows that the source node influences the target node.
-
-    **Edge Strength**  
-    Thicker edges indicate stronger causal influence. Width is scaled from the numeric strength value in the code.
-    """
+        f"<div style='font-size:17px; font-weight:700; margin:0 0 6px 0;'>"
+        f"Graph: {selected_year} | Age {selected_age}"
+        f"</div>",
+        unsafe_allow_html=True,
     )
 
-    st.divider()
-    st.subheader("Node groups")
-    for group_name in selected_snapshot["group_colors"]:
-        group_color = selected_snapshot["group_colors"].get(group_name, "#dddddd")
-        group_description = selected_snapshot["group_descriptions"].get(group_name, "")
-        st.markdown(
-            f"""
-            <div style="margin-bottom: 10px;">
-              <div style="display:flex; align-items:center; gap:8px;">
-                <div style="width:14px; height:14px; border-radius:50%; background:{group_color}; border:1px solid #999;"></div>
-                <strong>{group_name.replace("_", " ").title()}</strong>
-              </div>
-              <div style="margin-left:22px; font-size:0.92rem; color:#555;">{group_description}</div>
-            </div>
-            """,
-            unsafe_allow_html=True,
-        )
+    components.html(
+        graph_html,
+        height=graph_height + 35,
+        scrolling=False,
+    )
 
-    st.divider()
-    st.subheader("Description")
-    persona_text = clean_multiline_text(selected_snapshot["persona_text"])
-    if persona_text:
-        st.markdown(
-            f"""
-            <div style="padding: 10px 12px; border: 1px solid #ddd; border-radius: 8px; background: #fafafa; white-space: pre-wrap;">
-            {html.escape(persona_text)}
-            </div>
-            """,
-            unsafe_allow_html=True,
-        )
-    else:
-        st.write("No description block was found in this source snapshot.")
+with right_col:
+    st.markdown(
+        "<div style='font-size:16px; font-weight:700; margin:0 0 2px 0;'>Snapshot</div>",
+        unsafe_allow_html=True,
+    )
+
+    tab1, tab2, tab3, tab4 = st.tabs(["Info", "Edges", "Groups", "Legend"])
+
+    with tab1:
+        st.write(f"**Year:** {selected_year}")
+        st.write(f"**Age:** {selected_age}")
+        st.write(f"**Source:** `{selected_snapshot['file_name']}`")
+        st.write(f"**Nodes:** {len(selected_snapshot['nodes'])}")
+        st.write(f"**Edges:** {len(selected_snapshot['edges'])}")
+
+        persona_text = clean_multiline_text(selected_snapshot["persona_text"])
+
+        if persona_text:
+            st.markdown("**Description**")
+            st.caption(persona_text)
+
+    with tab2:
+        st.markdown("""
+**Pastel teal edge (+):** positive effect  
+**Dusty rose edge (-):** negative effect  
+**Arrow:** source influences target  
+**Thickness:** causal strength  
+**Hover:** reason + strength
+""")
+
+        with tab3:
+            group_items = list(selected_snapshot["group_colors"].items())
+
+            groups_html = '<div style="display:grid; grid-template-columns:1fr 1fr; column-gap:18px; row-gap:10px; margin-top:8px;">'
+
+            for group_name, group_color in group_items:
+                raw_description = selected_snapshot["group_descriptions"].get(group_name, "")
+
+                safe_name = clean_text(group_name.replace("_", " ").title())
+                safe_desc = clean_text(raw_description)
+
+                groups_html += (
+                    f'<div style="min-height:48px;">'
+                    f'<div style="display:flex; align-items:center; gap:6px;">'
+                    f'<span style="display:inline-block; width:10px; height:10px; '
+                    f'border-radius:50%; background:{group_color}; flex-shrink:0;"></span>'
+                    f'<span style="font-size:12px; font-weight:700;">{safe_name}</span>'
+                    f'</div>'
+                    f'<div style="font-size:10px; color:#9ca3af; margin-left:16px; '
+                    f'margin-top:2px; line-height:1.25;">{safe_desc}</div>'
+                    f'</div>'
+                )
+
+            groups_html += "</div>"
+
+            st.markdown(groups_html, unsafe_allow_html=True)
+
+    with tab4:
+        st.markdown("""
+**Node Border Color**  
+Manual domain from `node_groups`.
+
+**Background Regions**  
+Fuzzy local clusters from node positions and domain colors.
+
+**Manual Domain**  
+Predefined category: clinical, access, bias, treatment, school, work, family, core, etc.
+
+**Local Domain**  
+Cluster-based grouping from `clusters.json`.
+
+**Hover Info**  
+Shows domain, explanation, and strength.
+""")
