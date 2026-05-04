@@ -170,10 +170,16 @@ for node, x, y, col, domain, local_domain, confidence in positioned_nodes:
     )
 
 def add_edge(u, v, sign, strength, explanation):
+
+    EDGE_COLORS = {
+        "+": "rgba(111, 191, 159, 0.85)",  # pastel teal-green
+        "-": "rgba(217, 140, 140, 0.85)"   # dusty rose
+    }
+
     net.add_edge(
         u,
         v,
-        color="green" if sign == "+" else "red",
+        color=EDGE_COLORS[sign],
         width=max(2, strength * 6),
         arrows="to",
         title=f"Effect: {'Positive' if sign == '+' else 'Negative'}\nWhy: {explanation}\nStrength: {strength:.2f}"
