@@ -1,0 +1,201 @@
+{
+  "id": "4911365",
+  "source": "MED",
+  "pmid": "4911365",
+  "doi": "10.1001/archpsyc.1970.01750010082015",
+  "title": "Diphenylhydantoin in children with severe temper tantrums.",
+  "authorString": "Looker A, Conners CK.",
+  "authorList": {
+    "author": [
+      {
+        "fullName": "Looker A",
+        "lastName": "Looker",
+        "firstName": "A",
+        "initials": "A"
+      },
+      {
+        "fullName": "Conners CK",
+        "lastName": "Conners",
+        "firstName": "C K",
+        "initials": "CK"
+      }
+    ]
+  },
+  "journalInfo": {
+    "issue": "1",
+    "volume": "23",
+    "journalIssueId": 392422,
+    "dateOfPublication": "1970 Jul",
+    "monthOfPublication": 7,
+    "yearOfPublication": 1970,
+    "journal": {
+      "medlineAbbreviation": "Arch Gen Psychiatry",
+      "title": "Archives of general psychiatry",
+      "essn": "1538-3636",
+      "issn": "0003-990X",
+      "nlmid": "0372435",
+      "isoabbreviation": "Arch Gen Psychiatry"
+    },
+    "printPublicationDate": "1970-07-01"
+  },
+  "pubYear": "1970",
+  "pageInfo": "80-89",
+  "publicationStatus": "ppublish",
+  "language": "eng",
+  "pubModel": "Print",
+  "pubTypeList": {
+    "pubType": [
+      "Clinical Trial",
+      "Randomized Controlled Trial",
+      "Journal Article"
+    ]
+  },
+  "meshHeadingList": {
+    "meshHeading": [
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Humans"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Phenytoin",
+        "meshQualifierList": {
+          "meshQualifier": [
+            {
+              "majorTopic_YN": "Y",
+              "abbreviation": "TU",
+              "qualifierName": "therapeutic use"
+            }
+          ]
+        }
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Placebos"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Electroencephalography"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Parent-Child Relations"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Attention Deficit Disorder with Hyperactivity",
+        "meshQualifierList": {
+          "meshQualifier": [
+            {
+              "majorTopic_YN": "N",
+              "abbreviation": "DT",
+              "qualifierName": "drug therapy"
+            }
+          ]
+        }
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Child Behavior Disorders",
+        "meshQualifierList": {
+          "meshQualifier": [
+            {
+              "majorTopic_YN": "Y",
+              "abbreviation": "DT",
+              "qualifierName": "drug therapy"
+            }
+          ]
+        }
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Psychological Tests"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Intelligence Tests"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Bender-Gestalt Test"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Adolescent"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Child"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Child, Preschool"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Female"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Male"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Clinical Trials as Topic"
+      }
+    ]
+  },
+  "chemicalList": {
+    "chemical": [
+      {
+        "name": "Placebos",
+        "registryNumber": "0"
+      },
+      {
+        "name": "Phenytoin",
+        "registryNumber": "6158TKW0C5"
+      }
+    ]
+  },
+  "subsetList": {
+    "subset": [
+      {
+        "code": "IM",
+        "name": "Index Medicus"
+      }
+    ]
+  },
+  "fullTextUrlList": {
+    "fullTextUrl": [
+      {
+        "availability": "Subscription required",
+        "availabilityCode": "S",
+        "documentStyle": "doi",
+        "site": "DOI",
+        "url": "https://doi.org/10.1001/archpsyc.1970.01750010082015"
+      }
+    ]
+  },
+  "isOpenAccess": "N",
+  "inEPMC": "N",
+  "inPMC": "N",
+  "citedByCount": 15,
+  "hasReferences": "N",
+  "hasTextMinedTerms": "Y",
+  "hasDbCrossReferences": "N",
+  "hasPDF": "N",
+  "hasBook": "N",
+  "hasSuppl": "N",
+  "hasLabsLinks": "N",
+  "hasData": "N",
+  "authMan": "N",
+  "epmcAuthMan": "N",
+  "nihAuthMan": "N",
+  "hasTMAccessionNumbers": "N",
+  "dateOfCompletion": "1970-07-17",
+  "dateOfCreation": "1970-07-01",
+  "dateOfRevision": "2019-07-17",
+  "firstPublicationDate": "1970-07-01",
+  "firstIndexDate": "2008-01-29",
+  "hasEvaluations": "N"
+}

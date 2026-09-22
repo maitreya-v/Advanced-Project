@@ -1,0 +1,145 @@
+{
+  "id": "5520419",
+  "source": "MED",
+  "pmid": "5520419",
+  "title": "The syndrome of multiple minimal handicaps: active involvement of the child, family and school in the management.",
+  "authorString": "Wertheim ES.",
+  "authorList": {
+    "author": [
+      {
+        "fullName": "Wertheim ES",
+        "lastName": "Wertheim",
+        "firstName": "E S",
+        "initials": "ES"
+      }
+    ]
+  },
+  "journalInfo": {
+    "issue": "1",
+    "volume": "6",
+    "journalIssueId": 469521,
+    "dateOfPublication": "1970 Mar",
+    "monthOfPublication": 3,
+    "yearOfPublication": 1970,
+    "journal": {
+      "medlineAbbreviation": "Aust Paediatr J",
+      "title": "Australian paediatric journal",
+      "issn": "0004-993X",
+      "nlmid": "15420340R",
+      "isoabbreviation": "Aust Paediatr J"
+    },
+    "printPublicationDate": "1970-03-01"
+  },
+  "pubYear": "1970",
+  "pageInfo": "111-118",
+  "publicationStatus": "ppublish",
+  "language": "eng",
+  "pubModel": "Print",
+  "pubTypeList": {
+    "pubType": [
+      "Journal Article"
+    ]
+  },
+  "meshHeadingList": {
+    "meshHeading": [
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Humans"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Brain Damage, Chronic",
+        "meshQualifierList": {
+          "meshQualifier": [
+            {
+              "majorTopic_YN": "Y",
+              "abbreviation": "RH",
+              "qualifierName": "rehabilitation"
+            }
+          ]
+        }
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Parents"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Attention Deficit Disorder with Hyperactivity",
+        "meshQualifierList": {
+          "meshQualifier": [
+            {
+              "majorTopic_YN": "N",
+              "abbreviation": "DI",
+              "qualifierName": "diagnosis"
+            },
+            {
+              "majorTopic_YN": "N",
+              "abbreviation": "PC",
+              "qualifierName": "prevention & control"
+            },
+            {
+              "majorTopic_YN": "N",
+              "abbreviation": "RH",
+              "qualifierName": "rehabilitation"
+            }
+          ]
+        }
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Age Factors"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Education, Special"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Child"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Child, Preschool"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Female"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Male"
+      }
+    ]
+  },
+  "subsetList": {
+    "subset": [
+      {
+        "code": "IM",
+        "name": "Index Medicus"
+      }
+    ]
+  },
+  "isOpenAccess": "N",
+  "inEPMC": "N",
+  "inPMC": "N",
+  "citedByCount": 0,
+  "hasReferences": "N",
+  "hasTextMinedTerms": "N",
+  "hasDbCrossReferences": "N",
+  "hasPDF": "N",
+  "hasBook": "N",
+  "hasSuppl": "N",
+  "hasLabsLinks": "N",
+  "hasData": "N",
+  "authMan": "N",
+  "epmcAuthMan": "N",
+  "nihAuthMan": "N",
+  "hasTMAccessionNumbers": "N",
+  "dateOfCompletion": "1971-12-12",
+  "dateOfCreation": "1970-03-01",
+  "dateOfRevision": "2004-11-17",
+  "firstPublicationDate": "1970-03-01",
+  "firstIndexDate": "2008-01-29",
+  "hasEvaluations": "N"
+}

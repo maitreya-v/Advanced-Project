@@ -1,0 +1,4 @@
+# Locally installed PDF-reading packages; not needed to rebuild the reports.
+_dependencies/
+__pycache__/
+*.pyc

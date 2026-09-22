@@ -1,0 +1,222 @@
+{
+  "id": "5474700",
+  "source": "MED",
+  "pmid": "5474700",
+  "title": "Vascular abnormalities in congenital generalized elastolysis (cutis laxa): report of a case.",
+  "authorString": "Wagstaff LA, Firth JC, Levin SE.",
+  "authorList": {
+    "author": [
+      {
+        "fullName": "Wagstaff LA",
+        "lastName": "Wagstaff",
+        "firstName": "L A",
+        "initials": "LA"
+      },
+      {
+        "fullName": "Firth JC",
+        "lastName": "Firth",
+        "firstName": "J C",
+        "initials": "JC"
+      },
+      {
+        "fullName": "Levin SE",
+        "lastName": "Levin",
+        "firstName": "S E",
+        "initials": "SE"
+      }
+    ]
+  },
+  "journalInfo": {
+    "issue": "39",
+    "volume": "44",
+    "journalIssueId": 418221,
+    "dateOfPublication": "1970 Oct",
+    "monthOfPublication": 10,
+    "yearOfPublication": 1970,
+    "journal": {
+      "medlineAbbreviation": "S Afr Med J",
+      "title": "South African medical journal = Suid-Afrikaanse tydskrif vir geneeskunde",
+      "essn": "2078-5135",
+      "issn": "0256-9574",
+      "nlmid": "0404520",
+      "isoabbreviation": "S Afr Med J"
+    },
+    "printPublicationDate": "1970-10-01"
+  },
+  "pubYear": "1970",
+  "pageInfo": "1125-1127",
+  "publicationStatus": "ppublish",
+  "language": "eng",
+  "pubModel": "Print",
+  "pubTypeList": {
+    "pubType": [
+      "Journal Article"
+    ]
+  },
+  "meshHeadingList": {
+    "meshHeading": [
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Vertebral Artery"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Humans"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Bronchopneumonia",
+        "meshQualifierList": {
+          "meshQualifier": [
+            {
+              "majorTopic_YN": "N",
+              "abbreviation": "CO",
+              "qualifierName": "complications"
+            }
+          ]
+        }
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Carotid Artery Diseases",
+        "meshQualifierList": {
+          "meshQualifier": [
+            {
+              "majorTopic_YN": "N",
+              "abbreviation": "CO",
+              "qualifierName": "complications"
+            }
+          ]
+        }
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Vascular Diseases",
+        "meshQualifierList": {
+          "meshQualifier": [
+            {
+              "majorTopic_YN": "Y",
+              "abbreviation": "CO",
+              "qualifierName": "complications"
+            }
+          ]
+        }
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Aortic Diseases",
+        "meshQualifierList": {
+          "meshQualifier": [
+            {
+              "majorTopic_YN": "N",
+              "abbreviation": "CO",
+              "qualifierName": "complications"
+            }
+          ]
+        }
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Hypertension",
+        "meshQualifierList": {
+          "meshQualifier": [
+            {
+              "majorTopic_YN": "N",
+              "abbreviation": "CO",
+              "qualifierName": "complications"
+            }
+          ]
+        }
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Cutis Laxa",
+        "meshQualifierList": {
+          "meshQualifier": [
+            {
+              "majorTopic_YN": "Y",
+              "abbreviation": "CO",
+              "qualifierName": "complications"
+            },
+            {
+              "majorTopic_YN": "N",
+              "abbreviation": "CN",
+              "qualifierName": "congenital"
+            }
+          ]
+        }
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Skin Manifestations"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Angiography"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Aortography"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Attention Deficit Disorder with Hyperactivity",
+        "meshQualifierList": {
+          "meshQualifier": [
+            {
+              "majorTopic_YN": "N",
+              "abbreviation": "CO",
+              "qualifierName": "complications"
+            }
+          ]
+        }
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Child"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Child, Preschool"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Infant"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Male"
+      }
+    ]
+  },
+  "subsetList": {
+    "subset": [
+      {
+        "code": "IM",
+        "name": "Index Medicus"
+      }
+    ]
+  },
+  "isOpenAccess": "N",
+  "inEPMC": "N",
+  "inPMC": "N",
+  "citedByCount": 10,
+  "hasReferences": "N",
+  "hasTextMinedTerms": "Y",
+  "hasDbCrossReferences": "N",
+  "hasPDF": "N",
+  "hasBook": "N",
+  "hasSuppl": "N",
+  "hasLabsLinks": "N",
+  "hasData": "N",
+  "authMan": "N",
+  "epmcAuthMan": "N",
+  "nihAuthMan": "N",
+  "hasTMAccessionNumbers": "N",
+  "dateOfCompletion": "1970-12-11",
+  "dateOfCreation": "1970-10-03",
+  "dateOfRevision": "2014-09-12",
+  "firstPublicationDate": "1970-10-01",
+  "firstIndexDate": "2008-01-29",
+  "hasEvaluations": "N"
+}

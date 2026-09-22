@@ -1,0 +1,247 @@
+{
+  "id": "5491539",
+  "source": "MED",
+  "pmid": "5491539",
+  "doi": "10.1176/ajp.127.5.634",
+  "title": "Brain function in problem children and controls: psychometric, neurological, and electroencephalographic comparisons.",
+  "authorString": "Wikler A, Dixon JF, Parker JB.",
+  "authorList": {
+    "author": [
+      {
+        "fullName": "Wikler A",
+        "lastName": "Wikler",
+        "firstName": "A",
+        "initials": "A"
+      },
+      {
+        "fullName": "Dixon JF",
+        "lastName": "Dixon",
+        "firstName": "J F",
+        "initials": "JF"
+      },
+      {
+        "fullName": "Parker JB Jr",
+        "lastName": "Parker",
+        "firstName": "J B",
+        "initials": "JB"
+      }
+    ]
+  },
+  "journalInfo": {
+    "issue": "5",
+    "volume": "127",
+    "journalIssueId": 427839,
+    "dateOfPublication": "1970 Nov",
+    "monthOfPublication": 11,
+    "yearOfPublication": 1970,
+    "journal": {
+      "medlineAbbreviation": "Am J Psychiatry",
+      "title": "The American journal of psychiatry",
+      "essn": "1535-7228",
+      "issn": "0002-953X",
+      "nlmid": "0370512",
+      "isoabbreviation": "Am J Psychiatry"
+    },
+    "printPublicationDate": "1970-11-01"
+  },
+  "pubYear": "1970",
+  "pageInfo": "634-645",
+  "publicationStatus": "ppublish",
+  "language": "eng",
+  "pubModel": "Print",
+  "pubTypeList": {
+    "pubType": [
+      "Journal Article"
+    ]
+  },
+  "meshHeadingList": {
+    "meshHeading": [
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Humans"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Brain Diseases",
+        "meshQualifierList": {
+          "meshQualifier": [
+            {
+              "majorTopic_YN": "N",
+              "abbreviation": "CO",
+              "qualifierName": "complications"
+            },
+            {
+              "majorTopic_YN": "Y",
+              "abbreviation": "DI",
+              "qualifierName": "diagnosis"
+            }
+          ]
+        }
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Brain Damage, Chronic",
+        "meshQualifierList": {
+          "meshQualifier": [
+            {
+              "majorTopic_YN": "N",
+              "abbreviation": "CO",
+              "qualifierName": "complications"
+            },
+            {
+              "majorTopic_YN": "Y",
+              "abbreviation": "DI",
+              "qualifierName": "diagnosis"
+            }
+          ]
+        }
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Hyperkinesis",
+        "meshQualifierList": {
+          "meshQualifier": [
+            {
+              "majorTopic_YN": "Y",
+              "abbreviation": "ET",
+              "qualifierName": "etiology"
+            }
+          ]
+        }
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Electroencephalography"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Neurologic Examination"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Attention Deficit Disorder with Hyperactivity",
+        "meshQualifierList": {
+          "meshQualifier": [
+            {
+              "majorTopic_YN": "N",
+              "abbreviation": "CO",
+              "qualifierName": "complications"
+            },
+            {
+              "majorTopic_YN": "N",
+              "abbreviation": "DI",
+              "qualifierName": "diagnosis"
+            }
+          ]
+        }
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Child Behavior Disorders",
+        "meshQualifierList": {
+          "meshQualifier": [
+            {
+              "majorTopic_YN": "N",
+              "abbreviation": "CO",
+              "qualifierName": "complications"
+            }
+          ]
+        }
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Psychometrics"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Social Behavior Disorders",
+        "meshQualifierList": {
+          "meshQualifier": [
+            {
+              "majorTopic_YN": "Y",
+              "abbreviation": "ET",
+              "qualifierName": "etiology"
+            }
+          ]
+        }
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Adolescent"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Child"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Female"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Male"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Learning Disabilities",
+        "meshQualifierList": {
+          "meshQualifier": [
+            {
+              "majorTopic_YN": "Y",
+              "abbreviation": "ET",
+              "qualifierName": "etiology"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "subsetList": {
+    "subset": [
+      {
+        "code": "IM",
+        "name": "Index Medicus"
+      }
+    ]
+  },
+  "fullTextUrlList": {
+    "fullTextUrl": [
+      {
+        "availability": "Free",
+        "availabilityCode": "F",
+        "documentStyle": "abs",
+        "site": "ajp.psychiatryonline.org",
+        "url": "http://ajp.psychiatryonline.org/cgi/content/abstract/127/5/634"
+      },
+      {
+        "availability": "Subscription required",
+        "availabilityCode": "S",
+        "documentStyle": "doi",
+        "site": "DOI",
+        "url": "https://doi.org/10.1176/ajp.127.5.634"
+      }
+    ]
+  },
+  "isOpenAccess": "N",
+  "inEPMC": "N",
+  "inPMC": "N",
+  "citedByCount": 41,
+  "hasReferences": "Y",
+  "hasTextMinedTerms": "Y",
+  "hasDbCrossReferences": "N",
+  "hasPDF": "N",
+  "hasBook": "N",
+  "hasSuppl": "N",
+  "hasLabsLinks": "N",
+  "hasData": "N",
+  "authMan": "N",
+  "epmcAuthMan": "N",
+  "nihAuthMan": "N",
+  "hasTMAccessionNumbers": "N",
+  "dateOfCompletion": "1971-02-23",
+  "dateOfCreation": "1970-11-01",
+  "dateOfRevision": "2019-12-10",
+  "firstPublicationDate": "1970-11-01",
+  "firstIndexDate": "2008-01-29",
+  "hasEvaluations": "N"
+}

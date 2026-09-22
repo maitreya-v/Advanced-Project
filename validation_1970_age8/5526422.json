@@ -1,0 +1,172 @@
+{
+  "id": "5526422",
+  "source": "MED",
+  "pmid": "5526422",
+  "title": "The role of allergic factors in the child with minimal brain dysfunction.",
+  "authorString": "Kittler FJ, Baldwin DG.",
+  "authorList": {
+    "author": [
+      {
+        "fullName": "Kittler FJ",
+        "lastName": "Kittler",
+        "firstName": "F J",
+        "initials": "FJ"
+      },
+      {
+        "fullName": "Baldwin DG",
+        "lastName": "Baldwin",
+        "firstName": "D G",
+        "initials": "DG"
+      }
+    ]
+  },
+  "journalInfo": {
+    "issue": "5",
+    "volume": "28",
+    "journalIssueId": 497067,
+    "dateOfPublication": "1970 May",
+    "monthOfPublication": 5,
+    "yearOfPublication": 1970,
+    "journal": {
+      "medlineAbbreviation": "Ann Allergy",
+      "title": "Annals of allergy",
+      "issn": "0003-4738",
+      "nlmid": "0372346",
+      "isoabbreviation": "Ann Allergy"
+    },
+    "printPublicationDate": "1970-05-01"
+  },
+  "pubYear": "1970",
+  "pageInfo": "203-206",
+  "publicationStatus": "ppublish",
+  "language": "eng",
+  "pubModel": "Print",
+  "pubTypeList": {
+    "pubType": [
+      "Journal Article"
+    ]
+  },
+  "meshHeadingList": {
+    "meshHeading": [
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Humans"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Brain Damage, Chronic",
+        "meshQualifierList": {
+          "meshQualifier": [
+            {
+              "majorTopic_YN": "Y",
+              "abbreviation": "CO",
+              "qualifierName": "complications"
+            }
+          ]
+        }
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Hypersensitivity",
+        "meshQualifierList": {
+          "meshQualifier": [
+            {
+              "majorTopic_YN": "Y",
+              "abbreviation": "CO",
+              "qualifierName": "complications"
+            }
+          ]
+        }
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Fatigue",
+        "meshQualifierList": {
+          "meshQualifier": [
+            {
+              "majorTopic_YN": "N",
+              "abbreviation": "ET",
+              "qualifierName": "etiology"
+            }
+          ]
+        }
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Electroencephalography"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Skin Tests"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Diet Therapy"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Attention Deficit Disorder with Hyperactivity",
+        "meshQualifierList": {
+          "meshQualifier": [
+            {
+              "majorTopic_YN": "N",
+              "abbreviation": "CO",
+              "qualifierName": "complications"
+            },
+            {
+              "majorTopic_YN": "N",
+              "abbreviation": "DI",
+              "qualifierName": "diagnosis"
+            }
+          ]
+        }
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Child Behavior Disorders"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Psychological Tests"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Child"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Child, Preschool"
+      }
+    ]
+  },
+  "subsetList": {
+    "subset": [
+      {
+        "code": "IM",
+        "name": "Index Medicus"
+      }
+    ]
+  },
+  "isOpenAccess": "N",
+  "inEPMC": "N",
+  "inPMC": "N",
+  "citedByCount": 7,
+  "hasReferences": "N",
+  "hasTextMinedTerms": "Y",
+  "hasDbCrossReferences": "N",
+  "hasPDF": "N",
+  "hasBook": "N",
+  "hasSuppl": "N",
+  "hasLabsLinks": "N",
+  "hasData": "N",
+  "authMan": "N",
+  "epmcAuthMan": "N",
+  "nihAuthMan": "N",
+  "hasTMAccessionNumbers": "N",
+  "dateOfCompletion": "1972-10-27",
+  "dateOfCreation": "1970-05-01",
+  "dateOfRevision": "2004-11-17",
+  "firstPublicationDate": "1970-05-01",
+  "firstIndexDate": "2008-01-29",
+  "hasEvaluations": "N"
+}

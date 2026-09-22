@@ -1,0 +1,134 @@
+{
+  "id": "4097226",
+  "source": "MED",
+  "pmid": "4097226",
+  "title": "Minimal brain dysfunction: clinical aspects.",
+  "authorString": "Charlton MH.",
+  "authorList": {
+    "author": [
+      {
+        "fullName": "Charlton MH",
+        "lastName": "Charlton",
+        "firstName": "M H",
+        "initials": "MH"
+      }
+    ]
+  },
+  "journalInfo": {
+    "issue": "4",
+    "volume": "29",
+    "journalIssueId": 416535,
+    "dateOfPublication": "1970 Oct",
+    "monthOfPublication": 10,
+    "yearOfPublication": 1970,
+    "journal": {
+      "medlineAbbreviation": "Electroencephalogr Clin Neurophysiol",
+      "title": "Electroencephalography and clinical neurophysiology",
+      "issn": "0013-4694",
+      "nlmid": "0375035",
+      "isoabbreviation": "Electroencephalogr Clin Neurophysiol"
+    },
+    "printPublicationDate": "1970-10-01"
+  },
+  "pubYear": "1970",
+  "pageInfo": "412-413",
+  "publicationStatus": "ppublish",
+  "language": "eng",
+  "pubModel": "Print",
+  "pubTypeList": {
+    "pubType": [
+      "Journal Article"
+    ]
+  },
+  "meshHeadingList": {
+    "meshHeading": [
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Humans"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Brain Damage, Chronic",
+        "meshQualifierList": {
+          "meshQualifier": [
+            {
+              "majorTopic_YN": "Y",
+              "abbreviation": "DI",
+              "qualifierName": "diagnosis"
+            }
+          ]
+        }
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Dyslexia",
+        "meshQualifierList": {
+          "meshQualifier": [
+            {
+              "majorTopic_YN": "N",
+              "abbreviation": "ET",
+              "qualifierName": "etiology"
+            }
+          ]
+        }
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Attention Deficit Disorder with Hyperactivity",
+        "meshQualifierList": {
+          "meshQualifier": [
+            {
+              "majorTopic_YN": "N",
+              "abbreviation": "CO",
+              "qualifierName": "complications"
+            },
+            {
+              "majorTopic_YN": "N",
+              "abbreviation": "DI",
+              "qualifierName": "diagnosis"
+            },
+            {
+              "majorTopic_YN": "N",
+              "abbreviation": "PP",
+              "qualifierName": "physiopathology"
+            }
+          ]
+        }
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Child"
+      }
+    ]
+  },
+  "subsetList": {
+    "subset": [
+      {
+        "code": "IM",
+        "name": "Index Medicus"
+      }
+    ]
+  },
+  "isOpenAccess": "N",
+  "inEPMC": "N",
+  "inPMC": "N",
+  "citedByCount": 0,
+  "hasReferences": "N",
+  "hasTextMinedTerms": "N",
+  "hasDbCrossReferences": "N",
+  "hasPDF": "N",
+  "hasBook": "N",
+  "hasSuppl": "N",
+  "hasLabsLinks": "N",
+  "hasData": "N",
+  "authMan": "N",
+  "epmcAuthMan": "N",
+  "nihAuthMan": "N",
+  "hasTMAccessionNumbers": "N",
+  "dateOfCompletion": "1970-12-04",
+  "dateOfCreation": "1970-10-01",
+  "dateOfRevision": "2008-09-09",
+  "firstPublicationDate": "1970-10-01",
+  "firstIndexDate": "2008-09-10",
+  "hasEvaluations": "N"
+}

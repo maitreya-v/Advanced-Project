@@ -1,0 +1,910 @@
+{
+  "metadata": {
+    "graph_file": "C:\\Users\\madhu\\OneDrive\\Documents\\AP Causal Networks using LLMs\\Advanced-Project\\1970_32 yo.py",
+    "graph_sha256": "9edfce43358e675bf883da2e07249b6901c7eb5a891c24cd5068068839ff9aa0",
+    "graph_year": 1970,
+    "age": 32,
+    "edge_count": 45,
+    "paper_count": 4,
+    "reference_pmids": [
+      "4950109",
+      "5491539",
+      "5523436",
+      "5538099"
+    ],
+    "validation_updated_utc": "2026-09-22T01:24:53.808778+00:00",
+    "documents": [
+      {
+        "pmid": "5538099",
+        "file": "full_texts/s-0028-1091821.pdf",
+        "pdf_pages": 11,
+        "printed_pages_available": "307-317",
+        "sha256": "3d35f393b10fdfd600f37edce036ac6cd9e1d37f4713cdd676952653b5680740",
+        "review_note": "Complete supplied article; clinical case series and discussion, not a treatment trial.",
+        "complete": true
+      },
+      {
+        "pmid": "5523436",
+        "file": "full_texts/1970-15121-001.pdf",
+        "pdf_pages": 5,
+        "printed_pages_available": "314-318",
+        "sha256": "2918bed54d7d22c53830163083767e9fe5193a10ae113c1fab2efe175ce3d2a4",
+        "review_note": "Complete supplied pilot study; 30 children with historical MBD and specific bus/dog phobias; controlled behavioral intervention.",
+        "complete": true
+      },
+      {
+        "pmid": "5491539",
+        "file": "full_texts/Brain_function.pdf",
+        "pdf_pages": 10,
+        "printed_pages_available": "634-643",
+        "sha256": "46c770751ee25e63bf84c9781d9092fd42c59a97057c2a99b3a3196fe5ba4a2f",
+        "review_note": "Incomplete supplied scan: cited article ends at 645; printed pages 644-645 missing. Page 634 begins with the end of another article, excluded from this review. Matched cross-sectional comparisons, not longitudinal or treatment-effect results.",
+        "complete": false
+      },
+      {
+        "pmid": "4950109",
+        "file": "full_texts/simply produced.pdf",
+        "pdf_pages": 7,
+        "printed_pages_available": "217-223",
+        "sha256": "c41e95c86ebc61a1ecb477dc6b33b1d27bda8bf72876b49382c6d7e1674d16fe",
+        "review_note": "Complete supplied article; experimental cortical lesions in infant rats. No direct human ADHD outcome.",
+        "complete": true
+      }
+    ],
+    "original_unchanged": true,
+    "strength_assessed": false,
+    "status_counts": {
+      "supported": 0,
+      "partially_supported": 0,
+      "contradicted": 0,
+      "mixed_evidence": 0,
+      "insufficient_evidence": 37,
+      "not_assessable": 8
+    }
+  },
+  "status_definitions": {
+    "supported": "Evidence supports the stated direction, sign and reasoning within the declared scope.",
+    "partially_supported": "Evidence supports only part of the claim, a narrower population/outcome, or a clinical mechanism rather than the full causal claim.",
+    "contradicted": "Relevant evidence opposes the claimed direction or sign; the observation specifies the scope and limitations of that opposition.",
+    "mixed_evidence": "Relevant evidence supports and opposes the same defined claim; differences in population or outcome alone do not establish conflict.",
+    "insufficient_evidence": "Available evidence does not establish or refute the causal claim.",
+    "not_assessable": "Undefined variable coding or endpoint makes the proposed direction or sign uninterpretable."
+  },
+  "methodology": {
+    "Scope": "1970_32 yo.py, 45 edges, using only four supplied papers (PMIDs 5538099, 5523436, 5491539, 4950109). Review direction, sign and reasoning; strength excluded.",
+    "Result": "No adult edge receives causal support from these four pediatric/animal papers. Relevant pediatric statements are retained as context, not transferred as adult findings. Undefined signs/endpoints are not_assessable; other adult claims have insufficient_evidence. Missing support is not disproof.",
+    "Historical scope": "The references and graph concern 1970. Historical MBD/hyperkinesis populations do not automatically equal the modern ADHD node. Clinical statements are distinguished from experimental results. No automatic penalty for a 1990 mismatch is applied.",
+    "Age scope": "Schain ages 7-13; Obler approximately 7-12; Wikler initial eligibility 5-15. None studies adult patients aged 32. Family histories mentioning relatives are not adult outcome studies. Childhood age trends are not used to contradict adult severity or impairment claims.",
+    "Source completeness": "Schain, Obler and Geller supplied articles are complete. Brain_function.pdf contains printed pp. 634-643; pp. 644-645 are absent. The preceding article fragment on p. 634 is excluded.",
+    "Evidence limits": "Schain supplies clinical management statements and observational cases. Wikler is cross-sectional and reports drug-free results. Obler tests phobia desensitization, an intervention absent from this graph. Geller is an infant-rat lesion experiment, not human ADHD evidence.",
+    "Status standard": "Only the six status_definitions values are allowed. Contextual associations become insufficient_evidence; undefined categorical signs/endpoints become not_assessable; clinical or narrower support becomes partially_supported. Contradicted does not imply a proven reversed causal edge.",
+    "Status counts": "{\"supported\": 0, \"partially_supported\": 0, \"contradicted\": 0, \"mixed_evidence\": 0, \"insufficient_evidence\": 37, \"not_assessable\": 8}",
+    "Evidence format": "Each edge has 9 fields. Evidence contains PMID, exact_excerpt, location (PDF/printed page and section), relevance. Shared references provide citations and URLs. Empty evidence means no directly relevant passage found; no missing evidence is invented.",
+    "Excerpt transcription": "Line wrapping and end-of-line hyphenation normalized; quotations from the four supplied PDFs, with page locations. No title-only excerpts used as causal evidence.",
+    "Original preservation": "Neither original graph modified. Original 1970 SHA-256: 9edfce43358e675bf883da2e07249b6901c7eb5a891c24cd5068068839ff9aa0",
+    "Source isolation": "Only the four PDFs copied into this age folder are used. No additional bibliography records or adult studies were introduced. Earlier validation folders are untouched.",
+    "Reproduce": "Run python validation_1970_age32/build_report.py. The reviewed judgments are stored in fulltext_review.py and checked against the actual 1970 source on every run."
+  },
+  "edges": [
+    {
+      "edge_id": 1,
+      "source": "Genetic Risk",
+      "dest": "ADHD",
+      "existing_reasoning": "Genetic vulnerability contributes to adult ADHD.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "Schain reports similar symptoms among relatives, but familial aggregation does not separate inherited risk from shared environment and is not a genetic study of ADHD. The supplied pages do not establish the genetic-risk-to-ADHD causal edge. Population limit: the supplied human studies concern children, not adults aged 32; the fourth paper is an infant-rat experiment.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis; obtain genetic evidence from the permitted period.",
+      "evidence": [
+        {
+          "pmid": "5538099",
+          "exact_excerpt": "Family histories of similar symptoms of siblings, parents, or near relatives could frequently be elicited.",
+          "location": "s-0028-1091821.pdf; PDF page 4; printed page 310; Diagnosis",
+          "relevance": "Familial aggregation is compatible with genetic or shared environmental influences; it does not isolate inherited ADHD risk."
+        }
+      ]
+    },
+    {
+      "edge_id": 2,
+      "source": "ADHD",
+      "dest": "Symptom Severity",
+      "existing_reasoning": "Underlying ADHD increases symptom severity.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "Schain explicitly treats historical MBD as a heterogeneous description. Wikler compares selected problem children with controls. Neither identifies an effect of latent modern ADHD on an independently measured severity outcome; retain the construct-overlap caution. Population limit: the supplied human studies concern children, not adults aged 32; the fourth paper is an infant-rat experiment.",
+      "recommended_action": "Define ADHD as latent liability separately from the symptom measurement; causal direction and positive sign remain assumptions.",
+      "evidence": [
+        {
+          "pmid": "5538099",
+          "exact_excerpt": "It is generally agreed that this expression is descriptive of symptoms with multiple determinants and should not be regarded as a unitary disorder",
+          "location": "s-0028-1091821.pdf; PDF page 1; printed page 307; Introduction",
+          "relevance": "Historical MBD is a heterogeneous symptom description, not automatically equivalent to the graph ADHD node."
+        },
+        {
+          "pmid": "5491539",
+          "exact_excerpt": "Psychometric, neurological, and EEG studies were made of 24 children with scholastic-behavioral problems but no classical evidence of neurological disease and of 24 matched controls.",
+          "location": "Brain_function.pdf; PDF page 1; printed page 634; Article abstract (below preceding article)",
+          "relevance": "Matched observational sample, not manipulation of disorder, severity or access."
+        }
+      ]
+    },
+    {
+      "edge_id": 3,
+      "source": "ADHD",
+      "dest": "Symptom Type",
+      "existing_reasoning": "Underlying ADHD shapes symptom presentation.",
+      "sign": "+",
+      "validation_status": "not_assessable",
+      "observation_from_validation": "Historical MBD includes varied symptom domains, but does not validate a unitary ADHD mechanism. Symptom Type still has no ordered scale, so a universal plus sign is undefined. Population limit: the supplied human studies concern children, not adults aged 32; the fourth paper is an infant-rat experiment.",
+      "recommended_action": "Use category-specific outcomes or an unsigned association; do not assign a universal positive sign.",
+      "evidence": [
+        {
+          "pmid": "5538099",
+          "exact_excerpt": "It is generally agreed that this expression is descriptive of symptoms with multiple determinants and should not be regarded as a unitary disorder",
+          "location": "s-0028-1091821.pdf; PDF page 1; printed page 307; Introduction",
+          "relevance": "Historical MBD is a heterogeneous symptom description, not automatically equivalent to the graph ADHD node."
+        }
+      ]
+    },
+    {
+      "edge_id": 4,
+      "source": "ADHD",
+      "dest": "Comorbid Conditions",
+      "existing_reasoning": "Untreated ADHD can co-occur with other difficulties that complicate recognition.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "Co-occurrence is not evidence that ADHD causes other conditions. Schain discusses heterogeneous childhood diagnoses, and Obler selects children already having MBD and phobias; neither estimates incident adult comorbidity caused by untreated ADHD. Population limit: the supplied human studies concern children, not adults aged 32; the fourth paper is an infant-rat experiment.",
+      "recommended_action": "Define particular comorbid conditions and temporal ordering; do not infer a causal arrow from co-occurrence.",
+      "evidence": [
+        {
+          "pmid": "5538099",
+          "exact_excerpt": "It is generally agreed that this expression is descriptive of symptoms with multiple determinants and should not be regarded as a unitary disorder",
+          "location": "s-0028-1091821.pdf; PDF page 1; printed page 307; Introduction",
+          "relevance": "Historical MBD is a heterogeneous symptom description, not automatically equivalent to the graph ADHD node."
+        },
+        {
+          "pmid": "5523436",
+          "exact_excerpt": "The method of treatment employed in this study was designed for specific phobic disorders.",
+          "location": "1970-15121-001.pdf; PDF page 5; printed page 318; Discussion",
+          "relevance": "Limits generalization to broad behavioral therapy and ADHD impairment."
+        }
+      ]
+    },
+    {
+      "edge_id": 5,
+      "source": "Nutrition Quality",
+      "dest": "Symptom Severity",
+      "existing_reasoning": "Poor nutrition worsens cognitive regulation.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "None of the four supplied papers evaluates nutritional quality or a nutrition intervention against symptom severity. No negative causal sign can be assigned from this corpus. Population limit: the supplied human studies concern children, not adults aged 32; the fourth paper is an infant-rat experiment.",
+      "recommended_action": "Leave this edge unvalidated pending direct nutrition evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 6,
+      "source": "Sleep Quality",
+      "dest": "Symptom Severity",
+      "existing_reasoning": "Sleep disruption affects functioning and regulation.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "Sleeping problems appear in a hyperactive-child checklist. This establishes co-occurrence/measurement content, not that improved sleep reduces symptoms. Reverse direction and shared causes remain unresolved. Population limit: the supplied human studies concern children, not adults aged 32; the fourth paper is an infant-rat experiment.",
+      "recommended_action": "Keep as an unvalidated hypothesis; require a sleep intervention or temporally informative evidence.",
+      "evidence": [
+        {
+          "pmid": "5491539",
+          "exact_excerpt": "Has sleeping problems",
+          "location": "Brain_function.pdf; PDF page 4; printed page 637; Table 1: Profile of the Hyperactive Child, At home, item 4",
+          "relevance": "Checklist co-occurrence, not evidence sleep quality causes symptoms or a negative causal sign."
+        }
+      ]
+    },
+    {
+      "edge_id": 7,
+      "source": "Chronic Stress Load",
+      "dest": "Symptom Severity",
+      "existing_reasoning": "Stress amplifies symptoms.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied study measures cumulative adult stress and subsequent ADHD severity. Childhood family disturbances are not equivalent to chronic adult stress exposure. Population limit: the supplied human studies concern children, not adults aged 32; the fourth paper is an infant-rat experiment.",
+      "recommended_action": "Require adult longitudinal or intervention evidence separating stress from reverse effects of symptoms.",
+      "evidence": [
+        {
+          "pmid": "5538099",
+          "exact_excerpt": "Family disturbances that were obviously affecting the child were often present.",
+          "location": "s-0028-1091821.pdf; PDF page 5; printed page 311; Diagnostic discussion",
+          "relevance": "Clinical attribution in behavior-disorder cases; not an estimated family-stress effect on ADHD."
+        }
+      ]
+    },
+    {
+      "edge_id": 8,
+      "source": "Age",
+      "dest": "Symptom Severity",
+      "existing_reasoning": "At age 32, sustained adult role demands can make symptoms more visible.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The rationale concerns adult role demands and visibility, not increasing symptom severity with chronological age. Childhood discussions of declining hyperactivity do not establish or refute an adult age slope at 32. No supplied paper tests adult role demands. Population limit: the supplied human studies concern children, not adults aged 32; the fourth paper is an infant-rat experiment.",
+      "recommended_action": "Treat age 32 as context or model role demands separately; do not reverse an adult severity edge using the childhood age trend.",
+      "evidence": [
+        {
+          "pmid": "5538099",
+          "exact_excerpt": "The tendency of hyperkinesis to lessen with age is well known although this is not necessarily true of social adjustment",
+          "location": "s-0028-1091821.pdf; PDF page 9; printed page 315; Management discussion",
+          "relevance": "Author clinical statement challenges a uniformly positive age-to-severity slope; does not establish a slope for every ADHD domain."
+        },
+        {
+          "pmid": "5491539",
+          "exact_excerpt": "as hyperactivity tends to disappear as the child grows older",
+          "location": "Brain_function.pdf; PDF page 10; printed page 643; Discussion",
+          "relevance": "Author developmental interpretation; study is cross-sectional, and final two pages are missing."
+        }
+      ]
+    },
+    {
+      "edge_id": 9,
+      "source": "Gender",
+      "dest": "Symptom Type",
+      "existing_reasoning": "Gender norms affect which adult symptoms are noticed or dismissed.",
+      "sign": "+",
+      "validation_status": "not_assessable",
+      "observation_from_validation": "Schain reports diagnostic-group sex-ratio differences and proposes a frustration-response explanation. This is descriptive/speculative, not evidence that gender norms cause a particular ADHD presentation. Both nodes require categorical contrasts. Population limit: the supplied human studies concern children, not adults aged 32; the fourth paper is an infant-rat experiment.",
+      "recommended_action": "Separate presentation from observer detection and define the compared gender categories; sign is not currently defined.",
+      "evidence": [
+        {
+          "pmid": "5538099",
+          "exact_excerpt": "It may be that behavioral reactions to the frustrations produced by learning difficulties are the sex-linked aspect of the problem.",
+          "location": "s-0028-1091821.pdf; PDF page 8; printed page 314; Discussion",
+          "relevance": "Explicit author hypothesis, not a causal gender-norm or symptom-type result."
+        }
+      ]
+    },
+    {
+      "edge_id": 10,
+      "source": "Symptom Severity",
+      "dest": "Functional Impairment",
+      "existing_reasoning": "Higher severity increases occupational and daily impairment.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "Symptoms and difficulties at home/school are linked in Schain, partly by definition. Wikler reports poorer performance on some tests in hyperactive children versus controls, but not all measures, and does not manipulate symptom severity. This is association and clinical coherence, not an identified severity-to-impairment causal effect. Population limit: the supplied human studies concern children, not adults aged 32; the fourth paper is an infant-rat experiment.",
+      "recommended_action": "Keep as an explicitly assumed pathway; obtain evidence separating severity and impairment and establishing temporal direction.",
+      "evidence": [
+        {
+          "pmid": "5538099",
+          "exact_excerpt": "Hyperkinesis was judged to have been present if a parent believed restless, impulsive behavior significantly interfered with the child's adjustment at home or at school.",
+          "location": "s-0028-1091821.pdf; PDF page 2; printed page 308; Results: Anamnesis",
+          "relevance": "Clinical definition links symptoms and impairment but overlaps the outcome; not an independently identified severity effect."
+        },
+        {
+          "pmid": "5491539",
+          "exact_excerpt": "the hyperactive group had significantly lower scores than their controls on the WISC Full Scale I.Q., Performance I.Q., Bender-Gestalt, Graham-Kendall, and WRA reading and spelling tests",
+          "location": "Brain_function.pdf; PDF page 6; printed page 639; Results",
+          "relevance": "Associations with some functional measures, not a causal severity gradient. Grouping also uses functioning checklist items."
+        }
+      ]
+    },
+    {
+      "edge_id": 11,
+      "source": "Comorbid Conditions",
+      "dest": "Functional Impairment",
+      "existing_reasoning": "Comorbid burden increases impairment.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The phobia pilot measures a specific childhood functional restriction. It does not test whether greater adult comorbid burden causes general occupational or daily impairment. Population limit: the supplied human studies concern children, not adults aged 32; the fourth paper is an infant-rat experiment.",
+      "recommended_action": "Specify the comorbidity and functional outcome; do not generalize a child phobia intervention.",
+      "evidence": [
+        {
+          "pmid": "5523436",
+          "exact_excerpt": "Table 2 shows that the proportion of successes of at least \"1\" for treated Ss was significantly higher than for untreated Ss.",
+          "location": "1970-15121-001.pdf; PDF page 4; printed page 317; Results",
+          "relevance": "Controlled evidence of improved phobia-specific functioning; not general ADHD classroom/home impairment."
+        },
+        {
+          "pmid": "5523436",
+          "exact_excerpt": "The method of treatment employed in this study was designed for specific phobic disorders.",
+          "location": "1970-15121-001.pdf; PDF page 5; printed page 318; Discussion",
+          "relevance": "Limits generalization to broad behavioral therapy and ADHD impairment."
+        }
+      ]
+    },
+    {
+      "edge_id": 12,
+      "source": "Functional Impairment",
+      "dest": "Employment Instability",
+      "existing_reasoning": "Impairment can destabilize employment in adulthood.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied paper studies employment, job loss, or adult longitudinal functioning. School test performance cannot establish impairment causing employment instability. Population limit: the supplied human studies concern children, not adults aged 32; the fourth paper is an infant-rat experiment.",
+      "recommended_action": "Obtain adult work-history evidence; distinguish employment impairment from employment instability to avoid overlapping definitions.",
+      "evidence": []
+    },
+    {
+      "edge_id": 13,
+      "source": "Performance Pressure",
+      "dest": "Functional Impairment",
+      "existing_reasoning": "Work and performance pressure can worsen visible dysfunction.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "None of the four studies measures adult work pressure or its effect on functioning. Selection of children for school difficulties does not test workplace demands. Population limit: the supplied human studies concern children, not adults aged 32; the fourth paper is an infant-rat experiment.",
+      "recommended_action": "Define the pressure exposure and independent functional outcome, then seek adult evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 14,
+      "source": "Family Stress",
+      "dest": "Symptom Severity",
+      "existing_reasoning": "Adult family stress can intensify symptom burden.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "Schain attributes some serious behavior problems to family disturbances. These are clinical judgments in the behavior-disorder group, not controlled evidence that family stress raises ADHD symptom severity. Reciprocal effects remain possible. Population limit: the supplied human studies concern children, not adults aged 32; the fourth paper is an infant-rat experiment.",
+      "recommended_action": "Require temporal evidence; represent possible feedback with time-indexed nodes if justified.",
+      "evidence": [
+        {
+          "pmid": "5538099",
+          "exact_excerpt": "Family disturbances that were obviously affecting the child were often present.",
+          "location": "s-0028-1091821.pdf; PDF page 5; printed page 311; Diagnostic discussion",
+          "relevance": "Clinical attribution in behavior-disorder cases; not an estimated family-stress effect on ADHD."
+        }
+      ]
+    },
+    {
+      "edge_id": 15,
+      "source": "Household Stability",
+      "dest": "Family Stress",
+      "existing_reasoning": "Stable household context reduces stress.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No retrieved passage measures household stability and subsequent family stress. Both constructs need definitions. Population limit: the supplied human studies concern children, not adults aged 32; the fourth paper is an infant-rat experiment.",
+      "recommended_action": "Retain only as an unvalidated social-context hypothesis.",
+      "evidence": []
+    },
+    {
+      "edge_id": 16,
+      "source": "Socioeconomic Status",
+      "dest": "Educational Access",
+      "existing_reasoning": "Higher SES improves educational and cognitive support opportunities.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "Schain excludes socioeconomic factors from discussion and describes a selected childhood sample. None of the papers tests adult SES causing educational access or cognitive support opportunities; those are also different endpoints. Population limit: the supplied human studies concern children, not adults aged 32; the fourth paper is an infant-rat experiment.",
+      "recommended_action": "Define whether the outcome is access or quality; obtain evidence for that endpoint.",
+      "evidence": [
+        {
+          "pmid": "5538099",
+          "exact_excerpt": "Socioeconomic factors have not been included in this discussion because of the particular origins of the study group.",
+          "location": "s-0028-1091821.pdf; PDF page 9; printed page 315; Discussion",
+          "relevance": "Explicit scope limitation; cannot validate socioeconomic access edges."
+        }
+      ]
+    },
+    {
+      "edge_id": 17,
+      "source": "Financial Status",
+      "dest": "Access to Mental Health Care",
+      "existing_reasoning": "Income controls access to mental healthcare.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "Schain explicitly excludes socioeconomic factors from discussion because of the study sample; the sample originated from middle-to-high-income homes. This paper therefore cannot validate Financial Status causing Access to Mental Health Care. The other supplied papers provide no direct test of this access pathway. Population limit: the supplied human studies concern children, not adults aged 32; the fourth paper is an infant-rat experiment.",
+      "recommended_action": "Define financial status separately from socioeconomic status and avoid duplicate pathways without justification.",
+      "evidence": [
+        {
+          "pmid": "5538099",
+          "exact_excerpt": "Socioeconomic factors have not been included in this discussion because of the particular origins of the study group.",
+          "location": "s-0028-1091821.pdf; PDF page 9; printed page 315; Discussion",
+          "relevance": "Explicit scope limitation; cannot validate socioeconomic access edges."
+        }
+      ]
+    },
+    {
+      "edge_id": 18,
+      "source": "Neighborhood Quality",
+      "dest": "Access to Mental Health Care",
+      "existing_reasoning": "Better neighborhood conditions improve resource access.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "Schain explicitly excludes socioeconomic factors from discussion because of the study sample; the sample originated from middle-to-high-income homes. This paper therefore cannot validate Neighborhood Quality causing Access to Mental Health Care. The other supplied papers provide no direct test of this access pathway. Population limit: the supplied human studies concern children, not adults aged 32; the fourth paper is an infant-rat experiment.",
+      "recommended_action": "Specify the neighborhood exposure and access outcome; do not treat a contextual association as causal.",
+      "evidence": [
+        {
+          "pmid": "5538099",
+          "exact_excerpt": "Socioeconomic factors have not been included in this discussion because of the particular origins of the study group.",
+          "location": "s-0028-1091821.pdf; PDF page 9; printed page 315; Discussion",
+          "relevance": "Explicit scope limitation; cannot validate socioeconomic access edges."
+        }
+      ]
+    },
+    {
+      "edge_id": 19,
+      "source": "Socioeconomic Status",
+      "dest": "Access to Mental Health Care",
+      "existing_reasoning": "Higher SES improves healthcare access.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "Schain explicitly excludes socioeconomic factors from discussion because of the study sample; the sample originated from middle-to-high-income homes. This paper therefore cannot validate Socioeconomic Status causing Access to Mental Health Care. The other supplied papers provide no direct test of this access pathway. Population limit: the supplied human studies concern children, not adults aged 32; the fourth paper is an infant-rat experiment.",
+      "recommended_action": "Require access-to-care evidence appropriate to the setting and period.",
+      "evidence": [
+        {
+          "pmid": "5538099",
+          "exact_excerpt": "Socioeconomic factors have not been included in this discussion because of the particular origins of the study group.",
+          "location": "s-0028-1091821.pdf; PDF page 9; printed page 315; Discussion",
+          "relevance": "Explicit scope limitation; cannot validate socioeconomic access edges."
+        }
+      ]
+    },
+    {
+      "edge_id": 20,
+      "source": "Cost of Evaluation",
+      "dest": "Diagnosis Status",
+      "existing_reasoning": "Cost is a major adult diagnosis barrier.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied paper measures evaluation costs or compares diagnosis uptake by cost. Describing cost as a major barrier exceeds this corpus; evaluation uptake would be a possible mediator, not an established finding. Population limit: the supplied human studies concern children, not adults aged 32; the fourth paper is an infant-rat experiment.",
+      "recommended_action": "Require cost-to-evaluation evidence and define diagnosis receipt before assigning a causal negative sign.",
+      "evidence": []
+    },
+    {
+      "edge_id": 21,
+      "source": "Access to Mental Health Care",
+      "dest": "Diagnosis Status",
+      "existing_reasoning": "Access helps diagnosis, but adult ADHD recognition remains weak in 1970.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "Schain discusses childhood differential diagnosis after referral, not service access causing adult diagnosis. The additional claim that adult recognition was weak in 1970 is not established by these four studies. Population limit: the supplied human studies concern children, not adults aged 32; the fourth paper is an infant-rat experiment.",
+      "recommended_action": "Separate access, evaluation and diagnostic accuracy; source the historical service-capacity claim separately.",
+      "evidence": [
+        {
+          "pmid": "5538099",
+          "exact_excerpt": "It is believed that the distinction between minimal brain dysfunction syndromes and behavior disorders of childhood cannot be reliably based upon soft neurological signs, borderline EEG abnormalities or evidence of perceptual disturbances on psychological testing.",
+          "location": "s-0028-1091821.pdf; PDF page 1; printed page 307; Abstract",
+          "relevance": "Diagnostic uncertainty; does not quantify misdiagnosis or its effect on recorded diagnosis status."
+        }
+      ]
+    },
+    {
+      "edge_id": 22,
+      "source": "Race / Ethnicity",
+      "dest": "Institutional Bias",
+      "existing_reasoning": "Structural inequities influence institutions and healthcare pathways.",
+      "sign": "+",
+      "validation_status": "not_assessable",
+      "observation_from_validation": "Race / Ethnicity is categorical, not an increasing dose. Structural inequity in the explanation does not establish a universal positive causal effect of racial identity on institutions. Population limit: the supplied human studies concern children, not adults aged 32; the fourth paper is an infant-rat experiment.",
+      "recommended_action": "Define group contrasts, institutional setting and exposure to discrimination; avoid a universal signed race effect.",
+      "evidence": []
+    },
+    {
+      "edge_id": 23,
+      "source": "Institutional Bias",
+      "dest": "Misdiagnosis Rate",
+      "existing_reasoning": "Bias increases diagnostic errors.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "Schain discusses diagnostic uncertainty but does not measure institutional bias or diagnostic errors attributable to it. No adult causal comparison is supplied. Population limit: the supplied human studies concern children, not adults aged 32; the fourth paper is an infant-rat experiment.",
+      "recommended_action": "Define bias, error type and diagnostic reference standard before testing this edge.",
+      "evidence": [
+        {
+          "pmid": "5538099",
+          "exact_excerpt": "It is believed that the distinction between minimal brain dysfunction syndromes and behavior disorders of childhood cannot be reliably based upon soft neurological signs, borderline EEG abnormalities or evidence of perceptual disturbances on psychological testing.",
+          "location": "s-0028-1091821.pdf; PDF page 1; printed page 307; Abstract",
+          "relevance": "Diagnostic uncertainty; does not quantify misdiagnosis or its effect on recorded diagnosis status."
+        }
+      ]
+    },
+    {
+      "edge_id": 24,
+      "source": "Institutional Bias",
+      "dest": "Diagnosis Status",
+      "existing_reasoning": "Bias suppresses fair diagnosis access.",
+      "sign": "-",
+      "validation_status": "not_assessable",
+      "observation_from_validation": "A reduction in fair access is not necessarily a reduction in all recorded diagnoses. Bias could affect false positives and false negatives differently. Population limit: the supplied human studies concern children, not adults aged 32; the fourth paper is an infant-rat experiment.",
+      "recommended_action": "Separate receipt, accuracy and equity of diagnosis; negative sign is undefined for the current endpoint.",
+      "evidence": []
+    },
+    {
+      "edge_id": 25,
+      "source": "Diagnostic Criteria Variability",
+      "dest": "Misdiagnosis Rate",
+      "existing_reasoning": "Inconsistent diagnostic framing increases misdiagnosis.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "Historical diagnostic ambiguity is discussed, but variation in criteria is not manipulated or linked to a measured error rate. Without a diagnostic reference standard, disagreement is not necessarily misdiagnosis. Population limit: the supplied human studies concern children, not adults aged 32; the fourth paper is an infant-rat experiment.",
+      "recommended_action": "Specify criteria variation and an independent standard for error; obtain adult comparison data.",
+      "evidence": [
+        {
+          "pmid": "5538099",
+          "exact_excerpt": "It is believed that the distinction between minimal brain dysfunction syndromes and behavior disorders of childhood cannot be reliably based upon soft neurological signs, borderline EEG abnormalities or evidence of perceptual disturbances on psychological testing.",
+          "location": "s-0028-1091821.pdf; PDF page 1; printed page 307; Abstract",
+          "relevance": "Diagnostic uncertainty; does not quantify misdiagnosis or its effect on recorded diagnosis status."
+        },
+        {
+          "pmid": "5538099",
+          "exact_excerpt": "It is generally agreed that this expression is descriptive of symptoms with multiple determinants and should not be regarded as a unitary disorder",
+          "location": "s-0028-1091821.pdf; PDF page 1; printed page 307; Introduction",
+          "relevance": "Historical MBD is a heterogeneous symptom description, not automatically equivalent to the graph ADHD node."
+        }
+      ]
+    },
+    {
+      "edge_id": 26,
+      "source": "Comorbid Conditions",
+      "dest": "Misdiagnosis Rate",
+      "existing_reasoning": "Comorbidity obscures accurate diagnosis.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "Differential diagnosis and coexisting childhood problems appear in the papers. Neither establishes adult comorbidity causing diagnostic mistakes; multiple diagnoses can also be correct. Population limit: the supplied human studies concern children, not adults aged 32; the fourth paper is an infant-rat experiment.",
+      "recommended_action": "Specify comorbidity, competing diagnosis and false-positive or false-negative outcome.",
+      "evidence": [
+        {
+          "pmid": "5538099",
+          "exact_excerpt": "It is believed that the distinction between minimal brain dysfunction syndromes and behavior disorders of childhood cannot be reliably based upon soft neurological signs, borderline EEG abnormalities or evidence of perceptual disturbances on psychological testing.",
+          "location": "s-0028-1091821.pdf; PDF page 1; printed page 307; Abstract",
+          "relevance": "Diagnostic uncertainty; does not quantify misdiagnosis or its effect on recorded diagnosis status."
+        }
+      ]
+    },
+    {
+      "edge_id": 27,
+      "source": "Misdiagnosis Rate",
+      "dest": "Diagnosis Status",
+      "existing_reasoning": "Misdiagnosis reduces correct diagnosis status.",
+      "sign": "-",
+      "validation_status": "not_assessable",
+      "observation_from_validation": "The explanation means correct identification, while Diagnosis Status could mean any recorded diagnosis. False positives may increase recorded diagnoses and false negatives reduce them; a single negative sign is undefined for the present endpoint. Population limit: the supplied human studies concern children, not adults aged 32; the fourth paper is an infant-rat experiment.",
+      "recommended_action": "Define accurate diagnosis separately from receipt and separate error types.",
+      "evidence": [
+        {
+          "pmid": "5538099",
+          "exact_excerpt": "It is believed that the distinction between minimal brain dysfunction syndromes and behavior disorders of childhood cannot be reliably based upon soft neurological signs, borderline EEG abnormalities or evidence of perceptual disturbances on psychological testing.",
+          "location": "s-0028-1091821.pdf; PDF page 1; printed page 307; Abstract",
+          "relevance": "Diagnostic uncertainty; does not quantify misdiagnosis or its effect on recorded diagnosis status."
+        }
+      ]
+    },
+    {
+      "edge_id": 28,
+      "source": "Cultural Norms",
+      "dest": "Stigma",
+      "existing_reasoning": "1970 cultural norms strongly reinforce stigma.",
+      "sign": "+",
+      "validation_status": "not_assessable",
+      "observation_from_validation": "Cultural Norms has no ordered coding, and the four papers do not test norms causing stigma. The specific claim that 1970 norms strongly reinforced stigma is not demonstrated. Population limit: the supplied human studies concern children, not adults aged 32; the fourth paper is an infant-rat experiment.",
+      "recommended_action": "Define stigmatizing beliefs or a specific cultural contrast before assigning a sign; obtain evidence for the historical claim.",
+      "evidence": []
+    },
+    {
+      "edge_id": 29,
+      "source": "Stigma",
+      "dest": "Access to Mental Health Care",
+      "existing_reasoning": "Stigma suppresses help-seeking and care access.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The four papers do not measure stigma, adult help-seeking or resulting access to care. Access and willingness to seek care are separate constructs. Population limit: the supplied human studies concern children, not adults aged 32; the fourth paper is an infant-rat experiment.",
+      "recommended_action": "Specify the help-seeking mechanism and obtain adult evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 30,
+      "source": "Gender Bias",
+      "dest": "Diagnosis Status",
+      "existing_reasoning": "Gender bias shapes who is recognized or dismissed.",
+      "sign": "+",
+      "validation_status": "not_assessable",
+      "observation_from_validation": "The rationale allows recognition or dismissal but assigns a universal positive sign. Without a defined group contrast and bias direction, the sign cannot be interpreted; childhood sex-ratio discussion is not evidence of adult diagnostic bias. Population limit: the supplied human studies concern children, not adults aged 32; the fourth paper is an infant-rat experiment.",
+      "recommended_action": "Define the gender group, bias mechanism and diagnosis outcome before assigning a sign.",
+      "evidence": [
+        {
+          "pmid": "5538099",
+          "exact_excerpt": "It may be that behavioral reactions to the frustrations produced by learning difficulties are the sex-linked aspect of the problem.",
+          "location": "s-0028-1091821.pdf; PDF page 8; printed page 314; Discussion",
+          "relevance": "Explicit author hypothesis, not a causal gender-norm or symptom-type result."
+        }
+      ]
+    },
+    {
+      "edge_id": 31,
+      "source": "Gender Bias",
+      "dest": "Misdiagnosis Rate",
+      "existing_reasoning": "Gender stereotypes increase diagnostic error.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "Schain reports childhood sex differences and hypotheses, not stereotyping or measured diagnostic errors. No supplied study links adult gender bias to a misdiagnosis rate. Population limit: the supplied human studies concern children, not adults aged 32; the fourth paper is an infant-rat experiment.",
+      "recommended_action": "Define stereotyping and an independently assessed error outcome; seek adult diagnostic evidence.",
+      "evidence": [
+        {
+          "pmid": "5538099",
+          "exact_excerpt": "It may be that behavioral reactions to the frustrations produced by learning difficulties are the sex-linked aspect of the problem.",
+          "location": "s-0028-1091821.pdf; PDF page 8; printed page 314; Discussion",
+          "relevance": "Explicit author hypothesis, not a causal gender-norm or symptom-type result."
+        }
+      ]
+    },
+    {
+      "edge_id": 32,
+      "source": "Diagnosis Status",
+      "dest": "Medication Treatment",
+      "existing_reasoning": "At age 32 in 1970, diagnosis could lead to treatment, but adult ADHD recognition was limited.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "Schain describes diagnostic formulation guiding medication consideration in children. None of the four papers evaluates diagnosis causing medication initiation at age 32 or establishes the stated limitations of adult recognition/treatment in 1970. Population limit: the supplied human studies concern children, not adults aged 32; the fourth paper is an infant-rat experiment.",
+      "recommended_action": "Keep as an adult hypothesis; require adult diagnosis-to-prescribing evidence and a source for the historical recognition claim.",
+      "evidence": [
+        {
+          "pmid": "5538099",
+          "exact_excerpt": "The management of children with learning disorders is a function of the final diagnostic formulation. This requires co-operation with a variety of other professionals, especially in the area of special education and family counselling.",
+          "location": "s-0028-1091821.pdf; PDF page 9; printed page 315; Management discussion",
+          "relevance": "Clinical pathway linking formulation to management; not causal utilization data or formal school-accommodation entitlement."
+        },
+        {
+          "pmid": "5538099",
+          "exact_excerpt": "Neurological aspects of therapy will primarily be concerned with the use of drugs in the control of hyperkinesis and improvement of attention span.",
+          "location": "s-0028-1091821.pdf; PDF page 9; printed page 315; Management discussion",
+          "relevance": "Clinical support for a treatment-to-symptom-reduction direction; discussion rather than a treatment comparison in these 40 cases."
+        }
+      ]
+    },
+    {
+      "edge_id": 33,
+      "source": "Access to Mental Health Care",
+      "dest": "Treatment Access",
+      "existing_reasoning": "Adult treatment access depends on scarce mental health resources.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The two access nodes may overlap. No supplied paper distinguishes adult assessment access from treatment access or measures the claimed scarcity/weakness of adult services in 1970. Population limit: the supplied human studies concern children, not adults aged 32; the fourth paper is an infant-rat experiment.",
+      "recommended_action": "Define diagnostic service access separately from therapeutic service access before retaining this edge.",
+      "evidence": []
+    },
+    {
+      "edge_id": 34,
+      "source": "Socioeconomic Status",
+      "dest": "Treatment Access",
+      "existing_reasoning": "Higher socioeconomic status improves access to adult treatment pathways.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "Schain explicitly excludes socioeconomic factors from discussion because of the study sample; the sample originated from middle-to-high-income homes. This paper therefore cannot validate Socioeconomic Status causing Treatment Access. The other supplied papers provide no direct test of this access pathway. Population limit: the supplied human studies concern children, not adults aged 32; the fourth paper is an infant-rat experiment.",
+      "recommended_action": "Obtain treatment-access evidence and distinguish mediation through finances and healthcare access.",
+      "evidence": [
+        {
+          "pmid": "5538099",
+          "exact_excerpt": "Socioeconomic factors have not been included in this discussion because of the particular origins of the study group.",
+          "location": "s-0028-1091821.pdf; PDF page 9; printed page 315; Discussion",
+          "relevance": "Explicit scope limitation; cannot validate socioeconomic access edges."
+        }
+      ]
+    },
+    {
+      "edge_id": 35,
+      "source": "Treatment Access",
+      "dest": "Medication Treatment",
+      "existing_reasoning": "Treatment access makes medication more possible, though adult pathways are weak.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "Wikler reports only drug-free results; neither Schain clinical discussion nor Obler treatment assignment estimates adult access causing medication uptake. The claim that adult treatment pathways were weak in 1970 is not tested. Population limit: the supplied human studies concern children, not adults aged 32; the fourth paper is an infant-rat experiment.",
+      "recommended_action": "Define access and medication use separately; require evidence on uptake.",
+      "evidence": [
+        {
+          "pmid": "5491539",
+          "exact_excerpt": "Included in this report are only the test results and examination findings under drug-free conditions.",
+          "location": "Brain_function.pdf; PDF page 2; printed page 635; Methods: Subjects",
+          "relevance": "Available study comparisons do not estimate medication efficacy."
+        }
+      ]
+    },
+    {
+      "edge_id": 36,
+      "source": "Stigma",
+      "dest": "Treatment Adherence",
+      "existing_reasoning": "Stigma reduces willingness to continue treatment in adulthood.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied accessible result estimates stigma decreasing adherence. Population limit: the supplied human studies concern children, not adults aged 32; the fourth paper is an infant-rat experiment.",
+      "recommended_action": "Specify adherence among already treated children and seek direct evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 37,
+      "source": "Medication Treatment",
+      "dest": "Symptom Severity",
+      "existing_reasoning": "Medication can reduce symptoms, but treatment recognition is weaker for adults in 1970.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "Schain clinically discusses drugs targeting childhood hyperkinesis/attention; it is not an adult treatment trial. Wikler reports drug-free findings. The papers provide pediatric background, not an adult medication-to-symptom effect or evidence of adult treatment recognition in 1970. Population limit: the supplied human studies concern children, not adults aged 32; the fourth paper is an infant-rat experiment.",
+      "recommended_action": "Require drug-specific adult symptom outcomes; do not label pediatric discussion as adult causal validation.",
+      "evidence": [
+        {
+          "pmid": "5538099",
+          "exact_excerpt": "Neurological aspects of therapy will primarily be concerned with the use of drugs in the control of hyperkinesis and improvement of attention span.",
+          "location": "s-0028-1091821.pdf; PDF page 9; printed page 315; Management discussion",
+          "relevance": "Clinical support for a treatment-to-symptom-reduction direction; discussion rather than a treatment comparison in these 40 cases."
+        },
+        {
+          "pmid": "5491539",
+          "exact_excerpt": "Included in this report are only the test results and examination findings under drug-free conditions.",
+          "location": "Brain_function.pdf; PDF page 2; printed page 635; Methods: Subjects",
+          "relevance": "Available study comparisons do not estimate medication efficacy."
+        }
+      ]
+    },
+    {
+      "edge_id": 38,
+      "source": "Medication Treatment",
+      "dest": "Functional Impairment",
+      "existing_reasoning": "Medication may modestly reduce adult impairment.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "Schain explicitly speculates about distractibility disrupting learning/social development and notes that reduced hyperkinesis need not mean improved social adjustment. Wikler reports drug-free results. These passages do not demonstrate medication improving functional outcomes. Population limit: the supplied human studies concern children, not adults aged 32; the fourth paper is an infant-rat experiment.",
+      "recommended_action": "Require a medication trial reporting functional outcomes; negative sign remains unvalidated.",
+      "evidence": [
+        {
+          "pmid": "5538099",
+          "exact_excerpt": "One might speculate that distractibility might have interfered with the establishment of learning and social patterns at a critical stage of development during the preschool years.",
+          "location": "s-0028-1091821.pdf; PDF page 9; printed page 315; Management discussion",
+          "relevance": "Author explicitly labels the developmental mechanism speculative; no treatment effect on functioning demonstrated."
+        },
+        {
+          "pmid": "5538099",
+          "exact_excerpt": "The tendency of hyperkinesis to lessen with age is well known although this is not necessarily true of social adjustment",
+          "location": "s-0028-1091821.pdf; PDF page 9; printed page 315; Management discussion",
+          "relevance": "Author clinical statement challenges a uniformly positive age-to-severity slope; does not establish a slope for every ADHD domain."
+        },
+        {
+          "pmid": "5491539",
+          "exact_excerpt": "Included in this report are only the test results and examination findings under drug-free conditions.",
+          "location": "Brain_function.pdf; PDF page 2; printed page 635; Methods: Subjects",
+          "relevance": "Available study comparisons do not estimate medication efficacy."
+        }
+      ]
+    },
+    {
+      "edge_id": 39,
+      "source": "Treatment Adherence",
+      "dest": "Medication Treatment",
+      "existing_reasoning": "Adherence strengthens the actual treatment effect.",
+      "sign": "+",
+      "validation_status": "not_assessable",
+      "observation_from_validation": "The rationale concerns real-world treatment effect, but the destination is Medication Treatment. If that means prescription or initiation, adherence cannot explain an earlier prescription; if it means received exposure, the proposed mechanism differs. None of the four papers tests adherence effects. Population limit: the supplied human studies concern children, not adults aged 32; the fourth paper is an infant-rat experiment.",
+      "recommended_action": "Define initiation versus received medication exposure and effectiveness separately; this edge is not validated as written.",
+      "evidence": []
+    },
+    {
+      "edge_id": 40,
+      "source": "Medication Treatment",
+      "dest": "Treatment Side Effects",
+      "existing_reasoning": "Medication can introduce side effects.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "Schain describes paradoxical irritability and increased activity with barbiturates in children. This is relevant pediatric adverse-effect background, but adult ADHD medications/exposure are unspecified and no adult adverse-event evidence is supplied. Population limit: the supplied human studies concern children, not adults aged 32; the fourth paper is an infant-rat experiment.",
+      "recommended_action": "Specify the adult medication and adverse event and obtain evidence for that population; retain only as an unvalidated adult hypothesis.",
+      "evidence": [
+        {
+          "pmid": "5538099",
+          "exact_excerpt": "Barbiturates should not be used as paradoxical reactions in the form of excessive irritability and increased activity frequently occur.",
+          "location": "s-0028-1091821.pdf; PDF page 9; printed page 315; Management discussion",
+          "relevance": "Drug-specific clinical support for medication causing adverse effects; not a general rate or stimulant trial result."
+        }
+      ]
+    },
+    {
+      "edge_id": 41,
+      "source": "Treatment Side Effects",
+      "dest": "Treatment Adherence",
+      "existing_reasoning": "Side effects reduce treatment consistency.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "Schain describes adverse reactions, but does not report adherence or discontinuation outcomes caused by those reactions. The side-effect-to-adherence link remains untested. Population limit: the supplied human studies concern children, not adults aged 32; the fourth paper is an infant-rat experiment.",
+      "recommended_action": "Require temporal adverse-event and discontinuation data; keep negative sign unvalidated.",
+      "evidence": [
+        {
+          "pmid": "5538099",
+          "exact_excerpt": "Barbiturates should not be used as paradoxical reactions in the form of excessive irritability and increased activity frequently occur.",
+          "location": "s-0028-1091821.pdf; PDF page 9; printed page 315; Management discussion",
+          "relevance": "Drug-specific clinical support for medication causing adverse effects; not a general rate or stimulant trial result."
+        }
+      ]
+    },
+    {
+      "edge_id": 42,
+      "source": "Treatment Side Effects",
+      "dest": "Quality of Life",
+      "existing_reasoning": "Side effects can slightly reduce adult quality of life.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "Clinical adverse reactions are described, but quality of life is not evaluated as an outcome. A negative side-effect-to-quality-of-life effect is not established by this passage. Population limit: the supplied human studies concern children, not adults aged 32; the fourth paper is an infant-rat experiment.",
+      "recommended_action": "Define quality of life and time horizon; do not infer a measured effect from the possibility of side effects.",
+      "evidence": [
+        {
+          "pmid": "5538099",
+          "exact_excerpt": "Barbiturates should not be used as paradoxical reactions in the form of excessive irritability and increased activity frequently occur.",
+          "location": "s-0028-1091821.pdf; PDF page 9; printed page 315; Management discussion",
+          "relevance": "Drug-specific clinical support for medication causing adverse effects; not a general rate or stimulant trial result."
+        }
+      ]
+    },
+    {
+      "edge_id": 43,
+      "source": "Diagnosis Status",
+      "dest": "Functional Impairment",
+      "existing_reasoning": "Diagnosis can modestly reduce impairment through explanation or limited treatment.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "Clinical formulation guides childhood management in Schain, but diagnosis itself is not tested as an intervention reducing impairment. Explanation, medication and support are possible mediators, not demonstrated direct adult effects. Population limit: the supplied human studies concern children, not adults aged 32; the fourth paper is an infant-rat experiment.",
+      "recommended_action": "Distinguish diagnosis receipt from subsequent interventions and require adult functional outcomes.",
+      "evidence": [
+        {
+          "pmid": "5538099",
+          "exact_excerpt": "The management of children with learning disorders is a function of the final diagnostic formulation. This requires co-operation with a variety of other professionals, especially in the area of special education and family counselling.",
+          "location": "s-0028-1091821.pdf; PDF page 9; printed page 315; Management discussion",
+          "relevance": "Clinical pathway linking formulation to management; not causal utilization data or formal school-accommodation entitlement."
+        }
+      ]
+    },
+    {
+      "edge_id": 44,
+      "source": "Functional Impairment",
+      "dest": "Quality of Life",
+      "existing_reasoning": "Impairment lowers adult quality of life.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "Schain links behavior with adjustment at home/school, but does not measure quality of life separately or establish impairment causing changes in it. Construct overlap remains a concern. Population limit: the supplied human studies concern children, not adults aged 32; the fourth paper is an infant-rat experiment.",
+      "recommended_action": "Use distinct measures to avoid a definitional edge; direction and sign remain unvalidated.",
+      "evidence": [
+        {
+          "pmid": "5538099",
+          "exact_excerpt": "Hyperkinesis was judged to have been present if a parent believed restless, impulsive behavior significantly interfered with the child's adjustment at home or at school.",
+          "location": "s-0028-1091821.pdf; PDF page 2; printed page 308; Results: Anamnesis",
+          "relevance": "Clinical definition links symptoms and impairment but overlaps the outcome; not an independently identified severity effect."
+        }
+      ]
+    },
+    {
+      "edge_id": 45,
+      "source": "Diagnosis Status",
+      "dest": "Quality of Life",
+      "existing_reasoning": "Diagnosis can modestly improve quality of life.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "Diagnostic formulation is linked to management planning, but no supplied study estimates diagnosis itself improving quality of life. Benefit via treatment/support remains a proposed mediated pathway rather than an established positive direct effect. Population limit: the supplied human studies concern children, not adults aged 32; the fourth paper is an infant-rat experiment.",
+      "recommended_action": "Distinguish a direct diagnosis effect from treatment/support mediation and define the outcome; do not assume a uniformly positive direct edge.",
+      "evidence": [
+        {
+          "pmid": "5538099",
+          "exact_excerpt": "The management of children with learning disorders is a function of the final diagnostic formulation. This requires co-operation with a variety of other professionals, especially in the area of special education and family counselling.",
+          "location": "s-0028-1091821.pdf; PDF page 9; printed page 315; Management discussion",
+          "relevance": "Clinical pathway linking formulation to management; not causal utilization data or formal school-accommodation entitlement."
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "pmid": "5491539",
+      "citation": "Wikler A, Dixon JF, Parker JB. Brain function in problem children and controls: psychometric, neurological, and electroencephalographic comparisons. Am J Psychiatry. 1970 Nov;127(5):634-645. PMID 5491539.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/5491539/",
+      "doi": "10.1176/ajp.127.5.634",
+      "local_pdf": "full_texts/Brain_function.pdf",
+      "evidence_scope": "Incomplete supplied scan: cited article ends at 645; printed pages 644-645 missing. Page 634 begins with the end of another article, excluded from this review. Matched cross-sectional comparisons, not longitudinal or treatment-effect results."
+    },
+    {
+      "pmid": "5523436",
+      "citation": "Obler M, Terwilliger RF. Pilot study on the effectiveness of systematic desensitization with neurologically impaired children with phobic disorders. J Consult Clin Psychol. 1970 Jun;34(3):314-318. PMID 5523436.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/5523436/",
+      "doi": "10.1037/h0029367",
+      "local_pdf": "full_texts/1970-15121-001.pdf",
+      "evidence_scope": "Complete pilot study of modified desensitization for specific phobias. The 1970 graph has no Behavioral Therapy edge; this trial does not validate medication, access, or general ADHD impairment edges."
+    },
+    {
+      "pmid": "5538099",
+      "citation": "Schain RJ. Neurological evaluation of children with learning disorders. Neuropadiatrie. 1970 Feb;1(3):307-317. PMID 5538099.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/5538099/",
+      "doi": "10.1055/s-0028-1091821",
+      "local_pdf": "full_texts/s-0028-1091821.pdf",
+      "evidence_scope": "Complete supplied article; clinical case series and discussion, not a treatment trial."
+    },
+    {
+      "pmid": "4950109",
+      "citation": "Geller LM, Cowen D, Wolf A. Simply produced closed-head, focal lesions for study of repair in immature rat cerebral cortex. Dev Psychobiol. 1970 ;3(4):217-223. PMID 4950109.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/4950109/",
+      "doi": "10.1002/dev.420030402",
+      "local_pdf": "full_texts/simply produced.pdf",
+      "evidence_scope": "Complete supplied article; experimental cortical lesions in infant rats. No direct human ADHD outcome."
+    }
+  ]
+}

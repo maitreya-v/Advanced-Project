@@ -1,0 +1,159 @@
+{
+  "id": "5523436",
+  "source": "MED",
+  "pmid": "5523436",
+  "doi": "10.1037/h0029367",
+  "title": "Pilot study on the effectiveness of systematic desensitization with neurologically impaired children with phobic disorders.",
+  "authorString": "Obler M, Terwilliger RF.",
+  "authorList": {
+    "author": [
+      {
+        "fullName": "Obler M",
+        "lastName": "Obler",
+        "firstName": "M",
+        "initials": "M"
+      },
+      {
+        "fullName": "Terwilliger RF",
+        "lastName": "Terwilliger",
+        "firstName": "R F",
+        "initials": "RF"
+      }
+    ]
+  },
+  "journalInfo": {
+    "issue": "3",
+    "volume": "34",
+    "journalIssueId": 481502,
+    "dateOfPublication": "1970 Jun",
+    "monthOfPublication": 6,
+    "yearOfPublication": 1970,
+    "journal": {
+      "medlineAbbreviation": "J Consult Clin Psychol",
+      "title": "Journal of consulting and clinical psychology",
+      "essn": "1939-2117",
+      "issn": "0022-006X",
+      "nlmid": "0136553",
+      "isoabbreviation": "J Consult Clin Psychol"
+    },
+    "printPublicationDate": "1970-06-01"
+  },
+  "pubYear": "1970",
+  "pageInfo": "314-318",
+  "publicationStatus": "ppublish",
+  "language": "eng",
+  "pubModel": "Print",
+  "pubTypeList": {
+    "pubType": [
+      "Journal Article"
+    ]
+  },
+  "meshHeadingList": {
+    "meshHeading": [
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Humans"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Brain Damage, Chronic",
+        "meshQualifierList": {
+          "meshQualifier": [
+            {
+              "majorTopic_YN": "Y",
+              "abbreviation": "CO",
+              "qualifierName": "complications"
+            }
+          ]
+        }
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Pilot Projects"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Phobic Disorders",
+        "meshQualifierList": {
+          "meshQualifier": [
+            {
+              "majorTopic_YN": "Y",
+              "abbreviation": "TH",
+              "qualifierName": "therapy"
+            }
+          ]
+        }
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Attention Deficit Disorder with Hyperactivity",
+        "meshQualifierList": {
+          "meshQualifier": [
+            {
+              "majorTopic_YN": "N",
+              "abbreviation": "CO",
+              "qualifierName": "complications"
+            }
+          ]
+        }
+      },
+      {
+        "majorTopic_YN": "Y",
+        "descriptorName": "Behavior Therapy"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Child"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Female"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Male"
+      }
+    ]
+  },
+  "subsetList": {
+    "subset": [
+      {
+        "code": "IM",
+        "name": "Index Medicus"
+      }
+    ]
+  },
+  "fullTextUrlList": {
+    "fullTextUrl": [
+      {
+        "availability": "Subscription required",
+        "availabilityCode": "S",
+        "documentStyle": "doi",
+        "site": "DOI",
+        "url": "https://doi.org/10.1037/h0029367"
+      }
+    ]
+  },
+  "isOpenAccess": "N",
+  "inEPMC": "N",
+  "inPMC": "N",
+  "citedByCount": 16,
+  "hasReferences": "N",
+  "hasTextMinedTerms": "N",
+  "hasDbCrossReferences": "N",
+  "hasPDF": "N",
+  "hasBook": "N",
+  "hasSuppl": "N",
+  "hasLabsLinks": "N",
+  "hasData": "N",
+  "authMan": "N",
+  "epmcAuthMan": "N",
+  "nihAuthMan": "N",
+  "hasTMAccessionNumbers": "N",
+  "dateOfCompletion": "1972-03-02",
+  "dateOfCreation": "1970-06-01",
+  "dateOfRevision": "2019-08-17",
+  "firstPublicationDate": "1970-06-01",
+  "firstIndexDate": "2008-01-29",
+  "hasEvaluations": "N"
+}

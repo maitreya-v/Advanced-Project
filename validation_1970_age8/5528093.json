@@ -1,0 +1,164 @@
+{
+  "id": "5528093",
+  "source": "MED",
+  "pmid": "5528093",
+  "title": "The slow learner in the classroom with emphasis on the child with minimum brain syndrome.",
+  "authorString": "Lordi WM.",
+  "authorList": {
+    "author": [
+      {
+        "fullName": "Lordi WM",
+        "lastName": "Lordi",
+        "firstName": "W M",
+        "initials": "WM"
+      }
+    ]
+  },
+  "journalInfo": {
+    "issue": "3",
+    "volume": "97",
+    "journalIssueId": 500322,
+    "dateOfPublication": "1970 Mar",
+    "monthOfPublication": 3,
+    "yearOfPublication": 1970,
+    "journal": {
+      "medlineAbbreviation": "Va Med Mon (1918)",
+      "title": "Virginia medical monthly",
+      "issn": "0042-6644",
+      "nlmid": "0407231",
+      "isoabbreviation": "Va Med Mon (1918)"
+    },
+    "printPublicationDate": "1970-03-01"
+  },
+  "pubYear": "1970",
+  "pageInfo": "163-166",
+  "publicationStatus": "ppublish",
+  "language": "eng",
+  "pubModel": "Print",
+  "pubTypeList": {
+    "pubType": [
+      "Journal Article"
+    ]
+  },
+  "meshHeadingList": {
+    "meshHeading": [
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Humans"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Dextroamphetamine",
+        "meshQualifierList": {
+          "meshQualifier": [
+            {
+              "majorTopic_YN": "N",
+              "abbreviation": "TU",
+              "qualifierName": "therapeutic use"
+            }
+          ]
+        }
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Electroencephalography"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Attention Deficit Disorder with Hyperactivity",
+        "meshQualifierList": {
+          "meshQualifier": [
+            {
+              "majorTopic_YN": "N",
+              "abbreviation": "CO",
+              "qualifierName": "complications"
+            },
+            {
+              "majorTopic_YN": "Y",
+              "abbreviation": "DI",
+              "qualifierName": "diagnosis"
+            },
+            {
+              "majorTopic_YN": "N",
+              "abbreviation": "TH",
+              "qualifierName": "therapy"
+            }
+          ]
+        }
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Intelligence Tests"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Psychotherapy"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Child"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Learning Disabilities",
+        "meshQualifierList": {
+          "meshQualifier": [
+            {
+              "majorTopic_YN": "Y",
+              "abbreviation": "DI",
+              "qualifierName": "diagnosis"
+            },
+            {
+              "majorTopic_YN": "N",
+              "abbreviation": "ET",
+              "qualifierName": "etiology"
+            },
+            {
+              "majorTopic_YN": "N",
+              "abbreviation": "TH",
+              "qualifierName": "therapy"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "chemicalList": {
+    "chemical": [
+      {
+        "name": "Dextroamphetamine",
+        "registryNumber": "TZ47U051FI"
+      }
+    ]
+  },
+  "subsetList": {
+    "subset": [
+      {
+        "code": "IM",
+        "name": "Index Medicus"
+      }
+    ]
+  },
+  "isOpenAccess": "N",
+  "inEPMC": "N",
+  "inPMC": "N",
+  "citedByCount": 0,
+  "hasReferences": "N",
+  "hasTextMinedTerms": "N",
+  "hasDbCrossReferences": "N",
+  "hasPDF": "N",
+  "hasBook": "N",
+  "hasSuppl": "N",
+  "hasLabsLinks": "N",
+  "hasData": "N",
+  "authMan": "N",
+  "epmcAuthMan": "N",
+  "nihAuthMan": "N",
+  "hasTMAccessionNumbers": "N",
+  "dateOfCompletion": "1974-10-02",
+  "dateOfCreation": "1970-03-01",
+  "dateOfRevision": "2019-12-10",
+  "firstPublicationDate": "1970-03-01",
+  "firstIndexDate": "2008-01-29",
+  "hasEvaluations": "N"
+}

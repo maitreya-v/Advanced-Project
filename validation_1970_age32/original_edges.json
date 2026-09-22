@@ -1,0 +1,317 @@
+[
+  [
+    "Genetic Risk",
+    "ADHD",
+    "+",
+    0.88,
+    "Genetic vulnerability contributes to adult ADHD."
+  ],
+  [
+    "ADHD",
+    "Symptom Severity",
+    "+",
+    0.86,
+    "Underlying ADHD increases symptom severity."
+  ],
+  [
+    "ADHD",
+    "Symptom Type",
+    "+",
+    0.78,
+    "Underlying ADHD shapes symptom presentation."
+  ],
+  [
+    "ADHD",
+    "Comorbid Conditions",
+    "+",
+    0.44,
+    "Untreated ADHD can co-occur with other difficulties that complicate recognition."
+  ],
+  [
+    "Nutrition Quality",
+    "Symptom Severity",
+    "-",
+    0.5,
+    "Poor nutrition worsens cognitive regulation."
+  ],
+  [
+    "Sleep Quality",
+    "Symptom Severity",
+    "-",
+    0.6,
+    "Sleep disruption affects functioning and regulation."
+  ],
+  [
+    "Chronic Stress Load",
+    "Symptom Severity",
+    "+",
+    0.66,
+    "Stress amplifies symptoms."
+  ],
+  [
+    "Age",
+    "Symptom Severity",
+    "+",
+    0.28,
+    "At age 32, sustained adult role demands can make symptoms more visible."
+  ],
+  [
+    "Gender",
+    "Symptom Type",
+    "+",
+    0.32,
+    "Gender norms affect which adult symptoms are noticed or dismissed."
+  ],
+  [
+    "Symptom Severity",
+    "Functional Impairment",
+    "+",
+    0.82,
+    "Higher severity increases occupational and daily impairment."
+  ],
+  [
+    "Comorbid Conditions",
+    "Functional Impairment",
+    "+",
+    0.72,
+    "Comorbid burden increases impairment."
+  ],
+  [
+    "Functional Impairment",
+    "Employment Instability",
+    "+",
+    0.72,
+    "Impairment can destabilize employment in adulthood."
+  ],
+  [
+    "Performance Pressure",
+    "Functional Impairment",
+    "+",
+    0.32,
+    "Work and performance pressure can worsen visible dysfunction."
+  ],
+  [
+    "Family Stress",
+    "Symptom Severity",
+    "+",
+    0.54,
+    "Adult family stress can intensify symptom burden."
+  ],
+  [
+    "Household Stability",
+    "Family Stress",
+    "-",
+    0.62,
+    "Stable household context reduces stress."
+  ],
+  [
+    "Socioeconomic Status",
+    "Educational Access",
+    "+",
+    0.68,
+    "Higher SES improves educational and cognitive support opportunities."
+  ],
+  [
+    "Financial Status",
+    "Access to Mental Health Care",
+    "+",
+    0.76,
+    "Income controls access to mental healthcare."
+  ],
+  [
+    "Neighborhood Quality",
+    "Access to Mental Health Care",
+    "+",
+    0.44,
+    "Better neighborhood conditions improve resource access."
+  ],
+  [
+    "Socioeconomic Status",
+    "Access to Mental Health Care",
+    "+",
+    0.72,
+    "Higher SES improves healthcare access."
+  ],
+  [
+    "Cost of Evaluation",
+    "Diagnosis Status",
+    "-",
+    0.76,
+    "Cost is a major adult diagnosis barrier."
+  ],
+  [
+    "Access to Mental Health Care",
+    "Diagnosis Status",
+    "+",
+    0.4,
+    "Access helps diagnosis, but adult ADHD recognition remains weak in 1970."
+  ],
+  [
+    "Race / Ethnicity",
+    "Institutional Bias",
+    "+",
+    0.68,
+    "Structural inequities influence institutions and healthcare pathways."
+  ],
+  [
+    "Institutional Bias",
+    "Misdiagnosis Rate",
+    "+",
+    0.6,
+    "Bias increases diagnostic errors."
+  ],
+  [
+    "Institutional Bias",
+    "Diagnosis Status",
+    "-",
+    0.58,
+    "Bias suppresses fair diagnosis access."
+  ],
+  [
+    "Diagnostic Criteria Variability",
+    "Misdiagnosis Rate",
+    "+",
+    0.86,
+    "Inconsistent diagnostic framing increases misdiagnosis."
+  ],
+  [
+    "Comorbid Conditions",
+    "Misdiagnosis Rate",
+    "+",
+    0.76,
+    "Comorbidity obscures accurate diagnosis."
+  ],
+  [
+    "Misdiagnosis Rate",
+    "Diagnosis Status",
+    "-",
+    0.82,
+    "Misdiagnosis reduces correct diagnosis status."
+  ],
+  [
+    "Cultural Norms",
+    "Stigma",
+    "+",
+    0.82,
+    "1970 cultural norms strongly reinforce stigma."
+  ],
+  [
+    "Stigma",
+    "Access to Mental Health Care",
+    "-",
+    0.7,
+    "Stigma suppresses help-seeking and care access."
+  ],
+  [
+    "Gender Bias",
+    "Diagnosis Status",
+    "+",
+    0.34,
+    "Gender bias shapes who is recognized or dismissed."
+  ],
+  [
+    "Gender Bias",
+    "Misdiagnosis Rate",
+    "+",
+    0.48,
+    "Gender stereotypes increase diagnostic error."
+  ],
+  [
+    "Diagnosis Status",
+    "Medication Treatment",
+    "+",
+    0.3,
+    "At age 32 in 1970, diagnosis could lead to treatment, but adult ADHD recognition was limited."
+  ],
+  [
+    "Access to Mental Health Care",
+    "Treatment Access",
+    "+",
+    0.58,
+    "Adult treatment access depends on scarce mental health resources."
+  ],
+  [
+    "Socioeconomic Status",
+    "Treatment Access",
+    "+",
+    0.62,
+    "Higher socioeconomic status improves access to adult treatment pathways."
+  ],
+  [
+    "Treatment Access",
+    "Medication Treatment",
+    "+",
+    0.54,
+    "Treatment access makes medication more possible, though adult pathways are weak."
+  ],
+  [
+    "Stigma",
+    "Treatment Adherence",
+    "-",
+    0.5,
+    "Stigma reduces willingness to continue treatment in adulthood."
+  ],
+  [
+    "Medication Treatment",
+    "Symptom Severity",
+    "-",
+    0.34,
+    "Medication can reduce symptoms, but treatment recognition is weaker for adults in 1970."
+  ],
+  [
+    "Medication Treatment",
+    "Functional Impairment",
+    "-",
+    0.26,
+    "Medication may modestly reduce adult impairment."
+  ],
+  [
+    "Treatment Adherence",
+    "Medication Treatment",
+    "+",
+    0.38,
+    "Adherence strengthens the actual treatment effect."
+  ],
+  [
+    "Medication Treatment",
+    "Treatment Side Effects",
+    "+",
+    0.38,
+    "Medication can introduce side effects."
+  ],
+  [
+    "Treatment Side Effects",
+    "Treatment Adherence",
+    "-",
+    0.42,
+    "Side effects reduce treatment consistency."
+  ],
+  [
+    "Treatment Side Effects",
+    "Quality of Life",
+    "-",
+    0.2,
+    "Side effects can slightly reduce adult quality of life."
+  ],
+  [
+    "Diagnosis Status",
+    "Functional Impairment",
+    "-",
+    0.28,
+    "Diagnosis can modestly reduce impairment through explanation or limited treatment."
+  ],
+  [
+    "Functional Impairment",
+    "Quality of Life",
+    "-",
+    0.88,
+    "Impairment lowers adult quality of life."
+  ],
+  [
+    "Diagnosis Status",
+    "Quality of Life",
+    "+",
+    0.46,
+    "Diagnosis can modestly improve quality of life."
+  ]
+]

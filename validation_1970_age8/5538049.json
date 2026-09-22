@@ -1,0 +1,196 @@
+{
+  "id": "5538049",
+  "source": "MED",
+  "pmid": "5538049",
+  "title": "[Diagnosis of minimal cerebral dysfunction or lesion in school age children].",
+  "authorString": "Rebollo MA, Cardús S, Ihlenfeld S, Montero O.",
+  "authorList": {
+    "author": [
+      {
+        "fullName": "Rebollo MA",
+        "lastName": "Rebollo",
+        "firstName": "M A",
+        "initials": "MA"
+      },
+      {
+        "fullName": "Cardús S",
+        "lastName": "Cardús",
+        "firstName": "S",
+        "initials": "S"
+      },
+      {
+        "fullName": "Ihlenfeld S",
+        "lastName": "Ihlenfeld",
+        "firstName": "S",
+        "initials": "S"
+      },
+      {
+        "fullName": "Montero O",
+        "lastName": "Montero",
+        "firstName": "O",
+        "initials": "O"
+      }
+    ]
+  },
+  "journalInfo": {
+    "issue": "1",
+    "volume": "16",
+    "journalIssueId": 474208,
+    "dateOfPublication": "1970 ",
+    "monthOfPublication": 0,
+    "yearOfPublication": 1970,
+    "journal": {
+      "medlineAbbreviation": "Acta Neurol Latinoam",
+      "title": "Acta neurologica latinoamericana",
+      "issn": "0001-6306",
+      "nlmid": "9421556",
+      "isoabbreviation": "Acta Neurol Latinoam"
+    },
+    "printPublicationDate": "1970-01-01"
+  },
+  "pubYear": "1970",
+  "pageInfo": "11-30",
+  "publicationStatus": "ppublish",
+  "language": "spa",
+  "pubModel": "Print",
+  "pubTypeList": {
+    "pubType": [
+      "Journal Article"
+    ]
+  },
+  "meshHeadingList": {
+    "meshHeading": [
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Humans"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Brain Damage, Chronic",
+        "meshQualifierList": {
+          "meshQualifier": [
+            {
+              "majorTopic_YN": "Y",
+              "abbreviation": "DI",
+              "qualifierName": "diagnosis"
+            }
+          ]
+        }
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Psychomotor Disorders",
+        "meshQualifierList": {
+          "meshQualifier": [
+            {
+              "majorTopic_YN": "N",
+              "abbreviation": "ET",
+              "qualifierName": "etiology"
+            }
+          ]
+        }
+      },
+      {
+        "majorTopic_YN": "Y",
+        "descriptorName": "Neurologic Examination"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Affective Symptoms",
+        "meshQualifierList": {
+          "meshQualifier": [
+            {
+              "majorTopic_YN": "N",
+              "abbreviation": "ET",
+              "qualifierName": "etiology"
+            }
+          ]
+        }
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Attention Deficit Disorder with Hyperactivity",
+        "meshQualifierList": {
+          "meshQualifier": [
+            {
+              "majorTopic_YN": "N",
+              "abbreviation": "DI",
+              "qualifierName": "diagnosis"
+            }
+          ]
+        }
+      },
+      {
+        "majorTopic_YN": "Y",
+        "descriptorName": "Psychological Tests"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Intelligence Tests"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Bender-Gestalt Test"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Psychometrics"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Child"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Female"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Male"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Learning Disabilities",
+        "meshQualifierList": {
+          "meshQualifier": [
+            {
+              "majorTopic_YN": "N",
+              "abbreviation": "ET",
+              "qualifierName": "etiology"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "subsetList": {
+    "subset": [
+      {
+        "code": "IM",
+        "name": "Index Medicus"
+      }
+    ]
+  },
+  "isOpenAccess": "N",
+  "inEPMC": "N",
+  "inPMC": "N",
+  "citedByCount": 0,
+  "hasReferences": "N",
+  "hasTextMinedTerms": "Y",
+  "hasDbCrossReferences": "N",
+  "hasPDF": "N",
+  "hasBook": "N",
+  "hasSuppl": "N",
+  "hasLabsLinks": "N",
+  "hasData": "N",
+  "authMan": "N",
+  "epmcAuthMan": "N",
+  "nihAuthMan": "N",
+  "hasTMAccessionNumbers": "N",
+  "dateOfCompletion": "1972-01-13",
+  "dateOfCreation": "1970-01-01",
+  "dateOfRevision": "2019-12-10",
+  "firstPublicationDate": "1970-01-01",
+  "firstIndexDate": "2008-01-29",
+  "hasEvaluations": "N"
+}

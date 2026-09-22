@@ -1,0 +1,261 @@
+[
+  [
+    "Genetic Risk",
+    "ADHD",
+    "+",
+    0.88,
+    "Genetic vulnerability contributes strongly to lifelong ADHD."
+  ],
+  [
+    "ADHD",
+    "Executive Function Deficit",
+    "+",
+    0.9,
+    "Underlying ADHD strongly affects executive functioning."
+  ],
+  [
+    "Executive Function Deficit",
+    "Functional Impairment",
+    "+",
+    0.84,
+    "Executive dysfunction increases cumulative impairment."
+  ],
+  [
+    "Symptom Severity",
+    "Functional Impairment",
+    "+",
+    0.84,
+    "Greater symptom burden worsens daily functioning."
+  ],
+  [
+    "Age",
+    "Functional Impairment",
+    "+",
+    0.4,
+    "By age 45, long-term untreated difficulties can compound impairment."
+  ],
+  [
+    "Nutrition Quality",
+    "Symptom Severity",
+    "-",
+    0.48,
+    "Long-term nutrition impacts cognition."
+  ],
+  [
+    "Sleep Quality",
+    "Executive Function Deficit",
+    "-",
+    0.62,
+    "Sleep affects executive functioning."
+  ],
+  [
+    "Chronic Stress Load",
+    "Functional Impairment",
+    "+",
+    0.72,
+    "Accumulated stress worsens outcomes."
+  ],
+  [
+    "Home Structure Stability",
+    "Family Stress",
+    "-",
+    0.68,
+    "Stable home structure reduces stress."
+  ],
+  [
+    "Family Stress",
+    "Chronic Stress Load",
+    "+",
+    0.72,
+    "Family stress contributes to accumulated burden."
+  ],
+  [
+    "Family History Awareness",
+    "Self-Diagnosis Behavior",
+    "+",
+    0.12,
+    "Family history only weakly supports self-recognition in 1970."
+  ],
+  [
+    "Financial Status",
+    "Access to Mental Health Care",
+    "+",
+    0.78,
+    "Income strongly controls access."
+  ],
+  [
+    "Socioeconomic Status",
+    "Access to Mental Health Care",
+    "+",
+    0.72,
+    "Socioeconomic position shapes access to care."
+  ],
+  [
+    "Neighborhood Quality",
+    "Access to Mental Health Care",
+    "+",
+    0.44,
+    "Better neighborhood conditions improve resource access."
+  ],
+  [
+    "Cost of Evaluation",
+    "Diagnosis Status",
+    "-",
+    0.8,
+    "High evaluation cost strongly suppresses diagnosis."
+  ],
+  [
+    "Access to Mental Health Care",
+    "Diagnosis Status",
+    "+",
+    0.4,
+    "Access helps diagnosis, but adult recognition remains weak."
+  ],
+  [
+    "Clinical Guidelines Evolution",
+    "Diagnosis Status",
+    "+",
+    0.1,
+    "Guideline support for adult ADHD is minimal in 1970."
+  ],
+  [
+    "Race / Ethnicity",
+    "Institutional Bias",
+    "+",
+    0.68,
+    "Structural inequities influence institutions and healthcare pathways."
+  ],
+  [
+    "Institutional Bias",
+    "Diagnosis Status",
+    "-",
+    0.64,
+    "Bias suppresses diagnosis in midlife."
+  ],
+  [
+    "Race / Ethnicity",
+    "Access to Mental Health Care",
+    "-",
+    0.6,
+    "Structural inequity persists in access pathways."
+  ],
+  [
+    "Cultural Norms",
+    "Stigma",
+    "+",
+    0.86,
+    "1970 norms strongly reinforce stigma toward adult cognitive and behavioral differences."
+  ],
+  [
+    "Stigma",
+    "Diagnosis Status",
+    "-",
+    0.84,
+    "High stigma suppresses adult diagnosis."
+  ],
+  [
+    "Stigma",
+    "Self-Diagnosis Behavior",
+    "-",
+    0.68,
+    "Stigma discourages self-recognition and help-seeking."
+  ],
+  [
+    "Diagnosis Status",
+    "Medication Treatment",
+    "+",
+    0.18,
+    "At age 45 in 1970, diagnosis rarely translated into structured ADHD medication treatment."
+  ],
+  [
+    "Access to Mental Health Care",
+    "Treatment Access",
+    "+",
+    0.44,
+    "Mental health access can enable treatment, but midlife adult ADHD pathways are very weak."
+  ],
+  [
+    "Socioeconomic Status",
+    "Treatment Access",
+    "+",
+    0.5,
+    "Higher socioeconomic status improves the chance of reaching treatment."
+  ],
+  [
+    "Treatment Access",
+    "Medication Treatment",
+    "+",
+    0.34,
+    "Treatment access can lead to medication, but the pathway is weak for midlife adults in 1970."
+  ],
+  [
+    "Stigma",
+    "Treatment Adherence",
+    "-",
+    0.56,
+    "High stigma reduces treatment continuation and help-seeking."
+  ],
+  [
+    "Medication Treatment",
+    "Symptom Severity",
+    "-",
+    0.22,
+    "Medication may reduce symptoms, but recognition and treatment are marginal in this age group."
+  ],
+  [
+    "Medication Treatment",
+    "Functional Impairment",
+    "-",
+    0.18,
+    "Medication may slightly reduce impairment, but cumulative adult burden remains strong."
+  ],
+  [
+    "Treatment Adherence",
+    "Medication Treatment",
+    "+",
+    0.26,
+    "Adherence is necessary for treatment effect, but continuation is difficult in this context."
+  ],
+  [
+    "Medication Treatment",
+    "Treatment Side Effects",
+    "+",
+    0.36,
+    "Medication can introduce side effects."
+  ],
+  [
+    "Treatment Side Effects",
+    "Treatment Adherence",
+    "-",
+    0.46,
+    "Side effects can reduce continued adherence."
+  ],
+  [
+    "Treatment Side Effects",
+    "Quality of Life",
+    "-",
+    0.22,
+    "Side effects can slightly reduce quality of life."
+  ],
+  [
+    "Diagnosis Status",
+    "Functional Impairment",
+    "-",
+    0.28,
+    "Diagnosis can modestly reduce impairment through explanation or limited treatment."
+  ],
+  [
+    "Functional Impairment",
+    "Quality of Life",
+    "-",
+    0.9,
+    "Cumulative impairment strongly lowers quality of life."
+  ],
+  [
+    "Diagnosis Status",
+    "Quality of Life",
+    "+",
+    0.46,
+    "Diagnosis can modestly improve quality of life in midlife."
+  ]
+]

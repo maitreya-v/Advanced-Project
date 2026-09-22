@@ -1,0 +1,126 @@
+[
+  {
+    "pmid": "5491539",
+    "url": "https://api.crossref.org/works/10.1176%2Fajp.127.5.634",
+    "abstract": null,
+    "links": [
+      {
+        "URL": "http://psychiatryonline.org/doi/10.1176/ajp.127.5.634",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "status": "retrieved (cached)"
+  },
+  {
+    "pmid": "4097226",
+    "status": "No DOI in retrieved record"
+  },
+  {
+    "pmid": "5474700",
+    "status": "No DOI in retrieved record"
+  },
+  {
+    "pmid": "4097225",
+    "status": "No DOI in retrieved record"
+  },
+  {
+    "pmid": "5527608",
+    "url": "https://api.crossref.org/works/10.1111%2Fj.1440-1754.1970.tb02874.x",
+    "abstract": null,
+    "links": [
+      {
+        "URL": "https://api.wiley.com/onlinelibrary/tdm/v1/articles/10.1111%2Fj.1440-1754.1970.tb02874.x",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "http://onlinelibrary.wiley.com/wol1/doi/10.1111/j.1440-1754.1970.tb02874.x/fullpdf",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "status": "retrieved"
+  },
+  {
+    "pmid": "4911365",
+    "url": "https://api.crossref.org/works/10.1001%2Farchpsyc.1970.01750010082015",
+    "abstract": null,
+    "links": [
+      {
+        "URL": "http://jamanetwork.com/journals/jamapsychiatry/fullarticle/490284",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "status": "retrieved (cached)"
+  },
+  {
+    "pmid": "5523436",
+    "url": "https://api.crossref.org/works/10.1037%2Fh0029367",
+    "abstract": null,
+    "links": [
+      {
+        "URL": "http://psycnet.apa.org/journals/ccp/34/3/314.pdf",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "status": "retrieved (cached)"
+  },
+  {
+    "pmid": "5526422",
+    "status": "No DOI in retrieved record"
+  },
+  {
+    "pmid": "5528093",
+    "status": "No DOI in retrieved record"
+  },
+  {
+    "pmid": "5520419",
+    "status": "No DOI in retrieved record"
+  },
+  {
+    "pmid": "5538099",
+    "url": "https://api.crossref.org/works/10.1055%2Fs-0028-1091821",
+    "abstract": null,
+    "links": [
+      {
+        "URL": "http://www.thieme-connect.de/products/ejournals/pdf/10.1055/s-0028-1091821.pdf",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "status": "retrieved (cached)"
+  },
+  {
+    "pmid": "5538049",
+    "status": "No DOI in retrieved record"
+  },
+  {
+    "pmid": "4950109",
+    "url": "https://api.crossref.org/works/10.1002%2Fdev.420030402",
+    "abstract": "<jats:title>Abstract</jats:title><jats:p>Multiple electroconvulsive shocks consistently and rapidly produce uniform, bilaterally symmetrical lesions in the immature rat's cerebral cortex, without the incidental damage that accompanies other experimental injuries to the central nervous system. The terminal lesion, devoid of nerve cells, is a narrow, laminar band of numerous myelinated axons, unaccompanied by a glial scar. Insofar as the initially damaged area becomes occupied by nerve fibers, the healing process may be thought of as involving a regeneration. A variety of studies for which the electroshock lesions might be used is suggested.</jats:p>",
+    "links": [
+      {
+        "URL": "https://api.wiley.com/onlinelibrary/tdm/v1/articles/10.1002%2Fdev.420030402",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://onlinelibrary.wiley.com/doi/pdf/10.1002/dev.420030402",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "status": "retrieved (cached)"
+  }
+]

@@ -1,0 +1,189 @@
+{
+  "id": "4950109",
+  "source": "MED",
+  "pmid": "4950109",
+  "doi": "10.1002/dev.420030402",
+  "title": "Simply produced closed-head, focal lesions for study of repair in immature rat cerebral cortex.",
+  "authorString": "Geller LM, Cowen D, Wolf A.",
+  "authorList": {
+    "author": [
+      {
+        "fullName": "Geller LM",
+        "lastName": "Geller",
+        "firstName": "L M",
+        "initials": "LM"
+      },
+      {
+        "fullName": "Cowen D",
+        "lastName": "Cowen",
+        "firstName": "D",
+        "initials": "D"
+      },
+      {
+        "fullName": "Wolf A",
+        "lastName": "Wolf",
+        "firstName": "A",
+        "initials": "A"
+      }
+    ]
+  },
+  "journalInfo": {
+    "issue": "4",
+    "volume": "3",
+    "journalIssueId": 498945,
+    "dateOfPublication": "1970 ",
+    "monthOfPublication": 0,
+    "yearOfPublication": 1970,
+    "journal": {
+      "medlineAbbreviation": "Dev Psychobiol",
+      "title": "Developmental psychobiology",
+      "essn": "1098-2302",
+      "issn": "0012-1630",
+      "nlmid": "0164074",
+      "isoabbreviation": "Dev Psychobiol"
+    },
+    "printPublicationDate": "1970-01-01"
+  },
+  "pubYear": "1970",
+  "pageInfo": "217-223",
+  "publicationStatus": "ppublish",
+  "language": "eng",
+  "pubModel": "Print",
+  "pubTypeList": {
+    "pubType": [
+      "Journal Article"
+    ]
+  },
+  "meshHeadingList": {
+    "meshHeading": [
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Cerebral Cortex",
+        "meshQualifierList": {
+          "meshQualifier": [
+            {
+              "majorTopic_YN": "N",
+              "abbreviation": "GD",
+              "qualifierName": "growth & development"
+            },
+            {
+              "majorTopic_YN": "Y",
+              "abbreviation": "IN",
+              "qualifierName": "injuries"
+            }
+          ]
+        }
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Axons"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Animals"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Animals, Laboratory"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Humans"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Rats"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Seizures"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Disease Models, Animal"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Stereotaxic Techniques",
+        "meshQualifierList": {
+          "meshQualifier": [
+            {
+              "majorTopic_YN": "N",
+              "abbreviation": "IS",
+              "qualifierName": "instrumentation"
+            }
+          ]
+        }
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Methods"
+      },
+      {
+        "majorTopic_YN": "Y",
+        "descriptorName": "Electroshock"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Electrodes"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Attention Deficit Disorder with Hyperactivity"
+      },
+      {
+        "majorTopic_YN": "Y",
+        "descriptorName": "Nerve Regeneration"
+      },
+      {
+        "majorTopic_YN": "Y",
+        "descriptorName": "Wound Healing"
+      },
+      {
+        "majorTopic_YN": "Y",
+        "descriptorName": "Models, Biological"
+      }
+    ]
+  },
+  "subsetList": {
+    "subset": [
+      {
+        "code": "IM",
+        "name": "Index Medicus"
+      }
+    ]
+  },
+  "fullTextUrlList": {
+    "fullTextUrl": [
+      {
+        "availability": "Subscription required",
+        "availabilityCode": "S",
+        "documentStyle": "doi",
+        "site": "DOI",
+        "url": "https://doi.org/10.1002/dev.420030402"
+      }
+    ]
+  },
+  "isOpenAccess": "N",
+  "inEPMC": "N",
+  "inPMC": "N",
+  "citedByCount": 0,
+  "hasReferences": "Y",
+  "hasTextMinedTerms": "Y",
+  "hasDbCrossReferences": "N",
+  "hasPDF": "N",
+  "hasBook": "N",
+  "hasSuppl": "N",
+  "hasLabsLinks": "N",
+  "hasData": "N",
+  "authMan": "N",
+  "epmcAuthMan": "N",
+  "nihAuthMan": "N",
+  "hasTMAccessionNumbers": "N",
+  "dateOfCompletion": "1973-10-14",
+  "dateOfCreation": "1970-01-01",
+  "dateOfRevision": "2004-11-17",
+  "firstPublicationDate": "1970-01-01",
+  "firstIndexDate": "2008-01-29",
+  "hasEvaluations": "N"
+}

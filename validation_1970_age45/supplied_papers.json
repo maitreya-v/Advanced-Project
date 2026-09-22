@@ -1,0 +1,34 @@
+[
+  {
+    "pmid": "5491539",
+    "citation": "Wikler A, Dixon JF, Parker JB. Brain function in problem children and controls: psychometric, neurological, and electroencephalographic comparisons. Am J Psychiatry. 1970 Nov;127(5):634-645. PMID 5491539.",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/5491539/",
+    "doi": "10.1176/ajp.127.5.634",
+    "local_pdf": "full_texts/Brain_function.pdf",
+    "evidence_scope": "Incomplete supplied scan: cited article ends at 645; printed pages 644-645 missing. Page 634 begins with the end of another article, excluded from this review. Matched cross-sectional comparisons, not longitudinal or treatment-effect results."
+  },
+  {
+    "pmid": "5523436",
+    "citation": "Obler M, Terwilliger RF. Pilot study on the effectiveness of systematic desensitization with neurologically impaired children with phobic disorders. J Consult Clin Psychol. 1970 Jun;34(3):314-318. PMID 5523436.",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/5523436/",
+    "doi": "10.1037/h0029367",
+    "local_pdf": "full_texts/1970-15121-001.pdf",
+    "evidence_scope": "Complete pilot study of modified desensitization for specific phobias. The 1970 graph has no Behavioral Therapy edge; this trial does not validate medication, access, or general ADHD impairment edges."
+  },
+  {
+    "pmid": "5538099",
+    "citation": "Schain RJ. Neurological evaluation of children with learning disorders. Neuropadiatrie. 1970 Feb;1(3):307-317. PMID 5538099.",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/5538099/",
+    "doi": "10.1055/s-0028-1091821",
+    "local_pdf": "full_texts/s-0028-1091821.pdf",
+    "evidence_scope": "Complete supplied article; clinical case series and discussion, not a treatment trial."
+  },
+  {
+    "pmid": "4950109",
+    "citation": "Geller LM, Cowen D, Wolf A. Simply produced closed-head, focal lesions for study of repair in immature rat cerebral cortex. Dev Psychobiol. 1970 ;3(4):217-223. PMID 4950109.",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/4950109/",
+    "doi": "10.1002/dev.420030402",
+    "local_pdf": "full_texts/simply produced.pdf",
+    "evidence_scope": "Complete supplied article; experimental cortical lesions in infant rats. No direct human ADHD outcome."
+  }
+]

@@ -1,0 +1,53 @@
+{
+  "graph_file": "C:\\Users\\madhu\\OneDrive\\Documents\\AP Causal Networks using LLMs\\Advanced-Project\\1970_32 yo.py",
+  "graph_sha256": "9edfce43358e675bf883da2e07249b6901c7eb5a891c24cd5068068839ff9aa0",
+  "graph_year": 1970,
+  "age": 32,
+  "edge_count": 45,
+  "paper_count": 4,
+  "reference_pmids": [
+    "4950109",
+    "5491539",
+    "5523436",
+    "5538099"
+  ],
+  "validation_updated_utc": "2026-09-22T01:24:53.808778+00:00",
+  "documents": [
+    {
+      "pmid": "5538099",
+      "file": "full_texts/s-0028-1091821.pdf",
+      "pdf_pages": 11,
+      "printed_pages_available": "307-317",
+      "sha256": "3d35f393b10fdfd600f37edce036ac6cd9e1d37f4713cdd676952653b5680740",
+      "review_note": "Complete supplied article; clinical case series and discussion, not a treatment trial.",
+      "complete": true
+    },
+    {
+      "pmid": "5523436",
+      "file": "full_texts/1970-15121-001.pdf",
+      "pdf_pages": 5,
+      "printed_pages_available": "314-318",
+      "sha256": "2918bed54d7d22c53830163083767e9fe5193a10ae113c1fab2efe175ce3d2a4",
+      "review_note": "Complete supplied pilot study; 30 children with historical MBD and specific bus/dog phobias; controlled behavioral intervention.",
+      "complete": true
+    },
+    {
+      "pmid": "5491539",
+      "file": "full_texts/Brain_function.pdf",
+      "pdf_pages": 10,
+      "printed_pages_available": "634-643",
+      "sha256": "46c770751ee25e63bf84c9781d9092fd42c59a97057c2a99b3a3196fe5ba4a2f",
+      "review_note": "Incomplete supplied scan: cited article ends at 645; printed pages 644-645 missing. Page 634 begins with the end of another article, excluded from this review. Matched cross-sectional comparisons, not longitudinal or treatment-effect results.",
+      "complete": false
+    },
+    {
+      "pmid": "4950109",
+      "file": "full_texts/simply produced.pdf",
+      "pdf_pages": 7,
+      "printed_pages_available": "217-223",
+      "sha256": "c41e95c86ebc61a1ecb477dc6b33b1d27bda8bf72876b49382c6d7e1674d16fe",
+      "review_note": "Complete supplied article; experimental cortical lesions in infant rats. No direct human ADHD outcome.",
+      "complete": true
+    }
+  ]
+}

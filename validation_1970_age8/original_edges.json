@@ -1,0 +1,331 @@
+[
+  [
+    "Genetic Risk",
+    "ADHD",
+    "+",
+    0.88,
+    "Genetic liability contributes strongly to childhood ADHD."
+  ],
+  [
+    "ADHD",
+    "Symptom Severity",
+    "+",
+    0.9,
+    "Underlying ADHD increases symptom severity."
+  ],
+  [
+    "ADHD",
+    "Symptom Type",
+    "+",
+    0.82,
+    "Underlying ADHD shapes visible behavioral presentation."
+  ],
+  [
+    "Age",
+    "Symptom Severity",
+    "+",
+    0.42,
+    "At age 8, symptoms are highly visible in daily behavior."
+  ],
+  [
+    "Gender",
+    "Symptom Type",
+    "+",
+    0.38,
+    "Gender norms influence which childhood behaviors are noticed."
+  ],
+  [
+    "Early Life Nutrition",
+    "Genetic Risk",
+    "-",
+    0.22,
+    "Poor early nutrition can exacerbate developmental vulnerability."
+  ],
+  [
+    "Nutrition Quality",
+    "Symptom Severity",
+    "-",
+    0.52,
+    "Poor nutrition may worsen behavioral regulation."
+  ],
+  [
+    "Sleep Quality",
+    "Symptom Severity",
+    "-",
+    0.62,
+    "Better sleep reduces behavioral dysregulation."
+  ],
+  [
+    "Environmental Exposure",
+    "Symptom Severity",
+    "+",
+    0.46,
+    "Environmental stressors can worsen symptoms."
+  ],
+  [
+    "Symptom Severity",
+    "Functional Impairment",
+    "+",
+    0.84,
+    "More severe symptoms increase impairment."
+  ],
+  [
+    "Symptom Type",
+    "Teacher Referral Rate",
+    "+",
+    0.62,
+    "Certain symptom patterns are more likely to trigger teacher concern."
+  ],
+  [
+    "Classroom Size",
+    "Teacher Referral Rate",
+    "+",
+    0.4,
+    "Large classrooms can increase disciplinary attention."
+  ],
+  [
+    "School Labeling Bias",
+    "Teacher Referral Rate",
+    "+",
+    0.8,
+    "Behavior is often interpreted through discipline and labeling."
+  ],
+  [
+    "Teacher Referral Rate",
+    "Parental Awareness",
+    "+",
+    0.6,
+    "School concern can raise parental awareness."
+  ],
+  [
+    "Parental Denial",
+    "Parental Awareness",
+    "-",
+    0.82,
+    "Denial reduces recognition of problems."
+  ],
+  [
+    "Parental Education",
+    "Parental Awareness",
+    "+",
+    0.58,
+    "More educated parents better recognize issues."
+  ],
+  [
+    "Parental Education",
+    "Parental Denial",
+    "-",
+    0.42,
+    "Education reduces denial probability."
+  ],
+  [
+    "Family Stress",
+    "Symptom Severity",
+    "+",
+    0.54,
+    "Stressful homes can amplify visible symptoms."
+  ],
+  [
+    "Household Stability",
+    "Family Stress",
+    "-",
+    0.7,
+    "Stable homes reduce stress."
+  ],
+  [
+    "Household Stability",
+    "Nutrition Quality",
+    "+",
+    0.6,
+    "Stable homes support better nutrition."
+  ],
+  [
+    "Family Stress",
+    "Sleep Quality",
+    "-",
+    0.55,
+    "Stress disrupts sleep patterns."
+  ],
+  [
+    "Parental Awareness",
+    "Diagnosis Status",
+    "+",
+    0.42,
+    "Awareness can support diagnosis, though formal systems are weak."
+  ],
+  [
+    "Socioeconomic Status",
+    "Educational Access",
+    "+",
+    0.72,
+    "Higher SES improves schooling quality."
+  ],
+  [
+    "Educational Access",
+    "Teacher Referral Rate",
+    "+",
+    0.38,
+    "Better systems may detect issues earlier."
+  ],
+  [
+    "Socioeconomic Status",
+    "Access to Mental Health Care",
+    "+",
+    0.64,
+    "Higher SES improves access to scarce care."
+  ],
+  [
+    "Financial Status",
+    "Access to Mental Health Care",
+    "+",
+    0.78,
+    "Affordability strongly controls access."
+  ],
+  [
+    "Neighborhood Quality",
+    "Access to Mental Health Care",
+    "+",
+    0.44,
+    "Better neighborhoods provide more resources."
+  ],
+  [
+    "Cost of Evaluation",
+    "Diagnosis Status",
+    "-",
+    0.78,
+    "Cost is a major barrier to evaluation."
+  ],
+  [
+    "Access to Mental Health Care",
+    "Diagnosis Status",
+    "+",
+    0.4,
+    "Access helps diagnosis, but the child mental health system is limited."
+  ],
+  [
+    "Race / Ethnicity",
+    "Institutional Bias",
+    "+",
+    0.7,
+    "Structural inequities influence institutional behavior."
+  ],
+  [
+    "Institutional Bias",
+    "Teacher Referral Rate",
+    "+",
+    0.66,
+    "Bias affects who gets labeled."
+  ],
+  [
+    "Institutional Bias",
+    "Diagnosis Status",
+    "-",
+    0.6,
+    "Bias suppresses fair diagnosis access."
+  ],
+  [
+    "Cultural Norms",
+    "Stigma",
+    "+",
+    0.84,
+    "1970 norms strongly reinforce stigma around behavior differences."
+  ],
+  [
+    "Stigma",
+    "Diagnosis Status",
+    "-",
+    0.82,
+    "Stigma suppresses recognition and formal diagnosis."
+  ],
+  [
+    "Diagnosis Status",
+    "Medication Treatment",
+    "+",
+    0.42,
+    "At age 8, diagnosis could lead to medication consideration, but usually through parents and school pressure."
+  ],
+  [
+    "Access to Mental Health Care",
+    "Treatment Access",
+    "+",
+    0.62,
+    "Child treatment access depends on available pediatric or mental health services."
+  ],
+  [
+    "Socioeconomic Status",
+    "Treatment Access",
+    "+",
+    0.6,
+    "Higher-resource families are more likely to obtain childhood treatment."
+  ],
+  [
+    "Treatment Access",
+    "Medication Treatment",
+    "+",
+    0.66,
+    "Available treatment pathways increase the likelihood of medication use."
+  ],
+  [
+    "Stigma",
+    "Treatment Adherence",
+    "-",
+    0.46,
+    "Family or school stigma can reduce willingness to continue treatment."
+  ],
+  [
+    "Medication Treatment",
+    "Symptom Severity",
+    "-",
+    0.46,
+    "Medication may reduce visible childhood symptoms."
+  ],
+  [
+    "Medication Treatment",
+    "Functional Impairment",
+    "-",
+    0.32,
+    "Medication may reduce classroom and daily impairment."
+  ],
+  [
+    "Treatment Adherence",
+    "Medication Treatment",
+    "+",
+    0.44,
+    "Consistent adherence increases real-world treatment effect."
+  ],
+  [
+    "Medication Treatment",
+    "Treatment Side Effects",
+    "+",
+    0.4,
+    "Medication can introduce side effects."
+  ],
+  [
+    "Treatment Side Effects",
+    "Treatment Adherence",
+    "-",
+    0.4,
+    "Side effects can reduce adherence."
+  ],
+  [
+    "Treatment Side Effects",
+    "Quality of Life",
+    "-",
+    0.18,
+    "Side effects can slightly lower quality of life."
+  ],
+  [
+    "Functional Impairment",
+    "Quality of Life",
+    "-",
+    0.86,
+    "Impairment reduces quality of life."
+  ],
+  [
+    "Diagnosis Status",
+    "Quality of Life",
+    "+",
+    0.38,
+    "Diagnosis can modestly improve support and understanding."
+  ]
+]

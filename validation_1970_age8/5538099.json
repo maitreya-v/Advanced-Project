@@ -1,0 +1,273 @@
+{
+  "id": "5538099",
+  "source": "MED",
+  "pmid": "5538099",
+  "doi": "10.1055/s-0028-1091821",
+  "title": "Neurological evaluation of children with learning disorders.",
+  "authorString": "Schain RJ.",
+  "authorList": {
+    "author": [
+      {
+        "fullName": "Schain RJ",
+        "lastName": "Schain",
+        "firstName": "R J",
+        "initials": "RJ"
+      }
+    ]
+  },
+  "journalInfo": {
+    "issue": "3",
+    "volume": "1",
+    "journalIssueId": 476851,
+    "dateOfPublication": "1970 Feb",
+    "monthOfPublication": 2,
+    "yearOfPublication": 1970,
+    "journal": {
+      "medlineAbbreviation": "Neuropadiatrie",
+      "title": "Neuropadiatrie",
+      "issn": "0028-3797",
+      "nlmid": "0260671",
+      "isoabbreviation": "Neuropadiatrie"
+    },
+    "printPublicationDate": "1970-02-01"
+  },
+  "pubYear": "1970",
+  "pageInfo": "307-317",
+  "publicationStatus": "ppublish",
+  "language": "eng",
+  "pubModel": "Print",
+  "pubTypeList": {
+    "pubType": [
+      "Journal Article"
+    ]
+  },
+  "meshHeadingList": {
+    "meshHeading": [
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Humans"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Brain Damage, Chronic",
+        "meshQualifierList": {
+          "meshQualifier": [
+            {
+              "majorTopic_YN": "Y",
+              "abbreviation": "CO",
+              "qualifierName": "complications"
+            }
+          ]
+        }
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Cerebral Palsy",
+        "meshQualifierList": {
+          "meshQualifier": [
+            {
+              "majorTopic_YN": "N",
+              "abbreviation": "DI",
+              "qualifierName": "diagnosis"
+            }
+          ]
+        }
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Seizures",
+        "meshQualifierList": {
+          "meshQualifier": [
+            {
+              "majorTopic_YN": "N",
+              "abbreviation": "DI",
+              "qualifierName": "diagnosis"
+            }
+          ]
+        }
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Hyperkinesis",
+        "meshQualifierList": {
+          "meshQualifier": [
+            {
+              "majorTopic_YN": "Y",
+              "abbreviation": "CO",
+              "qualifierName": "complications"
+            },
+            {
+              "majorTopic_YN": "N",
+              "abbreviation": "ET",
+              "qualifierName": "etiology"
+            }
+          ]
+        }
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Speech Disorders",
+        "meshQualifierList": {
+          "meshQualifier": [
+            {
+              "majorTopic_YN": "Y",
+              "abbreviation": "CO",
+              "qualifierName": "complications"
+            },
+            {
+              "majorTopic_YN": "N",
+              "abbreviation": "ET",
+              "qualifierName": "etiology"
+            }
+          ]
+        }
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Diagnosis, Differential"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Electroencephalography"
+      },
+      {
+        "majorTopic_YN": "Y",
+        "descriptorName": "Neurologic Examination"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Attention Deficit Disorder with Hyperactivity",
+        "meshQualifierList": {
+          "meshQualifier": [
+            {
+              "majorTopic_YN": "N",
+              "abbreviation": "CO",
+              "qualifierName": "complications"
+            }
+          ]
+        }
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Child Behavior Disorders",
+        "meshQualifierList": {
+          "meshQualifier": [
+            {
+              "majorTopic_YN": "Y",
+              "abbreviation": "CO",
+              "qualifierName": "complications"
+            }
+          ]
+        }
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Sex Factors"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Schools"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Adolescent"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Child"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Female"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Male"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Intellectual Disability",
+        "meshQualifierList": {
+          "meshQualifier": [
+            {
+              "majorTopic_YN": "N",
+              "abbreviation": "CO",
+              "qualifierName": "complications"
+            }
+          ]
+        }
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Learning Disabilities",
+        "meshQualifierList": {
+          "meshQualifier": [
+            {
+              "majorTopic_YN": "N",
+              "abbreviation": "DI",
+              "qualifierName": "diagnosis"
+            },
+            {
+              "majorTopic_YN": "Y",
+              "abbreviation": "ET",
+              "qualifierName": "etiology"
+            },
+            {
+              "majorTopic_YN": "N",
+              "abbreviation": "TH",
+              "qualifierName": "therapy"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "subsetList": {
+    "subset": [
+      {
+        "code": "IM",
+        "name": "Index Medicus"
+      }
+    ]
+  },
+  "fullTextUrlList": {
+    "fullTextUrl": [
+      {
+        "availability": "Free",
+        "availabilityCode": "F",
+        "documentStyle": "pdf",
+        "site": "Unpaywall",
+        "url": "https://europepmc.org/articles/pmc1454933?pdf=render"
+      },
+      {
+        "availability": "Subscription required",
+        "availabilityCode": "S",
+        "documentStyle": "doi",
+        "site": "DOI",
+        "url": "https://doi.org/10.1055/s-0028-1091821"
+      }
+    ]
+  },
+  "isOpenAccess": "N",
+  "inEPMC": "N",
+  "inPMC": "N",
+  "citedByCount": 8,
+  "hasReferences": "N",
+  "hasTextMinedTerms": "N",
+  "hasDbCrossReferences": "N",
+  "hasPDF": "N",
+  "hasBook": "N",
+  "hasSuppl": "N",
+  "hasLabsLinks": "N",
+  "hasData": "N",
+  "authMan": "N",
+  "epmcAuthMan": "N",
+  "nihAuthMan": "N",
+  "hasTMAccessionNumbers": "N",
+  "dateOfCompletion": "1972-01-31",
+  "dateOfCreation": "1970-02-01",
+  "dateOfRevision": "2019-12-10",
+  "firstPublicationDate": "1970-02-01",
+  "firstIndexDate": "2008-01-29",
+  "hasEvaluations": "N"
+}

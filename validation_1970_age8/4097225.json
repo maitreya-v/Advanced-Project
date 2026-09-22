@@ -1,0 +1,150 @@
+{
+  "id": "4097225",
+  "source": "MED",
+  "pmid": "4097225",
+  "title": "The structural basis of the minimal cerebral dysfunction syndrome.",
+  "authorString": "Derby BM.",
+  "authorList": {
+    "author": [
+      {
+        "fullName": "Derby BM",
+        "lastName": "Derby",
+        "firstName": "B M",
+        "initials": "BM"
+      }
+    ]
+  },
+  "journalInfo": {
+    "issue": "4",
+    "volume": "29",
+    "journalIssueId": 416535,
+    "dateOfPublication": "1970 Oct",
+    "monthOfPublication": 10,
+    "yearOfPublication": 1970,
+    "journal": {
+      "medlineAbbreviation": "Electroencephalogr Clin Neurophysiol",
+      "title": "Electroencephalography and clinical neurophysiology",
+      "issn": "0013-4694",
+      "nlmid": "0375035",
+      "isoabbreviation": "Electroencephalogr Clin Neurophysiol"
+    },
+    "printPublicationDate": "1970-10-01"
+  },
+  "pubYear": "1970",
+  "pageInfo": "412",
+  "publicationStatus": "ppublish",
+  "language": "eng",
+  "pubModel": "Print",
+  "pubTypeList": {
+    "pubType": [
+      "Journal Article"
+    ]
+  },
+  "meshHeadingList": {
+    "meshHeading": [
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Cerebral Ventricles",
+        "meshQualifierList": {
+          "meshQualifier": [
+            {
+              "majorTopic_YN": "Y",
+              "abbreviation": "PA",
+              "qualifierName": "pathology"
+            }
+          ]
+        }
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Thalamus",
+        "meshQualifierList": {
+          "meshQualifier": [
+            {
+              "majorTopic_YN": "Y",
+              "abbreviation": "PA",
+              "qualifierName": "pathology"
+            }
+          ]
+        }
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Humans"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Brain Damage, Chronic",
+        "meshQualifierList": {
+          "meshQualifier": [
+            {
+              "majorTopic_YN": "Y",
+              "abbreviation": "PA",
+              "qualifierName": "pathology"
+            }
+          ]
+        }
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Attention Deficit Disorder with Hyperactivity",
+        "meshQualifierList": {
+          "meshQualifier": [
+            {
+              "majorTopic_YN": "N",
+              "abbreviation": "PA",
+              "qualifierName": "pathology"
+            }
+          ]
+        }
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Infant, Newborn"
+      },
+      {
+        "majorTopic_YN": "N",
+        "descriptorName": "Hypoxia",
+        "meshQualifierList": {
+          "meshQualifier": [
+            {
+              "majorTopic_YN": "N",
+              "abbreviation": "PA",
+              "qualifierName": "pathology"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "subsetList": {
+    "subset": [
+      {
+        "code": "IM",
+        "name": "Index Medicus"
+      }
+    ]
+  },
+  "isOpenAccess": "N",
+  "inEPMC": "N",
+  "inPMC": "N",
+  "citedByCount": 0,
+  "hasReferences": "N",
+  "hasTextMinedTerms": "N",
+  "hasDbCrossReferences": "N",
+  "hasPDF": "N",
+  "hasBook": "N",
+  "hasSuppl": "N",
+  "hasLabsLinks": "N",
+  "hasData": "N",
+  "authMan": "N",
+  "epmcAuthMan": "N",
+  "nihAuthMan": "N",
+  "hasTMAccessionNumbers": "N",
+  "dateOfCompletion": "1970-12-04",
+  "dateOfCreation": "1970-10-01",
+  "dateOfRevision": "2016-11-22",
+  "firstPublicationDate": "1970-10-01",
+  "firstIndexDate": "2008-09-10",
+  "hasEvaluations": "N"
+}

@@ -1,0 +1,712 @@
+PAGE 1
+Journal of Consulting and Clinical Psychology
+1970, Vol. 34, No. 3, 314-318
+PILOT STUDY ON THE EFFECTIVENESS OF SYSTEMATIC
+DESENSITIZATION WITH NEUROLOGICALLY IMPAIRED
+CHILDREN WITH PHOBIC DISORDERS
+MARTIN OBLER AND ROBERT F. TERWILLIGER *
+New School for Social Research
+A modified version of Wolpe's systematic desensitization therapy involving
+direct confrontation with the fear-inducing stimulus was attempted with neuro-
+logically impaired children with phobic symptoms. Two hypotheses were tested:
+(a) A nonverbal therapeutic technique not requiring motivation will produce
+successful symptom reduction for these children, and (6) awareness of thera-
+peutic procedure is not necessary for successful results. Both hypotheses were
+confirmed. The implications of these results for further research on systematic
+desensitization therapy were discussed.
+Certain traditional psychotherapies 
+have
+operated on the theoretical assumption that
+patient-therapist interaction is a necessary
+prerequisite in the modification of undesirable
+behavior (Wolberg, 1954). Elaborate verbal
+exchange is assumed to be the mechanism
+through which 
+modification 
+occurs. The
+patient-therapist exchange focuses on behavior
+conflicts confronting the patients from present
+and past experiences. The role of the thera-
+pist is crucial in accomplishing a modification
+of the conflicting behavior. He uses the pa-
+tient's free associations, transference projec-
+tions, and countertransference responses as his
+tools (Freud, 1965). Without a therapist as
+an interpreter of the conflicting experiences,
+modification of the undesirable behavior
+would not occur.
+In recent years, a large number of clinical
+investigations have deviated from the assump-
+tions of the above model. One method of
+treatment employed by Wolpe (1958), sys-
+tematic desensitization, has been effective in
+reducing undesirable responses in adults
+(Rachman, 1967). Recent clinical evidence
+has supported its successful use with mono-
+phobias (Wolpe, 1962a, 1962b), delinquency
+(Zimmerman & Zimmerman, 1962), enuresis
+(Lang & Melamed, 1969; Werry, 1966),
+maladaptive rage and anxiety 
+(Bandura,
+1961), etc. Moreover, Wolpe (1962a, 1962b)
+describes a treatment procedure in which a
+medical student was substituted for the on-
+1 Requests for reprints should be sent to Robert
+Terwilliger, Graduate Faculty of Political and Social
+Sciences, New School for Social Research, 66 West
+12th Street, New York, New York 10011.
+going therapist with no disruption occurring
+in the treatment of a phobic disorder. No
+apparent patient resistance occurred because
+of the transfer in therapists. Lazarus and
+Rachman (1957) report data indicating that
+a change of therapist enhanced treatment
+success by reducing the negative associations
+to a particular therapist.
+Systematic desensitization therapy, based
+on Wolpe's reciprocal inhibition theory, re-
+quires little verbal capacity or treatment
+motivation.2 A short examination of the theo-
+retical assumptions demonstrates the logic of
+the above position. The theory assumes that
+maladaptive, fearful responses may be elimi-
+nated by the presentation of some other re-
+sponse presumably antagonistic to the fearful
+one. Whether the therapist uses muscle relaxa-
+tion, classical conditioning of a neutral re-
+sponse, or operant reinforcement as a pre-
+sumed fear antagonist, the "counterbalancing"
+principle of the therapy remains the same. By
+simply developing a counteracting response to
+the original fear-producing stimulus, we con-
+dition a reduction in the fear response. A pa-
+tient may cognitively perceive the connection
+between the counteracting response and the
+fear-producing stimulus, but it is not a neces-
+sary requirement. With adults, Wolpe uses
+muscle relaxation as the conditioned response,
+but any reinforcement producing the same re-
+sults could just as easily be substituted. In-
+2 Wolpe has extensively developed this theory in
+numerous studies he has conducted. The most elabo-
+rate description of the theory remains his original
+work, 
+Psychotherapy 
+by 
+Reciprocal 
+Inhibition
+(19S8).
+314
+This document is copyrighted by the American Psychological Association or one of its allied publishers.
+This article is intended solely for the personal use of the individual user and is not to be disseminated broadly.
+All rights, including for text and data mining, AI training, and similar technologies, are reserved.
+
+PAGE 2
+SYSTEMATIC DESENSITIZATION WITH PHOBIC DISORDERS
+315
+stead of developing a muscle relaxation sched-
+ule, the therapist and patient might develop a
+touch reminder schedule. Each time the
+patient feels the onset of fear, he auto-
+matically 
+responds with the conditioned
+response 
+of touching himself to remind
+him of the inappropriateness of this reaction.
+When the original fear-producing stimulus
+no longer 
+elicits 
+a 
+fear 
+response, 
+the
+therapy moves to a new stimulus previously
+established on a hierarchy of low-intensity to
+high-intensity fear responses. Relaxation or
+reminder responses are thus hypothesized to
+become effective in reducing the strength of
+the unconditioned stimulus. Furthermore, re-
+sponse generalization is hypothesized to occur
+and effectively operate in the patient's real-
+life situations (Wolpe, 1958).
+The application of traditional therapeutic
+techniques to the treatment of childhood dis-
+orders has had to face the problem of the
+relatively low verbal ability of children
+(Freud, 1965). This has been met by vari-
+ous play therapy techniques among others
+(Subotnick, 1966). However, these more tra-
+ditional techniques depend on attacking the
+"causes" of the disorder for their effectiveness.
+This approach assumes that somehow, the
+child develops insight or awareness into the
+nature of his problem. Furthermore, this in-
+sight requires some form of transference or
+intense interpersonal relationship with the
+therapist (Subotnick, 1966). If the disturb-
+ance becomes severe enough—as in the case
+of neurological impairment—it may become
+increasingly difficult to arrive at this requisite
+state of awareness due to the patient's loss
+of verbal and abstract ability. Thus, as Ey-
+senck (1952) and Rachman (1965) have sug-
+gested, there would be limits to the effective-
+ness of traditionally oriented therapies in
+the case of severe emotional or neurological
+disturbances.
+The behavior therapy techniques, rather
+than attacking the presumed causes of the
+disturbance, attack the symptoms themselves.
+These techniques make no assumptions about
+the necessity of awareness of a transference
+relationship. This factor alone would suggest
+the desirability of applying these techniques
+to the severely disturbed child. While various
+attempts have been made to apply behavior
+therapy techniques to children, there have
+been very few attempts to use the specific
+technique of systematic desensitization de-
+scribed above (Ferster & Simons, 1966;
+Lovaas, Freitag, Gold, & Kassarla, 1965).
+However, the literature which exists does
+suggest that systematic desensitization could
+be an effective technique in the treatment of
+phobias in children (Jensen & Wamach,
+1967; Lazarus, 
+1958). Rachman 
+(1965)
+further points out that its use with severe
+chronic and neurologically impaired persons
+is limited but promising. He suggests broaden-
+ing the use of systematic desensitization to
+these populations.
+This study was conducted to further test
+the validity of applying systematic desensi-
+tization to the treatment of severely dis-
+turbed children, specifically to a population
+hitherto unstudied—neurologically impaired
+children. It would appear that systematic
+desensitization, which attempts to attack
+symptoms directly without requiring any great
+verbal skill or abstract ability on the part
+of the patient, would be very well suited to
+the treatment of a population of neurologically
+impaired children.
+METHOD
+Subject Selection
+Thirty emotionally disturbed, neurologically im-
+paired children were selected to participate in the
+study. They were drawn from a population of
+ISO children diagnosed as having minimal brain
+dysfunction with severe monophobic disorder. The
+monophobic disorder was one of two types: either
+(a) phobia regarding the use of a public bus or (6)
+phobia regarding the sight of a live dog. The Ss
+having both phobias were excluded from the study.
+The diagnoses were supplied by the clinic currently
+servicing the children medically.3 Fifteen Ss were
+selected at random for the treatment condition
+(E group) and exposed to a modified version of
+the Wolpe desensitization method developed by the
+authors. The remaining 15 Ss served as controls
+(C group) and were matched with E group Ss
+for age, sex, intelligence, and phobic diagnosis. Each
+E group S was matched with an individual therapist
+by placing the name of all therapists in a bowl
+with corresponding numbers for each S. A number
+and name were selected simultaneously, with the
+3 The authors wish to thank the New York Asso-
+ciation for Brain Injured Children, Brooklyn Chap-
+ter, for making available the Ss for the research
+as well as the appropriate diagnostic material. In
+addition, partial funding for the pilot study was
+given through their auspices.
+This document is copyrighted by the American Psychological Association or one of its allied publishers.
+This article is intended solely for the personal use of the individual user and is not to be disseminated broadly.
+All rights, including for text and data mining, AI training, and similar technologies, are reserved.
+
+PAGE 3
+316
+MARTIN OBLER AND ROBERT F. TERWILLIGER
+chosen pair remaining together throughout the 10-
+week period of treatment.
+Therapist Training
+All IS therapists were college graduates having no
+previous training or experience with neurologically
+impaired children or psychotherapeutic techniques.
+They were trained by the authors to apply a modified
+version of the Wolpe method and were instructed
+not 
+to 
+deviate 
+from 
+the 
+training 
+procedures
+throughout the course of treatment. The training
+consisted of two five-hour sessions during a two-
+week period, in which they were intensively instructed
+in how to dispense the rewards in attempting to
+decondition the monophobia. Each therapist was
+remunerated at the rate of $5 per five-hour session.
+Design
+Therapist and 5 met for the first time at the
+initial therapy session. Each session consisted of a
+five-hour weekly meeting over a 10-week period.
+Treatment consisted of exposing each S to the
+fear-inducing stimulus as it appeared in his everyday
+life. Typically, in desensitization therapy, the pa-
+tient is asked to imagine the stimulus without actu-
+ally being exposed to it. The reinforcement then oc-
+curs by teaching him to relax in the face of the
+imagined stimulus. With the relatively nonverbal, un-
+imaginative 5s, this procedure was out of the ques-
+tion. The modification developed by the authors
+placed S in direct confrontation with the fear-
+producing stimulus, but with the therapist acting as
+a buffer between the two. That is, the therapist
+protected S from intense anxiety emerging from
+exposure to the real phobic stimulus, and rewarded
+him by approval for successful tolerance of it.
+Prior to exposure to the real phobic stimulus, Ss
+were asked to look at pictures or models of the
+fear-inducing stimulus (bus or dog). This eliminated
+the need for S to imagine the stimulus. Cooke (1966)
+showed that actual exposure to the fear-inducing
+stimulus was more effective than merely imagining the
+stimulus. When S's behavior indicated a tolerance
+of the picture or model, he was then exposed to the
+actual fear-producing stimulus (bus or dog). The
+therapist continuously rewarded S through encour-
+agement for moving closer and closer to the object.
+Eventually, Ss were able to move up the scale to
+more anxiety-producing stimulus (e.g., touching the
+bus or dog). At this point, S was given the option
+of exposure to the stimulus without the presence
+of the therapist. A new reward was offered at this
+time which included toys, books, pets, and candy
+chosen by 5 at an earlier session with the therapist.
+These rewards were dispensed immediately at the
+time of successful completion of the defined task
+(e.g., talking to the bus driver, putting a token
+in the box, staying in the room with a dog). If an
+S overcame the phobia prior to completion of the
+tenth session, he continued to be reinforced by the
+therapist for his success. Successful handling of the
+fear-inducing stimulus was considered to be its gen-
+eralization to S's daily life without the presence of
+the therapist. This was measured by a parent report
+scale administered to all E and C group members
+prior to and at the completion of the treatment
+period.
+It should be clear that the technique used in this
+study differs from the traditional systematic desensi-
+tization technique in four ways: (a) There is no
+training in relaxation involved in this study.4 (b)
+There was no attempt to ask S to develop a hier-
+archy of anxiety-producing situations to then be
+treated from the least to the most severe. In effect,
+a hierarchy was used, but it was determined arbi-
+trarily by the E. (c) It was assumed that reinforce-
+ment per se was sufficient to bring about removal
+of the phobic symptom. No assumption about a link
+between the autonomic nervous system and relaxa-
+tion was required or made, (d) 
+There was no
+requirement or demand made of the S to indicate
+verbally the experience of lowered anxiety. Only
+overt 'behavioral manifestations were used, with the
+therapist making the judgment as to whether or not
+anxiety had been lowered and tolerance of the fear-
+producing stimulus shown.
+Measurement of Treatment Success—Aware
+and Unaware Subjects
+As indicated earlier, the authors' contention was
+that intellectual awareness of treatment procedure is
+not a necessity for insuring success in treatment.
+Measurement of treatment awareness, it was assumed,
+might be reflected in S's IQ score (based on the
+Wechsler Intelligence Scale for Children). An arbi-
+trary cutoff point (a score of 75) was established
+as the critical value. Those Ss with scores below a
+75 IQ were assumed to be minimally aware of
+treatment procedures, while those above 75 were
+considered more likely to be aware. The assump-
+tion that IQ is highly correlated with awareness was
+based on the observable behavior of those Ss with
+an IQ score below 75. These Ss appeared oblivious
+to most stimulation in their immediate environment,
+and were extremely detached and relatively indif-
+ferent to the influence of others on them. The intel-
+ligence test was administered to each S prior to
+selection for placement in the E and C groups. Ten
+E and nine C Ss scored above 75. There were,
+therefore, five minimally aware E Ss and six
+minimally aware C Ss (Table 1). The authors
+recognize the arbitrary nature of selecting an IQ
+score as a measure of treatment awareness. How-
+ever, it appears reasonable that a child with an IQ
+score below 75 functions on a level of very limited
+awareness and could therefore be used as a standard
+for a minimum likelihood of awareness of treatment
+procedures.5
+The basic measure for treatment effectiveness was
+a parent rating scale administered to each S's parents
+prior to and at the completion of treatment. The
+4 This is contrary to Lament and Edwards' (1967)
+rinding that relaxation training is necessary for
+successfully reducing phobias.
+6 The authors are currently developing a more
+refined technique for determining an S's awareness
+of treatment.
+This document is copyrighted by the American Psychological Association or one of its allied publishers.
+This article is intended solely for the personal use of the individual user and is not to be disseminated broadly.
+All rights, including for text and data mining, AI training, and similar technologies, are reserved.
+
+PAGE 4
+SYSTEMATIC DESENSITIZATION WITH PHOBIC DISORDERS
+317
+scale consisted of 10 questions concerning the child's
+functioning in society, 1 of which tapped the
+critical phobic behavior. This question was as
+follows:
+Bus Phobia:
+A. Has your child recently been able to ride a
+bus? 0—No. 1—Yes, when accompanied by
+another person. 2—Yes, completely on his own.
+Dog Phobia:
+B. Has your child recently been able to touch a
+dog? 0—No. 1—Yes, with the help of another
+person. 2—Yes, completely on his own.
+The remaining questions dealt with S's functioning
+in school, with peers, etc., and were included to pre-
+vent a favorable response by parents desiring their
+child's continued participation in the program. The
+parents were not aware of the purpose of the re-
+search and assumed that their child attended a
+TABLE 1
+COMPARISON OF IQ SCORES, AGE, AND PARENT RATING
+J?OR TREATED AND UNTREATED SUBJECTS
+TABLE 3
+PROPORTION OF SUCCESS OF AT LEAST "2"
+Subjects
+Unaware
+1
+2
+3
+4
+5
+6
+Aware
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+Treated
+Age
+7-1
+9-5
+9-6
+10-2
+10-5
+10-1
+12-0
+9-3
+7-6
+9-4
+10-3
+11-1
+9-2
+10-3
+11-4
+IQ
+66
+65
+71
+50
+68
+85
+80
+115
+107
+96
+79
+102
+95
+97
+99
+Score at
+comple-
+tion of
+treat-
+ment
+2
+1
+1
+2
+2
+1
+2
+2
+2
+2
+1
+1
+1
+2
+1
+Untreated
+Age
+7-3
+9-3
+9-8
+10-7
+10-5
+9-3
+10-0
+11-9
+9-3
+7-8
+9-6
+10-6
+10-7
+9-4
+10-5
+IQ
+67
+68
+64
+73
+57
+60
+86
+81
+146
+106
+94
+81
+103
+96
+95
+Score at
+comple-
+tion of
+treat-
+ment
+0
+0
+oj
+0
+0
+0
+0
+0
+01
+01
+0
+0
+TABLE 2
+PROPORTION OF SUCCESS OF AT LEAST 
+"1"
+IQ group
+Below 75
+Above 75
+Total
+Treated
+5/5
+10/10
+15/15
+Untreated
+1/6
+2/9
+3/15
+IQ group
+Below 75
+Above 75
+Total
+Treated
+3/5
+5/10
+8/15
+Untreated
+0/6
+0/9
+0/15
+weekly recreation program. The parent rating was
+used as the best measure of treatment success on
+the belief that a person close to a phobic patient
+is in a good position to observe any reduction
+of symptoms that generalize to his daily life. All Ss
+received a 0 rating on an administration of the
+rating scale made prior to treatment.
+RESULTS
+The after-treatment measure for both
+groups appears in Table 1. A score of 1 indi-
+cates a reduction in the phobic system suf-
+ficient to insure S's ability (as reported by
+the parents) to ride a bus or touch a dog
+with the help of another person. A score of 2
+indicates this ability without any need for
+assistance. Each S in the treated condition
+(E group) received at least a "1" on his
+parent's rating and in a great many cases a
+"2" rating. The corresponding C group, on
+the other hand, showed a disproportionately
+small increase in "1" ratings and no "2"
+ratings at all. Table 2 shows that the propor-
+tion of successes of at least "1" for treated
+Ss was significantly higher than for untreated
+Ss. The critical ratio value for the difference
+in proportions was 4.4 which is significant
+at the .00003 level. Table 3 indicates the
+proportion of successes of at least "2." The
+critical ratio value for the difference in pro-
+portions was 3.3 which is significant at the
+,0005 level, again an indication of the supe-
+riority of the treatment condition in reducing
+phobic disturbances.
+For behavior changes rated as "1," Table 2
+indicated 100% success for both high- and
+low-IQ treatment groups, thereby indicating
+no difference in treatment success due to
+conditions of "awareness." For rating "2,"
+Table 3 yields a critical ratio of .04, further
+demonstrating no difference between "aware-
+ness" conditions.
+DISCUSSION
+The results indicate that treated Ss were
+significantly affected by the modified system-
+This document is copyrighted by the American Psychological Association or one of its allied publishers.
+This article is intended solely for the personal use of the individual user and is not to be disseminated broadly.
+All rights, including for text and data mining, AI training, and similar technologies, are reserved.
+
+PAGE 5
+318
+MARTIN OBLER AND ROBERT F. TERWILLIGER
+atic desensitization method. Control group 5s,
+on the other hand, showed no significant
+change in reduction of their phobic symptoms.
+The S's intellectual ability, presumably indi-
+cating the possibility of his awareness of being
+treated, did not affect the results. This lack
+of difference is interesting considering the fact
+that severely neurologically impaired children
+often receive no treatment because of their
+presumed lack of motivation and concomitant
+unawareness (Johnson & Myklebust, 1969).
+Systematic desensitization in its modified form
+appears to overcome this difficulty, at least for
+children suffering from specific dog and bus
+phobias.
+The method of treatment employed in this
+study was designed for specific phobic dis-
+orders. However, its application to other
+childhood disorders would be a relatively
+simple task. The identification of the fear-
+inducing stimulus would be followed by the
+development of a hierarchy of conditions
+under which the stimulus appears in the
+patient's life. Fear-antagonist responses would
+then be introduced conjunctively with the
+appropriate reinforcement schedule. Recent
+studies have demonstrated the effective use
+of systematic desensitization on such disorders
+as simple autism, enuresis, etc. (Jones, 1968;
+Myers, 1968), in which the child is often
+unable to talk about his illness.
+Further research seems suggested by several
+aspects of this study: (a) a comparison of
+the effectiveness of trained versus untrained
+therapists in the use of systematic desensitiza-
+tion; 
+(b) 
+additional modification of the
+technique as a function of the nature of the
+symptoms treated, for example, possible treat-
+ment of paranoid schizophrenia by exposure
+to interpersonal interactions inducing suspi-
+ciousness; (c) determination of what acts as
+a reward in the therapeutic setting; and (d)
+the assessment of 5 awareness and its neces-
+sity in the successful application of systematic
+desensitization.
+REFERENCES
+BANDURA, A, Psychotherapy as a learning process.
+Psychological Bulletin, 1961, 58, 143-157.
+COOKE, G. The efficacy of two desensitization pro-
+cedures: An analogue study. Behaviour Research
+and Therapy, 1966, 4, 17-24.
+EYSENCK, H. j. The effects of psychotherapy: An
+evaluation. Journal of Consulting Psychology, 1952,
+16, 319-324.
+FERSTER, C. B., & SIMONS, J. Behavior therapy with
+children. Psychological Record, 1966, 16, 65-71.
+FREUD, A. Normality and pathology in childhood.
+New York: International Universities Press, 196S.
+JENSEN, D., & WAMACH, M. G. Operant conditioning
+techniques applied in the treatment of an autistic
+child. American Journal of Orthopsychiatry, 1967,
+37, 30-34.
+JOHNSON, E. J., & MYKLEBUST, H. R. Learning dis-
+abilities. New York: Grune & Stratton, 1969.
+JONES, H. G. The behavioral treatment of enuresis
+nocturna. In H. J. Eysenck (Ed.), Behavior ther-
+apy and the neuroses. New York: Pergamon Press,
+1968.
+LAMONT, J. F., & EDWARDS, J. The role of relaxation
+in systematic desensitization. Behaviour Research
+and Therapy, 1967, 5, 11-25.
+LANG, P. J., & MELAMED, B. G. Case report: Avoid-
+ance conditioning therapy of an infant with chronic
+remination vomiting. Journal of Abnormal Psy-
+chology, 1969, 74, 1-9.
+LAZARUS, A. A. New methods in psychotherapy: A
+case study. South African Medical Journal, 1958,
+33, 660-663.
+LAZARUS, A. A., & RACHMAN, S. The use of system-
+atic desensitization in psychotherapy. South African
+Medical Journal, 1957, 31, 934-939.
+LOVAAS, O. I., FREITAO, G., GOLD, V., & KASSARLA, I.
+Experimental studies in childhood schizophrenia:
+Analysis of self-destructive behavior. Journal of
+Experimental Child Psychology, 1965, 2, 67-84.
+MYERS, V. The treatment of two phobic patients on
+the basis of learning principles. In H. J. Eysenck
+(Ed.), Behavior therapy and the neuroses. New
+York: Pergamon Press, 1968.
+RACHMAN, S. The current status of behavior therapy.
+Archives of General Psychiatry, 1965, 13, 418-423.
+RACHMAN, S. Systematic desensitization. Psychologi-
+cal Bulletin, 1967, 74, 93-103.
+SUBOTNICK, L. Transference in client-centered play
+therapy. Psychology, 1966, 3, 2-17.
+WERRY, J. The conditioning treatment of enuresis.
+American Journal of Psychiatry, 1966, 123, 226-
+229.
+WOLBERG, L. R. The technique of 
+psychotherapy.
+New York: Grune & Stratton, 1954.
+WOLFE, J. Psychotherapy by reciprocal inhibition.
+Stanford: Stanford University Press, 1958.
+WOLPE, J. The experimental foundations of some
+new therapeutic method. In A. J. Bachrach (Ed.),
+Experimental foundations 
+of clinical psychology.
+New York: Basic Books, 1962. (a)
+WOLPE, J. Isolation of a conditioning procedure as
+the crucial psychotherapeutic factor: A case study.
+Journal of Nervous and Mental Disorders, 1962,
+134, 316-329. (b)
+ZIMMERMAN, E. H., & ZIMMERMAN, J. The alteration
+of behavior in a special situation. Journal of Ex-
+perimental Behavior, 1962, 5, 59-60.
+(Received February 28, 1969)
+This document is copyrighted by the American Psychological Association or one of its allied publishers.
+This article is intended solely for the personal use of the individual user and is not to be disseminated broadly.
+All rights, including for text and data mining, AI training, and similar technologies, are reserved.
