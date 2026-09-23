@@ -1,0 +1,102 @@
+{
+  "summary": {
+    "graph_file": "2010_8 yo.py",
+    "graph_sha256": "606d746c1d204957a2a8e960e7dc074666ea8b411ea9e678888b65890fcd7eab",
+    "graph_year": 2010,
+    "age": 8,
+    "edge_count": 58,
+    "pdf_file_count": 25,
+    "unique_document_count": 24,
+    "validation_updated_utc": "2026-09-23T03:14:44.646937+00:00",
+    "original_unchanged": true,
+    "strength_assessed": false,
+    "status_counts": {
+      "supported": 1,
+      "partially_supported": 11,
+      "contradicted": 0,
+      "mixed_evidence": 0,
+      "insufficient_evidence": 35,
+      "not_assessable": 11
+    }
+  },
+  "excerpts": {
+    "genetic": {
+      "source_id": "GWAS_META",
+      "exact_excerpt": "Although twin and family studies have shown attention-deficit/hyperactivity disorder (ADHD) to be highly heritable, genetic variants influencing the trait at a genome-wide significant level have yet to be identified.",
+      "location": "PDF page 1",
+      "relevance": "Supports substantial inherited liability while cautioning that this GWAS did not identify individual genome-wide significant variants."
+    },
+    "age_sex": {
+      "source_id": "AGE_SEX",
+      "exact_excerpt": "Overall prevalence of current DSM-IV-like ADHD was 9.2% with a male:female ratio of 2.28:1. The prevalence of DSM-IV-like ADHD was highest in children. Gender differences in DSM-IV-like ADHD subtype prevalences were highest in adolescents.",
+      "location": "PDF page 1",
+      "relevance": "Shows age and sex differences in prevalence and subtype patterns, not the graph's proposed social-norm mechanism."
+    },
+    "female_detection": {
+      "source_id": "AGE_SEX",
+      "exact_excerpt": "Lower male:female ratios than reported in some clinic-based studies suggest that females are under-diagnosed in the community.",
+      "location": "PDF page 1",
+      "relevance": "Supports unequal detection by sex but does not isolate teacher referral or institutional bias."
+    },
+    "sleep": {
+      "source_id": "SLEEP_BEHAVIOR",
+      "exact_excerpt": "shorter sleep duration in 7- to 8 year olds (as measured by actigraphy) was associated with increased caregiver reports of inattentive/hyperactive problem behavior.",
+      "location": "PDF page 2",
+      "relevance": "Directly relevant to age eight, but observational wording supports association rather than a fully identified causal effect."
+    },
+    "sleep_direction": {
+      "source_id": "SLEEP_BEHAVIOR",
+      "exact_excerpt": "There is some evidence of a causal relationship between sleep disruption and difficulties regulating behavior, emotion, and attention. However, such associations have rarely been experimentally evaluated, because the majority of sleep studies have used correlational designs.",
+      "location": "PDF page 2",
+      "relevance": "The review itself states both the plausible direction and the causal limitation."
+    },
+    "exposure": {
+      "source_id": "ORGANOCHLORINE",
+      "exact_excerpt": "These results support an association between low-level prenatal organochlorine exposure and ADHD-like behaviors in childhood.",
+      "location": "PDF page 1",
+      "relevance": "Supports a specific prenatal exposure association, narrower than the graph's generic environmental-stressor claim."
+    },
+    "guidelines": {
+      "source_id": "CPG_REVIEW",
+      "exact_excerpt": "The CPGs all recommend: a structured approach to diagnosis and treatment; attention to psychiatric comorbidity and other ADHD-related conflicts during an individual's lifespan; consideration of medication (usually stimulants) and psychosocial therapies; and follow-up and monitoring of patient response.",
+      "location": "PDF page 2",
+      "relevance": "Supports diagnosis-linked consideration of medication and psychosocial care, but does not estimate the graph's causal probabilities."
+    },
+    "med_effect": {
+      "source_id": "PHARM_REVIEW",
+      "exact_excerpt": "The effectiveness of three doses of methylphenidate (0.15, 0.3, and 0.6 mg kg-1, administered twice daily) compared to placebo was investigated by Pearson et al. [2003] in a double-blind, placebo-controlled crossover study.",
+      "location": "PDF page 2",
+      "relevance": "Identifies controlled efficacy evidence in a narrower developmental-disorder population."
+    },
+    "med_side": {
+      "source_id": "PHARM_REVIEW",
+      "exact_excerpt": "significant adverse events such as severe social withdrawal, increased crying, drowsiness, and irritability were noted, especially at the higher dose (0.6 mg kg-1) of methylphenidate",
+      "location": "PDF page 2",
+      "relevance": "Directly supports medication causing adverse effects, although the population and drug are specific."
+    },
+    "behavior": {
+      "source_id": "CPG_REVIEW",
+      "exact_excerpt": "consideration of medication (usually stimulants) and psychosocial therapies; and follow-up and monitoring of patient response.",
+      "location": "PDF page 2",
+      "relevance": "Supports psychosocial therapy as recommended care, not a quantified effect on every symptom or impairment outcome."
+    },
+    "impairment": {
+      "source_id": "ODD_REVIEW",
+      "exact_excerpt": "Attention-deficit/hyperactivity disorder (ADHD) is a highly prevalent disorder with significant functional impairment.",
+      "location": "PDF page 1",
+      "relevance": "Links ADHD and impairment, but does not independently estimate symptom-severity-to-impairment causation."
+    },
+    "qol": {
+      "source_id": "ECZEMA_SLEEP",
+      "exact_excerpt": "ADHD affects more than 5% of all children and causes severe psychosocial maladaptation, impairment of quality of life and economic burden on social services.",
+      "location": "PDF page 1",
+      "relevance": "Supports an adverse relation between ADHD-related impairment and quality of life, but not the graph's separate diagnosis benefit."
+    },
+    "stigma": {
+      "source_id": "STIGMA_SCALE",
+      "exact_excerpt": "The Surgeon General identifies stigma surrounding mental illness and its treatment as a potent barrier to help-seeking.",
+      "location": "PDF page 1",
+      "relevance": "Supports a general help-seeking barrier; it does not isolate ADHD diagnosis or treatment adherence in eight-year-olds."
+    }
+  }
+}

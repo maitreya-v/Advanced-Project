@@ -1,0 +1,649 @@
+{
+  "metadata": {
+    "graph_file": "1990_32 yo.py",
+    "graph_sha256": "855423bc140b4b3a1beaa9b02009d9029213bd7dad6b7c7b758d0d5de04fd947",
+    "graph_year": 1990,
+    "age": 32,
+    "edge_count": 53,
+    "pdf_file_count": 4,
+    "unique_document_count": 4,
+    "validation_updated_utc": "2026-09-23T03:56:08.125898+00:00",
+    "original_unchanged": true,
+    "strength_assessed": false,
+    "status_counts": {
+      "supported": 0,
+      "partially_supported": 0,
+      "contradicted": 0,
+      "mixed_evidence": 0,
+      "insufficient_evidence": 47,
+      "not_assessable": 6
+    }
+  },
+  "status_definitions": {
+    "supported": "Evidence supports the stated direction, sign, and reasoning within the declared scope.",
+    "partially_supported": "Evidence supports only part of the claim, a narrower population or outcome, or an association rather than the full causal claim.",
+    "contradicted": "Relevant evidence opposes the claimed direction or sign within the declared scope.",
+    "mixed_evidence": "Relevant evidence both supports and opposes the same defined claim.",
+    "insufficient_evidence": "Available evidence does not establish or refute the causal claim.",
+    "not_assessable": "Undefined variable coding or endpoint makes the proposed direction or sign uninterpretable."
+  },
+  "methodology": {
+    "scope": "1990_32 yo.py, 58 edges, using only the four supplied PDF files in 1990 ADHD Papers. Direction, sign, and written reasoning were reviewed; numeric strength was excluded.",
+    "age_scope": "Adult evidence was required for adult claims. The supplied papers study children or adolescents and were not transferred as causal proof for adults aged 32.",
+    "causal_standard": "Associations, reviews, and clinical recommendations were not automatically treated as proof of causal direction. Undefined categorical signs were marked not_assessable.",
+    "source_limits": "This is a validation against the supplied corpus, not a systematic review of all 1990 ADHD literature. A status of insufficient_evidence is not evidence that an edge is false.",
+    "strength": "The graph's numeric edge strengths were not validated.",
+    "duplicate": "No exact duplicate PDF files were found in the supplied corpus."
+  },
+  "edges": [
+    {
+      "edge_id": 1,
+      "source": "Genetic Risk",
+      "dest": "ADHD",
+      "existing_reasoning": "Genetic vulnerability contributes to adult ADHD.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 32. Pediatric findings are not transferred as adult evidence.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant adult evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 2,
+      "source": "ADHD",
+      "dest": "Symptom Severity",
+      "existing_reasoning": "Underlying ADHD increases symptom severity.",
+      "sign": "+",
+      "validation_status": "not_assessable",
+      "observation_from_validation": "ADHD and Symptom Severity overlap unless defined as separate constructs.",
+      "recommended_action": "Define a latent disorder construct and an independent severity measure.",
+      "evidence": []
+    },
+    {
+      "edge_id": 3,
+      "source": "ADHD",
+      "dest": "Symptom Type",
+      "existing_reasoning": "Underlying ADHD shapes symptom presentation.",
+      "sign": "+",
+      "validation_status": "not_assessable",
+      "observation_from_validation": "Symptom Type is categorical, so a universal positive sign is undefined.",
+      "recommended_action": "Use presentation-specific outcomes.",
+      "evidence": []
+    },
+    {
+      "edge_id": 4,
+      "source": "ADHD",
+      "dest": "Comorbid Conditions",
+      "existing_reasoning": "ADHD frequently co-occurs with other difficulties that complicate recognition.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 32. Pediatric findings are not transferred as adult evidence.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant adult evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 5,
+      "source": "Nutrition Quality",
+      "dest": "Symptom Severity",
+      "existing_reasoning": "Poor nutrition worsens cognitive regulation.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 32. Pediatric findings are not transferred as adult evidence.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant adult evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 6,
+      "source": "Sleep Quality",
+      "dest": "Symptom Severity",
+      "existing_reasoning": "Sleep disruption affects functioning and regulation.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 32. Pediatric findings are not transferred as adult evidence.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant adult evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 7,
+      "source": "Chronic Stress Load",
+      "dest": "Symptom Severity",
+      "existing_reasoning": "Stress amplifies symptoms.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 32. Pediatric findings are not transferred as adult evidence.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant adult evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 8,
+      "source": "Age",
+      "dest": "Symptom Severity",
+      "existing_reasoning": "At age 32, work and adult role demands increase symptom visibility.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 32. Pediatric findings are not transferred as adult evidence.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant adult evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 9,
+      "source": "Gender",
+      "dest": "Symptom Type",
+      "existing_reasoning": "Gender norms affect how adult symptoms are interpreted.",
+      "sign": "+",
+      "validation_status": "not_assessable",
+      "observation_from_validation": "Symptom Type is unordered and the corpus does not study adult gender interpretation.",
+      "recommended_action": "Specify a presentation and gender contrast.",
+      "evidence": []
+    },
+    {
+      "edge_id": 10,
+      "source": "Symptom Severity",
+      "dest": "Functional Impairment",
+      "existing_reasoning": "Higher severity increases occupational and daily impairment.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 32. Pediatric findings are not transferred as adult evidence.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant adult evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 11,
+      "source": "Comorbid Conditions",
+      "dest": "Functional Impairment",
+      "existing_reasoning": "Comorbid burden increases impairment.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 32. Pediatric findings are not transferred as adult evidence.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant adult evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 12,
+      "source": "Functional Impairment",
+      "dest": "Employment Instability",
+      "existing_reasoning": "Impairment can destabilize employment.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 32. Pediatric findings are not transferred as adult evidence.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant adult evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 13,
+      "source": "Performance Pressure",
+      "dest": "Functional Impairment",
+      "existing_reasoning": "Performance pressure worsens visible dysfunction.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 32. Pediatric findings are not transferred as adult evidence.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant adult evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 14,
+      "source": "Employment Instability",
+      "dest": "Provider Referral Pathway",
+      "existing_reasoning": "Occupational difficulties begin to increase referral toward assessment in 1990.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 32. Pediatric findings are not transferred as adult evidence.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant adult evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 15,
+      "source": "Family Stress",
+      "dest": "Symptom Severity",
+      "existing_reasoning": "Adult family stress can intensify symptom burden.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 32. Pediatric findings are not transferred as adult evidence.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant adult evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 16,
+      "source": "Household Stability",
+      "dest": "Family Stress",
+      "existing_reasoning": "Stable household context reduces stress.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 32. Pediatric findings are not transferred as adult evidence.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant adult evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 17,
+      "source": "Socioeconomic Status",
+      "dest": "Educational Access",
+      "existing_reasoning": "Higher SES improves educational and support opportunities.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 32. Pediatric findings are not transferred as adult evidence.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant adult evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 18,
+      "source": "Financial Status",
+      "dest": "Access to Mental Health Care",
+      "existing_reasoning": "Income controls access to mental healthcare.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 32. Pediatric findings are not transferred as adult evidence.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant adult evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 19,
+      "source": "Neighborhood Quality",
+      "dest": "Access to Mental Health Care",
+      "existing_reasoning": "Better neighborhood conditions improve resource access.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 32. Pediatric findings are not transferred as adult evidence.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant adult evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 20,
+      "source": "Socioeconomic Status",
+      "dest": "Access to Mental Health Care",
+      "existing_reasoning": "Higher SES improves healthcare access.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 32. Pediatric findings are not transferred as adult evidence.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant adult evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 21,
+      "source": "Provider Availability",
+      "dest": "Access to Mental Health Care",
+      "existing_reasoning": "Provider supply improves access more than in 1970.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 32. Pediatric findings are not transferred as adult evidence.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant adult evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 22,
+      "source": "Cost of Evaluation",
+      "dest": "Diagnosis Status",
+      "existing_reasoning": "Cost remains a substantial diagnosis barrier.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 32. Pediatric findings are not transferred as adult evidence.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant adult evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 23,
+      "source": "Access to Mental Health Care",
+      "dest": "Diagnosis Status",
+      "existing_reasoning": "Access meaningfully improves diagnosis, though adult ADHD is still underrecognized.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 32. Pediatric findings are not transferred as adult evidence.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant adult evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 24,
+      "source": "Provider Referral Pathway",
+      "dest": "Diagnosis Status",
+      "existing_reasoning": "Referral from observed adult impairment becomes somewhat more plausible by 1990.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 32. Pediatric findings are not transferred as adult evidence.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant adult evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 25,
+      "source": "Race / Ethnicity",
+      "dest": "Institutional Bias",
+      "existing_reasoning": "Structural inequities influence institutions and healthcare pathways.",
+      "sign": "+",
+      "validation_status": "not_assessable",
+      "observation_from_validation": "Race / Ethnicity and Institutional Bias are not ordered variables with a universal positive sign.",
+      "recommended_action": "Specify a population contrast and measured institutional outcome.",
+      "evidence": []
+    },
+    {
+      "edge_id": 26,
+      "source": "Institutional Bias",
+      "dest": "Misdiagnosis Rate",
+      "existing_reasoning": "Bias increases diagnostic errors.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 32. Pediatric findings are not transferred as adult evidence.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant adult evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 27,
+      "source": "Institutional Bias",
+      "dest": "Diagnosis Status",
+      "existing_reasoning": "Bias suppresses fair diagnosis access.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 32. Pediatric findings are not transferred as adult evidence.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant adult evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 28,
+      "source": "Diagnostic Criteria Variability",
+      "dest": "Misdiagnosis Rate",
+      "existing_reasoning": "Inconsistent diagnostic framing increases misdiagnosis.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 32. Pediatric findings are not transferred as adult evidence.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant adult evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 29,
+      "source": "Comorbid Conditions",
+      "dest": "Misdiagnosis Rate",
+      "existing_reasoning": "Comorbidity obscures accurate diagnosis.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 32. Pediatric findings are not transferred as adult evidence.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant adult evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 30,
+      "source": "Misdiagnosis Rate",
+      "dest": "Diagnosis Status",
+      "existing_reasoning": "Misdiagnosis reduces correct diagnosis status.",
+      "sign": "-",
+      "validation_status": "not_assessable",
+      "observation_from_validation": "Diagnosis Status is ambiguous between any and accurate diagnosis, while Misdiagnosis Rate is aggregate.",
+      "recommended_action": "Define accurate diagnosis as the outcome.",
+      "evidence": []
+    },
+    {
+      "edge_id": 31,
+      "source": "Cultural Norms",
+      "dest": "Stigma",
+      "existing_reasoning": "1990 norms still reinforce stigma, though less than in 1970.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 32. Pediatric findings are not transferred as adult evidence.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant adult evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 32,
+      "source": "Stigma",
+      "dest": "Access to Mental Health Care",
+      "existing_reasoning": "Stigma suppresses help-seeking and care access.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 32. Pediatric findings are not transferred as adult evidence.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant adult evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 33,
+      "source": "Gender Bias",
+      "dest": "Diagnosis Status",
+      "existing_reasoning": "Gender bias shapes who is recognized.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 32. Pediatric findings are not transferred as adult evidence.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant adult evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 34,
+      "source": "Gender Bias",
+      "dest": "Misdiagnosis Rate",
+      "existing_reasoning": "Gender stereotypes increase diagnostic error.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 32. Pediatric findings are not transferred as adult evidence.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant adult evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 35,
+      "source": "Diagnosis Status",
+      "dest": "Medication Treatment",
+      "existing_reasoning": "By 1990, adult diagnosis can lead to medication, but adult ADHD recognition remains incomplete.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 32. Pediatric findings are not transferred as adult evidence.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant adult evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 36,
+      "source": "Diagnosis Status",
+      "dest": "Behavioral Therapy",
+      "existing_reasoning": "Adult diagnosis may connect individuals to behavioral or coping-based support.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 32. Pediatric findings are not transferred as adult evidence.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant adult evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 37,
+      "source": "Access to Mental Health Care",
+      "dest": "Treatment Access",
+      "existing_reasoning": "Mental healthcare access improves adult treatment availability.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 32. Pediatric findings are not transferred as adult evidence.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant adult evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 38,
+      "source": "Provider Availability",
+      "dest": "Treatment Access",
+      "existing_reasoning": "More providers improve adult treatment access.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 32. Pediatric findings are not transferred as adult evidence.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant adult evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 39,
+      "source": "Socioeconomic Status",
+      "dest": "Treatment Access",
+      "existing_reasoning": "Higher SES improves access to adult treatment pathways.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 32. Pediatric findings are not transferred as adult evidence.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant adult evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 40,
+      "source": "Provider Referral Pathway",
+      "dest": "Treatment Access",
+      "existing_reasoning": "Referral pathways increase the chance of treatment access.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 32. Pediatric findings are not transferred as adult evidence.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant adult evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 41,
+      "source": "Treatment Access",
+      "dest": "Medication Treatment",
+      "existing_reasoning": "Treatment access increases adult medication likelihood.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 32. Pediatric findings are not transferred as adult evidence.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant adult evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 42,
+      "source": "Treatment Access",
+      "dest": "Behavioral Therapy",
+      "existing_reasoning": "Treatment access increases availability of behavioral support.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 32. Pediatric findings are not transferred as adult evidence.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant adult evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 43,
+      "source": "Behavioral Therapy",
+      "dest": "Functional Impairment",
+      "existing_reasoning": "Behavioral therapy may reduce occupational and daily impairment.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 32. Pediatric findings are not transferred as adult evidence.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant adult evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 44,
+      "source": "Medication Treatment",
+      "dest": "Symptom Severity",
+      "existing_reasoning": "Medication can reduce adult symptom severity.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 32. Pediatric findings are not transferred as adult evidence.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant adult evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 45,
+      "source": "Medication Treatment",
+      "dest": "Functional Impairment",
+      "existing_reasoning": "Medication may reduce adult impairment.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 32. Pediatric findings are not transferred as adult evidence.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant adult evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 46,
+      "source": "Treatment Adherence",
+      "dest": "Medication Treatment",
+      "existing_reasoning": "Adherence strengthens medication effect.",
+      "sign": "+",
+      "validation_status": "not_assessable",
+      "observation_from_validation": "Adherence occurs after prescription; the explanation concerns effect while the destination is treatment itself.",
+      "recommended_action": "Model adherence as a modifier of exposure or benefit.",
+      "evidence": []
+    },
+    {
+      "edge_id": 47,
+      "source": "Stigma",
+      "dest": "Treatment Adherence",
+      "existing_reasoning": "Stigma reduces continued treatment engagement.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 32. Pediatric findings are not transferred as adult evidence.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant adult evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 48,
+      "source": "Medication Treatment",
+      "dest": "Treatment Side Effects",
+      "existing_reasoning": "Medication can introduce side effects.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 32. Pediatric findings are not transferred as adult evidence.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant adult evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 49,
+      "source": "Treatment Side Effects",
+      "dest": "Treatment Adherence",
+      "existing_reasoning": "Side effects can reduce adherence.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 32. Pediatric findings are not transferred as adult evidence.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant adult evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 50,
+      "source": "Treatment Side Effects",
+      "dest": "Quality of Life",
+      "existing_reasoning": "Side effects can slightly reduce quality of life.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 32. Pediatric findings are not transferred as adult evidence.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant adult evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 51,
+      "source": "Diagnosis Status",
+      "dest": "Functional Impairment",
+      "existing_reasoning": "Diagnosis can modestly reduce impairment through treatment or understanding.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 32. Pediatric findings are not transferred as adult evidence.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant adult evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 52,
+      "source": "Functional Impairment",
+      "dest": "Quality of Life",
+      "existing_reasoning": "Impairment lowers adult quality of life.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 32. Pediatric findings are not transferred as adult evidence.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant adult evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 53,
+      "source": "Diagnosis Status",
+      "dest": "Quality of Life",
+      "existing_reasoning": "Diagnosis can improve functioning and quality of life.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 32. Pediatric findings are not transferred as adult evidence.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant adult evidence.",
+      "evidence": []
+    }
+  ],
+  "references": [
+    {
+      "source_id": "CHILD_MPH",
+      "title": "Growth Hormone and Prolactin Response to Methylphenidate in Children with Attention Deficit Disorder",
+      "local_pdf": "full_texts/1-s2.0-002432059090131A-main.pdf",
+      "sha256": "81b14e6e30a44f917c61591de2f261366a0428b1ed8d0635b64f686ea83071f7"
+    },
+    {
+      "source_id": "ADOLESCENT_MPH",
+      "title": "Clinical Effects of a Controlled Trial of Methylphenidate on Adolescents with Attention Deficit Disorder",
+      "local_pdf": "full_texts/1-s2.0-S0890856709646748-main.pdf",
+      "sha256": "29de9770b7a0a2e95ab91cd3efdb921a0f460125905d3493a94bdf1847b7d3e7"
+    },
+    {
+      "source_id": "DEVELOPMENT",
+      "title": "Juvenile Delinquency and Attention Deficit Disorder: Boys' Developmental Trajectories from Age 3 to Age 15",
+      "local_pdf": "full_texts/Moffitt-JuvenileDelinquencyAttention-1990.pdf",
+      "sha256": "674eaaa26b940acba5d1127bbb8a651f10c22d38139aee3692e86c08ec45128e"
+    },
+    {
+      "source_id": "AGE_EFFECT",
+      "title": "Attention Deficit Disorder and the Mediating Effect of Age on Academic and Behavioral Variables",
+      "local_pdf": "full_texts/attention-deficit-disorder-and-the-mediating-effect-of-age.pdf",
+      "sha256": "99c112d394158b81057fcf2f85246fd22a5346c55115fade7d1e435ef980a940"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "graph": "1990_32 yo.py",
+  "edges_reviewed": 53,
+  "pdf_files_reviewed": 4,
+  "unique_documents_reviewed": 4,
+  "status_counts": {
+    "supported": 0,
+    "partially_supported": 0,
+    "contradicted": 0,
+    "mixed_evidence": 0,
+    "insufficient_evidence": 47,
+    "not_assessable": 6
+  },
+  "original_sha256": "855423bc140b4b3a1beaa9b02009d9029213bd7dad6b7c7b758d0d5de04fd947",
+  "original_unchanged": true,
+  "all_edge_reasons_and_signs_preserved": true,
+  "all_citations_in_supplied_corpus": true,
+  "xlsx_xml_valid": true,
+  "xlsx_json_rows_match": true,
+  "xlsx_data_rows": 53,
+  "compact_edge_fields": [
+    "edge_id",
+    "source",
+    "dest",
+    "existing_reasoning",
+    "sign",
+    "validation_status",
+    "observation_from_validation",
+    "recommended_action",
+    "evidence"
+  ]
+}

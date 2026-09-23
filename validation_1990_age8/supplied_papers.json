@@ -1,0 +1,26 @@
+[
+  {
+    "source_id": "CHILD_MPH",
+    "title": "Growth Hormone and Prolactin Response to Methylphenidate in Children with Attention Deficit Disorder",
+    "local_pdf": "full_texts/1-s2.0-002432059090131A-main.pdf",
+    "sha256": "81b14e6e30a44f917c61591de2f261366a0428b1ed8d0635b64f686ea83071f7"
+  },
+  {
+    "source_id": "ADOLESCENT_MPH",
+    "title": "Clinical Effects of a Controlled Trial of Methylphenidate on Adolescents with Attention Deficit Disorder",
+    "local_pdf": "full_texts/1-s2.0-S0890856709646748-main.pdf",
+    "sha256": "29de9770b7a0a2e95ab91cd3efdb921a0f460125905d3493a94bdf1847b7d3e7"
+  },
+  {
+    "source_id": "DEVELOPMENT",
+    "title": "Juvenile Delinquency and Attention Deficit Disorder: Boys' Developmental Trajectories from Age 3 to Age 15",
+    "local_pdf": "full_texts/Moffitt-JuvenileDelinquencyAttention-1990.pdf",
+    "sha256": "674eaaa26b940acba5d1127bbb8a651f10c22d38139aee3692e86c08ec45128e"
+  },
+  {
+    "source_id": "AGE_EFFECT",
+    "title": "Attention Deficit Disorder and the Mediating Effect of Age on Academic and Behavioral Variables",
+    "local_pdf": "full_texts/attention-deficit-disorder-and-the-mediating-effect-of-age.pdf",
+    "sha256": "99c112d394158b81057fcf2f85246fd22a5346c55115fade7d1e435ef980a940"
+  }
+]

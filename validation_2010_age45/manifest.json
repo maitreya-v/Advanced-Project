@@ -1,0 +1,147 @@
+{
+  "graph_file": "2010_45 yo.py",
+  "graph_sha256": "6d680124c21d27d78483a9f358e54b73208ba26bbc636618e0ea8a337acae6cf",
+  "graph_year": 2010,
+  "age": 45,
+  "edge_count": 61,
+  "pdf_file_count": 25,
+  "unique_document_count": 24,
+  "validation_updated_utc": "2026-09-23T03:27:47.572405+00:00",
+  "original_unchanged": true,
+  "strength_assessed": false,
+  "status_counts": {
+    "supported": 0,
+    "partially_supported": 16,
+    "contradicted": 0,
+    "mixed_evidence": 0,
+    "insufficient_evidence": 40,
+    "not_assessable": 5
+  },
+  "documents": [
+    {
+      "file": "full_texts/1-s2.0-S0006322310004828-main.pdf",
+      "sha256": "e69976a1b1dec8b384800029cc16bd7013917b9dad1730b87f2fbfe44f3f21cf",
+      "duplicate_of": null
+    },
+    {
+      "file": "full_texts/1-s2.0-S0028393209004941-main.pdf",
+      "sha256": "4d8b3bb1ba23381fd595e27563f8fd171e3901b05de6e36ec4b5a4e511c12fd9",
+      "duplicate_of": null
+    },
+    {
+      "file": "full_texts/1-s2.0-S0149763409001870-main.pdf",
+      "sha256": "ae65fc381339d7418732bf551adca7539fdf2d49a74e9f4bd56fdbb7245a0426",
+      "duplicate_of": null
+    },
+    {
+      "file": "full_texts/1-s2.0-S0165178109001759-main.pdf",
+      "sha256": "8a86e28553ebe6d9cc5fe0664b102a373a80e68b6b8039d46e75aee795159fcb",
+      "duplicate_of": null
+    },
+    {
+      "file": "full_texts/1-s2.0-S0890856710004934-main.pdf",
+      "sha256": "db40bca67890d801ac75142a10ba5811a426998616efd767ecfab9ca3328041e",
+      "duplicate_of": null
+    },
+    {
+      "file": "full_texts/1-s2.0-S0925492710000387.pdf",
+      "sha256": "8a8f5e07482f603c8350c157004cac919838d80640d7d55084923dd9f6ef88ae",
+      "duplicate_of": null
+    },
+    {
+      "file": "full_texts/1-s2.0-S1389945710002844-main.pdf",
+      "sha256": "4fd318f9a5fe909e3dd9e0a256b7d3a310dbadfd4df51c67db3d128cc51e1053",
+      "duplicate_of": null
+    },
+    {
+      "file": "full_texts/24.full.pdf",
+      "sha256": "2f291a8633c67d9ab07ef8d063b693cac3eed3693fd6acb640f14c1592287592",
+      "duplicate_of": null
+    },
+    {
+      "file": "full_texts/269.full.pdf",
+      "sha256": "b8deb34c018511436f2a23339ac8bb7407f8a5a221902a9116370bf00e7d288e",
+      "duplicate_of": null
+    },
+    {
+      "file": "full_texts/Assisted_diagnosis_of_Attention-Deficit_Hyperactivity_Disorder_through_EEG_bandpower_clustering_with_self-organizing_maps.pdf",
+      "sha256": "3950f837787a2504bd13195b86ec4bcf479caea9c00d1acd0e249366d5fd0e08",
+      "duplicate_of": null
+    },
+    {
+      "file": "full_texts/Clinical Practice Guidelines for Attention-Deficit Hyperactivity Disorder  A Review.pdf",
+      "sha256": "374fae5f2955571e83700c587f99dc4932d060fc2147b8b8bcc54118396d8f7a",
+      "duplicate_of": null
+    },
+    {
+      "file": "full_texts/Dev Disabil Res Revs - 2010 - Rowles - Review of pharmacotherapy options for the treatment of attention‐deficit.pdf",
+      "sha256": "5fa1b1fb746b7302e30f5642baacf4b9cdb4f117a6a6214ddd5c576a7fee73ab",
+      "duplicate_of": null
+    },
+    {
+      "file": "full_texts/Human Brain Mapping - 2010 - Konrad - Is the ADHD brain wired differently  A review on structural and functional.pdf",
+      "sha256": "4e90c13b236da37ad25110eaf83adcdc91481b8b7cf9b1b8bc7e1aca72ab2a51",
+      "duplicate_of": null
+    },
+    {
+      "file": "full_texts/a-review-of-attention-deficithyperactivity-disorder.pdf",
+      "sha256": "a0a500003ae00b1f1b4ec8cdbd5f8587c7d7ef7444c00aeb493f7bd8c9832cde",
+      "duplicate_of": null
+    },
+    {
+      "file": "full_texts/associations-between-sleep-and-inattentivehyperactive.pdf",
+      "sha256": "da4f98400a44761e6138bb06cbaa7c64ff3a1043ba967416293acf2aeb04958f",
+      "duplicate_of": null
+    },
+    {
+      "file": "full_texts/desantis-et-al-2010-speeding-through-the-frat-house-a-qualitative-exploration-of-nonmedical-adhd-stimulant-use-in.pdf",
+      "sha256": "bb88357d911573b8c2b94781fc4d0e0d703a447379c69538ef0416f69572a21b",
+      "duplicate_of": null
+    },
+    {
+      "file": "full_texts/download.pdf",
+      "sha256": "e2e24f88582c7ce17b04c9e6d1098eef847ded4dfbcf61a4bec380acd475265f",
+      "duplicate_of": null
+    },
+    {
+      "file": "full_texts/kwp427.pdf",
+      "sha256": "a6ae67a3fa113fb47d7cbdc174a20730475c1aa28dcbe2a638b776bcfa8d3537",
+      "duplicate_of": null
+    },
+    {
+      "file": "full_texts/nihms291682.pdf",
+      "sha256": "e325d368bc665fedb48b2132630fa7bf9031d945cf945b1558b2eba8fc334e6a",
+      "duplicate_of": null
+    },
+    {
+      "file": "full_texts/relationships-between-child-reported-activity-level-and-task.pdf",
+      "sha256": "f03d5b46f19fd3c7b42d25b5448ae84f92b803fa75fc5f1dc20374e37be631b7",
+      "duplicate_of": null
+    },
+    {
+      "file": "full_texts/s12402-010-0019-x.pdf",
+      "sha256": "83a2afbd6ff0bf01773bf20b4b5ade9e2bb9409f136d3d195feafc0eafcc34d3",
+      "duplicate_of": null
+    },
+    {
+      "file": "full_texts/s12402-010-0023-1.pdf",
+      "sha256": "b748fb2604030288326398107b23c305a1f027b490041d7629761d08db15870e",
+      "duplicate_of": null
+    },
+    {
+      "file": "full_texts/s12402-010-0036-9 (1).pdf",
+      "sha256": "2701abe792e119472062cd81d9fae5cfbf750a74cbb850ea66ee9a7823adc49d",
+      "duplicate_of": null
+    },
+    {
+      "file": "full_texts/s12402-010-0036-9.pdf",
+      "sha256": "2701abe792e119472062cd81d9fae5cfbf750a74cbb850ea66ee9a7823adc49d",
+      "duplicate_of": "s12402-010-0036-9 (1).pdf"
+    },
+    {
+      "file": "full_texts/zpe0101000e788.pdf",
+      "sha256": "8abfcad3a4657f0b8087b5c23771020748e5babac8bc2b2ec3fb868271f3c0b6",
+      "duplicate_of": null
+    }
+  ]
+}

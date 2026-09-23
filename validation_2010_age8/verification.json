@@ -1,0 +1,32 @@
+{
+  "graph": "2010_8 yo.py",
+  "edges_reviewed": 58,
+  "pdf_files_reviewed": 25,
+  "unique_documents_reviewed": 24,
+  "status_counts": {
+    "supported": 1,
+    "partially_supported": 11,
+    "contradicted": 0,
+    "mixed_evidence": 0,
+    "insufficient_evidence": 35,
+    "not_assessable": 11
+  },
+  "original_sha256": "606d746c1d204957a2a8e960e7dc074666ea8b411ea9e678888b65890fcd7eab",
+  "original_unchanged": true,
+  "all_edge_reasons_and_signs_preserved": true,
+  "all_citations_in_supplied_corpus": true,
+  "xlsx_xml_valid": true,
+  "xlsx_json_rows_match": true,
+  "xlsx_data_rows": 58,
+  "compact_edge_fields": [
+    "edge_id",
+    "source",
+    "dest",
+    "existing_reasoning",
+    "sign",
+    "validation_status",
+    "observation_from_validation",
+    "recommended_action",
+    "evidence"
+  ]
+}

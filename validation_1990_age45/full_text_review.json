@@ -1,0 +1,60 @@
+{
+  "summary": {
+    "graph_file": "1990_45 yo.py",
+    "graph_sha256": "053cc4bf4424d8af6e6c7455aa4a2d2a77e3be9bec60d0d7cbe9081873a87987",
+    "graph_year": 1990,
+    "age": 45,
+    "edge_count": 45,
+    "pdf_file_count": 4,
+    "unique_document_count": 4,
+    "validation_updated_utc": "2026-09-23T03:56:08.219733+00:00",
+    "original_unchanged": true,
+    "strength_assessed": false,
+    "status_counts": {
+      "supported": 0,
+      "partially_supported": 0,
+      "contradicted": 0,
+      "mixed_evidence": 0,
+      "insufficient_evidence": 41,
+      "not_assessable": 4
+    }
+  },
+  "excerpts": {
+    "age": {
+      "source_id": "AGE_EFFECT",
+      "exact_excerpt": "Results suggest that older children with ADD are significantly more likely than younger ADD children to experience academic and socioemotional difficulties.",
+      "location": "PDF page 1",
+      "relevance": "Cross-sectional ages 6-12; supports an age association within childhood, not a longitudinal causal slope."
+    },
+    "age_detail": {
+      "source_id": "AGE_EFFECT",
+      "exact_excerpt": "there are increasing negative repercussions associated with ADD in some areas of academic and behavioral functioning.",
+      "location": "PDF page 5",
+      "relevance": "Conclusion of the scanned age-effects study; generalizability was limited by exclusion of females."
+    },
+    "child_mph": {
+      "source_id": "CHILD_MPH",
+      "exact_excerpt": "Within-subjects analysis of covariance demonstrated significant correlations between the improvement in reaction time on the MFFT and i) GH response (AUCGH, r=.58, p<.001) and 2) prolactin response (AUCPro, r=.40, p<.05)",
+      "location": "PDF page 1",
+      "relevance": "Ages 7.0-12.4 in a double-blind drug-placebo design; the outcome is reaction time, narrower than overall symptom severity."
+    },
+    "adolescent_mph": {
+      "source_id": "ADOLESCENT_MPH",
+      "exact_excerpt": "Methylphenidate significantly reduced teachers' and parents' ratings of hyperactivity, inattention, and oppositionality.",
+      "location": "PDF page 1",
+      "relevance": "Controlled trial supports symptom reduction in ages 12-18, not specifically age eight or adults."
+    },
+    "side_effects": {
+      "source_id": "ADOLESCENT_MPH",
+      "exact_excerpt": "Stimulant treatment produced mild side effects and weight reduction.",
+      "location": "PDF page 1",
+      "relevance": "Direct treatment adverse-effect evidence in adolescents."
+    },
+    "development": {
+      "source_id": "DEVELOPMENT",
+      "exact_excerpt": "The ADD + delinquent boys consistently fared the worst on the assessments of family adversity, verbal intelligence, and reading. Their antisocial behavior began before school age, escalated at school entry, and persisted into adolescence.",
+      "location": "PDF page 2",
+      "relevance": "Longitudinal association in boys; does not isolate ADD or family adversity as a single causal exposure."
+    }
+  }
+}

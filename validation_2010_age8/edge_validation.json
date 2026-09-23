@@ -1,0 +1,967 @@
+{
+  "metadata": {
+    "graph_file": "2010_8 yo.py",
+    "graph_sha256": "606d746c1d204957a2a8e960e7dc074666ea8b411ea9e678888b65890fcd7eab",
+    "graph_year": 2010,
+    "age": 8,
+    "edge_count": 58,
+    "pdf_file_count": 25,
+    "unique_document_count": 24,
+    "validation_updated_utc": "2026-09-23T03:14:44.646937+00:00",
+    "original_unchanged": true,
+    "strength_assessed": false,
+    "status_counts": {
+      "supported": 1,
+      "partially_supported": 11,
+      "contradicted": 0,
+      "mixed_evidence": 0,
+      "insufficient_evidence": 35,
+      "not_assessable": 11
+    }
+  },
+  "status_definitions": {
+    "supported": "Evidence supports the stated direction, sign, and reasoning within the declared scope.",
+    "partially_supported": "Evidence supports only part of the claim, a narrower population or outcome, or an association rather than the full causal claim.",
+    "contradicted": "Relevant evidence opposes the claimed direction or sign within the declared scope.",
+    "mixed_evidence": "Relevant evidence both supports and opposes the same defined claim.",
+    "insufficient_evidence": "Available evidence does not establish or refute the causal claim.",
+    "not_assessable": "Undefined variable coding or endpoint makes the proposed direction or sign uninterpretable."
+  },
+  "methodology": {
+    "scope": "2010_8 yo.py, 58 edges, using only the 25 supplied PDF files in 2010 ADHD Papers (24 unique documents; one exact duplicate). Direction, sign, and written reasoning were reviewed; numeric strength was excluded.",
+    "age_scope": "Evidence specific to children near age eight was preferred. Pediatric evidence with broader age ranges was treated as partial when it did not report an age-eight estimate. Adult-only evidence was not transferred to this graph.",
+    "causal_standard": "Associations, reviews, and clinical recommendations were not automatically treated as proof of causal direction. Undefined categorical signs were marked not_assessable.",
+    "source_limits": "This is a validation against the supplied corpus, not a systematic review of all 2010 ADHD literature. A status of insufficient_evidence is not evidence that an edge is false.",
+    "strength": "The graph's numeric edge strengths were not validated.",
+    "duplicate": "s12402-010-0036-9 (1).pdf is byte-identical to s12402-010-0036-9.pdf and was counted once as a unique document."
+  },
+  "edges": [
+    {
+      "edge_id": 1,
+      "source": "Genetic Risk",
+      "dest": "ADHD",
+      "existing_reasoning": "Genetic liability contributes strongly to childhood ADHD.",
+      "sign": "+",
+      "validation_status": "partially_supported",
+      "observation_from_validation": "The corpus consistently describes ADHD as highly heritable. The large GWAS found no genome-wide significant individual variant, so the broad liability claim is supported more strongly than any specific genetic mechanism.",
+      "recommended_action": "Retain the positive edge, define Genetic Risk as aggregate inherited liability, and avoid implying a known single variant.",
+      "evidence": [
+        {
+          "source_id": "GWAS_META",
+          "exact_excerpt": "Although twin and family studies have shown attention-deficit/hyperactivity disorder (ADHD) to be highly heritable, genetic variants influencing the trait at a genome-wide significant level have yet to be identified.",
+          "location": "PDF page 1",
+          "relevance": "Supports substantial inherited liability while cautioning that this GWAS did not identify individual genome-wide significant variants."
+        }
+      ]
+    },
+    {
+      "edge_id": 2,
+      "source": "ADHD",
+      "dest": "Symptom Severity",
+      "existing_reasoning": "Underlying ADHD increases symptom severity.",
+      "sign": "+",
+      "validation_status": "not_assessable",
+      "observation_from_validation": "ADHD and Symptom Severity overlap unless ADHD is defined as a latent liability separate from the symptoms used to diagnose it.",
+      "recommended_action": "Define a latent disorder construct and a separate severity measure before assigning a signed causal edge.",
+      "evidence": []
+    },
+    {
+      "edge_id": 3,
+      "source": "ADHD",
+      "dest": "Symptom Type",
+      "existing_reasoning": "Underlying ADHD shapes visible behavioral presentation.",
+      "sign": "+",
+      "validation_status": "not_assessable",
+      "observation_from_validation": "Symptom Type is categorical and has no ordered scale, so a universal positive sign is undefined.",
+      "recommended_action": "Use category-specific outcomes or an unsigned relationship.",
+      "evidence": []
+    },
+    {
+      "edge_id": 4,
+      "source": "Age",
+      "dest": "Symptom Severity",
+      "existing_reasoning": "At age 8, symptoms are highly visible through behavior and school functioning.",
+      "sign": "+",
+      "validation_status": "not_assessable",
+      "observation_from_validation": "The supplied age analysis shows prevalence and symptom patterns varying with age, but 'age eight is highly visible' is not a positive slope from age to severity.",
+      "recommended_action": "Replace the plus sign with an age-specific function or explicit comparison.",
+      "evidence": [
+        {
+          "source_id": "AGE_SEX",
+          "exact_excerpt": "Overall prevalence of current DSM-IV-like ADHD was 9.2% with a male:female ratio of 2.28:1. The prevalence of DSM-IV-like ADHD was highest in children. Gender differences in DSM-IV-like ADHD subtype prevalences were highest in adolescents.",
+          "location": "PDF page 1",
+          "relevance": "Shows age and sex differences in prevalence and subtype patterns, not the graph's proposed social-norm mechanism."
+        }
+      ]
+    },
+    {
+      "edge_id": 5,
+      "source": "Gender",
+      "dest": "Symptom Type",
+      "existing_reasoning": "Gender norms influence which childhood behaviors are noticed.",
+      "sign": "+",
+      "validation_status": "not_assessable",
+      "observation_from_validation": "The evidence shows sex differences in subtype prevalence and possible underdiagnosis of females, but Symptom Type is unordered and the proposed gender-norm mechanism was not tested.",
+      "recommended_action": "Specify sex or gender, a presentation contrast, and the proposed detection mechanism.",
+      "evidence": [
+        {
+          "source_id": "AGE_SEX",
+          "exact_excerpt": "Overall prevalence of current DSM-IV-like ADHD was 9.2% with a male:female ratio of 2.28:1. The prevalence of DSM-IV-like ADHD was highest in children. Gender differences in DSM-IV-like ADHD subtype prevalences were highest in adolescents.",
+          "location": "PDF page 1",
+          "relevance": "Shows age and sex differences in prevalence and subtype patterns, not the graph's proposed social-norm mechanism."
+        },
+        {
+          "source_id": "AGE_SEX",
+          "exact_excerpt": "Lower male:female ratios than reported in some clinic-based studies suggest that females are under-diagnosed in the community.",
+          "location": "PDF page 1",
+          "relevance": "Supports unequal detection by sex but does not isolate teacher referral or institutional bias."
+        }
+      ]
+    },
+    {
+      "edge_id": 6,
+      "source": "Early Life Nutrition",
+      "dest": "Genetic Risk",
+      "existing_reasoning": "Early nutrition can modulate developmental vulnerability.",
+      "sign": "-",
+      "validation_status": "not_assessable",
+      "observation_from_validation": "Inherited liability is not an ordered outcome that better nutrition can simply reduce; no paper tests nutrition changing genetic risk.",
+      "recommended_action": "Model nutrition as a possible modifier of expression, not as a cause of inherited liability.",
+      "evidence": []
+    },
+    {
+      "edge_id": 7,
+      "source": "Nutrition Quality",
+      "dest": "Symptom Severity",
+      "existing_reasoning": "Poor nutrition may worsen behavioral regulation.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 2010 paper directly establishes this edge's direction, sign, and stated mechanism for children aged approximately eight. Related context is not treated as causal validation.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 8,
+      "source": "Sleep Quality",
+      "dest": "Symptom Severity",
+      "existing_reasoning": "Better sleep reduces dysregulation.",
+      "sign": "-",
+      "validation_status": "partially_supported",
+      "observation_from_validation": "At ages 7-8, shorter objectively measured sleep was associated with more inattentive/hyperactive behavior. The paper emphasizes that most evidence is correlational.",
+      "recommended_action": "Retain a qualified negative pathway from sleep duration or quality to behavior and label causal direction uncertain.",
+      "evidence": [
+        {
+          "source_id": "SLEEP_BEHAVIOR",
+          "exact_excerpt": "shorter sleep duration in 7- to 8 year olds (as measured by actigraphy) was associated with increased caregiver reports of inattentive/hyperactive problem behavior.",
+          "location": "PDF page 2",
+          "relevance": "Directly relevant to age eight, but observational wording supports association rather than a fully identified causal effect."
+        },
+        {
+          "source_id": "SLEEP_BEHAVIOR",
+          "exact_excerpt": "There is some evidence of a causal relationship between sleep disruption and difficulties regulating behavior, emotion, and attention. However, such associations have rarely been experimentally evaluated, because the majority of sleep studies have used correlational designs.",
+          "location": "PDF page 2",
+          "relevance": "The review itself states both the plausible direction and the causal limitation."
+        }
+      ]
+    },
+    {
+      "edge_id": 9,
+      "source": "Environmental Exposure",
+      "dest": "Symptom Severity",
+      "existing_reasoning": "Environmental stressors can worsen symptoms.",
+      "sign": "+",
+      "validation_status": "partially_supported",
+      "observation_from_validation": "A cohort study found prenatal organochlorine exposure associated with ADHD-like behaviors. This supports one specified exposure, not generic environmental stressors.",
+      "recommended_action": "Replace Environmental Exposure with the measured prenatal contaminant construct or keep the generic edge explicitly provisional.",
+      "evidence": [
+        {
+          "source_id": "ORGANOCHLORINE",
+          "exact_excerpt": "These results support an association between low-level prenatal organochlorine exposure and ADHD-like behaviors in childhood.",
+          "location": "PDF page 1",
+          "relevance": "Supports a specific prenatal exposure association, narrower than the graph's generic environmental-stressor claim."
+        }
+      ]
+    },
+    {
+      "edge_id": 10,
+      "source": "Symptom Severity",
+      "dest": "Functional Impairment",
+      "existing_reasoning": "More severe symptoms increase impairment.",
+      "sign": "+",
+      "validation_status": "partially_supported",
+      "observation_from_validation": "The corpus consistently links ADHD symptoms with functional impairment, but the supplied wording does not identify an independent causal severity gradient.",
+      "recommended_action": "Retain as a clinically coherent pathway while distinguishing definitional association from causal effect.",
+      "evidence": [
+        {
+          "source_id": "ODD_REVIEW",
+          "exact_excerpt": "Attention-deficit/hyperactivity disorder (ADHD) is a highly prevalent disorder with significant functional impairment.",
+          "location": "PDF page 1",
+          "relevance": "Links ADHD and impairment, but does not independently estimate symptom-severity-to-impairment causation."
+        }
+      ]
+    },
+    {
+      "edge_id": 11,
+      "source": "Symptom Type",
+      "dest": "Teacher Referral Rate",
+      "existing_reasoning": "Certain symptom patterns are likely to trigger teacher concern.",
+      "sign": "+",
+      "validation_status": "not_assessable",
+      "observation_from_validation": "Symptom Type has no ordered coding, and no supplied study estimates teacher referral rates by presentation.",
+      "recommended_action": "Define a specific presentation contrast and a referral denominator.",
+      "evidence": []
+    },
+    {
+      "edge_id": 12,
+      "source": "School Resources",
+      "dest": "Teacher Referral Rate",
+      "existing_reasoning": "By 2010, school resources strongly support detection.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 2010 paper directly establishes this edge's direction, sign, and stated mechanism for children aged approximately eight. Related context is not treated as causal validation.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 13,
+      "source": "Education System Pressure",
+      "dest": "Teacher Referral Rate",
+      "existing_reasoning": "Institutional pressure can increase school referral.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 2010 paper directly establishes this edge's direction, sign, and stated mechanism for children aged approximately eight. Related context is not treated as causal validation.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 14,
+      "source": "Teacher Referral Rate",
+      "dest": "Parental Awareness",
+      "existing_reasoning": "Teacher concern strongly raises parental awareness.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 2010 paper directly establishes this edge's direction, sign, and stated mechanism for children aged approximately eight. Related context is not treated as causal validation.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 15,
+      "source": "Parental Education",
+      "dest": "Parental Awareness",
+      "existing_reasoning": "More educated parents better recognize childhood issues.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 2010 paper directly establishes this edge's direction, sign, and stated mechanism for children aged approximately eight. Related context is not treated as causal validation.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 16,
+      "source": "Parental Awareness",
+      "dest": "Parental Advocacy",
+      "existing_reasoning": "Awareness increasingly leads to active parent advocacy.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 2010 paper directly establishes this edge's direction, sign, and stated mechanism for children aged approximately eight. Related context is not treated as causal validation.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 17,
+      "source": "Parental Advocacy",
+      "dest": "Diagnosis Status",
+      "existing_reasoning": "Advocacy strongly supports evaluation and diagnosis.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 2010 paper directly establishes this edge's direction, sign, and stated mechanism for children aged approximately eight. Related context is not treated as causal validation.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 18,
+      "source": "Family Stress",
+      "dest": "Symptom Severity",
+      "existing_reasoning": "Family stress can amplify visible symptoms.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 2010 paper directly establishes this edge's direction, sign, and stated mechanism for children aged approximately eight. Related context is not treated as causal validation.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 19,
+      "source": "Family Stress",
+      "dest": "Sleep Quality",
+      "existing_reasoning": "Stress disrupts sleep patterns.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 2010 paper directly establishes this edge's direction, sign, and stated mechanism for children aged approximately eight. Related context is not treated as causal validation.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 20,
+      "source": "Parental Advocacy",
+      "dest": "School Support Plan",
+      "existing_reasoning": "Advocating families are more likely to secure formal school supports.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 2010 paper directly establishes this edge's direction, sign, and stated mechanism for children aged approximately eight. Related context is not treated as causal validation.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 21,
+      "source": "Socioeconomic Status",
+      "dest": "Access to Mental Health Care",
+      "existing_reasoning": "Higher SES improves access to evaluation.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 2010 paper directly establishes this edge's direction, sign, and stated mechanism for children aged approximately eight. Related context is not treated as causal validation.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 22,
+      "source": "Financial Status",
+      "dest": "Access to Mental Health Care",
+      "existing_reasoning": "Affordability strongly controls access.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 2010 paper directly establishes this edge's direction, sign, and stated mechanism for children aged approximately eight. Related context is not treated as causal validation.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 23,
+      "source": "Neighborhood Quality",
+      "dest": "Access to Mental Health Care",
+      "existing_reasoning": "Better neighborhoods provide more resources.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 2010 paper directly establishes this edge's direction, sign, and stated mechanism for children aged approximately eight. Related context is not treated as causal validation.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 24,
+      "source": "Provider Availability",
+      "dest": "Access to Mental Health Care",
+      "existing_reasoning": "Provider supply strongly improves access.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 2010 paper directly establishes this edge's direction, sign, and stated mechanism for children aged approximately eight. Related context is not treated as causal validation.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 25,
+      "source": "Cost of Evaluation",
+      "dest": "Diagnosis Status",
+      "existing_reasoning": "Cost still remains a barrier.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 2010 paper directly establishes this edge's direction, sign, and stated mechanism for children aged approximately eight. Related context is not treated as causal validation.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 26,
+      "source": "Access to Mental Health Care",
+      "dest": "Diagnosis Status",
+      "existing_reasoning": "Access strongly improves diagnosis likelihood.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 2010 paper directly establishes this edge's direction, sign, and stated mechanism for children aged approximately eight. Related context is not treated as causal validation.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 27,
+      "source": "Access to Mental Health Care",
+      "dest": "Care Coordination",
+      "existing_reasoning": "Access increasingly leads to coordinated care in 2010.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 2010 paper directly establishes this edge's direction, sign, and stated mechanism for children aged approximately eight. Related context is not treated as causal validation.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 28,
+      "source": "Care Coordination",
+      "dest": "School Support Plan",
+      "existing_reasoning": "Care coordination improves school support planning.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 2010 paper directly establishes this edge's direction, sign, and stated mechanism for children aged approximately eight. Related context is not treated as causal validation.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 29,
+      "source": "Race / Ethnicity",
+      "dest": "Institutional Bias",
+      "existing_reasoning": "Structural inequities influence institutional behavior.",
+      "sign": "+",
+      "validation_status": "not_assessable",
+      "observation_from_validation": "Race / Ethnicity is categorical and Institutional Bias has no directional scale; a universal plus sign is uninterpretable.",
+      "recommended_action": "Specify the population contrast and measured institutional outcome.",
+      "evidence": []
+    },
+    {
+      "edge_id": 30,
+      "source": "Institutional Bias",
+      "dest": "Teacher Referral Rate",
+      "existing_reasoning": "Bias still affects referral patterns.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 2010 paper directly establishes this edge's direction, sign, and stated mechanism for children aged approximately eight. Related context is not treated as causal validation.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 31,
+      "source": "Institutional Bias",
+      "dest": "Diagnosis Status",
+      "existing_reasoning": "Bias suppresses equitable diagnosis access.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 2010 paper directly establishes this edge's direction, sign, and stated mechanism for children aged approximately eight. Related context is not treated as causal validation.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 32,
+      "source": "Misdiagnosis Rate",
+      "dest": "Diagnosis Status",
+      "existing_reasoning": "Misdiagnosis still reduces accurate identification.",
+      "sign": "-",
+      "validation_status": "not_assessable",
+      "observation_from_validation": "Diagnosis Status is ambiguous between any diagnosis and accurate diagnosis, while Misdiagnosis Rate is an aggregate rate.",
+      "recommended_action": "Define accurate diagnosis as the outcome before assigning a negative effect.",
+      "evidence": []
+    },
+    {
+      "edge_id": 33,
+      "source": "Cultural Norms",
+      "dest": "Stigma",
+      "existing_reasoning": "Stigma remains, but weaker than in 1990.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 2010 paper directly establishes this edge's direction, sign, and stated mechanism for children aged approximately eight. Related context is not treated as causal validation.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 34,
+      "source": "Stigma",
+      "dest": "Diagnosis Status",
+      "existing_reasoning": "Stigma still suppresses recognition somewhat.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 2010 paper directly establishes this edge's direction, sign, and stated mechanism for children aged approximately eight. Related context is not treated as causal validation.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 35,
+      "source": "Diagnosis Status",
+      "dest": "Medication Treatment",
+      "existing_reasoning": "By 2010, childhood diagnosis commonly leads to medication consideration.",
+      "sign": "+",
+      "validation_status": "partially_supported",
+      "observation_from_validation": "Guidelines connect structured diagnosis with consideration of medication, but recommendations do not establish how often diagnosis causes medication use.",
+      "recommended_action": "Retain as a care pathway and describe it as treatment consideration rather than inevitable treatment.",
+      "evidence": [
+        {
+          "source_id": "CPG_REVIEW",
+          "exact_excerpt": "The CPGs all recommend: a structured approach to diagnosis and treatment; attention to psychiatric comorbidity and other ADHD-related conflicts during an individual's lifespan; consideration of medication (usually stimulants) and psychosocial therapies; and follow-up and monitoring of patient response.",
+          "location": "PDF page 2",
+          "relevance": "Supports diagnosis-linked consideration of medication and psychosocial care, but does not estimate the graph's causal probabilities."
+        }
+      ]
+    },
+    {
+      "edge_id": 36,
+      "source": "Diagnosis Status",
+      "dest": "Behavioral Therapy",
+      "existing_reasoning": "Diagnosis connects children to behavioral and parent-focused interventions.",
+      "sign": "+",
+      "validation_status": "partially_supported",
+      "observation_from_validation": "Guidelines connect diagnosis and treatment with consideration of psychosocial therapies, without isolating diagnosis as the causal driver of uptake.",
+      "recommended_action": "Retain as a recommended care pathway with access and preference modifiers.",
+      "evidence": [
+        {
+          "source_id": "CPG_REVIEW",
+          "exact_excerpt": "The CPGs all recommend: a structured approach to diagnosis and treatment; attention to psychiatric comorbidity and other ADHD-related conflicts during an individual's lifespan; consideration of medication (usually stimulants) and psychosocial therapies; and follow-up and monitoring of patient response.",
+          "location": "PDF page 2",
+          "relevance": "Supports diagnosis-linked consideration of medication and psychosocial care, but does not estimate the graph's causal probabilities."
+        },
+        {
+          "source_id": "CPG_REVIEW",
+          "exact_excerpt": "consideration of medication (usually stimulants) and psychosocial therapies; and follow-up and monitoring of patient response.",
+          "location": "PDF page 2",
+          "relevance": "Supports psychosocial therapy as recommended care, not a quantified effect on every symptom or impairment outcome."
+        }
+      ]
+    },
+    {
+      "edge_id": 37,
+      "source": "Diagnosis Status",
+      "dest": "School Accommodations",
+      "existing_reasoning": "Diagnosis strongly supports formal school accommodations.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 2010 paper directly establishes this edge's direction, sign, and stated mechanism for children aged approximately eight. Related context is not treated as causal validation.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 38,
+      "source": "Access to Mental Health Care",
+      "dest": "Treatment Access",
+      "existing_reasoning": "Access to care strongly shapes treatment availability.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 2010 paper directly establishes this edge's direction, sign, and stated mechanism for children aged approximately eight. Related context is not treated as causal validation.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 39,
+      "source": "Provider Availability",
+      "dest": "Treatment Access",
+      "existing_reasoning": "Provider availability improves treatment access.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 2010 paper directly establishes this edge's direction, sign, and stated mechanism for children aged approximately eight. Related context is not treated as causal validation.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 40,
+      "source": "Socioeconomic Status",
+      "dest": "Treatment Access",
+      "existing_reasoning": "Higher SES improves treatment continuity.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 2010 paper directly establishes this edge's direction, sign, and stated mechanism for children aged approximately eight. Related context is not treated as causal validation.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 41,
+      "source": "Care Coordination",
+      "dest": "Treatment Access",
+      "existing_reasoning": "Coordinated care improves treatment access.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 2010 paper directly establishes this edge's direction, sign, and stated mechanism for children aged approximately eight. Related context is not treated as causal validation.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 42,
+      "source": "Treatment Access",
+      "dest": "Medication Treatment",
+      "existing_reasoning": "Treatment access makes medication treatment more likely.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 2010 paper directly establishes this edge's direction, sign, and stated mechanism for children aged approximately eight. Related context is not treated as causal validation.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 43,
+      "source": "Treatment Access",
+      "dest": "Behavioral Therapy",
+      "existing_reasoning": "Treatment access improves behavioral therapy availability.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 2010 paper directly establishes this edge's direction, sign, and stated mechanism for children aged approximately eight. Related context is not treated as causal validation.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 44,
+      "source": "Treatment Access",
+      "dest": "School Accommodations",
+      "existing_reasoning": "Treatment access supports school accommodation pathways.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 2010 paper directly establishes this edge's direction, sign, and stated mechanism for children aged approximately eight. Related context is not treated as causal validation.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 45,
+      "source": "Medication Treatment",
+      "dest": "Symptom Severity",
+      "existing_reasoning": "Medication can substantially reduce childhood symptom burden.",
+      "sign": "-",
+      "validation_status": "partially_supported",
+      "observation_from_validation": "The pharmacotherapy review describes controlled methylphenidate efficacy studies, including children, but the quoted evidence is from a narrower developmental-disorder population and does not justify the graph's generic magnitude.",
+      "recommended_action": "Retain the negative edge, identify medication and population, and remove the unvalidated strength claim.",
+      "evidence": [
+        {
+          "source_id": "PHARM_REVIEW",
+          "exact_excerpt": "The effectiveness of three doses of methylphenidate (0.15, 0.3, and 0.6 mg kg-1, administered twice daily) compared to placebo was investigated by Pearson et al. [2003] in a double-blind, placebo-controlled crossover study.",
+          "location": "PDF page 2",
+          "relevance": "Identifies controlled efficacy evidence in a narrower developmental-disorder population."
+        }
+      ]
+    },
+    {
+      "edge_id": 46,
+      "source": "Behavioral Therapy",
+      "dest": "Symptom Severity",
+      "existing_reasoning": "Behavioral therapy can reduce symptom expression and self-regulation issues.",
+      "sign": "-",
+      "validation_status": "partially_supported",
+      "observation_from_validation": "Clinical guidelines recommend psychosocial therapies, but the corpus excerpt does not establish a uniform reduction in core symptom severity across behavioral interventions.",
+      "recommended_action": "Specify the intervention and outcome; retain only as a qualified treatment hypothesis.",
+      "evidence": [
+        {
+          "source_id": "CPG_REVIEW",
+          "exact_excerpt": "consideration of medication (usually stimulants) and psychosocial therapies; and follow-up and monitoring of patient response.",
+          "location": "PDF page 2",
+          "relevance": "Supports psychosocial therapy as recommended care, not a quantified effect on every symptom or impairment outcome."
+        }
+      ]
+    },
+    {
+      "edge_id": 47,
+      "source": "Behavioral Therapy",
+      "dest": "Functional Impairment",
+      "existing_reasoning": "Behavioral therapy reduces practical impairment.",
+      "sign": "-",
+      "validation_status": "partially_supported",
+      "observation_from_validation": "Psychosocial treatment is recommended and functional outcomes are clinically central, but this corpus does not directly estimate a generic therapy-to-impairment effect.",
+      "recommended_action": "Specify the behavioral program and functional endpoint.",
+      "evidence": [
+        {
+          "source_id": "CPG_REVIEW",
+          "exact_excerpt": "consideration of medication (usually stimulants) and psychosocial therapies; and follow-up and monitoring of patient response.",
+          "location": "PDF page 2",
+          "relevance": "Supports psychosocial therapy as recommended care, not a quantified effect on every symptom or impairment outcome."
+        },
+        {
+          "source_id": "ODD_REVIEW",
+          "exact_excerpt": "Attention-deficit/hyperactivity disorder (ADHD) is a highly prevalent disorder with significant functional impairment.",
+          "location": "PDF page 1",
+          "relevance": "Links ADHD and impairment, but does not independently estimate symptom-severity-to-impairment causation."
+        }
+      ]
+    },
+    {
+      "edge_id": 48,
+      "source": "School Accommodations",
+      "dest": "Functional Impairment",
+      "existing_reasoning": "School accommodations reduce academic impairment.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 2010 paper directly establishes this edge's direction, sign, and stated mechanism for children aged approximately eight. Related context is not treated as causal validation.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 49,
+      "source": "Treatment Adherence",
+      "dest": "Medication Treatment",
+      "existing_reasoning": "Adherence increases real-world medication benefit.",
+      "sign": "+",
+      "validation_status": "not_assessable",
+      "observation_from_validation": "Adherence occurs after medication is prescribed; the explanation concerns benefit while the destination is Medication Treatment itself.",
+      "recommended_action": "Change the destination to treatment exposure or benefit and define adherence temporally.",
+      "evidence": []
+    },
+    {
+      "edge_id": 50,
+      "source": "Treatment Adherence",
+      "dest": "Behavioral Therapy",
+      "existing_reasoning": "Participation improves behavioral therapy effect.",
+      "sign": "+",
+      "validation_status": "not_assessable",
+      "observation_from_validation": "Participation may modify therapy dose or outcome, but the current destination is receipt of Behavioral Therapy rather than its effect.",
+      "recommended_action": "Model participation as a modifier of therapy exposure or outcome.",
+      "evidence": []
+    },
+    {
+      "edge_id": 51,
+      "source": "Stigma",
+      "dest": "Treatment Adherence",
+      "existing_reasoning": "Stigma can reduce consistent treatment participation.",
+      "sign": "-",
+      "validation_status": "partially_supported",
+      "observation_from_validation": "The stigma paper describes stigma as a barrier to help-seeking. That is related to participation but does not directly measure adherence among treated eight-year-olds.",
+      "recommended_action": "Retain only as a broader engagement barrier unless direct adherence evidence is added.",
+      "evidence": [
+        {
+          "source_id": "STIGMA_SCALE",
+          "exact_excerpt": "The Surgeon General identifies stigma surrounding mental illness and its treatment as a potent barrier to help-seeking.",
+          "location": "PDF page 1",
+          "relevance": "Supports a general help-seeking barrier; it does not isolate ADHD diagnosis or treatment adherence in eight-year-olds."
+        }
+      ]
+    },
+    {
+      "edge_id": 52,
+      "source": "Medication Treatment",
+      "dest": "Treatment Side Effects",
+      "existing_reasoning": "Medication side effects remain relevant to tolerability.",
+      "sign": "+",
+      "validation_status": "supported",
+      "observation_from_validation": "The pharmacotherapy review reports treatment-emergent adverse effects with methylphenidate, directly supporting medication preceding side effects.",
+      "recommended_action": "Retain the positive edge; specify that adverse-effect type and risk depend on drug, dose, and population.",
+      "evidence": [
+        {
+          "source_id": "PHARM_REVIEW",
+          "exact_excerpt": "significant adverse events such as severe social withdrawal, increased crying, drowsiness, and irritability were noted, especially at the higher dose (0.6 mg kg-1) of methylphenidate",
+          "location": "PDF page 2",
+          "relevance": "Directly supports medication causing adverse effects, although the population and drug are specific."
+        }
+      ]
+    },
+    {
+      "edge_id": 53,
+      "source": "Treatment Side Effects",
+      "dest": "Treatment Adherence",
+      "existing_reasoning": "Side effects can reduce adherence.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The corpus documents adverse effects but the reviewed passages do not estimate whether those effects cause treatment discontinuation or lower adherence.",
+      "recommended_action": "Add direct discontinuation or adherence evidence before retaining this causal explanation.",
+      "evidence": [
+        {
+          "source_id": "PHARM_REVIEW",
+          "exact_excerpt": "significant adverse events such as severe social withdrawal, increased crying, drowsiness, and irritability were noted, especially at the higher dose (0.6 mg kg-1) of methylphenidate",
+          "location": "PDF page 2",
+          "relevance": "Directly supports medication causing adverse effects, although the population and drug are specific."
+        }
+      ]
+    },
+    {
+      "edge_id": 54,
+      "source": "Treatment Side Effects",
+      "dest": "Quality of Life",
+      "existing_reasoning": "Side effects can slightly reduce quality of life.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "Adverse effects are documented, but their separate causal effect on quality of life is not estimated in the supplied studies.",
+      "recommended_action": "Obtain a study measuring adverse effects and quality of life longitudinally.",
+      "evidence": [
+        {
+          "source_id": "PHARM_REVIEW",
+          "exact_excerpt": "significant adverse events such as severe social withdrawal, increased crying, drowsiness, and irritability were noted, especially at the higher dose (0.6 mg kg-1) of methylphenidate",
+          "location": "PDF page 2",
+          "relevance": "Directly supports medication causing adverse effects, although the population and drug are specific."
+        }
+      ]
+    },
+    {
+      "edge_id": 55,
+      "source": "Diagnosis Status",
+      "dest": "School Support Plan",
+      "existing_reasoning": "Diagnosis can lead to formalized school support structures.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 2010 paper directly establishes this edge's direction, sign, and stated mechanism for children aged approximately eight. Related context is not treated as causal validation.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 56,
+      "source": "Overdiagnosis Pressure",
+      "dest": "Diagnosis Status",
+      "existing_reasoning": "Overdiagnosis discourse is visible by 2010.",
+      "sign": "+",
+      "validation_status": "not_assessable",
+      "observation_from_validation": "Overdiagnosis Pressure is not operationalized, and visible public discourse does not itself define a positive causal exposure.",
+      "recommended_action": "Define a measurable pressure construct and distinguish diagnostic scrutiny from actual overdiagnosis.",
+      "evidence": []
+    },
+    {
+      "edge_id": 57,
+      "source": "Functional Impairment",
+      "dest": "Quality of Life",
+      "existing_reasoning": "Impairment reduces quality of life.",
+      "sign": "-",
+      "validation_status": "partially_supported",
+      "observation_from_validation": "The corpus links ADHD-related psychosocial maladaptation and impairment with poorer quality of life, but does not isolate functional impairment as a causal exposure.",
+      "recommended_action": "Retain as a qualified clinical pathway and seek longitudinal evidence separating symptoms, impairment, and quality of life.",
+      "evidence": [
+        {
+          "source_id": "ECZEMA_SLEEP",
+          "exact_excerpt": "ADHD affects more than 5% of all children and causes severe psychosocial maladaptation, impairment of quality of life and economic burden on social services.",
+          "location": "PDF page 1",
+          "relevance": "Supports an adverse relation between ADHD-related impairment and quality of life, but not the graph's separate diagnosis benefit."
+        }
+      ]
+    },
+    {
+      "edge_id": 58,
+      "source": "Diagnosis Status",
+      "dest": "Quality of Life",
+      "existing_reasoning": "Diagnosis can strongly improve support and quality of life.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The evidence documents impaired quality of life among diagnosed or treated children; it does not show that receiving a diagnosis itself improves quality of life.",
+      "recommended_action": "Model mediated pathways through effective support and treatment rather than a direct diagnosis benefit.",
+      "evidence": [
+        {
+          "source_id": "ECZEMA_SLEEP",
+          "exact_excerpt": "ADHD affects more than 5% of all children and causes severe psychosocial maladaptation, impairment of quality of life and economic burden on social services.",
+          "location": "PDF page 1",
+          "relevance": "Supports an adverse relation between ADHD-related impairment and quality of life, but not the graph's separate diagnosis benefit."
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "source_id": "TEMPORAL_DISCOUNT",
+      "title": "What We Can and Cannot Conclude About the Relationship Between Steep Temporal Reward Discounting and Hyperactivity-Impulsivity Symptoms in ADHD",
+      "local_pdf": "full_texts/1-s2.0-S0006322310004828-main.pdf",
+      "sha256": "e69976a1b1dec8b384800029cc16bd7013917b9dad1730b87f2fbfe44f3f21cf"
+    },
+    {
+      "source_id": "FAMILY_GENDER",
+      "title": "Action monitoring in children with or without a family history of ADHD: Effects of gender on an endophenotype parameter",
+      "local_pdf": "full_texts/1-s2.0-S0028393209004941-main.pdf",
+      "sha256": "4d8b3bb1ba23381fd595e27563f8fd171e3901b05de6e36ec4b5a4e511c12fd9"
+    },
+    {
+      "source_id": "REINFORCEMENT",
+      "title": "Identifying the neurobiology of altered reinforcement sensitivity in ADHD: A review and research agenda",
+      "local_pdf": "full_texts/1-s2.0-S0149763409001870-main.pdf",
+      "sha256": "ae65fc381339d7418732bf551adca7539fdf2d49a74e9f4bd56fdbb7245a0426"
+    },
+    {
+      "source_id": "STIGMA_SCALE",
+      "title": "Assessment of stigma associated with ADHD: Psychometric evaluation of the ADHD Stigma Questionnaire",
+      "local_pdf": "full_texts/1-s2.0-S0165178109001759-main.pdf",
+      "sha256": "8a86e28553ebe6d9cc5fe0664b102a373a80e68b6b8039d46e75aee795159fcb"
+    },
+    {
+      "source_id": "GWAS_META",
+      "title": "Meta-analysis of genome-wide association studies of ADHD",
+      "local_pdf": "full_texts/1-s2.0-S0890856710004934-main.pdf",
+      "sha256": "db40bca67890d801ac75142a10ba5811a426998616efd767ecfab9ca3328041e"
+    },
+    {
+      "source_id": "CAUDATE_MRI",
+      "title": "Quantitative MR analysis of caudate abnormalities in pediatric ADHD: Proposal for a diagnostic test",
+      "local_pdf": "full_texts/1-s2.0-S0925492710000387.pdf",
+      "sha256": "8a8f5e07482f603c8350c157004cac919838d80640d7d55084923dd9f6ef88ae"
+    },
+    {
+      "source_id": "SLEEP_PSG",
+      "title": "Sleep disorders and daytime sleepiness in children with ADHD",
+      "local_pdf": "full_texts/1-s2.0-S1389945710002844-main.pdf",
+      "sha256": "4fd318f9a5fe909e3dd9e0a256b7d3a310dbadfd4df51c67db3d128cc51e1053"
+    },
+    {
+      "source_id": "NICE_GUIDELINE",
+      "title": "NICE guideline: attention deficit hyperactivity disorder",
+      "local_pdf": "full_texts/24.full.pdf",
+      "sha256": "2f291a8633c67d9ab07ef8d063b693cac3eed3693fd6acb640f14c1592287592"
+    },
+    {
+      "source_id": "ECZEMA_SLEEP",
+      "title": "Association of ADHD and atopic eczema modified by sleep disturbance",
+      "local_pdf": "full_texts/269.full.pdf",
+      "sha256": "b8deb34c018511436f2a23339ac8bb7407f8a5a221902a9116370bf00e7d288e"
+    },
+    {
+      "source_id": "EEG_DIAGNOSIS",
+      "title": "Assisted diagnosis of ADHD through EEG bandpower clustering with self-organizing maps",
+      "local_pdf": "full_texts/Assisted_diagnosis_of_Attention-Deficit_Hyperactivity_Disorder_through_EEG_bandpower_clustering_with_self-organizing_maps.pdf",
+      "sha256": "3950f837787a2504bd13195b86ec4bcf479caea9c00d1acd0e249366d5fd0e08"
+    },
+    {
+      "source_id": "CPG_REVIEW",
+      "title": "Clinical Practice Guidelines for ADHD: A Review",
+      "local_pdf": "full_texts/Clinical Practice Guidelines for Attention-Deficit Hyperactivity Disorder  A Review.pdf",
+      "sha256": "374fae5f2955571e83700c587f99dc4932d060fc2147b8b8bcc54118396d8f7a"
+    },
+    {
+      "source_id": "PHARM_REVIEW",
+      "title": "Review of pharmacotherapy options for ADHD and ADHD-like symptoms in children and adolescents with developmental disorders",
+      "local_pdf": "full_texts/Dev Disabil Res Revs - 2010 - Rowles - Review of pharmacotherapy options for the treatment of attention‐deficit.pdf",
+      "sha256": "5fa1b1fb746b7302e30f5642baacf4b9cdb4f117a6a6214ddd5c576a7fee73ab"
+    },
+    {
+      "source_id": "CONNECTIVITY",
+      "title": "Is the ADHD brain wired differently? A review on structural and functional connectivity",
+      "local_pdf": "full_texts/Human Brain Mapping - 2010 - Konrad - Is the ADHD brain wired differently  A review on structural and functional.pdf",
+      "sha256": "4e90c13b236da37ad25110eaf83adcdc91481b8b7cf9b1b8bc7e1aca72ab2a51"
+    },
+    {
+      "source_id": "ODD_REVIEW",
+      "title": "A Review of ADHD Complicated by Symptoms of Oppositional Defiant Disorder or Conduct Disorder",
+      "local_pdf": "full_texts/a-review-of-attention-deficithyperactivity-disorder.pdf",
+      "sha256": "a0a500003ae00b1f1b4ec8cdbd5f8587c7d7ef7444c00aeb493f7bd8c9832cde"
+    },
+    {
+      "source_id": "SLEEP_BEHAVIOR",
+      "title": "Associations Between Sleep and Inattentive/Hyperactive Problem Behavior Among Foster and Community Children",
+      "local_pdf": "full_texts/associations-between-sleep-and-inattentivehyperactive.pdf",
+      "sha256": "da4f98400a44761e6138bb06cbaa7c64ff3a1043ba967416293acf2aeb04958f"
+    },
+    {
+      "source_id": "NONMEDICAL_STIMULANT",
+      "title": "Speeding through the Frat House: A Qualitative Exploration of Nonmedical ADHD Stimulant Use",
+      "local_pdf": "full_texts/desantis-et-al-2010-speeding-through-the-frat-house-a-qualitative-exploration-of-nonmedical-adhd-stimulant-use-in.pdf",
+      "sha256": "bb88357d911573b8c2b94781fc4d0e0d703a447379c69538ef0416f69572a21b"
+    },
+    {
+      "source_id": "EXECUTIVE_FUNCTION",
+      "title": "Executive dysfunction screening and intellectual coefficient measurement in children with ADHD",
+      "local_pdf": "full_texts/download.pdf",
+      "sha256": "e2e24f88582c7ce17b04c9e6d1098eef847ded4dfbcf61a4bec380acd475265f"
+    },
+    {
+      "source_id": "ORGANOCHLORINE",
+      "title": "Prenatal Organochlorine Exposure and Behaviors Associated With ADHD in School-Aged Children",
+      "local_pdf": "full_texts/kwp427.pdf",
+      "sha256": "a6ae67a3fa113fb47d7cbdc174a20730475c1aa28dcbe2a638b776bcfa8d3537"
+    },
+    {
+      "source_id": "AGE_SEX",
+      "title": "Sex and age differences in ADHD symptoms and diagnoses",
+      "local_pdf": "full_texts/nihms291682.pdf",
+      "sha256": "e325d368bc665fedb48b2132630fa7bf9031d945cf945b1558b2eba8fc334e6a"
+    },
+    {
+      "source_id": "CHILD_SELF_REPORT",
+      "title": "Relationships Between Child-Reported Activity Level and Task Orientation and Parental ADHD Symptom Ratings",
+      "local_pdf": "full_texts/relationships-between-child-reported-activity-level-and-task.pdf",
+      "sha256": "f03d5b46f19fd3c7b42d25b5448ae84f92b803fa75fc5f1dc20374e37be631b7"
+    },
+    {
+      "source_id": "ANIMAL_MODELS",
+      "title": "Animal models of ADHD: a critical review",
+      "local_pdf": "full_texts/s12402-010-0019-x.pdf",
+      "sha256": "83a2afbd6ff0bf01773bf20b4b5ade9e2bb9409f136d3d195feafc0eafcc34d3"
+    },
+    {
+      "source_id": "ADULT_CBT",
+      "title": "Therapy-relevant factors in adult ADHD from a cognitive behavioural perspective",
+      "local_pdf": "full_texts/s12402-010-0023-1.pdf",
+      "sha256": "b748fb2604030288326398107b23c305a1f027b490041d7629761d08db15870e"
+    },
+    {
+      "source_id": "QUALITY_OF_LIFE",
+      "title": "The quality of life of children and adolescents with ADHD undergoing outpatient psychiatric treatment",
+      "local_pdf": "full_texts/s12402-010-0036-9.pdf",
+      "sha256": "2701abe792e119472062cd81d9fae5cfbf750a74cbb850ea66ee9a7823adc49d"
+    },
+    {
+      "source_id": "GENDER_READING",
+      "title": "Gender, ADHD, and Reading Disability in a Population-Based Birth Cohort",
+      "local_pdf": "full_texts/zpe0101000e788.pdf",
+      "sha256": "8abfcad3a4657f0b8087b5c23771020748e5babac8bc2b2ec3fb868271f3c0b6"
+    }
+  ]
+}

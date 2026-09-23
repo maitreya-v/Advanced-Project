@@ -1,0 +1,96 @@
+{
+  "summary": {
+    "graph_file": "2010_32 yo.py",
+    "graph_sha256": "5440775001bfeadede2ed155d1fd808dcbb5e449f30ef1ab55f8b4bee71c9184",
+    "graph_year": 2010,
+    "age": 32,
+    "edge_count": 62,
+    "pdf_file_count": 25,
+    "unique_document_count": 24,
+    "validation_updated_utc": "2026-09-23T03:24:54.260716+00:00",
+    "original_unchanged": true,
+    "strength_assessed": false,
+    "status_counts": {
+      "supported": 0,
+      "partially_supported": 17,
+      "contradicted": 0,
+      "mixed_evidence": 0,
+      "insufficient_evidence": 38,
+      "not_assessable": 7
+    }
+  },
+  "excerpts": {
+    "genetic": {
+      "source_id": "GWAS_META",
+      "exact_excerpt": "Although twin and family studies have shown attention-deficit/hyperactivity disorder (ADHD) to be highly heritable, genetic variants influencing the trait at a genome-wide significant level have yet to be identified.",
+      "location": "PDF page 1",
+      "relevance": "Supports inherited liability while cautioning that individual genome-wide significant variants were not identified."
+    },
+    "adult_course": {
+      "source_id": "ADULT_CBT",
+      "exact_excerpt": "Adult individuals with attention-deficit hyperactivity disorder (ADHD) have been suffering from this neurobiological and highly heritable disorder chronically since childhood.",
+      "location": "PDF page 1",
+      "relevance": "Supports persistence into adulthood and inherited liability, but does not provide an age-32-specific estimate."
+    },
+    "adult_outcomes": {
+      "source_id": "ADULT_CBT",
+      "exact_excerpt": "Resulting from their longstanding neuropsychological impairments, such as attentional problems, emotional instability, and disinhibition, they are familiar to a multiplicity of negative life outcomes and under-achievement.",
+      "location": "PDF page 1",
+      "relevance": "Supports a relationship between longstanding impairment and adverse adult outcomes without isolating a single causal edge."
+    },
+    "adult_comorbidity": {
+      "source_id": "ADULT_CBT",
+      "exact_excerpt": "Furthermore, a large part of this population suffers from psychiatric comorbidity.",
+      "location": "PDF page 1",
+      "relevance": "Supports adult co-occurrence, not ADHD causing each comorbid condition."
+    },
+    "age_persistence": {
+      "source_id": "AGE_SEX",
+      "exact_excerpt": "Although they may no longer meet the full symptom criterion, young adults with a history of lifetime DSM-IV-like ADHD maintain higher levels of ADHD symptoms compared to the general population.",
+      "location": "PDF page 1",
+      "relevance": "Supports symptom persistence with attenuation in young adults, but not a causal estimate at age 32."
+    },
+    "female_detection": {
+      "source_id": "AGE_SEX",
+      "exact_excerpt": "Lower male:female ratios than reported in some clinic-based studies suggest that females are under-diagnosed in the community.",
+      "location": "PDF page 1",
+      "relevance": "Supports unequal detection by sex, but does not directly measure gender bias causing diagnostic errors at age 32."
+    },
+    "adult_medication": {
+      "source_id": "CPG_REVIEW",
+      "exact_excerpt": "The NICE guidelines recommend medication treatment as the first-line intervention for children, adolescents, and young adults with severe ADHD as well as for adults with ADHD",
+      "location": "PDF page 5",
+      "relevance": "Supports medication as recommended adult treatment, not the probability that diagnosis or access causes its use."
+    },
+    "adult_package": {
+      "source_id": "CPG_REVIEW",
+      "exact_excerpt": "Medication treatment should always form part of a comprehensive care package that includes psychological and educational components.",
+      "location": "PDF page 5",
+      "relevance": "Supports combined adult care pathways without identifying access effects."
+    },
+    "adult_cbt": {
+      "source_id": "ADULT_CBT",
+      "exact_excerpt": "At the end of the therapy programme, the CBT group showed significantly greater improvement on measures of knowledge about ADHD, self-efficacy, and self-esteem than the control group.",
+      "location": "PDF page 5",
+      "relevance": "Supports specific CBT-related adult outcomes; it does not directly establish a generic symptom-severity effect."
+    },
+    "adult_cbt_guideline": {
+      "source_id": "CPG_REVIEW",
+      "exact_excerpt": "for adults, cognitive behavioral therapies.",
+      "location": "PDF page 8",
+      "relevance": "Identifies CBT among recommended adult psychosocial interventions."
+    },
+    "stigma": {
+      "source_id": "STIGMA_SCALE",
+      "exact_excerpt": "The Surgeon General identifies stigma surrounding mental illness and its treatment as a potent barrier to help-seeking.",
+      "location": "PDF page 1",
+      "relevance": "Supports a general help-seeking barrier; the study sample itself was adolescents aged 11-19."
+    },
+    "side_effects": {
+      "source_id": "NONMEDICAL_STIMULANT",
+      "exact_excerpt": "common side effects of the drugs include headache, stomach upset, nausea, loss of appetite, trouble sleeping, weight loss, dry mouth, nervousness, mood swings, dizziness, fast heart beat, and heart palpitations",
+      "location": "PDF page 2",
+      "relevance": "Supports stimulant adverse effects, although the paper studies nonmedical college use rather than prescribed treatment at age 32."
+    }
+  }
+}

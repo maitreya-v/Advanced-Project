@@ -1,0 +1,1032 @@
+{
+  "metadata": {
+    "graph_file": "2010_32 yo.py",
+    "graph_sha256": "5440775001bfeadede2ed155d1fd808dcbb5e449f30ef1ab55f8b4bee71c9184",
+    "graph_year": 2010,
+    "age": 32,
+    "edge_count": 62,
+    "pdf_file_count": 25,
+    "unique_document_count": 24,
+    "validation_updated_utc": "2026-09-23T03:24:54.260716+00:00",
+    "original_unchanged": true,
+    "strength_assessed": false,
+    "status_counts": {
+      "supported": 0,
+      "partially_supported": 17,
+      "contradicted": 0,
+      "mixed_evidence": 0,
+      "insufficient_evidence": 38,
+      "not_assessable": 7
+    }
+  },
+  "status_definitions": {
+    "supported": "Evidence supports the stated direction, sign, and reasoning within the declared scope.",
+    "partially_supported": "Evidence supports only part of the claim, a narrower population or outcome, or an association rather than the full causal claim.",
+    "contradicted": "Relevant evidence opposes the claimed direction or sign within the declared scope.",
+    "mixed_evidence": "Relevant evidence both supports and opposes the same defined claim.",
+    "insufficient_evidence": "Available evidence does not establish or refute the causal claim.",
+    "not_assessable": "Undefined variable coding or endpoint makes the proposed direction or sign uninterpretable."
+  },
+  "methodology": {
+    "scope": "2010_32 yo.py, 62 edges, using only the 25 supplied PDF files in 2010 ADHD Papers (24 unique documents; one exact duplicate). Direction, sign, and written reasoning were reviewed; numeric strength was excluded.",
+    "age_scope": "Adult evidence was required for adult claims. Young-adult and general-adult evidence was treated as partial when it did not report an age-32 estimate. Pediatric findings were not transferred as adult causal proof.",
+    "causal_standard": "Associations, reviews, and clinical recommendations were not automatically treated as proof of causal direction. Undefined categorical signs were marked not_assessable.",
+    "source_limits": "This is a validation against the supplied corpus, not a systematic review of all 2010 ADHD literature. A status of insufficient_evidence is not evidence that an edge is false.",
+    "strength": "The graph's numeric edge strengths were not validated.",
+    "duplicate": "s12402-010-0036-9 (1).pdf is byte-identical to s12402-010-0036-9.pdf and was counted once as a unique document."
+  },
+  "edges": [
+    {
+      "edge_id": 1,
+      "source": "Genetic Risk",
+      "dest": "ADHD",
+      "existing_reasoning": "Genetic vulnerability contributes to adult ADHD.",
+      "sign": "+",
+      "validation_status": "partially_supported",
+      "observation_from_validation": "Adult and genetic reviews describe ADHD as highly heritable and persistent from childhood. The graph's generic liability claim is better supported than any specific variant mechanism.",
+      "recommended_action": "Retain the positive edge, define Genetic Risk as aggregate inherited liability, and avoid implying a known single variant.",
+      "evidence": [
+        {
+          "source_id": "GWAS_META",
+          "exact_excerpt": "Although twin and family studies have shown attention-deficit/hyperactivity disorder (ADHD) to be highly heritable, genetic variants influencing the trait at a genome-wide significant level have yet to be identified.",
+          "location": "PDF page 1",
+          "relevance": "Supports inherited liability while cautioning that individual genome-wide significant variants were not identified."
+        },
+        {
+          "source_id": "ADULT_CBT",
+          "exact_excerpt": "Adult individuals with attention-deficit hyperactivity disorder (ADHD) have been suffering from this neurobiological and highly heritable disorder chronically since childhood.",
+          "location": "PDF page 1",
+          "relevance": "Supports persistence into adulthood and inherited liability, but does not provide an age-32-specific estimate."
+        }
+      ]
+    },
+    {
+      "edge_id": 2,
+      "source": "ADHD",
+      "dest": "Symptom Severity",
+      "existing_reasoning": "Underlying ADHD increases adult symptom severity.",
+      "sign": "+",
+      "validation_status": "not_assessable",
+      "observation_from_validation": "ADHD and Symptom Severity overlap unless ADHD is defined as a latent liability separate from diagnostic symptoms.",
+      "recommended_action": "Define separate latent and measured constructs before assigning a signed causal edge.",
+      "evidence": []
+    },
+    {
+      "edge_id": 3,
+      "source": "ADHD",
+      "dest": "Symptom Type",
+      "existing_reasoning": "ADHD shapes inattentive, hyperactive, or combined presentation.",
+      "sign": "+",
+      "validation_status": "not_assessable",
+      "observation_from_validation": "Symptom Type is categorical and has no ordered scale, so a universal positive sign is undefined.",
+      "recommended_action": "Use subtype-specific outcomes or an unsigned relationship.",
+      "evidence": []
+    },
+    {
+      "edge_id": 4,
+      "source": "ADHD",
+      "dest": "Comorbid Conditions",
+      "existing_reasoning": "ADHD commonly co-occurs with anxiety, mood, or learning difficulties.",
+      "sign": "+",
+      "validation_status": "partially_supported",
+      "observation_from_validation": "The adult review reports frequent psychiatric comorbidity, but co-occurrence does not establish ADHD as its cause.",
+      "recommended_action": "Represent this as an association or specify a comorbid outcome and causal mechanism.",
+      "evidence": [
+        {
+          "source_id": "ADULT_CBT",
+          "exact_excerpt": "Furthermore, a large part of this population suffers from psychiatric comorbidity.",
+          "location": "PDF page 1",
+          "relevance": "Supports adult co-occurrence, not ADHD causing each comorbid condition."
+        }
+      ]
+    },
+    {
+      "edge_id": 5,
+      "source": "Age",
+      "dest": "Symptom Severity",
+      "existing_reasoning": "At age 32, overt hyperactivity may reduce but inattentive impairment can remain.",
+      "sign": "-",
+      "validation_status": "partially_supported",
+      "observation_from_validation": "Young adults with lifetime ADHD may fall below full symptom criteria while retaining elevated symptoms. This is consistent with attenuation and persistence, but does not estimate an age-to-severity effect at 32.",
+      "recommended_action": "Retain a qualified developmental trajectory rather than a fixed negative linear edge.",
+      "evidence": [
+        {
+          "source_id": "AGE_SEX",
+          "exact_excerpt": "Although they may no longer meet the full symptom criterion, young adults with a history of lifetime DSM-IV-like ADHD maintain higher levels of ADHD symptoms compared to the general population.",
+          "location": "PDF page 1",
+          "relevance": "Supports symptom persistence with attenuation in young adults, but not a causal estimate at age 32."
+        }
+      ]
+    },
+    {
+      "edge_id": 6,
+      "source": "Gender",
+      "dest": "Symptom Type",
+      "existing_reasoning": "Gender norms still influence which adult symptoms are noticed.",
+      "sign": "+",
+      "validation_status": "not_assessable",
+      "observation_from_validation": "Sex differences and possible female underdiagnosis are documented, but Symptom Type is unordered and the proposed social-norm mechanism was not tested.",
+      "recommended_action": "Specify sex or gender and a particular symptom-presentation contrast.",
+      "evidence": [
+        {
+          "source_id": "AGE_SEX",
+          "exact_excerpt": "Lower male:female ratios than reported in some clinic-based studies suggest that females are under-diagnosed in the community.",
+          "location": "PDF page 1",
+          "relevance": "Supports unequal detection by sex, but does not directly measure gender bias causing diagnostic errors at age 32."
+        }
+      ]
+    },
+    {
+      "edge_id": 7,
+      "source": "Nutrition Quality",
+      "dest": "Symptom Severity",
+      "existing_reasoning": "Better nutrition may support regulation and attention.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied paper directly establishes this edge's direction, sign, and stated mechanism for adults around age 32. Pediatric or adjacent evidence is not transferred as adult causal proof.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add adult evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 8,
+      "source": "Sleep Quality",
+      "dest": "Symptom Severity",
+      "existing_reasoning": "Better sleep improves attention and regulation.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied paper directly establishes this edge's direction, sign, and stated mechanism for adults around age 32. Pediatric or adjacent evidence is not transferred as adult causal proof.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add adult evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 9,
+      "source": "Physical Activity",
+      "dest": "Symptom Severity",
+      "existing_reasoning": "Physical activity may reduce symptom burden.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied paper directly establishes this edge's direction, sign, and stated mechanism for adults around age 32. Pediatric or adjacent evidence is not transferred as adult causal proof.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add adult evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 10,
+      "source": "Screen Time",
+      "dest": "Symptom Severity",
+      "existing_reasoning": "Screen exposure is increasingly discussed as affecting attention.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied paper directly establishes this edge's direction, sign, and stated mechanism for adults around age 32. Pediatric or adjacent evidence is not transferred as adult causal proof.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add adult evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 11,
+      "source": "Chronic Stress Load",
+      "dest": "Symptom Severity",
+      "existing_reasoning": "Stress amplifies adult symptoms.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied paper directly establishes this edge's direction, sign, and stated mechanism for adults around age 32. Pediatric or adjacent evidence is not transferred as adult causal proof.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add adult evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 12,
+      "source": "Symptom Severity",
+      "dest": "Functional Impairment",
+      "existing_reasoning": "Higher symptoms increase occupational and daily impairment.",
+      "sign": "+",
+      "validation_status": "partially_supported",
+      "observation_from_validation": "The adult review links longstanding neuropsychological impairments with negative life outcomes and underachievement, but does not isolate a symptom-severity gradient.",
+      "recommended_action": "Retain as a clinically coherent pathway while labeling the causal magnitude unvalidated.",
+      "evidence": [
+        {
+          "source_id": "ADULT_CBT",
+          "exact_excerpt": "Resulting from their longstanding neuropsychological impairments, such as attentional problems, emotional instability, and disinhibition, they are familiar to a multiplicity of negative life outcomes and under-achievement.",
+          "location": "PDF page 1",
+          "relevance": "Supports a relationship between longstanding impairment and adverse adult outcomes without isolating a single causal edge."
+        }
+      ]
+    },
+    {
+      "edge_id": 13,
+      "source": "Comorbid Conditions",
+      "dest": "Functional Impairment",
+      "existing_reasoning": "Comorbid burden increases impairment.",
+      "sign": "+",
+      "validation_status": "partially_supported",
+      "observation_from_validation": "Psychiatric comorbidity is common in adult ADHD, but the supplied evidence does not separately estimate its effect on functional impairment.",
+      "recommended_action": "Specify the comorbid condition and functional endpoint.",
+      "evidence": [
+        {
+          "source_id": "ADULT_CBT",
+          "exact_excerpt": "Furthermore, a large part of this population suffers from psychiatric comorbidity.",
+          "location": "PDF page 1",
+          "relevance": "Supports adult co-occurrence, not ADHD causing each comorbid condition."
+        },
+        {
+          "source_id": "ADULT_CBT",
+          "exact_excerpt": "Resulting from their longstanding neuropsychological impairments, such as attentional problems, emotional instability, and disinhibition, they are familiar to a multiplicity of negative life outcomes and under-achievement.",
+          "location": "PDF page 1",
+          "relevance": "Supports a relationship between longstanding impairment and adverse adult outcomes without isolating a single causal edge."
+        }
+      ]
+    },
+    {
+      "edge_id": 14,
+      "source": "Functional Impairment",
+      "dest": "Employment Instability",
+      "existing_reasoning": "Impairment can destabilize employment.",
+      "sign": "+",
+      "validation_status": "partially_supported",
+      "observation_from_validation": "The adult review describes underachievement and negative life outcomes, consistent with employment difficulty, but does not directly estimate employment instability caused by impairment.",
+      "recommended_action": "Retain only as a qualified occupational pathway and add employment-specific longitudinal evidence.",
+      "evidence": [
+        {
+          "source_id": "ADULT_CBT",
+          "exact_excerpt": "Resulting from their longstanding neuropsychological impairments, such as attentional problems, emotional instability, and disinhibition, they are familiar to a multiplicity of negative life outcomes and under-achievement.",
+          "location": "PDF page 1",
+          "relevance": "Supports a relationship between longstanding impairment and adverse adult outcomes without isolating a single causal edge."
+        }
+      ]
+    },
+    {
+      "edge_id": 15,
+      "source": "Performance Pressure",
+      "dest": "Functional Impairment",
+      "existing_reasoning": "Performance demands make executive dysfunction more visible.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied paper directly establishes this edge's direction, sign, and stated mechanism for adults around age 32. Pediatric or adjacent evidence is not transferred as adult causal proof.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add adult evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 16,
+      "source": "Workplace Accommodations",
+      "dest": "Functional Impairment",
+      "existing_reasoning": "Workplace accommodations can reduce impairment.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied paper directly establishes this edge's direction, sign, and stated mechanism for adults around age 32. Pediatric or adjacent evidence is not transferred as adult causal proof.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add adult evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 17,
+      "source": "Family Stress",
+      "dest": "Symptom Severity",
+      "existing_reasoning": "Adult family stress can intensify symptoms.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied paper directly establishes this edge's direction, sign, and stated mechanism for adults around age 32. Pediatric or adjacent evidence is not transferred as adult causal proof.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add adult evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 18,
+      "source": "Household Stability",
+      "dest": "Family Stress",
+      "existing_reasoning": "Stable household context reduces family stress.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied paper directly establishes this edge's direction, sign, and stated mechanism for adults around age 32. Pediatric or adjacent evidence is not transferred as adult causal proof.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add adult evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 19,
+      "source": "Socioeconomic Status",
+      "dest": "Access to Mental Health Care",
+      "existing_reasoning": "Higher SES improves access to specialists and services.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied paper directly establishes this edge's direction, sign, and stated mechanism for adults around age 32. Pediatric or adjacent evidence is not transferred as adult causal proof.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add adult evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 20,
+      "source": "Financial Status",
+      "dest": "Access to Mental Health Care",
+      "existing_reasoning": "Income controls access to healthcare.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied paper directly establishes this edge's direction, sign, and stated mechanism for adults around age 32. Pediatric or adjacent evidence is not transferred as adult causal proof.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add adult evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 21,
+      "source": "Neighborhood Quality",
+      "dest": "Access to Mental Health Care",
+      "existing_reasoning": "Better neighborhood conditions improve resource access.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied paper directly establishes this edge's direction, sign, and stated mechanism for adults around age 32. Pediatric or adjacent evidence is not transferred as adult causal proof.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add adult evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 22,
+      "source": "Provider Availability",
+      "dest": "Access to Mental Health Care",
+      "existing_reasoning": "More providers improve assessment chances.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied paper directly establishes this edge's direction, sign, and stated mechanism for adults around age 32. Pediatric or adjacent evidence is not transferred as adult causal proof.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add adult evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 23,
+      "source": "Cost of Evaluation",
+      "dest": "Diagnosis Status",
+      "existing_reasoning": "Evaluation cost remains a diagnosis barrier.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied paper directly establishes this edge's direction, sign, and stated mechanism for adults around age 32. Pediatric or adjacent evidence is not transferred as adult causal proof.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add adult evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 24,
+      "source": "Access to Mental Health Care",
+      "dest": "Diagnosis Status",
+      "existing_reasoning": "Access to care strongly affects adult diagnosis.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied paper directly establishes this edge's direction, sign, and stated mechanism for adults around age 32. Pediatric or adjacent evidence is not transferred as adult causal proof.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add adult evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 25,
+      "source": "Online Health Information",
+      "dest": "Self-Diagnosis Behavior",
+      "existing_reasoning": "Online information increases adult self-recognition.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied paper directly establishes this edge's direction, sign, and stated mechanism for adults around age 32. Pediatric or adjacent evidence is not transferred as adult causal proof.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add adult evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 26,
+      "source": "Online Health Information",
+      "dest": "Diagnosis Status",
+      "existing_reasoning": "Online information can push adults toward evaluation.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied paper directly establishes this edge's direction, sign, and stated mechanism for adults around age 32. Pediatric or adjacent evidence is not transferred as adult causal proof.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add adult evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 27,
+      "source": "Self-Diagnosis Behavior",
+      "dest": "Diagnosis Status",
+      "existing_reasoning": "Self-recognition increases help-seeking.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied paper directly establishes this edge's direction, sign, and stated mechanism for adults around age 32. Pediatric or adjacent evidence is not transferred as adult causal proof.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add adult evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 28,
+      "source": "Care Coordination",
+      "dest": "Functional Impairment",
+      "existing_reasoning": "Coordinated care can reduce impairment.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied paper directly establishes this edge's direction, sign, and stated mechanism for adults around age 32. Pediatric or adjacent evidence is not transferred as adult causal proof.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add adult evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 29,
+      "source": "Race / Ethnicity",
+      "dest": "Institutional Bias",
+      "existing_reasoning": "Structural inequities influence institutions and healthcare pathways.",
+      "sign": "+",
+      "validation_status": "not_assessable",
+      "observation_from_validation": "Race / Ethnicity is categorical and Institutional Bias lacks an ordered scale, making a universal plus sign uninterpretable.",
+      "recommended_action": "Specify a population contrast and measured institutional outcome.",
+      "evidence": []
+    },
+    {
+      "edge_id": 30,
+      "source": "Institutional Bias",
+      "dest": "Misdiagnosis Rate",
+      "existing_reasoning": "Bias increases diagnostic errors.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied paper directly establishes this edge's direction, sign, and stated mechanism for adults around age 32. Pediatric or adjacent evidence is not transferred as adult causal proof.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add adult evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 31,
+      "source": "Institutional Bias",
+      "dest": "Diagnosis Status",
+      "existing_reasoning": "Bias suppresses equitable diagnosis access.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied paper directly establishes this edge's direction, sign, and stated mechanism for adults around age 32. Pediatric or adjacent evidence is not transferred as adult causal proof.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add adult evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 32,
+      "source": "Diagnostic Criteria Variability",
+      "dest": "Misdiagnosis Rate",
+      "existing_reasoning": "Different interpretations increase misdiagnosis risk.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied paper directly establishes this edge's direction, sign, and stated mechanism for adults around age 32. Pediatric or adjacent evidence is not transferred as adult causal proof.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add adult evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 33,
+      "source": "Comorbid Conditions",
+      "dest": "Misdiagnosis Rate",
+      "existing_reasoning": "Comorbidity can obscure accurate ADHD diagnosis.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied paper directly establishes this edge's direction, sign, and stated mechanism for adults around age 32. Pediatric or adjacent evidence is not transferred as adult causal proof.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add adult evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 34,
+      "source": "Misdiagnosis Rate",
+      "dest": "Diagnosis Status",
+      "existing_reasoning": "Misdiagnosis reduces accurate diagnosis.",
+      "sign": "-",
+      "validation_status": "not_assessable",
+      "observation_from_validation": "Diagnosis Status is ambiguous between any diagnosis and accurate diagnosis, while Misdiagnosis Rate is an aggregate measure.",
+      "recommended_action": "Define accurate diagnosis as the outcome before assigning a negative effect.",
+      "evidence": []
+    },
+    {
+      "edge_id": 35,
+      "source": "Cultural Norms",
+      "dest": "Stigma",
+      "existing_reasoning": "Cultural norms shape stigma.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied paper directly establishes this edge's direction, sign, and stated mechanism for adults around age 32. Pediatric or adjacent evidence is not transferred as adult causal proof.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add adult evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 36,
+      "source": "Stigma",
+      "dest": "Diagnosis Status",
+      "existing_reasoning": "Stigma reduces willingness to seek diagnosis.",
+      "sign": "-",
+      "validation_status": "partially_supported",
+      "observation_from_validation": "Stigma is described as a barrier to help-seeking, which can precede diagnosis, but the cited statement is general and the study sample was adolescent.",
+      "recommended_action": "Retain as a provisional help-seeking pathway and add direct adult ADHD diagnostic evidence.",
+      "evidence": [
+        {
+          "source_id": "STIGMA_SCALE",
+          "exact_excerpt": "The Surgeon General identifies stigma surrounding mental illness and its treatment as a potent barrier to help-seeking.",
+          "location": "PDF page 1",
+          "relevance": "Supports a general help-seeking barrier; the study sample itself was adolescents aged 11-19."
+        }
+      ]
+    },
+    {
+      "edge_id": 37,
+      "source": "Stigma",
+      "dest": "Access to Mental Health Care",
+      "existing_reasoning": "Stigma suppresses help-seeking.",
+      "sign": "-",
+      "validation_status": "partially_supported",
+      "observation_from_validation": "The corpus explicitly describes stigma as a barrier to help-seeking, but does not measure adult mental-health-care access at age 32.",
+      "recommended_action": "Retain a qualified negative pathway limited to help-seeking.",
+      "evidence": [
+        {
+          "source_id": "STIGMA_SCALE",
+          "exact_excerpt": "The Surgeon General identifies stigma surrounding mental illness and its treatment as a potent barrier to help-seeking.",
+          "location": "PDF page 1",
+          "relevance": "Supports a general help-seeking barrier; the study sample itself was adolescents aged 11-19."
+        }
+      ]
+    },
+    {
+      "edge_id": 38,
+      "source": "Gender Bias",
+      "dest": "Misdiagnosis Rate",
+      "existing_reasoning": "Gender stereotypes still increase diagnostic error.",
+      "sign": "+",
+      "validation_status": "partially_supported",
+      "observation_from_validation": "Community data suggest females are underdiagnosed. This is compatible with gender-linked diagnostic error but does not identify stereotypes as the cause or quantify misdiagnosis.",
+      "recommended_action": "Replace the broad bias edge with a measured sex difference in detection or add mechanism-specific evidence.",
+      "evidence": [
+        {
+          "source_id": "AGE_SEX",
+          "exact_excerpt": "Lower male:female ratios than reported in some clinic-based studies suggest that females are under-diagnosed in the community.",
+          "location": "PDF page 1",
+          "relevance": "Supports unequal detection by sex, but does not directly measure gender bias causing diagnostic errors at age 32."
+        }
+      ]
+    },
+    {
+      "edge_id": 39,
+      "source": "Diagnosis Status",
+      "dest": "Medication Treatment",
+      "existing_reasoning": "By 2010, adult diagnosis often leads to medication consideration.",
+      "sign": "+",
+      "validation_status": "partially_supported",
+      "observation_from_validation": "Clinical guidelines recommend medication for adults with ADHD. A recommendation supports diagnosis-linked consideration, not an estimate that diagnosis causes medication uptake.",
+      "recommended_action": "Retain as a recommended care pathway, with clinical eligibility and preference modifiers.",
+      "evidence": [
+        {
+          "source_id": "CPG_REVIEW",
+          "exact_excerpt": "The NICE guidelines recommend medication treatment as the first-line intervention for children, adolescents, and young adults with severe ADHD as well as for adults with ADHD",
+          "location": "PDF page 5",
+          "relevance": "Supports medication as recommended adult treatment, not the probability that diagnosis or access causes its use."
+        }
+      ]
+    },
+    {
+      "edge_id": 40,
+      "source": "Diagnosis Status",
+      "dest": "Behavioral Therapy",
+      "existing_reasoning": "Diagnosis can connect adults to behavioral or skills-based support.",
+      "sign": "+",
+      "validation_status": "partially_supported",
+      "observation_from_validation": "Adult CBT is recommended and adult outcome studies are discussed, supporting a diagnosis-linked therapy pathway without estimating uptake caused by diagnosis.",
+      "recommended_action": "Retain as a care pathway and specify CBT or skills-based treatment.",
+      "evidence": [
+        {
+          "source_id": "CPG_REVIEW",
+          "exact_excerpt": "for adults, cognitive behavioral therapies.",
+          "location": "PDF page 8",
+          "relevance": "Identifies CBT among recommended adult psychosocial interventions."
+        },
+        {
+          "source_id": "ADULT_CBT",
+          "exact_excerpt": "At the end of the therapy programme, the CBT group showed significantly greater improvement on measures of knowledge about ADHD, self-efficacy, and self-esteem than the control group.",
+          "location": "PDF page 5",
+          "relevance": "Supports specific CBT-related adult outcomes; it does not directly establish a generic symptom-severity effect."
+        }
+      ]
+    },
+    {
+      "edge_id": 41,
+      "source": "Access to Mental Health Care",
+      "dest": "Treatment Access",
+      "existing_reasoning": "Mental healthcare access strongly improves treatment availability.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied paper directly establishes this edge's direction, sign, and stated mechanism for adults around age 32. Pediatric or adjacent evidence is not transferred as adult causal proof.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add adult evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 42,
+      "source": "Provider Availability",
+      "dest": "Treatment Access",
+      "existing_reasoning": "Provider supply improves adult treatment access.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied paper directly establishes this edge's direction, sign, and stated mechanism for adults around age 32. Pediatric or adjacent evidence is not transferred as adult causal proof.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add adult evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 43,
+      "source": "Socioeconomic Status",
+      "dest": "Treatment Access",
+      "existing_reasoning": "Higher SES improves treatment access and continuity.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied paper directly establishes this edge's direction, sign, and stated mechanism for adults around age 32. Pediatric or adjacent evidence is not transferred as adult causal proof.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add adult evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 44,
+      "source": "Online Health Information",
+      "dest": "Treatment Adherence",
+      "existing_reasoning": "Online information can improve understanding and follow-up.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied paper directly establishes this edge's direction, sign, and stated mechanism for adults around age 32. Pediatric or adjacent evidence is not transferred as adult causal proof.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add adult evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 45,
+      "source": "Self-Diagnosis Behavior",
+      "dest": "Treatment Access",
+      "existing_reasoning": "Self-recognition increases treatment seeking.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied paper directly establishes this edge's direction, sign, and stated mechanism for adults around age 32. Pediatric or adjacent evidence is not transferred as adult causal proof.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add adult evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 46,
+      "source": "Care Coordination",
+      "dest": "Treatment Access",
+      "existing_reasoning": "Coordinated care improves treatment continuity.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied paper directly establishes this edge's direction, sign, and stated mechanism for adults around age 32. Pediatric or adjacent evidence is not transferred as adult causal proof.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add adult evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 47,
+      "source": "Treatment Access",
+      "dest": "Medication Treatment",
+      "existing_reasoning": "Treatment access makes medication more likely.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied paper directly establishes this edge's direction, sign, and stated mechanism for adults around age 32. Pediatric or adjacent evidence is not transferred as adult causal proof.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add adult evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 48,
+      "source": "Treatment Access",
+      "dest": "Behavioral Therapy",
+      "existing_reasoning": "Treatment access supports behavioral therapy.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied paper directly establishes this edge's direction, sign, and stated mechanism for adults around age 32. Pediatric or adjacent evidence is not transferred as adult causal proof.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add adult evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 49,
+      "source": "Treatment Access",
+      "dest": "Workplace Support",
+      "existing_reasoning": "Treatment access can support workplace accommodations.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied paper directly establishes this edge's direction, sign, and stated mechanism for adults around age 32. Pediatric or adjacent evidence is not transferred as adult causal proof.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add adult evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 50,
+      "source": "Medication Treatment",
+      "dest": "Symptom Severity",
+      "existing_reasoning": "Medication can reduce adult symptom severity.",
+      "sign": "-",
+      "validation_status": "partially_supported",
+      "observation_from_validation": "Medication is recommended for adults, but the supplied passages do not provide an age-32-specific controlled symptom effect.",
+      "recommended_action": "Retain the negative edge with a medication-specific adult efficacy source before assigning magnitude.",
+      "evidence": [
+        {
+          "source_id": "CPG_REVIEW",
+          "exact_excerpt": "The NICE guidelines recommend medication treatment as the first-line intervention for children, adolescents, and young adults with severe ADHD as well as for adults with ADHD",
+          "location": "PDF page 5",
+          "relevance": "Supports medication as recommended adult treatment, not the probability that diagnosis or access causes its use."
+        }
+      ]
+    },
+    {
+      "edge_id": 51,
+      "source": "Behavioral Therapy",
+      "dest": "Symptom Severity",
+      "existing_reasoning": "Behavioral therapy can modestly reduce symptom expression.",
+      "sign": "-",
+      "validation_status": "partially_supported",
+      "observation_from_validation": "Adult CBT produced improvements in knowledge, self-efficacy, and self-esteem, but that does not directly establish reduced core symptom severity.",
+      "recommended_action": "Specify the CBT program and measured outcome rather than a generic symptom reduction.",
+      "evidence": [
+        {
+          "source_id": "ADULT_CBT",
+          "exact_excerpt": "At the end of the therapy programme, the CBT group showed significantly greater improvement on measures of knowledge about ADHD, self-efficacy, and self-esteem than the control group.",
+          "location": "PDF page 5",
+          "relevance": "Supports specific CBT-related adult outcomes; it does not directly establish a generic symptom-severity effect."
+        }
+      ]
+    },
+    {
+      "edge_id": 52,
+      "source": "Behavioral Therapy",
+      "dest": "Functional Impairment",
+      "existing_reasoning": "Behavioral therapy reduces practical impairment.",
+      "sign": "-",
+      "validation_status": "partially_supported",
+      "observation_from_validation": "Adult CBT evidence reports improvements in therapy-relevant functioning, but the supplied excerpt does not establish a general reduction in functional impairment.",
+      "recommended_action": "Specify the functional endpoint and intervention.",
+      "evidence": [
+        {
+          "source_id": "ADULT_CBT",
+          "exact_excerpt": "At the end of the therapy programme, the CBT group showed significantly greater improvement on measures of knowledge about ADHD, self-efficacy, and self-esteem than the control group.",
+          "location": "PDF page 5",
+          "relevance": "Supports specific CBT-related adult outcomes; it does not directly establish a generic symptom-severity effect."
+        },
+        {
+          "source_id": "ADULT_CBT",
+          "exact_excerpt": "Resulting from their longstanding neuropsychological impairments, such as attentional problems, emotional instability, and disinhibition, they are familiar to a multiplicity of negative life outcomes and under-achievement.",
+          "location": "PDF page 1",
+          "relevance": "Supports a relationship between longstanding impairment and adverse adult outcomes without isolating a single causal edge."
+        }
+      ]
+    },
+    {
+      "edge_id": 53,
+      "source": "Workplace Support",
+      "dest": "Functional Impairment",
+      "existing_reasoning": "Workplace support reduces occupational impairment.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied paper directly establishes this edge's direction, sign, and stated mechanism for adults around age 32. Pediatric or adjacent evidence is not transferred as adult causal proof.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add adult evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 54,
+      "source": "Treatment Adherence",
+      "dest": "Medication Treatment",
+      "existing_reasoning": "Adherence increases medication benefit.",
+      "sign": "+",
+      "validation_status": "not_assessable",
+      "observation_from_validation": "Adherence occurs after medication is prescribed; the explanation concerns benefit while the destination is Medication Treatment itself.",
+      "recommended_action": "Change the destination to treatment exposure or benefit and define adherence temporally.",
+      "evidence": []
+    },
+    {
+      "edge_id": 55,
+      "source": "Treatment Adherence",
+      "dest": "Behavioral Therapy",
+      "existing_reasoning": "Participation improves behavioral therapy effect.",
+      "sign": "+",
+      "validation_status": "not_assessable",
+      "observation_from_validation": "Participation may modify therapy dose or outcomes, but the destination is receipt of Behavioral Therapy rather than its effect.",
+      "recommended_action": "Model participation as a modifier of therapy exposure or outcome.",
+      "evidence": []
+    },
+    {
+      "edge_id": 56,
+      "source": "Stigma",
+      "dest": "Treatment Adherence",
+      "existing_reasoning": "Stigma can reduce treatment continuation.",
+      "sign": "-",
+      "validation_status": "partially_supported",
+      "observation_from_validation": "Stigma is described as a help-seeking barrier, but treatment continuation among adults was not measured.",
+      "recommended_action": "Retain only as a broader engagement hypothesis unless adult adherence evidence is added.",
+      "evidence": [
+        {
+          "source_id": "STIGMA_SCALE",
+          "exact_excerpt": "The Surgeon General identifies stigma surrounding mental illness and its treatment as a potent barrier to help-seeking.",
+          "location": "PDF page 1",
+          "relevance": "Supports a general help-seeking barrier; the study sample itself was adolescents aged 11-19."
+        }
+      ]
+    },
+    {
+      "edge_id": 57,
+      "source": "Medication Treatment",
+      "dest": "Treatment Side Effects",
+      "existing_reasoning": "Medication side effects affect tolerability.",
+      "sign": "+",
+      "validation_status": "partially_supported",
+      "observation_from_validation": "Stimulant medication guides list multiple adverse effects. The supporting paper concerns nonmedical college use, so it does not fully validate therapeutic treatment at age 32.",
+      "recommended_action": "Retain the positive edge, specifying drug, dose, and treatment context.",
+      "evidence": [
+        {
+          "source_id": "NONMEDICAL_STIMULANT",
+          "exact_excerpt": "common side effects of the drugs include headache, stomach upset, nausea, loss of appetite, trouble sleeping, weight loss, dry mouth, nervousness, mood swings, dizziness, fast heart beat, and heart palpitations",
+          "location": "PDF page 2",
+          "relevance": "Supports stimulant adverse effects, although the paper studies nonmedical college use rather than prescribed treatment at age 32."
+        }
+      ]
+    },
+    {
+      "edge_id": 58,
+      "source": "Treatment Side Effects",
+      "dest": "Treatment Adherence",
+      "existing_reasoning": "Side effects can reduce adherence.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The corpus documents adverse effects but does not show that they cause lower adherence in treated adults.",
+      "recommended_action": "Add direct discontinuation or adherence evidence.",
+      "evidence": [
+        {
+          "source_id": "NONMEDICAL_STIMULANT",
+          "exact_excerpt": "common side effects of the drugs include headache, stomach upset, nausea, loss of appetite, trouble sleeping, weight loss, dry mouth, nervousness, mood swings, dizziness, fast heart beat, and heart palpitations",
+          "location": "PDF page 2",
+          "relevance": "Supports stimulant adverse effects, although the paper studies nonmedical college use rather than prescribed treatment at age 32."
+        }
+      ]
+    },
+    {
+      "edge_id": 59,
+      "source": "Treatment Side Effects",
+      "dest": "Quality of Life",
+      "existing_reasoning": "Side effects can slightly reduce quality of life.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The corpus documents adverse effects but does not estimate their independent impact on adult quality of life.",
+      "recommended_action": "Add longitudinal evidence connecting adverse effects to quality of life.",
+      "evidence": [
+        {
+          "source_id": "NONMEDICAL_STIMULANT",
+          "exact_excerpt": "common side effects of the drugs include headache, stomach upset, nausea, loss of appetite, trouble sleeping, weight loss, dry mouth, nervousness, mood swings, dizziness, fast heart beat, and heart palpitations",
+          "location": "PDF page 2",
+          "relevance": "Supports stimulant adverse effects, although the paper studies nonmedical college use rather than prescribed treatment at age 32."
+        }
+      ]
+    },
+    {
+      "edge_id": 60,
+      "source": "Diagnosis Status",
+      "dest": "Functional Impairment",
+      "existing_reasoning": "Diagnosis can reduce impairment through treatment and support.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied paper directly establishes this edge's direction, sign, and stated mechanism for adults around age 32. Pediatric or adjacent evidence is not transferred as adult causal proof.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add adult evidence with a defined exposure, outcome, and temporal direction.",
+      "evidence": []
+    },
+    {
+      "edge_id": 61,
+      "source": "Functional Impairment",
+      "dest": "Quality of Life",
+      "existing_reasoning": "Impairment lowers adult quality of life.",
+      "sign": "-",
+      "validation_status": "partially_supported",
+      "observation_from_validation": "The adult review connects longstanding neuropsychological impairment with negative life outcomes, but does not directly measure quality of life as the destination.",
+      "recommended_action": "Retain as a qualified pathway and add an adult quality-of-life measure.",
+      "evidence": [
+        {
+          "source_id": "ADULT_CBT",
+          "exact_excerpt": "Resulting from their longstanding neuropsychological impairments, such as attentional problems, emotional instability, and disinhibition, they are familiar to a multiplicity of negative life outcomes and under-achievement.",
+          "location": "PDF page 1",
+          "relevance": "Supports a relationship between longstanding impairment and adverse adult outcomes without isolating a single causal edge."
+        }
+      ]
+    },
+    {
+      "edge_id": 62,
+      "source": "Diagnosis Status",
+      "dest": "Quality of Life",
+      "existing_reasoning": "Diagnosis can improve quality of life through support and treatment.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied study shows that receiving an adult diagnosis itself improves quality of life; any benefit would likely be mediated through effective care and support.",
+      "recommended_action": "Replace the direct edge with explicit treatment and support mediators.",
+      "evidence": []
+    }
+  ],
+  "references": [
+    {
+      "source_id": "TEMPORAL_DISCOUNT",
+      "title": "What We Can and Cannot Conclude About the Relationship Between Steep Temporal Reward Discounting and Hyperactivity-Impulsivity Symptoms in ADHD",
+      "local_pdf": "full_texts/1-s2.0-S0006322310004828-main.pdf",
+      "sha256": "e69976a1b1dec8b384800029cc16bd7013917b9dad1730b87f2fbfe44f3f21cf"
+    },
+    {
+      "source_id": "FAMILY_GENDER",
+      "title": "Action monitoring in children with or without a family history of ADHD: Effects of gender on an endophenotype parameter",
+      "local_pdf": "full_texts/1-s2.0-S0028393209004941-main.pdf",
+      "sha256": "4d8b3bb1ba23381fd595e27563f8fd171e3901b05de6e36ec4b5a4e511c12fd9"
+    },
+    {
+      "source_id": "REINFORCEMENT",
+      "title": "Identifying the neurobiology of altered reinforcement sensitivity in ADHD: A review and research agenda",
+      "local_pdf": "full_texts/1-s2.0-S0149763409001870-main.pdf",
+      "sha256": "ae65fc381339d7418732bf551adca7539fdf2d49a74e9f4bd56fdbb7245a0426"
+    },
+    {
+      "source_id": "STIGMA_SCALE",
+      "title": "Assessment of stigma associated with ADHD: Psychometric evaluation of the ADHD Stigma Questionnaire",
+      "local_pdf": "full_texts/1-s2.0-S0165178109001759-main.pdf",
+      "sha256": "8a86e28553ebe6d9cc5fe0664b102a373a80e68b6b8039d46e75aee795159fcb"
+    },
+    {
+      "source_id": "GWAS_META",
+      "title": "Meta-analysis of genome-wide association studies of ADHD",
+      "local_pdf": "full_texts/1-s2.0-S0890856710004934-main.pdf",
+      "sha256": "db40bca67890d801ac75142a10ba5811a426998616efd767ecfab9ca3328041e"
+    },
+    {
+      "source_id": "CAUDATE_MRI",
+      "title": "Quantitative MR analysis of caudate abnormalities in pediatric ADHD: Proposal for a diagnostic test",
+      "local_pdf": "full_texts/1-s2.0-S0925492710000387.pdf",
+      "sha256": "8a8f5e07482f603c8350c157004cac919838d80640d7d55084923dd9f6ef88ae"
+    },
+    {
+      "source_id": "SLEEP_PSG",
+      "title": "Sleep disorders and daytime sleepiness in children with ADHD",
+      "local_pdf": "full_texts/1-s2.0-S1389945710002844-main.pdf",
+      "sha256": "4fd318f9a5fe909e3dd9e0a256b7d3a310dbadfd4df51c67db3d128cc51e1053"
+    },
+    {
+      "source_id": "NICE_GUIDELINE",
+      "title": "NICE guideline: attention deficit hyperactivity disorder",
+      "local_pdf": "full_texts/24.full.pdf",
+      "sha256": "2f291a8633c67d9ab07ef8d063b693cac3eed3693fd6acb640f14c1592287592"
+    },
+    {
+      "source_id": "ECZEMA_SLEEP",
+      "title": "Association of ADHD and atopic eczema modified by sleep disturbance",
+      "local_pdf": "full_texts/269.full.pdf",
+      "sha256": "b8deb34c018511436f2a23339ac8bb7407f8a5a221902a9116370bf00e7d288e"
+    },
+    {
+      "source_id": "EEG_DIAGNOSIS",
+      "title": "Assisted diagnosis of ADHD through EEG bandpower clustering with self-organizing maps",
+      "local_pdf": "full_texts/Assisted_diagnosis_of_Attention-Deficit_Hyperactivity_Disorder_through_EEG_bandpower_clustering_with_self-organizing_maps.pdf",
+      "sha256": "3950f837787a2504bd13195b86ec4bcf479caea9c00d1acd0e249366d5fd0e08"
+    },
+    {
+      "source_id": "CPG_REVIEW",
+      "title": "Clinical Practice Guidelines for ADHD: A Review",
+      "local_pdf": "full_texts/Clinical Practice Guidelines for Attention-Deficit Hyperactivity Disorder  A Review.pdf",
+      "sha256": "374fae5f2955571e83700c587f99dc4932d060fc2147b8b8bcc54118396d8f7a"
+    },
+    {
+      "source_id": "PHARM_REVIEW",
+      "title": "Review of pharmacotherapy options for ADHD and ADHD-like symptoms in children and adolescents with developmental disorders",
+      "local_pdf": "full_texts/Dev Disabil Res Revs - 2010 - Rowles - Review of pharmacotherapy options for the treatment of attention‐deficit.pdf",
+      "sha256": "5fa1b1fb746b7302e30f5642baacf4b9cdb4f117a6a6214ddd5c576a7fee73ab"
+    },
+    {
+      "source_id": "CONNECTIVITY",
+      "title": "Is the ADHD brain wired differently? A review on structural and functional connectivity",
+      "local_pdf": "full_texts/Human Brain Mapping - 2010 - Konrad - Is the ADHD brain wired differently  A review on structural and functional.pdf",
+      "sha256": "4e90c13b236da37ad25110eaf83adcdc91481b8b7cf9b1b8bc7e1aca72ab2a51"
+    },
+    {
+      "source_id": "ODD_REVIEW",
+      "title": "A Review of ADHD Complicated by Symptoms of Oppositional Defiant Disorder or Conduct Disorder",
+      "local_pdf": "full_texts/a-review-of-attention-deficithyperactivity-disorder.pdf",
+      "sha256": "a0a500003ae00b1f1b4ec8cdbd5f8587c7d7ef7444c00aeb493f7bd8c9832cde"
+    },
+    {
+      "source_id": "SLEEP_BEHAVIOR",
+      "title": "Associations Between Sleep and Inattentive/Hyperactive Problem Behavior Among Foster and Community Children",
+      "local_pdf": "full_texts/associations-between-sleep-and-inattentivehyperactive.pdf",
+      "sha256": "da4f98400a44761e6138bb06cbaa7c64ff3a1043ba967416293acf2aeb04958f"
+    },
+    {
+      "source_id": "NONMEDICAL_STIMULANT",
+      "title": "Speeding through the Frat House: A Qualitative Exploration of Nonmedical ADHD Stimulant Use",
+      "local_pdf": "full_texts/desantis-et-al-2010-speeding-through-the-frat-house-a-qualitative-exploration-of-nonmedical-adhd-stimulant-use-in.pdf",
+      "sha256": "bb88357d911573b8c2b94781fc4d0e0d703a447379c69538ef0416f69572a21b"
+    },
+    {
+      "source_id": "EXECUTIVE_FUNCTION",
+      "title": "Executive dysfunction screening and intellectual coefficient measurement in children with ADHD",
+      "local_pdf": "full_texts/download.pdf",
+      "sha256": "e2e24f88582c7ce17b04c9e6d1098eef847ded4dfbcf61a4bec380acd475265f"
+    },
+    {
+      "source_id": "ORGANOCHLORINE",
+      "title": "Prenatal Organochlorine Exposure and Behaviors Associated With ADHD in School-Aged Children",
+      "local_pdf": "full_texts/kwp427.pdf",
+      "sha256": "a6ae67a3fa113fb47d7cbdc174a20730475c1aa28dcbe2a638b776bcfa8d3537"
+    },
+    {
+      "source_id": "AGE_SEX",
+      "title": "Sex and age differences in ADHD symptoms and diagnoses",
+      "local_pdf": "full_texts/nihms291682.pdf",
+      "sha256": "e325d368bc665fedb48b2132630fa7bf9031d945cf945b1558b2eba8fc334e6a"
+    },
+    {
+      "source_id": "CHILD_SELF_REPORT",
+      "title": "Relationships Between Child-Reported Activity Level and Task Orientation and Parental ADHD Symptom Ratings",
+      "local_pdf": "full_texts/relationships-between-child-reported-activity-level-and-task.pdf",
+      "sha256": "f03d5b46f19fd3c7b42d25b5448ae84f92b803fa75fc5f1dc20374e37be631b7"
+    },
+    {
+      "source_id": "ANIMAL_MODELS",
+      "title": "Animal models of ADHD: a critical review",
+      "local_pdf": "full_texts/s12402-010-0019-x.pdf",
+      "sha256": "83a2afbd6ff0bf01773bf20b4b5ade9e2bb9409f136d3d195feafc0eafcc34d3"
+    },
+    {
+      "source_id": "ADULT_CBT",
+      "title": "Therapy-relevant factors in adult ADHD from a cognitive behavioural perspective",
+      "local_pdf": "full_texts/s12402-010-0023-1.pdf",
+      "sha256": "b748fb2604030288326398107b23c305a1f027b490041d7629761d08db15870e"
+    },
+    {
+      "source_id": "QUALITY_OF_LIFE",
+      "title": "The quality of life of children and adolescents with ADHD undergoing outpatient psychiatric treatment",
+      "local_pdf": "full_texts/s12402-010-0036-9.pdf",
+      "sha256": "2701abe792e119472062cd81d9fae5cfbf750a74cbb850ea66ee9a7823adc49d"
+    },
+    {
+      "source_id": "GENDER_READING",
+      "title": "Gender, ADHD, and Reading Disability in a Population-Based Birth Cohort",
+      "local_pdf": "full_texts/zpe0101000e788.pdf",
+      "sha256": "8abfcad3a4657f0b8087b5c23771020748e5babac8bc2b2ec3fb868271f3c0b6"
+    }
+  ]
+}

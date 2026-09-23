@@ -1,0 +1,770 @@
+{
+  "metadata": {
+    "graph_file": "1990_8 yo.py",
+    "graph_sha256": "6bea3fec53d49271b1db25ba8d6f602323e6c5f9f6d6c81c6573c148da0386d5",
+    "graph_year": 1990,
+    "age": 8,
+    "edge_count": 58,
+    "pdf_file_count": 4,
+    "unique_document_count": 4,
+    "validation_updated_utc": "2026-09-23T03:56:08.043035+00:00",
+    "original_unchanged": true,
+    "strength_assessed": false,
+    "status_counts": {
+      "supported": 0,
+      "partially_supported": 6,
+      "contradicted": 0,
+      "mixed_evidence": 0,
+      "insufficient_evidence": 48,
+      "not_assessable": 4
+    }
+  },
+  "status_definitions": {
+    "supported": "Evidence supports the stated direction, sign, and reasoning within the declared scope.",
+    "partially_supported": "Evidence supports only part of the claim, a narrower population or outcome, or an association rather than the full causal claim.",
+    "contradicted": "Relevant evidence opposes the claimed direction or sign within the declared scope.",
+    "mixed_evidence": "Relevant evidence both supports and opposes the same defined claim.",
+    "insufficient_evidence": "Available evidence does not establish or refute the causal claim.",
+    "not_assessable": "Undefined variable coding or endpoint makes the proposed direction or sign uninterpretable."
+  },
+  "methodology": {
+    "scope": "1990_8 yo.py, 58 edges, using only the four supplied PDF files in 1990 ADHD Papers. Direction, sign, and written reasoning were reviewed; numeric strength was excluded.",
+    "age_scope": "Evidence specific to children near age eight was preferred. Older-child and adolescent evidence was treated as partial when it did not report an age-eight estimate.",
+    "causal_standard": "Associations, reviews, and clinical recommendations were not automatically treated as proof of causal direction. Undefined categorical signs were marked not_assessable.",
+    "source_limits": "This is a validation against the supplied corpus, not a systematic review of all 1990 ADHD literature. A status of insufficient_evidence is not evidence that an edge is false.",
+    "strength": "The graph's numeric edge strengths were not validated.",
+    "duplicate": "No exact duplicate PDF files were found in the supplied corpus."
+  },
+  "edges": [
+    {
+      "edge_id": 1,
+      "source": "Genetic Risk",
+      "dest": "ADHD",
+      "existing_reasoning": "Genetic liability contributes strongly to childhood ADHD.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 1990 paper directly establishes this edge's direction, sign, and stated mechanism for children around age eight.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant pediatric evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 2,
+      "source": "ADHD",
+      "dest": "Symptom Severity",
+      "existing_reasoning": "Underlying ADHD increases symptom severity.",
+      "sign": "+",
+      "validation_status": "not_assessable",
+      "observation_from_validation": "ADHD and Symptom Severity overlap unless the disorder is defined separately from diagnostic symptoms.",
+      "recommended_action": "Define separate latent and measured constructs.",
+      "evidence": []
+    },
+    {
+      "edge_id": 3,
+      "source": "ADHD",
+      "dest": "Symptom Type",
+      "existing_reasoning": "Underlying ADHD shapes visible behavioral presentation.",
+      "sign": "+",
+      "validation_status": "not_assessable",
+      "observation_from_validation": "Symptom Type is categorical, so a universal positive sign is undefined.",
+      "recommended_action": "Use presentation-specific outcomes or an unsigned relation.",
+      "evidence": []
+    },
+    {
+      "edge_id": 4,
+      "source": "Age",
+      "dest": "Symptom Severity",
+      "existing_reasoning": "At age 8, symptoms are highly visible through behavior and school functioning.",
+      "sign": "+",
+      "validation_status": "partially_supported",
+      "observation_from_validation": "Children aged 8.6-12.11 showed poorer arithmetic discrepancy and more social withdrawal or uncommunicativeness than younger children, but the study was cross-sectional and did not validate general symptom severity.",
+      "recommended_action": "Replace the generic positive edge with specific age-by-outcome relationships and note the cross-sectional design.",
+      "evidence": [
+        {
+          "source_id": "AGE_EFFECT",
+          "exact_excerpt": "Results suggest that older children with ADD are significantly more likely than younger ADD children to experience academic and socioemotional difficulties.",
+          "location": "PDF page 1",
+          "relevance": "Cross-sectional ages 6-12; supports an age association within childhood, not a longitudinal causal slope."
+        },
+        {
+          "source_id": "AGE_EFFECT",
+          "exact_excerpt": "there are increasing negative repercussions associated with ADD in some areas of academic and behavioral functioning.",
+          "location": "PDF page 5",
+          "relevance": "Conclusion of the scanned age-effects study; generalizability was limited by exclusion of females."
+        }
+      ]
+    },
+    {
+      "edge_id": 5,
+      "source": "Gender",
+      "dest": "Symptom Type",
+      "existing_reasoning": "Gender norms influence which childhood behaviors are noticed.",
+      "sign": "+",
+      "validation_status": "not_assessable",
+      "observation_from_validation": "The supplied studies do not test gender norms, and Symptom Type lacks an ordered scale; several samples included only boys.",
+      "recommended_action": "Specify a presentation contrast and include evidence with girls.",
+      "evidence": []
+    },
+    {
+      "edge_id": 6,
+      "source": "Early Life Nutrition",
+      "dest": "Genetic Risk",
+      "existing_reasoning": "Poor early nutrition can increase developmental vulnerability.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 1990 paper directly establishes this edge's direction, sign, and stated mechanism for children around age eight.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant pediatric evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 7,
+      "source": "Nutrition Quality",
+      "dest": "Symptom Severity",
+      "existing_reasoning": "Poor nutrition may worsen behavioral regulation.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 1990 paper directly establishes this edge's direction, sign, and stated mechanism for children around age eight.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant pediatric evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 8,
+      "source": "Sleep Quality",
+      "dest": "Symptom Severity",
+      "existing_reasoning": "Better sleep reduces behavioral dysregulation.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 1990 paper directly establishes this edge's direction, sign, and stated mechanism for children around age eight.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant pediatric evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 9,
+      "source": "Environmental Exposure",
+      "dest": "Symptom Severity",
+      "existing_reasoning": "Environmental stressors can worsen symptoms.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 1990 paper directly establishes this edge's direction, sign, and stated mechanism for children around age eight.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant pediatric evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 10,
+      "source": "Symptom Severity",
+      "dest": "Functional Impairment",
+      "existing_reasoning": "More severe symptoms increase impairment.",
+      "sign": "+",
+      "validation_status": "partially_supported",
+      "observation_from_validation": "The age-effects and developmental studies connect ADD with academic and socioemotional difficulty, but do not isolate symptom severity as the causal exposure.",
+      "recommended_action": "Retain as a qualified clinical pathway and add a separately measured severity gradient.",
+      "evidence": [
+        {
+          "source_id": "AGE_EFFECT",
+          "exact_excerpt": "Results suggest that older children with ADD are significantly more likely than younger ADD children to experience academic and socioemotional difficulties.",
+          "location": "PDF page 1",
+          "relevance": "Cross-sectional ages 6-12; supports an age association within childhood, not a longitudinal causal slope."
+        },
+        {
+          "source_id": "DEVELOPMENT",
+          "exact_excerpt": "The ADD + delinquent boys consistently fared the worst on the assessments of family adversity, verbal intelligence, and reading. Their antisocial behavior began before school age, escalated at school entry, and persisted into adolescence.",
+          "location": "PDF page 2",
+          "relevance": "Longitudinal association in boys; does not isolate ADD or family adversity as a single causal exposure."
+        }
+      ]
+    },
+    {
+      "edge_id": 11,
+      "source": "Symptom Type",
+      "dest": "Teacher Referral Rate",
+      "existing_reasoning": "Certain symptom patterns are more likely to trigger teacher concern.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 1990 paper directly establishes this edge's direction, sign, and stated mechanism for children around age eight.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant pediatric evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 12,
+      "source": "Classroom Size",
+      "dest": "Teacher Referral Rate",
+      "existing_reasoning": "Classroom context can increase teacher concern.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 1990 paper directly establishes this edge's direction, sign, and stated mechanism for children around age eight.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant pediatric evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 13,
+      "source": "School Labeling Bias",
+      "dest": "Teacher Referral Rate",
+      "existing_reasoning": "Behavioral labeling still strongly shapes referrals.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 1990 paper directly establishes this edge's direction, sign, and stated mechanism for children around age eight.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant pediatric evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 14,
+      "source": "School Resources",
+      "dest": "Teacher Referral Rate",
+      "existing_reasoning": "In 1990, school resources increasingly support detection.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 1990 paper directly establishes this edge's direction, sign, and stated mechanism for children around age eight.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant pediatric evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 15,
+      "source": "Education System Pressure",
+      "dest": "Teacher Referral Rate",
+      "existing_reasoning": "Institutional pressure can increase school referrals.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 1990 paper directly establishes this edge's direction, sign, and stated mechanism for children around age eight.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant pediatric evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 16,
+      "source": "Teacher Referral Rate",
+      "dest": "Parental Awareness",
+      "existing_reasoning": "School concerns more reliably increase parent awareness.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 1990 paper directly establishes this edge's direction, sign, and stated mechanism for children around age eight.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant pediatric evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 17,
+      "source": "Parental Denial",
+      "dest": "Parental Awareness",
+      "existing_reasoning": "Denial still reduces recognition of child difficulties.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 1990 paper directly establishes this edge's direction, sign, and stated mechanism for children around age eight.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant pediatric evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 18,
+      "source": "Parental Education",
+      "dest": "Parental Awareness",
+      "existing_reasoning": "More educated parents better recognize childhood issues.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 1990 paper directly establishes this edge's direction, sign, and stated mechanism for children around age eight.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant pediatric evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 19,
+      "source": "Parental Education",
+      "dest": "Parental Denial",
+      "existing_reasoning": "Education reduces denial probability.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 1990 paper directly establishes this edge's direction, sign, and stated mechanism for children around age eight.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant pediatric evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 20,
+      "source": "Family Stress",
+      "dest": "Symptom Severity",
+      "existing_reasoning": "Stressful homes can amplify visible symptoms.",
+      "sign": "+",
+      "validation_status": "partially_supported",
+      "observation_from_validation": "Family adversity was greatest in boys with both ADD and delinquency, while ADD-only boys had normal family scores. This is subgroup association, not family stress causing symptom severity.",
+      "recommended_action": "Do not generalize the combined subgroup finding to all ADHD; add temporal family-stress evidence.",
+      "evidence": [
+        {
+          "source_id": "DEVELOPMENT",
+          "exact_excerpt": "The ADD + delinquent boys consistently fared the worst on the assessments of family adversity, verbal intelligence, and reading. Their antisocial behavior began before school age, escalated at school entry, and persisted into adolescence.",
+          "location": "PDF page 2",
+          "relevance": "Longitudinal association in boys; does not isolate ADD or family adversity as a single causal exposure."
+        }
+      ]
+    },
+    {
+      "edge_id": 21,
+      "source": "Household Stability",
+      "dest": "Family Stress",
+      "existing_reasoning": "Stable homes reduce stress.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 1990 paper directly establishes this edge's direction, sign, and stated mechanism for children around age eight.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant pediatric evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 22,
+      "source": "Household Stability",
+      "dest": "Nutrition Quality",
+      "existing_reasoning": "Stable homes support better nutrition.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 1990 paper directly establishes this edge's direction, sign, and stated mechanism for children around age eight.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant pediatric evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 23,
+      "source": "Family Stress",
+      "dest": "Sleep Quality",
+      "existing_reasoning": "Stress disrupts sleep patterns.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 1990 paper directly establishes this edge's direction, sign, and stated mechanism for children around age eight.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant pediatric evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 24,
+      "source": "Parental Awareness",
+      "dest": "Diagnosis Status",
+      "existing_reasoning": "Parental awareness meaningfully supports diagnosis by 1990.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 1990 paper directly establishes this edge's direction, sign, and stated mechanism for children around age eight.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant pediatric evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 25,
+      "source": "Socioeconomic Status",
+      "dest": "Educational Access",
+      "existing_reasoning": "Higher SES improves educational access.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 1990 paper directly establishes this edge's direction, sign, and stated mechanism for children around age eight.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant pediatric evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 26,
+      "source": "Educational Access",
+      "dest": "Teacher Referral Rate",
+      "existing_reasoning": "Better systems may detect issues earlier.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 1990 paper directly establishes this edge's direction, sign, and stated mechanism for children around age eight.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant pediatric evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 27,
+      "source": "Socioeconomic Status",
+      "dest": "Access to Mental Health Care",
+      "existing_reasoning": "Higher SES improves access to care.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 1990 paper directly establishes this edge's direction, sign, and stated mechanism for children around age eight.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant pediatric evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 28,
+      "source": "Financial Status",
+      "dest": "Access to Mental Health Care",
+      "existing_reasoning": "Affordability strongly controls access.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 1990 paper directly establishes this edge's direction, sign, and stated mechanism for children around age eight.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant pediatric evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 29,
+      "source": "Neighborhood Quality",
+      "dest": "Access to Mental Health Care",
+      "existing_reasoning": "Better neighborhoods provide more resources.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 1990 paper directly establishes this edge's direction, sign, and stated mechanism for children around age eight.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant pediatric evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 30,
+      "source": "Provider Availability",
+      "dest": "Access to Mental Health Care",
+      "existing_reasoning": "Provider supply improves access more than in 1970.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 1990 paper directly establishes this edge's direction, sign, and stated mechanism for children around age eight.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant pediatric evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 31,
+      "source": "Cost of Evaluation",
+      "dest": "Diagnosis Status",
+      "existing_reasoning": "Cost remains a substantial barrier to evaluation.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 1990 paper directly establishes this edge's direction, sign, and stated mechanism for children around age eight.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant pediatric evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 32,
+      "source": "Access to Mental Health Care",
+      "dest": "Diagnosis Status",
+      "existing_reasoning": "Access meaningfully improves diagnosis likelihood.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 1990 paper directly establishes this edge's direction, sign, and stated mechanism for children around age eight.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant pediatric evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 33,
+      "source": "Race / Ethnicity",
+      "dest": "Institutional Bias",
+      "existing_reasoning": "Structural inequities influence institutional behavior.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 1990 paper directly establishes this edge's direction, sign, and stated mechanism for children around age eight.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant pediatric evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 34,
+      "source": "Institutional Bias",
+      "dest": "Teacher Referral Rate",
+      "existing_reasoning": "Bias affects referral and labeling patterns.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 1990 paper directly establishes this edge's direction, sign, and stated mechanism for children around age eight.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant pediatric evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 35,
+      "source": "Institutional Bias",
+      "dest": "Diagnosis Status",
+      "existing_reasoning": "Bias suppresses fair diagnosis access.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 1990 paper directly establishes this edge's direction, sign, and stated mechanism for children around age eight.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant pediatric evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 36,
+      "source": "Misdiagnosis Rate",
+      "dest": "Diagnosis Status",
+      "existing_reasoning": "Misdiagnosis reduces accurate identification.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 1990 paper directly establishes this edge's direction, sign, and stated mechanism for children around age eight.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant pediatric evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 37,
+      "source": "Cultural Norms",
+      "dest": "Stigma",
+      "existing_reasoning": "Stigma remains significant, but weaker than in 1970.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 1990 paper directly establishes this edge's direction, sign, and stated mechanism for children around age eight.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant pediatric evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 38,
+      "source": "Stigma",
+      "dest": "Diagnosis Status",
+      "existing_reasoning": "Stigma still suppresses recognition and diagnosis.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 1990 paper directly establishes this edge's direction, sign, and stated mechanism for children around age eight.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant pediatric evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 39,
+      "source": "Diagnosis Status",
+      "dest": "Medication Treatment",
+      "existing_reasoning": "By 1990, childhood ADHD diagnosis commonly increases medication treatment likelihood.",
+      "sign": "+",
+      "validation_status": "partially_supported",
+      "observation_from_validation": "Controlled trials enrolled diagnosed children or adolescents and administered methylphenidate, showing a clinical diagnosis-to-treatment pathway without estimating real-world treatment likelihood.",
+      "recommended_action": "Retain as a care pathway rather than a quantified causal probability.",
+      "evidence": [
+        {
+          "source_id": "CHILD_MPH",
+          "exact_excerpt": "Within-subjects analysis of covariance demonstrated significant correlations between the improvement in reaction time on the MFFT and i) GH response (AUCGH, r=.58, p<.001) and 2) prolactin response (AUCPro, r=.40, p<.05)",
+          "location": "PDF page 1",
+          "relevance": "Ages 7.0-12.4 in a double-blind drug-placebo design; the outcome is reaction time, narrower than overall symptom severity."
+        },
+        {
+          "source_id": "ADOLESCENT_MPH",
+          "exact_excerpt": "Methylphenidate significantly reduced teachers' and parents' ratings of hyperactivity, inattention, and oppositionality.",
+          "location": "PDF page 1",
+          "relevance": "Controlled trial supports symptom reduction in ages 12-18, not specifically age eight or adults."
+        }
+      ]
+    },
+    {
+      "edge_id": 40,
+      "source": "Diagnosis Status",
+      "dest": "Behavioral Therapy",
+      "existing_reasoning": "Diagnosis can connect children to behavioral therapy.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 1990 paper directly establishes this edge's direction, sign, and stated mechanism for children around age eight.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant pediatric evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 41,
+      "source": "Diagnosis Status",
+      "dest": "School Accommodations",
+      "existing_reasoning": "Diagnosis helps justify school-based supports and accommodations.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 1990 paper directly establishes this edge's direction, sign, and stated mechanism for children around age eight.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant pediatric evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 42,
+      "source": "Access to Mental Health Care",
+      "dest": "Treatment Access",
+      "existing_reasoning": "Care access strongly improves treatment availability for children.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 1990 paper directly establishes this edge's direction, sign, and stated mechanism for children around age eight.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant pediatric evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 43,
+      "source": "Provider Availability",
+      "dest": "Treatment Access",
+      "existing_reasoning": "More providers improve treatment access by 1990.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 1990 paper directly establishes this edge's direction, sign, and stated mechanism for children around age eight.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant pediatric evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 44,
+      "source": "Socioeconomic Status",
+      "dest": "Treatment Access",
+      "existing_reasoning": "Higher SES improves access to child treatment options.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 1990 paper directly establishes this edge's direction, sign, and stated mechanism for children around age eight.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant pediatric evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 45,
+      "source": "Treatment Access",
+      "dest": "Medication Treatment",
+      "existing_reasoning": "Access to treatment increases likelihood of medication use.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 1990 paper directly establishes this edge's direction, sign, and stated mechanism for children around age eight.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant pediatric evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 46,
+      "source": "Treatment Access",
+      "dest": "Behavioral Therapy",
+      "existing_reasoning": "Treatment access enables behavioral therapy.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 1990 paper directly establishes this edge's direction, sign, and stated mechanism for children around age eight.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant pediatric evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 47,
+      "source": "Treatment Access",
+      "dest": "School Accommodations",
+      "existing_reasoning": "Treatment access supports school accommodation pathways.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 1990 paper directly establishes this edge's direction, sign, and stated mechanism for children around age eight.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant pediatric evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 48,
+      "source": "Behavioral Therapy",
+      "dest": "Functional Impairment",
+      "existing_reasoning": "Behavioral therapy can reduce classroom and home impairment.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 1990 paper directly establishes this edge's direction, sign, and stated mechanism for children around age eight.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant pediatric evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 49,
+      "source": "School Accommodations",
+      "dest": "Functional Impairment",
+      "existing_reasoning": "School accommodations reduce functional impairment in academic settings.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 1990 paper directly establishes this edge's direction, sign, and stated mechanism for children around age eight.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant pediatric evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 50,
+      "source": "Medication Treatment",
+      "dest": "Symptom Severity",
+      "existing_reasoning": "Medication can meaningfully reduce visible childhood symptoms.",
+      "sign": "-",
+      "validation_status": "partially_supported",
+      "observation_from_validation": "Methylphenidate improved a reaction-time measure in ages 7-12 and reduced rated symptoms in adolescents. The age-eight and broad symptom-severity claim is only partly covered.",
+      "recommended_action": "Retain the negative edge, specifying methylphenidate, measured outcome, and age range.",
+      "evidence": [
+        {
+          "source_id": "CHILD_MPH",
+          "exact_excerpt": "Within-subjects analysis of covariance demonstrated significant correlations between the improvement in reaction time on the MFFT and i) GH response (AUCGH, r=.58, p<.001) and 2) prolactin response (AUCPro, r=.40, p<.05)",
+          "location": "PDF page 1",
+          "relevance": "Ages 7.0-12.4 in a double-blind drug-placebo design; the outcome is reaction time, narrower than overall symptom severity."
+        },
+        {
+          "source_id": "ADOLESCENT_MPH",
+          "exact_excerpt": "Methylphenidate significantly reduced teachers' and parents' ratings of hyperactivity, inattention, and oppositionality.",
+          "location": "PDF page 1",
+          "relevance": "Controlled trial supports symptom reduction in ages 12-18, not specifically age eight or adults."
+        }
+      ]
+    },
+    {
+      "edge_id": 51,
+      "source": "Medication Treatment",
+      "dest": "Functional Impairment",
+      "existing_reasoning": "Medication can reduce child impairment.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 1990 paper directly establishes this edge's direction, sign, and stated mechanism for children around age eight.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant pediatric evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 52,
+      "source": "Treatment Adherence",
+      "dest": "Medication Treatment",
+      "existing_reasoning": "Consistent adherence strengthens medication effect.",
+      "sign": "+",
+      "validation_status": "not_assessable",
+      "observation_from_validation": "Adherence occurs after medication is prescribed, while the destination is Medication Treatment and the explanation concerns benefit.",
+      "recommended_action": "Change the destination to treatment exposure or benefit.",
+      "evidence": []
+    },
+    {
+      "edge_id": 53,
+      "source": "Stigma",
+      "dest": "Treatment Adherence",
+      "existing_reasoning": "Stigma can reduce willingness to continue treatment.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 1990 paper directly establishes this edge's direction, sign, and stated mechanism for children around age eight.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant pediatric evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 54,
+      "source": "Medication Treatment",
+      "dest": "Treatment Side Effects",
+      "existing_reasoning": "Medication can introduce side effects.",
+      "sign": "+",
+      "validation_status": "partially_supported",
+      "observation_from_validation": "The adolescent trial directly reports mild side effects and weight reduction, but does not provide age-eight adverse-event evidence.",
+      "recommended_action": "Retain with drug and adolescent age scope; add child-specific adverse-event evidence.",
+      "evidence": [
+        {
+          "source_id": "ADOLESCENT_MPH",
+          "exact_excerpt": "Stimulant treatment produced mild side effects and weight reduction.",
+          "location": "PDF page 1",
+          "relevance": "Direct treatment adverse-effect evidence in adolescents."
+        }
+      ]
+    },
+    {
+      "edge_id": 55,
+      "source": "Treatment Side Effects",
+      "dest": "Treatment Adherence",
+      "existing_reasoning": "Side effects can reduce adherence.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 1990 paper directly establishes this edge's direction, sign, and stated mechanism for children around age eight.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant pediatric evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 56,
+      "source": "Treatment Side Effects",
+      "dest": "Quality of Life",
+      "existing_reasoning": "Side effects can slightly reduce quality of life.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 1990 paper directly establishes this edge's direction, sign, and stated mechanism for children around age eight.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant pediatric evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 57,
+      "source": "Functional Impairment",
+      "dest": "Quality of Life",
+      "existing_reasoning": "Impairment reduces quality of life.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 1990 paper directly establishes this edge's direction, sign, and stated mechanism for children around age eight.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant pediatric evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 58,
+      "source": "Diagnosis Status",
+      "dest": "Quality of Life",
+      "existing_reasoning": "Diagnosis can improve support and outcomes.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No supplied 1990 paper directly establishes this edge's direction, sign, and stated mechanism for children around age eight.",
+      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant pediatric evidence.",
+      "evidence": []
+    }
+  ],
+  "references": [
+    {
+      "source_id": "CHILD_MPH",
+      "title": "Growth Hormone and Prolactin Response to Methylphenidate in Children with Attention Deficit Disorder",
+      "local_pdf": "full_texts/1-s2.0-002432059090131A-main.pdf",
+      "sha256": "81b14e6e30a44f917c61591de2f261366a0428b1ed8d0635b64f686ea83071f7"
+    },
+    {
+      "source_id": "ADOLESCENT_MPH",
+      "title": "Clinical Effects of a Controlled Trial of Methylphenidate on Adolescents with Attention Deficit Disorder",
+      "local_pdf": "full_texts/1-s2.0-S0890856709646748-main.pdf",
+      "sha256": "29de9770b7a0a2e95ab91cd3efdb921a0f460125905d3493a94bdf1847b7d3e7"
+    },
+    {
+      "source_id": "DEVELOPMENT",
+      "title": "Juvenile Delinquency and Attention Deficit Disorder: Boys' Developmental Trajectories from Age 3 to Age 15",
+      "local_pdf": "full_texts/Moffitt-JuvenileDelinquencyAttention-1990.pdf",
+      "sha256": "674eaaa26b940acba5d1127bbb8a651f10c22d38139aee3692e86c08ec45128e"
+    },
+    {
+      "source_id": "AGE_EFFECT",
+      "title": "Attention Deficit Disorder and the Mediating Effect of Age on Academic and Behavioral Variables",
+      "local_pdf": "full_texts/attention-deficit-disorder-and-the-mediating-effect-of-age.pdf",
+      "sha256": "99c112d394158b81057fcf2f85246fd22a5346c55115fade7d1e435ef980a940"
+    }
+  ]
+}
