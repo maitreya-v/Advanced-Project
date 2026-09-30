@@ -1,0 +1,1385 @@
+{
+  "source_hashes": {
+    "PMID_20925475": "61ac7c7b449a4a20c8d861940094c70f183652541b56724074603e65118f0ce7",
+    "PMID_19270267": "4c226bb161f56d22bb25961dde6761f45708dbca6c9dc6a5bff821d73be84891",
+    "BIPOLAR_ADULT": "21d9c13db53d1092a85357c530bdb1c7f62cecedce78f88f9b5fb2ad3432562b",
+    "PMID_20441004": "5b481cac24cb1945734201bb073efc838f242fec53f2934f6781b315410287ba",
+    "PMID_21206548": "095419b3ac09ece0274c7eb2a752716dbeec8a10f5de279991d2408d6cf40aa0",
+    "PMID_21391409": "e4e39817aefdaebc682ac29916b806dc29215c79ec3b5c582d874706267abc89",
+    "PMID_21766545": "a251eaa1514ee85183cd7fe767e1c822c7635da0ede4aacc84521d76b508b6e5",
+    "PMID_21391408": "0039a79c3ff8ab7b5133aa240506d5bbad62bf2c41a1646b8efc827488ec2c06",
+    "PMID_20218799": "fa565ec4b65455fcc706729635a875ad56147454b44f6fb5d32e2b0d30c46637",
+    "CAUDATE_HTML": "0cd65ad2ea1effde97b96ffdb3151aa1e9cbbe66d67029d44eb0e0a024bd1045",
+    "PMID_21117844": "e751be2e6a9b4100e7f1a40212a6125671c51a59d2404d995579ff1721c80d05",
+    "PMID_20410711": "2352de9c540b1286611714e6803f7e4a1c24daa87abbf9cd0c94a2fa330340df",
+    "PMID_20513225": "836a50e43fa44436663a036460b87348c3216234461498a2fcd9f569bc6a129f",
+    "PMID_20839896": "82adf7b51943177cfd8157f1f106ea27247d92e5fc1f95363cf43685ee9bc937",
+    "PMID_19482837": "e2809db8d17b2c5205e0e3ba7e6318737bd7068476739643a4680bf6de6263c3",
+    "PMID_20660947": "f8ad32fc1353f52d6c6e9abccd9b5079433f23369188c86dcfae3f4fcbe12823",
+    "PMID_20200839": "acc200a656cc542f84a8ed744abd54e1287f5b76edcc0b6cb76230b729b5aa23"
+  },
+  "ages": {
+    "8": [
+      {
+        "edge_id": 21,
+        "source": "Socioeconomic Status",
+        "dest": "Access to Mental Health Care",
+        "sign": "+",
+        "existing_reasoning": "Higher SES improves access to evaluation.",
+        "validation_status": "partially_supported",
+        "observation_from_validation": "The pediatric disparity commentary relates diagnosis/treatment distribution to socioeconomic circumstances and proposes insurance/service barriers. This supports only a narrower socioeconomic care-inequity pathway; it does not measure SES causing access to evaluation at age eight.",
+        "recommended_action": "Retain as a qualified care-disparity pathway; separate underlying prevalence, recorded diagnosis, insurance and actual service access.",
+        "evidence": [
+          {
+            "source_id": "PMID_21391409",
+            "exact_excerpt": "This adds additional evidence that trends in the diagnosis and treatment for ADHD in children move in the exact opposite direction from those who are at highest risk for meeting criteria, for experiencing impairment, for and downstream socioeconomic sequelae.",
+            "location": "Disparities in ADHD assessment, diagnosis, and treatment - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Pediatric disparity commentary: diagnosis/treatment distribution across socioeconomic groups, not a controlled effect of SES on access or continuity. Geography, prevalence and ascertainment remain confounded."
+          },
+          {
+            "source_id": "PMID_21391409",
+            "exact_excerpt": "Contributing factors, such as marginal diagnoses (such as when parent and teacher symptom reports diverge), inadequate insurance coverage, limited time, and lack of familiarity and comfort with diagnostic and prescribing guidelines, may leave the door open to misdiagnosis and treatment.",
+            "location": "Disparities in ADHD assessment, diagnosis, and treatment - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Proposed financial/service barriers in pediatric commentary, not a measured income intervention or independent access-effect estimate."
+          }
+        ]
+      },
+      {
+        "edge_id": 22,
+        "source": "Financial Status",
+        "dest": "Access to Mental Health Care",
+        "sign": "+",
+        "existing_reasoning": "Affordability strongly controls access.",
+        "validation_status": "partially_supported",
+        "observation_from_validation": "The pediatric commentary identifies inadequate insurance coverage as a possible contributor to diagnostic and treatment problems. This supplies clinical support for a financial-access barrier, but does not measure household income, affordability or a controlled age-eight access effect.",
+        "recommended_action": "Specify insurance/affordability as the proposed barrier and retain uncertainty about magnitude and causal direction.",
+        "evidence": [
+          {
+            "source_id": "PMID_21391409",
+            "exact_excerpt": "Contributing factors, such as marginal diagnoses (such as when parent and teacher symptom reports diverge), inadequate insurance coverage, limited time, and lack of familiarity and comfort with diagnostic and prescribing guidelines, may leave the door open to misdiagnosis and treatment.",
+            "location": "Disparities in ADHD assessment, diagnosis, and treatment - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Proposed financial/service barriers in pediatric commentary, not a measured income intervention or independent access-effect estimate."
+          }
+        ]
+      },
+      {
+        "edge_id": 40,
+        "source": "Socioeconomic Status",
+        "dest": "Treatment Access",
+        "sign": "+",
+        "existing_reasoning": "Higher SES improves treatment continuity.",
+        "validation_status": "partially_supported",
+        "observation_from_validation": "The commentary describes socioeconomic disparities in pediatric diagnosis and treatment. This supports uneven treatment provision, but does not demonstrate that higher SES causes treatment continuity or establish an age-eight-specific effect.",
+        "recommended_action": "Restrict evidence to treatment-distribution disparities; obtain longitudinal continuity data before asserting that part of the reasoning.",
+        "evidence": [
+          {
+            "source_id": "PMID_21391409",
+            "exact_excerpt": "This adds additional evidence that trends in the diagnosis and treatment for ADHD in children move in the exact opposite direction from those who are at highest risk for meeting criteria, for experiencing impairment, for and downstream socioeconomic sequelae.",
+            "location": "Disparities in ADHD assessment, diagnosis, and treatment - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Pediatric disparity commentary: diagnosis/treatment distribution across socioeconomic groups, not a controlled effect of SES on access or continuity. Geography, prevalence and ascertainment remain confounded."
+          },
+          {
+            "source_id": "PMID_21391409",
+            "exact_excerpt": "Contributing factors, such as marginal diagnoses (such as when parent and teacher symptom reports diverge), inadequate insurance coverage, limited time, and lack of familiarity and comfort with diagnostic and prescribing guidelines, may leave the door open to misdiagnosis and treatment.",
+            "location": "Disparities in ADHD assessment, diagnosis, and treatment - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Proposed financial/service barriers in pediatric commentary, not a measured income intervention or independent access-effect estimate."
+          }
+        ]
+      },
+      {
+        "edge_id": 7,
+        "source": "Nutrition Quality",
+        "dest": "Symptom Severity",
+        "sign": "-",
+        "existing_reasoning": "Poor nutrition may worsen behavioral regulation.",
+        "validation_status": "insufficient_evidence",
+        "observation_from_validation": "The added nutritional review abstract describes topics and the need to scrutinize study validity, but reports no treatment-effect conclusion. It cannot validate better general nutrition reducing ADHD symptom severity.",
+        "recommended_action": "Obtain the full review or directly relevant nutritional-intervention results; keep general nutrition separate from individual supplements or elimination diets.",
+        "evidence": [
+          {
+            "source_id": "PMID_21766545",
+            "exact_excerpt": "This updated review presents the evidence regarding the usefulness and limitations of the most frequent nutritional and dietary interventions in the treatment of ADHD and/or ASD.",
+            "location": "Effectiveness of nutritional interventions on the functioning of children with ADHD and_or ASD. An updated review of research evidence - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Abstract describes the review scope but supplies no efficacy conclusion, effect size or comparison supporting the direction of the nutrition edge."
+          }
+        ]
+      },
+      {
+        "edge_id": 8,
+        "source": "Sleep Quality",
+        "dest": "Symptom Severity",
+        "sign": "-",
+        "existing_reasoning": "Better sleep reduces dysregulation.",
+        "validation_status": "partially_supported",
+        "observation_from_validation": "The existing actigraphy-duration association near ages seven–eight remains relevant. The added study finds parent-reported sleep problems associated with behavior but no polysomnographic group differences. It strengthens measurement and direction cautions rather than establishing a causal sleep-to-severity effect.",
+        "recommended_action": "Keep the qualified sleep association; identify the sleep measure, informant and uncertain direction. Do not label different sleep measures as contradictory tests of one causal intervention.",
+        "evidence": [
+          {
+            "source_id": "PMID_21206548",
+            "exact_excerpt": "However, there were no differences between ADHD and healthy groups on any polysomnographic variables, including sleep structure, arousals, and respiratory disturbances.",
+            "location": "Differences between objective and subjective sleep measures in children with attention deficit hyperactivity disorder - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Unmedicated children aged 7–12; objective group comparisons differed from parental sleep reports. No intervention on sleep or causal severity effect."
+          },
+          {
+            "source_id": "PMID_21206548",
+            "exact_excerpt": "Reported sleep problems were significantly associated with almost all subscales of CBCL as well as CBCL total score.",
+            "location": "Differences between objective and subjective sleep measures in children with attention deficit hyperactivity disorder - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Subjective sleep-behavior association; shared informant effects and reverse direction remain possible. This does not negate the earlier actigraphy-duration association."
+          }
+        ]
+      },
+      {
+        "edge_id": 9,
+        "source": "Environmental Exposure",
+        "dest": "Symptom Severity",
+        "sign": "+",
+        "existing_reasoning": "Environmental stressors can worsen symptoms.",
+        "validation_status": "partially_supported",
+        "observation_from_validation": "The existing prenatal organochlorine association is supplemented by lifetime lead associated with recorded pediatric ADHD diagnosis. Both are exposure-specific observational evidence, not generic stressor effects on severity.",
+        "recommended_action": "Specify contaminant, timing and endpoint; retain confounding and ascertainment limitations.",
+        "evidence": [
+          {
+            "source_id": "PMID_21391408",
+            "exact_excerpt": "elevated lead remained a significant predictor of ADHD diagnosis in multivariate analysis.",
+            "location": "Geographic analysis of diagnosis of Attention-Deficit_Hyperactivity Disorder in children_ Eastern Wisconsin, USA - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Lifetime lead association with recorded pediatric diagnosis; not proof of generic environmental stressor effects on symptom severity."
+          }
+        ]
+      },
+      {
+        "edge_id": 10,
+        "source": "Symptom Severity",
+        "dest": "Functional Impairment",
+        "sign": "+",
+        "existing_reasoning": "More severe symptoms increase impairment.",
+        "validation_status": "partially_supported",
+        "observation_from_validation": "Existing ADHD–impairment context is supplemented by psychosocial/educational problems in a selected Tourette sample with ADHD/OCD comorbidity. The new association does not identify an independent symptom-severity causal gradient.",
+        "recommended_action": "Keep population-specific functional context separate from a causal severity effect.",
+        "evidence": [
+          {
+            "source_id": "PMID_19482837",
+            "exact_excerpt": "A higher rate of these problems was also seen if the comorbidities attention-deficit hyperactivity disorder (ADHD) and/or obsessive compulsive disorder were present.",
+            "location": "The presence of attention-deficit hyperactivity disorder (ADHD) and obsessive-compulsive disorder worsen psychosocial and educational problems in Tourette syndrome - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Selected Tourette pediatric sample: psychosocial and educational problems correlate with comorbidity; school support need is not evidence that ADHD diagnosis causes formal accommodations."
+          }
+        ]
+      },
+      {
+        "edge_id": 12,
+        "source": "School Resources",
+        "dest": "Teacher Referral Rate",
+        "sign": "+",
+        "existing_reasoning": "By 2010, school resources strongly support detection.",
+        "validation_status": "insufficient_evidence",
+        "observation_from_validation": "The geographic study shows differences in recorded pediatric diagnoses, and the commentary proposes access/referral contributors. Neither measures this specific graph exposure-to-outcome effect; geographic or racial diagnosis differences alone do not establish provider availability, institutional bias, or referral causation.",
+        "recommended_action": "Retain as unvalidated; measure the named exposure and endpoint directly rather than substituting recorded diagnosis distribution.",
+        "evidence": [
+          {
+            "source_id": "PMID_21391408",
+            "exact_excerpt": "Conclusions: Further studies are needed to determine if geographic distribution of ADHD diagnosis can be partially explained by differential efficiency of referral for diagnosis by school districts, by race/ethnicity, and/or built environment.",
+            "location": "Geographic analysis of diagnosis of Attention-Deficit_Hyperactivity Disorder in children_ Eastern Wisconsin, USA - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Observational children aged 5–17; diagnosis differences do not identify institutional bias, provider access or school-referral efficiency as the causal mechanism."
+          },
+          {
+            "source_id": "PMID_21391409",
+            "exact_excerpt": "Contributing factors, such as marginal diagnoses (such as when parent and teacher symptom reports diverge), inadequate insurance coverage, limited time, and lack of familiarity and comfort with diagnostic and prescribing guidelines, may leave the door open to misdiagnosis and treatment.",
+            "location": "Disparities in ADHD assessment, diagnosis, and treatment - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Proposed financial/service barriers in pediatric commentary, not a measured income intervention or independent access-effect estimate."
+          }
+        ]
+      },
+      {
+        "edge_id": 23,
+        "source": "Neighborhood Quality",
+        "dest": "Access to Mental Health Care",
+        "sign": "+",
+        "existing_reasoning": "Better neighborhoods provide more resources.",
+        "validation_status": "insufficient_evidence",
+        "observation_from_validation": "The geographic study shows differences in recorded pediatric diagnoses, and the commentary proposes access/referral contributors. Neither measures this specific graph exposure-to-outcome effect; geographic or racial diagnosis differences alone do not establish provider availability, institutional bias, or referral causation.",
+        "recommended_action": "Retain as unvalidated; measure the named exposure and endpoint directly rather than substituting recorded diagnosis distribution.",
+        "evidence": [
+          {
+            "source_id": "PMID_21391408",
+            "exact_excerpt": "Conclusions: Further studies are needed to determine if geographic distribution of ADHD diagnosis can be partially explained by differential efficiency of referral for diagnosis by school districts, by race/ethnicity, and/or built environment.",
+            "location": "Geographic analysis of diagnosis of Attention-Deficit_Hyperactivity Disorder in children_ Eastern Wisconsin, USA - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Observational children aged 5–17; diagnosis differences do not identify institutional bias, provider access or school-referral efficiency as the causal mechanism."
+          },
+          {
+            "source_id": "PMID_21391409",
+            "exact_excerpt": "Contributing factors, such as marginal diagnoses (such as when parent and teacher symptom reports diverge), inadequate insurance coverage, limited time, and lack of familiarity and comfort with diagnostic and prescribing guidelines, may leave the door open to misdiagnosis and treatment.",
+            "location": "Disparities in ADHD assessment, diagnosis, and treatment - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Proposed financial/service barriers in pediatric commentary, not a measured income intervention or independent access-effect estimate."
+          }
+        ]
+      },
+      {
+        "edge_id": 24,
+        "source": "Provider Availability",
+        "dest": "Access to Mental Health Care",
+        "sign": "+",
+        "existing_reasoning": "Provider supply strongly improves access.",
+        "validation_status": "insufficient_evidence",
+        "observation_from_validation": "The geographic study shows differences in recorded pediatric diagnoses, and the commentary proposes access/referral contributors. Neither measures this specific graph exposure-to-outcome effect; geographic or racial diagnosis differences alone do not establish provider availability, institutional bias, or referral causation.",
+        "recommended_action": "Retain as unvalidated; measure the named exposure and endpoint directly rather than substituting recorded diagnosis distribution.",
+        "evidence": [
+          {
+            "source_id": "PMID_21391408",
+            "exact_excerpt": "Conclusions: Further studies are needed to determine if geographic distribution of ADHD diagnosis can be partially explained by differential efficiency of referral for diagnosis by school districts, by race/ethnicity, and/or built environment.",
+            "location": "Geographic analysis of diagnosis of Attention-Deficit_Hyperactivity Disorder in children_ Eastern Wisconsin, USA - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Observational children aged 5–17; diagnosis differences do not identify institutional bias, provider access or school-referral efficiency as the causal mechanism."
+          },
+          {
+            "source_id": "PMID_21391409",
+            "exact_excerpt": "Contributing factors, such as marginal diagnoses (such as when parent and teacher symptom reports diverge), inadequate insurance coverage, limited time, and lack of familiarity and comfort with diagnostic and prescribing guidelines, may leave the door open to misdiagnosis and treatment.",
+            "location": "Disparities in ADHD assessment, diagnosis, and treatment - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Proposed financial/service barriers in pediatric commentary, not a measured income intervention or independent access-effect estimate."
+          }
+        ]
+      },
+      {
+        "edge_id": 26,
+        "source": "Access to Mental Health Care",
+        "dest": "Diagnosis Status",
+        "sign": "+",
+        "existing_reasoning": "Access strongly improves diagnosis likelihood.",
+        "validation_status": "insufficient_evidence",
+        "observation_from_validation": "The geographic study shows differences in recorded pediatric diagnoses, and the commentary proposes access/referral contributors. Neither measures this specific graph exposure-to-outcome effect; geographic or racial diagnosis differences alone do not establish provider availability, institutional bias, or referral causation.",
+        "recommended_action": "Retain as unvalidated; measure the named exposure and endpoint directly rather than substituting recorded diagnosis distribution.",
+        "evidence": [
+          {
+            "source_id": "PMID_21391408",
+            "exact_excerpt": "Conclusions: Further studies are needed to determine if geographic distribution of ADHD diagnosis can be partially explained by differential efficiency of referral for diagnosis by school districts, by race/ethnicity, and/or built environment.",
+            "location": "Geographic analysis of diagnosis of Attention-Deficit_Hyperactivity Disorder in children_ Eastern Wisconsin, USA - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Observational children aged 5–17; diagnosis differences do not identify institutional bias, provider access or school-referral efficiency as the causal mechanism."
+          },
+          {
+            "source_id": "PMID_21391409",
+            "exact_excerpt": "Contributing factors, such as marginal diagnoses (such as when parent and teacher symptom reports diverge), inadequate insurance coverage, limited time, and lack of familiarity and comfort with diagnostic and prescribing guidelines, may leave the door open to misdiagnosis and treatment.",
+            "location": "Disparities in ADHD assessment, diagnosis, and treatment - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Proposed financial/service barriers in pediatric commentary, not a measured income intervention or independent access-effect estimate."
+          }
+        ]
+      },
+      {
+        "edge_id": 30,
+        "source": "Institutional Bias",
+        "dest": "Teacher Referral Rate",
+        "sign": "+",
+        "existing_reasoning": "Bias still affects referral patterns.",
+        "validation_status": "insufficient_evidence",
+        "observation_from_validation": "The geographic study shows differences in recorded pediatric diagnoses, and the commentary proposes access/referral contributors. Neither measures this specific graph exposure-to-outcome effect; geographic or racial diagnosis differences alone do not establish provider availability, institutional bias, or referral causation.",
+        "recommended_action": "Retain as unvalidated; measure the named exposure and endpoint directly rather than substituting recorded diagnosis distribution.",
+        "evidence": [
+          {
+            "source_id": "PMID_21391408",
+            "exact_excerpt": "Conclusions: Further studies are needed to determine if geographic distribution of ADHD diagnosis can be partially explained by differential efficiency of referral for diagnosis by school districts, by race/ethnicity, and/or built environment.",
+            "location": "Geographic analysis of diagnosis of Attention-Deficit_Hyperactivity Disorder in children_ Eastern Wisconsin, USA - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Observational children aged 5–17; diagnosis differences do not identify institutional bias, provider access or school-referral efficiency as the causal mechanism."
+          },
+          {
+            "source_id": "PMID_21391409",
+            "exact_excerpt": "Contributing factors, such as marginal diagnoses (such as when parent and teacher symptom reports diverge), inadequate insurance coverage, limited time, and lack of familiarity and comfort with diagnostic and prescribing guidelines, may leave the door open to misdiagnosis and treatment.",
+            "location": "Disparities in ADHD assessment, diagnosis, and treatment - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Proposed financial/service barriers in pediatric commentary, not a measured income intervention or independent access-effect estimate."
+          }
+        ]
+      },
+      {
+        "edge_id": 31,
+        "source": "Institutional Bias",
+        "dest": "Diagnosis Status",
+        "sign": "-",
+        "existing_reasoning": "Bias suppresses equitable diagnosis access.",
+        "validation_status": "insufficient_evidence",
+        "observation_from_validation": "The geographic study shows differences in recorded pediatric diagnoses, and the commentary proposes access/referral contributors. Neither measures this specific graph exposure-to-outcome effect; geographic or racial diagnosis differences alone do not establish provider availability, institutional bias, or referral causation.",
+        "recommended_action": "Retain as unvalidated; measure the named exposure and endpoint directly rather than substituting recorded diagnosis distribution.",
+        "evidence": [
+          {
+            "source_id": "PMID_21391408",
+            "exact_excerpt": "Conclusions: Further studies are needed to determine if geographic distribution of ADHD diagnosis can be partially explained by differential efficiency of referral for diagnosis by school districts, by race/ethnicity, and/or built environment.",
+            "location": "Geographic analysis of diagnosis of Attention-Deficit_Hyperactivity Disorder in children_ Eastern Wisconsin, USA - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Observational children aged 5–17; diagnosis differences do not identify institutional bias, provider access or school-referral efficiency as the causal mechanism."
+          },
+          {
+            "source_id": "PMID_21391409",
+            "exact_excerpt": "Contributing factors, such as marginal diagnoses (such as when parent and teacher symptom reports diverge), inadequate insurance coverage, limited time, and lack of familiarity and comfort with diagnostic and prescribing guidelines, may leave the door open to misdiagnosis and treatment.",
+            "location": "Disparities in ADHD assessment, diagnosis, and treatment - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Proposed financial/service barriers in pediatric commentary, not a measured income intervention or independent access-effect estimate."
+          }
+        ]
+      },
+      {
+        "edge_id": 39,
+        "source": "Provider Availability",
+        "dest": "Treatment Access",
+        "sign": "+",
+        "existing_reasoning": "Provider availability improves treatment access.",
+        "validation_status": "insufficient_evidence",
+        "observation_from_validation": "The geographic study shows differences in recorded pediatric diagnoses, and the commentary proposes access/referral contributors. Neither measures this specific graph exposure-to-outcome effect; geographic or racial diagnosis differences alone do not establish provider availability, institutional bias, or referral causation.",
+        "recommended_action": "Retain as unvalidated; measure the named exposure and endpoint directly rather than substituting recorded diagnosis distribution.",
+        "evidence": [
+          {
+            "source_id": "PMID_21391408",
+            "exact_excerpt": "Conclusions: Further studies are needed to determine if geographic distribution of ADHD diagnosis can be partially explained by differential efficiency of referral for diagnosis by school districts, by race/ethnicity, and/or built environment.",
+            "location": "Geographic analysis of diagnosis of Attention-Deficit_Hyperactivity Disorder in children_ Eastern Wisconsin, USA - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Observational children aged 5–17; diagnosis differences do not identify institutional bias, provider access or school-referral efficiency as the causal mechanism."
+          },
+          {
+            "source_id": "PMID_21391409",
+            "exact_excerpt": "Contributing factors, such as marginal diagnoses (such as when parent and teacher symptom reports diverge), inadequate insurance coverage, limited time, and lack of familiarity and comfort with diagnostic and prescribing guidelines, may leave the door open to misdiagnosis and treatment.",
+            "location": "Disparities in ADHD assessment, diagnosis, and treatment - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Proposed financial/service barriers in pediatric commentary, not a measured income intervention or independent access-effect estimate."
+          }
+        ]
+      },
+      {
+        "edge_id": 35,
+        "source": "Diagnosis Status",
+        "dest": "Medication Treatment",
+        "sign": "+",
+        "existing_reasoning": "By 2010, childhood diagnosis commonly leads to medication consideration.",
+        "validation_status": "partially_supported",
+        "observation_from_validation": "Guidelines connect structured diagnosis with consideration of medication, but recommendations do not establish how often diagnosis causes medication use. The added ADHD/ODD review further supports condition-specific assessment and care recommendations, not a controlled estimate for this generic edge. ",
+        "recommended_action": "Retain as a care pathway and describe it as treatment consideration rather than inevitable treatment.",
+        "evidence": [
+          {
+            "source_id": "PMID_21117844",
+            "exact_excerpt": "Treatment requires management of the core symptoms of ADHD plus, in many cases, augmentation with other treatment to address the ODD.",
+            "location": "Review of attention-deficit_hyperactivity disorder comorbid with oppositional defiant disorder - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Practitioner review supports condition-specific comorbidity assessment and treatment, without estimating population-level uptake or a universal therapy effect."
+          }
+        ]
+      },
+      {
+        "edge_id": 36,
+        "source": "Diagnosis Status",
+        "dest": "Behavioral Therapy",
+        "sign": "+",
+        "existing_reasoning": "Diagnosis connects children to behavioral and parent-focused interventions.",
+        "validation_status": "partially_supported",
+        "observation_from_validation": "Guidelines connect diagnosis and treatment with consideration of psychosocial therapies, without isolating diagnosis as the causal driver of uptake. The added ADHD/ODD review further supports condition-specific assessment and care recommendations, not a controlled estimate for this generic edge. ",
+        "recommended_action": "Retain as a recommended care pathway with access and preference modifiers.",
+        "evidence": [
+          {
+            "source_id": "PMID_21117844",
+            "exact_excerpt": "Treatment requires management of the core symptoms of ADHD plus, in many cases, augmentation with other treatment to address the ODD.",
+            "location": "Review of attention-deficit_hyperactivity disorder comorbid with oppositional defiant disorder - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Practitioner review supports condition-specific comorbidity assessment and treatment, without estimating population-level uptake or a universal therapy effect."
+          }
+        ]
+      },
+      {
+        "edge_id": 45,
+        "source": "Medication Treatment",
+        "dest": "Symptom Severity",
+        "sign": "-",
+        "existing_reasoning": "Medication can substantially reduce childhood symptom burden.",
+        "validation_status": "partially_supported",
+        "observation_from_validation": "The new review summarizes randomized stimulant efficacy across childhood and adulthood, strengthening the prior efficacy evidence. It gives no separate age-eight estimate, broad drug magnitude, or universal symptom response.",
+        "recommended_action": "Retain stimulant-specific negative direction with age/outcome limits; numeric strength remains unvalidated.",
+        "evidence": [
+          {
+            "source_id": "PMID_20513225",
+            "exact_excerpt": "Randomised controlled trials confirm that stimulant medication is efficacious for, and well tolerated by, males and females and patients across the age range; although preschoolers appear to have a less beneficial response and more side effects.",
+            "location": "Stimulant drug effects on attention deficit_hyperactivity disorder_ a review of the effects of age and sex of patients - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Review of controlled stimulant trials including adulthood; broad age coverage without an estimate at exactly eight, 32 or 45. Tolerability does not mean no adverse effects."
+          }
+        ]
+      },
+      {
+        "edge_id": 46,
+        "source": "Behavioral Therapy",
+        "dest": "Symptom Severity",
+        "sign": "-",
+        "existing_reasoning": "Behavioral therapy can reduce symptom expression and self-regulation issues.",
+        "validation_status": "partially_supported",
+        "observation_from_validation": "Clinical guidelines recommend psychosocial therapies, but the corpus excerpt does not establish a uniform reduction in core symptom severity across behavioral interventions. The added ADHD/ODD review further supports condition-specific assessment and care recommendations, not a controlled estimate for this generic edge. ",
+        "recommended_action": "Specify the intervention and outcome; retain only as a qualified treatment hypothesis.",
+        "evidence": [
+          {
+            "source_id": "PMID_21117844",
+            "exact_excerpt": "Treatment requires management of the core symptoms of ADHD plus, in many cases, augmentation with other treatment to address the ODD.",
+            "location": "Review of attention-deficit_hyperactivity disorder comorbid with oppositional defiant disorder - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Practitioner review supports condition-specific comorbidity assessment and treatment, without estimating population-level uptake or a universal therapy effect."
+          }
+        ]
+      },
+      {
+        "edge_id": 47,
+        "source": "Behavioral Therapy",
+        "dest": "Functional Impairment",
+        "sign": "-",
+        "existing_reasoning": "Behavioral therapy reduces practical impairment.",
+        "validation_status": "partially_supported",
+        "observation_from_validation": "Psychosocial treatment is recommended and functional outcomes are clinically central, but this corpus does not directly estimate a generic therapy-to-impairment effect. The added ADHD/ODD review further supports condition-specific assessment and care recommendations, not a controlled estimate for this generic edge. ",
+        "recommended_action": "Specify the behavioral program and functional endpoint.",
+        "evidence": [
+          {
+            "source_id": "PMID_21117844",
+            "exact_excerpt": "Treatment requires management of the core symptoms of ADHD plus, in many cases, augmentation with other treatment to address the ODD.",
+            "location": "Review of attention-deficit_hyperactivity disorder comorbid with oppositional defiant disorder - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Practitioner review supports condition-specific comorbidity assessment and treatment, without estimating population-level uptake or a universal therapy effect."
+          }
+        ]
+      },
+      {
+        "edge_id": 37,
+        "source": "Diagnosis Status",
+        "dest": "School Accommodations",
+        "sign": "+",
+        "existing_reasoning": "Diagnosis strongly supports formal school accommodations.",
+        "validation_status": "insufficient_evidence",
+        "observation_from_validation": "The Tourette study reports educational support needs and problems with ADHD/OCD comorbidity, but does not measure ADHD diagnosis causing accommodations/support plans or accommodations reducing impairment.",
+        "recommended_action": "Distinguish support need from actual support delivery and intervention benefit.",
+        "evidence": [
+          {
+            "source_id": "PMID_19482837",
+            "exact_excerpt": "A higher rate of these problems was also seen if the comorbidities attention-deficit hyperactivity disorder (ADHD) and/or obsessive compulsive disorder were present.",
+            "location": "The presence of attention-deficit hyperactivity disorder (ADHD) and obsessive-compulsive disorder worsen psychosocial and educational problems in Tourette syndrome - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Selected Tourette pediatric sample: psychosocial and educational problems correlate with comorbidity; school support need is not evidence that ADHD diagnosis causes formal accommodations."
+          }
+        ]
+      },
+      {
+        "edge_id": 48,
+        "source": "School Accommodations",
+        "dest": "Functional Impairment",
+        "sign": "-",
+        "existing_reasoning": "School accommodations reduce academic impairment.",
+        "validation_status": "insufficient_evidence",
+        "observation_from_validation": "The Tourette study reports educational support needs and problems with ADHD/OCD comorbidity, but does not measure ADHD diagnosis causing accommodations/support plans or accommodations reducing impairment.",
+        "recommended_action": "Distinguish support need from actual support delivery and intervention benefit.",
+        "evidence": [
+          {
+            "source_id": "PMID_19482837",
+            "exact_excerpt": "A higher rate of these problems was also seen if the comorbidities attention-deficit hyperactivity disorder (ADHD) and/or obsessive compulsive disorder were present.",
+            "location": "The presence of attention-deficit hyperactivity disorder (ADHD) and obsessive-compulsive disorder worsen psychosocial and educational problems in Tourette syndrome - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Selected Tourette pediatric sample: psychosocial and educational problems correlate with comorbidity; school support need is not evidence that ADHD diagnosis causes formal accommodations."
+          }
+        ]
+      },
+      {
+        "edge_id": 55,
+        "source": "Diagnosis Status",
+        "dest": "School Support Plan",
+        "sign": "+",
+        "existing_reasoning": "Diagnosis can lead to formalized school support structures.",
+        "validation_status": "insufficient_evidence",
+        "observation_from_validation": "The Tourette study reports educational support needs and problems with ADHD/OCD comorbidity, but does not measure ADHD diagnosis causing accommodations/support plans or accommodations reducing impairment.",
+        "recommended_action": "Distinguish support need from actual support delivery and intervention benefit.",
+        "evidence": [
+          {
+            "source_id": "PMID_19482837",
+            "exact_excerpt": "A higher rate of these problems was also seen if the comorbidities attention-deficit hyperactivity disorder (ADHD) and/or obsessive compulsive disorder were present.",
+            "location": "The presence of attention-deficit hyperactivity disorder (ADHD) and obsessive-compulsive disorder worsen psychosocial and educational problems in Tourette syndrome - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Selected Tourette pediatric sample: psychosocial and educational problems correlate with comorbidity; school support need is not evidence that ADHD diagnosis causes formal accommodations."
+          }
+        ]
+      },
+      {
+        "edge_id": 54,
+        "source": "Treatment Side Effects",
+        "dest": "Quality of Life",
+        "sign": "-",
+        "existing_reasoning": "Side effects can slightly reduce quality of life.",
+        "validation_status": "insufficient_evidence",
+        "observation_from_validation": "The medication review reports QOL improvement with treatment. This does not isolate side effects lowering QOL or receiving a diagnosis improving QOL; treatment and diagnosis are different exposures.",
+        "recommended_action": "Keep the named causal claim unvalidated; model medication-related QOL benefit through a separately specified pathway.",
+        "evidence": [
+          {
+            "source_id": "PMID_20839896",
+            "exact_excerpt": "These studies support a positive short-term effect of medication on QOL in ADHD for children, adolescents and adults that mirrors, to some extent, the effects of these medications on ADHD symptoms, although with smaller effect sizes.",
+            "location": "The impact of medications on quality of life in attention-deficit hyperactivity disorder_ a systematic review - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Systematic review of 25 studies, mainly pediatric and atomoxetine; adult evidence limited. QOL is a related but different endpoint from separately measured functional impairment; no diagnosis-only or adverse-effect-only effect is identified."
+          }
+        ]
+      },
+      {
+        "edge_id": 58,
+        "source": "Diagnosis Status",
+        "dest": "Quality of Life",
+        "sign": "+",
+        "existing_reasoning": "Diagnosis can strongly improve support and quality of life.",
+        "validation_status": "insufficient_evidence",
+        "observation_from_validation": "The medication review reports QOL improvement with treatment. This does not isolate side effects lowering QOL or receiving a diagnosis improving QOL; treatment and diagnosis are different exposures.",
+        "recommended_action": "Keep the named causal claim unvalidated; model medication-related QOL benefit through a separately specified pathway.",
+        "evidence": [
+          {
+            "source_id": "PMID_20839896",
+            "exact_excerpt": "These studies support a positive short-term effect of medication on QOL in ADHD for children, adolescents and adults that mirrors, to some extent, the effects of these medications on ADHD symptoms, although with smaller effect sizes.",
+            "location": "The impact of medications on quality of life in attention-deficit hyperactivity disorder_ a systematic review - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Systematic review of 25 studies, mainly pediatric and atomoxetine; adult evidence limited. QOL is a related but different endpoint from separately measured functional impairment; no diagnosis-only or adverse-effect-only effect is identified."
+          }
+        ]
+      },
+      {
+        "edge_id": 57,
+        "source": "Functional Impairment",
+        "dest": "Quality of Life",
+        "sign": "-",
+        "existing_reasoning": "Impairment reduces quality of life.",
+        "validation_status": "partially_supported",
+        "observation_from_validation": "The corpus links ADHD-related impairment to poorer QOL. The new medication review reports QOL benefits and treats QOL as functioning-related, but does not isolate functional impairment as an independent causal exposure.",
+        "recommended_action": "Retain a qualified impairment–QOL pathway and keep treatment efficacy distinct from this edge.",
+        "evidence": [
+          {
+            "source_id": "PMID_20839896",
+            "exact_excerpt": "These studies support a positive short-term effect of medication on QOL in ADHD for children, adolescents and adults that mirrors, to some extent, the effects of these medications on ADHD symptoms, although with smaller effect sizes.",
+            "location": "The impact of medications on quality of life in attention-deficit hyperactivity disorder_ a systematic review - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Systematic review of 25 studies, mainly pediatric and atomoxetine; adult evidence limited. QOL is a related but different endpoint from separately measured functional impairment; no diagnosis-only or adverse-effect-only effect is identified."
+          }
+        ]
+      },
+      {
+        "edge_id": 32,
+        "source": "Misdiagnosis Rate",
+        "dest": "Diagnosis Status",
+        "sign": "-",
+        "existing_reasoning": "Misdiagnosis still reduces accurate identification.",
+        "validation_status": "not_assessable",
+        "observation_from_validation": "The pediatric screening study finds similar detection between two instruments, not diagnostic error against a gold standard. It does not resolve the aggregate misdiagnosis-rate versus individual accurate-diagnosis coding problem.",
+        "recommended_action": "Define accurate diagnosis and an appropriate error denominator before assigning a signed causal effect.",
+        "evidence": [
+          {
+            "source_id": "PMID_20200839",
+            "exact_excerpt": "Conclusions: Our findings show that, in our population, there is no difference between the QLSA-ADHD and the DSM-IV for detecting ADHD.",
+            "location": "[Population-based diagnostic study to compare the DSM-IV and the Questionnaire for screening Latin American schoolchildren and adolescents for attention deficit hyperactivity disorder] - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Single pediatric outpatient comparison, ages 4–14. Similar screening yield does not identify sensitivity, specificity, errors against a gold standard, or adult diagnostic variability."
+          }
+        ]
+      }
+    ],
+    "32": [
+      {
+        "edge_id": 33,
+        "source": "Comorbid Conditions",
+        "dest": "Misdiagnosis Rate",
+        "sign": "+",
+        "existing_reasoning": "Comorbidity can obscure accurate ADHD diagnosis.",
+        "validation_status": "partially_supported",
+        "observation_from_validation": "The adult bipolar study documents symptom overlap and recommends assessment for coexisting ADHD/BSD. This supports diagnostic ambiguity as a clinical mechanism, but neither screening positivity nor overlap demonstrates actual misdiagnosis, and no age-32 error-rate effect is estimated.",
+        "recommended_action": "Restrict to differential-diagnosis difficulty; distinguish confirmed comorbidity, screening positivity, and actual diagnostic errors.",
+        "evidence": [
+          {
+            "source_id": "BIPOLAR_ADULT",
+            "exact_excerpt": "Conclusions: Our findings illustrate the close relationship between some symptoms of BSD and ADHD in adults.",
+            "location": "Bipolar Symptoms in Adult Attention-Deficit_Hyperactivity Disorder_ A Cross-Sectional Study of 510 Clinically Diagnosed Patients and 417 Population-Based Controls.html; article abstract (#article-tabs)",
+            "relevance": "Cross-sectional adult symptom overlap; screening positive is not identical to confirmed bipolar disorder. Clinical assessment ambiguity is supported but actual diagnostic error rates and causation are unmeasured."
+          },
+          {
+            "source_id": "BIPOLAR_ADULT",
+            "exact_excerpt": "In clinical and research settings, patients screening positive for BSD should be assessed for a possible underlying or coexisting ADHD condition and vice versa.",
+            "location": "Bipolar Symptoms in Adult Attention-Deficit_Hyperactivity Disorder_ A Cross-Sectional Study of 510 Clinically Diagnosed Patients and 417 Population-Based Controls.html; article abstract (#article-tabs)",
+            "relevance": "Clinical recommendation for differential assessment; does not establish a quantified increase in misdiagnosis. The abstract specifies ages 18–40 for controls, not the full patient age range."
+          }
+        ]
+      },
+      {
+        "edge_id": 4,
+        "source": "ADHD",
+        "dest": "Comorbid Conditions",
+        "sign": "+",
+        "existing_reasoning": "ADHD commonly co-occurs with anxiety, mood, or learning difficulties.",
+        "validation_status": "partially_supported",
+        "observation_from_validation": "New adult bipolar and prison studies document comorbidity and symptom overlap in selected samples. This strengthens adult co-occurrence evidence, but does not show ADHD causing those conditions or supply an exact-age estimate.",
+        "recommended_action": "Retain as an association with named comorbidities; distinguish screening results and selected populations from causal mechanisms.",
+        "evidence": [
+          {
+            "source_id": "BIPOLAR_ADULT",
+            "exact_excerpt": "Conclusions: Our findings illustrate the close relationship between some symptoms of BSD and ADHD in adults.",
+            "location": "Bipolar Symptoms in Adult Attention-Deficit_Hyperactivity Disorder_ A Cross-Sectional Study of 510 Clinically Diagnosed Patients and 417 Population-Based Controls.html; article abstract (#article-tabs)",
+            "relevance": "Cross-sectional adult symptom overlap; screening positive is not identical to confirmed bipolar disorder. Clinical assessment ambiguity is supported but actual diagnostic error rates and causation are unmeasured."
+          },
+          {
+            "source_id": "PMID_19270267",
+            "exact_excerpt": "The authors conclude that ADHD is common in offenders and is associated with comorbid disorders, worse quality of life, and higher risk for suicidal behaviors.",
+            "location": "Attention deficit hyperactivity disorder in men and women newly committed to prison_ clinical characteristics, psychiatric comorbidity, and quality of life - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Selected incarcerated adult sample; not representative of all adults. Association of ADHD with QOL does not isolate functional impairment as a cause or diagnosis as a benefit."
+          }
+        ]
+      },
+      {
+        "edge_id": 12,
+        "source": "Symptom Severity",
+        "dest": "Functional Impairment",
+        "sign": "+",
+        "existing_reasoning": "Higher symptoms increase occupational and daily impairment.",
+        "validation_status": "partially_supported",
+        "observation_from_validation": "The added prison and bipolar studies associate ADHD/comorbidity with emotional, social, educational and occupational problems. They do not isolate symptom severity as a causal exposure or estimate a general effect at this age.",
+        "recommended_action": "Retain a qualified functional association and disclose selection, confounding and age coverage.",
+        "evidence": [
+          {
+            "source_id": "PMID_19270267",
+            "exact_excerpt": "Offenders with ADHD were more likely to report problems with emotional and social functioning and to have higher suicide risk scores (p < .001).",
+            "location": "Attention deficit hyperactivity disorder in men and women newly committed to prison_ clinical characteristics, psychiatric comorbidity, and quality of life - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Observed functional associations in prisoners; no symptom-severity intervention or age-32/45 estimate."
+          },
+          {
+            "source_id": "BIPOLAR_ADULT",
+            "exact_excerpt": "Patients screening positive on the MDQ had significantly more drug problems, higher ADHD symptom scores, and lower educational and occupational levels.",
+            "location": "Bipolar Symptoms in Adult Attention-Deficit_Hyperactivity Disorder_ A Cross-Sectional Study of 510 Clinically Diagnosed Patients and 417 Population-Based Controls.html; article abstract (#article-tabs)",
+            "relevance": "Association between bipolar screening status and functional indicators; no causal effect, no exact age-32 estimate, and no midlife subgroup supplied."
+          }
+        ]
+      },
+      {
+        "edge_id": 61,
+        "source": "Functional Impairment",
+        "dest": "Quality of Life",
+        "sign": "-",
+        "existing_reasoning": "Impairment lowers adult quality of life.",
+        "validation_status": "partially_supported",
+        "observation_from_validation": "The prison study directly measures worse QOL alongside ADHD and functional difficulties, and the treatment review measures QOL benefit. These supplement prior life-outcome context without isolating impairment as the cause or establishing a specific-age effect.",
+        "recommended_action": "Retain association-level support and obtain population-representative longitudinal impairment/QOL measurements.",
+        "evidence": [
+          {
+            "source_id": "PMID_19270267",
+            "exact_excerpt": "The authors conclude that ADHD is common in offenders and is associated with comorbid disorders, worse quality of life, and higher risk for suicidal behaviors.",
+            "location": "Attention deficit hyperactivity disorder in men and women newly committed to prison_ clinical characteristics, psychiatric comorbidity, and quality of life - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Selected incarcerated adult sample; not representative of all adults. Association of ADHD with QOL does not isolate functional impairment as a cause or diagnosis as a benefit."
+          },
+          {
+            "source_id": "PMID_20839896",
+            "exact_excerpt": "These studies support a positive short-term effect of medication on QOL in ADHD for children, adolescents and adults that mirrors, to some extent, the effects of these medications on ADHD symptoms, although with smaller effect sizes.",
+            "location": "The impact of medications on quality of life in attention-deficit hyperactivity disorder_ a systematic review - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Systematic review of 25 studies, mainly pediatric and atomoxetine; adult evidence limited. QOL is a related but different endpoint from separately measured functional impairment; no diagnosis-only or adverse-effect-only effect is identified."
+          }
+        ]
+      },
+      {
+        "edge_id": 50,
+        "source": "Medication Treatment",
+        "dest": "Symptom Severity",
+        "sign": "-",
+        "existing_reasoning": "Medication can reduce adult symptom severity.",
+        "validation_status": "partially_supported",
+        "observation_from_validation": "The added stimulant review summarizes randomized efficacy evidence including adults, strengthening the earlier recommendation-based support. Exact-age effects and the graph’s broad medication magnitude are not supplied.",
+        "recommended_action": "Retain stimulant-specific symptom efficacy with adult age/outcome limits; do not validate numeric strength.",
+        "evidence": [
+          {
+            "source_id": "PMID_20513225",
+            "exact_excerpt": "Randomised controlled trials confirm that stimulant medication is efficacious for, and well tolerated by, males and females and patients across the age range; although preschoolers appear to have a less beneficial response and more side effects.",
+            "location": "Stimulant drug effects on attention deficit_hyperactivity disorder_ a review of the effects of age and sex of patients - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Review of controlled stimulant trials including adulthood; broad age coverage without an estimate at exactly eight, 32 or 45. Tolerability does not mean no adverse effects."
+          }
+        ]
+      },
+      {
+        "edge_id": 57,
+        "source": "Medication Treatment",
+        "dest": "Treatment Side Effects",
+        "sign": "+",
+        "existing_reasoning": "Medication side effects affect tolerability.",
+        "validation_status": "partially_supported",
+        "observation_from_validation": "The stimulant review discusses tolerability and age-related adverse effects, but supplies no therapeutic adult adverse-event estimate at this age. The prior nonmedical-use evidence remains limited for clinical treatment.",
+        "recommended_action": "Specify medication, dose, treatment context and actual adverse-event population; tolerability is not absence of side effects.",
+        "evidence": [
+          {
+            "source_id": "PMID_20513225",
+            "exact_excerpt": "Randomised controlled trials confirm that stimulant medication is efficacious for, and well tolerated by, males and females and patients across the age range; although preschoolers appear to have a less beneficial response and more side effects.",
+            "location": "Stimulant drug effects on attention deficit_hyperactivity disorder_ a review of the effects of age and sex of patients - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Review of controlled stimulant trials including adulthood; broad age coverage without an estimate at exactly eight, 32 or 45. Tolerability does not mean no adverse effects."
+          }
+        ]
+      },
+      {
+        "edge_id": 59,
+        "source": "Treatment Side Effects",
+        "dest": "Quality of Life",
+        "sign": "-",
+        "existing_reasoning": "Side effects can slightly reduce quality of life.",
+        "validation_status": "insufficient_evidence",
+        "observation_from_validation": "The medication review reports overall QOL improvement, not an independent adverse-effect-to-QOL effect. Net treatment benefit does not establish or refute side effects lowering QOL.",
+        "recommended_action": "Obtain separately measured adverse effects and longitudinal QOL data.",
+        "evidence": [
+          {
+            "source_id": "PMID_20839896",
+            "exact_excerpt": "These studies support a positive short-term effect of medication on QOL in ADHD for children, adolescents and adults that mirrors, to some extent, the effects of these medications on ADHD symptoms, although with smaller effect sizes.",
+            "location": "The impact of medications on quality of life in attention-deficit hyperactivity disorder_ a systematic review - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Systematic review of 25 studies, mainly pediatric and atomoxetine; adult evidence limited. QOL is a related but different endpoint from separately measured functional impairment; no diagnosis-only or adverse-effect-only effect is identified."
+          }
+        ]
+      },
+      {
+        "edge_id": 62,
+        "source": "Diagnosis Status",
+        "dest": "Quality of Life",
+        "sign": "+",
+        "existing_reasoning": "Diagnosis can improve quality of life through support and treatment.",
+        "validation_status": "insufficient_evidence",
+        "observation_from_validation": "Medication-associated QOL improvement does not estimate a diagnosis-only effect. The new studies do not compare receipt of diagnosis with no diagnosis while accounting for treatment and support.",
+        "recommended_action": "Retain as unvalidated; make treatment/support mediators explicit instead of inferring a direct diagnostic benefit.",
+        "evidence": [
+          {
+            "source_id": "PMID_20839896",
+            "exact_excerpt": "These studies support a positive short-term effect of medication on QOL in ADHD for children, adolescents and adults that mirrors, to some extent, the effects of these medications on ADHD symptoms, although with smaller effect sizes.",
+            "location": "The impact of medications on quality of life in attention-deficit hyperactivity disorder_ a systematic review - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Systematic review of 25 studies, mainly pediatric and atomoxetine; adult evidence limited. QOL is a related but different endpoint from separately measured functional impairment; no diagnosis-only or adverse-effect-only effect is identified."
+          }
+        ]
+      },
+      {
+        "edge_id": 60,
+        "source": "Diagnosis Status",
+        "dest": "Functional Impairment",
+        "sign": "-",
+        "existing_reasoning": "Diagnosis can reduce impairment through treatment and support.",
+        "validation_status": "insufficient_evidence",
+        "observation_from_validation": "The new medication and observational adult studies do not isolate diagnosis as an intervention reducing functional impairment. Treatment outcomes and clinical assessment recommendations are different exposures.",
+        "recommended_action": "Obtain evidence on recognition and subsequent care with a defined functional endpoint.",
+        "evidence": [
+          {
+            "source_id": "PMID_20839896",
+            "exact_excerpt": "These studies support a positive short-term effect of medication on QOL in ADHD for children, adolescents and adults that mirrors, to some extent, the effects of these medications on ADHD symptoms, although with smaller effect sizes.",
+            "location": "The impact of medications on quality of life in attention-deficit hyperactivity disorder_ a systematic review - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Systematic review of 25 studies, mainly pediatric and atomoxetine; adult evidence limited. QOL is a related but different endpoint from separately measured functional impairment; no diagnosis-only or adverse-effect-only effect is identified."
+          },
+          {
+            "source_id": "BIPOLAR_ADULT",
+            "exact_excerpt": "In clinical and research settings, patients screening positive for BSD should be assessed for a possible underlying or coexisting ADHD condition and vice versa.",
+            "location": "Bipolar Symptoms in Adult Attention-Deficit_Hyperactivity Disorder_ A Cross-Sectional Study of 510 Clinically Diagnosed Patients and 417 Population-Based Controls.html; article abstract (#article-tabs)",
+            "relevance": "Clinical recommendation for differential assessment; does not establish a quantified increase in misdiagnosis. The abstract specifies ages 18–40 for controls, not the full patient age range."
+          }
+        ]
+      },
+      {
+        "edge_id": 7,
+        "source": "Nutrition Quality",
+        "dest": "Symptom Severity",
+        "sign": "-",
+        "existing_reasoning": "Better nutrition may support regulation and attention.",
+        "validation_status": "insufficient_evidence",
+        "observation_from_validation": "The nutritional abstract concerns children with ADHD/ASD and reports no effectiveness conclusion; it does not establish a nutrition effect in adults at this age.",
+        "recommended_action": "Require adult nutrition-intervention evidence with specific exposures and symptom outcomes.",
+        "evidence": [
+          {
+            "source_id": "PMID_21766545",
+            "exact_excerpt": "This updated review presents the evidence regarding the usefulness and limitations of the most frequent nutritional and dietary interventions in the treatment of ADHD and/or ASD.",
+            "location": "Effectiveness of nutritional interventions on the functioning of children with ADHD and_or ASD. An updated review of research evidence - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Abstract describes the review scope but supplies no efficacy conclusion, effect size or comparison supporting the direction of the nutrition edge."
+          }
+        ]
+      },
+      {
+        "edge_id": 13,
+        "source": "Comorbid Conditions",
+        "dest": "Functional Impairment",
+        "sign": "+",
+        "existing_reasoning": "Comorbid burden increases impairment.",
+        "validation_status": "partially_supported",
+        "observation_from_validation": "Psychiatric comorbidity is common in adult ADHD, but the supplied evidence does not separately estimate its effect on functional impairment. The adult bipolar study adds an association between positive screening and lower educational/occupational levels, not employment instability or a separate causal impairment effect.",
+        "recommended_action": "Specify the comorbid condition and functional endpoint.",
+        "evidence": [
+          {
+            "source_id": "BIPOLAR_ADULT",
+            "exact_excerpt": "Patients screening positive on the MDQ had significantly more drug problems, higher ADHD symptom scores, and lower educational and occupational levels.",
+            "location": "Bipolar Symptoms in Adult Attention-Deficit_Hyperactivity Disorder_ A Cross-Sectional Study of 510 Clinically Diagnosed Patients and 417 Population-Based Controls.html; article abstract (#article-tabs)",
+            "relevance": "Association between bipolar screening status and functional indicators; no causal effect, no exact age-32 estimate, and no midlife subgroup supplied."
+          }
+        ]
+      },
+      {
+        "edge_id": 14,
+        "source": "Functional Impairment",
+        "dest": "Employment Instability",
+        "sign": "+",
+        "existing_reasoning": "Impairment can destabilize employment.",
+        "validation_status": "partially_supported",
+        "observation_from_validation": "The adult review describes underachievement and negative life outcomes, consistent with employment difficulty, but does not directly estimate employment instability caused by impairment. The adult bipolar study adds an association between positive screening and lower educational/occupational levels, not employment instability or a separate causal impairment effect.",
+        "recommended_action": "Retain only as a qualified occupational pathway and add employment-specific longitudinal evidence.",
+        "evidence": [
+          {
+            "source_id": "BIPOLAR_ADULT",
+            "exact_excerpt": "Patients screening positive on the MDQ had significantly more drug problems, higher ADHD symptom scores, and lower educational and occupational levels.",
+            "location": "Bipolar Symptoms in Adult Attention-Deficit_Hyperactivity Disorder_ A Cross-Sectional Study of 510 Clinically Diagnosed Patients and 417 Population-Based Controls.html; article abstract (#article-tabs)",
+            "relevance": "Association between bipolar screening status and functional indicators; no causal effect, no exact age-32 estimate, and no midlife subgroup supplied."
+          }
+        ]
+      },
+      {
+        "edge_id": 19,
+        "source": "Socioeconomic Status",
+        "dest": "Access to Mental Health Care",
+        "sign": "+",
+        "existing_reasoning": "Higher SES improves access to specialists and services.",
+        "validation_status": "insufficient_evidence",
+        "observation_from_validation": "The new geographic and disparity papers concern pediatric diagnosis and treatment. They do not identify this access, bias, or treatment pathway in adults; child service patterns are not transferred to age-specific adult claims.",
+        "recommended_action": "Require adult evidence on the specified access/bias exposure and actual service endpoint.",
+        "evidence": [
+          {
+            "source_id": "PMID_21391408",
+            "exact_excerpt": "Conclusions: Further studies are needed to determine if geographic distribution of ADHD diagnosis can be partially explained by differential efficiency of referral for diagnosis by school districts, by race/ethnicity, and/or built environment.",
+            "location": "Geographic analysis of diagnosis of Attention-Deficit_Hyperactivity Disorder in children_ Eastern Wisconsin, USA - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Observational children aged 5–17; diagnosis differences do not identify institutional bias, provider access or school-referral efficiency as the causal mechanism."
+          }
+        ]
+      },
+      {
+        "edge_id": 20,
+        "source": "Financial Status",
+        "dest": "Access to Mental Health Care",
+        "sign": "+",
+        "existing_reasoning": "Income controls access to healthcare.",
+        "validation_status": "insufficient_evidence",
+        "observation_from_validation": "The new geographic and disparity papers concern pediatric diagnosis and treatment. They do not identify this access, bias, or treatment pathway in adults; child service patterns are not transferred to age-specific adult claims.",
+        "recommended_action": "Require adult evidence on the specified access/bias exposure and actual service endpoint.",
+        "evidence": [
+          {
+            "source_id": "PMID_21391408",
+            "exact_excerpt": "Conclusions: Further studies are needed to determine if geographic distribution of ADHD diagnosis can be partially explained by differential efficiency of referral for diagnosis by school districts, by race/ethnicity, and/or built environment.",
+            "location": "Geographic analysis of diagnosis of Attention-Deficit_Hyperactivity Disorder in children_ Eastern Wisconsin, USA - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Observational children aged 5–17; diagnosis differences do not identify institutional bias, provider access or school-referral efficiency as the causal mechanism."
+          }
+        ]
+      },
+      {
+        "edge_id": 21,
+        "source": "Neighborhood Quality",
+        "dest": "Access to Mental Health Care",
+        "sign": "+",
+        "existing_reasoning": "Better neighborhood conditions improve resource access.",
+        "validation_status": "insufficient_evidence",
+        "observation_from_validation": "The new geographic and disparity papers concern pediatric diagnosis and treatment. They do not identify this access, bias, or treatment pathway in adults; child service patterns are not transferred to age-specific adult claims.",
+        "recommended_action": "Require adult evidence on the specified access/bias exposure and actual service endpoint.",
+        "evidence": [
+          {
+            "source_id": "PMID_21391408",
+            "exact_excerpt": "Conclusions: Further studies are needed to determine if geographic distribution of ADHD diagnosis can be partially explained by differential efficiency of referral for diagnosis by school districts, by race/ethnicity, and/or built environment.",
+            "location": "Geographic analysis of diagnosis of Attention-Deficit_Hyperactivity Disorder in children_ Eastern Wisconsin, USA - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Observational children aged 5–17; diagnosis differences do not identify institutional bias, provider access or school-referral efficiency as the causal mechanism."
+          }
+        ]
+      },
+      {
+        "edge_id": 22,
+        "source": "Provider Availability",
+        "dest": "Access to Mental Health Care",
+        "sign": "+",
+        "existing_reasoning": "More providers improve assessment chances.",
+        "validation_status": "insufficient_evidence",
+        "observation_from_validation": "The new geographic and disparity papers concern pediatric diagnosis and treatment. They do not identify this access, bias, or treatment pathway in adults; child service patterns are not transferred to age-specific adult claims.",
+        "recommended_action": "Require adult evidence on the specified access/bias exposure and actual service endpoint.",
+        "evidence": [
+          {
+            "source_id": "PMID_21391408",
+            "exact_excerpt": "Conclusions: Further studies are needed to determine if geographic distribution of ADHD diagnosis can be partially explained by differential efficiency of referral for diagnosis by school districts, by race/ethnicity, and/or built environment.",
+            "location": "Geographic analysis of diagnosis of Attention-Deficit_Hyperactivity Disorder in children_ Eastern Wisconsin, USA - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Observational children aged 5–17; diagnosis differences do not identify institutional bias, provider access or school-referral efficiency as the causal mechanism."
+          }
+        ]
+      },
+      {
+        "edge_id": 24,
+        "source": "Access to Mental Health Care",
+        "dest": "Diagnosis Status",
+        "sign": "+",
+        "existing_reasoning": "Access to care strongly affects adult diagnosis.",
+        "validation_status": "insufficient_evidence",
+        "observation_from_validation": "The new geographic and disparity papers concern pediatric diagnosis and treatment. They do not identify this access, bias, or treatment pathway in adults; child service patterns are not transferred to age-specific adult claims.",
+        "recommended_action": "Require adult evidence on the specified access/bias exposure and actual service endpoint.",
+        "evidence": [
+          {
+            "source_id": "PMID_21391408",
+            "exact_excerpt": "Conclusions: Further studies are needed to determine if geographic distribution of ADHD diagnosis can be partially explained by differential efficiency of referral for diagnosis by school districts, by race/ethnicity, and/or built environment.",
+            "location": "Geographic analysis of diagnosis of Attention-Deficit_Hyperactivity Disorder in children_ Eastern Wisconsin, USA - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Observational children aged 5–17; diagnosis differences do not identify institutional bias, provider access or school-referral efficiency as the causal mechanism."
+          }
+        ]
+      },
+      {
+        "edge_id": 30,
+        "source": "Institutional Bias",
+        "dest": "Misdiagnosis Rate",
+        "sign": "+",
+        "existing_reasoning": "Bias increases diagnostic errors.",
+        "validation_status": "insufficient_evidence",
+        "observation_from_validation": "The new geographic and disparity papers concern pediatric diagnosis and treatment. They do not identify this access, bias, or treatment pathway in adults; child service patterns are not transferred to age-specific adult claims.",
+        "recommended_action": "Require adult evidence on the specified access/bias exposure and actual service endpoint.",
+        "evidence": [
+          {
+            "source_id": "PMID_21391408",
+            "exact_excerpt": "Conclusions: Further studies are needed to determine if geographic distribution of ADHD diagnosis can be partially explained by differential efficiency of referral for diagnosis by school districts, by race/ethnicity, and/or built environment.",
+            "location": "Geographic analysis of diagnosis of Attention-Deficit_Hyperactivity Disorder in children_ Eastern Wisconsin, USA - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Observational children aged 5–17; diagnosis differences do not identify institutional bias, provider access or school-referral efficiency as the causal mechanism."
+          }
+        ]
+      },
+      {
+        "edge_id": 31,
+        "source": "Institutional Bias",
+        "dest": "Diagnosis Status",
+        "sign": "-",
+        "existing_reasoning": "Bias suppresses equitable diagnosis access.",
+        "validation_status": "insufficient_evidence",
+        "observation_from_validation": "The new geographic and disparity papers concern pediatric diagnosis and treatment. They do not identify this access, bias, or treatment pathway in adults; child service patterns are not transferred to age-specific adult claims.",
+        "recommended_action": "Require adult evidence on the specified access/bias exposure and actual service endpoint.",
+        "evidence": [
+          {
+            "source_id": "PMID_21391408",
+            "exact_excerpt": "Conclusions: Further studies are needed to determine if geographic distribution of ADHD diagnosis can be partially explained by differential efficiency of referral for diagnosis by school districts, by race/ethnicity, and/or built environment.",
+            "location": "Geographic analysis of diagnosis of Attention-Deficit_Hyperactivity Disorder in children_ Eastern Wisconsin, USA - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Observational children aged 5–17; diagnosis differences do not identify institutional bias, provider access or school-referral efficiency as the causal mechanism."
+          }
+        ]
+      },
+      {
+        "edge_id": 41,
+        "source": "Access to Mental Health Care",
+        "dest": "Treatment Access",
+        "sign": "+",
+        "existing_reasoning": "Mental healthcare access strongly improves treatment availability.",
+        "validation_status": "insufficient_evidence",
+        "observation_from_validation": "The new geographic and disparity papers concern pediatric diagnosis and treatment. They do not identify this access, bias, or treatment pathway in adults; child service patterns are not transferred to age-specific adult claims.",
+        "recommended_action": "Require adult evidence on the specified access/bias exposure and actual service endpoint.",
+        "evidence": [
+          {
+            "source_id": "PMID_21391408",
+            "exact_excerpt": "Conclusions: Further studies are needed to determine if geographic distribution of ADHD diagnosis can be partially explained by differential efficiency of referral for diagnosis by school districts, by race/ethnicity, and/or built environment.",
+            "location": "Geographic analysis of diagnosis of Attention-Deficit_Hyperactivity Disorder in children_ Eastern Wisconsin, USA - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Observational children aged 5–17; diagnosis differences do not identify institutional bias, provider access or school-referral efficiency as the causal mechanism."
+          }
+        ]
+      },
+      {
+        "edge_id": 42,
+        "source": "Provider Availability",
+        "dest": "Treatment Access",
+        "sign": "+",
+        "existing_reasoning": "Provider supply improves adult treatment access.",
+        "validation_status": "insufficient_evidence",
+        "observation_from_validation": "The new geographic and disparity papers concern pediatric diagnosis and treatment. They do not identify this access, bias, or treatment pathway in adults; child service patterns are not transferred to age-specific adult claims.",
+        "recommended_action": "Require adult evidence on the specified access/bias exposure and actual service endpoint.",
+        "evidence": [
+          {
+            "source_id": "PMID_21391408",
+            "exact_excerpt": "Conclusions: Further studies are needed to determine if geographic distribution of ADHD diagnosis can be partially explained by differential efficiency of referral for diagnosis by school districts, by race/ethnicity, and/or built environment.",
+            "location": "Geographic analysis of diagnosis of Attention-Deficit_Hyperactivity Disorder in children_ Eastern Wisconsin, USA - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Observational children aged 5–17; diagnosis differences do not identify institutional bias, provider access or school-referral efficiency as the causal mechanism."
+          }
+        ]
+      },
+      {
+        "edge_id": 43,
+        "source": "Socioeconomic Status",
+        "dest": "Treatment Access",
+        "sign": "+",
+        "existing_reasoning": "Higher SES improves treatment access and continuity.",
+        "validation_status": "insufficient_evidence",
+        "observation_from_validation": "The new geographic and disparity papers concern pediatric diagnosis and treatment. They do not identify this access, bias, or treatment pathway in adults; child service patterns are not transferred to age-specific adult claims.",
+        "recommended_action": "Require adult evidence on the specified access/bias exposure and actual service endpoint.",
+        "evidence": [
+          {
+            "source_id": "PMID_21391408",
+            "exact_excerpt": "Conclusions: Further studies are needed to determine if geographic distribution of ADHD diagnosis can be partially explained by differential efficiency of referral for diagnosis by school districts, by race/ethnicity, and/or built environment.",
+            "location": "Geographic analysis of diagnosis of Attention-Deficit_Hyperactivity Disorder in children_ Eastern Wisconsin, USA - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Observational children aged 5–17; diagnosis differences do not identify institutional bias, provider access or school-referral efficiency as the causal mechanism."
+          }
+        ]
+      }
+    ],
+    "45": [
+      {
+        "edge_id": 50,
+        "source": "Medication Treatment",
+        "dest": "Functional Impairment",
+        "sign": "-",
+        "existing_reasoning": "Medication can modestly reduce midlife impairment.",
+        "validation_status": "partially_supported",
+        "observation_from_validation": "The systematic medication review reports short-term QOL improvement in adults. QOL reflects perceived functioning and provides narrower treatment-benefit evidence, but is not a separately measured general functional-impairment outcome, and adult studies are few with no age-45 estimate.",
+        "recommended_action": "Retain only partial support from a related functioning/QOL endpoint; obtain a midlife medication trial with a defined impairment measure.",
+        "evidence": [
+          {
+            "source_id": "PMID_20839896",
+            "exact_excerpt": "These studies support a positive short-term effect of medication on QOL in ADHD for children, adolescents and adults that mirrors, to some extent, the effects of these medications on ADHD symptoms, although with smaller effect sizes.",
+            "location": "The impact of medications on quality of life in attention-deficit hyperactivity disorder_ a systematic review - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Systematic review of 25 studies, mainly pediatric and atomoxetine; adult evidence limited. QOL is a related but different endpoint from separately measured functional impairment; no diagnosis-only or adverse-effect-only effect is identified."
+          }
+        ]
+      },
+      {
+        "edge_id": 3,
+        "source": "ADHD",
+        "dest": "Comorbid Conditions",
+        "sign": "+",
+        "existing_reasoning": "ADHD commonly co-occurs with anxiety, mood, or other conditions.",
+        "validation_status": "partially_supported",
+        "observation_from_validation": "New adult bipolar and prison studies document comorbidity and symptom overlap in selected samples. This strengthens adult co-occurrence evidence, but does not show ADHD causing those conditions or supply an exact-age estimate.",
+        "recommended_action": "Retain as an association with named comorbidities; distinguish screening results and selected populations from causal mechanisms.",
+        "evidence": [
+          {
+            "source_id": "BIPOLAR_ADULT",
+            "exact_excerpt": "Conclusions: Our findings illustrate the close relationship between some symptoms of BSD and ADHD in adults.",
+            "location": "Bipolar Symptoms in Adult Attention-Deficit_Hyperactivity Disorder_ A Cross-Sectional Study of 510 Clinically Diagnosed Patients and 417 Population-Based Controls.html; article abstract (#article-tabs)",
+            "relevance": "Cross-sectional adult symptom overlap; screening positive is not identical to confirmed bipolar disorder. Clinical assessment ambiguity is supported but actual diagnostic error rates and causation are unmeasured."
+          },
+          {
+            "source_id": "PMID_19270267",
+            "exact_excerpt": "The authors conclude that ADHD is common in offenders and is associated with comorbid disorders, worse quality of life, and higher risk for suicidal behaviors.",
+            "location": "Attention deficit hyperactivity disorder in men and women newly committed to prison_ clinical characteristics, psychiatric comorbidity, and quality of life - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Selected incarcerated adult sample; not representative of all adults. Association of ADHD with QOL does not isolate functional impairment as a cause or diagnosis as a benefit."
+          }
+        ]
+      },
+      {
+        "edge_id": 5,
+        "source": "Symptom Severity",
+        "dest": "Functional Impairment",
+        "sign": "+",
+        "existing_reasoning": "Greater symptom burden worsens daily functioning.",
+        "validation_status": "partially_supported",
+        "observation_from_validation": "The added prison and bipolar studies associate ADHD/comorbidity with emotional, social, educational and occupational problems. They do not isolate symptom severity as a causal exposure or estimate a general effect at this age.",
+        "recommended_action": "Retain a qualified functional association and disclose selection, confounding and age coverage.",
+        "evidence": [
+          {
+            "source_id": "PMID_19270267",
+            "exact_excerpt": "Offenders with ADHD were more likely to report problems with emotional and social functioning and to have higher suicide risk scores (p < .001).",
+            "location": "Attention deficit hyperactivity disorder in men and women newly committed to prison_ clinical characteristics, psychiatric comorbidity, and quality of life - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Observed functional associations in prisoners; no symptom-severity intervention or age-32/45 estimate."
+          },
+          {
+            "source_id": "BIPOLAR_ADULT",
+            "exact_excerpt": "Patients screening positive on the MDQ had significantly more drug problems, higher ADHD symptom scores, and lower educational and occupational levels.",
+            "location": "Bipolar Symptoms in Adult Attention-Deficit_Hyperactivity Disorder_ A Cross-Sectional Study of 510 Clinically Diagnosed Patients and 417 Population-Based Controls.html; article abstract (#article-tabs)",
+            "relevance": "Association between bipolar screening status and functional indicators; no causal effect, no exact age-32 estimate, and no midlife subgroup supplied."
+          }
+        ]
+      },
+      {
+        "edge_id": 60,
+        "source": "Functional Impairment",
+        "dest": "Quality of Life",
+        "sign": "-",
+        "existing_reasoning": "Cumulative impairment strongly lowers quality of life.",
+        "validation_status": "partially_supported",
+        "observation_from_validation": "The prison study directly measures worse QOL alongside ADHD and functional difficulties, and the treatment review measures QOL benefit. These supplement prior life-outcome context without isolating impairment as the cause or establishing a specific-age effect.",
+        "recommended_action": "Retain association-level support and obtain population-representative longitudinal impairment/QOL measurements.",
+        "evidence": [
+          {
+            "source_id": "PMID_19270267",
+            "exact_excerpt": "The authors conclude that ADHD is common in offenders and is associated with comorbid disorders, worse quality of life, and higher risk for suicidal behaviors.",
+            "location": "Attention deficit hyperactivity disorder in men and women newly committed to prison_ clinical characteristics, psychiatric comorbidity, and quality of life - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Selected incarcerated adult sample; not representative of all adults. Association of ADHD with QOL does not isolate functional impairment as a cause or diagnosis as a benefit."
+          },
+          {
+            "source_id": "PMID_20839896",
+            "exact_excerpt": "These studies support a positive short-term effect of medication on QOL in ADHD for children, adolescents and adults that mirrors, to some extent, the effects of these medications on ADHD symptoms, although with smaller effect sizes.",
+            "location": "The impact of medications on quality of life in attention-deficit hyperactivity disorder_ a systematic review - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Systematic review of 25 studies, mainly pediatric and atomoxetine; adult evidence limited. QOL is a related but different endpoint from separately measured functional impairment; no diagnosis-only or adverse-effect-only effect is identified."
+          }
+        ]
+      },
+      {
+        "edge_id": 49,
+        "source": "Medication Treatment",
+        "dest": "Symptom Severity",
+        "sign": "-",
+        "existing_reasoning": "Medication can reduce symptoms, but cumulative midlife burden remains.",
+        "validation_status": "partially_supported",
+        "observation_from_validation": "The added stimulant review summarizes randomized efficacy evidence including adults, strengthening the earlier recommendation-based support. Exact-age effects and the graph’s broad medication magnitude are not supplied.",
+        "recommended_action": "Retain stimulant-specific symptom efficacy with adult age/outcome limits; do not validate numeric strength.",
+        "evidence": [
+          {
+            "source_id": "PMID_20513225",
+            "exact_excerpt": "Randomised controlled trials confirm that stimulant medication is efficacious for, and well tolerated by, males and females and patients across the age range; although preschoolers appear to have a less beneficial response and more side effects.",
+            "location": "Stimulant drug effects on attention deficit_hyperactivity disorder_ a review of the effects of age and sex of patients - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Review of controlled stimulant trials including adulthood; broad age coverage without an estimate at exactly eight, 32 or 45. Tolerability does not mean no adverse effects."
+          }
+        ]
+      },
+      {
+        "edge_id": 56,
+        "source": "Medication Treatment",
+        "dest": "Treatment Side Effects",
+        "sign": "+",
+        "existing_reasoning": "Medication can introduce side effects.",
+        "validation_status": "partially_supported",
+        "observation_from_validation": "The stimulant review discusses tolerability and age-related adverse effects, but supplies no therapeutic adult adverse-event estimate at this age. The prior nonmedical-use evidence remains limited for clinical treatment.",
+        "recommended_action": "Specify medication, dose, treatment context and actual adverse-event population; tolerability is not absence of side effects.",
+        "evidence": [
+          {
+            "source_id": "PMID_20513225",
+            "exact_excerpt": "Randomised controlled trials confirm that stimulant medication is efficacious for, and well tolerated by, males and females and patients across the age range; although preschoolers appear to have a less beneficial response and more side effects.",
+            "location": "Stimulant drug effects on attention deficit_hyperactivity disorder_ a review of the effects of age and sex of patients - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Review of controlled stimulant trials including adulthood; broad age coverage without an estimate at exactly eight, 32 or 45. Tolerability does not mean no adverse effects."
+          }
+        ]
+      },
+      {
+        "edge_id": 58,
+        "source": "Treatment Side Effects",
+        "dest": "Quality of Life",
+        "sign": "-",
+        "existing_reasoning": "Side effects can slightly reduce quality of life.",
+        "validation_status": "insufficient_evidence",
+        "observation_from_validation": "The medication review reports overall QOL improvement, not an independent adverse-effect-to-QOL effect. Net treatment benefit does not establish or refute side effects lowering QOL.",
+        "recommended_action": "Obtain separately measured adverse effects and longitudinal QOL data.",
+        "evidence": [
+          {
+            "source_id": "PMID_20839896",
+            "exact_excerpt": "These studies support a positive short-term effect of medication on QOL in ADHD for children, adolescents and adults that mirrors, to some extent, the effects of these medications on ADHD symptoms, although with smaller effect sizes.",
+            "location": "The impact of medications on quality of life in attention-deficit hyperactivity disorder_ a systematic review - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Systematic review of 25 studies, mainly pediatric and atomoxetine; adult evidence limited. QOL is a related but different endpoint from separately measured functional impairment; no diagnosis-only or adverse-effect-only effect is identified."
+          }
+        ]
+      },
+      {
+        "edge_id": 61,
+        "source": "Diagnosis Status",
+        "dest": "Quality of Life",
+        "sign": "+",
+        "existing_reasoning": "Diagnosis can improve quality of life in midlife.",
+        "validation_status": "insufficient_evidence",
+        "observation_from_validation": "Medication-associated QOL improvement does not estimate a diagnosis-only effect. The new studies do not compare receipt of diagnosis with no diagnosis while accounting for treatment and support.",
+        "recommended_action": "Retain as unvalidated; make treatment/support mediators explicit instead of inferring a direct diagnostic benefit.",
+        "evidence": [
+          {
+            "source_id": "PMID_20839896",
+            "exact_excerpt": "These studies support a positive short-term effect of medication on QOL in ADHD for children, adolescents and adults that mirrors, to some extent, the effects of these medications on ADHD symptoms, although with smaller effect sizes.",
+            "location": "The impact of medications on quality of life in attention-deficit hyperactivity disorder_ a systematic review - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Systematic review of 25 studies, mainly pediatric and atomoxetine; adult evidence limited. QOL is a related but different endpoint from separately measured functional impairment; no diagnosis-only or adverse-effect-only effect is identified."
+          }
+        ]
+      },
+      {
+        "edge_id": 59,
+        "source": "Diagnosis Status",
+        "dest": "Functional Impairment",
+        "sign": "-",
+        "existing_reasoning": "Diagnosis can reduce impairment through support and treatment.",
+        "validation_status": "insufficient_evidence",
+        "observation_from_validation": "The new medication and observational adult studies do not isolate diagnosis as an intervention reducing functional impairment. Treatment outcomes and clinical assessment recommendations are different exposures.",
+        "recommended_action": "Obtain evidence on recognition and subsequent care with a defined functional endpoint.",
+        "evidence": [
+          {
+            "source_id": "PMID_20839896",
+            "exact_excerpt": "These studies support a positive short-term effect of medication on QOL in ADHD for children, adolescents and adults that mirrors, to some extent, the effects of these medications on ADHD symptoms, although with smaller effect sizes.",
+            "location": "The impact of medications on quality of life in attention-deficit hyperactivity disorder_ a systematic review - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Systematic review of 25 studies, mainly pediatric and atomoxetine; adult evidence limited. QOL is a related but different endpoint from separately measured functional impairment; no diagnosis-only or adverse-effect-only effect is identified."
+          },
+          {
+            "source_id": "BIPOLAR_ADULT",
+            "exact_excerpt": "In clinical and research settings, patients screening positive for BSD should be assessed for a possible underlying or coexisting ADHD condition and vice versa.",
+            "location": "Bipolar Symptoms in Adult Attention-Deficit_Hyperactivity Disorder_ A Cross-Sectional Study of 510 Clinically Diagnosed Patients and 417 Population-Based Controls.html; article abstract (#article-tabs)",
+            "relevance": "Clinical recommendation for differential assessment; does not establish a quantified increase in misdiagnosis. The abstract specifies ages 18–40 for controls, not the full patient age range."
+          }
+        ]
+      },
+      {
+        "edge_id": 7,
+        "source": "Nutrition Quality",
+        "dest": "Symptom Severity",
+        "sign": "-",
+        "existing_reasoning": "Long-term nutrition may support cognitive regulation.",
+        "validation_status": "insufficient_evidence",
+        "observation_from_validation": "The nutritional abstract concerns children with ADHD/ASD and reports no effectiveness conclusion; it does not establish a nutrition effect in adults at this age.",
+        "recommended_action": "Require adult nutrition-intervention evidence with specific exposures and symptom outcomes.",
+        "evidence": [
+          {
+            "source_id": "PMID_21766545",
+            "exact_excerpt": "This updated review presents the evidence regarding the usefulness and limitations of the most frequent nutritional and dietary interventions in the treatment of ADHD and/or ASD.",
+            "location": "Effectiveness of nutritional interventions on the functioning of children with ADHD and_or ASD. An updated review of research evidence - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Abstract describes the review scope but supplies no efficacy conclusion, effect size or comparison supporting the direction of the nutrition edge."
+          }
+        ]
+      },
+      {
+        "edge_id": 2,
+        "source": "ADHD",
+        "dest": "Executive Function Deficit",
+        "sign": "+",
+        "existing_reasoning": "Underlying ADHD strongly affects executive functioning.",
+        "validation_status": "partially_supported",
+        "observation_from_validation": "The adult review describes longstanding attentional, emotional-regulation, and disinhibition impairments, consistent with executive dysfunction, but does not identify ADHD as a separate causal exposure. The new adult ERP review adds cognitive-processing context without isolating the practical functional consequences of executive deficits at midlife.",
+        "recommended_action": "Define the executive-function construct and distinguish diagnostic symptoms from downstream deficits.",
+        "evidence": [
+          {
+            "source_id": "PMID_20660947",
+            "exact_excerpt": "Considering that all three core symptoms of the disorder have a significant impact on both information processing and on concomitant cognitive functions, patients with ADHD should be divided into subgroups based on their neuropsychologically measured dominant symptoms.",
+            "location": "[Event-related potentials associated with error detection in adult ADHD--literature review] - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Adult electrophysiological review: cognitive processing mechanisms, not a controlled executive-deficit-to-practical-impairment effect."
+          }
+        ]
+      },
+      {
+        "edge_id": 4,
+        "source": "Executive Function Deficit",
+        "dest": "Functional Impairment",
+        "sign": "+",
+        "existing_reasoning": "Executive dysfunction increases cumulative impairment.",
+        "validation_status": "partially_supported",
+        "observation_from_validation": "Longstanding neuropsychological impairments are linked with negative life outcomes and underachievement, but the evidence does not isolate executive dysfunction as the causal component. The new adult ERP review adds cognitive-processing context without isolating the practical functional consequences of executive deficits at midlife.",
+        "recommended_action": "Retain as a qualified pathway and add executive-function-specific longitudinal evidence.",
+        "evidence": [
+          {
+            "source_id": "PMID_20660947",
+            "exact_excerpt": "Considering that all three core symptoms of the disorder have a significant impact on both information processing and on concomitant cognitive functions, patients with ADHD should be divided into subgroups based on their neuropsychologically measured dominant symptoms.",
+            "location": "[Event-related potentials associated with error detection in adult ADHD--literature review] - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Adult electrophysiological review: cognitive processing mechanisms, not a controlled executive-deficit-to-practical-impairment effect."
+          }
+        ]
+      },
+      {
+        "edge_id": 15,
+        "source": "Financial Status",
+        "dest": "Access to Mental Health Care",
+        "sign": "+",
+        "existing_reasoning": "Income strongly controls access.",
+        "validation_status": "insufficient_evidence",
+        "observation_from_validation": "The new geographic and disparity papers concern pediatric diagnosis and treatment. They do not identify this access, bias, or treatment pathway in adults; child service patterns are not transferred to age-specific adult claims.",
+        "recommended_action": "Require adult evidence on the specified access/bias exposure and actual service endpoint.",
+        "evidence": [
+          {
+            "source_id": "PMID_21391408",
+            "exact_excerpt": "Conclusions: Further studies are needed to determine if geographic distribution of ADHD diagnosis can be partially explained by differential efficiency of referral for diagnosis by school districts, by race/ethnicity, and/or built environment.",
+            "location": "Geographic analysis of diagnosis of Attention-Deficit_Hyperactivity Disorder in children_ Eastern Wisconsin, USA - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Observational children aged 5–17; diagnosis differences do not identify institutional bias, provider access or school-referral efficiency as the causal mechanism."
+          }
+        ]
+      },
+      {
+        "edge_id": 16,
+        "source": "Socioeconomic Status",
+        "dest": "Access to Mental Health Care",
+        "sign": "+",
+        "existing_reasoning": "Socioeconomic position shapes access to care.",
+        "validation_status": "insufficient_evidence",
+        "observation_from_validation": "The new geographic and disparity papers concern pediatric diagnosis and treatment. They do not identify this access, bias, or treatment pathway in adults; child service patterns are not transferred to age-specific adult claims.",
+        "recommended_action": "Require adult evidence on the specified access/bias exposure and actual service endpoint.",
+        "evidence": [
+          {
+            "source_id": "PMID_21391408",
+            "exact_excerpt": "Conclusions: Further studies are needed to determine if geographic distribution of ADHD diagnosis can be partially explained by differential efficiency of referral for diagnosis by school districts, by race/ethnicity, and/or built environment.",
+            "location": "Geographic analysis of diagnosis of Attention-Deficit_Hyperactivity Disorder in children_ Eastern Wisconsin, USA - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Observational children aged 5–17; diagnosis differences do not identify institutional bias, provider access or school-referral efficiency as the causal mechanism."
+          }
+        ]
+      },
+      {
+        "edge_id": 17,
+        "source": "Neighborhood Quality",
+        "dest": "Access to Mental Health Care",
+        "sign": "+",
+        "existing_reasoning": "Better neighborhood conditions improve resource access.",
+        "validation_status": "insufficient_evidence",
+        "observation_from_validation": "The new geographic and disparity papers concern pediatric diagnosis and treatment. They do not identify this access, bias, or treatment pathway in adults; child service patterns are not transferred to age-specific adult claims.",
+        "recommended_action": "Require adult evidence on the specified access/bias exposure and actual service endpoint.",
+        "evidence": [
+          {
+            "source_id": "PMID_21391408",
+            "exact_excerpt": "Conclusions: Further studies are needed to determine if geographic distribution of ADHD diagnosis can be partially explained by differential efficiency of referral for diagnosis by school districts, by race/ethnicity, and/or built environment.",
+            "location": "Geographic analysis of diagnosis of Attention-Deficit_Hyperactivity Disorder in children_ Eastern Wisconsin, USA - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Observational children aged 5–17; diagnosis differences do not identify institutional bias, provider access or school-referral efficiency as the causal mechanism."
+          }
+        ]
+      },
+      {
+        "edge_id": 18,
+        "source": "Provider Availability",
+        "dest": "Access to Mental Health Care",
+        "sign": "+",
+        "existing_reasoning": "Provider supply improves access.",
+        "validation_status": "insufficient_evidence",
+        "observation_from_validation": "The new geographic and disparity papers concern pediatric diagnosis and treatment. They do not identify this access, bias, or treatment pathway in adults; child service patterns are not transferred to age-specific adult claims.",
+        "recommended_action": "Require adult evidence on the specified access/bias exposure and actual service endpoint.",
+        "evidence": [
+          {
+            "source_id": "PMID_21391408",
+            "exact_excerpt": "Conclusions: Further studies are needed to determine if geographic distribution of ADHD diagnosis can be partially explained by differential efficiency of referral for diagnosis by school districts, by race/ethnicity, and/or built environment.",
+            "location": "Geographic analysis of diagnosis of Attention-Deficit_Hyperactivity Disorder in children_ Eastern Wisconsin, USA - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Observational children aged 5–17; diagnosis differences do not identify institutional bias, provider access or school-referral efficiency as the causal mechanism."
+          }
+        ]
+      },
+      {
+        "edge_id": 20,
+        "source": "Access to Mental Health Care",
+        "dest": "Diagnosis Status",
+        "sign": "+",
+        "existing_reasoning": "Access helps adult diagnosis.",
+        "validation_status": "insufficient_evidence",
+        "observation_from_validation": "The new geographic and disparity papers concern pediatric diagnosis and treatment. They do not identify this access, bias, or treatment pathway in adults; child service patterns are not transferred to age-specific adult claims.",
+        "recommended_action": "Require adult evidence on the specified access/bias exposure and actual service endpoint.",
+        "evidence": [
+          {
+            "source_id": "PMID_21391408",
+            "exact_excerpt": "Conclusions: Further studies are needed to determine if geographic distribution of ADHD diagnosis can be partially explained by differential efficiency of referral for diagnosis by school districts, by race/ethnicity, and/or built environment.",
+            "location": "Geographic analysis of diagnosis of Attention-Deficit_Hyperactivity Disorder in children_ Eastern Wisconsin, USA - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Observational children aged 5–17; diagnosis differences do not identify institutional bias, provider access or school-referral efficiency as the causal mechanism."
+          }
+        ]
+      },
+      {
+        "edge_id": 28,
+        "source": "Institutional Bias",
+        "dest": "Diagnosis Status",
+        "sign": "-",
+        "existing_reasoning": "Bias suppresses fair diagnosis.",
+        "validation_status": "insufficient_evidence",
+        "observation_from_validation": "The new geographic and disparity papers concern pediatric diagnosis and treatment. They do not identify this access, bias, or treatment pathway in adults; child service patterns are not transferred to age-specific adult claims.",
+        "recommended_action": "Require adult evidence on the specified access/bias exposure and actual service endpoint.",
+        "evidence": [
+          {
+            "source_id": "PMID_21391408",
+            "exact_excerpt": "Conclusions: Further studies are needed to determine if geographic distribution of ADHD diagnosis can be partially explained by differential efficiency of referral for diagnosis by school districts, by race/ethnicity, and/or built environment.",
+            "location": "Geographic analysis of diagnosis of Attention-Deficit_Hyperactivity Disorder in children_ Eastern Wisconsin, USA - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Observational children aged 5–17; diagnosis differences do not identify institutional bias, provider access or school-referral efficiency as the causal mechanism."
+          }
+        ]
+      },
+      {
+        "edge_id": 39,
+        "source": "Access to Mental Health Care",
+        "dest": "Treatment Access",
+        "sign": "+",
+        "existing_reasoning": "Healthcare access supports treatment availability.",
+        "validation_status": "insufficient_evidence",
+        "observation_from_validation": "The new geographic and disparity papers concern pediatric diagnosis and treatment. They do not identify this access, bias, or treatment pathway in adults; child service patterns are not transferred to age-specific adult claims.",
+        "recommended_action": "Require adult evidence on the specified access/bias exposure and actual service endpoint.",
+        "evidence": [
+          {
+            "source_id": "PMID_21391408",
+            "exact_excerpt": "Conclusions: Further studies are needed to determine if geographic distribution of ADHD diagnosis can be partially explained by differential efficiency of referral for diagnosis by school districts, by race/ethnicity, and/or built environment.",
+            "location": "Geographic analysis of diagnosis of Attention-Deficit_Hyperactivity Disorder in children_ Eastern Wisconsin, USA - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Observational children aged 5–17; diagnosis differences do not identify institutional bias, provider access or school-referral efficiency as the causal mechanism."
+          }
+        ]
+      },
+      {
+        "edge_id": 40,
+        "source": "Provider Availability",
+        "dest": "Treatment Access",
+        "sign": "+",
+        "existing_reasoning": "Provider availability improves treatment access.",
+        "validation_status": "insufficient_evidence",
+        "observation_from_validation": "The new geographic and disparity papers concern pediatric diagnosis and treatment. They do not identify this access, bias, or treatment pathway in adults; child service patterns are not transferred to age-specific adult claims.",
+        "recommended_action": "Require adult evidence on the specified access/bias exposure and actual service endpoint.",
+        "evidence": [
+          {
+            "source_id": "PMID_21391408",
+            "exact_excerpt": "Conclusions: Further studies are needed to determine if geographic distribution of ADHD diagnosis can be partially explained by differential efficiency of referral for diagnosis by school districts, by race/ethnicity, and/or built environment.",
+            "location": "Geographic analysis of diagnosis of Attention-Deficit_Hyperactivity Disorder in children_ Eastern Wisconsin, USA - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Observational children aged 5–17; diagnosis differences do not identify institutional bias, provider access or school-referral efficiency as the causal mechanism."
+          }
+        ]
+      },
+      {
+        "edge_id": 41,
+        "source": "Socioeconomic Status",
+        "dest": "Treatment Access",
+        "sign": "+",
+        "existing_reasoning": "Higher SES improves treatment access and continuity.",
+        "validation_status": "insufficient_evidence",
+        "observation_from_validation": "The new geographic and disparity papers concern pediatric diagnosis and treatment. They do not identify this access, bias, or treatment pathway in adults; child service patterns are not transferred to age-specific adult claims.",
+        "recommended_action": "Require adult evidence on the specified access/bias exposure and actual service endpoint.",
+        "evidence": [
+          {
+            "source_id": "PMID_21391408",
+            "exact_excerpt": "Conclusions: Further studies are needed to determine if geographic distribution of ADHD diagnosis can be partially explained by differential efficiency of referral for diagnosis by school districts, by race/ethnicity, and/or built environment.",
+            "location": "Geographic analysis of diagnosis of Attention-Deficit_Hyperactivity Disorder in children_ Eastern Wisconsin, USA - PubMed.html; article abstract (#eng-abstract)",
+            "relevance": "Observational children aged 5–17; diagnosis differences do not identify institutional bias, provider access or school-referral efficiency as the causal mechanism."
+          }
+        ]
+      }
+    ]
+  }
+}

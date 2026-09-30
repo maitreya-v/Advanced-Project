@@ -5,16 +5,18 @@
   "age": 32,
   "edge_count": 53,
   "pdf_file_count": 4,
-  "unique_document_count": 4,
-  "validation_updated_utc": "2026-09-23T03:56:08.125898+00:00",
+  "unique_document_count": 29,
+  "html_file_count": 25,
+  "abstract_only_document_count": 25,
+  "validation_updated_utc": "2026-09-30T00:34:31.572295+00:00",
   "original_unchanged": true,
   "strength_assessed": false,
   "status_counts": {
     "supported": 0,
-    "partially_supported": 0,
+    "partially_supported": 3,
     "contradicted": 0,
     "mixed_evidence": 0,
-    "insufficient_evidence": 47,
+    "insufficient_evidence": 44,
     "not_assessable": 6
   },
   "documents": [
@@ -37,6 +39,181 @@
       "file": "full_texts/attention-deficit-disorder-and-the-mediating-effect-of-age.pdf",
       "sha256": "99c112d394158b81057fcf2f85246fd22a5346c55115fade7d1e435ef980a940",
       "duplicate_of": null
+    },
+    {
+      "file": "../1990 ADHD Papers/A controlled family history study of Tourette's syndrome, I_ Attention-deficit hyperactivity disorder and learning disorders - PubMed.html",
+      "sha256": "f1f94444f29b5f4673d64acee9d8dcbaf18da10e56b066793e5dd3676018a7bf",
+      "duplicate_of": null,
+      "source_type": "saved_pubmed_html",
+      "abstract_only": true
+    },
+    {
+      "file": "../1990 ADHD Papers/A critique of current diagnostic criteria for attention deficit hyperactivity disorder_ clinical and research implications - PubMed.html",
+      "sha256": "218fa32e8a4442796da8f6c55a17d15e743e957e8d002ce7fa4a2fc0018443d7",
+      "duplicate_of": null,
+      "source_type": "saved_pubmed_html",
+      "abstract_only": true
+    },
+    {
+      "file": "../1990 ADHD Papers/Attention deficit hyperactivity disorder_ does it affect adults too_ - PubMed.html",
+      "sha256": "f3c844fb24bcf8b0335fd6d1b65ca7f21b316162d3a61e019c07cd2948437bf4",
+      "duplicate_of": null,
+      "source_type": "saved_pubmed_html",
+      "abstract_only": true
+    },
+    {
+      "file": "../1990 ADHD Papers/Attention of hyperactive preschool children--electrodermal activity during auditory stimulation - PubMed.html",
+      "sha256": "07f5dfbb51849ed390b387078315db9696fcdce856322782bcf9f5638d00f7f7",
+      "duplicate_of": null,
+      "source_type": "saved_pubmed_html",
+      "abstract_only": true
+    },
+    {
+      "file": "../1990 ADHD Papers/Attention-deficit hyperactivity disorder - PubMed.html",
+      "sha256": "d8c2c33f0b989dcc71433445922ae7b78df77d6db60b44b52f1e60fa2d02e075",
+      "duplicate_of": null,
+      "source_type": "saved_pubmed_html",
+      "abstract_only": true
+    },
+    {
+      "file": "../1990 ADHD Papers/Effects of methylphenidate on adolescents with aggressive conduct disorder and ADDH_ a preliminary report - PubMed.html",
+      "sha256": "675b6af218f1fe2c234cb340e9ae6b0a1edd38749385786b0593b5f456f5a43f",
+      "duplicate_of": null,
+      "source_type": "saved_pubmed_html",
+      "abstract_only": true
+    },
+    {
+      "file": "../1990 ADHD Papers/Efficacy of methylphenidate among mentally retarded children with attention deficit hyperactivity disorder - PubMed.html",
+      "sha256": "f0a8f9ea45f2211a127fb8ed04b1fde753ee4d18d2726003b34caf303bbd6cc1",
+      "duplicate_of": null,
+      "source_type": "saved_pubmed_html",
+      "abstract_only": true
+    },
+    {
+      "file": "../1990 ADHD Papers/Family-genetic and psychosocial risk factors in DSM-III attention deficit disorder - PubMed.html",
+      "sha256": "ffa5d6bf3be1d4e2d1b44fa6f1245ac4d424ea5db14bd934a86b2c568c8cfe12",
+      "duplicate_of": null,
+      "source_type": "saved_pubmed_html",
+      "abstract_only": true
+    },
+    {
+      "file": "../1990 ADHD Papers/Intellectual, academic, and adaptive functioning of Tourette syndrome children with and without attention deficit disorder - PubMed.html",
+      "sha256": "d93c46b440ae3c249f60f4415df94ae9274f74aab88e6efeaa43f947d3c3c7e6",
+      "duplicate_of": null,
+      "source_type": "saved_pubmed_html",
+      "abstract_only": true
+    },
+    {
+      "file": "../1990 ADHD Papers/Methylphenidate and baseball playing in ADHD children_ who's on first_ - PubMed.html",
+      "sha256": "051e409481456c178ec49ea5487634b325c2949016b85a1e35fb2d23e5437a83",
+      "duplicate_of": null,
+      "source_type": "saved_pubmed_html",
+      "abstract_only": true
+    },
+    {
+      "file": "../1990 ADHD Papers/Methylphenidate in aggressive-hyperactive boys_ I. Effects on peer aggression in public school settings - PubMed.html",
+      "sha256": "b6ef800d54efa3d47c9f62c1f4b02e8910442dcd0756ac1b93b12c1cf45f641a",
+      "duplicate_of": null,
+      "source_type": "saved_pubmed_html",
+      "abstract_only": true
+    },
+    {
+      "file": "../1990 ADHD Papers/Parent-based diagnosis of attention deficit disorder predicts a diagnosis based on teacher report - PubMed.html",
+      "sha256": "07e69817fb070c372660709f815d0157befb50eb0b7f9021005f16d24ab1ecb4",
+      "duplicate_of": null,
+      "source_type": "saved_pubmed_html",
+      "abstract_only": true
+    },
+    {
+      "file": "../1990 ADHD Papers/Possible influence of carbamazepine on plasma imipramine concentrations in children with attention deficit hyperactivity disorder - PubMed.html",
+      "sha256": "8c1fdae328b92b0ddca983113718877183b76a26225443e7cc88775f36096515",
+      "duplicate_of": null,
+      "source_type": "saved_pubmed_html",
+      "abstract_only": true
+    },
+    {
+      "file": "../1990 ADHD Papers/Side effects of methylphenidate in children with attention deficit hyperactivity disorder_ a systemic, placebo-controlled evaluation - PubMed.html",
+      "sha256": "ef6d8b034e338e72d2a54ed3031b10f22165595966626567ff8835db3d116221",
+      "duplicate_of": null,
+      "source_type": "saved_pubmed_html",
+      "abstract_only": true
+    },
+    {
+      "file": "../1990 ADHD Papers/Situational variability in boys and girls identified as ADHD - PubMed.html",
+      "sha256": "159dfdda96e66c16692acf4f7023c63edf4a329cefeb536d7362cac6b95894b8",
+      "duplicate_of": null,
+      "source_type": "saved_pubmed_html",
+      "abstract_only": true
+    },
+    {
+      "file": "../1990 ADHD Papers/Social judgment processes in hyperactive boys_ effects of methylphenidate and comparisons with normal peers - PubMed.html",
+      "sha256": "78142ba67858a930b7763d786a0523abcb54deed291a4d36056685029bf8e89f",
+      "duplicate_of": null,
+      "source_type": "saved_pubmed_html",
+      "abstract_only": true
+    },
+    {
+      "file": "../1990 ADHD Papers/The adolescent outcome of hyperactive children diagnosed by research criteria_ II. Academic, attentional, and neuropsychological status - PubMed.html",
+      "sha256": "1a9bd587f2aed3daeb5ae4191acd1d180d4b06a0439a8184e217ee8b3ce26758",
+      "duplicate_of": null,
+      "source_type": "saved_pubmed_html",
+      "abstract_only": true
+    },
+    {
+      "file": "../1990 ADHD Papers/The diagnostic value of cerebellar-vestibular tests in detecting learning disabilities, dyslexia, and attention deficit disorder - PubMed.html",
+      "sha256": "ecbe1186dd50ba7d2748df6e7182d382580478faeb0b3d338519af40a2f6c7d3",
+      "duplicate_of": null,
+      "source_type": "saved_pubmed_html",
+      "abstract_only": true
+    },
+    {
+      "file": "../1990 ADHD Papers/The effects of behavioral parent training on families with young hyperactive children - PubMed.html",
+      "sha256": "67fa8e220f402922cb47b1951b93a76aaa9e93067e44641f90b95d4fb84f343b",
+      "duplicate_of": null,
+      "source_type": "saved_pubmed_html",
+      "abstract_only": true
+    },
+    {
+      "file": "../1990 ADHD Papers/The frequency and significance of additional self-reported psychiatric diagnoses in children with attention deficit disorder - PubMed.html",
+      "sha256": "148fdc2bae935e63f4e1dd99221667bf54cf995a7a6d61ed94a2e2e43bd3847c",
+      "duplicate_of": null,
+      "source_type": "saved_pubmed_html",
+      "abstract_only": true
+    },
+    {
+      "file": "../1990 ADHD Papers/The relationship between continuous performance tasks and neuropsychological tests in children with attention-deficit hyperactivity disorder - PubMed.html",
+      "sha256": "44718fa1d74d3f7e7701043ac42b03a0a8adfc2c53d22263688af463752bd3b7",
+      "duplicate_of": null,
+      "source_type": "saved_pubmed_html",
+      "abstract_only": true
+    },
+    {
+      "file": "../1990 ADHD Papers/[Are there sex differences in the manifestation of hyperkinetic syndrome_] - PubMed.html",
+      "sha256": "4d34da600d22ed8e01e957b81e86cd181494dd0495644d03852f85dbd161c3ee",
+      "duplicate_of": null,
+      "source_type": "saved_pubmed_html",
+      "abstract_only": true
+    },
+    {
+      "file": "../1990 ADHD Papers/[Changes in the concept of minimal brain dysfunction in modern diagnostic classification and its manifestation in our theory and practice] - PubMed.html",
+      "sha256": "eda1f1cf53ae52d2ea482c4d61a1c84d02ecabf5fab93cf902f8179b245d30e8",
+      "duplicate_of": null,
+      "source_type": "saved_pubmed_html",
+      "abstract_only": true
+    },
+    {
+      "file": "../1990 ADHD Papers/[Preliminary study of traditional Chinese medicine treatment of minimal brain dysfunction_ analysis of 100 cases] - PubMed.html",
+      "sha256": "45bc955d755502f0b92d2f2bba322d11c45543b468624948b512dd80419f4cf7",
+      "duplicate_of": null,
+      "source_type": "saved_pubmed_html",
+      "abstract_only": true
+    },
+    {
+      "file": "../1990 ADHD Papers/[The importance of nonverbal motor examination methods in screening for minimal brain dysfunction] - PubMed.html",
+      "sha256": "a9961574979f88c2d3371365599499ac6e7111076b9a75545550443ce1a81a34",
+      "duplicate_of": null,
+      "source_type": "saved_pubmed_html",
+      "abstract_only": true
     }
   ]
 }

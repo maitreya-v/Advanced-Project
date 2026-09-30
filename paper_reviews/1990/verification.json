@@ -1,0 +1,59 @@
+{
+  "8": {
+    "edges_checked": 58,
+    "status_changes": 6,
+    "status_counts": {
+      "supported": 0,
+      "partially_supported": 12,
+      "contradicted": 0,
+      "mixed_evidence": 0,
+      "insufficient_evidence": 42,
+      "not_assessable": 4
+    },
+    "all_source_links_exist": true,
+    "all_abstract_excerpts_match": true,
+    "all_graph_colors_and_evidence_match_reports": true,
+    "excel_matches_json": true,
+    "original_graph_unchanged": true,
+    "edge_click_handler_and_new_tab_links_preserved": true,
+    "browser_interaction_tested": false
+  },
+  "32": {
+    "edges_checked": 53,
+    "status_changes": 3,
+    "status_counts": {
+      "supported": 0,
+      "partially_supported": 3,
+      "contradicted": 0,
+      "mixed_evidence": 0,
+      "insufficient_evidence": 44,
+      "not_assessable": 6
+    },
+    "all_source_links_exist": true,
+    "all_abstract_excerpts_match": true,
+    "all_graph_colors_and_evidence_match_reports": true,
+    "excel_matches_json": true,
+    "original_graph_unchanged": true,
+    "edge_click_handler_and_new_tab_links_preserved": true,
+    "browser_interaction_tested": false
+  },
+  "45": {
+    "edges_checked": 45,
+    "status_changes": 1,
+    "status_counts": {
+      "supported": 0,
+      "partially_supported": 1,
+      "contradicted": 0,
+      "mixed_evidence": 0,
+      "insufficient_evidence": 40,
+      "not_assessable": 4
+    },
+    "all_source_links_exist": true,
+    "all_abstract_excerpts_match": true,
+    "all_graph_colors_and_evidence_match_reports": true,
+    "excel_matches_json": true,
+    "original_graph_unchanged": true,
+    "edge_click_handler_and_new_tab_links_preserved": true,
+    "browser_interaction_tested": false
+  }
+}

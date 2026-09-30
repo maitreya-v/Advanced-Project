@@ -1,4 +1,8 @@
-"""Conservative full-text judgments for the 1990 graph."""
+"""Reviewed 1990 PDF evidence, supplemented by saved PubMed abstracts."""
+from pathlib import Path
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from validation_html_utils import apply_html_review
 STATUS_DEFINITIONS = {
     "supported": "Evidence supports the stated direction, sign, and reasoning within the declared scope.",
     "partially_supported": "Evidence supports only part of the claim, a narrower population or outcome, or an association rather than the full causal claim.",
@@ -29,7 +33,7 @@ OVERRIDES = {
  52:("not_assessable","Adherence occurs after medication is prescribed, while the destination is Medication Treatment and the explanation concerns benefit.","Change the destination to treatment exposure or benefit.",[]),
  54:("partially_supported","The adolescent trial directly reports mild side effects and weight reduction, but does not provide age-eight adverse-event evidence.","Retain with drug and adolescent age scope; add child-specific adverse-event evidence.",["side_effects"]),
 }
-DEFAULT_OBSERVATION="No supplied 1990 paper directly establishes this edge's direction, sign, and stated mechanism for children around age eight."
+DEFAULT_OBSERVATION="No supplied 1990 PDF or HTML abstract directly establishes this edge's direction, sign, and stated mechanism for children around age eight."
 DEFAULT_ACTION="Retain only as an explicitly unvalidated hypothesis or add directly relevant pediatric evidence."
 
 def build_review(edges):
@@ -37,4 +41,4 @@ def build_review(edges):
     for edge_id,(source,dest,sign,_strength,reasoning) in enumerate(edges,1):
         status,observation,action,keys=OVERRIDES.get(edge_id,("insufficient_evidence",DEFAULT_OBSERVATION,DEFAULT_ACTION,[]))
         rows.append({"edge_id":edge_id,"source":source,"dest":dest,"existing_reasoning":reasoning,"sign":sign,"validation_status":status,"observation_from_validation":observation,"recommended_action":action,"evidence":[E[k] for k in keys]})
-    return rows
+    return apply_html_review(rows, 8, E)

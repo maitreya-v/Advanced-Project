@@ -1,0 +1,7 @@
+#pendo-g-OpQx6cTfleJpYF8ahs371cx_OH0 #pendo-guide-container ._pendo-close-guide:focus,
+#pendo-g-OpQx6cTfleJpYF8ahs371cx_OH0 #pendo-guide-container ._pendo-button:focus,
+#pendo-g-OpQx6cTfleJpYF8ahs371cx_OH0 #pendo-guide-container ._pendo-open-text-poll-input:focus {
+  outline: 3px solid #FF551D !important;
+  outline-offset: 3px !important;
+  box-shadow: 0 0 0 2px #FFFFFF, 0 0 0 5px #FF551D !important;
+}

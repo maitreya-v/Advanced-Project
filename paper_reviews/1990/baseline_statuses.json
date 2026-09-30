@@ -1,0 +1,977 @@
+{
+  "8": {
+    "graph_sha256": "6bea3fec53d49271b1db25ba8d6f602323e6c5f9f6d6c81c6573c148da0386d5",
+    "status_counts": {
+      "supported": 0,
+      "partially_supported": 6,
+      "contradicted": 0,
+      "mixed_evidence": 0,
+      "insufficient_evidence": 48,
+      "not_assessable": 4
+    },
+    "edges": [
+      {
+        "edge_id": 1,
+        "source": "Genetic Risk",
+        "dest": "ADHD",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 2,
+        "source": "ADHD",
+        "dest": "Symptom Severity",
+        "validation_status": "not_assessable"
+      },
+      {
+        "edge_id": 3,
+        "source": "ADHD",
+        "dest": "Symptom Type",
+        "validation_status": "not_assessable"
+      },
+      {
+        "edge_id": 4,
+        "source": "Age",
+        "dest": "Symptom Severity",
+        "validation_status": "partially_supported"
+      },
+      {
+        "edge_id": 5,
+        "source": "Gender",
+        "dest": "Symptom Type",
+        "validation_status": "not_assessable"
+      },
+      {
+        "edge_id": 6,
+        "source": "Early Life Nutrition",
+        "dest": "Genetic Risk",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 7,
+        "source": "Nutrition Quality",
+        "dest": "Symptom Severity",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 8,
+        "source": "Sleep Quality",
+        "dest": "Symptom Severity",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 9,
+        "source": "Environmental Exposure",
+        "dest": "Symptom Severity",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 10,
+        "source": "Symptom Severity",
+        "dest": "Functional Impairment",
+        "validation_status": "partially_supported"
+      },
+      {
+        "edge_id": 11,
+        "source": "Symptom Type",
+        "dest": "Teacher Referral Rate",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 12,
+        "source": "Classroom Size",
+        "dest": "Teacher Referral Rate",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 13,
+        "source": "School Labeling Bias",
+        "dest": "Teacher Referral Rate",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 14,
+        "source": "School Resources",
+        "dest": "Teacher Referral Rate",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 15,
+        "source": "Education System Pressure",
+        "dest": "Teacher Referral Rate",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 16,
+        "source": "Teacher Referral Rate",
+        "dest": "Parental Awareness",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 17,
+        "source": "Parental Denial",
+        "dest": "Parental Awareness",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 18,
+        "source": "Parental Education",
+        "dest": "Parental Awareness",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 19,
+        "source": "Parental Education",
+        "dest": "Parental Denial",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 20,
+        "source": "Family Stress",
+        "dest": "Symptom Severity",
+        "validation_status": "partially_supported"
+      },
+      {
+        "edge_id": 21,
+        "source": "Household Stability",
+        "dest": "Family Stress",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 22,
+        "source": "Household Stability",
+        "dest": "Nutrition Quality",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 23,
+        "source": "Family Stress",
+        "dest": "Sleep Quality",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 24,
+        "source": "Parental Awareness",
+        "dest": "Diagnosis Status",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 25,
+        "source": "Socioeconomic Status",
+        "dest": "Educational Access",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 26,
+        "source": "Educational Access",
+        "dest": "Teacher Referral Rate",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 27,
+        "source": "Socioeconomic Status",
+        "dest": "Access to Mental Health Care",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 28,
+        "source": "Financial Status",
+        "dest": "Access to Mental Health Care",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 29,
+        "source": "Neighborhood Quality",
+        "dest": "Access to Mental Health Care",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 30,
+        "source": "Provider Availability",
+        "dest": "Access to Mental Health Care",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 31,
+        "source": "Cost of Evaluation",
+        "dest": "Diagnosis Status",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 32,
+        "source": "Access to Mental Health Care",
+        "dest": "Diagnosis Status",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 33,
+        "source": "Race / Ethnicity",
+        "dest": "Institutional Bias",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 34,
+        "source": "Institutional Bias",
+        "dest": "Teacher Referral Rate",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 35,
+        "source": "Institutional Bias",
+        "dest": "Diagnosis Status",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 36,
+        "source": "Misdiagnosis Rate",
+        "dest": "Diagnosis Status",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 37,
+        "source": "Cultural Norms",
+        "dest": "Stigma",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 38,
+        "source": "Stigma",
+        "dest": "Diagnosis Status",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 39,
+        "source": "Diagnosis Status",
+        "dest": "Medication Treatment",
+        "validation_status": "partially_supported"
+      },
+      {
+        "edge_id": 40,
+        "source": "Diagnosis Status",
+        "dest": "Behavioral Therapy",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 41,
+        "source": "Diagnosis Status",
+        "dest": "School Accommodations",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 42,
+        "source": "Access to Mental Health Care",
+        "dest": "Treatment Access",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 43,
+        "source": "Provider Availability",
+        "dest": "Treatment Access",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 44,
+        "source": "Socioeconomic Status",
+        "dest": "Treatment Access",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 45,
+        "source": "Treatment Access",
+        "dest": "Medication Treatment",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 46,
+        "source": "Treatment Access",
+        "dest": "Behavioral Therapy",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 47,
+        "source": "Treatment Access",
+        "dest": "School Accommodations",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 48,
+        "source": "Behavioral Therapy",
+        "dest": "Functional Impairment",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 49,
+        "source": "School Accommodations",
+        "dest": "Functional Impairment",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 50,
+        "source": "Medication Treatment",
+        "dest": "Symptom Severity",
+        "validation_status": "partially_supported"
+      },
+      {
+        "edge_id": 51,
+        "source": "Medication Treatment",
+        "dest": "Functional Impairment",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 52,
+        "source": "Treatment Adherence",
+        "dest": "Medication Treatment",
+        "validation_status": "not_assessable"
+      },
+      {
+        "edge_id": 53,
+        "source": "Stigma",
+        "dest": "Treatment Adherence",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 54,
+        "source": "Medication Treatment",
+        "dest": "Treatment Side Effects",
+        "validation_status": "partially_supported"
+      },
+      {
+        "edge_id": 55,
+        "source": "Treatment Side Effects",
+        "dest": "Treatment Adherence",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 56,
+        "source": "Treatment Side Effects",
+        "dest": "Quality of Life",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 57,
+        "source": "Functional Impairment",
+        "dest": "Quality of Life",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 58,
+        "source": "Diagnosis Status",
+        "dest": "Quality of Life",
+        "validation_status": "insufficient_evidence"
+      }
+    ]
+  },
+  "32": {
+    "graph_sha256": "855423bc140b4b3a1beaa9b02009d9029213bd7dad6b7c7b758d0d5de04fd947",
+    "status_counts": {
+      "supported": 0,
+      "partially_supported": 0,
+      "contradicted": 0,
+      "mixed_evidence": 0,
+      "insufficient_evidence": 47,
+      "not_assessable": 6
+    },
+    "edges": [
+      {
+        "edge_id": 1,
+        "source": "Genetic Risk",
+        "dest": "ADHD",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 2,
+        "source": "ADHD",
+        "dest": "Symptom Severity",
+        "validation_status": "not_assessable"
+      },
+      {
+        "edge_id": 3,
+        "source": "ADHD",
+        "dest": "Symptom Type",
+        "validation_status": "not_assessable"
+      },
+      {
+        "edge_id": 4,
+        "source": "ADHD",
+        "dest": "Comorbid Conditions",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 5,
+        "source": "Nutrition Quality",
+        "dest": "Symptom Severity",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 6,
+        "source": "Sleep Quality",
+        "dest": "Symptom Severity",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 7,
+        "source": "Chronic Stress Load",
+        "dest": "Symptom Severity",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 8,
+        "source": "Age",
+        "dest": "Symptom Severity",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 9,
+        "source": "Gender",
+        "dest": "Symptom Type",
+        "validation_status": "not_assessable"
+      },
+      {
+        "edge_id": 10,
+        "source": "Symptom Severity",
+        "dest": "Functional Impairment",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 11,
+        "source": "Comorbid Conditions",
+        "dest": "Functional Impairment",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 12,
+        "source": "Functional Impairment",
+        "dest": "Employment Instability",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 13,
+        "source": "Performance Pressure",
+        "dest": "Functional Impairment",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 14,
+        "source": "Employment Instability",
+        "dest": "Provider Referral Pathway",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 15,
+        "source": "Family Stress",
+        "dest": "Symptom Severity",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 16,
+        "source": "Household Stability",
+        "dest": "Family Stress",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 17,
+        "source": "Socioeconomic Status",
+        "dest": "Educational Access",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 18,
+        "source": "Financial Status",
+        "dest": "Access to Mental Health Care",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 19,
+        "source": "Neighborhood Quality",
+        "dest": "Access to Mental Health Care",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 20,
+        "source": "Socioeconomic Status",
+        "dest": "Access to Mental Health Care",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 21,
+        "source": "Provider Availability",
+        "dest": "Access to Mental Health Care",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 22,
+        "source": "Cost of Evaluation",
+        "dest": "Diagnosis Status",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 23,
+        "source": "Access to Mental Health Care",
+        "dest": "Diagnosis Status",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 24,
+        "source": "Provider Referral Pathway",
+        "dest": "Diagnosis Status",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 25,
+        "source": "Race / Ethnicity",
+        "dest": "Institutional Bias",
+        "validation_status": "not_assessable"
+      },
+      {
+        "edge_id": 26,
+        "source": "Institutional Bias",
+        "dest": "Misdiagnosis Rate",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 27,
+        "source": "Institutional Bias",
+        "dest": "Diagnosis Status",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 28,
+        "source": "Diagnostic Criteria Variability",
+        "dest": "Misdiagnosis Rate",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 29,
+        "source": "Comorbid Conditions",
+        "dest": "Misdiagnosis Rate",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 30,
+        "source": "Misdiagnosis Rate",
+        "dest": "Diagnosis Status",
+        "validation_status": "not_assessable"
+      },
+      {
+        "edge_id": 31,
+        "source": "Cultural Norms",
+        "dest": "Stigma",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 32,
+        "source": "Stigma",
+        "dest": "Access to Mental Health Care",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 33,
+        "source": "Gender Bias",
+        "dest": "Diagnosis Status",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 34,
+        "source": "Gender Bias",
+        "dest": "Misdiagnosis Rate",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 35,
+        "source": "Diagnosis Status",
+        "dest": "Medication Treatment",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 36,
+        "source": "Diagnosis Status",
+        "dest": "Behavioral Therapy",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 37,
+        "source": "Access to Mental Health Care",
+        "dest": "Treatment Access",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 38,
+        "source": "Provider Availability",
+        "dest": "Treatment Access",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 39,
+        "source": "Socioeconomic Status",
+        "dest": "Treatment Access",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 40,
+        "source": "Provider Referral Pathway",
+        "dest": "Treatment Access",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 41,
+        "source": "Treatment Access",
+        "dest": "Medication Treatment",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 42,
+        "source": "Treatment Access",
+        "dest": "Behavioral Therapy",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 43,
+        "source": "Behavioral Therapy",
+        "dest": "Functional Impairment",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 44,
+        "source": "Medication Treatment",
+        "dest": "Symptom Severity",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 45,
+        "source": "Medication Treatment",
+        "dest": "Functional Impairment",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 46,
+        "source": "Treatment Adherence",
+        "dest": "Medication Treatment",
+        "validation_status": "not_assessable"
+      },
+      {
+        "edge_id": 47,
+        "source": "Stigma",
+        "dest": "Treatment Adherence",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 48,
+        "source": "Medication Treatment",
+        "dest": "Treatment Side Effects",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 49,
+        "source": "Treatment Side Effects",
+        "dest": "Treatment Adherence",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 50,
+        "source": "Treatment Side Effects",
+        "dest": "Quality of Life",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 51,
+        "source": "Diagnosis Status",
+        "dest": "Functional Impairment",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 52,
+        "source": "Functional Impairment",
+        "dest": "Quality of Life",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 53,
+        "source": "Diagnosis Status",
+        "dest": "Quality of Life",
+        "validation_status": "insufficient_evidence"
+      }
+    ]
+  },
+  "45": {
+    "graph_sha256": "053cc4bf4424d8af6e6c7455aa4a2d2a77e3be9bec60d0d7cbe9081873a87987",
+    "status_counts": {
+      "supported": 0,
+      "partially_supported": 0,
+      "contradicted": 0,
+      "mixed_evidence": 0,
+      "insufficient_evidence": 41,
+      "not_assessable": 4
+    },
+    "edges": [
+      {
+        "edge_id": 1,
+        "source": "Genetic Risk",
+        "dest": "ADHD",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 2,
+        "source": "ADHD",
+        "dest": "Executive Function Deficit",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 3,
+        "source": "Executive Function Deficit",
+        "dest": "Functional Impairment",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 4,
+        "source": "Symptom Severity",
+        "dest": "Functional Impairment",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 5,
+        "source": "Age",
+        "dest": "Functional Impairment",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 6,
+        "source": "Nutrition Quality",
+        "dest": "Symptom Severity",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 7,
+        "source": "Sleep Quality",
+        "dest": "Executive Function Deficit",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 8,
+        "source": "Chronic Stress Load",
+        "dest": "Functional Impairment",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 9,
+        "source": "Home Structure Stability",
+        "dest": "Family Stress",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 10,
+        "source": "Family Stress",
+        "dest": "Chronic Stress Load",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 11,
+        "source": "Family History Awareness",
+        "dest": "Self-Diagnosis Behavior",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 12,
+        "source": "Financial Status",
+        "dest": "Access to Mental Health Care",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 13,
+        "source": "Socioeconomic Status",
+        "dest": "Access to Mental Health Care",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 14,
+        "source": "Neighborhood Quality",
+        "dest": "Access to Mental Health Care",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 15,
+        "source": "Provider Availability",
+        "dest": "Access to Mental Health Care",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 16,
+        "source": "Cost of Evaluation",
+        "dest": "Diagnosis Status",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 17,
+        "source": "Access to Mental Health Care",
+        "dest": "Diagnosis Status",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 18,
+        "source": "Clinical Guidelines Evolution",
+        "dest": "Diagnosis Status",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 19,
+        "source": "Misdiagnosis Rate",
+        "dest": "Diagnosis Status",
+        "validation_status": "not_assessable"
+      },
+      {
+        "edge_id": 20,
+        "source": "Race / Ethnicity",
+        "dest": "Institutional Bias",
+        "validation_status": "not_assessable"
+      },
+      {
+        "edge_id": 21,
+        "source": "Institutional Bias",
+        "dest": "Diagnosis Status",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 22,
+        "source": "Race / Ethnicity",
+        "dest": "Access to Mental Health Care",
+        "validation_status": "not_assessable"
+      },
+      {
+        "edge_id": 23,
+        "source": "Cultural Norms",
+        "dest": "Stigma",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 24,
+        "source": "Stigma",
+        "dest": "Diagnosis Status",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 25,
+        "source": "Stigma",
+        "dest": "Self-Diagnosis Behavior",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 26,
+        "source": "Diagnosis Status",
+        "dest": "Medication Treatment",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 27,
+        "source": "Diagnosis Status",
+        "dest": "Behavioral Therapy",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 28,
+        "source": "Access to Mental Health Care",
+        "dest": "Treatment Access",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 29,
+        "source": "Provider Availability",
+        "dest": "Treatment Access",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 30,
+        "source": "Socioeconomic Status",
+        "dest": "Treatment Access",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 31,
+        "source": "Self-Diagnosis Behavior",
+        "dest": "Treatment Access",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 32,
+        "source": "Clinical Guidelines Evolution",
+        "dest": "Treatment Access",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 33,
+        "source": "Treatment Access",
+        "dest": "Medication Treatment",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 34,
+        "source": "Treatment Access",
+        "dest": "Behavioral Therapy",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 35,
+        "source": "Behavioral Therapy",
+        "dest": "Functional Impairment",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 36,
+        "source": "Medication Treatment",
+        "dest": "Symptom Severity",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 37,
+        "source": "Medication Treatment",
+        "dest": "Functional Impairment",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 38,
+        "source": "Treatment Adherence",
+        "dest": "Medication Treatment",
+        "validation_status": "not_assessable"
+      },
+      {
+        "edge_id": 39,
+        "source": "Stigma",
+        "dest": "Treatment Adherence",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 40,
+        "source": "Medication Treatment",
+        "dest": "Treatment Side Effects",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 41,
+        "source": "Treatment Side Effects",
+        "dest": "Treatment Adherence",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 42,
+        "source": "Treatment Side Effects",
+        "dest": "Quality of Life",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 43,
+        "source": "Diagnosis Status",
+        "dest": "Functional Impairment",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 44,
+        "source": "Functional Impairment",
+        "dest": "Quality of Life",
+        "validation_status": "insufficient_evidence"
+      },
+      {
+        "edge_id": 45,
+        "source": "Diagnosis Status",
+        "dest": "Quality of Life",
+        "validation_status": "insufficient_evidence"
+      }
+    ]
+  }
+}

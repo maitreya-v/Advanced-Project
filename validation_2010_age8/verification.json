@@ -2,13 +2,15 @@
   "graph": "2010_8 yo.py",
   "edges_reviewed": 58,
   "pdf_files_reviewed": 25,
-  "unique_documents_reviewed": 24,
+  "unique_documents_reviewed": 39,
+  "html_files_reviewed": 17,
+  "all_html_excerpts_verified": true,
   "status_counts": {
     "supported": 1,
-    "partially_supported": 11,
+    "partially_supported": 14,
     "contradicted": 0,
     "mixed_evidence": 0,
-    "insufficient_evidence": 35,
+    "insufficient_evidence": 32,
     "not_assessable": 11
   },
   "original_sha256": "606d746c1d204957a2a8e960e7dc074666ea8b411ea9e678888b65890fcd7eab",

@@ -2,13 +2,15 @@
   "graph": "1990_45 yo.py",
   "edges_reviewed": 45,
   "pdf_files_reviewed": 4,
-  "unique_documents_reviewed": 4,
+  "unique_documents_reviewed": 29,
+  "html_files_reviewed": 25,
+  "all_html_excerpts_verified": true,
   "status_counts": {
     "supported": 0,
-    "partially_supported": 0,
+    "partially_supported": 1,
     "contradicted": 0,
     "mixed_evidence": 0,
-    "insufficient_evidence": 41,
+    "insufficient_evidence": 40,
     "not_assessable": 4
   },
   "original_sha256": "053cc4bf4424d8af6e6c7455aa4a2d2a77e3be9bec60d0d7cbe9081873a87987",

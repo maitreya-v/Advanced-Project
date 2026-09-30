@@ -1,5 +1,10 @@
 """Conservative full-text judgments for the 2010 age-32 graph."""
 
+from pathlib import Path
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from validation_html_utils import apply_html_review
+
 STATUS_DEFINITIONS = {
     "supported": "Evidence supports the stated direction, sign, and reasoning within the declared scope.",
     "partially_supported": "Evidence supports only part of the claim, a narrower population or outcome, or an association rather than the full causal claim.",
@@ -66,4 +71,4 @@ def build_review(edges):
     for edge_id, (source, dest, sign, _strength, reasoning) in enumerate(edges, 1):
         status, observation, action, keys = OVERRIDES.get(edge_id, ("insufficient_evidence", DEFAULT_OBSERVATION, DEFAULT_ACTION, []))
         rows.append({"edge_id": edge_id, "source": source, "dest": dest, "existing_reasoning": reasoning, "sign": sign, "validation_status": status, "observation_from_validation": observation, "recommended_action": action, "evidence": [E[key] for key in keys]})
-    return rows
+    return apply_html_review(rows, 32, E, year=2010)

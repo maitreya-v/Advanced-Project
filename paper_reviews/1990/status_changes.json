@@ -1,0 +1,92 @@
+[
+  {
+    "age": 8,
+    "edge_id": 1,
+    "source": "Genetic Risk",
+    "dest": "ADHD",
+    "before": "insufficient_evidence",
+    "after": "partially_supported",
+    "reason": "The blinded family study finds excess ADD among first-degree relatives after accounting for several measured factors. This adds family-genetic evidence, but does not isolate inherited effects from shared environment or establish the claim that genetic liability contributes strongly at exactly age eight."
+  },
+  {
+    "age": 8,
+    "edge_id": 24,
+    "source": "Parental Awareness",
+    "dest": "Diagnosis Status",
+    "before": "insufficient_evidence",
+    "after": "partially_supported",
+    "reason": "Parent-based diagnosis was corroborated by teacher report in a clinically referred pediatric sample. This supports a narrower parent-information-to-assessment pathway, not a causal effect of parental awareness on diagnosis likelihood."
+  },
+  {
+    "age": 8,
+    "edge_id": 40,
+    "source": "Diagnosis Status",
+    "dest": "Behavioral Therapy",
+    "before": "insufficient_evidence",
+    "after": "partially_supported",
+    "reason": "The review recommends behavioral intervention in ADHD care, and two diagnosed preschool families received parent training. This supports a clinical diagnosis-to-behavioral-care pathway, not a real-world access probability or an age-eight-specific referral effect."
+  },
+  {
+    "age": 8,
+    "edge_id": 48,
+    "source": "Behavioral Therapy",
+    "dest": "Functional Impairment",
+    "before": "insufficient_evidence",
+    "after": "partially_supported",
+    "reason": "Two preschool family case studies reported improved child behavior and parent-child relationships after parent training. The evidence is uncontrolled and younger than age eight; it supports only part of the broad classroom/home impairment claim."
+  },
+  {
+    "age": 8,
+    "edge_id": 51,
+    "source": "Medication Treatment",
+    "dest": "Functional Impairment",
+    "before": "insufficient_evidence",
+    "after": "partially_supported",
+    "reason": "Placebo-controlled methylphenidate studies show better attention during baseball, classroom behavior, and work output in selected child populations. Some learning and social outcomes did not improve. These are narrower functional gains, not a universal reduction in childhood impairment."
+  },
+  {
+    "age": 8,
+    "edge_id": 55,
+    "source": "Treatment Side Effects",
+    "dest": "Treatment Adherence",
+    "before": "insufficient_evidence",
+    "after": "partially_supported",
+    "reason": "The pediatric side-effect trial reports immediate medication discontinuation for serious adverse effects in three children. This supports reduced treatment continuation, a narrower endpoint than voluntary adherence or a general dose-taking measure."
+  },
+  {
+    "age": 32,
+    "edge_id": 29,
+    "source": "Comorbid Conditions",
+    "dest": "Misdiagnosis Rate",
+    "before": "insufficient_evidence",
+    "after": "partially_supported",
+    "reason": "The adult review states that other diagnostic labels can mask ADHD. This provides clinical support for obscured recognition, but labels are not necessarily true comorbid conditions and the abstract does not quantify diagnostic errors at age 32."
+  },
+  {
+    "age": 32,
+    "edge_id": 36,
+    "source": "Diagnosis Status",
+    "dest": "Behavioral Therapy",
+    "before": "insufficient_evidence",
+    "after": "partially_supported",
+    "reason": "The adult review describes identification followed by psychotherapy and medical management. This supports a broader psychological-care pathway compatible with coping support; it does not identify a behavioral modality or estimate access at age 32."
+  },
+  {
+    "age": 32,
+    "edge_id": 51,
+    "source": "Diagnosis Status",
+    "dest": "Functional Impairment",
+    "before": "insufficient_evidence",
+    "after": "partially_supported",
+    "reason": "The adult review describes identification followed by intervention that can improve life functioning. This partially supports the indirect recognition-to-care pathway, but not an independent effect of diagnosis, measured impairment reduction, or a specific age-32 estimate."
+  },
+  {
+    "age": 45,
+    "edge_id": 43,
+    "source": "Diagnosis Status",
+    "dest": "Functional Impairment",
+    "before": "insufficient_evidence",
+    "after": "partially_supported",
+    "reason": "The adult review describes identification followed by intervention that can improve life functioning. This partially supports the indirect recognition-to-care pathway, but not an independent effect of diagnosis, measured impairment reduction, or a specific age-45 estimate."
+  }
+]

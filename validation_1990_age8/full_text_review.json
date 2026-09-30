@@ -6,16 +6,18 @@
     "age": 8,
     "edge_count": 58,
     "pdf_file_count": 4,
-    "unique_document_count": 4,
-    "validation_updated_utc": "2026-09-23T03:56:08.043035+00:00",
+    "unique_document_count": 29,
+    "html_file_count": 25,
+    "abstract_only_document_count": 25,
+    "validation_updated_utc": "2026-09-30T00:34:31.572292+00:00",
     "original_unchanged": true,
     "strength_assessed": false,
     "status_counts": {
       "supported": 0,
-      "partially_supported": 6,
+      "partially_supported": 12,
       "contradicted": 0,
       "mixed_evidence": 0,
-      "insufficient_evidence": 48,
+      "insufficient_evidence": 42,
       "not_assessable": 4
     }
   },
@@ -55,6 +57,102 @@
       "exact_excerpt": "The ADD + delinquent boys consistently fared the worst on the assessments of family adversity, verbal intelligence, and reading. Their antisocial behavior began before school age, escalated at school entry, and persisted into adolescence.",
       "location": "PDF page 2",
       "relevance": "Longitudinal association in boys; does not isolate ADD or family adversity as a single causal exposure."
+    },
+    "html_8_1_6": {
+      "source_id": "PMID_2387786",
+      "exact_excerpt": "These results confirm and extend previous findings indicating important family-genetic risk factors in ADD.",
+      "location": "Family-genetic and psychosocial risk factors in DSM-III attention deficit disorder - PubMed.html; English abstract (#eng-abstract)",
+      "relevance": "Blinded family study supports familial liability; shared environment is not fully separated and strong genetic causation or an exact-age effect is not established."
+    },
+    "html_8_24_7": {
+      "source_id": "PMID_2228921",
+      "exact_excerpt": "there was a 90% probability that the teacher report would result in a positive diagnosis given a positive parent diagnosis",
+      "location": "Parent-based diagnosis of attention deficit disorder predicts a diagnosis based on teacher report - PubMed.html; English abstract (#eng-abstract)",
+      "relevance": "Diagnostic concordance among 43 clinically referred children aged 4–17 supports parent information in assessment; parental awareness was not manipulated and referral-population prediction is not a causal estimate."
+    },
+    "html_8_40_8": {
+      "source_id": "PMID_1974836",
+      "exact_excerpt": "For maximum impact, pharmacotherapy should be accompanied by behavioral, educational, and psychosocial intervention.",
+      "location": "Attention-deficit hyperactivity disorder - PubMed.html; English abstract (#eng-abstract)",
+      "relevance": "Clinical review recommendation; not a controlled behavioral-treatment or school-accommodation outcome study."
+    },
+    "html_8_40_9": {
+      "source_id": "PMID_2273073",
+      "exact_excerpt": "Improvements were found in parents' confidence in their child management ability and knowledge of behavioral principles, in certain child behavior problems, in parental ratings of hyperactivity, and in the parent-child relationship.",
+      "location": "The effects of behavioral parent training on families with young hyperactive children - PubMed.html; English abstract (#eng-abstract)",
+      "relevance": "Two uncontrolled preschool family case studies; narrow and younger than age eight, with no independent treatment-effect estimate."
+    },
+    "html_8_48_10": {
+      "source_id": "PMID_2273073",
+      "exact_excerpt": "Improvements were found in parents' confidence in their child management ability and knowledge of behavioral principles, in certain child behavior problems, in parental ratings of hyperactivity, and in the parent-child relationship.",
+      "location": "The effects of behavioral parent training on families with young hyperactive children - PubMed.html; English abstract (#eng-abstract)",
+      "relevance": "Two uncontrolled preschool family case studies; narrow and younger than age eight, with no independent treatment-effect estimate."
+    },
+    "html_8_48_11": {
+      "source_id": "PMID_1974836",
+      "exact_excerpt": "For maximum impact, pharmacotherapy should be accompanied by behavioral, educational, and psychosocial intervention.",
+      "location": "Attention-deficit hyperactivity disorder - PubMed.html; English abstract (#eng-abstract)",
+      "relevance": "Clinical review recommendation; not a controlled behavioral-treatment or school-accommodation outcome study."
+    },
+    "html_8_50_12": {
+      "source_id": "PMID_2319047",
+      "exact_excerpt": "The effects of 0.3 and 0.6 mg/kg methylphenidate were analyzed in a double-blind, placebo-controlled, cross-over study in which 17 boys (ages 7.8-9.9 years) with attention deficit hyperactivity disorder (ADHD) played in baseball games.",
+      "location": "Methylphenidate and baseball playing in ADHD children_ who's on first_ - PubMed.html; English abstract (#eng-abstract)",
+      "relevance": "Age range includes eight; randomized-condition comparison addresses attention during a specific activity, not all impairment or all medications."
+    },
+    "html_8_50_13": {
+      "source_id": "PMID_2319047",
+      "exact_excerpt": "Results revealed that methylphenidate had a beneficial effect on attending during the game.",
+      "location": "Methylphenidate and baseball playing in ADHD children_ who's on first_ - PubMed.html; English abstract (#eng-abstract)",
+      "relevance": "Improved attention in baseball supplies narrower functional-context evidence for children near eight."
+    },
+    "html_8_50_14": {
+      "source_id": "PMID_2228923",
+      "exact_excerpt": "In the classroom, both doses of methylphenidate also resulted in reduced levels of motor movement, off-task behavior, noncompliance, and disruptiveness.",
+      "location": "Methylphenidate in aggressive-hyperactive boys_ I. Effects on peer aggression in public school settings - PubMed.html; English abstract (#eng-abstract)",
+      "relevance": "Double-blind trial in 11 aggressive-hyperactive children; specific classroom outcomes, age range unspecified in abstract, parent ratings did not mirror teacher ratings."
+    },
+    "html_8_51_15": {
+      "source_id": "PMID_2319047",
+      "exact_excerpt": "Results revealed that methylphenidate had a beneficial effect on attending during the game.",
+      "location": "Methylphenidate and baseball playing in ADHD children_ who's on first_ - PubMed.html; English abstract (#eng-abstract)",
+      "relevance": "Improved attention in baseball supplies narrower functional-context evidence for children near eight."
+    },
+    "html_8_51_16": {
+      "source_id": "PMID_2228923",
+      "exact_excerpt": "In the classroom, both doses of methylphenidate also resulted in reduced levels of motor movement, off-task behavior, noncompliance, and disruptiveness.",
+      "location": "Methylphenidate in aggressive-hyperactive boys_ I. Effects on peer aggression in public school settings - PubMed.html; English abstract (#eng-abstract)",
+      "relevance": "Double-blind trial in 11 aggressive-hyperactive children; specific classroom outcomes, age range unspecified in abstract, parent ratings did not mirror teacher ratings."
+    },
+    "html_8_51_17": {
+      "source_id": "PMID_2135682",
+      "exact_excerpt": "Significant increases in work output, on-task behavior, and attentional skills were associated with methylphenidate.",
+      "location": "Efficacy of methylphenidate among mentally retarded children with attention deficit hyperactivity disorder - PubMed.html; English abstract (#eng-abstract)",
+      "relevance": "Double-blind crossover in 12 children with IQ 50–74; learning and free-play social interaction did not significantly improve, limiting global impairment claims."
+    },
+    "html_8_54_18": {
+      "source_id": "PMID_2196520",
+      "exact_excerpt": "Parent ratings indicated that only the side effects of decreased appetite, insomnia, stomachaches, and headaches increased significantly in frequency and severity during the two active medication doses as compared with the placebo condition.",
+      "location": "Side effects of methylphenidate in children with attention deficit hyperactivity disorder_ a systemic, placebo-controlled evaluation - PubMed.html; English abstract (#eng-abstract)",
+      "relevance": "Triple-blind crossover in 83 children supplies direct pediatric adverse-effect evidence; exact age-eight estimate is unavailable and most adverse effects were mild."
+    },
+    "html_8_55_19": {
+      "source_id": "PMID_2196520",
+      "exact_excerpt": "Three children (3.6%) had side effects that were sufficiently serious to warrant immediate discontinuation of medication.",
+      "location": "Side effects of methylphenidate in children with attention deficit hyperactivity disorder_ a systemic, placebo-controlled evaluation - PubMed.html; English abstract (#eng-abstract)",
+      "relevance": "Direct adverse-effect-to-discontinuation evidence; clinician-directed stopping is narrower than voluntary adherence, with exact ages unspecified."
+    },
+    "html_8_16_20": {
+      "source_id": "PMID_2228921",
+      "exact_excerpt": "there was a 90% probability that the teacher report would result in a positive diagnosis given a positive parent diagnosis",
+      "location": "Parent-based diagnosis of attention deficit disorder predicts a diagnosis based on teacher report - PubMed.html; English abstract (#eng-abstract)",
+      "relevance": "Diagnostic concordance among 43 clinically referred children aged 4–17 supports parent information in assessment; parental awareness was not manipulated and referral-population prediction is not a causal estimate."
+    },
+    "html_8_36_21": {
+      "source_id": "PMID_2289969",
+      "exact_excerpt": "The implications of these revisions for clinical diagnosis are also discussed.",
+      "location": "A critique of current diagnostic criteria for attention deficit hyperactivity disorder_ clinical and research implications - PubMed.html; English abstract (#eng-abstract)",
+      "relevance": "Criteria discussion is not an error-rate or causal diagnostic study."
     }
   }
 }

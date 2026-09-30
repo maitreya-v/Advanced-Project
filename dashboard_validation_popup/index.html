@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root {
+      --text: #111827; --background: #ffffff; --surface: #f3f4f6;
+      --muted: #4b5563; --heading: #374151; --border: #d1d5db;
+      --link: #1d4ed8; --quote-background: #fef3c7; --quote-text: #111827;
+      color-scheme: light;
+    }
+    :root[data-theme="dark"] {
+      --text: #fafafa; --background: #0e1117; --surface: #262730;
+      --muted: #cbd5e1; --heading: #e5e7eb; --border: #64748b;
+      --link: #93c5fd; --quote-background: #3b2f15; --quote-text: #fef3c7;
+      color-scheme: dark;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; overflow: hidden; font: 16px/1.5 Arial, sans-serif; color: var(--text); background: var(--background); }
+    #app { display: grid; grid-template-rows: auto minmax(0, 1fr) auto; gap: 12px; }
+    header { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; }
+    h1 { font-size: 20px; line-height: 1.3; margin: 0; flex-basis: 100%; overflow-wrap: anywhere; }
+    #status { color: white; padding: 3px 10px; border-radius: 20px; font-weight: bold; font-size: 13px; }
+    #context, #section-label { font-size: 13px; color: var(--muted); }
+    #section-label { flex-basis: 100%; }
+    #content, #measure { padding: 2px; overflow-wrap: anywhere; }
+    #content { overflow: hidden; min-height: 0; }
+    #measure { position: absolute; left: -10000px; top: 0; visibility: hidden; }
+    .field { margin: 0 0 12px; }
+    .field:last-child { margin-bottom: 0; }
+    .field h2 { margin: 0 0 5px; font-size: 14px; color: var(--heading); }
+    .field p { margin: 0; white-space: pre-wrap; }
+    .quote p { background: var(--quote-background); color: var(--quote-text); border-left: 4px solid #f59e0b; padding: 10px 12px; }
+    footer { border-top: 1px solid var(--border); padding-top: 10px; display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+    #links { display: flex; gap: 12px; margin-right: auto; flex-basis: 100%; min-width: 180px; min-height: 22px; font-size: 14px; }
+    a { color: var(--link); text-decoration: none; font-weight: bold; }
+    a:hover { text-decoration: underline; }
+    button { background: var(--surface); color: var(--text); border: 1px solid var(--border); border-radius: 6px; padding: 7px 12px; font: 14px Arial, sans-serif; cursor: pointer; }
+    #next { background: #2563eb; color: white; border-color: #2563eb; }
+    button:disabled { opacity: .45; cursor: default; }
+    button:focus-visible, a:focus-visible { outline: 3px solid #93c5fd; outline-offset: 2px; }
+    #counter { min-width: 105px; text-align: center; font-size: 13px; color: var(--muted); }
+    @media (max-width: 550px) {
+      #app { gap: 8px; }
+      h1 { font-size: 18px; }
+      footer { gap: 5px; }
+      #links { flex-basis: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1 id="edge-title"></h1>
+      <span id="status"></span><span id="context"></span><span id="section-label"></span>
+    </header>
+    <main id="content" aria-live="polite"></main>
+    <footer>
+      <div id="links"></div>
+      <button id="previous" aria-label="Previous validation page">Previous</button>
+      <span id="counter"></span>
+      <button id="next" aria-label="Next validation page">Next</button>
+      <button id="close">Back to info</button>
+    </footer>
+  </div>
+  <div id="measure" aria-hidden="true"></div>
+  <script>
+    const app = document.getElementById('app');
+    const content = document.getElementById('content');
+    const measure = document.getElementById('measure');
+    let payload = null;
+    let payloadKey = null;
+    let requestedHeight = 570;
+    let pages = [];
+    let pageIndex = 0;
+    let lastSentPage = null;
+
+    function send(type, data = {}) {
+      window.parent.postMessage({ isStreamlitMessage: true, type, ...data }, '*');
+    }
+    function applyTheme(theme) {
+      const background = theme?.backgroundColor || '#ffffff';
+      const hex = /^#([a-f0-9]{6})$/i.exec(background);
+      const rgb = hex ? [0, 2, 4].map(offset => parseInt(hex[1].slice(offset, offset + 2), 16)) : null;
+      const dark = theme?.base === 'dark' || (rgb && (rgb[0] * .2126 + rgb[1] * .7152 + rgb[2] * .0722) < 128);
+      const root = document.documentElement;
+      root.dataset.theme = dark ? 'dark' : 'light';
+      root.style.setProperty('--background', background);
+      root.style.setProperty('--text', theme?.textColor || (dark ? '#fafafa' : '#111827'));
+      root.style.setProperty('--surface', theme?.secondaryBackgroundColor || (dark ? '#262730' : '#f3f4f6'));
+    }
+    function fieldElement(block) {
+      const section = document.createElement('section');
+      section.className = 'field' + (block.quote ? ' quote' : '');
+      const heading = document.createElement('h2');
+      heading.textContent = block.label + (block.continued ? ' (continued)' : '');
+      const text = document.createElement('p');
+      text.textContent = block.text;
+      section.append(heading, text);
+      return section;
+    }
+    function fits(blocks) {
+      measure.replaceChildren(...blocks.map(fieldElement));
+      return measure.scrollHeight <= content.clientHeight - 2;
+    }
+    function paginateGroup(label, referenceIndex, blocks) {
+      let current = [];
+      function flush() {
+        if (current.length) pages.push({ label, referenceIndex, blocks: current });
+        current = [];
+      }
+      for (const block of blocks) {
+        let remaining = block.text;
+        let continued = false;
+        while (remaining.length) {
+          const candidate = { ...block, text: remaining, continued };
+          if (fits([...current, candidate])) {
+            current.push(candidate);
+            break;
+          }
+          const tokens = remaining.match(/\S+\s*|\s+/g) || [];
+          let low = 0, high = tokens.length;
+          while (low < high) {
+            const mid = Math.ceil((low + high) / 2);
+            if (fits([...current, { ...candidate, text: tokens.slice(0, mid).join('') }])) low = mid;
+            else high = mid - 1;
+          }
+          if (!low && current.length) { flush(); continue; }
+          let cut = tokens.slice(0, low).join('').length;
+          // A long uninterrupted token still has to be preserved and paginated.
+          if (!cut) {
+            let left = 0, right = remaining.length;
+            while (left < right) {
+              const mid = Math.ceil((left + right) / 2);
+              if (fits([{ ...candidate, text: remaining.slice(0, mid) }])) left = mid;
+              else right = mid - 1;
+            }
+            cut = left;
+          }
+          if (!cut) throw new Error('Insufficient room for a readable validation page.');
+          current.push({ ...candidate, text: remaining.slice(0, cut) });
+          remaining = remaining.slice(cut);
+          continued = true;
+          flush();
+        }
+      }
+      flush();
+    }
+    function rebuildPages() {
+      if (!payload || content.clientWidth <= 0) return;
+      measure.style.width = content.clientWidth + 'px';
+      pages = [];
+      const decisionBlocks = [
+        { label: 'Validation decision', text: payload.decision },
+        { label: 'Recommended action', text: payload.action }
+      ];
+      if (!payload.evidence.length) decisionBlocks.push({
+        label: 'Research evidence',
+        text: 'No directly relevant excerpt was found in the supplied corpus, or the graph claim is not assessable as defined.'
+      });
+      paginateGroup('Decision', null, decisionBlocks);
+      payload.evidence.forEach((reference, index) => {
+        const blocks = [
+          { label: 'Citation', text: reference.citation },
+          { label: 'Exact excerpt', text: reference.exact_excerpt, quote: true },
+          { label: 'Location', text: reference.location },
+          { label: 'Why it matters', text: reference.relevance }
+        ];
+        if (reference.scope) blocks.push({ label: 'Evidence scope', text: reference.scope });
+        paginateGroup('Reference ' + (index + 1) + ' of ' + payload.evidence.length + ' · ' + reference.source_label, index, blocks);
+      });
+      pageIndex = Math.min(pageIndex, Math.max(0, pages.length - 1));
+      showPage();
+    }
+    function addLink(label, href) {
+      if (!href || !/^https?:\/\//i.test(href)) return;
+      const link = document.createElement('a');
+      link.textContent = label; link.href = href;
+      link.target = '_blank'; link.rel = 'noopener noreferrer';
+      document.getElementById('links').appendChild(link);
+    }
+    function showPage() {
+      const page = pages[pageIndex];
+      if (!page) return;
+      content.replaceChildren(...page.blocks.map(fieldElement));
+      document.getElementById('section-label').textContent = page.label;
+      document.getElementById('counter').textContent = 'Page ' + (pageIndex + 1) + ' of ' + pages.length;
+      document.getElementById('previous').disabled = pageIndex === 0;
+      document.getElementById('next').disabled = pageIndex === pages.length - 1;
+      document.getElementById('links').replaceChildren();
+      if (page.referenceIndex !== null) {
+        const reference = payload.evidence[page.referenceIndex];
+        addLink('Publisher / index', reference.url);
+        addLink('DOI', reference.doi_url);
+        if (/^references\/[a-f0-9]{64}\.pdf(?:#page=\d+)?$/.test(reference.pdf_url || '')) {
+          addLink('Open supplied PDF', new URL(reference.pdf_url, window.location.href).href);
+        }
+      }
+      const state = { page: pageIndex, reference_index: page.referenceIndex };
+      const key = JSON.stringify(state);
+      if (key !== lastSentPage) {
+        lastSentPage = key;
+        send('streamlit:setComponentValue', { dataType: 'json', value: state });
+      }
+    }
+    function sizeToViewport() {
+      let viewportHeight;
+      try { viewportHeight = window.parent.innerHeight; }
+      catch (_) { viewportHeight = window.innerHeight + 240; }
+      const height = Math.max(200, Math.min(requestedHeight, viewportHeight - 300));
+      app.style.height = height + 'px';
+      send('streamlit:setFrameHeight', { height });
+    }
+    document.getElementById('previous').addEventListener('click', () => { if (pageIndex) { pageIndex--; showPage(); } });
+    document.getElementById('next').addEventListener('click', () => { if (pageIndex < pages.length - 1) { pageIndex++; showPage(); } });
+    document.getElementById('close').addEventListener('click', () => {
+      send('streamlit:setComponentValue', { dataType: 'json', value: { closed: true } });
+    });
+    document.addEventListener('keydown', event => {
+      if (event.key === 'ArrowLeft') document.getElementById('previous').click();
+      if (event.key === 'ArrowRight') document.getElementById('next').click();
+      if (event.key === 'Escape') document.getElementById('close').click();
+    });
+    let resizeFrame;
+    new ResizeObserver(() => {
+      cancelAnimationFrame(resizeFrame);
+      resizeFrame = requestAnimationFrame(rebuildPages);
+    }).observe(content);
+    window.addEventListener('resize', () => { sizeToViewport(); rebuildPages(); });
+    window.addEventListener('message', event => {
+      if (event.source !== window.parent || event.data?.type !== 'streamlit:render') return;
+      applyTheme(event.data.theme);
+      const incoming = event.data.args.payload;
+      requestedHeight = event.data.args.height || 570;
+      const key = JSON.stringify(incoming);
+      if (key !== payloadKey) {
+        payload = incoming; payloadKey = key; pageIndex = 0; lastSentPage = null;
+        document.getElementById('edge-title').textContent = payload.edge_title;
+        document.getElementById('status').textContent = payload.status;
+        document.getElementById('status').style.background = payload.status_color;
+        document.getElementById('context').textContent = payload.year + ' · Age ' + payload.age;
+      }
+      sizeToViewport();
+      rebuildPages();
+    });
+    send('streamlit:componentReady', { apiVersion: 1 });
+  </script>
+</body>
+</html>

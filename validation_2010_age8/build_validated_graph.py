@@ -5,6 +5,7 @@ import json
 import os
 import re
 import sys
+from urllib.parse import quote
 
 from pyvis.network import Network
 
@@ -141,7 +142,8 @@ def build():
                 "citation": reference.get("citation") or reference["title"],
                 "paper_url": reference.get("url"),
                 "doi_url": f"https://doi.org/{reference['doi']}" if reference.get("doi") else None,
-                "local_pdf": f"{reference['local_pdf']}{page_fragment}",
+                "local_file": quote(reference.get("local_pdf") or reference["local_html"], safe="/:") + (page_fragment if reference.get("local_pdf") else "#" + reference.get("abstract_fragment", "eng-abstract")),
+                "local_file_label": "Open supplied PDF" if reference.get("local_pdf") else "Open saved abstract",
                 "evidence_scope": reference.get("evidence_scope", ""),
             })
         evidence_by_edge[edge_id] = {
@@ -195,7 +197,7 @@ function showEvidence(edgeId) {{
   addText('h3','Validation decision'); addText('p',item.decision);
   addText('h3','Recommended action'); addText('p',item.recommended_action);
   addText('h3','Research evidence');
-  if(!item.evidence.length) {{ addText('p','No directly relevant excerpt was found in the four-paper corpus. The decision is based on the absence of suitable evidence or an undefined graph construct.'); }}
+  if(!item.evidence.length) {{ addText('p','No directly relevant excerpt was found in the supplied PDF and HTML corpus. The decision is based on the absence of suitable evidence or an undefined graph construct.'); }}
   item.evidence.forEach((ev,index) => {{
     const card=document.createElement('section'); card.className='evidence-card'; evidenceContent.appendChild(card);
     const heading=document.createElement('strong'); heading.textContent='Source '+(index+1)+' · '+ev.source_label; card.appendChild(heading);
@@ -203,8 +205,9 @@ function showEvidence(edgeId) {{
     const quote=document.createElement('mark'); quote.textContent='“'+ev.exact_excerpt+'”'; card.appendChild(quote);
     const location=document.createElement('p'); location.textContent='Location: '+ev.location; card.appendChild(location);
     const relevance=document.createElement('p'); relevance.textContent='Why it matters: '+ev.relevance; card.appendChild(relevance);
+    if(ev.evidence_scope) {{ const scope=document.createElement('p'); scope.textContent='Evidence scope: '+ev.evidence_scope; card.appendChild(scope); }}
     const links=document.createElement('p'); card.appendChild(links);
-    addLink(links,'Open supplied PDF',ev.local_pdf); if(ev.paper_url) addLink(links,'Publisher / index',ev.paper_url); if(ev.doi_url) addLink(links,'DOI',ev.doi_url);
+    addLink(links,ev.local_file_label,ev.local_file); if(ev.paper_url) addLink(links,'Publisher / index',ev.paper_url); if(ev.doi_url) addLink(links,'DOI',ev.doi_url);
   }});
   evidencePanel.classList.add('open');
 }}

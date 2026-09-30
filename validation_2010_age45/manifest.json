@@ -5,16 +5,20 @@
   "age": 45,
   "edge_count": 61,
   "pdf_file_count": 25,
-  "unique_document_count": 24,
-  "validation_updated_utc": "2026-09-23T03:27:47.572405+00:00",
+  "unique_document_count": 39,
+  "html_file_count": 17,
+  "html_abstract_record_count": 17,
+  "new_unique_html_document_count": 15,
+  "abstract_only_document_count": 15,
+  "validation_updated_utc": "2026-09-30T01:33:44.221301+00:00",
   "original_unchanged": true,
   "strength_assessed": false,
   "status_counts": {
     "supported": 0,
-    "partially_supported": 16,
+    "partially_supported": 17,
     "contradicted": 0,
     "mixed_evidence": 0,
-    "insufficient_evidence": 40,
+    "insufficient_evidence": 39,
     "not_assessable": 5
   },
   "documents": [
@@ -142,6 +146,142 @@
       "file": "full_texts/zpe0101000e788.pdf",
       "sha256": "8abfcad3a4657f0b8087b5c23771020748e5babac8bc2b2ec3fb868271f3c0b6",
       "duplicate_of": null
+    },
+    {
+      "file": "../2010 ADHD Papers/An 'integrative neuroscience' perspective on ADHD_ linking cognition, emotion, brain and genetic measures with implications for clinical support - PubMed.html",
+      "sha256": "61ac7c7b449a4a20c8d861940094c70f183652541b56724074603e65118f0ce7",
+      "duplicate_of": null,
+      "source_type": "saved_html",
+      "abstract_only": true,
+      "same_study_as_pdf_source_id": null
+    },
+    {
+      "file": "../2010 ADHD Papers/Attention deficit hyperactivity disorder in men and women newly committed to prison_ clinical characteristics, psychiatric comorbidity, and quality of life - PubMed.html",
+      "sha256": "4c226bb161f56d22bb25961dde6761f45708dbca6c9dc6a5bff821d73be84891",
+      "duplicate_of": null,
+      "source_type": "saved_html",
+      "abstract_only": true,
+      "same_study_as_pdf_source_id": null
+    },
+    {
+      "file": "../2010 ADHD Papers/Bipolar Symptoms in Adult Attention-Deficit_Hyperactivity Disorder_ A Cross-Sectional Study of 510 Clinically Diagnosed Patients and 417 Population-Based Controls.html",
+      "sha256": "21d9c13db53d1092a85357c530bdb1c7f62cecedce78f88f9b5fb2ad3432562b",
+      "duplicate_of": null,
+      "source_type": "saved_html",
+      "abstract_only": true,
+      "same_study_as_pdf_source_id": null
+    },
+    {
+      "file": "../2010 ADHD Papers/Can we prevent smoking in children with ADHD_ a review of the literature - PubMed.html",
+      "sha256": "5b481cac24cb1945734201bb073efc838f242fec53f2934f6781b315410287ba",
+      "duplicate_of": null,
+      "source_type": "saved_html",
+      "abstract_only": true,
+      "same_study_as_pdf_source_id": null
+    },
+    {
+      "file": "../2010 ADHD Papers/Differences between objective and subjective sleep measures in children with attention deficit hyperactivity disorder - PubMed.html",
+      "sha256": "095419b3ac09ece0274c7eb2a752716dbeec8a10f5de279991d2408d6cf40aa0",
+      "duplicate_of": null,
+      "source_type": "saved_html",
+      "abstract_only": true,
+      "same_study_as_pdf_source_id": null
+    },
+    {
+      "file": "../2010 ADHD Papers/Disparities in ADHD assessment, diagnosis, and treatment - PubMed.html",
+      "sha256": "e4e39817aefdaebc682ac29916b806dc29215c79ec3b5c582d874706267abc89",
+      "duplicate_of": null,
+      "source_type": "saved_html",
+      "abstract_only": true,
+      "same_study_as_pdf_source_id": null
+    },
+    {
+      "file": "../2010 ADHD Papers/Effectiveness of nutritional interventions on the functioning of children with ADHD and_or ASD. An updated review of research evidence - PubMed.html",
+      "sha256": "a251eaa1514ee85183cd7fe767e1c822c7635da0ede4aacc84521d76b508b6e5",
+      "duplicate_of": null,
+      "source_type": "saved_html",
+      "abstract_only": true,
+      "same_study_as_pdf_source_id": null
+    },
+    {
+      "file": "../2010 ADHD Papers/Geographic analysis of diagnosis of Attention-Deficit_Hyperactivity Disorder in children_ Eastern Wisconsin, USA - PubMed.html",
+      "sha256": "0039a79c3ff8ab7b5133aa240506d5bbad62bf2c41a1646b8efc827488ec2c06",
+      "duplicate_of": null,
+      "source_type": "saved_html",
+      "abstract_only": true,
+      "same_study_as_pdf_source_id": null
+    },
+    {
+      "file": "../2010 ADHD Papers/Neurochemical alterations in women with borderline personality disorder and comorbid attention-deficit hyperactivity disorder - PubMed.html",
+      "sha256": "fa565ec4b65455fcc706729635a875ad56147454b44f6fb5d32e2b0d30c46637",
+      "duplicate_of": null,
+      "source_type": "saved_html",
+      "abstract_only": true,
+      "same_study_as_pdf_source_id": null
+    },
+    {
+      "file": "../2010 ADHD Papers/Quantitative MR analysis of caudate abnormalities in pediatric ADHD_ Proposal for a diagnostic test - ClinicalKey.html",
+      "sha256": "0cd65ad2ea1effde97b96ffdb3151aa1e9cbbe66d67029d44eb0e0a024bd1045",
+      "duplicate_of": null,
+      "source_type": "saved_html",
+      "abstract_only": false,
+      "same_study_as_pdf_source_id": "CAUDATE_MRI"
+    },
+    {
+      "file": "../2010 ADHD Papers/Review of attention-deficit_hyperactivity disorder comorbid with oppositional defiant disorder - PubMed.html",
+      "sha256": "e751be2e6a9b4100e7f1a40212a6125671c51a59d2404d995579ff1721c80d05",
+      "duplicate_of": null,
+      "source_type": "saved_html",
+      "abstract_only": true,
+      "same_study_as_pdf_source_id": null
+    },
+    {
+      "file": "../2010 ADHD Papers/Sex and age differences in attention-deficit_hyperactivity disorder symptoms and diagnoses_ implications for DSM-V and ICD-11 - PubMed.html",
+      "sha256": "2352de9c540b1286611714e6803f7e4a1c24daa87abbf9cd0c94a2fa330340df",
+      "duplicate_of": null,
+      "source_type": "saved_html",
+      "abstract_only": true,
+      "same_study_as_pdf_source_id": "AGE_SEX"
+    },
+    {
+      "file": "../2010 ADHD Papers/Stimulant drug effects on attention deficit_hyperactivity disorder_ a review of the effects of age and sex of patients - PubMed.html",
+      "sha256": "836a50e43fa44436663a036460b87348c3216234461498a2fcd9f569bc6a129f",
+      "duplicate_of": null,
+      "source_type": "saved_html",
+      "abstract_only": true,
+      "same_study_as_pdf_source_id": null
+    },
+    {
+      "file": "../2010 ADHD Papers/The impact of medications on quality of life in attention-deficit hyperactivity disorder_ a systematic review - PubMed.html",
+      "sha256": "82adf7b51943177cfd8157f1f106ea27247d92e5fc1f95363cf43685ee9bc937",
+      "duplicate_of": null,
+      "source_type": "saved_html",
+      "abstract_only": true,
+      "same_study_as_pdf_source_id": null
+    },
+    {
+      "file": "../2010 ADHD Papers/The presence of attention-deficit hyperactivity disorder (ADHD) and obsessive-compulsive disorder worsen psychosocial and educational problems in Tourette syndrome - PubMed.html",
+      "sha256": "e2809db8d17b2c5205e0e3ba7e6318737bd7068476739643a4680bf6de6263c3",
+      "duplicate_of": null,
+      "source_type": "saved_html",
+      "abstract_only": true,
+      "same_study_as_pdf_source_id": null
+    },
+    {
+      "file": "../2010 ADHD Papers/[Event-related potentials associated with error detection in adult ADHD--literature review] - PubMed.html",
+      "sha256": "f8ad32fc1353f52d6c6e9abccd9b5079433f23369188c86dcfae3f4fcbe12823",
+      "duplicate_of": null,
+      "source_type": "saved_html",
+      "abstract_only": true,
+      "same_study_as_pdf_source_id": null
+    },
+    {
+      "file": "../2010 ADHD Papers/[Population-based diagnostic study to compare the DSM-IV and the Questionnaire for screening Latin American schoolchildren and adolescents for attention deficit hyperactivity disorder] - PubMed.html",
+      "sha256": "acc200a656cc542f84a8ed744abd54e1287f5b76edcc0b6cb76230b729b5aa23",
+      "duplicate_of": null,
+      "source_type": "saved_html",
+      "abstract_only": true,
+      "same_study_as_pdf_source_id": null
     }
   ]
 }

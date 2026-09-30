@@ -1,20 +1,20 @@
 # 2010 age-eight graph validation
 
-Validation of **2010_8 yo.py**: **58 edges**, using only the **25 supplied PDF files (24 unique documents)** in `2010 ADHD Papers`.
+Validation of **2010_8 yo.py**: **58 edges**, using only the **25 supplied PDFs and 17 saved HTML article records (39 unique documents)** in `2010 ADHD Papers`.
 
 ## Status counts
 
 - `supported`: 1
-- `partially_supported`: 11
+- `partially_supported`: 14
 - `contradicted`: 0
 - `mixed_evidence`: 0
-- `insufficient_evidence`: 35
+- `insufficient_evidence`: 32
 - `not_assessable`: 11
 
 
 ## Method and limitations
 
-**Scope**: 2010_8 yo.py, 58 edges, using only the 25 supplied PDF files in 2010 ADHD Papers (24 unique documents; one exact duplicate). Direction, sign, and written reasoning were reviewed; numeric strength was excluded.
+**Scope**: 2010_8 yo.py, 58 edges, using 25 supplied PDFs (24 unique PDF documents) and 17 saved HTML article records. Two HTML records reproduce existing PDF studies: 39 unique documents total. Direction, sign, and written reasoning were reviewed; numeric strength was excluded.
 
 **Age Scope**: Evidence specific to children near age eight was preferred. Pediatric evidence with broader age ranges was treated as partial when it did not report an age-eight estimate. Adult-only evidence was not transferred to this graph.
 
@@ -24,7 +24,11 @@ Validation of **2010_8 yo.py**: **58 edges**, using only the **25 supplied PDF f
 
 **Strength**: The graph's numeric edge strengths were not validated.
 
-**Duplicate**: s12402-010-0036-9 (1).pdf is byte-identical to s12402-010-0036-9.pdf and was counted once as a unique document.
+**Duplicate**: s12402-010-0036-9 (1).pdf is byte-identical to s12402-010-0036-9.pdf. The sex/age PubMed record (PMID 20410711) and ClinicalKey caudate article reproduce AGE_SEX and CAUDATE_MRI PDFs, respectively. Alternate formats are not independent studies.
+
+**Html Scope**: 15 PubMed records and two publisher records were parsed. Only primary article abstracts are used as new evidence; navigation, related articles and saved asset frames are excluded. ClinicalKey also contains the caudate full text, already supplied as PDF. Bipolar publication year is 2010 from the article date and journal citation, despite conflicting website citation metadata. Abstract encoding artifacts are preserved.
+
+**Evidence Limits**: Cross-sectional associations, selected prison/Tourette populations, clinical disparity commentary, and QOL endpoints are distinguished from causal exposure effects. QOL treatment gains do not validate diagnosis-only benefits or adverse-effect-only harm. Pediatric findings are not transferred to adult age-specific claims.
 
 ## Fixed status definitions
 
@@ -38,4 +42,4 @@ Validation of **2010_8 yo.py**: **58 edges**, using only the **25 supplied PDF f
 
 ## Reproduce
 
-Run `python validation_2010_age8/build_report.py`. The script parses but never executes or modifies the graph. It verifies the source edge text, PDF hashes, citations, JSON output, and Excel structure.
+Run `python validation_2010_age8/build_report.py`. The script parses but never executes or modifies the graph. It verifies the source edge text, PDF and HTML hashes, abstract excerpts, citations, JSON output, and Excel structure. Rebuild the interactive graph with `python validation_2010_age8/build_validated_graph.py`.

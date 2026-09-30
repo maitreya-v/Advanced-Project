@@ -6,16 +6,18 @@
     "age": 45,
     "edge_count": 45,
     "pdf_file_count": 4,
-    "unique_document_count": 4,
-    "validation_updated_utc": "2026-09-23T03:56:08.219733+00:00",
+    "unique_document_count": 29,
+    "html_file_count": 25,
+    "abstract_only_document_count": 25,
+    "validation_updated_utc": "2026-09-30T00:34:31.576053+00:00",
     "original_unchanged": true,
     "strength_assessed": false,
     "status_counts": {
       "supported": 0,
-      "partially_supported": 0,
+      "partially_supported": 1,
       "contradicted": 0,
       "mixed_evidence": 0,
-      "insufficient_evidence": 41,
+      "insufficient_evidence": 40,
       "not_assessable": 4
     }
   },
@@ -28,12 +30,14 @@
     "not_assessable": "Undefined variable coding or endpoint makes the proposed direction or sign uninterpretable."
   },
   "methodology": {
-    "scope": "1990_45 yo.py, 58 edges, using only the four supplied PDF files in 1990 ADHD Papers. Direction, sign, and written reasoning were reviewed; numeric strength was excluded.",
-    "age_scope": "Adult evidence was required for adult claims. The supplied papers study children or adolescents and were not transferred as causal proof for adults aged 45.",
+    "scope": "1990_45 yo.py, 45 edges, using the four supplied PDF files and 25 saved PubMed HTML abstracts in 1990 ADHD Papers. Direction, sign, and written reasoning were reviewed; numeric strength was excluded.",
+    "age_scope": "Adult evidence is required for adult claims. The added adult review is treated as partial clinical context without an age-45-specific estimate. Child and adolescent studies are not transferred as adult causal proof.",
     "causal_standard": "Associations, reviews, and clinical recommendations were not automatically treated as proof of causal direction. Undefined categorical signs were marked not_assessable.",
     "source_limits": "This is a validation against the supplied corpus, not a systematic review of all 1990 ADHD literature. A status of insufficient_evidence is not evidence that an edge is false.",
     "strength": "The graph's numeric edge strengths were not validated.",
-    "duplicate": "No exact duplicate PDF files were found in the supplied corpus."
+    "duplicate": "No exact duplicate PDFs or duplicate PMID records were found. HTML pages are deduplicated by PMID; repeated sentences in an abstract are not independent findings.",
+    "html_scope": "HTML evidence is restricted to the main English abstract of each saved record, excluding similar/cited articles. All 25 records are dated 1990. Abstract-only limitations are retained; the side-effect abstract (PMID 2196520) is marked truncated and repeats a passage.",
+    "adult_scope": "The adult review (PMID 2251528) supplies clinical context, not a controlled treatment estimate or specific results at age 32 or 45. Pediatric findings are not transferred to adult graphs."
   },
   "edges": [
     {
@@ -43,9 +47,16 @@
       "existing_reasoning": "Genetic vulnerability contributes strongly to lifelong ADHD.",
       "sign": "+",
       "validation_status": "insufficient_evidence",
-      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence.",
-      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant midlife adult evidence.",
-      "evidence": []
+      "observation_from_validation": "The new family study supports familial ADD liability across relatives but supplies no adult age-specific genetic effect; the adult review describes persistence without establishing a genetic cause.",
+      "recommended_action": "Obtain adult genetic-liability evidence with the relevant phenotype and age scope.",
+      "evidence": [
+        {
+          "source_id": "PMID_2387786",
+          "exact_excerpt": "These results confirm and extend previous findings indicating important family-genetic risk factors in ADD.",
+          "location": "Family-genetic and psychosocial risk factors in DSM-III attention deficit disorder - PubMed.html; English abstract (#eng-abstract)",
+          "relevance": "Blinded family study supports familial liability; shared environment is not fully separated and strong genetic causation or an exact-age effect is not established."
+        }
+      ]
     },
     {
       "edge_id": 2,
@@ -54,7 +65,7 @@
       "existing_reasoning": "Underlying ADHD strongly affects executive functioning.",
       "sign": "+",
       "validation_status": "insufficient_evidence",
-      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence.",
+      "observation_from_validation": "The supplied PDFs and HTML abstracts do not establish this specific causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence; the added adult review has no age-45-specific estimate.",
       "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant midlife adult evidence.",
       "evidence": []
     },
@@ -65,7 +76,7 @@
       "existing_reasoning": "Executive dysfunction increases cumulative impairment.",
       "sign": "+",
       "validation_status": "insufficient_evidence",
-      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence.",
+      "observation_from_validation": "The supplied PDFs and HTML abstracts do not establish this specific causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence; the added adult review has no age-45-specific estimate.",
       "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant midlife adult evidence.",
       "evidence": []
     },
@@ -76,7 +87,7 @@
       "existing_reasoning": "Greater symptom burden worsens daily functioning.",
       "sign": "+",
       "validation_status": "insufficient_evidence",
-      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence.",
+      "observation_from_validation": "The supplied PDFs and HTML abstracts do not establish this specific causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence; the added adult review has no age-45-specific estimate.",
       "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant midlife adult evidence.",
       "evidence": []
     },
@@ -87,7 +98,7 @@
       "existing_reasoning": "By age 45, long-term untreated difficulties can compound impairment.",
       "sign": "+",
       "validation_status": "insufficient_evidence",
-      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence.",
+      "observation_from_validation": "The supplied PDFs and HTML abstracts do not establish this specific causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence; the added adult review has no age-45-specific estimate.",
       "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant midlife adult evidence.",
       "evidence": []
     },
@@ -98,7 +109,7 @@
       "existing_reasoning": "Long-term nutrition impacts cognition.",
       "sign": "-",
       "validation_status": "insufficient_evidence",
-      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence.",
+      "observation_from_validation": "The supplied PDFs and HTML abstracts do not establish this specific causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence; the added adult review has no age-45-specific estimate.",
       "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant midlife adult evidence.",
       "evidence": []
     },
@@ -109,7 +120,7 @@
       "existing_reasoning": "Sleep affects executive functioning.",
       "sign": "-",
       "validation_status": "insufficient_evidence",
-      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence.",
+      "observation_from_validation": "The supplied PDFs and HTML abstracts do not establish this specific causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence; the added adult review has no age-45-specific estimate.",
       "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant midlife adult evidence.",
       "evidence": []
     },
@@ -120,7 +131,7 @@
       "existing_reasoning": "Accumulated stress worsens outcomes.",
       "sign": "+",
       "validation_status": "insufficient_evidence",
-      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence.",
+      "observation_from_validation": "The supplied PDFs and HTML abstracts do not establish this specific causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence; the added adult review has no age-45-specific estimate.",
       "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant midlife adult evidence.",
       "evidence": []
     },
@@ -131,7 +142,7 @@
       "existing_reasoning": "Stable home structure reduces stress.",
       "sign": "-",
       "validation_status": "insufficient_evidence",
-      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence.",
+      "observation_from_validation": "The supplied PDFs and HTML abstracts do not establish this specific causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence; the added adult review has no age-45-specific estimate.",
       "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant midlife adult evidence.",
       "evidence": []
     },
@@ -142,7 +153,7 @@
       "existing_reasoning": "Family stress contributes to accumulated burden.",
       "sign": "+",
       "validation_status": "insufficient_evidence",
-      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence.",
+      "observation_from_validation": "The supplied PDFs and HTML abstracts do not establish this specific causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence; the added adult review has no age-45-specific estimate.",
       "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant midlife adult evidence.",
       "evidence": []
     },
@@ -153,7 +164,7 @@
       "existing_reasoning": "Family history somewhat supports self-recognition by 1990.",
       "sign": "+",
       "validation_status": "insufficient_evidence",
-      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence.",
+      "observation_from_validation": "The supplied PDFs and HTML abstracts do not establish this specific causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence; the added adult review has no age-45-specific estimate.",
       "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant midlife adult evidence.",
       "evidence": []
     },
@@ -164,7 +175,7 @@
       "existing_reasoning": "Income strongly controls access.",
       "sign": "+",
       "validation_status": "insufficient_evidence",
-      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence.",
+      "observation_from_validation": "The supplied PDFs and HTML abstracts do not establish this specific causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence; the added adult review has no age-45-specific estimate.",
       "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant midlife adult evidence.",
       "evidence": []
     },
@@ -175,7 +186,7 @@
       "existing_reasoning": "Socioeconomic position shapes access to care.",
       "sign": "+",
       "validation_status": "insufficient_evidence",
-      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence.",
+      "observation_from_validation": "The supplied PDFs and HTML abstracts do not establish this specific causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence; the added adult review has no age-45-specific estimate.",
       "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant midlife adult evidence.",
       "evidence": []
     },
@@ -186,7 +197,7 @@
       "existing_reasoning": "Better neighborhood conditions improve resource access.",
       "sign": "+",
       "validation_status": "insufficient_evidence",
-      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence.",
+      "observation_from_validation": "The supplied PDFs and HTML abstracts do not establish this specific causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence; the added adult review has no age-45-specific estimate.",
       "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant midlife adult evidence.",
       "evidence": []
     },
@@ -197,7 +208,7 @@
       "existing_reasoning": "Provider supply improves access more than in 1970.",
       "sign": "+",
       "validation_status": "insufficient_evidence",
-      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence.",
+      "observation_from_validation": "The supplied PDFs and HTML abstracts do not establish this specific causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence; the added adult review has no age-45-specific estimate.",
       "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant midlife adult evidence.",
       "evidence": []
     },
@@ -208,7 +219,7 @@
       "existing_reasoning": "High evaluation cost still strongly suppresses diagnosis.",
       "sign": "-",
       "validation_status": "insufficient_evidence",
-      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence.",
+      "observation_from_validation": "The supplied PDFs and HTML abstracts do not establish this specific causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence; the added adult review has no age-45-specific estimate.",
       "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant midlife adult evidence.",
       "evidence": []
     },
@@ -219,7 +230,7 @@
       "existing_reasoning": "Access helps diagnosis, though adult recognition remains incomplete.",
       "sign": "+",
       "validation_status": "insufficient_evidence",
-      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence.",
+      "observation_from_validation": "The supplied PDFs and HTML abstracts do not establish this specific causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence; the added adult review has no age-45-specific estimate.",
       "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant midlife adult evidence.",
       "evidence": []
     },
@@ -230,7 +241,7 @@
       "existing_reasoning": "Guideline evolution makes delayed adult recognition somewhat more plausible.",
       "sign": "+",
       "validation_status": "insufficient_evidence",
-      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence.",
+      "observation_from_validation": "The supplied PDFs and HTML abstracts do not establish this specific causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence; the added adult review has no age-45-specific estimate.",
       "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant midlife adult evidence.",
       "evidence": []
     },
@@ -263,7 +274,7 @@
       "existing_reasoning": "Bias suppresses diagnosis in midlife.",
       "sign": "-",
       "validation_status": "insufficient_evidence",
-      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence.",
+      "observation_from_validation": "The supplied PDFs and HTML abstracts do not establish this specific causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence; the added adult review has no age-45-specific estimate.",
       "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant midlife adult evidence.",
       "evidence": []
     },
@@ -285,7 +296,7 @@
       "existing_reasoning": "1990 norms still reinforce stigma, though less than in 1970.",
       "sign": "+",
       "validation_status": "insufficient_evidence",
-      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence.",
+      "observation_from_validation": "The supplied PDFs and HTML abstracts do not establish this specific causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence; the added adult review has no age-45-specific estimate.",
       "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant midlife adult evidence.",
       "evidence": []
     },
@@ -296,7 +307,7 @@
       "existing_reasoning": "Stigma still suppresses adult diagnosis.",
       "sign": "-",
       "validation_status": "insufficient_evidence",
-      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence.",
+      "observation_from_validation": "The supplied PDFs and HTML abstracts do not establish this specific causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence; the added adult review has no age-45-specific estimate.",
       "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant midlife adult evidence.",
       "evidence": []
     },
@@ -307,7 +318,7 @@
       "existing_reasoning": "Stigma discourages self-recognition and help-seeking.",
       "sign": "-",
       "validation_status": "insufficient_evidence",
-      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence.",
+      "observation_from_validation": "The supplied PDFs and HTML abstracts do not establish this specific causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence; the added adult review has no age-45-specific estimate.",
       "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant midlife adult evidence.",
       "evidence": []
     },
@@ -318,9 +329,16 @@
       "existing_reasoning": "By 1990, diagnosis can lead to treatment in midlife, but the pathway remains delayed and limited.",
       "sign": "+",
       "validation_status": "insufficient_evidence",
-      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence.",
-      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant midlife adult evidence.",
-      "evidence": []
+      "observation_from_validation": "The new adult review mentions combined psychotherapy and medical management without naming medication or reporting drug-specific outcomes. Pediatric trials cannot supply an adult treatment-effect or medication-uptake estimate.",
+      "recommended_action": "Obtain adult medication-specific evidence; do not interpret unspecified medical management as a drug trial.",
+      "evidence": [
+        {
+          "source_id": "PMID_2251528",
+          "exact_excerpt": "Once the disorder has been identified in the adult, however, proper intervention with psychotherapy and medical management can make a significant difference in the patient's life.",
+          "location": "Attention deficit hyperactivity disorder_ does it affect adults too_ - PubMed.html; English abstract (#eng-abstract)",
+          "relevance": "Adult clinical review supports identification followed by combined care; no controlled estimate, specified medication, behavioral modality, measured quality-of-life outcome, or separate age-32/45 estimate."
+        }
+      ]
     },
     {
       "edge_id": 27,
@@ -329,7 +347,7 @@
       "existing_reasoning": "Diagnosis can connect midlife adults to behavioral support, but less commonly than children.",
       "sign": "+",
       "validation_status": "insufficient_evidence",
-      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence.",
+      "observation_from_validation": "The supplied PDFs and HTML abstracts do not establish this specific causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence; the added adult review has no age-45-specific estimate.",
       "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant midlife adult evidence.",
       "evidence": []
     },
@@ -340,7 +358,7 @@
       "existing_reasoning": "Mental healthcare access supports treatment availability.",
       "sign": "+",
       "validation_status": "insufficient_evidence",
-      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence.",
+      "observation_from_validation": "The supplied PDFs and HTML abstracts do not establish this specific causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence; the added adult review has no age-45-specific estimate.",
       "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant midlife adult evidence.",
       "evidence": []
     },
@@ -351,7 +369,7 @@
       "existing_reasoning": "Provider supply increases the chance of accessing treatment.",
       "sign": "+",
       "validation_status": "insufficient_evidence",
-      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence.",
+      "observation_from_validation": "The supplied PDFs and HTML abstracts do not establish this specific causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence; the added adult review has no age-45-specific estimate.",
       "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant midlife adult evidence.",
       "evidence": []
     },
@@ -362,7 +380,7 @@
       "existing_reasoning": "Higher SES improves treatment access.",
       "sign": "+",
       "validation_status": "insufficient_evidence",
-      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence.",
+      "observation_from_validation": "The supplied PDFs and HTML abstracts do not establish this specific causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence; the added adult review has no age-45-specific estimate.",
       "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant midlife adult evidence.",
       "evidence": []
     },
@@ -373,7 +391,7 @@
       "existing_reasoning": "Self-recognition can increase help-seeking, but the pathway is still weak.",
       "sign": "+",
       "validation_status": "insufficient_evidence",
-      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence.",
+      "observation_from_validation": "The supplied PDFs and HTML abstracts do not establish this specific causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence; the added adult review has no age-45-specific estimate.",
       "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant midlife adult evidence.",
       "evidence": []
     },
@@ -384,7 +402,7 @@
       "existing_reasoning": "Evolving clinical guidelines modestly improve treatment access.",
       "sign": "+",
       "validation_status": "insufficient_evidence",
-      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence.",
+      "observation_from_validation": "The supplied PDFs and HTML abstracts do not establish this specific causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence; the added adult review has no age-45-specific estimate.",
       "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant midlife adult evidence.",
       "evidence": []
     },
@@ -395,7 +413,7 @@
       "existing_reasoning": "Treatment access can lead to medication, but midlife adult ADHD remains underrecognized.",
       "sign": "+",
       "validation_status": "insufficient_evidence",
-      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence.",
+      "observation_from_validation": "The supplied PDFs and HTML abstracts do not establish this specific causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence; the added adult review has no age-45-specific estimate.",
       "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant midlife adult evidence.",
       "evidence": []
     },
@@ -406,7 +424,7 @@
       "existing_reasoning": "Treatment access may enable behavioral support.",
       "sign": "+",
       "validation_status": "insufficient_evidence",
-      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence.",
+      "observation_from_validation": "The supplied PDFs and HTML abstracts do not establish this specific causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence; the added adult review has no age-45-specific estimate.",
       "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant midlife adult evidence.",
       "evidence": []
     },
@@ -417,9 +435,16 @@
       "existing_reasoning": "Behavioral support may modestly reduce cumulative impairment.",
       "sign": "-",
       "validation_status": "insufficient_evidence",
-      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence.",
-      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant midlife adult evidence.",
-      "evidence": []
+      "observation_from_validation": "The adult review does not specify behavioral therapy or isolate its effect on functional impairment. Preschool parent training and child medication studies do not establish this adult claim.",
+      "recommended_action": "Obtain adult behavioral-treatment evidence with separately measured functional outcomes.",
+      "evidence": [
+        {
+          "source_id": "PMID_2251528",
+          "exact_excerpt": "Once the disorder has been identified in the adult, however, proper intervention with psychotherapy and medical management can make a significant difference in the patient's life.",
+          "location": "Attention deficit hyperactivity disorder_ does it affect adults too_ - PubMed.html; English abstract (#eng-abstract)",
+          "relevance": "Adult clinical review supports identification followed by combined care; no controlled estimate, specified medication, behavioral modality, measured quality-of-life outcome, or separate age-32/45 estimate."
+        }
+      ]
     },
     {
       "edge_id": 36,
@@ -428,9 +453,16 @@
       "existing_reasoning": "Medication may reduce symptoms, but treatment effects are constrained by delayed recognition.",
       "sign": "-",
       "validation_status": "insufficient_evidence",
-      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence.",
-      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant midlife adult evidence.",
-      "evidence": []
+      "observation_from_validation": "The new adult review mentions combined psychotherapy and medical management without naming medication or reporting drug-specific outcomes. Pediatric trials cannot supply an adult treatment-effect or medication-uptake estimate.",
+      "recommended_action": "Obtain adult medication-specific evidence; do not interpret unspecified medical management as a drug trial.",
+      "evidence": [
+        {
+          "source_id": "PMID_2251528",
+          "exact_excerpt": "Once the disorder has been identified in the adult, however, proper intervention with psychotherapy and medical management can make a significant difference in the patient's life.",
+          "location": "Attention deficit hyperactivity disorder_ does it affect adults too_ - PubMed.html; English abstract (#eng-abstract)",
+          "relevance": "Adult clinical review supports identification followed by combined care; no controlled estimate, specified medication, behavioral modality, measured quality-of-life outcome, or separate age-32/45 estimate."
+        }
+      ]
     },
     {
       "edge_id": 37,
@@ -439,9 +471,16 @@
       "existing_reasoning": "Medication may slightly reduce midlife impairment.",
       "sign": "-",
       "validation_status": "insufficient_evidence",
-      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence.",
-      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant midlife adult evidence.",
-      "evidence": []
+      "observation_from_validation": "The new adult review mentions combined psychotherapy and medical management without naming medication or reporting drug-specific outcomes. Pediatric trials cannot supply an adult treatment-effect or medication-uptake estimate.",
+      "recommended_action": "Obtain adult medication-specific evidence; do not interpret unspecified medical management as a drug trial.",
+      "evidence": [
+        {
+          "source_id": "PMID_2251528",
+          "exact_excerpt": "Once the disorder has been identified in the adult, however, proper intervention with psychotherapy and medical management can make a significant difference in the patient's life.",
+          "location": "Attention deficit hyperactivity disorder_ does it affect adults too_ - PubMed.html; English abstract (#eng-abstract)",
+          "relevance": "Adult clinical review supports identification followed by combined care; no controlled estimate, specified medication, behavioral modality, measured quality-of-life outcome, or separate age-32/45 estimate."
+        }
+      ]
     },
     {
       "edge_id": 38,
@@ -461,7 +500,7 @@
       "existing_reasoning": "Stigma reduces continued treatment engagement.",
       "sign": "-",
       "validation_status": "insufficient_evidence",
-      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence.",
+      "observation_from_validation": "The supplied PDFs and HTML abstracts do not establish this specific causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence; the added adult review has no age-45-specific estimate.",
       "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant midlife adult evidence.",
       "evidence": []
     },
@@ -472,7 +511,7 @@
       "existing_reasoning": "Medication can introduce side effects.",
       "sign": "+",
       "validation_status": "insufficient_evidence",
-      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence.",
+      "observation_from_validation": "The supplied PDFs and HTML abstracts do not establish this specific causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence; the added adult review has no age-45-specific estimate.",
       "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant midlife adult evidence.",
       "evidence": []
     },
@@ -483,7 +522,7 @@
       "existing_reasoning": "Side effects can reduce adherence.",
       "sign": "-",
       "validation_status": "insufficient_evidence",
-      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence.",
+      "observation_from_validation": "The supplied PDFs and HTML abstracts do not establish this specific causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence; the added adult review has no age-45-specific estimate.",
       "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant midlife adult evidence.",
       "evidence": []
     },
@@ -494,7 +533,7 @@
       "existing_reasoning": "Side effects can slightly reduce quality of life.",
       "sign": "-",
       "validation_status": "insufficient_evidence",
-      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence.",
+      "observation_from_validation": "The supplied PDFs and HTML abstracts do not establish this specific causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence; the added adult review has no age-45-specific estimate.",
       "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant midlife adult evidence.",
       "evidence": []
     },
@@ -504,10 +543,17 @@
       "dest": "Functional Impairment",
       "existing_reasoning": "Diagnosis can modestly reduce impairment through explanation or support.",
       "sign": "-",
-      "validation_status": "insufficient_evidence",
-      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence.",
-      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant midlife adult evidence.",
-      "evidence": []
+      "validation_status": "partially_supported",
+      "observation_from_validation": "The adult review describes identification followed by intervention that can improve life functioning. This partially supports the indirect recognition-to-care pathway, but not an independent effect of diagnosis, measured impairment reduction, or a specific age-45 estimate.",
+      "recommended_action": "Retain only as an indirect clinical pathway mediated by care; do not claim diagnosis alone reduces impairment.",
+      "evidence": [
+        {
+          "source_id": "PMID_2251528",
+          "exact_excerpt": "Once the disorder has been identified in the adult, however, proper intervention with psychotherapy and medical management can make a significant difference in the patient's life.",
+          "location": "Attention deficit hyperactivity disorder_ does it affect adults too_ - PubMed.html; English abstract (#eng-abstract)",
+          "relevance": "Adult clinical review supports identification followed by combined care; no controlled estimate, specified medication, behavioral modality, measured quality-of-life outcome, or separate age-32/45 estimate."
+        }
+      ]
     },
     {
       "edge_id": 44,
@@ -516,7 +562,7 @@
       "existing_reasoning": "Cumulative impairment strongly lowers quality of life.",
       "sign": "-",
       "validation_status": "insufficient_evidence",
-      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence.",
+      "observation_from_validation": "The supplied PDFs and HTML abstracts do not establish this specific causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence; the added adult review has no age-45-specific estimate.",
       "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant midlife adult evidence.",
       "evidence": []
     },
@@ -527,9 +573,16 @@
       "existing_reasoning": "Diagnosis can modestly improve quality of life in midlife.",
       "sign": "+",
       "validation_status": "insufficient_evidence",
-      "observation_from_validation": "The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence.",
-      "recommended_action": "Retain only as an explicitly unvalidated hypothesis or add directly relevant midlife adult evidence.",
-      "evidence": []
+      "observation_from_validation": "The adult review describes making a difference in life following combined care, but does not measure quality of life or isolate a diagnosis-to-quality-of-life effect.",
+      "recommended_action": "Obtain adult quality-of-life evidence; retain this specific endpoint as unvalidated.",
+      "evidence": [
+        {
+          "source_id": "PMID_2251528",
+          "exact_excerpt": "Once the disorder has been identified in the adult, however, proper intervention with psychotherapy and medical management can make a significant difference in the patient's life.",
+          "location": "Attention deficit hyperactivity disorder_ does it affect adults too_ - PubMed.html; English abstract (#eng-abstract)",
+          "relevance": "Adult clinical review supports identification followed by combined care; no controlled estimate, specified medication, behavioral modality, measured quality-of-life outcome, or separate age-32/45 estimate."
+        }
+      ]
     }
   ],
   "references": [
@@ -556,6 +609,256 @@
       "title": "Attention Deficit Disorder and the Mediating Effect of Age on Academic and Behavioral Variables",
       "local_pdf": "full_texts/attention-deficit-disorder-and-the-mediating-effect-of-age.pdf",
       "sha256": "99c112d394158b81057fcf2f85246fd22a5346c55115fade7d1e435ef980a940"
+    },
+    {
+      "source_id": "PMID_2365665",
+      "title": "A controlled family history study of Tourette's syndrome, I: Attention-deficit hyperactivity disorder and learning disorders",
+      "citation": "Comings DE;Comings BG; A controlled family history study of Tourette's syndrome, I: Attention-deficit hyperactivity disorder and learning disorders. The Journal of clinical psychiatry. 1990 Jul. PMID 2365665.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/2365665/",
+      "doi": "",
+      "local_html": "../1990 ADHD Papers/A controlled family history study of Tourette's syndrome, I_ Attention-deficit hyperactivity disorder and learning disorders - PubMed.html",
+      "sha256": "f1f94444f29b5f4673d64acee9d8dcbaf18da10e56b066793e5dd3676018a7bf",
+      "evidence_scope": "Saved PubMed abstract only; the full article was not supplied as HTML. Study details and exact-age effects not reported in the abstract remain unverified."
+    },
+    {
+      "source_id": "PMID_2289969",
+      "title": "A critique of current diagnostic criteria for attention deficit hyperactivity disorder: clinical and research implications",
+      "citation": "Barkley RA; A critique of current diagnostic criteria for attention deficit hyperactivity disorder: clinical and research implications. Journal of developmental and behavioral pediatrics : JDBP. 1990 Dec. PMID 2289969.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/2289969/",
+      "doi": "",
+      "local_html": "../1990 ADHD Papers/A critique of current diagnostic criteria for attention deficit hyperactivity disorder_ clinical and research implications - PubMed.html",
+      "sha256": "218fa32e8a4442796da8f6c55a17d15e743e957e8d002ce7fa4a2fc0018443d7",
+      "evidence_scope": "Saved PubMed abstract only; the full article was not supplied as HTML. Study details and exact-age effects not reported in the abstract remain unverified."
+    },
+    {
+      "source_id": "PMID_2251528",
+      "title": "Attention deficit hyperactivity disorder: does it affect adults too?",
+      "citation": "Heath CT;Wright HH;Batey SR; Attention deficit hyperactivity disorder: does it affect adults too?. Southern medical journal. 1990 Dec. PMID 2251528.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/2251528/",
+      "doi": "10.1097/00007611-199012000-00007",
+      "local_html": "../1990 ADHD Papers/Attention deficit hyperactivity disorder_ does it affect adults too_ - PubMed.html",
+      "sha256": "f3c844fb24bcf8b0335fd6d1b65ca7f21b316162d3a61e019c07cd2948437bf4",
+      "evidence_scope": "Saved PubMed abstract only; the full article was not supplied as HTML. Study details and exact-age effects not reported in the abstract remain unverified."
+    },
+    {
+      "source_id": "PMID_2326123",
+      "title": "Attention of hyperactive preschool children--electrodermal activity during auditory stimulation",
+      "citation": "Shibagaki M;Yamanaka T; Attention of hyperactive preschool children--electrodermal activity during auditory stimulation. Perceptual and motor skills. 1990 Feb. PMID 2326123.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/2326123/",
+      "doi": "10.2466/pms.1990.70.1.235",
+      "local_html": "../1990 ADHD Papers/Attention of hyperactive preschool children--electrodermal activity during auditory stimulation - PubMed.html",
+      "sha256": "07f5dfbb51849ed390b387078315db9696fcdce856322782bcf9f5638d00f7f7",
+      "evidence_scope": "Saved PubMed abstract only; the full article was not supplied as HTML. Study details and exact-age effects not reported in the abstract remain unverified."
+    },
+    {
+      "source_id": "PMID_1974836",
+      "title": "Attention-deficit hyperactivity disorder",
+      "citation": "Calis KA;Grothe DR;Elia J; Attention-deficit hyperactivity disorder. Clinical pharmacy. 1990 Aug. PMID 1974836.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/1974836/",
+      "doi": "",
+      "local_html": "../1990 ADHD Papers/Attention-deficit hyperactivity disorder - PubMed.html",
+      "sha256": "d8c2c33f0b989dcc71433445922ae7b78df77d6db60b44b52f1e60fa2d02e075",
+      "evidence_scope": "Saved PubMed abstract only; the full article was not supplied as HTML. Study details and exact-age effects not reported in the abstract remain unverified."
+    },
+    {
+      "source_id": "PMID_2228924",
+      "title": "Effects of methylphenidate on adolescents with aggressive conduct disorder and ADDH: a preliminary report",
+      "citation": "Kaplan SL;Busner J;Kupietz S;Wassermann E;Segal B; Effects of methylphenidate on adolescents with aggressive conduct disorder and ADDH: a preliminary report. Journal of the American Academy of Child and Adolescent Psychiatry. 1990 Sep. PMID 2228924.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/2228924/",
+      "doi": "10.1097/00004583-199009000-00007",
+      "local_html": "../1990 ADHD Papers/Effects of methylphenidate on adolescents with aggressive conduct disorder and ADDH_ a preliminary report - PubMed.html",
+      "sha256": "675b6af218f1fe2c234cb340e9ae6b0a1edd38749385786b0593b5f456f5a43f",
+      "evidence_scope": "Saved PubMed abstract only; the full article was not supplied as HTML. Study details and exact-age effects not reported in the abstract remain unverified."
+    },
+    {
+      "source_id": "PMID_2135682",
+      "title": "Efficacy of methylphenidate among mentally retarded children with attention deficit hyperactivity disorder",
+      "citation": "Handen BL;Breaux AM;Gosling A;Ploof DL;Feldman H; Efficacy of methylphenidate among mentally retarded children with attention deficit hyperactivity disorder. Pediatrics. 1990 Dec. PMID 2135682.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/2135682/",
+      "doi": "",
+      "local_html": "../1990 ADHD Papers/Efficacy of methylphenidate among mentally retarded children with attention deficit hyperactivity disorder - PubMed.html",
+      "sha256": "f0a8f9ea45f2211a127fb8ed04b1fde753ee4d18d2726003b34caf303bbd6cc1",
+      "evidence_scope": "Saved PubMed abstract only; the full article was not supplied as HTML. Study details and exact-age effects not reported in the abstract remain unverified."
+    },
+    {
+      "source_id": "PMID_2387786",
+      "title": "Family-genetic and psychosocial risk factors in DSM-III attention deficit disorder",
+      "citation": "Biederman J;Faraone SV;Keenan K;Knee D;Tsuang MT; Family-genetic and psychosocial risk factors in DSM-III attention deficit disorder. Journal of the American Academy of Child and Adolescent Psychiatry. 1990 Jul. PMID 2387786.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/2387786/",
+      "doi": "10.1097/00004583-199007000-00004",
+      "local_html": "../1990 ADHD Papers/Family-genetic and psychosocial risk factors in DSM-III attention deficit disorder - PubMed.html",
+      "sha256": "ffa5d6bf3be1d4e2d1b44fa6f1245ac4d424ea5db14bd934a86b2c568c8cfe12",
+      "evidence_scope": "Saved PubMed abstract only; the full article was not supplied as HTML. Study details and exact-age effects not reported in the abstract remain unverified."
+    },
+    {
+      "source_id": "PMID_2074343",
+      "title": "Intellectual, academic, and adaptive functioning of Tourette syndrome children with and without attention deficit disorder",
+      "citation": "Dykens E;Leckman J;Riddle M;Hardin M;Schwartz S;Cohen D; Intellectual, academic, and adaptive functioning of Tourette syndrome children with and without attention deficit disorder. Journal of abnormal child psychology. 1990 Dec. PMID 2074343.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/2074343/",
+      "doi": "10.1007/BF01342750",
+      "local_html": "../1990 ADHD Papers/Intellectual, academic, and adaptive functioning of Tourette syndrome children with and without attention deficit disorder - PubMed.html",
+      "sha256": "d93c46b440ae3c249f60f4415df94ae9274f74aab88e6efeaa43f947d3c3c7e6",
+      "evidence_scope": "Saved PubMed abstract only; the full article was not supplied as HTML. Study details and exact-age effects not reported in the abstract remain unverified."
+    },
+    {
+      "source_id": "PMID_2319047",
+      "title": "Methylphenidate and baseball playing in ADHD children: who's on first?",
+      "citation": "Pelham WE;McBurnett K;Harper GW;Milich R;Murphy DA;Clinton J;Thiele C; Methylphenidate and baseball playing in ADHD children: who's on first?. Journal of consulting and clinical psychology. 1990 Feb. PMID 2319047.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/2319047/",
+      "doi": "10.1037/0022-006X.58.1.130",
+      "local_html": "../1990 ADHD Papers/Methylphenidate and baseball playing in ADHD children_ who's on first_ - PubMed.html",
+      "sha256": "051e409481456c178ec49ea5487634b325c2949016b85a1e35fb2d23e5437a83",
+      "evidence_scope": "Saved PubMed abstract only; the full article was not supplied as HTML. Study details and exact-age effects not reported in the abstract remain unverified."
+    },
+    {
+      "source_id": "PMID_2228923",
+      "title": "Methylphenidate in aggressive-hyperactive boys: I. Effects on peer aggression in public school settings",
+      "citation": "Gadow KD;Nolan EE;Sverd J;Sprafkin J;Paolicelli L; Methylphenidate in aggressive-hyperactive boys: I. Effects on peer aggression in public school settings. Journal of the American Academy of Child and Adolescent Psychiatry. 1990 Sep. PMID 2228923.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/2228923/",
+      "doi": "10.1097/00004583-199009000-00006",
+      "local_html": "../1990 ADHD Papers/Methylphenidate in aggressive-hyperactive boys_ I. Effects on peer aggression in public school settings - PubMed.html",
+      "sha256": "b6ef800d54efa3d47c9f62c1f4b02e8910442dcd0756ac1b93b12c1cf45f641a",
+      "evidence_scope": "Saved PubMed abstract only; the full article was not supplied as HTML. Study details and exact-age effects not reported in the abstract remain unverified."
+    },
+    {
+      "source_id": "PMID_2228921",
+      "title": "Parent-based diagnosis of attention deficit disorder predicts a diagnosis based on teacher report",
+      "citation": "Biederman J;Keenan K;Faraone SV; Parent-based diagnosis of attention deficit disorder predicts a diagnosis based on teacher report. Journal of the American Academy of Child and Adolescent Psychiatry. 1990 Sep. PMID 2228921.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/2228921/",
+      "doi": "10.1097/00004583-199009000-00004",
+      "local_html": "../1990 ADHD Papers/Parent-based diagnosis of attention deficit disorder predicts a diagnosis based on teacher report - PubMed.html",
+      "sha256": "07e69817fb070c372660709f815d0157befb50eb0b7f9021005f16d24ab1ecb4",
+      "evidence_scope": "Saved PubMed abstract only; the full article was not supplied as HTML. Study details and exact-age effects not reported in the abstract remain unverified."
+    },
+    {
+      "source_id": "PMID_2258453",
+      "title": "Possible influence of carbamazepine on plasma imipramine concentrations in children with attention deficit hyperactivity disorder",
+      "citation": "Brown CS;Wells BG;Cold JA;Froemming JH;Self TH;Jabbour JT; Possible influence of carbamazepine on plasma imipramine concentrations in children with attention deficit hyperactivity disorder. Journal of clinical psychopharmacology. 1990 Oct. PMID 2258453.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/2258453/",
+      "doi": "",
+      "local_html": "../1990 ADHD Papers/Possible influence of carbamazepine on plasma imipramine concentrations in children with attention deficit hyperactivity disorder - PubMed.html",
+      "sha256": "8c1fdae328b92b0ddca983113718877183b76a26225443e7cc88775f36096515",
+      "evidence_scope": "Saved PubMed abstract only; the full article was not supplied as HTML. Study details and exact-age effects not reported in the abstract remain unverified."
+    },
+    {
+      "source_id": "PMID_2196520",
+      "title": "Side effects of methylphenidate in children with attention deficit hyperactivity disorder: a systemic, placebo-controlled evaluation",
+      "citation": "Barkley RA;McMurray MB;Edelbrock CS;Robbins K; Side effects of methylphenidate in children with attention deficit hyperactivity disorder: a systemic, placebo-controlled evaluation. Pediatrics. 1990 Aug. PMID 2196520.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/2196520/",
+      "doi": "",
+      "local_html": "../1990 ADHD Papers/Side effects of methylphenidate in children with attention deficit hyperactivity disorder_ a systemic, placebo-controlled evaluation - PubMed.html",
+      "sha256": "ef6d8b034e338e72d2a54ed3031b10f22165595966626567ff8835db3d116221",
+      "evidence_scope": "Saved PubMed abstract only; the full article was not supplied as HTML. Study details and exact-age effects not reported in the abstract remain unverified."
+    },
+    {
+      "source_id": "PMID_2212053",
+      "title": "Situational variability in boys and girls identified as ADHD",
+      "citation": "Breen MJ;Altepeter TS; Situational variability in boys and girls identified as ADHD. Journal of clinical psychology. 1990 Jul. PMID 2212053.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/2212053/",
+      "doi": "",
+      "local_html": "../1990 ADHD Papers/Situational variability in boys and girls identified as ADHD - PubMed.html",
+      "sha256": "159dfdda96e66c16692acf4f7023c63edf4a329cefeb536d7362cac6b95894b8",
+      "evidence_scope": "Saved PubMed abstract only; the full article was not supplied as HTML. Study details and exact-age effects not reported in the abstract remain unverified."
+    },
+    {
+      "source_id": "PMID_2198308",
+      "title": "Social judgment processes in hyperactive boys: effects of methylphenidate and comparisons with normal peers",
+      "citation": "Whalen CK;Henker B;Granger DA; Social judgment processes in hyperactive boys: effects of methylphenidate and comparisons with normal peers. Journal of abnormal child psychology. 1990 Jun. PMID 2198308.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/2198308/",
+      "doi": "10.1007/BF00916567",
+      "local_html": "../1990 ADHD Papers/Social judgment processes in hyperactive boys_ effects of methylphenidate and comparisons with normal peers - PubMed.html",
+      "sha256": "78142ba67858a930b7763d786a0523abcb54deed291a4d36056685029bf8e89f",
+      "evidence_scope": "Saved PubMed abstract only; the full article was not supplied as HTML. Study details and exact-age effects not reported in the abstract remain unverified."
+    },
+    {
+      "source_id": "PMID_2254504",
+      "title": "The adolescent outcome of hyperactive children diagnosed by research criteria: II. Academic, attentional, and neuropsychological status",
+      "citation": "Fischer M;Barkley RA;Edelbrock CS;Smallish L; The adolescent outcome of hyperactive children diagnosed by research criteria: II. Academic, attentional, and neuropsychological status. Journal of consulting and clinical psychology. 1990 Oct. PMID 2254504.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/2254504/",
+      "doi": "10.1037//0022-006x.58.5.580",
+      "local_html": "../1990 ADHD Papers/The adolescent outcome of hyperactive children diagnosed by research criteria_ II. Academic, attentional, and neuropsychological status - PubMed.html",
+      "sha256": "1a9bd587f2aed3daeb5ae4191acd1d180d4b06a0439a8184e217ee8b3ce26758",
+      "evidence_scope": "Saved PubMed abstract only; the full article was not supplied as HTML. Study details and exact-age effects not reported in the abstract remain unverified."
+    },
+    {
+      "source_id": "PMID_2235277",
+      "title": "The diagnostic value of cerebellar-vestibular tests in detecting learning disabilities, dyslexia, and attention deficit disorder",
+      "citation": "Levinson HN; The diagnostic value of cerebellar-vestibular tests in detecting learning disabilities, dyslexia, and attention deficit disorder. Perceptual and motor skills. 1990 Aug. PMID 2235277.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/2235277/",
+      "doi": "10.2466/pms.1990.71.1.67",
+      "local_html": "../1990 ADHD Papers/The diagnostic value of cerebellar-vestibular tests in detecting learning disabilities, dyslexia, and attention deficit disorder - PubMed.html",
+      "sha256": "ecbe1186dd50ba7d2748df6e7182d382580478faeb0b3d338519af40a2f6c7d3",
+      "evidence_scope": "Saved PubMed abstract only; the full article was not supplied as HTML. Study details and exact-age effects not reported in the abstract remain unverified."
+    },
+    {
+      "source_id": "PMID_2273073",
+      "title": "The effects of behavioral parent training on families with young hyperactive children",
+      "citation": "Erhardt D;Baker BL; The effects of behavioral parent training on families with young hyperactive children. Journal of behavior therapy and experimental psychiatry. 1990 Jun. PMID 2273073.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/2273073/",
+      "doi": "10.1016/0005-7916(90)90017-f",
+      "local_html": "../1990 ADHD Papers/The effects of behavioral parent training on families with young hyperactive children - PubMed.html",
+      "sha256": "67fa8e220f402922cb47b1951b93a76aaa9e93067e44641f90b95d4fb84f343b",
+      "evidence_scope": "Saved PubMed abstract only; the full article was not supplied as HTML. Study details and exact-age effects not reported in the abstract remain unverified."
+    },
+    {
+      "source_id": "PMID_2266220",
+      "title": "The frequency and significance of additional self-reported psychiatric diagnoses in children with attention deficit disorder",
+      "citation": "Livingston RL;Dykman RA;Ackerman PT; The frequency and significance of additional self-reported psychiatric diagnoses in children with attention deficit disorder. Journal of abnormal child psychology. 1990 Oct. PMID 2266220.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/2266220/",
+      "doi": "10.1007/BF00911102",
+      "local_html": "../1990 ADHD Papers/The frequency and significance of additional self-reported psychiatric diagnoses in children with attention deficit disorder - PubMed.html",
+      "sha256": "148fdc2bae935e63f4e1dd99221667bf54cf995a7a6d61ed94a2e2e43bd3847c",
+      "evidence_scope": "Saved PubMed abstract only; the full article was not supplied as HTML. Study details and exact-age effects not reported in the abstract remain unverified."
+    },
+    {
+      "source_id": "PMID_2342842",
+      "title": "The relationship between continuous performance tasks and neuropsychological tests in children with attention-deficit hyperactivity disorder",
+      "citation": "Grant ML;Ilai D;Nussbaum NL;Bigler ED; The relationship between continuous performance tasks and neuropsychological tests in children with attention-deficit hyperactivity disorder. Perceptual and motor skills. 1990 Apr. PMID 2342842.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/2342842/",
+      "doi": "10.2466/pms.1990.70.2.435",
+      "local_html": "../1990 ADHD Papers/The relationship between continuous performance tasks and neuropsychological tests in children with attention-deficit hyperactivity disorder - PubMed.html",
+      "sha256": "44718fa1d74d3f7e7701043ac42b03a0a8adfc2c53d22263688af463752bd3b7",
+      "evidence_scope": "Saved PubMed abstract only; the full article was not supplied as HTML. Study details and exact-age effects not reported in the abstract remain unverified."
+    },
+    {
+      "source_id": "PMID_2288166",
+      "title": "[Are there sex differences in the manifestation of hyperkinetic syndrome?]",
+      "citation": "Rieder-Uysal D; [Are there sex differences in the manifestation of hyperkinetic syndrome?]. Zeitschrift fur Kinder- und Jugendpsychiatrie. 1990 Sep. PMID 2288166.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/2288166/",
+      "doi": "",
+      "local_html": "../1990 ADHD Papers/[Are there sex differences in the manifestation of hyperkinetic syndrome_] - PubMed.html",
+      "sha256": "4d34da600d22ed8e01e957b81e86cd181494dd0495644d03852f85dbd161c3ee",
+      "evidence_scope": "Saved PubMed abstract only; the full article was not supplied as HTML. Study details and exact-age effects not reported in the abstract remain unverified."
+    },
+    {
+      "source_id": "PMID_2346989",
+      "title": "[Changes in the concept of minimal brain dysfunction in modern diagnostic classification and its manifestation in our theory and practice]",
+      "citation": "Tyl J;Pazlarová M; [Changes in the concept of minimal brain dysfunction in modern diagnostic classification and its manifestation in our theory and practice]. Ceskoslovenska psychiatrie. 1990 Feb. PMID 2346989.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/2346989/",
+      "doi": "",
+      "local_html": "../1990 ADHD Papers/[Changes in the concept of minimal brain dysfunction in modern diagnostic classification and its manifestation in our theory and practice] - PubMed.html",
+      "sha256": "eda1f1cf53ae52d2ea482c4d61a1c84d02ecabf5fab93cf902f8179b245d30e8",
+      "evidence_scope": "Saved PubMed abstract only; the full article was not supplied as HTML. Study details and exact-age effects not reported in the abstract remain unverified."
+    },
+    {
+      "source_id": "PMID_2397543",
+      "title": "[Preliminary study of traditional Chinese medicine treatment of minimal brain dysfunction: analysis of 100 cases]",
+      "citation": "Zhang H;Huang J; [Preliminary study of traditional Chinese medicine treatment of minimal brain dysfunction: analysis of 100 cases]. Zhong xi yi jie he za zhi = Chinese journal of modern developments in traditional medicine. 1990 May. PMID 2397543.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/2397543/",
+      "doi": "",
+      "local_html": "../1990 ADHD Papers/[Preliminary study of traditional Chinese medicine treatment of minimal brain dysfunction_ analysis of 100 cases] - PubMed.html",
+      "sha256": "45bc955d755502f0b92d2f2bba322d11c45543b468624948b512dd80419f4cf7",
+      "evidence_scope": "Saved PubMed abstract only; the full article was not supplied as HTML. Study details and exact-age effects not reported in the abstract remain unverified."
+    },
+    {
+      "source_id": "PMID_2346992",
+      "title": "[The importance of nonverbal motor examination methods in screening for minimal brain dysfunction]",
+      "citation": "Míka J; [The importance of nonverbal motor examination methods in screening for minimal brain dysfunction]. Ceskoslovenska psychiatrie. 1990 Feb. PMID 2346992.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/2346992/",
+      "doi": "",
+      "local_html": "../1990 ADHD Papers/[The importance of nonverbal motor examination methods in screening for minimal brain dysfunction] - PubMed.html",
+      "sha256": "a9961574979f88c2d3371365599499ac6e7111076b9a75545550443ce1a81a34",
+      "evidence_scope": "Saved PubMed abstract only; the full article was not supplied as HTML. Study details and exact-age effects not reported in the abstract remain unverified."
     }
   ]
 }

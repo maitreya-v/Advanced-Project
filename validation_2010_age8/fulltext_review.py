@@ -4,6 +4,11 @@ The review is intentionally explicit: each graph edge starts as insufficient
 evidence, and only the overrides below receive another status.
 """
 
+from pathlib import Path
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from validation_html_utils import apply_html_review
+
 STATUS_DEFINITIONS = {
     "supported": "Evidence supports the stated direction, sign, and reasoning within the declared scope.",
     "partially_supported": "Evidence supports only part of the claim, a narrower population or outcome, or an association rather than the full causal claim.",
@@ -158,4 +163,4 @@ def build_review(edges):
             "recommended_action": action,
             "evidence": [E[key] for key in keys],
         })
-    return rows
+    return apply_html_review(rows, 8, E, year=2010)

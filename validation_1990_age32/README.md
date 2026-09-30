@@ -1,22 +1,22 @@
 # 1990 age-32 graph validation
 
-Validation of **1990_32 yo.py**: **53 edges**, using only the **four supplied PDF files** in `1990 ADHD Papers`.
+Validation of **1990_32 yo.py**: **53 edges**, using only the **four supplied PDF files and 25 saved PubMed HTML abstracts** in `1990 ADHD Papers`.
 
 ## Status counts
 
 - `supported`: 0
-- `partially_supported`: 0
+- `partially_supported`: 3
 - `contradicted`: 0
 - `mixed_evidence`: 0
-- `insufficient_evidence`: 47
+- `insufficient_evidence`: 44
 - `not_assessable`: 6
 
 
 ## Method and limitations
 
-**Scope**: 1990_32 yo.py, 58 edges, using only the four supplied PDF files in 1990 ADHD Papers. Direction, sign, and written reasoning were reviewed; numeric strength was excluded.
+**Scope**: 1990_32 yo.py, 53 edges, using the four supplied PDF files and 25 saved PubMed HTML abstracts in 1990 ADHD Papers. Direction, sign, and written reasoning were reviewed; numeric strength was excluded.
 
-**Age Scope**: Adult evidence was required for adult claims. The supplied papers study children or adolescents and were not transferred as causal proof for adults aged 32.
+**Age Scope**: Adult evidence is required for adult claims. The added adult review is treated as partial clinical context without an age-32-specific estimate. Child and adolescent studies are not transferred as adult causal proof.
 
 **Causal Standard**: Associations, reviews, and clinical recommendations were not automatically treated as proof of causal direction. Undefined categorical signs were marked not_assessable.
 
@@ -24,7 +24,11 @@ Validation of **1990_32 yo.py**: **53 edges**, using only the **four supplied PD
 
 **Strength**: The graph's numeric edge strengths were not validated.
 
-**Duplicate**: No exact duplicate PDF files were found in the supplied corpus.
+**Duplicate**: No exact duplicate PDFs or duplicate PMID records were found. HTML pages are deduplicated by PMID; repeated sentences in an abstract are not independent findings.
+
+**Html Scope**: HTML evidence is restricted to the main English abstract of each saved record, excluding similar/cited articles. All 25 records are dated 1990. Abstract-only limitations are retained; the side-effect abstract (PMID 2196520) is marked truncated and repeats a passage.
+
+**Adult Scope**: The adult review (PMID 2251528) supplies clinical context, not a controlled treatment estimate or specific results at age 32 or 45. Pediatric findings are not transferred to adult graphs.
 
 ## Fixed status definitions
 
@@ -38,4 +42,4 @@ Validation of **1990_32 yo.py**: **53 edges**, using only the **four supplied PD
 
 ## Reproduce
 
-Run `python validation_1990_age32/build_report.py`. The script parses but never executes or modifies the graph. It verifies the source edge text, PDF hashes, citations, JSON output, and Excel structure.
+Run `python validation_1990_age32/build_report.py`. The script parses but never executes or modifies the graph. It verifies the source edge text, PDF and HTML hashes, abstract excerpts, citations, JSON output, and Excel structure. Rebuild the interactive graph with `python validation_1990_age32/build_validated_graph.py`.

@@ -11,6 +11,7 @@ from datetime import datetime, timezone
 
 sys.dont_write_bytecode = True
 from fulltext_review import STATUS_DEFINITIONS, E, build_review
+from validation_html_utils import parse_corpus, html_references
 
 BASE = Path(__file__).resolve().parent
 GRAPH = BASE.parent / "2010_8 yo.py"
@@ -97,7 +98,10 @@ for row, edge in zip(rows, edges):
 
 for source_id, filename in SOURCE_FILES.items():
     assert (PDF_DIR / filename).is_file(), filename
-assert all(item["source_id"] in SOURCE_FILES for row in rows for item in row["evidence"])
+html_records = parse_corpus(2010)
+html_refs = html_references(html_records)
+html_pdf_overlap = sum(bool(record.get("same_study_as_pdf_source_id")) for record in html_records)
+assert all(item["source_id"] in set(SOURCE_FILES) | {ref["source_id"] for ref in html_refs} for row in rows for item in row["evidence"])
 
 all_pdfs = sorted(PDF_DIR.glob("*.pdf"))
 hash_to_first = {}
@@ -121,15 +125,21 @@ for source_id, filename in SOURCE_FILES.items():
         "sha256": sha(PDF_DIR / filename),
     })
 
+references.extend(html_refs)
+for record in html_records:
+    documents.append({"file": "../" + record["file"], "sha256": record["sha256"], "duplicate_of": record["duplicate_of"], "source_type": "saved_html", "abstract_only": record["source_id"] != "CAUDATE_HTML", "same_study_as_pdf_source_id": record.get("same_study_as_pdf_source_id")})
+
 counts = {status: sum(row["validation_status"] == status for row in rows) for status in STATUS_DEFINITIONS}
 now = datetime.now(timezone.utc).isoformat()
 methodology = {
-    "scope": "2010_8 yo.py, 58 edges, using only the 25 supplied PDF files in 2010 ADHD Papers (24 unique documents; one exact duplicate). Direction, sign, and written reasoning were reviewed; numeric strength was excluded.",
+    "scope": f"2010_8 yo.py, {len(edges)} edges, using 25 supplied PDFs (24 unique PDF documents) and {len(html_records)} saved HTML article records. Two HTML records reproduce existing PDF studies: 39 unique documents total. Direction, sign, and written reasoning were reviewed; numeric strength was excluded.",
     "age_scope": "Evidence specific to children near age eight was preferred. Pediatric evidence with broader age ranges was treated as partial when it did not report an age-eight estimate. Adult-only evidence was not transferred to this graph.",
     "causal_standard": "Associations, reviews, and clinical recommendations were not automatically treated as proof of causal direction. Undefined categorical signs were marked not_assessable.",
     "source_limits": "This is a validation against the supplied corpus, not a systematic review of all 2010 ADHD literature. A status of insufficient_evidence is not evidence that an edge is false.",
     "strength": "The graph's numeric edge strengths were not validated.",
-    "duplicate": "s12402-010-0036-9 (1).pdf is byte-identical to s12402-010-0036-9.pdf and was counted once as a unique document.",
+    "duplicate": "s12402-010-0036-9 (1).pdf is byte-identical to s12402-010-0036-9.pdf. The sex/age PubMed record (PMID 20410711) and ClinicalKey caudate article reproduce AGE_SEX and CAUDATE_MRI PDFs, respectively. Alternate formats are not independent studies.",
+    "html_scope": "15 PubMed records and two publisher records were parsed. Only primary article abstracts are used as new evidence; navigation, related articles and saved asset frames are excluded. ClinicalKey also contains the caudate full text, already supplied as PDF. Bipolar publication year is 2010 from the article date and journal citation, despite conflicting website citation metadata. Abstract encoding artifacts are preserved.",
+    "evidence_limits": "Cross-sectional associations, selected prison/Tourette populations, clinical disparity commentary, and QOL endpoints are distinguished from causal exposure effects. QOL treatment gains do not validate diagnosis-only benefits or adverse-effect-only harm. Pediatric findings are not transferred to adult age-specific claims.",
 }
 
 metadata = {
@@ -139,7 +149,11 @@ metadata = {
     "age": 8,
     "edge_count": len(edges),
     "pdf_file_count": len(all_pdfs),
-    "unique_document_count": len(hash_to_first),
+    "unique_document_count": len(hash_to_first) + len(html_refs) - html_pdf_overlap,
+    "html_file_count": len(html_records),
+    "html_abstract_record_count": len(html_records),
+    "new_unique_html_document_count": len(html_refs) - html_pdf_overlap,
+    "abstract_only_document_count": len(html_refs) - html_pdf_overlap,
     "validation_updated_utc": now,
     "original_unchanged": True,
     "strength_assessed": False,
@@ -197,8 +211,8 @@ for row in rows:
     ) or "No directly relevant excerpt used"
     edge_data.append([row[key] for key in ["edge_id", "source", "dest", "existing_reasoning", "sign", "validation_status", "observation_from_validation", "recommended_action"]] + [rendered_evidence])
 
-reference_data = [["Source ID", "Title", "Local PDF", "SHA-256"]] + [
-    [item["source_id"], item["title"], item["local_pdf"], item["sha256"]] for item in references
+reference_data = [["Source ID", "Title", "Local file (PDF or HTML)", "SHA-256"]] + [
+    [item["source_id"], item["title"], item.get("local_pdf") or item["local_html"], item["sha256"]] for item in references
 ]
 method_data = [["Item", "Explanation"]] + [[key, value] for key, value in methodology.items()] + [[f"Status: {key}", value] for key, value in STATUS_DEFINITIONS.items()]
 sheets = [
@@ -220,10 +234,14 @@ with zipfile.ZipFile(BASE / "edge_validation.xlsx") as archive:
     assert archive.testzip() is None
     for name in archive.namelist():
         ET.fromstring(archive.read(name))
+    namespace = {"s": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"}
+    worksheet = ET.fromstring(archive.read("xl/worksheets/sheet1.xml"))
+    workbook_rows = [[cell.find("s:is/s:t", namespace).text or "" for cell in row] for row in worksheet.findall("s:sheetData/s:row", namespace)]
+    assert workbook_rows == [[str(value) for value in row] for row in edge_data], "Excel edge rows differ from reviewed JSON."
 
 readme = f"""# 2010 age-eight graph validation
 
-Validation of **2010_8 yo.py**: **{len(edges)} edges**, using only the **25 supplied PDF files (24 unique documents)** in `2010 ADHD Papers`.
+Validation of **2010_8 yo.py**: **{len(edges)} edges**, using only the **25 supplied PDFs and 17 saved HTML article records (39 unique documents)** in `2010 ADHD Papers`.
 
 ## Status counts
 
@@ -239,7 +257,7 @@ Validation of **2010_8 yo.py**: **{len(edges)} edges**, using only the **25 supp
 
 ## Reproduce
 
-Run `python validation_2010_age8/build_report.py`. The script parses but never executes or modifies the graph. It verifies the source edge text, PDF hashes, citations, JSON output, and Excel structure.
+Run `python validation_2010_age8/build_report.py`. The script parses but never executes or modifies the graph. It verifies the source edge text, PDF and HTML hashes, abstract excerpts, citations, JSON output, and Excel structure. Rebuild the interactive graph with `python validation_2010_age8/build_validated_graph.py`.
 """
 (BASE / "README.md").write_text(readme, encoding="utf-8")
 
@@ -247,7 +265,9 @@ checks = {
     "graph": GRAPH.name,
     "edges_reviewed": len(rows),
     "pdf_files_reviewed": len(all_pdfs),
-    "unique_documents_reviewed": len(hash_to_first),
+    "unique_documents_reviewed": len(hash_to_first) + len(html_refs) - html_pdf_overlap,
+    "html_files_reviewed": len(html_records),
+    "all_html_excerpts_verified": True,
     "status_counts": counts,
     "original_sha256": graph_hash,
     "original_unchanged": sha(GRAPH) == graph_hash,

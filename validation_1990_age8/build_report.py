@@ -11,6 +11,7 @@ from datetime import datetime, timezone
 
 sys.dont_write_bytecode = True
 from fulltext_review import STATUS_DEFINITIONS, E, build_review
+from validation_html_utils import parse_corpus, html_references
 
 BASE = Path(__file__).resolve().parent
 GRAPH = BASE.parent / "1990_8 yo.py"
@@ -57,7 +58,9 @@ for row, edge in zip(rows, edges):
 
 for source_id, filename in SOURCE_FILES.items():
     assert (PDF_DIR / filename).is_file(), filename
-assert all(item["source_id"] in SOURCE_FILES for row in rows for item in row["evidence"])
+html_records = parse_corpus(1990)
+html_refs = html_references(html_records)
+assert all(item["source_id"] in set(SOURCE_FILES) | {ref["source_id"] for ref in html_refs} for row in rows for item in row["evidence"])
 
 all_pdfs = sorted(PDF_DIR.glob("*.pdf"))
 hash_to_first = {}
@@ -81,15 +84,21 @@ for source_id, filename in SOURCE_FILES.items():
         "sha256": sha(PDF_DIR / filename),
     })
 
+references.extend(html_refs)
+for record in html_records:
+    documents.append({"file": "../" + record["file"], "sha256": record["sha256"], "duplicate_of": record["duplicate_of"], "source_type": "saved_pubmed_html", "abstract_only": True})
+
 counts = {status: sum(row["validation_status"] == status for row in rows) for status in STATUS_DEFINITIONS}
 now = datetime.now(timezone.utc).isoformat()
 methodology = {
-    "scope": "1990_8 yo.py, 58 edges, using only the four supplied PDF files in 1990 ADHD Papers. Direction, sign, and written reasoning were reviewed; numeric strength was excluded.",
+    "scope": f"1990_8 yo.py, {len(edges)} edges, using the four supplied PDF files and 25 saved PubMed HTML abstracts in 1990 ADHD Papers. Direction, sign, and written reasoning were reviewed; numeric strength was excluded.",
     "age_scope": "Evidence specific to children near age eight was preferred. Older-child and adolescent evidence was treated as partial when it did not report an age-eight estimate.",
     "causal_standard": "Associations, reviews, and clinical recommendations were not automatically treated as proof of causal direction. Undefined categorical signs were marked not_assessable.",
     "source_limits": "This is a validation against the supplied corpus, not a systematic review of all 1990 ADHD literature. A status of insufficient_evidence is not evidence that an edge is false.",
     "strength": "The graph's numeric edge strengths were not validated.",
-    "duplicate": "No exact duplicate PDF files were found in the supplied corpus.",
+    "duplicate": "No exact duplicate PDFs or duplicate PMID records were found. HTML pages are deduplicated by PMID; repeated sentences in an abstract are not independent findings.",
+    "html_scope": "HTML evidence is restricted to the main English abstract of each saved record, excluding similar/cited articles. All 25 records are dated 1990. Abstract-only limitations are retained; the side-effect abstract (PMID 2196520) is marked truncated and repeats a passage.",
+    "adult_scope": "The adult review (PMID 2251528) supplies clinical context, not a controlled treatment estimate or specific results at age 32 or 45. Pediatric findings are not transferred to adult graphs.",
 }
 
 metadata = {
@@ -99,7 +108,9 @@ metadata = {
     "age": 8,
     "edge_count": len(edges),
     "pdf_file_count": len(all_pdfs),
-    "unique_document_count": len(hash_to_first),
+    "unique_document_count": len(hash_to_first) + len(html_refs),
+    "html_file_count": len(html_records),
+    "abstract_only_document_count": len(html_refs),
     "validation_updated_utc": now,
     "original_unchanged": True,
     "strength_assessed": False,
@@ -157,8 +168,8 @@ for row in rows:
     ) or "No directly relevant excerpt used"
     edge_data.append([row[key] for key in ["edge_id", "source", "dest", "existing_reasoning", "sign", "validation_status", "observation_from_validation", "recommended_action"]] + [rendered_evidence])
 
-reference_data = [["Source ID", "Title", "Local PDF", "SHA-256"]] + [
-    [item["source_id"], item["title"], item["local_pdf"], item["sha256"]] for item in references
+reference_data = [["Source ID", "Title", "Local file (PDF or HTML)", "SHA-256"]] + [
+    [item["source_id"], item["title"], item.get("local_pdf") or item["local_html"], item["sha256"]] for item in references
 ]
 method_data = [["Item", "Explanation"]] + [[key, value] for key, value in methodology.items()] + [[f"Status: {key}", value] for key, value in STATUS_DEFINITIONS.items()]
 sheets = [
@@ -180,10 +191,14 @@ with zipfile.ZipFile(BASE / "edge_validation.xlsx") as archive:
     assert archive.testzip() is None
     for name in archive.namelist():
         ET.fromstring(archive.read(name))
+    namespace = {"s": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"}
+    worksheet = ET.fromstring(archive.read("xl/worksheets/sheet1.xml"))
+    workbook_rows = [[cell.find("s:is/s:t", namespace).text or "" for cell in row] for row in worksheet.findall("s:sheetData/s:row", namespace)]
+    assert workbook_rows == [[str(value) for value in row] for row in edge_data], "Excel edge rows differ from reviewed JSON."
 
 readme = f"""# 1990 age-8 graph validation
 
-Validation of **1990_8 yo.py**: **{len(edges)} edges**, using only the **four supplied PDF files** in `1990 ADHD Papers`.
+Validation of **1990_8 yo.py**: **{len(edges)} edges**, using only the **four supplied PDF files and 25 saved PubMed HTML abstracts** in `1990 ADHD Papers`.
 
 ## Status counts
 
@@ -199,7 +214,7 @@ Validation of **1990_8 yo.py**: **{len(edges)} edges**, using only the **four su
 
 ## Reproduce
 
-Run `python validation_1990_age8/build_report.py`. The script parses but never executes or modifies the graph. It verifies the source edge text, PDF hashes, citations, JSON output, and Excel structure.
+Run `python validation_1990_age8/build_report.py`. The script parses but never executes or modifies the graph. It verifies the source edge text, PDF and HTML hashes, abstract excerpts, citations, JSON output, and Excel structure. Rebuild the interactive graph with `python validation_1990_age8/build_validated_graph.py`.
 """
 (BASE / "README.md").write_text(readme, encoding="utf-8")
 
@@ -207,7 +222,9 @@ checks = {
     "graph": GRAPH.name,
     "edges_reviewed": len(rows),
     "pdf_files_reviewed": len(all_pdfs),
-    "unique_documents_reviewed": len(hash_to_first),
+    "unique_documents_reviewed": len(hash_to_first) + len(html_refs),
+    "html_files_reviewed": len(html_records),
+    "all_html_excerpts_verified": True,
     "status_counts": counts,
     "original_sha256": graph_hash,
     "original_unchanged": sha(GRAPH) == graph_hash,

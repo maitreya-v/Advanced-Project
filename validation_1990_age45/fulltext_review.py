@@ -1,4 +1,8 @@
-"""Conservative full-text judgments for the 1990 graph."""
+"""Reviewed 1990 PDF evidence, supplemented by saved PubMed abstracts."""
+from pathlib import Path
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from validation_html_utils import apply_html_review
 STATUS_DEFINITIONS = {
     "supported": "Evidence supports the stated direction, sign, and reasoning within the declared scope.",
     "partially_supported": "Evidence supports only part of the claim, a narrower population or outcome, or an association rather than the full causal claim.",
@@ -23,7 +27,7 @@ OVERRIDES = {
  22:("not_assessable","Race / Ethnicity is categorical; a negative sign needs a named comparison and access measure.","Specify the population contrast and setting.",[]),
  38:("not_assessable","Adherence occurs after prescription; the explanation concerns effect while the destination is treatment itself.","Model adherence as a modifier of exposure or benefit.",[]),
 }
-DEFAULT_OBSERVATION="The four supplied papers study children or adolescents and do not establish this causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence."
+DEFAULT_OBSERVATION="The supplied PDFs and HTML abstracts do not establish this specific causal claim for adults around age 45. Pediatric findings are not transferred as midlife evidence; the added adult review has no age-45-specific estimate."
 DEFAULT_ACTION="Retain only as an explicitly unvalidated hypothesis or add directly relevant midlife adult evidence."
 
 def build_review(edges):
@@ -31,4 +35,4 @@ def build_review(edges):
     for edge_id,(source,dest,sign,_strength,reasoning) in enumerate(edges,1):
         status,observation,action,keys=OVERRIDES.get(edge_id,("insufficient_evidence",DEFAULT_OBSERVATION,DEFAULT_ACTION,[]))
         rows.append({"edge_id":edge_id,"source":source,"dest":dest,"existing_reasoning":reasoning,"sign":sign,"validation_status":status,"observation_from_validation":observation,"recommended_action":action,"evidence":[E[k] for k in keys]})
-    return rows
+    return apply_html_review(rows, 45, E)

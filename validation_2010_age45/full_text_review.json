@@ -6,16 +6,20 @@
     "age": 45,
     "edge_count": 61,
     "pdf_file_count": 25,
-    "unique_document_count": 24,
-    "validation_updated_utc": "2026-09-23T03:27:47.572405+00:00",
+    "unique_document_count": 39,
+    "html_file_count": 17,
+    "html_abstract_record_count": 17,
+    "new_unique_html_document_count": 15,
+    "abstract_only_document_count": 15,
+    "validation_updated_utc": "2026-09-30T01:33:44.221301+00:00",
     "original_unchanged": true,
     "strength_assessed": false,
     "status_counts": {
       "supported": 0,
-      "partially_supported": 16,
+      "partially_supported": 17,
       "contradicted": 0,
       "mixed_evidence": 0,
-      "insufficient_evidence": 40,
+      "insufficient_evidence": 39,
       "not_assessable": 5
     }
   },
@@ -91,6 +95,156 @@
       "exact_excerpt": "common side effects of the drugs include headache, stomach upset, nausea, loss of appetite, trouble sleeping, weight loss, dry mouth, nervousness, mood swings, dizziness, fast heart beat, and heart palpitations",
       "location": "PDF page 2",
       "relevance": "Supports stimulant adverse effects, although the paper studies nonmedical college use rather than prescribed treatment at age 32."
+    },
+    "html_45_50_12": {
+      "source_id": "PMID_20839896",
+      "exact_excerpt": "These studies support a positive short-term effect of medication on QOL in ADHD for children, adolescents and adults that mirrors, to some extent, the effects of these medications on ADHD symptoms, although with smaller effect sizes.",
+      "location": "The impact of medications on quality of life in attention-deficit hyperactivity disorder_ a systematic review - PubMed.html; article abstract (#eng-abstract)",
+      "relevance": "Systematic review of 25 studies, mainly pediatric and atomoxetine; adult evidence limited. QOL is a related but different endpoint from separately measured functional impairment; no diagnosis-only or adverse-effect-only effect is identified."
+    },
+    "html_45_3_13": {
+      "source_id": "BIPOLAR_ADULT",
+      "exact_excerpt": "Conclusions: Our findings illustrate the close relationship between some symptoms of BSD and ADHD in adults.",
+      "location": "Bipolar Symptoms in Adult Attention-Deficit_Hyperactivity Disorder_ A Cross-Sectional Study of 510 Clinically Diagnosed Patients and 417 Population-Based Controls.html; article abstract (#article-tabs)",
+      "relevance": "Cross-sectional adult symptom overlap; screening positive is not identical to confirmed bipolar disorder. Clinical assessment ambiguity is supported but actual diagnostic error rates and causation are unmeasured."
+    },
+    "html_45_3_14": {
+      "source_id": "PMID_19270267",
+      "exact_excerpt": "The authors conclude that ADHD is common in offenders and is associated with comorbid disorders, worse quality of life, and higher risk for suicidal behaviors.",
+      "location": "Attention deficit hyperactivity disorder in men and women newly committed to prison_ clinical characteristics, psychiatric comorbidity, and quality of life - PubMed.html; article abstract (#eng-abstract)",
+      "relevance": "Selected incarcerated adult sample; not representative of all adults. Association of ADHD with QOL does not isolate functional impairment as a cause or diagnosis as a benefit."
+    },
+    "html_45_5_15": {
+      "source_id": "PMID_19270267",
+      "exact_excerpt": "Offenders with ADHD were more likely to report problems with emotional and social functioning and to have higher suicide risk scores (p < .001).",
+      "location": "Attention deficit hyperactivity disorder in men and women newly committed to prison_ clinical characteristics, psychiatric comorbidity, and quality of life - PubMed.html; article abstract (#eng-abstract)",
+      "relevance": "Observed functional associations in prisoners; no symptom-severity intervention or age-32/45 estimate."
+    },
+    "html_45_5_16": {
+      "source_id": "BIPOLAR_ADULT",
+      "exact_excerpt": "Patients screening positive on the MDQ had significantly more drug problems, higher ADHD symptom scores, and lower educational and occupational levels.",
+      "location": "Bipolar Symptoms in Adult Attention-Deficit_Hyperactivity Disorder_ A Cross-Sectional Study of 510 Clinically Diagnosed Patients and 417 Population-Based Controls.html; article abstract (#article-tabs)",
+      "relevance": "Association between bipolar screening status and functional indicators; no causal effect, no exact age-32 estimate, and no midlife subgroup supplied."
+    },
+    "html_45_60_17": {
+      "source_id": "PMID_19270267",
+      "exact_excerpt": "The authors conclude that ADHD is common in offenders and is associated with comorbid disorders, worse quality of life, and higher risk for suicidal behaviors.",
+      "location": "Attention deficit hyperactivity disorder in men and women newly committed to prison_ clinical characteristics, psychiatric comorbidity, and quality of life - PubMed.html; article abstract (#eng-abstract)",
+      "relevance": "Selected incarcerated adult sample; not representative of all adults. Association of ADHD with QOL does not isolate functional impairment as a cause or diagnosis as a benefit."
+    },
+    "html_45_60_18": {
+      "source_id": "PMID_20839896",
+      "exact_excerpt": "These studies support a positive short-term effect of medication on QOL in ADHD for children, adolescents and adults that mirrors, to some extent, the effects of these medications on ADHD symptoms, although with smaller effect sizes.",
+      "location": "The impact of medications on quality of life in attention-deficit hyperactivity disorder_ a systematic review - PubMed.html; article abstract (#eng-abstract)",
+      "relevance": "Systematic review of 25 studies, mainly pediatric and atomoxetine; adult evidence limited. QOL is a related but different endpoint from separately measured functional impairment; no diagnosis-only or adverse-effect-only effect is identified."
+    },
+    "html_45_49_19": {
+      "source_id": "PMID_20513225",
+      "exact_excerpt": "Randomised controlled trials confirm that stimulant medication is efficacious for, and well tolerated by, males and females and patients across the age range; although preschoolers appear to have a less beneficial response and more side effects.",
+      "location": "Stimulant drug effects on attention deficit_hyperactivity disorder_ a review of the effects of age and sex of patients - PubMed.html; article abstract (#eng-abstract)",
+      "relevance": "Review of controlled stimulant trials including adulthood; broad age coverage without an estimate at exactly eight, 32 or 45. Tolerability does not mean no adverse effects."
+    },
+    "html_45_56_20": {
+      "source_id": "PMID_20513225",
+      "exact_excerpt": "Randomised controlled trials confirm that stimulant medication is efficacious for, and well tolerated by, males and females and patients across the age range; although preschoolers appear to have a less beneficial response and more side effects.",
+      "location": "Stimulant drug effects on attention deficit_hyperactivity disorder_ a review of the effects of age and sex of patients - PubMed.html; article abstract (#eng-abstract)",
+      "relevance": "Review of controlled stimulant trials including adulthood; broad age coverage without an estimate at exactly eight, 32 or 45. Tolerability does not mean no adverse effects."
+    },
+    "html_45_58_21": {
+      "source_id": "PMID_20839896",
+      "exact_excerpt": "These studies support a positive short-term effect of medication on QOL in ADHD for children, adolescents and adults that mirrors, to some extent, the effects of these medications on ADHD symptoms, although with smaller effect sizes.",
+      "location": "The impact of medications on quality of life in attention-deficit hyperactivity disorder_ a systematic review - PubMed.html; article abstract (#eng-abstract)",
+      "relevance": "Systematic review of 25 studies, mainly pediatric and atomoxetine; adult evidence limited. QOL is a related but different endpoint from separately measured functional impairment; no diagnosis-only or adverse-effect-only effect is identified."
+    },
+    "html_45_61_22": {
+      "source_id": "PMID_20839896",
+      "exact_excerpt": "These studies support a positive short-term effect of medication on QOL in ADHD for children, adolescents and adults that mirrors, to some extent, the effects of these medications on ADHD symptoms, although with smaller effect sizes.",
+      "location": "The impact of medications on quality of life in attention-deficit hyperactivity disorder_ a systematic review - PubMed.html; article abstract (#eng-abstract)",
+      "relevance": "Systematic review of 25 studies, mainly pediatric and atomoxetine; adult evidence limited. QOL is a related but different endpoint from separately measured functional impairment; no diagnosis-only or adverse-effect-only effect is identified."
+    },
+    "html_45_59_23": {
+      "source_id": "PMID_20839896",
+      "exact_excerpt": "These studies support a positive short-term effect of medication on QOL in ADHD for children, adolescents and adults that mirrors, to some extent, the effects of these medications on ADHD symptoms, although with smaller effect sizes.",
+      "location": "The impact of medications on quality of life in attention-deficit hyperactivity disorder_ a systematic review - PubMed.html; article abstract (#eng-abstract)",
+      "relevance": "Systematic review of 25 studies, mainly pediatric and atomoxetine; adult evidence limited. QOL is a related but different endpoint from separately measured functional impairment; no diagnosis-only or adverse-effect-only effect is identified."
+    },
+    "html_45_59_24": {
+      "source_id": "BIPOLAR_ADULT",
+      "exact_excerpt": "In clinical and research settings, patients screening positive for BSD should be assessed for a possible underlying or coexisting ADHD condition and vice versa.",
+      "location": "Bipolar Symptoms in Adult Attention-Deficit_Hyperactivity Disorder_ A Cross-Sectional Study of 510 Clinically Diagnosed Patients and 417 Population-Based Controls.html; article abstract (#article-tabs)",
+      "relevance": "Clinical recommendation for differential assessment; does not establish a quantified increase in misdiagnosis. The abstract specifies ages 18–40 for controls, not the full patient age range."
+    },
+    "html_45_7_25": {
+      "source_id": "PMID_21766545",
+      "exact_excerpt": "This updated review presents the evidence regarding the usefulness and limitations of the most frequent nutritional and dietary interventions in the treatment of ADHD and/or ASD.",
+      "location": "Effectiveness of nutritional interventions on the functioning of children with ADHD and_or ASD. An updated review of research evidence - PubMed.html; article abstract (#eng-abstract)",
+      "relevance": "Abstract describes the review scope but supplies no efficacy conclusion, effect size or comparison supporting the direction of the nutrition edge."
+    },
+    "html_45_2_26": {
+      "source_id": "PMID_20660947",
+      "exact_excerpt": "Considering that all three core symptoms of the disorder have a significant impact on both information processing and on concomitant cognitive functions, patients with ADHD should be divided into subgroups based on their neuropsychologically measured dominant symptoms.",
+      "location": "[Event-related potentials associated with error detection in adult ADHD--literature review] - PubMed.html; article abstract (#eng-abstract)",
+      "relevance": "Adult electrophysiological review: cognitive processing mechanisms, not a controlled executive-deficit-to-practical-impairment effect."
+    },
+    "html_45_4_27": {
+      "source_id": "PMID_20660947",
+      "exact_excerpt": "Considering that all three core symptoms of the disorder have a significant impact on both information processing and on concomitant cognitive functions, patients with ADHD should be divided into subgroups based on their neuropsychologically measured dominant symptoms.",
+      "location": "[Event-related potentials associated with error detection in adult ADHD--literature review] - PubMed.html; article abstract (#eng-abstract)",
+      "relevance": "Adult electrophysiological review: cognitive processing mechanisms, not a controlled executive-deficit-to-practical-impairment effect."
+    },
+    "html_45_15_28": {
+      "source_id": "PMID_21391408",
+      "exact_excerpt": "Conclusions: Further studies are needed to determine if geographic distribution of ADHD diagnosis can be partially explained by differential efficiency of referral for diagnosis by school districts, by race/ethnicity, and/or built environment.",
+      "location": "Geographic analysis of diagnosis of Attention-Deficit_Hyperactivity Disorder in children_ Eastern Wisconsin, USA - PubMed.html; article abstract (#eng-abstract)",
+      "relevance": "Observational children aged 5–17; diagnosis differences do not identify institutional bias, provider access or school-referral efficiency as the causal mechanism."
+    },
+    "html_45_16_29": {
+      "source_id": "PMID_21391408",
+      "exact_excerpt": "Conclusions: Further studies are needed to determine if geographic distribution of ADHD diagnosis can be partially explained by differential efficiency of referral for diagnosis by school districts, by race/ethnicity, and/or built environment.",
+      "location": "Geographic analysis of diagnosis of Attention-Deficit_Hyperactivity Disorder in children_ Eastern Wisconsin, USA - PubMed.html; article abstract (#eng-abstract)",
+      "relevance": "Observational children aged 5–17; diagnosis differences do not identify institutional bias, provider access or school-referral efficiency as the causal mechanism."
+    },
+    "html_45_17_30": {
+      "source_id": "PMID_21391408",
+      "exact_excerpt": "Conclusions: Further studies are needed to determine if geographic distribution of ADHD diagnosis can be partially explained by differential efficiency of referral for diagnosis by school districts, by race/ethnicity, and/or built environment.",
+      "location": "Geographic analysis of diagnosis of Attention-Deficit_Hyperactivity Disorder in children_ Eastern Wisconsin, USA - PubMed.html; article abstract (#eng-abstract)",
+      "relevance": "Observational children aged 5–17; diagnosis differences do not identify institutional bias, provider access or school-referral efficiency as the causal mechanism."
+    },
+    "html_45_18_31": {
+      "source_id": "PMID_21391408",
+      "exact_excerpt": "Conclusions: Further studies are needed to determine if geographic distribution of ADHD diagnosis can be partially explained by differential efficiency of referral for diagnosis by school districts, by race/ethnicity, and/or built environment.",
+      "location": "Geographic analysis of diagnosis of Attention-Deficit_Hyperactivity Disorder in children_ Eastern Wisconsin, USA - PubMed.html; article abstract (#eng-abstract)",
+      "relevance": "Observational children aged 5–17; diagnosis differences do not identify institutional bias, provider access or school-referral efficiency as the causal mechanism."
+    },
+    "html_45_20_32": {
+      "source_id": "PMID_21391408",
+      "exact_excerpt": "Conclusions: Further studies are needed to determine if geographic distribution of ADHD diagnosis can be partially explained by differential efficiency of referral for diagnosis by school districts, by race/ethnicity, and/or built environment.",
+      "location": "Geographic analysis of diagnosis of Attention-Deficit_Hyperactivity Disorder in children_ Eastern Wisconsin, USA - PubMed.html; article abstract (#eng-abstract)",
+      "relevance": "Observational children aged 5–17; diagnosis differences do not identify institutional bias, provider access or school-referral efficiency as the causal mechanism."
+    },
+    "html_45_28_33": {
+      "source_id": "PMID_21391408",
+      "exact_excerpt": "Conclusions: Further studies are needed to determine if geographic distribution of ADHD diagnosis can be partially explained by differential efficiency of referral for diagnosis by school districts, by race/ethnicity, and/or built environment.",
+      "location": "Geographic analysis of diagnosis of Attention-Deficit_Hyperactivity Disorder in children_ Eastern Wisconsin, USA - PubMed.html; article abstract (#eng-abstract)",
+      "relevance": "Observational children aged 5–17; diagnosis differences do not identify institutional bias, provider access or school-referral efficiency as the causal mechanism."
+    },
+    "html_45_39_34": {
+      "source_id": "PMID_21391408",
+      "exact_excerpt": "Conclusions: Further studies are needed to determine if geographic distribution of ADHD diagnosis can be partially explained by differential efficiency of referral for diagnosis by school districts, by race/ethnicity, and/or built environment.",
+      "location": "Geographic analysis of diagnosis of Attention-Deficit_Hyperactivity Disorder in children_ Eastern Wisconsin, USA - PubMed.html; article abstract (#eng-abstract)",
+      "relevance": "Observational children aged 5–17; diagnosis differences do not identify institutional bias, provider access or school-referral efficiency as the causal mechanism."
+    },
+    "html_45_40_35": {
+      "source_id": "PMID_21391408",
+      "exact_excerpt": "Conclusions: Further studies are needed to determine if geographic distribution of ADHD diagnosis can be partially explained by differential efficiency of referral for diagnosis by school districts, by race/ethnicity, and/or built environment.",
+      "location": "Geographic analysis of diagnosis of Attention-Deficit_Hyperactivity Disorder in children_ Eastern Wisconsin, USA - PubMed.html; article abstract (#eng-abstract)",
+      "relevance": "Observational children aged 5–17; diagnosis differences do not identify institutional bias, provider access or school-referral efficiency as the causal mechanism."
+    },
+    "html_45_41_36": {
+      "source_id": "PMID_21391408",
+      "exact_excerpt": "Conclusions: Further studies are needed to determine if geographic distribution of ADHD diagnosis can be partially explained by differential efficiency of referral for diagnosis by school districts, by race/ethnicity, and/or built environment.",
+      "location": "Geographic analysis of diagnosis of Attention-Deficit_Hyperactivity Disorder in children_ Eastern Wisconsin, USA - PubMed.html; article abstract (#eng-abstract)",
+      "relevance": "Observational children aged 5–17; diagnosis differences do not identify institutional bias, provider access or school-referral efficiency as the causal mechanism."
     }
   }
 }

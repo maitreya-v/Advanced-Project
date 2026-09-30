@@ -6,16 +6,18 @@
     "age": 45,
     "edge_count": 45,
     "pdf_file_count": 4,
-    "unique_document_count": 4,
-    "validation_updated_utc": "2026-09-23T03:56:08.219733+00:00",
+    "unique_document_count": 29,
+    "html_file_count": 25,
+    "abstract_only_document_count": 25,
+    "validation_updated_utc": "2026-09-30T00:34:31.576053+00:00",
     "original_unchanged": true,
     "strength_assessed": false,
     "status_counts": {
       "supported": 0,
-      "partially_supported": 0,
+      "partially_supported": 1,
       "contradicted": 0,
       "mixed_evidence": 0,
-      "insufficient_evidence": 41,
+      "insufficient_evidence": 40,
       "not_assessable": 4
     }
   },
@@ -55,6 +57,48 @@
       "exact_excerpt": "The ADD + delinquent boys consistently fared the worst on the assessments of family adversity, verbal intelligence, and reading. Their antisocial behavior began before school age, escalated at school entry, and persisted into adolescence.",
       "location": "PDF page 2",
       "relevance": "Longitudinal association in boys; does not isolate ADD or family adversity as a single causal exposure."
+    },
+    "html_45_43_6": {
+      "source_id": "PMID_2251528",
+      "exact_excerpt": "Once the disorder has been identified in the adult, however, proper intervention with psychotherapy and medical management can make a significant difference in the patient's life.",
+      "location": "Attention deficit hyperactivity disorder_ does it affect adults too_ - PubMed.html; English abstract (#eng-abstract)",
+      "relevance": "Adult clinical review supports identification followed by combined care; no controlled estimate, specified medication, behavioral modality, measured quality-of-life outcome, or separate age-32/45 estimate."
+    },
+    "html_45_36_7": {
+      "source_id": "PMID_2251528",
+      "exact_excerpt": "Once the disorder has been identified in the adult, however, proper intervention with psychotherapy and medical management can make a significant difference in the patient's life.",
+      "location": "Attention deficit hyperactivity disorder_ does it affect adults too_ - PubMed.html; English abstract (#eng-abstract)",
+      "relevance": "Adult clinical review supports identification followed by combined care; no controlled estimate, specified medication, behavioral modality, measured quality-of-life outcome, or separate age-32/45 estimate."
+    },
+    "html_45_37_8": {
+      "source_id": "PMID_2251528",
+      "exact_excerpt": "Once the disorder has been identified in the adult, however, proper intervention with psychotherapy and medical management can make a significant difference in the patient's life.",
+      "location": "Attention deficit hyperactivity disorder_ does it affect adults too_ - PubMed.html; English abstract (#eng-abstract)",
+      "relevance": "Adult clinical review supports identification followed by combined care; no controlled estimate, specified medication, behavioral modality, measured quality-of-life outcome, or separate age-32/45 estimate."
+    },
+    "html_45_26_9": {
+      "source_id": "PMID_2251528",
+      "exact_excerpt": "Once the disorder has been identified in the adult, however, proper intervention with psychotherapy and medical management can make a significant difference in the patient's life.",
+      "location": "Attention deficit hyperactivity disorder_ does it affect adults too_ - PubMed.html; English abstract (#eng-abstract)",
+      "relevance": "Adult clinical review supports identification followed by combined care; no controlled estimate, specified medication, behavioral modality, measured quality-of-life outcome, or separate age-32/45 estimate."
+    },
+    "html_45_35_10": {
+      "source_id": "PMID_2251528",
+      "exact_excerpt": "Once the disorder has been identified in the adult, however, proper intervention with psychotherapy and medical management can make a significant difference in the patient's life.",
+      "location": "Attention deficit hyperactivity disorder_ does it affect adults too_ - PubMed.html; English abstract (#eng-abstract)",
+      "relevance": "Adult clinical review supports identification followed by combined care; no controlled estimate, specified medication, behavioral modality, measured quality-of-life outcome, or separate age-32/45 estimate."
+    },
+    "html_45_45_11": {
+      "source_id": "PMID_2251528",
+      "exact_excerpt": "Once the disorder has been identified in the adult, however, proper intervention with psychotherapy and medical management can make a significant difference in the patient's life.",
+      "location": "Attention deficit hyperactivity disorder_ does it affect adults too_ - PubMed.html; English abstract (#eng-abstract)",
+      "relevance": "Adult clinical review supports identification followed by combined care; no controlled estimate, specified medication, behavioral modality, measured quality-of-life outcome, or separate age-32/45 estimate."
+    },
+    "html_45_1_12": {
+      "source_id": "PMID_2387786",
+      "exact_excerpt": "These results confirm and extend previous findings indicating important family-genetic risk factors in ADD.",
+      "location": "Family-genetic and psychosocial risk factors in DSM-III attention deficit disorder - PubMed.html; English abstract (#eng-abstract)",
+      "relevance": "Blinded family study supports familial liability; shared environment is not fully separated and strong genetic causation or an exact-age effect is not established."
     }
   }
 }

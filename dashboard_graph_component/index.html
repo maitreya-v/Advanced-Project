@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <style>
+    html, body { margin: 0; padding: 0; overflow: hidden; }
+    iframe { display: block; width: 100%; border: 0; }
+  </style>
+</head>
+<body>
+  <iframe id="graph" title="Year and age causal graph"></iframe>
+  <script>
+    const graph = document.getElementById('graph');
+    let lastHtml = null;
+    let selectionSequence = 0;
+    function send(type, payload = {}) {
+      window.parent.postMessage({ isStreamlitMessage: true, type, ...payload }, '*');
+    }
+    window.addEventListener('message', event => {
+      if (event.source === graph.contentWindow && event.data?.type === 'dashboard-validation-edge') {
+        if (typeof event.data.edge_id !== 'string') return;
+        send('streamlit:setComponentValue', {
+          dataType: 'json',
+          value: { edge_id: event.data.edge_id, sequence: ++selectionSequence }
+        });
+        return;
+      }
+      if (event.source !== window.parent || event.data?.type !== 'streamlit:render') return;
+      const { html, height } = event.data.args;
+      graph.style.height = height + 'px';
+      // Preserve graph zoom/selection when Streamlit reruns after an edge click.
+      if (html !== lastHtml) {
+        graph.srcdoc = html;
+        lastHtml = html;
+      }
+      send('streamlit:setFrameHeight', { height });
+    });
+    send('streamlit:componentReady', { apiVersion: 1 });
+  </script>
+</body>
+</html>

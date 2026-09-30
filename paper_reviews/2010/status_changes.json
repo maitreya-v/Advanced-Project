@@ -1,0 +1,47 @@
+[
+  {
+    "age": 8,
+    "edge_id": 21,
+    "source": "Socioeconomic Status",
+    "dest": "Access to Mental Health Care",
+    "before": "insufficient_evidence",
+    "after": "partially_supported",
+    "reason": "The pediatric disparity commentary relates diagnosis/treatment distribution to socioeconomic circumstances and proposes insurance/service barriers. This supports only a narrower socioeconomic care-inequity pathway; it does not measure SES causing access to evaluation at age eight."
+  },
+  {
+    "age": 8,
+    "edge_id": 22,
+    "source": "Financial Status",
+    "dest": "Access to Mental Health Care",
+    "before": "insufficient_evidence",
+    "after": "partially_supported",
+    "reason": "The pediatric commentary identifies inadequate insurance coverage as a possible contributor to diagnostic and treatment problems. This supplies clinical support for a financial-access barrier, but does not measure household income, affordability or a controlled age-eight access effect."
+  },
+  {
+    "age": 8,
+    "edge_id": 40,
+    "source": "Socioeconomic Status",
+    "dest": "Treatment Access",
+    "before": "insufficient_evidence",
+    "after": "partially_supported",
+    "reason": "The commentary describes socioeconomic disparities in pediatric diagnosis and treatment. This supports uneven treatment provision, but does not demonstrate that higher SES causes treatment continuity or establish an age-eight-specific effect."
+  },
+  {
+    "age": 32,
+    "edge_id": 33,
+    "source": "Comorbid Conditions",
+    "dest": "Misdiagnosis Rate",
+    "before": "insufficient_evidence",
+    "after": "partially_supported",
+    "reason": "The adult bipolar study documents symptom overlap and recommends assessment for coexisting ADHD/BSD. This supports diagnostic ambiguity as a clinical mechanism, but neither screening positivity nor overlap demonstrates actual misdiagnosis, and no age-32 error-rate effect is estimated."
+  },
+  {
+    "age": 45,
+    "edge_id": 50,
+    "source": "Medication Treatment",
+    "dest": "Functional Impairment",
+    "before": "insufficient_evidence",
+    "after": "partially_supported",
+    "reason": "The systematic medication review reports short-term QOL improvement in adults. QOL reflects perceived functioning and provides narrower treatment-benefit evidence, but is not a separately measured general functional-impairment outcome, and adult studies are few with no age-45 estimate."
+  }
+]

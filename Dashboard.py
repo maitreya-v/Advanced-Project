@@ -1,3 +1,4 @@
+from dashboard_corpus import render_corpus_counts
 from pathlib import Path
 import re
 import base64
@@ -11,6 +12,7 @@ import matplotlib.pyplot as plt
 import streamlit as st
 import streamlit.components.v1 as components
 from pyvis.network import Network
+from dashboard_validation import attach_validation, graph_component, inject_edge_selection, render_validation
 
 try:
     from streamlit_js_eval import streamlit_js_eval
@@ -553,6 +555,7 @@ def build_network_html(snapshot: dict, strength_threshold: float, graph_height: 
         width="100%",
         directed=True,
         bgcolor="#ffffff",
+        cdn_resources="in_line" if snapshot.get("validation") else "local",
     )
 
     net.set_options(
@@ -594,7 +597,10 @@ def build_network_html(snapshot: dict, strength_threshold: float, graph_height: 
 
     graph_html = net.generate_html(notebook=False)
     graph_html = inject_background_into_html(graph_html, snapshot)
-    graph_html += f"<!-- refresh {time.time()} -->"
+    if snapshot.get("validation"):
+        graph_html = inject_edge_selection(graph_html)
+    else:
+        graph_html += f"<!-- refresh {time.time()} -->"
 
     return graph_html
 
@@ -641,7 +647,7 @@ strength_threshold = st.sidebar.slider(
     step=0.01,
 )
 
-selected_snapshot = SNAPSHOTS[selected_year][selected_age]
+selected_snapshot = attach_validation(SNAPSHOTS[selected_year][selected_age])
 
 with st.sidebar.expander("Node Changes", expanded=False):
     compare_mode = st.radio(
@@ -726,6 +732,9 @@ with st.sidebar.expander("Node Changes", expanded=False):
             )
 
 
+with st.sidebar:
+    render_corpus_counts(selected_year)
+
 if streamlit_js_eval is not None:
     viewport_height = streamlit_js_eval(
         js_expressions="window.innerHeight",
@@ -747,7 +756,8 @@ graph_html = build_network_html(
     graph_height,
 )
 
-left_col, right_col = st.columns([4.8, 1.2], gap="medium")
+left_col, right_col = st.columns([3.2, 1.8] if selected_snapshot.get("validation") else [4.8, 1.2], gap="medium")
+selected_validation_edge = None
 
 with left_col:
     st.markdown(
@@ -757,11 +767,27 @@ with left_col:
         unsafe_allow_html=True,
     )
 
-    components.html(
-        graph_html,
-        height=graph_height + 35,
-        scrolling=False,
-    )
+    if selected_snapshot.get("validation"):
+        edge_selection = graph_component(
+            html=graph_html, height=graph_height + 35,
+            key=f"validated-graph-{selected_year}-{selected_age}-{strength_threshold}",
+            default=None,
+        )
+        if isinstance(edge_selection, dict):
+            selected_validation_edge = edge_selection.get("edge_id")
+            selection_token = (selected_year, selected_age, strength_threshold, edge_selection.get("sequence"))
+            if selected_validation_edge in selected_snapshot["validation"]["decisions"] and st.session_state.get("validation_selection_token") != selection_token:
+                st.session_state["snapshot_tabs"] = "Validation"
+                st.session_state["validation_selection_token"] = selection_token
+    else:
+        components.html(
+            graph_html,
+            height=graph_height + 35,
+            scrolling=False,
+        )
+
+if "validation_pending_tab" in st.session_state:
+    st.session_state["snapshot_tabs"] = st.session_state.pop("validation_pending_tab")
 
 with right_col:
     st.markdown(
@@ -769,7 +795,10 @@ with right_col:
         unsafe_allow_html=True,
     )
 
-    tab1, tab2, tab3, tab4 = st.tabs(["Info", "Edges", "Groups", "Legend"])
+    tab1, tab2, tab3, tab4, validation_tab = st.tabs(
+        ["Info", "Edges", "Groups", "Legend", "Validation"],
+        key="snapshot_tabs", on_change="rerun",
+    )
 
     with tab1:
         st.write(f"**Year:** {selected_year}")
@@ -785,7 +814,17 @@ with right_col:
             st.caption(persona_text)
 
     with tab2:
-        st.markdown("""
+        if selected_snapshot.get("validation"):
+            st.markdown(
+                "**Edge color:** validation status (see Validation tab)  \n"
+                "**Sign (+ / -):** positive / negative effect  \n"
+                "**Arrow:** source influences target  \n"
+                "**Thickness:** causal strength  \n"
+                "**Hover:** reason + strength  \n"
+                "**Click:** validation references"
+            )
+        else:
+            st.markdown("""
 **Pastel teal edge (+):** positive effect  
 **Dusty rose edge (-):** negative effect  
 **Arrow:** source influences target  
@@ -837,3 +876,6 @@ Cluster-based grouping from `clusters.json`.
 **Hover Info**  
 Shows domain, explanation, and strength.
 """)
+
+    with validation_tab:
+        render_validation(selected_snapshot, selected_validation_edge, graph_height - 80)
