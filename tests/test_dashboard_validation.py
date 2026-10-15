@@ -37,7 +37,7 @@ class DashboardValidationTests(unittest.TestCase):
                     self.assertEqual(snapshot["nodes"], original["nodes"])
                     for key in original.keys() - {"edges"}:
                         self.assertEqual(snapshot[key], original[key])
-                    graph = (ROOT / f"validation_{year}_age{age}/validated_graph.html").read_text()
+                    graph = (ROOT / f"validation_{year}_age{age}/validated_graph.html").read_text(encoding="utf-8")
                     standalone = json.loads(re.search(r"edges = new vis.DataSet\((\[.*?\])\);", graph, re.S).group(1))
                     self.assertEqual(len(snapshot["edges"]), len(standalone))
                     for source, annotated, saved in zip(original["edges"], snapshot["edges"], standalone):
@@ -73,7 +73,7 @@ class DashboardValidationTests(unittest.TestCase):
                 with self.subTest(year=year, age=age):
                     app.select_slider[1].set_value(age).run()
                     self.assertFalse(app.exception, [item.message for item in app.exception])
-                    self.assertEqual([tab.label for tab in app.tabs], ["Info", "Edges", "Groups", "Legend", "Validation"])
+                    self.assertEqual([tab.label for tab in app.tabs], ["Snapshot explorer", "Info", "Edges", "Groups", "Legend", "Validation", "Story paths"])
 
     def test_edge_selection_opens_panel_and_allows_other_tabs(self):
         selection = {"edge_id": "validation-edge-40", "sequence": 1}

@@ -1,4 +1,5 @@
 from dashboard_corpus import render_corpus_counts
+from story_paths import render_story_paths
 from pathlib import Path
 import re
 import base64
@@ -555,7 +556,7 @@ def build_network_html(snapshot: dict, strength_threshold: float, graph_height: 
         width="100%",
         directed=True,
         bgcolor="#ffffff",
-        cdn_resources="in_line" if snapshot.get("validation") else "local",
+        cdn_resources="in_line",
     )
 
     net.set_options(
@@ -622,260 +623,265 @@ Choose a year and age to switch between fixed graph snapshots.
 </p>
 """, unsafe_allow_html=True)
 
-st.sidebar.header("Controls")
+explorer_tab, story_tab = st.tabs(["Snapshot explorer", "Story paths"])
+with story_tab:
+    render_story_paths(SNAPSHOTS, build_network_html)
 
-selected_year = st.sidebar.select_slider(
-    "Choose a year",
-    options=available_years,
-    value=available_years[0],
-)
+with explorer_tab:
+    st.sidebar.header("Controls")
 
-year_specific_ages = sorted(SNAPSHOTS[selected_year].keys())
-default_age = 8 if 8 in year_specific_ages else year_specific_ages[0]
-
-selected_age = st.sidebar.select_slider(
-    "Choose an age",
-    options=year_specific_ages,
-    value=default_age,
-)
-
-strength_threshold = st.sidebar.slider(
-    "Minimum edge strength",
-    min_value=0.0,
-    max_value=1.0,
-    value=0.0,
-    step=0.01,
-)
-
-selected_snapshot = attach_validation(SNAPSHOTS[selected_year][selected_age])
-
-with st.sidebar.expander("Node Changes", expanded=False):
-    compare_mode = st.radio(
-        "Compare with",
-        ["Previous year", "Previous age"],
-        index=0,
-        horizontal=True,
+    selected_year = st.sidebar.select_slider(
+        "Choose a year",
+        options=available_years,
+        value=available_years[0],
     )
 
-    comparison_snapshot = None
-    comparison_label = None
+    year_specific_ages = sorted(SNAPSHOTS[selected_year].keys())
+    default_age = 8 if 8 in year_specific_ages else year_specific_ages[0]
 
-    if compare_mode == "Previous year":
-        previous_years = [y for y in available_years if y < selected_year]
+    selected_age = st.sidebar.select_slider(
+        "Choose an age",
+        options=year_specific_ages,
+        value=default_age,
+    )
 
-        if previous_years:
-            prev_year = max(previous_years)
+    strength_threshold = st.sidebar.slider(
+        "Minimum edge strength",
+        min_value=0.0,
+        max_value=1.0,
+        value=0.0,
+        step=0.01,
+    )
 
-            if selected_age in SNAPSHOTS[prev_year]:
-                comparison_snapshot = SNAPSHOTS[prev_year][selected_age]
-                comparison_label = f"{prev_year} | Age {selected_age}"
+    selected_snapshot = attach_validation(SNAPSHOTS[selected_year][selected_age])
 
-    else:
-        previous_ages = [a for a in year_specific_ages if a < selected_age]
-
-        if previous_ages:
-            prev_age = max(previous_ages)
-            comparison_snapshot = SNAPSHOTS[selected_year][prev_age]
-            comparison_label = f"{selected_year} | Age {prev_age}"
-
-    if comparison_snapshot is None:
-        st.caption("No comparison available.")
-
-    else:
-        added_nodes, removed_nodes = compare_nodes(
-            selected_snapshot,
-            comparison_snapshot,
-        )
-
-        st.caption(f"Compared with: {comparison_label}")
-
-        change_tab = st.radio(
-            "Change type",
-            [f"Added ({len(added_nodes)})", f"Removed ({len(removed_nodes)})"],
+    with st.sidebar.expander("Node Changes", expanded=False):
+        compare_mode = st.radio(
+            "Compare with",
+            ["Previous year", "Previous age"],
+            index=0,
             horizontal=True,
-            label_visibility="collapsed",
         )
 
-        active_nodes = added_nodes if change_tab.startswith("Added") else removed_nodes
-        active_color = "#86efac" if change_tab.startswith("Added") else "#fca5a5"
-        active_label = "Added Node" if change_tab.startswith("Added") else "Removed Node"
+        comparison_snapshot = None
+        comparison_label = None
 
-        if not active_nodes:
-            st.info("No nodes in this category.")
+        if compare_mode == "Previous year":
+            previous_years = [y for y in available_years if y < selected_year]
+
+            if previous_years:
+                prev_year = max(previous_years)
+
+                if selected_age in SNAPSHOTS[prev_year]:
+                    comparison_snapshot = SNAPSHOTS[prev_year][selected_age]
+                    comparison_label = f"{prev_year} | Age {selected_age}"
 
         else:
-            selected_changed_node = st.selectbox(
-                active_label,
-                active_nodes,
-                index=0,
-            )
+            previous_ages = [a for a in year_specific_ages if a < selected_age]
 
-            st.markdown(
-                f"""
-                <div style="
-                    background:{active_color};
-                    color:#111827;
-                    padding:12px 12px;
-                    border-radius:10px;
-                    font-size:14px;
-                    font-weight:700;
-                    line-height:1.35;
-                    margin-top:8px;
-                    margin-bottom:6px;
-                    word-break:break-word;
-                    min-height:42px;
-                ">
-                    {html.escape(selected_changed_node)}
-                </div>
-                """,
-                unsafe_allow_html=True,
-            )
+            if previous_ages:
+                prev_age = max(previous_ages)
+                comparison_snapshot = SNAPSHOTS[selected_year][prev_age]
+                comparison_label = f"{selected_year} | Age {prev_age}"
 
+        if comparison_snapshot is None:
+            st.caption("No comparison available.")
 
-with st.sidebar:
-    render_corpus_counts(selected_year)
-
-if streamlit_js_eval is not None:
-    viewport_height = streamlit_js_eval(
-        js_expressions="window.innerHeight",
-        key="viewport_height",
-    )
-else:
-    viewport_height = None
-
-try:
-    viewport_height = int(viewport_height) if viewport_height else 900
-except Exception:
-    viewport_height = 900
-
-graph_height = max(560, min(720, viewport_height - 250))
-
-graph_html = build_network_html(
-    selected_snapshot,
-    strength_threshold,
-    graph_height,
-)
-
-left_col, right_col = st.columns([3.2, 1.8] if selected_snapshot.get("validation") else [4.8, 1.2], gap="medium")
-selected_validation_edge = None
-
-with left_col:
-    st.markdown(
-        f"<div style='font-size:17px; font-weight:700; margin:0 0 6px 0;'>"
-        f"Graph: {selected_year} | Age {selected_age}"
-        f"</div>",
-        unsafe_allow_html=True,
-    )
-
-    if selected_snapshot.get("validation"):
-        edge_selection = graph_component(
-            html=graph_html, height=graph_height + 35,
-            key=f"validated-graph-{selected_year}-{selected_age}-{strength_threshold}",
-            default=None,
-        )
-        if isinstance(edge_selection, dict):
-            selected_validation_edge = edge_selection.get("edge_id")
-            selection_token = (selected_year, selected_age, strength_threshold, edge_selection.get("sequence"))
-            if selected_validation_edge in selected_snapshot["validation"]["decisions"] and st.session_state.get("validation_selection_token") != selection_token:
-                st.session_state["snapshot_tabs"] = "Validation"
-                st.session_state["validation_selection_token"] = selection_token
-    else:
-        components.html(
-            graph_html,
-            height=graph_height + 35,
-            scrolling=False,
-        )
-
-if "validation_pending_tab" in st.session_state:
-    st.session_state["snapshot_tabs"] = st.session_state.pop("validation_pending_tab")
-
-with right_col:
-    st.markdown(
-        "<div style='font-size:16px; font-weight:700; margin:0 0 2px 0;'>Snapshot</div>",
-        unsafe_allow_html=True,
-    )
-
-    tab1, tab2, tab3, tab4, validation_tab = st.tabs(
-        ["Info", "Edges", "Groups", "Legend", "Validation"],
-        key="snapshot_tabs", on_change="rerun",
-    )
-
-    with tab1:
-        st.write(f"**Year:** {selected_year}")
-        st.write(f"**Age:** {selected_age}")
-        st.write(f"**Source:** `{selected_snapshot['file_name']}`")
-        st.write(f"**Nodes:** {len(selected_snapshot['nodes'])}")
-        st.write(f"**Edges:** {len(selected_snapshot['edges'])}")
-
-        persona_text = clean_multiline_text(selected_snapshot["persona_text"])
-
-        if persona_text:
-            st.markdown("**Description**")
-            st.caption(persona_text)
-
-    with tab2:
-        if selected_snapshot.get("validation"):
-            st.markdown(
-                "**Edge color:** validation status (see Validation tab)  \n"
-                "**Sign (+ / -):** positive / negative effect  \n"
-                "**Arrow:** source influences target  \n"
-                "**Thickness:** causal strength  \n"
-                "**Hover:** reason + strength  \n"
-                "**Click:** validation references"
-            )
         else:
-            st.markdown("""
-**Pastel teal edge (+):** positive effect  
-**Dusty rose edge (-):** negative effect  
-**Arrow:** source influences target  
-**Thickness:** causal strength  
-**Hover:** reason + strength
-""")
+            added_nodes, removed_nodes = compare_nodes(
+                selected_snapshot,
+                comparison_snapshot,
+            )
 
-        with tab3:
-            group_items = list(selected_snapshot["group_colors"].items())
+            st.caption(f"Compared with: {comparison_label}")
 
-            groups_html = '<div style="display:grid; grid-template-columns:1fr 1fr; column-gap:18px; row-gap:10px; margin-top:8px;">'
+            change_tab = st.radio(
+                "Change type",
+                [f"Added ({len(added_nodes)})", f"Removed ({len(removed_nodes)})"],
+                horizontal=True,
+                label_visibility="collapsed",
+            )
 
-            for group_name, group_color in group_items:
-                raw_description = selected_snapshot["group_descriptions"].get(group_name, "")
+            active_nodes = added_nodes if change_tab.startswith("Added") else removed_nodes
+            active_color = "#86efac" if change_tab.startswith("Added") else "#fca5a5"
+            active_label = "Added Node" if change_tab.startswith("Added") else "Removed Node"
 
-                safe_name = clean_text(group_name.replace("_", " ").title())
-                safe_desc = clean_text(raw_description)
+            if not active_nodes:
+                st.info("No nodes in this category.")
 
-                groups_html += (
-                    f'<div style="min-height:48px;">'
-                    f'<div style="display:flex; align-items:center; gap:6px;">'
-                    f'<span style="display:inline-block; width:10px; height:10px; '
-                    f'border-radius:50%; background:{group_color}; flex-shrink:0;"></span>'
-                    f'<span style="font-size:12px; font-weight:700;">{safe_name}</span>'
-                    f'</div>'
-                    f'<div style="font-size:10px; color:#9ca3af; margin-left:16px; '
-                    f'margin-top:2px; line-height:1.25;">{safe_desc}</div>'
-                    f'</div>'
+            else:
+                selected_changed_node = st.selectbox(
+                    active_label,
+                    active_nodes,
+                    index=0,
                 )
 
-            groups_html += "</div>"
+                st.markdown(
+                    f"""
+                    <div style="
+                        background:{active_color};
+                        color:#111827;
+                        padding:12px 12px;
+                        border-radius:10px;
+                        font-size:14px;
+                        font-weight:700;
+                        line-height:1.35;
+                        margin-top:8px;
+                        margin-bottom:6px;
+                        word-break:break-word;
+                        min-height:42px;
+                    ">
+                        {html.escape(selected_changed_node)}
+                    </div>
+                    """,
+                    unsafe_allow_html=True,
+                )
 
-            st.markdown(groups_html, unsafe_allow_html=True)
 
-    with tab4:
-        st.markdown("""
-**Node Border Color**  
-Manual domain from `node_groups`.
+    with st.sidebar:
+        render_corpus_counts(selected_year)
 
-**Background Regions**  
-Fuzzy local clusters from node positions and domain colors.
+    if streamlit_js_eval is not None:
+        viewport_height = streamlit_js_eval(
+            js_expressions="window.innerHeight",
+            key="viewport_height",
+        )
+    else:
+        viewport_height = None
 
-**Manual Domain**  
-Predefined category: clinical, access, bias, treatment, school, work, family, core, etc.
+    try:
+        viewport_height = int(viewport_height) if viewport_height else 900
+    except Exception:
+        viewport_height = 900
 
-**Local Domain**  
-Cluster-based grouping from `clusters.json`.
+    graph_height = max(560, min(720, viewport_height - 250))
 
-**Hover Info**  
-Shows domain, explanation, and strength.
-""")
+    graph_html = build_network_html(
+        selected_snapshot,
+        strength_threshold,
+        graph_height,
+    )
 
-    with validation_tab:
-        render_validation(selected_snapshot, selected_validation_edge, graph_height - 80)
+    left_col, right_col = st.columns([3.2, 1.8] if selected_snapshot.get("validation") else [4.8, 1.2], gap="medium")
+    selected_validation_edge = None
+
+    with left_col:
+        st.markdown(
+            f"<div style='font-size:17px; font-weight:700; margin:0 0 6px 0;'>"
+            f"Graph: {selected_year} | Age {selected_age}"
+            f"</div>",
+            unsafe_allow_html=True,
+        )
+
+        if selected_snapshot.get("validation"):
+            edge_selection = graph_component(
+                html=graph_html, height=graph_height + 35,
+                key=f"validated-graph-{selected_year}-{selected_age}-{strength_threshold}",
+                default=None,
+            )
+            if isinstance(edge_selection, dict):
+                selected_validation_edge = edge_selection.get("edge_id")
+                selection_token = (selected_year, selected_age, strength_threshold, edge_selection.get("sequence"))
+                if selected_validation_edge in selected_snapshot["validation"]["decisions"] and st.session_state.get("validation_selection_token") != selection_token:
+                    st.session_state["snapshot_tabs"] = "Validation"
+                    st.session_state["validation_selection_token"] = selection_token
+        else:
+            components.html(
+                graph_html,
+                height=graph_height + 35,
+                scrolling=False,
+            )
+
+    if "validation_pending_tab" in st.session_state:
+        st.session_state["snapshot_tabs"] = st.session_state.pop("validation_pending_tab")
+
+    with right_col:
+        st.markdown(
+            "<div style='font-size:16px; font-weight:700; margin:0 0 2px 0;'>Snapshot</div>",
+            unsafe_allow_html=True,
+        )
+
+        tab1, tab2, tab3, tab4, validation_tab = st.tabs(
+            ["Info", "Edges", "Groups", "Legend", "Validation"],
+            key="snapshot_tabs", on_change="rerun",
+        )
+
+        with tab1:
+            st.write(f"**Year:** {selected_year}")
+            st.write(f"**Age:** {selected_age}")
+            st.write(f"**Source:** `{selected_snapshot['file_name']}`")
+            st.write(f"**Nodes:** {len(selected_snapshot['nodes'])}")
+            st.write(f"**Edges:** {len(selected_snapshot['edges'])}")
+
+            persona_text = clean_multiline_text(selected_snapshot["persona_text"])
+
+            if persona_text:
+                st.markdown("**Description**")
+                st.caption(persona_text)
+
+        with tab2:
+            if selected_snapshot.get("validation"):
+                st.markdown(
+                    "**Edge color:** validation status (see Validation tab)  \n"
+                    "**Sign (+ / -):** positive / negative effect  \n"
+                    "**Arrow:** source influences target  \n"
+                    "**Thickness:** causal strength  \n"
+                    "**Hover:** reason + strength  \n"
+                    "**Click:** validation references"
+                )
+            else:
+                st.markdown("""
+    **Pastel teal edge (+):** positive effect  
+    **Dusty rose edge (-):** negative effect  
+    **Arrow:** source influences target  
+    **Thickness:** causal strength  
+    **Hover:** reason + strength
+    """)
+
+            with tab3:
+                group_items = list(selected_snapshot["group_colors"].items())
+
+                groups_html = '<div style="display:grid; grid-template-columns:1fr 1fr; column-gap:18px; row-gap:10px; margin-top:8px;">'
+
+                for group_name, group_color in group_items:
+                    raw_description = selected_snapshot["group_descriptions"].get(group_name, "")
+
+                    safe_name = clean_text(group_name.replace("_", " ").title())
+                    safe_desc = clean_text(raw_description)
+
+                    groups_html += (
+                        f'<div style="min-height:48px;">'
+                        f'<div style="display:flex; align-items:center; gap:6px;">'
+                        f'<span style="display:inline-block; width:10px; height:10px; '
+                        f'border-radius:50%; background:{group_color}; flex-shrink:0;"></span>'
+                        f'<span style="font-size:12px; font-weight:700;">{safe_name}</span>'
+                        f'</div>'
+                        f'<div style="font-size:10px; color:#9ca3af; margin-left:16px; '
+                        f'margin-top:2px; line-height:1.25;">{safe_desc}</div>'
+                        f'</div>'
+                    )
+
+                groups_html += "</div>"
+
+                st.markdown(groups_html, unsafe_allow_html=True)
+
+        with tab4:
+            st.markdown("""
+    **Node Border Color**  
+    Manual domain from `node_groups`.
+
+    **Background Regions**  
+    Fuzzy local clusters from node positions and domain colors.
+
+    **Manual Domain**  
+    Predefined category: clinical, access, bias, treatment, school, work, family, core, etc.
+
+    **Local Domain**  
+    Cluster-based grouping from `clusters.json`.
+
+    **Hover Info**  
+    Shows domain, explanation, and strength.
+    """)
+
+        with validation_tab:
+            render_validation(selected_snapshot, selected_validation_edge, graph_height - 80)

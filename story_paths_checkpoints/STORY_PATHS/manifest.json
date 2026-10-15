@@ -1,0 +1,9 @@
+{
+  "name": "STORY PATHS",
+  "files": {
+    "Dashboard.py": "6e87908e645e462d021234c2cc1f60163f76cfb235cecac89b6bc1443f3c782c",
+    "story_paths.py": "30a66fe57f4ce163a3109aae6fe773b0fc34678f87289375c1d6910f6c3fe614",
+    "tests/test_story_paths.py": "07d8ba85b67ee8804442e9e04acd54516cab7678a095c1e86861329eb1aafcd9",
+    "tests/test_dashboard_validation.py": "7e8f406d94a6deca16691681fcef3f83f0fc66dadf97bb14ad4f734e9491e4ab"
+  }
+}
