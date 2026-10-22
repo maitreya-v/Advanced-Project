@@ -170,6 +170,9 @@ def highlight_path(snapshot, path):
     highlighted = deepcopy(snapshot)
     selected_nodes = set(path or ())
     selected_edges = path_edges(path)
+    if path:
+        highlighted['nodes'] = [node for node in highlighted['nodes'] if node['id'] in selected_nodes]
+        highlighted['edges'] = [edge for edge in highlighted['edges'] if (edge['from'], edge['to']) in selected_edges]
     for node in highlighted['nodes']:
         if node['id'] in selected_nodes:
             node.update(borderWidth=4, borderWidthSelected=5)
@@ -238,4 +241,4 @@ def render_story_paths(snapshots, build_html):
                          ('Connections on the earlier path absent from the later graph', story['removed'])]:
             if edges:
                 st.write(label + ': ' + '; '.join(f'{a} → {b}' for a, b in sorted(edges)))
-    st.caption('These stories describe the snapshots, not when mechanisms first appeared in the world. Evidence for individual edges does not establish a causal effect for the full path. Bold edges and outlined nodes mark the selected route; other elements remain as context.')
+    st.caption('Only the selected path is displayed. These stories describe the snapshots, not when mechanisms first appeared in the world. Evidence for individual edges does not establish a causal effect for the full path. Open Path story in the Workspace sidebar for ordered tracing and a fictional character narrative.')

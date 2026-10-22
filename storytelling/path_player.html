@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Why these arrows? Reasons and tiny stories</title>
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; color: #243a42; background: #fff; font: 14px/1.6 system-ui, sans-serif; }
+button { font: inherit; color: #244c52; background: white; border: 1px solid #d6e1e0; padding: 9px 14px; border-radius: 8px; cursor: pointer; }
+button:hover { background: #edf5f2; }
+button:focus-visible { outline: 3px solid #51a5a7; outline-offset: 2px; }
+button:disabled { opacity: .4; cursor: default; }
+.player { border: 1px solid #dce5e2; border-radius: 16px; overflow: hidden; }
+.header { padding: 20px 24px 16px; background: #f8faf7; border-bottom: 1px solid #e3e9e4; }
+.eyebrow { font-size: 10px; text-transform: uppercase; letter-spacing: 1.8px; color: #597a73; font-weight: 700; }
+h1 { font: 600 25px/1.3 Georgia, serif; margin: 8px 0; }
+.scope { color: #74857c; font-size: 12px; }
+.breadcrumb { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; padding: 14px 22px; border-bottom: 1px solid #e6ece7; }
+.crumb { font-size: 11px; border-radius: 6px; padding: 5px 8px; background: #f3f5f2; color: #73837c; }
+.crumb.visited { background: #e8f2ed; color: #356758; }
+.crumb.active { background: #22594d; color: white; }
+.arrow { color: #a3b4ab; font-size: 12px; }
+.layout { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(330px, 1fr); }
+.canvas { border-right: 1px solid #e3e9e4; background: #fbfcf9; }
+.graph-tools { padding: 12px 16px; display: flex; justify-content: space-between; gap: 8px; align-items: center; font-size: 11px; color: #71837a; }
+.graph-tools button { font-size: 11px; padding: 5px 10px; }
+#graph { height: 410px; }
+.legend { display: flex; gap: 14px; flex-wrap: wrap; font-size: 11px; padding: 12px 16px 18px; color: #687f73; }
+.line { display: inline-block; width: 17px; border-top: 3px solid #48a88d; vertical-align: middle; margin-right: 5px; }
+.minus { border-color: #cf7b8a; }
+.reading { padding: 24px 28px; min-height: 440px; max-height: 530px; overflow-y: auto; background: #fffefb; }
+h2 { font: 600 24px/1.3 Georgia, serif; margin: 10px 0 18px; color: #284a3e; }
+#narration { font: 17px/1.9 Georgia, serif; color: #405349; white-space: pre-line; }
+.explanation h3 { font: 650 13px/1.5 system-ui, sans-serif; margin: 16px 0 5px; color: #355b4e; }
+.explanation p { margin: 0; font-size: 14px; line-height: 1.7; }
+.reasoning .reading { min-height: 0; max-height: none; overflow: visible; }
+.source { margin-top: 22px; border-top: 1px solid #e3e9df; padding-top: 14px; font-size: 12px; }
+summary { cursor: pointer; font-weight: 650; color: #3d7767; }
+.relationship { padding: 12px 14px; background: #f0f5ee; border-radius: 8px; margin-top: 12px; }
+.relationship strong { display: block; color: #355b4e; }
+.numbers { margin: 6px 0; color: #718578; font-size: 11px; }
+.review { margin-top: 10px; padding-top: 10px; border-top: 1px solid #d8e5d9; }
+.citation { display: block; color: #297b77; margin-top: 7px; }
+.footer { padding: 14px 20px; border-top: 1px solid #e3e9e4; display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+.controls { display: flex; gap: 7px; }
+#next { background: #22594d; border-color: #22594d; color: white; }
+#progress { font-size: 12px; color: #688175; }
+.note { padding: 14px 22px; background: #f8faf6; border-top: 1px solid #e3e9e4; font-size: 11px; color: #79877a; }
+.vis-tooltip { position: absolute; visibility: hidden; max-width: 300px; padding: 10px; white-space: pre-wrap; background: white; border: 1px solid #d4e0d7; border-radius: 8px; box-shadow: 0 4px 14px #203a4322; font: 12px/1.6 system-ui; pointer-events: none; z-index: 20; }
+@media (max-width: 780px) { .layout { grid-template-columns: 1fr; } .canvas { border-right: 0; border-bottom: 1px solid #e3e9e4; } #graph { height: 330px; } .reading { min-height: 260px; max-height: 420px; padding: 20px; } h1 { font-size: 22px; } }
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+</style>
+<script>/* VIS_LIBRARY */</script>
+</head>
+<body>
+<main class="player" aria-label="Edge reasons, fictional examples and isolated directed path">
+  <header class="header"><div class="eyebrow">One arrow · one reason · two tiny stories</div><h1 id="story-title"></h1><div class="scope" id="scope"></div></header>
+  <nav class="breadcrumb" id="breadcrumb" aria-label="Ordered route"></nav>
+  <div class="layout">
+    <section class="canvas" aria-label="Only the selected route">
+      <div class="graph-tools"><span>Only the selected path is shown</span><button id="fit">Fit path</button></div>
+      <div id="graph" aria-label="Isolated directed route"></div>
+      <div class="legend"><span><i class="line"></i>Positive sign</span><span><i class="line minus"></i>Negative sign</span><span>Width = authored strength · Glow = current step</span></div>
+    </section>
+    <article class="reading" id="reading" aria-live="polite">
+      <div class="eyebrow" id="chapter"></div><h2 id="chapter-title"></h2><div id="narration"></div><div class="explanation" id="explanation"></div>
+      <details class="source" id="source"><summary>Original graph claim and source context</summary><div id="source-content"></div></details>
+    </article>
+  </div>
+  <footer class="footer"><span id="progress"></span><div class="controls"><button id="replay">Replay</button><button id="play" aria-pressed="false">Play</button><button id="back">← Back</button><button id="next">Begin story →</button></div></footer>
+  <div class="note" id="fiction-note"></div>
+</main>
+<script>
+const DATA = /* PATH_DATA */;
+const story = DATA.story;
+const reasoningMode = ['edge-reasoning-v4', 'edge-examples-v5'].includes(story.version);
+document.body.classList.toggle('reasoning', reasoningMode);
+const route = story.route;
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const byId = id => document.getElementById(id);
+let chapterIndex = reasoningMode ? 0 : -1;
+let timer = null;
+let playing = false;
+const sourceNodes = new Map(DATA.graph.nodes.map(node => [node.id, node]));
+const nodeItems = route.node_ids.map((nodeId, index) => {
+  const row = Math.floor(index / 3);
+  const column = row % 2 === 0 ? index % 3 : 2 - index % 3;
+  return {
+    ...sourceNodes.get(nodeId), id: nodeId, label: nodeId.split(' ').join('\n'),
+    shape: 'box', x: column * 230, y: row * 165, margin: 12, size: 24,
+    widthConstraint: { minimum: 125, maximum: 155 }, font: { size: 15, color: '#344e43' },
+    fixed: true, physics: false, borderWidth: 2,
+  };
+});
+const nodeSet = new vis.DataSet(nodeItems);
+const edgeSet = new vis.DataSet(DATA.graph.edges);
+const network = new vis.Network(byId('graph'), { nodes: nodeSet, edges: edgeSet }, {
+  physics: false, layout: { improvedLayout: false },
+  interaction: { dragNodes: false, hover: true, zoomView: true },
+  edges: { arrows: { to: { enabled: true, scaleFactor: .9 } }, smooth: false, selectionWidth: 0, hoverWidth: 0 },
+});
+byId('story-title').textContent = story.title;
+byId('scope').textContent = `${story.snapshot.year} · Age ${story.snapshot.age} · ${route.edge_ids.length} directed steps · ${reasoningMode ? story.origin === 'local-qwen' ? 'Authored reasons · Local Qwen examples' : 'Authored reasons and examples' : 'Legacy character story'}`;
+byId('fiction-note').textContent = story.fiction_note;
+function appendText(parent, tag, text, className) {
+  const element = document.createElement(tag);
+  element.textContent = text;
+  if (className) element.className = className;
+  parent.append(element);
+  return element;
+}
+route.node_ids.forEach((nodeId, index) => {
+  if (index > 0) appendText(byId('breadcrumb'), 'span', '→', 'arrow');
+  const button = appendText(byId('breadcrumb'), 'button', `${index === 0 ? 'Start' : index === route.node_ids.length - 1 ? 'End' : index} · ${nodeId}`, 'crumb');
+  button.dataset.nodeIndex = String(index);
+  button.onclick = () => { pause(); chapterIndex = index - 1; render(); };
+});
+function fit() {
+  network.fit({ animation: reducedMotion ? false : { duration: 350, easingFunction: 'easeInOutQuad' } });
+}
+function pause() {
+  playing = false;
+  clearTimeout(timer);
+  timer = null;
+  byId('play').textContent = 'Play';
+  byId('play').setAttribute('aria-pressed', 'false');
+}
+function schedule() {
+  clearTimeout(timer);
+  if (!playing) return;
+  if (chapterIndex === story.chapters.length) { pause(); return; }
+  const current = story.chapters[chapterIndex];
+  const text = chapterIndex < 0 ? story.opening : reasoningMode ? [current.reason, ...current.examples].join(' ') : current.narration;
+  const duration = Math.max(10000, text.split(/\s+/).length * 340);
+  timer = setTimeout(() => { chapterIndex += 1; render(); schedule(); }, duration);
+}
+function render() {
+  const overview = chapterIndex < 0;
+  const recap = chapterIndex === story.chapters.length;
+  const current = overview || recap ? null : story.chapters[chapterIndex];
+  byId('chapter').textContent = overview ? reasoningMode ? 'Route overview' : 'Meet the character' : recap ? 'Complete route' : `${reasoningMode ? 'Step' : 'Chapter'} ${chapterIndex + 1} of ${route.edge_ids.length}`;
+  byId('chapter-title').textContent = overview ? reasoningMode ? 'Follow the direction, inspect the mechanism' : `Meet ${story.character.name}` : recap ? 'What this route does and does not explain' : current.title;
+  byId('narration').textContent = overview ? story.opening : recap ? story.closing : reasoningMode ? '' : current.narration;
+  byId('explanation').replaceChildren();
+  if (current && reasoningMode) {
+    appendText(byId('explanation'), 'h3', 'Reason:');
+    appendText(byId('explanation'), 'p', current.reason);
+    current.examples.forEach((example, index) => {
+      appendText(byId('explanation'), 'h3', `Example ${index + 1}:`);
+      appendText(byId('explanation'), 'p', example);
+    });
+  }
+  byId('reading').scrollTop = 0;
+  byId('progress').textContent = overview ? 'Opening · Start and end are marked' : recap ? `Complete · ${route.edge_ids.length} steps traced` : `Tracing step ${chapterIndex + 1} of ${route.edge_ids.length}`;
+  byId('back').disabled = overview;
+  byId('next').textContent = overview ? 'Begin story →' : recap ? 'Read again ↺' : reasoningMode ? 'Next edge →' : 'Next chapter →';
+  const arrived = recap ? route.node_ids.length - 1 : Math.max(0, chapterIndex + 1);
+  nodeSet.update(nodeItems.map((node, index) => ({
+    id: node.id, color: { background: index <= arrived ? '#e7f2e9' : '#f7f8f3', border: index === arrived ? '#22594d' : '#b7cdbd' },
+    borderWidth: index === arrived ? 3 : 2,
+    shadow: index === arrived && !overview ? { enabled: true, color: '#58a77955', size: 16, x: 0, y: 0 } : false,
+  })));
+  edgeSet.update(DATA.graph.edges.map((edge, index) => ({
+    id: edge.id, width: edge.width,
+    color: { color: edge.color, highlight: edge.color, hover: edge.color, opacity: recap || index <= chapterIndex ? 1 : .25 },
+    shadow: index === chapterIndex && !recap ? { enabled: true, color: '#347b5e88', size: 15, x: 0, y: 0 } : false,
+  })));
+  document.querySelectorAll('.crumb').forEach(button => {
+    const index = Number(button.dataset.nodeIndex);
+    button.classList.toggle('visited', index <= arrived);
+    button.classList.toggle('active', index === arrived);
+    button.setAttribute('aria-current', index === arrived ? 'step' : 'false');
+  });
+  byId('source').hidden = !current;
+  byId('source-content').replaceChildren();
+  if (current) {
+    const edge = current.relationship;
+    const box = appendText(byId('source-content'), 'div', '', 'relationship');
+    appendText(box, 'strong', `${edge.from} → ${edge.to}`);
+    appendText(box, 'div', `Sign ${edge.sign} · Authored strength ${edge.strength.toFixed(2)} · ${edge.source_file}`, 'numbers');
+    appendText(box, 'div', edge.explanation);
+    appendText(box, 'div', 'Authored strengths are not probabilities or measured effects. Fictional scene details are not dataset observations.', 'numbers');
+    (edge.citations || []).forEach(citation => {
+      if (!String(citation.url).startsWith('https://')) return;
+      const link = appendText(box, 'a', `${citation.authors} (${citation.year}). ${citation.title}`, 'citation');
+      link.href = citation.url; link.target = '_blank'; link.rel = 'noopener noreferrer';
+    });
+    if (reasoningMode && current.mechanism_sources.length) {
+      appendText(box, 'div', 'Further reading', 'review');
+      current.mechanism_sources.forEach(source => {
+        if (!String(source.url).startsWith('https://')) return;
+        const link = appendText(box, 'a', source.title, 'citation');
+        link.href = source.url; link.target = '_blank'; link.rel = 'noopener noreferrer';
+        appendText(box, 'div', source.scope, 'numbers');
+      });
+    }
+  }
+}
+byId('back').onclick = () => { pause(); chapterIndex = Math.max(-1, chapterIndex - 1); render(); };
+byId('next').onclick = () => { pause(); chapterIndex = chapterIndex === story.chapters.length ? -1 : chapterIndex + 1; render(); };
+byId('replay').onclick = () => { pause(); chapterIndex = reasoningMode ? 0 : -1; render(); fit(); };
+byId('play').onclick = () => {
+  if (playing) { pause(); return; }
+  if (chapterIndex === story.chapters.length) { chapterIndex = -1; render(); }
+  playing = true; byId('play').textContent = 'Pause'; byId('play').setAttribute('aria-pressed', 'true'); schedule();
+};
+byId('fit').onclick = fit;
+document.addEventListener('keydown', event => {
+  if (event.target.matches('input, textarea, select, button, summary')) return;
+  if (event.key === 'ArrowRight') byId('next').click();
+  if (event.key === 'ArrowLeft') byId('back').click();
+});
+window.addEventListener('pagehide', pause);
+network.once('afterDrawing', fit);
+render();
+</script>
+</body>
+</html>

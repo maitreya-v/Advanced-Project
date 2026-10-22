@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Choose story endpoints on the full graph</title>
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; font: 13px/1.5 system-ui, sans-serif; color: #28473e; background: #fbfcf9; }
+.picker { border: 1px solid #dce5dd; border-radius: 14px; overflow: hidden; }
+.toolbar { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; padding: 12px 14px; background: #f3f7f1; }
+button { font: inherit; padding: 8px 12px; border-radius: 7px; border: 1px solid #cbdccf; background: white; color: #345b4c; cursor: pointer; }
+button:focus-visible { outline: 3px solid #5e9d98; outline-offset: 2px; }
+button.active { background: #285e4d; color: white; border-color: #285e4d; }
+#choose-end.active { background: #805c24; border-color: #805c24; }
+.selection { display: flex; gap: 16px; flex-wrap: wrap; padding: 10px 16px; background: white; border-top: 1px solid #e2e9e1; border-bottom: 1px solid #e2e9e1; }
+.start { color: #24604b; } .end { color: #815b24; }
+#instruction { padding: 7px 16px 0; color: #6f8276; font-size: 12px; }
+#graph { height: 430px; width: 100%; }
+.legend { padding: 8px 16px 12px; color: #748579; font-size: 11px; }
+.vis-tooltip { position: absolute; visibility: hidden; padding: 10px; white-space: pre-wrap; max-width: 320px; background: white; border: 1px solid #c9d9ce; border-radius: 8px; font: 12px/1.5 system-ui; pointer-events: none; z-index: 10; }
+</style>
+<script>/* VIS_LIBRARY */</script>
+</head>
+<body>
+<main class="picker" aria-label="Full graph endpoint selection">
+  <div class="toolbar"><button id="choose-start" class="active" aria-pressed="true">1. Set Start</button><button id="choose-end" aria-pressed="false">2. Set End</button><button id="fit">Fit whole graph</button><button id="zoom-in" aria-label="Zoom in">＋</button><button id="zoom-out" aria-label="Zoom out">−</button><button id="clear">Clear selections</button></div>
+  <div class="selection" aria-live="polite"><span class="start" id="start-label">Start: click a node</span><span class="end" id="end-label">End: click a node</span></div>
+  <div id="instruction">Click any node to set the starting concept. Your next click sets the ending concept.</div>
+  <div id="graph" aria-label="Complete directed graph; click nodes to choose Start and End"></div>
+  <div class="legend" id="legend"></div>
+</main>
+<script>
+const GRAPH = /* GRAPH_DATA */;
+const byId = id => document.getElementById(id);
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+let start = null;
+let end = null;
+let role = 'start';
+let sequence = 0;
+const instanceId = `${Date.now()}-${Math.random().toString(36).slice(2)}`;
+function tooltip(text) {
+  const element = document.createElement('div');
+  element.textContent = text || '';
+  return element;
+}
+const nodes = new vis.DataSet(GRAPH.nodes.map(node => ({
+  ...node, label: node.label, title: tooltip(node.title), font: { size: 14, color: '#344e43' },
+})));
+const edges = new vis.DataSet(GRAPH.edges.map(edge => ({ ...edge, title: tooltip(edge.title) })));
+const network = new vis.Network(byId('graph'), { nodes, edges }, {
+  physics: false, layout: { improvedLayout: false }, nodes: { shape: 'dot' },
+  interaction: { dragNodes: false, hover: true, zoomView: true, multiselect: false },
+  edges: { arrows: 'to', smooth: false, selectionWidth: 0, hoverWidth: 0 },
+});
+byId('legend').textContent = `${GRAPH.year} · Age ${GRAPH.age} · All ${GRAPH.nodes.length} nodes and ${GRAPH.edges.length} directed edges · Zoom to inspect; drag to pan. Green = positive sign, rose = negative sign.`;
+function fit() {
+  network.fit({ animation: reducedMotion ? false : { duration: 350, easingFunction: 'easeInOutQuad' } });
+}
+function setRole(nextRole) {
+  role = nextRole;
+  byId('choose-start').classList.toggle('active', role === 'start');
+  byId('choose-end').classList.toggle('active', role === 'end');
+  byId('choose-start').setAttribute('aria-pressed', String(role === 'start'));
+  byId('choose-end').setAttribute('aria-pressed', String(role === 'end'));
+  byId('instruction').textContent = role === 'start' ? 'Click a node to set Start.' : 'Click a node to set End, then choose Find directed routes below.';
+}
+function paint() {
+  byId('start-label').textContent = `Start: ${start || 'click a node'}`;
+  byId('end-label').textContent = `End: ${end || 'click a node'}`;
+  nodes.update(GRAPH.nodes.map(node => {
+    const selected = node.id === start || node.id === end;
+    return {
+      id: node.id,
+      label: node.id === start ? `START · ${node.label}` : node.id === end ? `END · ${node.label}` : node.label,
+      color: selected ? { background: node.id === start ? '#e0f1e5' : '#fff0d6', border: node.id === start ? '#24604b' : '#946923' } : node.color,
+      borderWidth: selected ? 5 : node.borderWidth,
+      shadow: selected ? { enabled: true, color: '#476b4d55', size: 16, x: 0, y: 0 } : false,
+    };
+  }));
+}
+function select(nodeId) {
+  if (!nodes.get(nodeId)) return;
+  const selectedRole = role;
+  if (selectedRole === 'start') { start = nodeId; setRole('end'); }
+  else { end = nodeId; }
+  paint();
+  window.parent.postMessage({ type: 'story-picker-selection', value: {
+    role: selectedRole, node_id: nodeId, fingerprint: GRAPH.fingerprint, event_id: `${instanceId}-${++sequence}`,
+  } }, '*');
+}
+network.on('click', event => { if (event.nodes.length === 1) select(event.nodes[0]); });
+window.addEventListener('message', event => {
+  if (event.source !== window.parent || event.data?.type !== 'story-picker-config') return;
+  start = nodes.get(event.data.start) ? event.data.start : null;
+  end = nodes.get(event.data.end) ? event.data.end : null;
+  paint();
+});
+byId('choose-start').onclick = () => setRole('start');
+byId('choose-end').onclick = () => setRole('end');
+byId('fit').onclick = fit;
+byId('zoom-in').onclick = () => network.moveTo({ scale: Math.min(3, network.getScale() * 1.5) });
+byId('zoom-out').onclick = () => network.moveTo({ scale: Math.max(.04, network.getScale() / 1.5) });
+byId('clear').onclick = () => {
+  start = null; end = null; setRole('start'); paint();
+  window.parent.postMessage({ type: 'story-picker-selection', value: {
+    role: 'clear', fingerprint: GRAPH.fingerprint, event_id: `${instanceId}-${++sequence}`,
+  } }, '*');
+};
+network.once('afterDrawing', fit);
+paint();
+</script>
+</body>
+</html>

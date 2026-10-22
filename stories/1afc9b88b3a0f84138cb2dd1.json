@@ -1,0 +1,215 @@
+{
+  "version": "edge-reasoning-v4",
+  "mode": "path",
+  "style": "Cause → mechanism → effect, with two concise fictional examples",
+  "library_hash": "1da336a781ffd2aafcf36465d2500946eff523ef7848f71d73b2e4458d053ee5",
+  "path_id": "p_77f400878e24d2a2c4fb",
+  "route": {
+    "path_id": "p_77f400878e24d2a2c4fb",
+    "node_ids": [
+      "Early Life Nutrition",
+      "Genetic Risk",
+      "ADHD",
+      "Symptom Severity",
+      "Functional Impairment",
+      "Quality of Life"
+    ],
+    "edge_ids": [
+      "e_1c9a563731c4e73d",
+      "e_11749cf7db5bbb3d",
+      "e_ed5e4d0e13ebae65",
+      "e_03ee224f9c6d111f",
+      "e_40a1ccb0a6c5c1ad"
+    ],
+    "hop_count": 5,
+    "domains": [
+      "environment",
+      "clinical",
+      "core"
+    ]
+  },
+  "question": "",
+  "snapshot": {
+    "year": 2026,
+    "age": 8,
+    "fingerprint": "a7880db22199911098c912389bdca8962d0d52bd9bf6d2f50ce2d295b77b3fa7"
+  },
+  "key": "1afc9b88b3a0f84138cb2dd1",
+  "title": "Why these arrows? Early Life Nutrition → Quality of Life",
+  "origin": "authored-reasoning",
+  "fiction_note": "Examples are fictional illustrations, not patient observations, predictions or evidence. Reasons are authored interpretations of the graph, not proof of causation. Authored strengths are not probabilities or measured effects.",
+  "opening": "Follow the selected direction. Each step gives a specific reason for the arrow and two tiny fictional stories. Links with unclear definitions or unsupported directions are flagged instead of explained away.",
+  "closing": "Traced 5 directed relationships. 1 need review; illustrative examples do not repair those links or establish a causal effect for the complete route.",
+  "chapters": [
+    {
+      "edge_id": "e_1c9a563731c4e73d",
+      "reason": "The source explanation concerns developmental vulnerability, not a demonstrated change in inherited genetic liability. Define what Genetic Risk means or model a separate developmental pathway; the current wording does not justify this negative arrow.",
+      "examples": [],
+      "status": "needs_review",
+      "title": "Early Life Nutrition → Genetic Risk · Negative",
+      "relationship": {
+        "id": "e_1c9a563731c4e73d",
+        "from": "Early Life Nutrition",
+        "to": "Genetic Risk",
+        "sign": "-",
+        "strength": 0.16,
+        "explanation": "Early nutrition can modulate developmental vulnerability.",
+        "evidence_status": "Not yet reviewed",
+        "source_file": "2026_8 yo.py",
+        "color": "#cf7b8a",
+        "width": 2,
+        "arrows": "to",
+        "title": "Early Life Nutrition → Genetic Risk\nSign: -\nStrength: 0.16\nEarly nutrition can modulate developmental vulnerability.\nAuthored model; scientific validation pending\nEvidence: Not yet reviewed",
+        "evidence_quality": "Not yet reviewed",
+        "evidence_summary": "No literature source has been attached to this authored relationship yet.",
+        "citations": []
+      },
+      "mechanism_sources": [
+        {
+          "title": "NHGRI: Gene–environment interaction",
+          "url": "https://www.genome.gov/genetics-glossary/Gene-Environment-Interaction",
+          "scope": "Conceptual distinction between genetic liability and environmental influences; not evidence for a nutrition-to-genetic-risk edge."
+        }
+      ]
+    },
+    {
+      "edge_id": "e_11749cf7db5bbb3d",
+      "reason": "Inherited genetic variants can influence brain development and systems involved in attention and impulse regulation. Greater genetic susceptibility can therefore increase the likelihood of ADHD, without determining whether a particular person develops it.",
+      "examples": [
+        "Mira is born with higher inherited susceptibility to ADHD. As everyday demands increase, persistent attention and impulse-control difficulties become noticeable; the inherited susceptibility is a possible contributor, not a certain outcome.",
+        "Noah and a sibling grow up in the same household but inherit different combinations of genetic variants. In this fictional example, greater ADHD susceptibility helps explain why one develops persistent difficulties while the other does not."
+      ],
+      "status": "illustrative",
+      "title": "Genetic Risk → ADHD · Positive",
+      "relationship": {
+        "id": "e_11749cf7db5bbb3d",
+        "from": "Genetic Risk",
+        "to": "ADHD",
+        "sign": "+",
+        "strength": 0.88,
+        "explanation": "Genetic liability contributes strongly to childhood ADHD.",
+        "evidence_status": "Not yet reviewed",
+        "source_file": "2026_8 yo.py",
+        "color": "#48a88d",
+        "width": 5.28,
+        "arrows": "to",
+        "title": "Genetic Risk → ADHD\nSign: +\nStrength: 0.88\nGenetic liability contributes strongly to childhood ADHD.\nAuthored model; scientific validation pending\nEvidence: Not yet reviewed",
+        "evidence_quality": "Not yet reviewed",
+        "evidence_summary": "No literature source has been attached to this authored relationship yet.",
+        "citations": []
+      },
+      "mechanism_sources": [
+        {
+          "title": "Genome-wide analyses of ADHD identify 27 risk loci",
+          "url": "https://www.nature.com/articles/s41588-022-01285-8",
+          "scope": "Genetic association evidence; not an individual prediction or validation of this graph weight."
+        }
+      ]
+    },
+    {
+      "edge_id": "e_ed5e4d0e13ebae65",
+      "reason": "Here ADHD must mean the underlying condition, not the act of receiving a diagnosis. Difficulties regulating attention and impulses are expressed as symptoms; a greater underlying burden can mean more frequent or disruptive symptoms, although this is partly a description of the condition rather than an independent causal mechanism.",
+      "examples": [
+        "Mira wants to follow a classroom assignment, but attention repeatedly shifts before the instructions are complete. This example makes the underlying attention-regulation difficulty visible as persistent symptoms, rather than suggesting that a diagnostic label created them.",
+        "During a group activity, Noah repeatedly speaks before others finish despite trying to wait. The difficulty regulating impulses appears as a more frequent symptom, not a deliberate decision to be disruptive."
+      ],
+      "status": "illustrative",
+      "title": "ADHD → Symptom Severity · Positive",
+      "relationship": {
+        "id": "e_ed5e4d0e13ebae65",
+        "from": "ADHD",
+        "to": "Symptom Severity",
+        "sign": "+",
+        "strength": 0.9,
+        "explanation": "Underlying ADHD increases symptom severity.",
+        "evidence_status": "Not yet reviewed",
+        "source_file": "2026_8 yo.py",
+        "color": "#48a88d",
+        "width": 5.4,
+        "arrows": "to",
+        "title": "ADHD → Symptom Severity\nSign: +\nStrength: 0.90\nUnderlying ADHD increases symptom severity.\nAuthored model; scientific validation pending\nEvidence: Not yet reviewed",
+        "evidence_quality": "Not yet reviewed",
+        "evidence_summary": "No literature source has been attached to this authored relationship yet.",
+        "citations": []
+      },
+      "mechanism_sources": [
+        {
+          "title": "NIMH: Attention-deficit/hyperactivity disorder",
+          "url": "https://www.nimh.nih.gov/health/topics/attention-deficit-hyperactivity-disorder-adhd",
+          "scope": "Clinical background on symptoms and functioning; not independent causal estimates for these graph concepts."
+        }
+      ]
+    },
+    {
+      "edge_id": "e_03ee224f9c6d111f",
+      "reason": "More frequent attention or impulse-control difficulties can interrupt following instructions, organizing work and completing activities. The symptom becomes functional impairment when it prevents someone from doing something they need or want to do.",
+      "examples": [
+        "Mira understands the classroom assignment, but repeatedly loses a place in the instructions and starts again. By the deadline the work is unfinished, so an attention difficulty has become a practical obstacle.",
+        "Noah keeps interrupting during a group activity and misses the agreed next step. The group cannot finish the shared task smoothly, showing how a symptom can affect participation rather than just appear on a checklist."
+      ],
+      "status": "illustrative",
+      "title": "Symptom Severity → Functional Impairment · Positive",
+      "relationship": {
+        "id": "e_03ee224f9c6d111f",
+        "from": "Symptom Severity",
+        "to": "Functional Impairment",
+        "sign": "+",
+        "strength": 0.84,
+        "explanation": "More severe symptoms increase impairment.",
+        "evidence_status": "Not yet reviewed",
+        "source_file": "2026_8 yo.py",
+        "color": "#48a88d",
+        "width": 5.04,
+        "arrows": "to",
+        "title": "Symptom Severity → Functional Impairment\nSign: +\nStrength: 0.84\nMore severe symptoms increase impairment.\nAuthored model; scientific validation pending\nEvidence: Not yet reviewed",
+        "evidence_quality": "Not yet reviewed",
+        "evidence_summary": "No literature source has been attached to this authored relationship yet.",
+        "citations": []
+      },
+      "mechanism_sources": [
+        {
+          "title": "NIMH: Attention-deficit/hyperactivity disorder",
+          "url": "https://www.nimh.nih.gov/health/topics/attention-deficit-hyperactivity-disorder-adhd",
+          "scope": "Clinical background on symptoms and functioning; not independent causal estimates for these graph concepts."
+        }
+      ]
+    },
+    {
+      "edge_id": "e_40a1ccb0a6c5c1ad",
+      "reason": "When daily activities become harder to complete, they can take time and energy away from relationships, enjoyment and independence. Greater disruption can therefore reduce quality of life, although support and other circumstances can soften that effect.",
+      "examples": [
+        "An unfinished classroom assignment follows Mira into the evening. While friends play outside, Mira stays behind to catch up; the cost is missing something personally meaningful, not just unfinished work.",
+        "Noah repeatedly struggles to organize the day and cancels a long-awaited outing to deal with overdue responsibilities. The practical difficulty narrows opportunities for enjoyment and connection."
+      ],
+      "status": "illustrative",
+      "title": "Functional Impairment → Quality of Life · Negative",
+      "relationship": {
+        "id": "e_40a1ccb0a6c5c1ad",
+        "from": "Functional Impairment",
+        "to": "Quality of Life",
+        "sign": "-",
+        "strength": 0.86,
+        "explanation": "Impairment reduces quality of life.",
+        "evidence_status": "Not yet reviewed",
+        "source_file": "2026_8 yo.py",
+        "color": "#cf7b8a",
+        "width": 5.16,
+        "arrows": "to",
+        "title": "Functional Impairment → Quality of Life\nSign: -\nStrength: 0.86\nImpairment reduces quality of life.\nAuthored model; scientific validation pending\nEvidence: Not yet reviewed",
+        "evidence_quality": "Not yet reviewed",
+        "evidence_summary": "No literature source has been attached to this authored relationship yet.",
+        "citations": []
+      },
+      "mechanism_sources": [
+        {
+          "title": "Children's ADHD symptoms and health-related quality of life",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40657667/",
+          "scope": "Longitudinal associations in children; not proof of a single impairment-to-quality-of-life causal effect."
+        }
+      ]
+    }
+  ],
+  "created_at": "2026-10-15T19:13:18.910623+00:00",
+  "elapsed_seconds": 0,
+  "validation": "Checked route order, source facts, locked reasons and review flags, example counts, brevity and selected overclaims. Fictional examples and inferred mechanisms still require human review."
+}
