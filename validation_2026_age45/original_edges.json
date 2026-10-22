@@ -1,0 +1,492 @@
+[
+  [
+    "Genetic Risk",
+    "ADHD",
+    "+",
+    0.9,
+    "Genetic vulnerability contributes strongly to lifelong ADHD."
+  ],
+  [
+    "ADHD",
+    "Executive Function Deficit",
+    "+",
+    0.9,
+    "Underlying ADHD strongly affects executive functioning."
+  ],
+  [
+    "ADHD",
+    "Comorbid Conditions",
+    "+",
+    0.68,
+    "ADHD commonly co-occurs with anxiety, mood, or other conditions."
+  ],
+  [
+    "Executive Function Deficit",
+    "Functional Impairment",
+    "+",
+    0.84,
+    "Executive dysfunction increases cumulative impairment."
+  ],
+  [
+    "Symptom Severity",
+    "Functional Impairment",
+    "+",
+    0.82,
+    "Greater symptom burden worsens daily functioning."
+  ],
+  [
+    "Age",
+    "Functional Impairment",
+    "+",
+    0.34,
+    "By age 45, cumulative untreated difficulties can compound impairment."
+  ],
+  [
+    "Nutrition Quality",
+    "Symptom Severity",
+    "-",
+    0.46,
+    "Long-term nutrition may support cognitive regulation."
+  ],
+  [
+    "Sleep Quality",
+    "Executive Function Deficit",
+    "-",
+    0.7,
+    "Sleep affects executive functioning."
+  ],
+  [
+    "Physical Activity",
+    "Symptom Severity",
+    "-",
+    0.46,
+    "Physical activity may reduce symptom burden."
+  ],
+  [
+    "Screen Time",
+    "Symptom Severity",
+    "+",
+    0.28,
+    "Screen exposure may affect attention."
+  ],
+  [
+    "Digital Media Exposure",
+    "Symptom Severity",
+    "+",
+    0.32,
+    "Digital media exposure can affect attention regulation."
+  ],
+  [
+    "Chronic Stress Load",
+    "Functional Impairment",
+    "+",
+    0.7,
+    "Accumulated stress worsens outcomes."
+  ],
+  [
+    "Home Structure Stability",
+    "Family Stress",
+    "-",
+    0.66,
+    "Stable home structure reduces stress."
+  ],
+  [
+    "Family Stress",
+    "Chronic Stress Load",
+    "+",
+    0.72,
+    "Family stress contributes to accumulated burden."
+  ],
+  [
+    "Family History Awareness",
+    "Self-Diagnosis Behavior",
+    "+",
+    0.48,
+    "Family history increasingly supports self-recognition."
+  ],
+  [
+    "Financial Status",
+    "Access to Mental Health Care",
+    "+",
+    0.76,
+    "Income strongly controls access."
+  ],
+  [
+    "Socioeconomic Status",
+    "Access to Mental Health Care",
+    "+",
+    0.8,
+    "Socioeconomic position shapes access to care."
+  ],
+  [
+    "Neighborhood Quality",
+    "Access to Mental Health Care",
+    "+",
+    0.5,
+    "Better neighborhood conditions improve resource access."
+  ],
+  [
+    "Provider Availability",
+    "Access to Mental Health Care",
+    "+",
+    0.82,
+    "Provider supply improves access."
+  ],
+  [
+    "Telehealth Access",
+    "Access to Mental Health Care",
+    "+",
+    0.72,
+    "Telehealth expands access."
+  ],
+  [
+    "Cost of Evaluation",
+    "Diagnosis Status",
+    "-",
+    0.54,
+    "Evaluation cost still suppresses diagnosis."
+  ],
+  [
+    "Access to Mental Health Care",
+    "Diagnosis Status",
+    "+",
+    0.82,
+    "Access helps adult diagnosis."
+  ],
+  [
+    "Online Health Information",
+    "Self-Diagnosis Behavior",
+    "+",
+    0.72,
+    "Online information increases self-recognition."
+  ],
+  [
+    "Social Media Awareness",
+    "Self-Diagnosis Behavior",
+    "+",
+    0.64,
+    "Social media awareness increases self-recognition."
+  ],
+  [
+    "Self-Diagnosis Behavior",
+    "Diagnosis Status",
+    "+",
+    0.6,
+    "Self-recognition increases diagnosis-seeking."
+  ],
+  [
+    "Clinical Guidelines Evolution",
+    "Diagnosis Status",
+    "+",
+    0.62,
+    "Guideline evolution improves adult ADHD recognition."
+  ],
+  [
+    "Diagnostic Criteria Variability",
+    "Misdiagnosis Rate",
+    "+",
+    0.6,
+    "Diagnostic variation still contributes to misdiagnosis."
+  ],
+  [
+    "Misdiagnosis Rate",
+    "Diagnosis Status",
+    "-",
+    0.58,
+    "Misdiagnosis reduces correct diagnosis status."
+  ],
+  [
+    "Race / Ethnicity",
+    "Institutional Bias",
+    "+",
+    0.56,
+    "Structural inequities influence institutional and healthcare pathways."
+  ],
+  [
+    "Institutional Bias",
+    "Diagnosis Status",
+    "-",
+    0.38,
+    "Bias suppresses fair diagnosis."
+  ],
+  [
+    "Race / Ethnicity",
+    "Access to Mental Health Care",
+    "-",
+    0.42,
+    "Structural inequity persists in access pathways."
+  ],
+  [
+    "Gender Bias",
+    "Misdiagnosis Rate",
+    "+",
+    0.38,
+    "Gender stereotypes still contribute to diagnostic error."
+  ],
+  [
+    "Cultural Norms",
+    "Stigma",
+    "+",
+    0.44,
+    "Cultural beliefs shape stigma."
+  ],
+  [
+    "Stigma",
+    "Diagnosis Status",
+    "-",
+    0.36,
+    "Stigma suppresses adult diagnosis."
+  ],
+  [
+    "Stigma",
+    "Self-Diagnosis Behavior",
+    "-",
+    0.34,
+    "Stigma discourages self-recognition and help-seeking."
+  ],
+  [
+    "Functional Impairment",
+    "Employment Instability",
+    "+",
+    0.66,
+    "Impairment can destabilize employment."
+  ],
+  [
+    "Employment Instability",
+    "Diagnosis Status",
+    "+",
+    0.42,
+    "Work problems can trigger assessment-seeking."
+  ],
+  [
+    "Workplace Accommodations",
+    "Functional Impairment",
+    "-",
+    0.5,
+    "Workplace accommodations can reduce impairment."
+  ],
+  [
+    "Remote Work Flexibility",
+    "Functional Impairment",
+    "-",
+    0.44,
+    "Flexible work can reduce ADHD-related impairment."
+  ],
+  [
+    "Diagnosis Status",
+    "Treatment Access",
+    "+",
+    0.76,
+    "By 2026, midlife adult diagnosis can open treatment pathways."
+  ],
+  [
+    "Access to Mental Health Care",
+    "Treatment Access",
+    "+",
+    0.82,
+    "Healthcare access supports treatment availability."
+  ],
+  [
+    "Provider Availability",
+    "Treatment Access",
+    "+",
+    0.78,
+    "Provider availability improves treatment access."
+  ],
+  [
+    "Telehealth Access",
+    "Telehealth Treatment",
+    "+",
+    0.76,
+    "Telehealth directly increases remote treatment options."
+  ],
+  [
+    "Telehealth Treatment",
+    "Treatment Access",
+    "+",
+    0.7,
+    "Telehealth expands practical treatment access."
+  ],
+  [
+    "Socioeconomic Status",
+    "Treatment Access",
+    "+",
+    0.72,
+    "Higher SES improves treatment access and continuity."
+  ],
+  [
+    "Self-Diagnosis Behavior",
+    "Treatment Access",
+    "+",
+    0.56,
+    "Self-recognition increases treatment-seeking."
+  ],
+  [
+    "Clinical Guidelines Evolution",
+    "Treatment Access",
+    "+",
+    0.58,
+    "Guideline evolution improves adult treatment pathways."
+  ],
+  [
+    "Care Coordination",
+    "Treatment Access",
+    "+",
+    0.64,
+    "Care coordination supports treatment continuity."
+  ],
+  [
+    "Treatment Access",
+    "Medication Treatment",
+    "+",
+    0.7,
+    "Treatment access can lead to medication."
+  ],
+  [
+    "Treatment Access",
+    "Behavioral Therapy",
+    "+",
+    0.66,
+    "Treatment access can enable behavioral support."
+  ],
+  [
+    "Treatment Access",
+    "Workplace Support",
+    "+",
+    0.54,
+    "Treatment access can support workplace accommodations."
+  ],
+  [
+    "Treatment Access",
+    "Digital Therapeutics",
+    "+",
+    0.56,
+    "Modern care may include digital ADHD tools."
+  ],
+  [
+    "Medication Treatment",
+    "Symptom Severity",
+    "-",
+    0.62,
+    "Medication can reduce symptoms, but cumulative midlife burden remains."
+  ],
+  [
+    "Medication Treatment",
+    "Functional Impairment",
+    "-",
+    0.46,
+    "Medication can reduce midlife impairment."
+  ],
+  [
+    "Behavioral Therapy",
+    "Functional Impairment",
+    "-",
+    0.48,
+    "Behavioral therapy can reduce practical impairment."
+  ],
+  [
+    "Workplace Support",
+    "Functional Impairment",
+    "-",
+    0.5,
+    "Workplace support reduces occupational impairment."
+  ],
+  [
+    "Digital Therapeutics",
+    "Symptom Severity",
+    "-",
+    0.3,
+    "Digital tools may modestly improve attention and structure."
+  ],
+  [
+    "Digital Therapeutics",
+    "Treatment Adherence",
+    "+",
+    0.34,
+    "Digital tracking can improve adherence."
+  ],
+  [
+    "Treatment Adherence",
+    "Medication Treatment",
+    "+",
+    0.58,
+    "Adherence strengthens medication effect."
+  ],
+  [
+    "Treatment Adherence",
+    "Behavioral Therapy",
+    "+",
+    0.56,
+    "Participation improves behavioral therapy impact."
+  ],
+  [
+    "Online Health Information",
+    "Treatment Adherence",
+    "+",
+    0.36,
+    "Online information can improve treatment understanding."
+  ],
+  [
+    "Treatment Dependency",
+    "Treatment Access",
+    "+",
+    0.5,
+    "Diagnosis often leads into structured treatment pathways."
+  ],
+  [
+    "Stigma",
+    "Treatment Adherence",
+    "-",
+    0.36,
+    "Stigma reduces continued treatment engagement."
+  ],
+  [
+    "Medication Treatment",
+    "Treatment Side Effects",
+    "+",
+    0.48,
+    "Medication can introduce side effects."
+  ],
+  [
+    "Treatment Side Effects",
+    "Treatment Adherence",
+    "-",
+    0.48,
+    "Side effects can reduce adherence."
+  ],
+  [
+    "Treatment Side Effects",
+    "Quality of Life",
+    "-",
+    0.24,
+    "Side effects can slightly reduce quality of life."
+  ],
+  [
+    "Overdiagnosis Pressure",
+    "Diagnosis Status",
+    "+",
+    0.42,
+    "Overdiagnosis discourse affects modern diagnosis patterns."
+  ],
+  [
+    "Diagnosis Status",
+    "Functional Impairment",
+    "-",
+    0.5,
+    "Diagnosis can reduce impairment through support and treatment."
+  ],
+  [
+    "Functional Impairment",
+    "Quality of Life",
+    "-",
+    0.9,
+    "Cumulative impairment strongly lowers quality of life."
+  ],
+  [
+    "Diagnosis Status",
+    "Quality of Life",
+    "+",
+    0.68,
+    "Diagnosis can improve quality of life in midlife."
+  ]
+]

@@ -825,7 +825,7 @@ with explorer_tab:
                     "**Edge color:** validation status (see Validation tab)  \n"
                     "**Sign (+ / -):** positive / negative effect  \n"
                     "**Arrow:** source influences target  \n"
-                    "**Thickness:** causal strength  \n"
+                    "**Thickness:** original strength (unvalidated)  \n"
                     "**Hover:** reason + strength  \n"
                     "**Click:** validation references"
                 )

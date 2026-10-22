@@ -1,0 +1,3004 @@
+{
+  "metadata": {
+    "graph_file": "2026_32 yo.py",
+    "graph_sha256": "fb8f56f2716a14092740d992cf27fbfe227a761c2039f275bffeac314d95575c",
+    "graph_year": 2026,
+    "age": 32,
+    "edge_count": 74,
+    "pdf_file_count": 159,
+    "unique_document_count": 158,
+    "html_file_count": 0,
+    "total_pdf_pages": 2212,
+    "cited_document_count": 23,
+    "validation_updated_utc": "2026-10-22T05:12:21.621012+00:00",
+    "original_unchanged": true,
+    "strength_assessed": false,
+    "status_counts": {
+      "supported": 2,
+      "partially_supported": 25,
+      "contradicted": 0,
+      "mixed_evidence": 0,
+      "insufficient_evidence": 38,
+      "not_assessable": 9
+    },
+    "reviewed_corpus_sha256": "5dba64601f1a110cda86033104b1fc9c2379b0f02fa8764fe8b647c4dbedcd2b"
+  },
+  "status_definitions": {
+    "supported": "Evidence supports the stated direction, sign, and reasoning within the declared scope.",
+    "partially_supported": "Evidence supports only part of the claim, a narrower population or outcome, or an association rather than the full causal claim.",
+    "contradicted": "Relevant evidence opposes the claimed direction or sign within the declared scope.",
+    "mixed_evidence": "Relevant evidence both supports and opposes the same defined claim.",
+    "insufficient_evidence": "Available evidence does not establish or refute the causal claim.",
+    "not_assessable": "Undefined variable coding or endpoint makes the proposed direction or sign uninterpretable."
+  },
+  "methodology": {
+    "scope": "2026_32 yo.py: all 74 original edges reviewed against 159 supplied PDFs (158 distinct normalized full-text documents), 2,212 file pages. The year refers to the graph snapshot and supplied folder, not a claim that all papers were first published in 2026.",
+    "review_depth": "All supplied documents were screened by titles/first pages and available abstracts; relevant full-text passages were reviewed for graph claims. This is a targeted corpus validation, not exhaustive critical appraisal of all 2,212 pages or an external systematic review.",
+    "age_scope": "Adult ADHD evidence relevant to age 32 was preferred. Broad adult findings receive partial support when no exact-age effect or matching mechanism is established. Pediatric-only evidence and studies restricted to age 50+ are not transferred to this adult persona.",
+    "causal_standard": "Assess direction, sign, endpoint and written reasoning. Association, clinical recommendations, co-occurrence, service uptake and mechanistic plausibility are distinguished from experimental causal evidence. Null tests on different exposures/outcomes are not labeled contradictions.",
+    "strength": "Numeric edge strengths and the widths that encode them are retained for fidelity and are NOT validated effect sizes. All original edges, signs, reasoning, node positions and domain colors are preserved; only validation styling and evidence are added.",
+    "constructs": "Categorical variables require comparator coding; undefined treatment dependency/overdiagnosis pressure and treatment-receipt-versus-benefit mismatches are not assessable. Treatment effects do not establish diagnosis-only benefits.",
+    "duplicates": "The two 1-s2.0-S1087079226000754-main PDFs have different binary hashes but identical normalized page text and represent one sleep-intervention review. Duplicate copies are not independent evidence. Other reviews may share primary studies; 158 distinct documents are not 158 independent studies.",
+    "quotations": "PDF locations use one-based file pages. Native PDF reading order preserves columns; Unicode NFKC, soft-hyphen removal, end-of-line word dehyphenation and whitespace normalization are documented in extract_corpus.py. Every selected quotation is checked against actual source PDF-page text at build time.",
+    "provenance": "Graph SHA-256, every supplied PDF SHA-256, text hashes and reviewed corpus hash are checked. New/changed graphs or source PDFs require reassessment before rebuilding. full_texts is a relative directory link to the original supplied corpus; keep these folders beside 2026 ADHD Papers.",
+    "limits": "Insufficient evidence means this corpus does not establish the claim; it does not mean the edge is false. Supported refers to the declared qualitative pathway, not clinical recommendations or personalized treatment advice. No external papers were added."
+  },
+  "edges": [
+    {
+      "edge_id": 1,
+      "source": "Genetic Risk",
+      "dest": "ADHD",
+      "existing_reasoning": "Genetic vulnerability contributes to adult ADHD.",
+      "sign": "+",
+      "validation_status": "supported",
+      "observation_from_validation": "The biological review synthesizes twin and genomic evidence for inherited ADHD liability across children, adolescents and adults. This supports the broad inherited-liability pathway; it does not validate a deterministic variant or the original strength.",
+      "recommended_action": "Retain as aggregate inherited liability; keep the numeric strength explicitly unvalidated.",
+      "evidence": [
+        {
+          "source_id": "PDF_074",
+          "exact_excerpt": "For ADHD, twin studies conducted across various European countries estimate a weighted average heritability of 76%, a value consistent across children, adolescents, and adults",
+          "location": "PDF page 14 (one-based file page)",
+          "relevance": "Supports inherited liability across the lifespan; heritability is not the original numeric edge strength."
+        }
+      ]
+    },
+    {
+      "edge_id": 2,
+      "source": "ADHD",
+      "dest": "Symptom Severity",
+      "existing_reasoning": "Underlying ADHD increases adult symptom severity.",
+      "sign": "+",
+      "validation_status": "not_assessable",
+      "observation_from_validation": "The latent disorder and the symptoms used to recognize it are not operationally separated. A signed cause-to-severity edge risks restating the disorder definition.",
+      "recommended_action": "Define underlying liability independently of the measured symptom scale before interpreting this as causal.",
+      "evidence": [
+        {
+          "source_id": "PDF_065",
+          "exact_excerpt": "Longitudinal evidence demonstrates that ADHD trajectories are heterogeneous and non-linear, with fluctuating symptom ex pression and variable relationships to functional impairment.",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "Prevents a universal monotonic age-to-impairment slope or treating diagnosis as a fixed causal exposure."
+        }
+      ]
+    },
+    {
+      "edge_id": 3,
+      "source": "ADHD",
+      "dest": "Symptom Type",
+      "existing_reasoning": "ADHD shapes inattentive, hyperactive, or combined presentation.",
+      "sign": "+",
+      "validation_status": "not_assessable",
+      "observation_from_validation": "Symptom Type is an unordered category, so a universal positive sign has no defined interpretation. Sex differences, gender norms, presentation and recognition are separate constructs.",
+      "recommended_action": "Use an unsigned association or specify a presentation contrast and a defined sex/gender measure.",
+      "evidence": []
+    },
+    {
+      "edge_id": 4,
+      "source": "ADHD",
+      "dest": "Executive Function Deficit",
+      "existing_reasoning": "ADHD strongly affects executive functioning.",
+      "sign": "+",
+      "validation_status": "partially_supported",
+      "observation_from_validation": "The adult self-regulation review links ADHD to executive and motivational difficulties, while biological literature emphasizes heterogeneity. This supports an associated phenotype, not a universal executive deficit caused by ADHD.",
+      "recommended_action": "Specify the executive domain and measurement; avoid assuming every adult with ADHD has the same deficit.",
+      "evidence": [
+        {
+          "source_id": "PDF_033",
+          "exact_excerpt": "Findings were also consistent with the involvement of executive functioning deficits, emotion dysregulation, and motivational processes, although evidence was primarily based on cross-sectional designs.",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "Executive/self-regulatory difficulties have associated functional consequences; does not prove universal ADHD-to-deficit causation."
+        }
+      ]
+    },
+    {
+      "edge_id": 5,
+      "source": "ADHD",
+      "dest": "Comorbid Conditions",
+      "existing_reasoning": "ADHD commonly co-occurs with anxiety, mood, or learning difficulties.",
+      "sign": "+",
+      "validation_status": "partially_supported",
+      "observation_from_validation": "Adult case-control and cohort studies show elevated anxiety and other co-occurring conditions. Shared liability, selection and reverse pathways prevent interpreting co-occurrence as ADHD causing every comorbidity.",
+      "recommended_action": "Use a co-occurrence association or condition-specific causal model.",
+      "evidence": [
+        {
+          "source_id": "PDF_080",
+          "exact_excerpt": "The average effect size (Hedges’s g) of anxiety scores in those with ADHD relative to controls was 0.77 (SE = 0.066); a medium effect.",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "Adult anxiety co-occurrence; causal direction from ADHD is not established."
+        },
+        {
+          "source_id": "PDF_093",
+          "exact_excerpt": "both groups showed substantial clinical burden.",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "Adult groups around the two persona ages have comorbidity/impairment; cross-sectional diagnosis-age groups do not identify diagnostic benefits or cumulative age effects."
+        }
+      ]
+    },
+    {
+      "edge_id": 6,
+      "source": "Age",
+      "dest": "Symptom Severity",
+      "existing_reasoning": "At age 32, overt hyperactivity may reduce but inattentive impairment can remain.",
+      "sign": "-",
+      "validation_status": "partially_supported",
+      "observation_from_validation": "The editorial describes hyperactivity/impulsivity declining from childhood to adulthood while inattention is more stable. This supports a domain-specific developmental pattern, not a uniform negative effect on all symptoms at 32.",
+      "recommended_action": "Specify hyperactivity/impulsivity and the comparison ages; model persistent inattention separately.",
+      "evidence": [
+        {
+          "source_id": "PDF_055",
+          "exact_excerpt": "hyperactivity/impulsivity typically declines from childhood into adulthood and is more strongly linked to externalizing and risk-taking outcomes, whereas inattention is relatively more stable",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "Editorial discusses domain-specific age trajectories, not an exact-age slope."
+        },
+        {
+          "source_id": "PDF_065",
+          "exact_excerpt": "Longitudinal evidence demonstrates that ADHD trajectories are heterogeneous and non-linear, with fluctuating symptom ex pression and variable relationships to functional impairment.",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "Prevents a universal monotonic age-to-impairment slope or treating diagnosis as a fixed causal exposure."
+        }
+      ]
+    },
+    {
+      "edge_id": 7,
+      "source": "Gender",
+      "dest": "Symptom Type",
+      "existing_reasoning": "Gender norms still influence which adult symptoms are noticed.",
+      "sign": "+",
+      "validation_status": "not_assessable",
+      "observation_from_validation": "Symptom Type is an unordered category, so a universal positive sign has no defined interpretation. Sex differences, gender norms, presentation and recognition are separate constructs.",
+      "recommended_action": "Use an unsigned association or specify a presentation contrast and a defined sex/gender measure.",
+      "evidence": []
+    },
+    {
+      "edge_id": 8,
+      "source": "Nutrition Quality",
+      "dest": "Symptom Severity",
+      "existing_reasoning": "Better nutrition may support regulation and attention.",
+      "sign": "-",
+      "validation_status": "partially_supported",
+      "observation_from_validation": "A small adult study links lower B12/vitamin D levels to greater symptoms. This supports an adult association with specific biomarkers, not evidence that changing overall diet reduces symptoms. Mixed-age carbohydrate evidence is also heterogeneous.",
+      "recommended_action": "Describe a biomarker association or specify an adult nutritional intervention; do not claim an exact-age causal benefit.",
+      "evidence": [
+        {
+          "source_id": "PDF_149",
+          "exact_excerpt": "These findings indicate that lower serum vitamin B12 and 25-hydroxyvitamin D levels are associated with greater ADHD symptom severity in adults.",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "Adult biomarker association is narrower than diet quality and cannot establish benefit from changing diet."
+        },
+        {
+          "source_id": "PDF_100",
+          "exact_excerpt": "Conclusions: Poorer carbohydrate quality may be associated with greater ADHD-related symptom burden, whereas total carbohydrate intake showed inconsistent associations.",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "Qualified diet-quality association; narrower exposure and heterogeneous ages/designs, without a generic causal nutrition effect."
+        }
+      ]
+    },
+    {
+      "edge_id": 9,
+      "source": "Sleep Quality",
+      "dest": "Symptom Severity",
+      "existing_reasoning": "Better sleep improves attention and regulation.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The directly relevant supplied sleep studies are pediatric; they do not establish adult sleep improvement causing symptom reduction at 32. Shared sleep/ADHD biology is not an adult intervention result.",
+      "recommended_action": "Add an adult ADHD sleep-intervention study with a symptom endpoint.",
+      "evidence": [
+        {
+          "source_id": "PDF_147",
+          "exact_excerpt": "Latent growth curve modeling revealed that ADHD symptoms significantly impacted sleep traits with a lag effect.",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "Documents a reverse temporal pathway; cautions against assuming sleep is always upstream."
+        }
+      ]
+    },
+    {
+      "edge_id": 10,
+      "source": "Physical Activity",
+      "dest": "Symptom Severity",
+      "existing_reasoning": "Physical activity may reduce symptom burden.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The exercise reviews mainly concern children/adolescents, with benefits depending on cognitive domain and intervention. The reviewed evidence does not establish symptom reduction specifically in adult ADHD at this age.",
+      "recommended_action": "Add adult ADHD exercise trials measuring core symptoms; do not transfer pediatric executive-function effects.",
+      "evidence": [
+        {
+          "source_id": "PDF_157",
+          "exact_excerpt": "Exercise yielded a small-to-moderate improvement in inhibitory control but showed no significant effects on hyperactivity/ impulsivity or inhibition-related N2 and P3 components.",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "Domain-specific exercise effects, especially pediatric; not a demonstrated adult core-symptom effect."
+        }
+      ]
+    },
+    {
+      "edge_id": 11,
+      "source": "Screen Time",
+      "dest": "Symptom Severity",
+      "existing_reasoning": "Screen exposure may affect attention.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The corpus includes adolescent problematic-use associations and pediatric screen-time group comparisons. Neither establishes a generic exposure causing symptoms for this persona. Problematic use, therapeutic video games and exposure hours are distinct constructs.",
+      "recommended_action": "Use an age-relevant prospective or experimental design with a defined digital exposure; do not transfer adolescent or university samples.",
+      "evidence": [
+        {
+          "source_id": "PDF_099",
+          "exact_excerpt": "The analytic sample consisted of 11 286 youths with a mean (SD) age at year 2 of 12.1 (0.67)",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "Makes the adolescent population explicit; cannot be transferred directly to age eight or adult personas."
+        },
+        {
+          "source_id": "PDF_056",
+          "exact_excerpt": "Conclusions: Children and adolescents with ADHD spent more time during weekdays using screens and were therefore more likely to exhibit excessive screen and computer use.",
+          "location": "PDF page 2 (one-based file page)",
+          "relevance": "ADHD group screen-use difference does not identify exposure causing symptoms."
+        }
+      ]
+    },
+    {
+      "edge_id": 12,
+      "source": "Digital Media Exposure",
+      "dest": "Symptom Severity",
+      "existing_reasoning": "Digital media exposure can intensify attention dysregulation.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The corpus includes adolescent problematic-use associations and pediatric screen-time group comparisons. Neither establishes a generic exposure causing symptoms for this persona. Problematic use, therapeutic video games and exposure hours are distinct constructs.",
+      "recommended_action": "Use an age-relevant prospective or experimental design with a defined digital exposure; do not transfer adolescent or university samples.",
+      "evidence": [
+        {
+          "source_id": "PDF_099",
+          "exact_excerpt": "The analytic sample consisted of 11 286 youths with a mean (SD) age at year 2 of 12.1 (0.67)",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "Makes the adolescent population explicit; cannot be transferred directly to age eight or adult personas."
+        },
+        {
+          "source_id": "PDF_056",
+          "exact_excerpt": "Conclusions: Children and adolescents with ADHD spent more time during weekdays using screens and were therefore more likely to exhibit excessive screen and computer use.",
+          "location": "PDF page 2 (one-based file page)",
+          "relevance": "ADHD group screen-use difference does not identify exposure causing symptoms."
+        }
+      ]
+    },
+    {
+      "edge_id": 13,
+      "source": "Chronic Stress Load",
+      "dest": "Symptom Severity",
+      "existing_reasoning": "Stress amplifies adult symptoms.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The reviewed corpus does not directly test this specified household/chronic-stress causal pathway in adult ADHD. General relationship or burden accounts do not establish its direction or sign.",
+      "recommended_action": "Define the exposure, time window and independent endpoint; add adult longitudinal evidence.",
+      "evidence": [
+        {
+          "source_id": "PDF_062",
+          "exact_excerpt": "Adults with ADHD (N = 355) answered an open‐ended survey question asking if and how their ADHD had negatively impacted their romantic relationships.",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "Relationship accounts concern consequences and lived experience, not family stress causing core symptoms."
+        }
+      ]
+    },
+    {
+      "edge_id": 14,
+      "source": "Symptom Severity",
+      "dest": "Functional Impairment",
+      "existing_reasoning": "Higher symptoms increase occupational and daily impairment.",
+      "sign": "+",
+      "validation_status": "partially_supported",
+      "observation_from_validation": "Adult syntheses describe practical impairment associated with ADHD symptoms, but symptoms, functioning and quality of life can change differently. No universal causal severity gradient or exact-age strength is established.",
+      "recommended_action": "Separate symptoms from function, specify the functional domain, and label the pathway as qualified.",
+      "evidence": [
+        {
+          "source_id": "PDF_033",
+          "exact_excerpt": "Findings were also consistent with the involvement of executive functioning deficits, emotion dysregulation, and motivational processes, although evidence was primarily based on cross-sectional designs.",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "Executive/self-regulatory difficulties have associated functional consequences; does not prove universal ADHD-to-deficit causation."
+        },
+        {
+          "source_id": "PDF_093",
+          "exact_excerpt": "both groups showed substantial clinical burden.",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "Adult groups around the two persona ages have comorbidity/impairment; cross-sectional diagnosis-age groups do not identify diagnostic benefits or cumulative age effects."
+        },
+        {
+          "source_id": "PDF_004",
+          "exact_excerpt": "The dissociation between symptom change, QoL, and functioning suggests that functional gains may not be fully explained by symptom reduction alone, although the mechanisms underlying these effects remain unclear.",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "Functional impairment and quality of life are related but distinct; symptom or function improvement cannot automatically prove a direct QoL edge."
+        }
+      ]
+    },
+    {
+      "edge_id": 15,
+      "source": "Executive Function Deficit",
+      "dest": "Functional Impairment",
+      "existing_reasoning": "Executive dysfunction creates practical impairment.",
+      "sign": "+",
+      "validation_status": "partially_supported",
+      "observation_from_validation": "Executive/self-regulatory difficulties are implicated in procrastination and adult functioning. Most underlying evidence is cross-sectional, so the precise causal path and persona-specific magnitude remain unestablished.",
+      "recommended_action": "Retain as a qualified domain-specific pathway; obtain longitudinal executive-function and real-life outcome measures.",
+      "evidence": [
+        {
+          "source_id": "PDF_033",
+          "exact_excerpt": "Findings were also consistent with the involvement of executive functioning deficits, emotion dysregulation, and motivational processes, although evidence was primarily based on cross-sectional designs.",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "Executive/self-regulatory difficulties have associated functional consequences; does not prove universal ADHD-to-deficit causation."
+        },
+        {
+          "source_id": "PDF_004",
+          "exact_excerpt": "CBT produced moderate effects on global functioning at post-treatment (SMD = 0.47) that increased at follow-up (SMD = 0.67).",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "Adult CBT functional benefit; meta-analysis mixes designs and does not isolate age 32 or 45."
+        }
+      ]
+    },
+    {
+      "edge_id": 16,
+      "source": "Comorbid Conditions",
+      "dest": "Functional Impairment",
+      "existing_reasoning": "Comorbid burden increases impairment.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The adult cohort documents both comorbid conditions and impairment, without isolating the causal contribution of a defined comorbidity to impairment for this age.",
+      "recommended_action": "Specify a condition and functional endpoint and compare ADHD with versus without that condition longitudinally.",
+      "evidence": [
+        {
+          "source_id": "PDF_093",
+          "exact_excerpt": "both groups showed substantial clinical burden.",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "Adult groups around the two persona ages have comorbidity/impairment; cross-sectional diagnosis-age groups do not identify diagnostic benefits or cumulative age effects."
+        }
+      ]
+    },
+    {
+      "edge_id": 17,
+      "source": "Functional Impairment",
+      "dest": "Employment Instability",
+      "existing_reasoning": "Impairment can destabilize employment.",
+      "sign": "+",
+      "validation_status": "partially_supported",
+      "observation_from_validation": "Adult occupational burden and workplace maladjustment are described in the supplied work studies. They are related to employment difficulty but do not isolate impairment causing later job instability.",
+      "recommended_action": "Specify turnover, unemployment or contract stability as the outcome; seek longitudinal temporal evidence.",
+      "evidence": [
+        {
+          "source_id": "PDF_045",
+          "exact_excerpt": "workplace adjustments equivalent to reasonable accommodations are associated with a lower risk of workplace maladjustment and improved workplace adaptation among employees with high ASD or ADHD trait levels",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "Supports qualified adult workplace-support association, not randomized effects, general functional recovery or remote-work benefit."
+        },
+        {
+          "source_id": "PDF_104",
+          "exact_excerpt": "No significant differences were found in the employment outcomes between the two groups in adjusted models.",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "No demonstrated adjusted employment benefit in this adult observational study; not proof of medication inefficacy for all functional outcomes."
+        }
+      ]
+    },
+    {
+      "edge_id": 18,
+      "source": "Performance Pressure",
+      "dest": "Functional Impairment",
+      "existing_reasoning": "Performance demands make executive dysfunction more visible.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "Workplace adjustment evidence does not manipulate or measure the graph’s performance-pressure mechanism as a cause of functional impairment.",
+      "recommended_action": "Define workload or performance demand and test its relationship with independently measured function.",
+      "evidence": [
+        {
+          "source_id": "PDF_045",
+          "exact_excerpt": "workplace adjustments equivalent to reasonable accommodations are associated with a lower risk of workplace maladjustment and improved workplace adaptation among employees with high ASD or ADHD trait levels",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "Supports qualified adult workplace-support association, not randomized effects, general functional recovery or remote-work benefit."
+        }
+      ]
+    },
+    {
+      "edge_id": 19,
+      "source": "Workplace Accommodations",
+      "dest": "Functional Impairment",
+      "existing_reasoning": "Workplace accommodations reduce impairment.",
+      "sign": "-",
+      "validation_status": "partially_supported",
+      "observation_from_validation": "Among Japanese workers aged 20–59, workplace adjustments were associated with better adaptation, including high ADHD-trait groups. Cross-sectional selection, trait-based ascertainment and the narrower workplace endpoint limit causal interpretation.",
+      "recommended_action": "Retain a qualified workplace-adaptation association; specify the adjustment and avoid generalizing to all impairment.",
+      "evidence": [
+        {
+          "source_id": "PDF_045",
+          "exact_excerpt": "workplace adjustments equivalent to reasonable accommodations are associated with a lower risk of workplace maladjustment and improved workplace adaptation among employees with high ASD or ADHD trait levels",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "Supports qualified adult workplace-support association, not randomized effects, general functional recovery or remote-work benefit."
+        }
+      ]
+    },
+    {
+      "edge_id": 20,
+      "source": "Remote Work Flexibility",
+      "dest": "Functional Impairment",
+      "existing_reasoning": "Flexible work can reduce adult ADHD-related impairment.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "Flexible hours and other workplace adjustments are not the same exposure as remote work. No reviewed source directly tests remote work reducing adult ADHD impairment.",
+      "recommended_action": "Separate flexible scheduling from remote location and add direct outcome evidence.",
+      "evidence": [
+        {
+          "source_id": "PDF_045",
+          "exact_excerpt": "workplace adjustments equivalent to reasonable accommodations are associated with a lower risk of workplace maladjustment and improved workplace adaptation among employees with high ASD or ADHD trait levels",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "Supports qualified adult workplace-support association, not randomized effects, general functional recovery or remote-work benefit."
+        }
+      ]
+    },
+    {
+      "edge_id": 21,
+      "source": "Family Stress",
+      "dest": "Symptom Severity",
+      "existing_reasoning": "Adult family stress can intensify symptoms.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "Adult relationship accounts describe burdens associated with ADHD; they do not test family stress causing later core symptom worsening at 32.",
+      "recommended_action": "Add an adult longitudinal study distinguishing family stress from symptoms and comorbidity.",
+      "evidence": [
+        {
+          "source_id": "PDF_062",
+          "exact_excerpt": "Adults with ADHD (N = 355) answered an open‐ended survey question asking if and how their ADHD had negatively impacted their romantic relationships.",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "Relationship accounts concern consequences and lived experience, not family stress causing core symptoms."
+        }
+      ]
+    },
+    {
+      "edge_id": 22,
+      "source": "Household Stability",
+      "dest": "Family Stress",
+      "existing_reasoning": "Stable household context reduces family stress.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The reviewed corpus does not directly test this specified household/chronic-stress causal pathway in adult ADHD. General relationship or burden accounts do not establish its direction or sign.",
+      "recommended_action": "Define the exposure, time window and independent endpoint; add adult longitudinal evidence.",
+      "evidence": [
+        {
+          "source_id": "PDF_062",
+          "exact_excerpt": "Adults with ADHD (N = 355) answered an open‐ended survey question asking if and how their ADHD had negatively impacted their romantic relationships.",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "Relationship accounts concern consequences and lived experience, not family stress causing core symptoms."
+        }
+      ]
+    },
+    {
+      "edge_id": 23,
+      "source": "Socioeconomic Status",
+      "dest": "Access to Mental Health Care",
+      "existing_reasoning": "Higher SES improves access to specialists and services.",
+      "sign": "+",
+      "validation_status": "partially_supported",
+      "observation_from_validation": "The mixed-age adherence review reports cost/insurance barriers and links lower socioeconomic resources to treatment discontinuation. This supports a related financial barrier, not a measured effect on initial adult assessment access.",
+      "recommended_action": "Separate ongoing treatment continuity from evaluation access; specify an adult affordability endpoint.",
+      "evidence": [
+        {
+          "source_id": "PDF_092",
+          "exact_excerpt": "Low socioeconomic status households or uninsured households were more likely to discontinue treatment due to cost concerns.",
+          "location": "PDF page 13 (one-based file page)",
+          "relevance": "Mixed-age review links financial resources to continuity; initial evaluation access remains a distinct outcome."
+        }
+      ]
+    },
+    {
+      "edge_id": 24,
+      "source": "Financial Status",
+      "dest": "Access to Mental Health Care",
+      "existing_reasoning": "Income controls access to healthcare.",
+      "sign": "+",
+      "validation_status": "partially_supported",
+      "observation_from_validation": "The mixed-age adherence review reports cost/insurance barriers and links lower socioeconomic resources to treatment discontinuation. This supports a related financial barrier, not a measured effect on initial adult assessment access.",
+      "recommended_action": "Separate ongoing treatment continuity from evaluation access; specify an adult affordability endpoint.",
+      "evidence": [
+        {
+          "source_id": "PDF_092",
+          "exact_excerpt": "Low socioeconomic status households or uninsured households were more likely to discontinue treatment due to cost concerns.",
+          "location": "PDF page 13 (one-based file page)",
+          "relevance": "Mixed-age review links financial resources to continuity; initial evaluation access remains a distinct outcome."
+        }
+      ]
+    },
+    {
+      "edge_id": 25,
+      "source": "Neighborhood Quality",
+      "dest": "Access to Mental Health Care",
+      "existing_reasoning": "Better neighborhood conditions improve resource access.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No reviewed adult study isolates a defined neighborhood-quality exposure causing access to ADHD evaluation or services.",
+      "recommended_action": "Add an adult geographic access study separating deprivation, supply, cost and clinical need.",
+      "evidence": []
+    },
+    {
+      "edge_id": 26,
+      "source": "Provider Availability",
+      "dest": "Access to Mental Health Care",
+      "existing_reasoning": "More providers improve assessment chances.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "Provider relationships and continuity affect ongoing treatment, but the reviewed adult evidence does not isolate provider supply causing initial access.",
+      "recommended_action": "Measure appointment capacity, waiting time and completed adult assessment directly.",
+      "evidence": [
+        {
+          "source_id": "PDF_092",
+          "exact_excerpt": "Access to healthcare services and communication with providers significantly influenced adherence",
+          "location": "PDF page 12 (one-based file page)",
+          "relevance": "Mixed-age synthesis relates provider communication/access to adherence, not proof that generic access creates coordination or diagnosis."
+        }
+      ]
+    },
+    {
+      "edge_id": 27,
+      "source": "Telehealth Access",
+      "dest": "Access to Mental Health Care",
+      "existing_reasoning": "Telehealth expands assessment and care access.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The supplied digital registry review identifies ongoing videoconferencing trials and the pediatric co-design paper identifies needs. Neither supplies completed evidence that telehealth availability increased access or actual treatment use for this persona.",
+      "recommended_action": "Add a completed age-relevant telehealth service evaluation; distinguish availability, uptake and clinical benefit.",
+      "evidence": [
+        {
+          "source_id": "PDF_067",
+          "exact_excerpt": "Of 149 identified trials, 35 ongoing studies met inclusion criteria.",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "Planned digital/telehealth trials do not establish completed access or clinical-effect evidence."
+        }
+      ]
+    },
+    {
+      "edge_id": 28,
+      "source": "Cost of Evaluation",
+      "dest": "Diagnosis Status",
+      "existing_reasoning": "Evaluation cost remains a diagnosis barrier.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The mixed-age adherence review measures medication and treatment cost barriers, not the separate effect of adult evaluation cost on initial diagnosis.",
+      "recommended_action": "Add an adult evaluation-cost study rather than transferring medication-continuity findings.",
+      "evidence": [
+        {
+          "source_id": "PDF_092",
+          "exact_excerpt": "Low socioeconomic status households or uninsured households were more likely to discontinue treatment due to cost concerns.",
+          "location": "PDF page 13 (one-based file page)",
+          "relevance": "Mixed-age review links financial resources to continuity; initial evaluation access remains a distinct outcome."
+        }
+      ]
+    },
+    {
+      "edge_id": 29,
+      "source": "Access to Mental Health Care",
+      "dest": "Diagnosis Status",
+      "existing_reasoning": "Access to care strongly affects adult diagnosis.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "Mixed-age treatment-continuity evidence does not establish healthcare access causing initial accurate adult diagnosis at this age.",
+      "recommended_action": "Add an adult diagnostic-service study measuring completed evaluations and diagnostic accuracy.",
+      "evidence": [
+        {
+          "source_id": "PDF_092",
+          "exact_excerpt": "Access to healthcare services and communication with providers significantly influenced adherence",
+          "location": "PDF page 12 (one-based file page)",
+          "relevance": "Mixed-age synthesis relates provider communication/access to adherence, not proof that generic access creates coordination or diagnosis."
+        }
+      ]
+    },
+    {
+      "edge_id": 30,
+      "source": "Online Health Information",
+      "dest": "Self-Diagnosis Behavior",
+      "existing_reasoning": "Online information increases adult self-recognition.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The video-quality audit measures content and the review protocol proposes future evidence synthesis. They do not measure the claimed downstream change in awareness, correct diagnosis, service uptake or adherence. Exposure to online information cannot be assumed beneficial.",
+      "recommended_action": "Add a completed audience/outcome study with the proposed age group and endpoint; distinguish recognition from validated diagnosis.",
+      "evidence": [
+        {
+          "source_id": "PDF_107",
+          "exact_excerpt": "A total of 228 eligible videos were analyzed.",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "Video-quality audit cannot estimate awareness, self-diagnosis, formal diagnosis, or treatment adherence effects."
+        }
+      ]
+    },
+    {
+      "edge_id": 31,
+      "source": "Social Media Awareness",
+      "dest": "Self-Diagnosis Behavior",
+      "existing_reasoning": "Social media awareness increases self-recognition.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The video-quality audit measures content and the review protocol proposes future evidence synthesis. They do not measure the claimed downstream change in awareness, correct diagnosis, service uptake or adherence. Exposure to online information cannot be assumed beneficial.",
+      "recommended_action": "Add a completed audience/outcome study with the proposed age group and endpoint; distinguish recognition from validated diagnosis.",
+      "evidence": [
+        {
+          "source_id": "PDF_107",
+          "exact_excerpt": "A total of 228 eligible videos were analyzed.",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "Video-quality audit cannot estimate awareness, self-diagnosis, formal diagnosis, or treatment adherence effects."
+        }
+      ]
+    },
+    {
+      "edge_id": 32,
+      "source": "Self-Diagnosis Behavior",
+      "dest": "Diagnosis Status",
+      "existing_reasoning": "Self-recognition increases help-seeking.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The video-quality audit measures content and the review protocol proposes future evidence synthesis. They do not measure the claimed downstream change in awareness, correct diagnosis, service uptake or adherence. Exposure to online information cannot be assumed beneficial.",
+      "recommended_action": "Add a completed audience/outcome study with the proposed age group and endpoint; distinguish recognition from validated diagnosis.",
+      "evidence": [
+        {
+          "source_id": "PDF_107",
+          "exact_excerpt": "A total of 228 eligible videos were analyzed.",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "Video-quality audit cannot estimate awareness, self-diagnosis, formal diagnosis, or treatment adherence effects."
+        }
+      ]
+    },
+    {
+      "edge_id": 33,
+      "source": "Care Coordination",
+      "dest": "Functional Impairment",
+      "existing_reasoning": "Coordinated care can reduce impairment.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "Engagement and continuity findings do not isolate coordination causing reduced adult functional impairment at 32.",
+      "recommended_action": "Add a coordinated-care comparison with functional outcomes and a defined coordination intervention.",
+      "evidence": [
+        {
+          "source_id": "PDF_092",
+          "exact_excerpt": "Access to healthcare services and communication with providers significantly influenced adherence",
+          "location": "PDF page 12 (one-based file page)",
+          "relevance": "Mixed-age synthesis relates provider communication/access to adherence, not proof that generic access creates coordination or diagnosis."
+        }
+      ]
+    },
+    {
+      "edge_id": 34,
+      "source": "Race / Ethnicity",
+      "dest": "Institutional Bias",
+      "existing_reasoning": "Structural inequities influence institutions and healthcare pathways.",
+      "sign": "+",
+      "validation_status": "not_assessable",
+      "observation_from_validation": "Race/ethnicity is categorical, with no ordered coding or reference population. Structural inequity can be studied, but a universal plus/minus slope from an unordered category is undefined.",
+      "recommended_action": "Specify a social/structural exposure or population contrast with a defined comparator; avoid biological interpretation.",
+      "evidence": [
+        {
+          "source_id": "PDF_047",
+          "exact_excerpt": "The study demonstrates that the type of sample and method for assessing ADHD diagnosis are important to consider.",
+          "location": "PDF page 2 (one-based file page)",
+          "relevance": "Diagnostic prevalence differences depend on ascertainment and cannot by themselves validate institutional mechanisms."
+        }
+      ]
+    },
+    {
+      "edge_id": 35,
+      "source": "Institutional Bias",
+      "dest": "Misdiagnosis Rate",
+      "existing_reasoning": "Bias increases diagnostic errors.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No reviewed adult source isolates independently measured institutional bias causing this diagnostic outcome. Pediatric disparities cannot establish an adult mechanism.",
+      "recommended_action": "Define the institutional process and comparator and add adult diagnostic pathway/accuracy evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 36,
+      "source": "Institutional Bias",
+      "dest": "Diagnosis Status",
+      "existing_reasoning": "Bias suppresses equitable diagnosis access.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "No reviewed adult source isolates independently measured institutional bias causing this diagnostic outcome. Pediatric disparities cannot establish an adult mechanism.",
+      "recommended_action": "Define the institutional process and comparator and add adult diagnostic pathway/accuracy evidence.",
+      "evidence": []
+    },
+    {
+      "edge_id": 37,
+      "source": "Diagnostic Criteria Variability",
+      "dest": "Misdiagnosis Rate",
+      "existing_reasoning": "Different interpretations increase misdiagnosis risk.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The corpus discusses diagnostic complexity and heterogeneous recognition, but supplies no independently measured effect of this exposure on diagnostic error for this adult age.",
+      "recommended_action": "Specify the criteria variation or bias measure and compare against a defensible diagnostic reference standard.",
+      "evidence": [
+        {
+          "source_id": "PDF_065",
+          "exact_excerpt": "Longitudinal evidence demonstrates that ADHD trajectories are heterogeneous and non-linear, with fluctuating symptom ex pression and variable relationships to functional impairment.",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "Prevents a universal monotonic age-to-impairment slope or treating diagnosis as a fixed causal exposure."
+        }
+      ]
+    },
+    {
+      "edge_id": 38,
+      "source": "Comorbid Conditions",
+      "dest": "Misdiagnosis Rate",
+      "existing_reasoning": "Comorbidity can obscure accurate ADHD diagnosis.",
+      "sign": "+",
+      "validation_status": "partially_supported",
+      "observation_from_validation": "Adult sources describe overlapping symptoms and diagnostic complexity. This supports a potential diagnostic-obscuring mechanism, not an observed increase in error rates for every comorbidity.",
+      "recommended_action": "Name the overlapping condition and distinguish screening difficulty from verified misdiagnosis.",
+      "evidence": [
+        {
+          "source_id": "PDF_104",
+          "exact_excerpt": "its symptoms frequently overlap with other conditions, such as anxiety, depression, and mood disorders, further complicating its diagnosis",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "Review context for diagnostic overlap, not a measured comorbidity-to-misdiagnosis rate."
+        }
+      ]
+    },
+    {
+      "edge_id": 39,
+      "source": "Misdiagnosis Rate",
+      "dest": "Diagnosis Status",
+      "existing_reasoning": "Misdiagnosis reduces accurate diagnosis.",
+      "sign": "-",
+      "validation_status": "not_assessable",
+      "observation_from_validation": "An aggregate error rate and individual diagnosis status are different levels of measurement. Diagnosis Status is also ambiguous between any label and a correct diagnosis.",
+      "recommended_action": "Define an individual accurate-diagnosis endpoint and avoid mixing it with an aggregate misdiagnosis rate.",
+      "evidence": []
+    },
+    {
+      "edge_id": 40,
+      "source": "Cultural Norms",
+      "dest": "Stigma",
+      "existing_reasoning": "Cultural norms shape stigma.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "Stigma is described as a barrier, but the corpus does not measure a defined cultural-norm exposure causing stigma or prove that stigma is weaker than in earlier decades.",
+      "recommended_action": "Define the norm, community and stigma scale; require comparable longitudinal data for temporal claims.",
+      "evidence": [
+        {
+          "source_id": "PDF_092",
+          "exact_excerpt": "addressing barriers such as stigma, system fragmentation, and cultural mismatch",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "Stigma appears as an engagement barrier; not a controlled exact-age effect or proof all cultural norms increase stigma."
+        }
+      ]
+    },
+    {
+      "edge_id": 41,
+      "source": "Stigma",
+      "dest": "Diagnosis Status",
+      "existing_reasoning": "Stigma reduces willingness to seek diagnosis.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "Adult/mixed-age adherence barriers do not directly establish stigma causing lower initial adult diagnosis. Diagnosis and continuation of an existing treatment are separate endpoints.",
+      "recommended_action": "Add an adult pre-diagnosis help-seeking study with measured stigma and diagnostic follow-through.",
+      "evidence": [
+        {
+          "source_id": "PDF_092",
+          "exact_excerpt": "addressing barriers such as stigma, system fragmentation, and cultural mismatch",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "Stigma appears as an engagement barrier; not a controlled exact-age effect or proof all cultural norms increase stigma."
+        }
+      ]
+    },
+    {
+      "edge_id": 42,
+      "source": "Stigma",
+      "dest": "Access to Mental Health Care",
+      "existing_reasoning": "Stigma suppresses help-seeking.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The supplied synthesis discusses stigma in ongoing engagement, but does not establish its causal effect on initial adult care access or self-recognition.",
+      "recommended_action": "Distinguish self-recognition, help-seeking, appointment access and adherence, and measure the proposed endpoint.",
+      "evidence": [
+        {
+          "source_id": "PDF_092",
+          "exact_excerpt": "addressing barriers such as stigma, system fragmentation, and cultural mismatch",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "Stigma appears as an engagement barrier; not a controlled exact-age effect or proof all cultural norms increase stigma."
+        }
+      ]
+    },
+    {
+      "edge_id": 43,
+      "source": "Gender Bias",
+      "dest": "Misdiagnosis Rate",
+      "existing_reasoning": "Gender stereotypes still increase diagnostic error.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The corpus discusses diagnostic complexity and heterogeneous recognition, but supplies no independently measured effect of this exposure on diagnostic error for this adult age.",
+      "recommended_action": "Specify the criteria variation or bias measure and compare against a defensible diagnostic reference standard.",
+      "evidence": [
+        {
+          "source_id": "PDF_065",
+          "exact_excerpt": "Longitudinal evidence demonstrates that ADHD trajectories are heterogeneous and non-linear, with fluctuating symptom ex pression and variable relationships to functional impairment.",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "Prevents a universal monotonic age-to-impairment slope or treating diagnosis as a fixed causal exposure."
+        }
+      ]
+    },
+    {
+      "edge_id": 44,
+      "source": "Diagnosis Status",
+      "dest": "Treatment Access",
+      "existing_reasoning": "By 2026, adult diagnosis commonly opens treatment pathways.",
+      "sign": "+",
+      "validation_status": "partially_supported",
+      "observation_from_validation": "Adult medication and CBT studies concern clinically identified ADHD populations and describe appropriate treatment. This supports clinical pathway context, not a causal estimate of how diagnosis changes access.",
+      "recommended_action": "Describe a treatment-eligibility pathway with measured barriers; do not treat diagnosis as guaranteed access.",
+      "evidence": [
+        {
+          "source_id": "PDF_043",
+          "exact_excerpt": "In adults, amphetamines showed a plateau above approximatively 50 mg/day, whereas methylphenidate",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "Adult RCT synthesis supports drug/dose-specific efficacy; not the graph strength or an exact-age dose recommendation."
+        },
+        {
+          "source_id": "PDF_018",
+          "exact_excerpt": "Analysis of 14 RCTs selected from 949 identified records showed significant benefits of CBT for core ADHD symptoms (SMD = −0.45, P < 0.00001)",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "Supports adult ADHD-specific CBT effects, not every behavioral intervention or an exact-age estimate."
+        }
+      ]
+    },
+    {
+      "edge_id": 45,
+      "source": "Access to Mental Health Care",
+      "dest": "Treatment Access",
+      "existing_reasoning": "Mental healthcare access strongly improves treatment availability.",
+      "sign": "+",
+      "validation_status": "partially_supported",
+      "observation_from_validation": "The mixed-age review links healthcare access/provider communication to treatment continuity. This supports a related care pathway but not an isolated adult causal access effect.",
+      "recommended_action": "Distinguish initial availability, treatment initiation and continuity; qualify the age-specific causal claim.",
+      "evidence": [
+        {
+          "source_id": "PDF_092",
+          "exact_excerpt": "Access to healthcare services and communication with providers significantly influenced adherence",
+          "location": "PDF page 12 (one-based file page)",
+          "relevance": "Mixed-age synthesis relates provider communication/access to adherence, not proof that generic access creates coordination or diagnosis."
+        }
+      ]
+    },
+    {
+      "edge_id": 46,
+      "source": "Provider Availability",
+      "dest": "Treatment Access",
+      "existing_reasoning": "Provider supply improves adult treatment access.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The adult/mixed-age review addresses provider communication and continuity, not an independently measured supply-to-access effect.",
+      "recommended_action": "Add adult appointment-capacity and treatment-initiation data.",
+      "evidence": [
+        {
+          "source_id": "PDF_092",
+          "exact_excerpt": "Access to healthcare services and communication with providers significantly influenced adherence",
+          "location": "PDF page 12 (one-based file page)",
+          "relevance": "Mixed-age synthesis relates provider communication/access to adherence, not proof that generic access creates coordination or diagnosis."
+        }
+      ]
+    },
+    {
+      "edge_id": 47,
+      "source": "Telehealth Access",
+      "dest": "Telehealth Treatment",
+      "existing_reasoning": "Telehealth directly improves remote treatment availability.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The supplied digital registry review identifies ongoing videoconferencing trials and the pediatric co-design paper identifies needs. Neither supplies completed evidence that telehealth availability increased access or actual treatment use for this persona.",
+      "recommended_action": "Add a completed age-relevant telehealth service evaluation; distinguish availability, uptake and clinical benefit.",
+      "evidence": [
+        {
+          "source_id": "PDF_067",
+          "exact_excerpt": "Of 149 identified trials, 35 ongoing studies met inclusion criteria.",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "Planned digital/telehealth trials do not establish completed access or clinical-effect evidence."
+        }
+      ]
+    },
+    {
+      "edge_id": 48,
+      "source": "Telehealth Treatment",
+      "dest": "Treatment Access",
+      "existing_reasoning": "Telehealth expands practical treatment access.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The supplied digital registry review identifies ongoing videoconferencing trials and the pediatric co-design paper identifies needs. Neither supplies completed evidence that telehealth availability increased access or actual treatment use for this persona.",
+      "recommended_action": "Add a completed age-relevant telehealth service evaluation; distinguish availability, uptake and clinical benefit.",
+      "evidence": [
+        {
+          "source_id": "PDF_067",
+          "exact_excerpt": "Of 149 identified trials, 35 ongoing studies met inclusion criteria.",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "Planned digital/telehealth trials do not establish completed access or clinical-effect evidence."
+        }
+      ]
+    },
+    {
+      "edge_id": 49,
+      "source": "Socioeconomic Status",
+      "dest": "Treatment Access",
+      "existing_reasoning": "Higher SES improves treatment access and continuity.",
+      "sign": "+",
+      "validation_status": "partially_supported",
+      "observation_from_validation": "The mixed-age review links socioeconomic and insurance barriers with discontinuation. This supports a qualified relationship with continuity, but not a universal effect on initial treatment availability.",
+      "recommended_action": "Specify income/insurance and initiation versus persistence; avoid an unvalidated exact-age strength.",
+      "evidence": [
+        {
+          "source_id": "PDF_092",
+          "exact_excerpt": "Low socioeconomic status households or uninsured households were more likely to discontinue treatment due to cost concerns.",
+          "location": "PDF page 13 (one-based file page)",
+          "relevance": "Mixed-age review links financial resources to continuity; initial evaluation access remains a distinct outcome."
+        }
+      ]
+    },
+    {
+      "edge_id": 50,
+      "source": "Self-Diagnosis Behavior",
+      "dest": "Treatment Access",
+      "existing_reasoning": "Self-recognition increases treatment seeking.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The video-quality audit measures content and the review protocol proposes future evidence synthesis. They do not measure the claimed downstream change in awareness, correct diagnosis, service uptake or adherence. Exposure to online information cannot be assumed beneficial.",
+      "recommended_action": "Add a completed audience/outcome study with the proposed age group and endpoint; distinguish recognition from validated diagnosis.",
+      "evidence": [
+        {
+          "source_id": "PDF_107",
+          "exact_excerpt": "A total of 228 eligible videos were analyzed.",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "Video-quality audit cannot estimate awareness, self-diagnosis, formal diagnosis, or treatment adherence effects."
+        }
+      ]
+    },
+    {
+      "edge_id": 51,
+      "source": "Care Coordination",
+      "dest": "Treatment Access",
+      "existing_reasoning": "Coordinated care improves treatment continuity.",
+      "sign": "+",
+      "validation_status": "partially_supported",
+      "observation_from_validation": "The adherence review describes continuity problems when providers change and the importance of provider communication. It supports a related ongoing-care pathway, not a controlled effect on initial access at this age.",
+      "recommended_action": "Specify continuity or treatment persistence as the outcome and label causal effects uncertain.",
+      "evidence": [
+        {
+          "source_id": "PDF_092",
+          "exact_excerpt": "Access to healthcare services and communication with providers significantly influenced adherence",
+          "location": "PDF page 12 (one-based file page)",
+          "relevance": "Mixed-age synthesis relates provider communication/access to adherence, not proof that generic access creates coordination or diagnosis."
+        }
+      ]
+    },
+    {
+      "edge_id": 52,
+      "source": "Treatment Access",
+      "dest": "Medication Treatment",
+      "existing_reasoning": "Treatment access makes medication more likely.",
+      "sign": "+",
+      "validation_status": "partially_supported",
+      "observation_from_validation": "Adult RCT/meta-analytic evidence establishes treatments used in diagnosed ADHD populations, not access as an experimentally isolated determinant of uptake.",
+      "recommended_action": "Describe access as enabling a treatment option; separately measure offered treatment and actual initiation.",
+      "evidence": [
+        {
+          "source_id": "PDF_043",
+          "exact_excerpt": "In adults, amphetamines showed a plateau above approximatively 50 mg/day, whereas methylphenidate",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "Adult RCT synthesis supports drug/dose-specific efficacy; not the graph strength or an exact-age dose recommendation."
+        }
+      ]
+    },
+    {
+      "edge_id": 53,
+      "source": "Treatment Access",
+      "dest": "Behavioral Therapy",
+      "existing_reasoning": "Treatment access supports behavioral therapy.",
+      "sign": "+",
+      "validation_status": "partially_supported",
+      "observation_from_validation": "Adult RCT/meta-analytic evidence establishes treatments used in diagnosed ADHD populations, not access as an experimentally isolated determinant of uptake.",
+      "recommended_action": "Describe access as enabling a treatment option; separately measure offered treatment and actual initiation.",
+      "evidence": [
+        {
+          "source_id": "PDF_018",
+          "exact_excerpt": "Analysis of 14 RCTs selected from 949 identified records showed significant benefits of CBT for core ADHD symptoms (SMD = −0.45, P < 0.00001)",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "Supports adult ADHD-specific CBT effects, not every behavioral intervention or an exact-age estimate."
+        }
+      ]
+    },
+    {
+      "edge_id": 54,
+      "source": "Treatment Access",
+      "dest": "Workplace Support",
+      "existing_reasoning": "Treatment access can support workplace accommodations.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "Workplace adjustment associations do not test whether healthcare treatment access leads to employer accommodations.",
+      "recommended_action": "Model employer disclosure, eligibility and accommodation delivery separately and add direct pathway evidence.",
+      "evidence": [
+        {
+          "source_id": "PDF_045",
+          "exact_excerpt": "workplace adjustments equivalent to reasonable accommodations are associated with a lower risk of workplace maladjustment and improved workplace adaptation among employees with high ASD or ADHD trait levels",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "Supports qualified adult workplace-support association, not randomized effects, general functional recovery or remote-work benefit."
+        }
+      ]
+    },
+    {
+      "edge_id": 55,
+      "source": "Treatment Access",
+      "dest": "Digital Therapeutics",
+      "existing_reasoning": "Modern care may include digital ADHD tools.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The completed digital efficacy syntheses are pediatric, while the registry review describes ongoing adult studies. Neither establishes adult treatment access causing digital-therapy uptake.",
+      "recommended_action": "Add a completed adult adoption/service study and define which digital treatment is offered.",
+      "evidence": [
+        {
+          "source_id": "PDF_067",
+          "exact_excerpt": "Of 149 identified trials, 35 ongoing studies met inclusion criteria.",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "Planned digital/telehealth trials do not establish completed access or clinical-effect evidence."
+        }
+      ]
+    },
+    {
+      "edge_id": 56,
+      "source": "Medication Treatment",
+      "dest": "Symptom Severity",
+      "existing_reasoning": "Medication can reduce adult symptom severity.",
+      "sign": "-",
+      "validation_status": "partially_supported",
+      "observation_from_validation": "Adult double-blind RCT synthesis supports drug/dose-specific symptom efficacy. It does not provide a separate age-32 or age-45 effect or establish the graph’s numerical strength.",
+      "recommended_action": "Retain a qualified negative pathway with drug, outcome and age-band scope explicit.",
+      "evidence": [
+        {
+          "source_id": "PDF_043",
+          "exact_excerpt": "In adults, amphetamines showed a plateau above approximatively 50 mg/day, whereas methylphenidate",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "Adult RCT synthesis supports drug/dose-specific efficacy; not the graph strength or an exact-age dose recommendation."
+        }
+      ]
+    },
+    {
+      "edge_id": 57,
+      "source": "Medication Treatment",
+      "dest": "Functional Impairment",
+      "existing_reasoning": "Medication may reduce adult impairment.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "Adult symptom efficacy cannot substitute for real-world functioning. The supplied stimulant observational study found no adjusted employment benefit and greater social limitations in treated participants; confounding prevents interpreting those associations as harm.",
+      "recommended_action": "Add functional-outcome RCTs or robust longitudinal analyses; do not infer impairment reduction from symptom efficacy alone.",
+      "evidence": [
+        {
+          "source_id": "PDF_104",
+          "exact_excerpt": "No significant differences were found in the employment outcomes between the two groups in adjusted models.",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "No demonstrated adjusted employment benefit in this adult observational study; not proof of medication inefficacy for all functional outcomes."
+        },
+        {
+          "source_id": "PDF_104",
+          "exact_excerpt": "Stimulant-treated adults had higher odds of social limitations (OR = 3.16 [1.50, 6.69])",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "Confounding by indication is possible; this association cannot be treated as causal medication harm."
+        }
+      ]
+    },
+    {
+      "edge_id": 58,
+      "source": "Behavioral Therapy",
+      "dest": "Symptom Severity",
+      "existing_reasoning": "Behavioral therapy can modestly reduce symptom expression.",
+      "sign": "-",
+      "validation_status": "partially_supported",
+      "observation_from_validation": "Fourteen adult CBT RCTs show symptom improvement. This supports ADHD-specific CBT, not every behavioral therapy or a separate exact-age benefit.",
+      "recommended_action": "Name adult ADHD CBT and distinguish symptom efficacy from functional or quality-of-life outcomes.",
+      "evidence": [
+        {
+          "source_id": "PDF_018",
+          "exact_excerpt": "Analysis of 14 RCTs selected from 949 identified records showed significant benefits of CBT for core ADHD symptoms (SMD = −0.45, P < 0.00001)",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "Supports adult ADHD-specific CBT effects, not every behavioral intervention or an exact-age estimate."
+        }
+      ]
+    },
+    {
+      "edge_id": 59,
+      "source": "Behavioral Therapy",
+      "dest": "Functional Impairment",
+      "existing_reasoning": "Behavioral therapy reduces practical impairment.",
+      "sign": "-",
+      "validation_status": "partially_supported",
+      "observation_from_validation": "Adult CBT meta-analysis reports functional improvement, including occupational domains. Mixed study designs, risk of bias, outcome heterogeneity and absence of an exact-age analysis limit the generic behavioral-therapy claim.",
+      "recommended_action": "Specify adult ADHD CBT and the functional endpoint; qualify certainty and preserve the distinction from quality of life.",
+      "evidence": [
+        {
+          "source_id": "PDF_004",
+          "exact_excerpt": "CBT produced moderate effects on global functioning at post-treatment (SMD = 0.47) that increased at follow-up (SMD = 0.67).",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "Adult CBT functional benefit; meta-analysis mixes designs and does not isolate age 32 or 45."
+        },
+        {
+          "source_id": "PDF_004",
+          "exact_excerpt": "The dissociation between symptom change, QoL, and functioning suggests that functional gains may not be fully explained by symptom reduction alone, although the mechanisms underlying these effects remain unclear.",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "Functional impairment and quality of life are related but distinct; symptom or function improvement cannot automatically prove a direct QoL edge."
+        }
+      ]
+    },
+    {
+      "edge_id": 60,
+      "source": "Workplace Support",
+      "dest": "Functional Impairment",
+      "existing_reasoning": "Workplace support reduces occupational impairment.",
+      "sign": "-",
+      "validation_status": "partially_supported",
+      "observation_from_validation": "Among Japanese workers aged 20–59, workplace adjustments were associated with better adaptation, including high ADHD-trait groups. Cross-sectional selection, trait-based ascertainment and the narrower workplace endpoint limit causal interpretation.",
+      "recommended_action": "Retain a qualified workplace-adaptation association; specify the adjustment and avoid generalizing to all impairment.",
+      "evidence": [
+        {
+          "source_id": "PDF_045",
+          "exact_excerpt": "workplace adjustments equivalent to reasonable accommodations are associated with a lower risk of workplace maladjustment and improved workplace adaptation among employees with high ASD or ADHD trait levels",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "Supports qualified adult workplace-support association, not randomized effects, general functional recovery or remote-work benefit."
+        }
+      ]
+    },
+    {
+      "edge_id": 61,
+      "source": "Digital Therapeutics",
+      "dest": "Symptom Severity",
+      "existing_reasoning": "Digital tools may modestly improve attention and structure.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The completed efficacy syntheses reviewed are pediatric. Ongoing adult digital trials and general adherence tools do not establish core symptom benefit at this adult age.",
+      "recommended_action": "Add completed adult digital-therapy symptom trials and define the modality.",
+      "evidence": [
+        {
+          "source_id": "PDF_067",
+          "exact_excerpt": "Of 149 identified trials, 35 ongoing studies met inclusion criteria.",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "Planned digital/telehealth trials do not establish completed access or clinical-effect evidence."
+        }
+      ]
+    },
+    {
+      "edge_id": 62,
+      "source": "Digital Therapeutics",
+      "dest": "Treatment Adherence",
+      "existing_reasoning": "Digital tracking and reminders can improve adherence.",
+      "sign": "+",
+      "validation_status": "partially_supported",
+      "observation_from_validation": "The mixed-age adherence synthesis links specific mobile reminders and monitoring programs with improved adherence. Such tools are narrower than digital therapeutics as a whole and the review does not provide an isolated exact-age effect.",
+      "recommended_action": "Rename the exposure as reminder/monitoring support and specify medication adherence and the relevant age range.",
+      "evidence": [
+        {
+          "source_id": "PDF_092",
+          "exact_excerpt": "digital interventions and mobile-based reminders, psychoeducational and behavioral approaches, multimodal and long-term interventions, and consent-based strategies were all linked to improved adherence.",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "Supports specified reminder/monitoring interventions; mixed ages and designs prevent universal age-specific digital-therapy effects."
+        }
+      ]
+    },
+    {
+      "edge_id": 63,
+      "source": "Treatment Adherence",
+      "dest": "Medication Treatment",
+      "existing_reasoning": "Adherence increases medication benefit.",
+      "sign": "+",
+      "validation_status": "not_assessable",
+      "observation_from_validation": "The reasoning describes better treatment benefit or effect, but the destination represents receipt of treatment. Adherence follows prescription/enrollment and can alter exposure, so the current direction and endpoint are ambiguous.",
+      "recommended_action": "Change the endpoint to delivered dose, treatment exposure or clinical response and define the time ordering.",
+      "evidence": []
+    },
+    {
+      "edge_id": 64,
+      "source": "Treatment Adherence",
+      "dest": "Behavioral Therapy",
+      "existing_reasoning": "Participation improves behavioral therapy effect.",
+      "sign": "+",
+      "validation_status": "not_assessable",
+      "observation_from_validation": "The reasoning describes better treatment benefit or effect, but the destination represents receipt of treatment. Adherence follows prescription/enrollment and can alter exposure, so the current direction and endpoint are ambiguous.",
+      "recommended_action": "Change the endpoint to delivered dose, treatment exposure or clinical response and define the time ordering.",
+      "evidence": []
+    },
+    {
+      "edge_id": 65,
+      "source": "Online Health Information",
+      "dest": "Treatment Adherence",
+      "existing_reasoning": "Online information can improve understanding and follow-up.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "The video-quality audit measures content and the review protocol proposes future evidence synthesis. They do not measure the claimed downstream change in awareness, correct diagnosis, service uptake or adherence. Exposure to online information cannot be assumed beneficial.",
+      "recommended_action": "Add a completed audience/outcome study with the proposed age group and endpoint; distinguish recognition from validated diagnosis.",
+      "evidence": [
+        {
+          "source_id": "PDF_107",
+          "exact_excerpt": "A total of 228 eligible videos were analyzed.",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "Video-quality audit cannot estimate awareness, self-diagnosis, formal diagnosis, or treatment adherence effects."
+        }
+      ]
+    },
+    {
+      "edge_id": 66,
+      "source": "Treatment Dependency",
+      "dest": "Treatment Access",
+      "existing_reasoning": "Diagnosis often leads into structured treatment pathways.",
+      "sign": "+",
+      "validation_status": "not_assessable",
+      "observation_from_validation": "Treatment Dependency is undefined, while the reasoning refers to diagnosis opening pathways or treatment improving function. Neither defines dependency or establishes its signed effect.",
+      "recommended_action": "Replace the source with diagnosis, treatment exposure or a defined dependency construct matching the intended mechanism.",
+      "evidence": []
+    },
+    {
+      "edge_id": 67,
+      "source": "Stigma",
+      "dest": "Treatment Adherence",
+      "existing_reasoning": "Stigma can reduce treatment continuation.",
+      "sign": "-",
+      "validation_status": "partially_supported",
+      "observation_from_validation": "The mixed-age review describes stigma as an engagement barrier. This supports the qualitative mechanism, with heterogeneous measures and no isolated exact-age causal estimate.",
+      "recommended_action": "Retain as a qualified engagement barrier with a specified stigma and adherence measure.",
+      "evidence": [
+        {
+          "source_id": "PDF_092",
+          "exact_excerpt": "addressing barriers such as stigma, system fragmentation, and cultural mismatch",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "Stigma appears as an engagement barrier; not a controlled exact-age effect or proof all cultural norms increase stigma."
+        }
+      ]
+    },
+    {
+      "edge_id": 68,
+      "source": "Medication Treatment",
+      "dest": "Treatment Side Effects",
+      "existing_reasoning": "Medication side effects affect tolerability.",
+      "sign": "+",
+      "validation_status": "supported",
+      "observation_from_validation": "The randomized medication synthesis reports treatment-emergent adverse-event discontinuation across pediatric and adult medication groups. This supports medications causing possible side effects; type and risk depend on drug and dose.",
+      "recommended_action": "Retain the positive pathway as possible treatment-emergent adverse effects; do not imply every patient experiences them or validate the original strength.",
+      "evidence": [
+        {
+          "source_id": "PDF_043",
+          "exact_excerpt": "Dose-dependent increases in discontinuation probability due to adverse events were observed for amphetamines",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "Controlled treatment-emergent adverse-event evidence supports the medication-to-side-effects direction across pediatric/adult groups."
+        }
+      ]
+    },
+    {
+      "edge_id": 69,
+      "source": "Treatment Side Effects",
+      "dest": "Treatment Adherence",
+      "existing_reasoning": "Side effects can reduce adherence.",
+      "sign": "-",
+      "validation_status": "partially_supported",
+      "observation_from_validation": "The adherence review identifies adverse effects as a major barrier, and medication RCTs measure adverse-event discontinuation. This supports a tolerability-to-persistence pathway but not a universal exact-age adherence effect.",
+      "recommended_action": "Specify adverse-event-related discontinuation or measured persistence and retain dose/drug qualifications.",
+      "evidence": [
+        {
+          "source_id": "PDF_092",
+          "exact_excerpt": "Adverse effects and side effects emerged as a major adherence barrier, with the majority of patients missing doses or stopping medication to avoid physical or mental distress",
+          "location": "PDF page 10 (one-based file page)",
+          "relevance": "Mixed-age review describes adverse effects as an adherence barrier."
+        },
+        {
+          "source_id": "PDF_043",
+          "exact_excerpt": "Dose-dependent increases in discontinuation probability due to adverse events were observed for amphetamines",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "Controlled treatment-emergent adverse-event evidence supports the medication-to-side-effects direction across pediatric/adult groups."
+        }
+      ]
+    },
+    {
+      "edge_id": 70,
+      "source": "Treatment Side Effects",
+      "dest": "Quality of Life",
+      "existing_reasoning": "Side effects can slightly reduce quality of life.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "Adverse effects and quality of life are documented separately. The corpus does not isolate adverse effects as the cause of a net quality-of-life decrement for this persona.",
+      "recommended_action": "Add longitudinal adverse-event and quality-of-life measurements that separate symptom benefits from treatment burden.",
+      "evidence": [
+        {
+          "source_id": "PDF_043",
+          "exact_excerpt": "Dose-dependent increases in discontinuation probability due to adverse events were observed for amphetamines",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "Controlled treatment-emergent adverse-event evidence supports the medication-to-side-effects direction across pediatric/adult groups."
+        }
+      ]
+    },
+    {
+      "edge_id": 71,
+      "source": "Overdiagnosis Pressure",
+      "dest": "Diagnosis Status",
+      "existing_reasoning": "Overdiagnosis discourse affects diagnosis patterns.",
+      "sign": "+",
+      "validation_status": "not_assessable",
+      "observation_from_validation": "Visible discourse about overdiagnosis does not operationalize a pressure exposure. More diagnoses, greater awareness, improved detection and inappropriate diagnosis are different processes.",
+      "recommended_action": "Define a measurable diagnostic-pressure construct and distinguish ascertainment from diagnostic error.",
+      "evidence": []
+    },
+    {
+      "edge_id": 72,
+      "source": "Diagnosis Status",
+      "dest": "Functional Impairment",
+      "existing_reasoning": "Diagnosis can reduce impairment through treatment and support.",
+      "sign": "-",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "Adult CBT/medication studies concern treatment and diagnosed groups, not diagnosis alone. Improvement after care cannot identify diagnosis as the cause; the long-term follow-up also found no added CBT quality-of-life benefit.",
+      "recommended_action": "Represent mediated care pathways explicitly and evaluate diagnosis timing separately from treatment and baseline severity.",
+      "evidence": [
+        {
+          "source_id": "PDF_004",
+          "exact_excerpt": "CBT produced moderate effects on global functioning at post-treatment (SMD = 0.47) that increased at follow-up (SMD = 0.67).",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "Adult CBT functional benefit; meta-analysis mixes designs and does not isolate age 32 or 45."
+        },
+        {
+          "source_id": "PDF_090",
+          "exact_excerpt": "No significant between-group differences were found in the proportion of participants achieving clinically meaningful QoL improvements over time.",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "Long-term CBT follow-up found no between-group QoL benefit; this does not test diagnosis alone."
+        },
+        {
+          "source_id": "PDF_093",
+          "exact_excerpt": "both groups showed substantial clinical burden.",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "Adult groups around the two persona ages have comorbidity/impairment; cross-sectional diagnosis-age groups do not identify diagnostic benefits or cumulative age effects."
+        }
+      ]
+    },
+    {
+      "edge_id": 73,
+      "source": "Functional Impairment",
+      "dest": "Quality of Life",
+      "existing_reasoning": "Impairment lowers adult quality of life.",
+      "sign": "-",
+      "validation_status": "partially_supported",
+      "observation_from_validation": "Adult functional difficulties and quality of life are clinically related, but CBT evidence shows they can change differently. No independent causal impairment-to-quality-of-life effect at the persona age is established.",
+      "recommended_action": "Retain a qualified clinical association and measure functioning and quality of life separately.",
+      "evidence": [
+        {
+          "source_id": "PDF_004",
+          "exact_excerpt": "The dissociation between symptom change, QoL, and functioning suggests that functional gains may not be fully explained by symptom reduction alone, although the mechanisms underlying these effects remain unclear.",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "Functional impairment and quality of life are related but distinct; symptom or function improvement cannot automatically prove a direct QoL edge."
+        }
+      ]
+    },
+    {
+      "edge_id": 74,
+      "source": "Diagnosis Status",
+      "dest": "Quality of Life",
+      "existing_reasoning": "Diagnosis can improve quality of life through support and treatment.",
+      "sign": "+",
+      "validation_status": "insufficient_evidence",
+      "observation_from_validation": "Adult CBT/medication studies concern treatment and diagnosed groups, not diagnosis alone. Improvement after care cannot identify diagnosis as the cause; the long-term follow-up also found no added CBT quality-of-life benefit.",
+      "recommended_action": "Represent mediated care pathways explicitly and evaluate diagnosis timing separately from treatment and baseline severity.",
+      "evidence": [
+        {
+          "source_id": "PDF_004",
+          "exact_excerpt": "CBT produced moderate effects on global functioning at post-treatment (SMD = 0.47) that increased at follow-up (SMD = 0.67).",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "Adult CBT functional benefit; meta-analysis mixes designs and does not isolate age 32 or 45."
+        },
+        {
+          "source_id": "PDF_090",
+          "exact_excerpt": "No significant between-group differences were found in the proportion of participants achieving clinically meaningful QoL improvements over time.",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "Long-term CBT follow-up found no between-group QoL benefit; this does not test diagnosis alone."
+        },
+        {
+          "source_id": "PDF_093",
+          "exact_excerpt": "both groups showed substantial clinical burden.",
+          "location": "PDF page 1 (one-based file page)",
+          "relevance": "Adult groups around the two persona ages have comorbidity/impairment; cross-sectional diagnosis-age groups do not identify diagnostic benefits or cumulative age effects."
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "source_id": "PDF_001",
+      "title": "The effectiveness and feasibility of the new Forest parenting programme for Chinese children with attention-deficit/hyperactivity disorder and their families",
+      "local_pdf": "full_texts/1-s2.0-S0001691826002933-main.pdf",
+      "sha256": "8fc13d7191fd0f644ef2f6f1d30f74dadced6a724dc24e220877ee36f0ecb759",
+      "duplicate_of": null,
+      "page_count": 12,
+      "evidence_scope": "Nonrandomized Chinese parent-training trial, 30 families; parent-reported outcomes, not a universal behavioral-therapy effect.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_002",
+      "title": "Educational robotics and augmented reality for improving social skills of children with ADHD: A scoping review",
+      "local_pdf": "full_texts/1-s2.0-S0001691826006839-main.pdf",
+      "sha256": "85413ec030801560f43a9be4aa89fdb3028d34e4dc67e2cdabaca08ff511d712",
+      "duplicate_of": null,
+      "page_count": 9,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_003",
+      "title": "The relationship between ADHD, OCD, and problematic social media use",
+      "local_pdf": "full_texts/1-s2.0-S0001691826009352-main.pdf",
+      "sha256": "b694ea25820cd89cf88ed7e3ad872aecc12f3c1d03354cfc643b6c33779c3dcc",
+      "duplicate_of": null,
+      "page_count": 7,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_004",
+      "title": "Cognitive behavioral therapy effects on global functioning, domain-specific functioning, and quality of life in adult ADHD: A comprehensive meta-analysis",
+      "local_pdf": "full_texts/1-s2.0-S0005796726000781-main.pdf",
+      "sha256": "b88bfea13eebb86c0469c0a0dcbd20ee529763b496ef7027d2c19200dabdf58c",
+      "duplicate_of": null,
+      "page_count": 18,
+      "evidence_scope": "Adult CBT meta-analysis, 70 studies including 38 RCTs; functioning and quality of life are distinct endpoints; no isolated age-32 or age-45 estimate.",
+      "cited_in_this_graph": true
+    },
+    {
+      "source_id": "PDF_005",
+      "title": "Circulating MicroRNAs in Cord Blood to Predict Attention-Deficit/Hyperactivity Disorder Diagnosis",
+      "local_pdf": "full_texts/1-s2.0-S0006322325015306-main.pdf",
+      "sha256": "b4df3914d6b7755ff41bd634ba4350365c9a260e72bb20dc6b96a13171a3bd0e",
+      "duplicate_of": null,
+      "page_count": 10,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_006",
+      "title": "Association of ADHD/ASD traits with premenstrual dysphoric disorder among full-time employed women in Japan: A cross-sectional study",
+      "local_pdf": "full_texts/1-s2.0-S0022395625006776.pdf",
+      "sha256": "4fe395f944e5bb9b49558e59efe1f721460d8a152fc3414adfb4a2350fa106f0",
+      "duplicate_of": null,
+      "page_count": 7,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_007",
+      "title": "Maternal and paternal smoking during pregnancy and the risk of ADHD in offspring: An umbrella review of systematic reviews and meta-analyses",
+      "local_pdf": "full_texts/1-s2.0-S0022395625007563.pdf",
+      "sha256": "62952ebe398faaecaf548962d3ed254fe53e3e0f2bee4ec5ed0d6a265e49c547",
+      "duplicate_of": null,
+      "page_count": 6,
+      "evidence_scope": "Umbrella review of prenatal smoking and offspring ADHD risk; familial confounding remains, and diagnosis risk differs from current symptom severity.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_008",
+      "title": "A systematic review of transcranial direct current stimulation (tDCS) for adults with attention deficit/hyperactivity disorder (ADHD)",
+      "local_pdf": "full_texts/1-s2.0-S0022395626000300.pdf",
+      "sha256": "53b9b4ed5efc0c7541ad1886b6f73d6d137ed1efb5161791c1a120ef21d9b605",
+      "duplicate_of": null,
+      "page_count": 11,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_009",
+      "title": "Gut-brain axis in Attention Deficit Hyperactivity Disorder (ADHD): A narrative review of the links between gut microbiota and ADHD pathophysiology",
+      "local_pdf": "full_texts/1-s2.0-S0022395626000506.pdf",
+      "sha256": "4def5a6cff787109134d95316a5fe690f9aef883c102e9ed53c739609348b845",
+      "duplicate_of": null,
+      "page_count": 13,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_010",
+      "title": "Optimizing exercise prescription parameters for ADHD in children: A systematic review and meta-analysis",
+      "local_pdf": "full_texts/1-s2.0-S0033350626001411.pdf",
+      "sha256": "1dca21b384dbf7ded4737d11552d9f0dc6eadb3b247e820441b4c59708be10f5",
+      "duplicate_of": null,
+      "page_count": 11,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_011",
+      "title": "Comprehensive overview of triclosan neurotoxicity and construction of adverse outcome pathways using a systems toxicology approach: Triclosan-induced attention-deficit hyperactivity disorder as an example",
+      "local_pdf": "full_texts/1-s2.0-S0147651326004987-main.pdf",
+      "sha256": "9b6d8e741d60a2b504acf46c5b9476392eda86ba61c14814db971ab1aacf7239",
+      "duplicate_of": null,
+      "page_count": 20,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_012",
+      "title": "A systematic review on the association between executive function and emotional regulation in autism, ADHD, and autism/ADHD",
+      "local_pdf": "full_texts/1-s2.0-S0149763426000254-main.pdf",
+      "sha256": "59ea5d725888a39ba8e41c4c1f1177aaa8ab4093dc683997937758e6525a177e",
+      "duplicate_of": null,
+      "page_count": 16,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_013",
+      "title": "Systematic review of virtual reality therapy in the treatment of visual dysfunction in children with ADHD and dyslexia",
+      "local_pdf": "full_texts/1-s2.0-S0149763426001806-main.pdf",
+      "sha256": "b43eb966c6f7d1d2740f7f3144fa1e860ef774a2576437a97211405c97f60445",
+      "duplicate_of": null,
+      "page_count": 16,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_014",
+      "title": "Independent and joint associations of physical activity and sleep with ADHD in a population-based sample of children: A cross-sectional study",
+      "local_pdf": "full_texts/1-s2.0-S0163834326000253.pdf",
+      "sha256": "905737fb6e059d0c9545bea278fa16f90a3e0dc7657f4e1f402306d54b7bb932",
+      "duplicate_of": null,
+      "page_count": 10,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_015",
+      "title": "Meta-analysis of the association between prenatal antibiotic exposure and risk of childhood attention-deficit/hyperactivity disorder",
+      "local_pdf": "full_texts/1-s2.0-S0165032725016106-main.pdf",
+      "sha256": "754c9337378b61baeff6b289532b09471a7083f0f5fb3258b5f082beb42bfb86",
+      "duplicate_of": null,
+      "page_count": 10,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_016",
+      "title": "Alterations in gray matter volume and cortical thickness in medication-naive offspring with ADHD and a parental history of bipolar disorder",
+      "local_pdf": "full_texts/1-s2.0-S0165032725017641-main.pdf",
+      "sha256": "3373a980cd97778e2334697afc0bdc1db12193e45b7382b307b36034a94ec61c",
+      "duplicate_of": null,
+      "page_count": 7,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_017",
+      "title": "The effects of computerized executive function training on the youth with ADHD: A systematic review and meta-analysis",
+      "local_pdf": "full_texts/1-s2.0-S016503272502172X-main.pdf",
+      "sha256": "41eaf68ebcde87f7176c6522ac928e17c6f66bd163b8b0529cf7e850160610bb",
+      "duplicate_of": null,
+      "page_count": 10,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_018",
+      "title": "A meta-analysis of the intervention effect of cognitive behavioral therapy on adult ADHD",
+      "local_pdf": "full_texts/1-s2.0-S0165032725025492-main.pdf",
+      "sha256": "365b02225b379d55d3ec284269c588569a787b51e73d44ac2ec6b75579dca85f",
+      "duplicate_of": null,
+      "page_count": 17,
+      "evidence_scope": "Meta-analysis of 14 adult CBT RCTs; intervention-specific results, without a separate age-32 or age-45 effect.",
+      "cited_in_this_graph": true
+    },
+    {
+      "source_id": "PDF_019",
+      "title": "Development and multi-center validation of a school-home integrated machine learning model for early screening of attention-deficit/hyperactivity disorder in school-aged children",
+      "local_pdf": "full_texts/1-s2.0-S0165032726000984-main.pdf",
+      "sha256": "6594b9d70ca7cf6524ed3ddd71b194fceae39cc0c37534832a5466b4cd947ddf",
+      "duplicate_of": null,
+      "page_count": 10,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_020",
+      "title": "The quest to find genuine adult ADHD: Navigating diagnostic challenges of malingering - a review",
+      "local_pdf": "full_texts/1-s2.0-S0165032726009894-main.pdf",
+      "sha256": "eb97e6ee7889336ad1a0a1a57c68dde2d19888b38c719d198cdd7e07d3c4c7e4",
+      "duplicate_of": null,
+      "page_count": 20,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_021",
+      "title": "Effects of video game intervention on attention deficit in children with ADHD: A systematic review and meta-analysis",
+      "local_pdf": "full_texts/1-s2.0-S0165178125005293-main.pdf",
+      "sha256": "40d48ead3b55e4e3124763a59d049e11a3b8b597cc43fbc9c797c011aabccf3b",
+      "duplicate_of": null,
+      "page_count": 6,
+      "evidence_scope": "Ten pediatric video-game RCTs; small inattention benefit judged not clinically meaningful; not generic digital tools or adult evidence.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_022",
+      "title": "Non-suicidal self-injury in individuals with attention-deficit/hyperactivity disorder: A systematic review and Meta-analysis with Age- and Sex-stratified findings",
+      "local_pdf": "full_texts/1-s2.0-S0165178126000363-main.pdf",
+      "sha256": "41ab447540521e8d41f5684171c0af5140016a380174b2999cbb14486b0014fd",
+      "duplicate_of": null,
+      "page_count": 10,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_023",
+      "title": "Prevalence and moderators of personality disorders in adults with ADHD: A meta-analysis",
+      "local_pdf": "full_texts/1-s2.0-S0165178126001460-main.pdf",
+      "sha256": "bc822555dc817b718ad8c160c5a5c05a812b662ba669ffb09a6dc4a293f85a38",
+      "duplicate_of": null,
+      "page_count": 11,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_024",
+      "title": "Physical exercise interventions for health outcomes in children and adolescents with attention deficit hyperactivity disorder: An umbrella review with meta-analysis",
+      "local_pdf": "full_texts/1-s2.0-S0165178126003276-main.pdf",
+      "sha256": "9ae953f870315c61ad963795ac6cebbca04cbea63050bddc67a558feda681168",
+      "duplicate_of": null,
+      "page_count": 17,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_025",
+      "title": "Intellectual achievement and cognitive functioning in children and adolescents with ADHD-affected siblings: A systematic literature review and meta-analysis",
+      "local_pdf": "full_texts/1-s2.0-S0272735825001552-main.pdf",
+      "sha256": "7efdef3f5fb28b158f0a7246ac4665c62ce7b0a8f56b703ecafb3d8a101373be",
+      "duplicate_of": null,
+      "page_count": 15,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_026",
+      "title": "Diagnostic stickiness and shifting relevance: Reassessing autism spectrum disorder (ASD) and/or attention-deficit hyperactivity disorder (ADHD) diagnoses. A qualitative interview study",
+      "local_pdf": "full_texts/1-s2.0-S0277953626006258-main.pdf",
+      "sha256": "06f94b3a5e61cc11e235a19a7c9410cf663668ba3f1cc02c040b908fe7be4af7",
+      "duplicate_of": null,
+      "page_count": 9,
+      "evidence_scope": "Qualitative diagnostic-reassessment interviews; not a controlled effect of diagnosis or guidelines.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_027",
+      "title": "Cognitive functioning in children with both epilepsy and ADHD: A systematic review and meta-analysis",
+      "local_pdf": "full_texts/1-s2.0-S0387760426000343.pdf",
+      "sha256": "11ae74cfd41922d8824624f24d941816da89b4d91c2e237b2ae9f79068f2d8da",
+      "duplicate_of": null,
+      "page_count": 9,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_028",
+      "title": "Parenting stressors, social support, and mental health of mothers of children with attention deficit hyperactivity disorder",
+      "local_pdf": "full_texts/1-s2.0-S088259632600151X-main.pdf",
+      "sha256": "97527dc3b4e297c6819e30d25d96997fbbd87081531a4e477ef8910eb295db3b",
+      "duplicate_of": null,
+      "page_count": 8,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_029",
+      "title": "Systematic Review and Meta-Analysis: Predictors of Adult Psychiatric Outcomes of Childhood Attention-Deficit/Hyperactivity Disorder",
+      "local_pdf": "full_texts/1-s2.0-S0890856725002151-main.pdf",
+      "sha256": "d3819deebe9b0430c1d3c256db43c7a7dab7c569a7262bf45ea84fba4411be02",
+      "duplicate_of": null,
+      "page_count": 19,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_030",
+      "title": "Noninvasive Brain Stimulation in Attention-Deficit/Hyperactivity Disorder: A Systematic Review and Meta-Analysis of Treatment Efficacy and Targeting Strategies",
+      "local_pdf": "full_texts/1-s2.0-S0890856725003399-main.pdf",
+      "sha256": "16320b9c186da82d69859ff1bc1c97e829aa3704f07b9810755eab8f53a868a3",
+      "duplicate_of": null,
+      "page_count": 23,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_031",
+      "title": "Individual Participant Data Meta-Analysis: Moderators of Response to Stimulants for Preschool Attention-Deficit/Hyperactivity Disorder",
+      "local_pdf": "full_texts/1-s2.0-S0890856725020519-main.pdf",
+      "sha256": "267b1f41fce6b875c4b52b75e09e8dd1fc383622898e3ed6e695bbbf175d6d86",
+      "duplicate_of": null,
+      "page_count": 12,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_032",
+      "title": "Effects of exercise on social dysfunction in children and adolescents with ADHD: A systematic review and network, dose-response meta-analyses",
+      "local_pdf": "full_texts/1-s2.0-S0891422226000715-main.pdf",
+      "sha256": "179747879a5cc9a6af50c06cce215d21f37b9427b6706f7d8d1bfd7aa9c9d313",
+      "duplicate_of": null,
+      "page_count": 12,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_033",
+      "title": "A systematic review on the association between ADHD and procrastination",
+      "local_pdf": "full_texts/1-s2.0-S089142222600137X-main.pdf",
+      "sha256": "6ba0cb3f2b5a1c6ba762505db2034f4992144a8416bc8a9caad400acb6648392",
+      "duplicate_of": null,
+      "page_count": 11,
+      "evidence_scope": "Systematic review of ADHD and procrastination; predominantly cross-sectional evidence precludes causal inference.",
+      "cited_in_this_graph": true
+    },
+    {
+      "source_id": "PDF_034",
+      "title": "Resting-state functional connectivity alterations in adult ADHD: A systematic review of rs-fMRI studies",
+      "local_pdf": "full_texts/1-s2.0-S0925492726001502.pdf",
+      "sha256": "02bd8f685d38edb3ecb6752e2a57182324c4bc808580a2a8613332ed5e29cfef",
+      "duplicate_of": null,
+      "page_count": 7,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_035",
+      "title": "Are children and adolescents with ADHD less physically fit? Findings from a systematic review and meta-analysis",
+      "local_pdf": "full_texts/1-s2.0-S0929693X26001296-main.pdf",
+      "sha256": "93fdd7a3ae22b5a31d2f0c6a08339210478053280b07397a9ae8750c21bfc06d",
+      "duplicate_of": null,
+      "page_count": 12,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_036",
+      "title": "The influence of existing interventions on sleep of youth with attention-deficit/hyperactivity disorder: A meta-analysis of randomized controlled trials",
+      "local_pdf": "full_texts/1-s2.0-S1087079226000754-main (1).pdf",
+      "sha256": "41f0606914603cd707c8d7e273c4f3c80d88ce0a43ff09805090ec323952f5d0",
+      "duplicate_of": null,
+      "page_count": 11,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_037",
+      "title": "The influence of existing interventions on sleep of youth with attention-deficit/hyperactivity disorder: A meta-analysis of randomized controlled trials",
+      "local_pdf": "full_texts/1-s2.0-S1087079226000754-main.pdf",
+      "sha256": "9eece4bed6b9664d843433b78fa0f69574b0181b2a2819efa28323b04a8a2e3b",
+      "duplicate_of": "PDF_036",
+      "page_count": 11,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_038",
+      "title": "Challenges in translating AI-driven ASD/ADHD diagnosis: A methodological systematic review",
+      "local_pdf": "full_texts/1-s2.0-S1386505626001577.pdf",
+      "sha256": "06ce35e2f188c28fbfa621efb92e7a668e2f5a151386c3e769ca5530bb84944a",
+      "duplicate_of": null,
+      "page_count": 15,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_039",
+      "title": "Parent and carer perspectives on behavioural sleep management strategies for children with ADHD",
+      "local_pdf": "full_texts/1-s2.0-S1389945726003771-main.pdf",
+      "sha256": "a6cf567c11b42b8a159967d35883a7252746e1274e5a2c94a2b147cb01ba0aa1",
+      "duplicate_of": null,
+      "page_count": 9,
+      "evidence_scope": "Qualitative parent/carer sleep-management study; contextual sleep evidence, not a sleep intervention efficacy trial.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_040",
+      "title": "Neurocognitive outcomes of ADHD as a comorbidity in pediatric epilepsy: a systematic review",
+      "local_pdf": "full_texts/1-s2.0-S152550502500592X.pdf",
+      "sha256": "5ebc3650701d024f6dbbb828234de448b59f0cb3716bcd932b69e26477986f31",
+      "duplicate_of": null,
+      "page_count": 12,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_041",
+      "title": "Validity of screening tools and risk factors for Co-occurring ADHD in children with epilepsy: a systematic review and meta-analysis",
+      "local_pdf": "full_texts/1-s2.0-S1525505026000867.pdf",
+      "sha256": "8ac5b08701c39988d866c39eb10a8337e7cbfcf2356dee234d789da405dbee15",
+      "duplicate_of": null,
+      "page_count": 14,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_042",
+      "title": "The interplay between executive function and learning disabilities: Developmental cognitive neuroscience perspectives on reading, math, and ADHD",
+      "local_pdf": "full_texts/1-s2.0-S1878929326000575-main.pdf",
+      "sha256": "1679e1b10c4c8a421a77a1db14389fd00a606307798e736c28eb1d2d123a762a",
+      "duplicate_of": null,
+      "page_count": 16,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_043",
+      "title": "Pharmacological interventions for ADHD: a systematic review and dose–effect network meta-analysis",
+      "local_pdf": "full_texts/1-s2.0-S221503662600091X.pdf",
+      "sha256": "183526ce386bc37ee699b2d661130f8e101edcfee110bd0f8d89188830e22c84",
+      "duplicate_of": null,
+      "page_count": 11,
+      "evidence_scope": "Double-blind medication RCT network meta-analysis; separate under-18 and adult analyses, ages five and older. Efficacy and adverse-event discontinuation depend on drug and dose; no separate exact-age effect.",
+      "cited_in_this_graph": true
+    },
+    {
+      "source_id": "PDF_044",
+      "title": "School readiness as a signal of attention-deficit hyperactivity disorder: a population-based cohort study highlighting structural inequalities",
+      "local_pdf": "full_texts/167.full.pdf",
+      "sha256": "996b232a2993607242162781c0a5c0a063a7b41aa6dd2fc0f0979692a1200e95",
+      "duplicate_of": null,
+      "page_count": 6,
+      "evidence_scope": "Linked UK school/health cohort; school readiness at 4–5 and later diagnoses; observed disparities do not identify a causal institutional-bias mechanism.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_045",
+      "title": "Workplace adjustments equivalent to reasonable accommodations and workplace maladjustment in a general working population, with a focus on high autism spectrum disorder (ASD) and attention deficit/hyperactivity disorder (ADHD) traits",
+      "local_pdf": "full_texts/31_26-00080.pdf",
+      "sha256": "ec624f14468d9c57bb8b40367a9845075e5704554598bfc9e1af6210072626a6",
+      "duplicate_of": null,
+      "page_count": 12,
+      "evidence_scope": "Cross-sectional survey of 1,000 Japanese workers aged 20–59, including high ADHD-trait groups; accommodations are associated with adaptation, not randomized effects. Flexible hours are not evidence for remote work.",
+      "cited_in_this_graph": true
+    },
+    {
+      "source_id": "PDF_046",
+      "title": "From early to fewer first births: ADHD and family formation among young adults",
+      "local_pdf": "full_texts/784.full.pdf",
+      "sha256": "15e75f0e84e4e7a3518323368178a2c1db1ea668c9ccf92667491c2e5a9dfdc9",
+      "duplicate_of": null,
+      "page_count": 6,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_047",
+      "title": "A Meta-Analysis of the Prevalence of ADHD in Youth Across Racial and Ethnic Groups",
+      "local_pdf": "full_texts/A Meta-Analysis of the Prevalence of ADHD in Youth Across Racial and Ethnic Groups.pdf",
+      "sha256": "4335feb2cb8b5d27eaa92cace1954a08340db6e8635ed6522687e861fc6045db",
+      "duplicate_of": null,
+      "page_count": 16,
+      "evidence_scope": "Youth racial/ethnic prevalence meta-analysis; ascertainment and sample affect differences. Categories have no universal signed ordering.",
+      "cited_in_this_graph": true
+    },
+    {
+      "source_id": "PDF_048",
+      "title": "A multi-stakeholder preliminary needs assessment to inform the co-design of a digital telerehabilitation tool for children and adolescents with ADHD",
+      "local_pdf": "full_texts/A multi stakeholder preliminary needs assessment to inform the co design of a digital telerehabilitation tool for children and adolescents with ADHD.pdf",
+      "sha256": "7e3e96db0a28add89176dc10ff3d67c6caedb04d458a5b5959bf3f45646b2808",
+      "duplicate_of": null,
+      "page_count": 22,
+      "evidence_scope": "Qualitative co-design needs assessment, not an efficacy or access-effect trial.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_049",
+      "title": "Regional Variation in ADHD Treatment and Diagnosis Among Children and Adolescents in Denmark",
+      "local_pdf": "full_texts/Basic Clin Pharma Tox - 2026 - Sonne - Regional Variation in ADHD Treatment and Diagnosis Among Children and Adolescents in.pdf",
+      "sha256": "a3f20a330c7d03e7da408d129b4ad8340b268a38f878ec24050af92236343819",
+      "duplicate_of": null,
+      "page_count": 8,
+      "evidence_scope": "Danish register cross-sectional study, ages 4–17. Specialist capacity and waiting times were not significantly associated with diagnosis or medication prevalence; prevalence is not direct access measurement.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_050",
+      "title": "Parenting Practices in Families of Children With Comorbid ADHD and Anxiety Disorders: A Systematic Review and Meta‐Analysis",
+      "local_pdf": "full_texts/Child - 2025 - Denis - Parenting Practices in Families of Children With Comorbid ADHD and Anxiety Disorders  A Systematic.pdf",
+      "sha256": "3f82ecf855ed0796783d9bafa2daf62228ab81a2ff938cfb60743feba700ecad",
+      "duplicate_of": null,
+      "page_count": 10,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_051",
+      "title": "Barriers to and Enablers of the Transition From Child to Adult Mental Health Services for Autistic Young People and/or Those With Attention Deficit Hyperactivity Disorder: A Scoping Review",
+      "local_pdf": "full_texts/Child - 2025 - Tang - Barriers to and Enablers of the Transition From Child to Adult Mental Health Services for Autistic.pdf",
+      "sha256": "894db49b7ce7592e73304c185843fead840d408fe38f82ef9ca8cca3b4b7b146",
+      "duplicate_of": null,
+      "page_count": 12,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_052",
+      "title": "Mind the Gap! Sleep Problems in Children With ADHD—A Qualitative Analysis of Clinician Training Needs",
+      "local_pdf": "full_texts/Child - 2026 - Smith - Mind the Gap  Sleep Problems in Children With ADHD A Qualitative Analysis of Clinician Training.pdf",
+      "sha256": "cd47251803c254b4ebc88d3ece5144ebe264bc0b73e4b43adc760c60839688aa",
+      "duplicate_of": null,
+      "page_count": 9,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_053",
+      "title": "Mapping phenotypic and genetic relationships among irritability, depression and ADHD in adolescence using network analysis",
+      "local_pdf": "full_texts/Child Psychology Psychiatry - 2025 - Shakeshaft - Mapping phenotypic and genetic relationships among irritability .pdf",
+      "sha256": "b904b2e5be2418264c293aa432e9250336b7ba52ec5a7f823fcdb0c12843c29b",
+      "duplicate_of": null,
+      "page_count": 11,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_054",
+      "title": "The role of comorbid childhood mental health and neurodevelopmental conditions in the persistence of ADHD symptoms: systematic review and meta‐analysis",
+      "local_pdf": "full_texts/Child Psychology Psychiatry - 2025 - You - The role of comorbid childhood mental health and neurodevelopmental conditions.pdf",
+      "sha256": "816bc94d1314b2fe874a387640d6873dfd083caee3f6112c4102dadd93c7281a",
+      "duplicate_of": null,
+      "page_count": 19,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_055",
+      "title": "Editorial: ADHD persistence – the interplay of genes, socioeconomic context, and symptom domains over development",
+      "local_pdf": "full_texts/Child Psychology Psychiatry - 2026 - Thomson - Editorial  ADHD persistence   the interplay of genes  socioeconomic context .pdf",
+      "sha256": "953036a6b2596affcda4479d53e25d832a69c1822c8659f9cb7cec49160878f7",
+      "duplicate_of": null,
+      "page_count": 4,
+      "evidence_scope": "Editorial synthesis of heterogeneous developmental trajectories; not a monotonic effect of age or an exact-age causal estimate.",
+      "cited_in_this_graph": true
+    },
+    {
+      "source_id": "PDF_056",
+      "title": "Do Children and Adolescents with Attention Deficit Hyperactivity Disorder Use Screens More? A Systematic Review and Meta-Analysis",
+      "local_pdf": "full_texts/Do Children and Adolescents with Attention Deficit Hyperactivity Disorder Use Screens More  A Systematic Review and Meta-Analysis.pdf",
+      "sha256": "05d48164e52c0f25aaf1cfb976336b2c99cb96774a166c4b7974b27f6a83b756",
+      "duplicate_of": null,
+      "page_count": 25,
+      "evidence_scope": "Pediatric screen-time group comparisons, low/very-low certainty; do not identify exposure causing ADHD symptoms.",
+      "cited_in_this_graph": true
+    },
+    {
+      "source_id": "PDF_057",
+      "title": "Do Wechsler intelligence scales predict academic achievement in children with ADHD or autism? A syst",
+      "local_pdf": "full_texts/Do Wechsler intelligence scales predict academic achievement in children with ADHD or autism  A systematic review and meta-analysis.pdf",
+      "sha256": "fb2cc11caed323bd1a760142be444d5ebc2805b31c1d3e2490a8bdb6f5433cab",
+      "duplicate_of": null,
+      "page_count": 16,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_058",
+      "title": "Neurodevelopmental, Pharmacological and Substance Use Factors in the Association Between ADHD and First‐Episode Non‐Affective Psychosis: A Systematic Review",
+      "local_pdf": "full_texts/Early Intervention Psych - 2026 - Ricci - Neurodevelopmental  Pharmacological and Substance Use Factors in the Association.pdf",
+      "sha256": "b6f929023772671c65fc5ca157eca06652bd4ab6c68f96537c6e59eace21cd50",
+      "duplicate_of": null,
+      "page_count": 13,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_059",
+      "title": "The Stigmatization of Caregivers of Children With Attention‐Deficit/Hyperactivity Disorder: A Systematic Review",
+      "local_pdf": "full_texts/Family Process - 2026 - Guerin - The Stigmatization of Caregivers of Children With Attention‐Deficit Hyperactivity Disorder.pdf",
+      "sha256": "eddba559426435029433a68816aa339e678f5e9fef0e24dd09ed28e96b71ffac",
+      "duplicate_of": null,
+      "page_count": 13,
+      "evidence_scope": "Systematic review of caregiver stigma, primarily correlational evidence; caregiver distress and child symptom causation are distinct.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_060",
+      "title": "Psychometric Assessment of the Arabic Translation of the Adult ADHD Self‐Report Scale Version 1.1 6‐Question Screener",
+      "local_pdf": "full_texts/Int J Methods Psych Res - 2026 - Assaf - Psychometric Assessment of the Arabic Translation of the Adult ADHD Self‐Report.pdf",
+      "sha256": "679b4f647c7cce1d0c9820197d37407267ee4072f3de2ae6540c853a36850a25",
+      "duplicate_of": null,
+      "page_count": 11,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_061",
+      "title": "Gut Microbiome and ADHD: A Narrative Review of Clinical Evidence and Practice Implications",
+      "local_pdf": "full_texts/J Human Nutrition Diet - 2026 - Sadowska - Gut Microbiome and ADHD  A Narrative Review of Clinical Evidence and Practice.pdf",
+      "sha256": "caf9aeea912da68099df182fc3364a1bdfb1e3a3808d483ee651ed3aecabed8e",
+      "duplicate_of": null,
+      "page_count": 10,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_062",
+      "title": "“I Felt Like a Burden”: An Exploration Into the Experience of Romantic Relationships for People With ADHD",
+      "local_pdf": "full_texts/J Marital Family Therapy - 2025 - O'Brien - I Felt Like a Burden   An Exploration Into the Experience of Romantic.pdf",
+      "sha256": "ac5c2400db0eadda2df6b37669d44231ff1f981f510ecd76ba821c11fa9cdd71",
+      "duplicate_of": null,
+      "page_count": 14,
+      "evidence_scope": "Open-ended survey of adults with ADHD about relationships; qualitative accounts do not establish stress causing ADHD severity.",
+      "cited_in_this_graph": true
+    },
+    {
+      "source_id": "PDF_063",
+      "title": "Parental Knowledge and Recognition of Preschool Manifestations of ADHD in Preterm Children: A Cross‐Sectional Study",
+      "local_pdf": "full_texts/J Paediatrics Child Health - 2026 - Pehlevan - Parental Knowledge and Recognition of Preschool Manifestations of ADHD in.pdf",
+      "sha256": "37760d221f995039bf9265de3b100879f4fa91ebc629ffa7342e42b4b9ecf634",
+      "duplicate_of": null,
+      "page_count": 6,
+      "evidence_scope": "Cross-sectional parental recognition study in preterm preschool children; no independent predictor remained significant in the multivariable model; not age-eight parental education evidence.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_064",
+      "title": "Stigmatising Attitudes Towards People With Depression, Bipolar Disorder, Borderline Personality, ADHD and Early and Long‐Term/Untreated Schizophrenia: Representative Survey of Australian Adults",
+      "local_pdf": "full_texts/Medical Journal of Australia - 2026 - Morgan - Stigmatising Attitudes Towards People With Depression  Bipolar Disorder .pdf",
+      "sha256": "af3a38ca55543c96d1b25aca58eb427ee43b93f171d3a686c2f8c3b0569ee8b5",
+      "duplicate_of": null,
+      "page_count": 11,
+      "evidence_scope": "Representative Australian vignette survey measures stigmatizing attitudes; does not estimate cultural norms causing stigma or downstream diagnostic rates.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_065",
+      "title": "ADHD Across the Lifespan: Reconsidering Assumptions of Diagnostic Permanence",
+      "local_pdf": "full_texts/Medical Journal of Australia - 2026 - Ouliaris - ADHD Across the Lifespan  Reconsidering Assumptions of Diagnostic.pdf",
+      "sha256": "244dc2a6389a2ed2800a0a99b584e7bd03fca6d1af44ffa9290be99ed91e8ada",
+      "duplicate_of": null,
+      "page_count": 4,
+      "evidence_scope": "Lifespan clinical perspective emphasizes fluctuating trajectories and impairment requirements; not evidence that diagnosis itself improves outcomes.",
+      "cited_in_this_graph": true
+    },
+    {
+      "source_id": "PDF_066",
+      "title": "Prevalence of the Prescribing of Attention-Deficit Hyperactivity Disorder Medication During Pregnanc",
+      "local_pdf": "full_texts/Prevalence of the Prescribing of Attention-Deficit Hyperactivity Disorder Medication During Pregnancy  A Systematic Review.pdf",
+      "sha256": "8a7c87131409493b7d7dcc63ee1982090a84afa731dc43af9c9819741b089684",
+      "duplicate_of": null,
+      "page_count": 12,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_067",
+      "title": "Emerging Digital Interventions for ADHD: An Overview of Ongoing Clinical Trials",
+      "local_pdf": "full_texts/SHTI-336-SHTI260681.pdf",
+      "sha256": "7c10b69ac416e24ae459e5b0207f536281d83e077266b47241a3ef0de006b8eb",
+      "duplicate_of": null,
+      "page_count": 5,
+      "evidence_scope": "Registry review of 35 ongoing trials; planned videoconferencing interventions are not completed evidence of telehealth access or treatment efficacy.",
+      "cited_in_this_graph": true
+    },
+    {
+      "source_id": "PDF_068",
+      "title": "Feasibility of the Psychoeducational Programme SKILLS for the Child's Social Network for Patients Newly Diagnosed With ADHD: A Mixed‐Method Design Study",
+      "local_pdf": "full_texts/Scandinavian J Psychology - 2025 - Isaksson - Feasibility of the Psychoeducational Programme SKILLS for the Child s Social.pdf",
+      "sha256": "ed06db9aa15aa0e1e00f1f78f601b40ea621ffd26fa115c6699d925a37aa8e97",
+      "duplicate_of": null,
+      "page_count": 13,
+      "evidence_scope": "Uncontrolled psychoeducation feasibility study of a child’s social network, online or in person; not a controlled school-plan pathway.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_069",
+      "title": "The Effects of Physical Activity Timing and Adherence to Physical Activity Guidelines on Sleep in Children With ADHD",
+      "local_pdf": "full_texts/Scandinavian Med Sci Sports - 2026 - Liang - The Effects of Physical Activity Timing and Adherence to Physical Activity.pdf",
+      "sha256": "0977deb3466902925006429243ab0dbe62037c68ded5d23d5f413480e7c60e23",
+      "duplicate_of": null,
+      "page_count": 9,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_070",
+      "title": "a-2689-4911.pdf",
+      "local_pdf": "full_texts/a-2689-4911.pdf",
+      "sha256": "63fdd2dd10f521c40923b44ee4efc83b2475de595c2400c52763b3d198f15e60",
+      "duplicate_of": null,
+      "page_count": 20,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_071",
+      "title": "Attention deficit/hyperactivity disorder diagnosis in adulthood: Prevalence and predictive utility of neuropsychological scales",
+      "local_pdf": "full_texts/acag057.pdf",
+      "sha256": "e58db87511d677bea1419d664f3cc2d5b7a136653f26819d516af11f81591e50",
+      "duplicate_of": null,
+      "page_count": 17,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_072",
+      "title": "es6c01402 1..15",
+      "local_pdf": "full_texts/acs.est.6c01402.pdf",
+      "sha256": "2a212b414308b1b359b840fb3fdebdcf0e9ce497f907149e215fc072b526c6c5",
+      "duplicate_of": null,
+      "page_count": 15,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_073",
+      "title": "The Effect of Methylphenidate Treatment on Oxidative Stress Levels in Children Diagnosed with Attention-Deficit/Hyperactivity Disorder: An Observational Study",
+      "local_pdf": "full_texts/altunkılıc-et-al-2026-the-effect-of-methylphenidate-treatment-on-oxidative-stress-levels-in-children-diagnosed-with.pdf",
+      "sha256": "54bbe96b07e64f67ae37928ef85b3afde1262e1a8288b96fb1b3c19992a2fc0e",
+      "duplicate_of": null,
+      "page_count": 10,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_074",
+      "title": "A comprehensive overview of the biological foundations of ADHD",
+      "local_pdf": "full_texts/bsr-2025-4061.pdf",
+      "sha256": "18f9e9de672665003f442a769ee32e220e15ec7c4681b9f9120e7af4c904fe8e",
+      "duplicate_of": null,
+      "page_count": 47,
+      "evidence_scope": "Lifespan biological narrative review; supports aggregate genetic liability, not deterministic genes or validated edge weights.",
+      "cited_in_this_graph": true
+    },
+    {
+      "source_id": "PDF_075",
+      "title": "School-Based Social Skills Interventions for Youth With ADHD: A Systematic Review and Meta-Analysis",
+      "local_pdf": "full_texts/bussanich-et-al-2025-school-based-social-skills-interventions-for-youth-with-adhd-a-systematic-review-and-meta-analysis.pdf",
+      "sha256": "f00751579ffc87db44d7beac47c0a95742127de0ac91f3a0157a0c8c94e6203d",
+      "duplicate_of": null,
+      "page_count": 22,
+      "evidence_scope": "Pediatric school-based social-skills meta-analysis; overall effect negligible. Social-skills training differs from learning accommodations and academic impairment.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_076",
+      "title": "download.pdf",
+      "local_pdf": "full_texts/download.pdf",
+      "sha256": "18d693db9c55bc1db25f62745ded3f20217f24367d9c90253fe91b02f7f9223e",
+      "duplicate_of": null,
+      "page_count": 8,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_077",
+      "title": "e119568.full.pdf",
+      "local_pdf": "full_texts/e119568.full.pdf",
+      "sha256": "4c4a6aa60e3b495ae49a9c3eed7e756f8a125a375c6705f7e41d67044d818300",
+      "duplicate_of": null,
+      "page_count": 8,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_078",
+      "title": "formative-2026-1-e82164.pdf",
+      "local_pdf": "full_texts/formative-2026-1-e82164.pdf",
+      "sha256": "4b9ddd6d2bb28f331d22a7777019bb4b955711d6c09aa8117859fb80ddef1c67",
+      "duplicate_of": null,
+      "page_count": 11,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_079",
+      "title": "Narrative and Non-Narrative Discourse Skills in ADHD Across the Lifespan: A Systematic Review of the Literature",
+      "local_pdf": "full_texts/hill-et-al-2025-narrative-and-non-narrative-discourse-skills-in-adhd-across-the-lifespan-a-systematic-review-of-the.pdf",
+      "sha256": "7c6bb684c9e0987746e65350e1caf57fff82f27a3dab5d0d694391accdc5c633",
+      "duplicate_of": null,
+      "page_count": 20,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_080",
+      "title": "Symptoms of Anxiety in Adults with ADHD: A Systematic Review and Meta-Analysis of Case-Control Studies",
+      "local_pdf": "full_texts/hoskins-et-al-2026-symptoms-of-anxiety-in-adults-with-adhd-a-systematic-review-and-meta-analysis-of-case-control-studies.pdf",
+      "sha256": "66e40b33f8126b0ac4d7a8ad1c1331b9df92ecdf03d1600708d47a38991cae35",
+      "duplicate_of": null,
+      "page_count": 33,
+      "evidence_scope": "58-study adult case-control anxiety meta-analysis; co-occurrence is not proof ADHD causes another disorder.",
+      "cited_in_this_graph": true
+    },
+    {
+      "source_id": "PDF_081",
+      "title": "The Use of Psychedelics in the Treatment of Adult ADHD: A Systematic and Mechanistic Review",
+      "local_pdf": "full_texts/ijms-27-03453-v3.pdf",
+      "sha256": "2a0ebbb7debec52cbf546b6c38a4dbf1866c523a4f65073ac1f67931803a8b2f",
+      "duplicate_of": null,
+      "page_count": 46,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_082",
+      "title": "jamainternal_luo_2026_oi_260035_1788184625.4213.pdf",
+      "local_pdf": "full_texts/jamainternal_luo_2026_oi_260035_1788184625.4213.pdf",
+      "sha256": "01dd19e53d33ba5df118e942be27bc79f8c9936b9a8a1e8ae3b70191a582ec59",
+      "duplicate_of": null,
+      "page_count": 10,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_083",
+      "title": "jamapsychiatry_labianca_2026_oi_260031_1788289932.03306.pdf",
+      "local_pdf": "full_texts/jamapsychiatry_labianca_2026_oi_260031_1788289932.03306.pdf",
+      "sha256": "a2287fb3f978b18da386fcf6c1f5bd22c7247b29286cbbcd8b4542eb4e8064b6",
+      "duplicate_of": null,
+      "page_count": 9,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_084",
+      "title": "jamapsychiatry_pan_2026_oi_260001_1777052922.67615.pdf",
+      "local_pdf": "full_texts/jamapsychiatry_pan_2026_oi_260001_1777052922.67615.pdf",
+      "sha256": "bd38021913c2380fdc48ea5b6f4ec2af4a903147e9ac55f5a2579a6ab08d2112",
+      "duplicate_of": null,
+      "page_count": 13,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_085",
+      "title": "jamapsychiatry_volotinen_2026_oi_260011_1779900161.36996.pdf",
+      "local_pdf": "full_texts/jamapsychiatry_volotinen_2026_oi_260011_1779900161.36996.pdf",
+      "sha256": "c06c894ae9eb70fdc683ccdbfd070d364fbb217c9b1b4a5b533d0967690ee092",
+      "duplicate_of": null,
+      "page_count": 10,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_086",
+      "title": "Multimodal Digital Therapeutics Enhanced by Task Design and AI for Attention-Deficit/Hyperactivity Disorder Core Symptoms and Executive Functions in Children and Adolescents: Systematic Review and Network Meta-Analysis of Randomized Controlled Trials",
+      "local_pdf": "full_texts/jmir-2026-1-e95043.pdf",
+      "sha256": "209dc461c080a704ef0e889f2eaf937313bc004d830dcecde467972cb43c0ab0",
+      "duplicate_of": null,
+      "page_count": 34,
+      "evidence_scope": "Pediatric digital-therapy network meta-analysis, ages 4–17; heterogeneous interventions and substantial risk of bias; no adult efficacy estimate.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_087",
+      "title": "Intervention effects of long-term exercise on executive function in children and adolescents with attention-deficit hyperactivity disorder: a three-level meta-analysis of randomised controlled trials",
+      "local_pdf": "full_texts/jogh-16-04233n.pdf",
+      "sha256": "897fe8d2b41d92afc136f2811183c5e8a0f37a309ea8ed0af3fd03f46ce4c5cc",
+      "duplicate_of": null,
+      "page_count": 18,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_088",
+      "title": "The lived experience of rejection sensitivity in ADHD - A qualitative exploration",
+      "local_pdf": "full_texts/journal.pone.0314669.pdf",
+      "sha256": "2b74158251644f398ba2053a9312a58c2ac86c1b8dd28545dc7e4d32078ae1e0",
+      "duplicate_of": null,
+      "page_count": 10,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_089",
+      "title": "From ADHD symptoms to parental stress: The roles of functional impairment, family functioning, and parental ADHD",
+      "local_pdf": "full_texts/journal.pone.0341817.pdf",
+      "sha256": "6f3605c020fa214b4cc77a1a74d3268f78d40f24baba8fbd7e86bd47ba50a999",
+      "duplicate_of": null,
+      "page_count": 15,
+      "evidence_scope": "Cross-sectional family study, mean child age 9.6; structural mediation models do not establish causal direction. Child impairment and parental stress are different outcomes.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_090",
+      "title": "Long-term effects of cognitive behavioural therapy on the quality of life in adult ADHD",
+      "local_pdf": "full_texts/journal.pone.0356825.pdf",
+      "sha256": "61c187a3772f7ce72ab790426f99ca79ad7b8b2576fa00a50e07dd7630bb5325",
+      "duplicate_of": null,
+      "page_count": 14,
+      "evidence_scope": "Adult 4–8-year follow-up of CBT plus medication/psychoeducation; substantial attrition and no added CBT quality-of-life benefit. Treatment outcome is not diagnosis-only benefit.",
+      "cited_in_this_graph": true
+    },
+    {
+      "source_id": "PDF_091",
+      "title": "Autism and ADHD social media short-form video content: A systematic review protocol",
+      "local_pdf": "full_texts/journal.pone.0357837.pdf",
+      "sha256": "27158987aa5e053239d759135a8cdc36a936e4a5a0e2ebe0cac2bb75ffa038ad",
+      "duplicate_of": null,
+      "page_count": 8,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_092",
+      "title": "Treatment Adherence in ADHD: A Systematic Review of Influencing Factors and Strategies for Improvement",
+      "local_pdf": "full_texts/karimi-et-al-2025-treatment-adherence-in-adhd-a-systematic-review-of-influencing-factors-and-strategies-for-improvement.pdf",
+      "sha256": "fa2bd4e9eac45a5970bc54e2f19301f9bcfb5b70ca2fb8650e643d6beb1c1ecd",
+      "duplicate_of": null,
+      "page_count": 25,
+      "evidence_scope": "Systematic review of 52 heterogeneous adherence studies across children, adolescents and adults; specific reminder and monitoring interventions differ from broad digital therapeutics; no exact-age effect.",
+      "cited_in_this_graph": true
+    },
+    {
+      "source_id": "PDF_093",
+      "title": "Age at Diagnosis and Clinical and Genetic Profiles Among Adults With Attention-Deficit/Hyperactivity Disorder",
+      "local_pdf": "full_texts/leffa_2026_oi_260927_1788960869.95197.pdf",
+      "sha256": "968849be03f4e0489a7d814bb2d822000d6ce2e33edb2f0692ed11e583ac71a4",
+      "duplicate_of": null,
+      "page_count": 16,
+      "evidence_scope": "Cross-sectional All of Us adult cohort, mean ages 34.8 and 43.8; diagnosis timing is not randomized and group differences do not show diagnostic benefit.",
+      "cited_in_this_graph": true
+    },
+    {
+      "source_id": "PDF_094",
+      "title": "Association between Attention Deficit Hyperactivity Disorder and Obstructive Sleep Apnea in Children: A Systematic Review and Meta-Analysis",
+      "local_pdf": "full_texts/leow-et-al-2026-association-between-attention-deficit-hyperactivity-disorder-and-obstructive-sleep-apnea-in-children-a.pdf",
+      "sha256": "d957dd36a61f6979ac7e9d3c2dc4445849d63e3c39a3ebed7cb5739cc6468d65",
+      "duplicate_of": null,
+      "page_count": 11,
+      "evidence_scope": "Pediatric longitudinal sleep-apnea meta-analysis; OSA and generic sleep quality are different constructs.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_095",
+      "title": "The Family Quality of Life of Children With Specific Learning Disabilities, Attention-Deficit/Hyperactivity Disorder, and Their Co-Occurrence: A Cross-Sectional Study",
+      "local_pdf": "full_texts/liang-et-al-2025-the-family-quality-of-life-of-children-with-specific-learning-disabilities-attention-deficit.pdf",
+      "sha256": "945c714cc6bc2729f0487ac441131d653f7a26798a2b54ba460b1932e4a9d5a6",
+      "duplicate_of": null,
+      "page_count": 12,
+      "evidence_scope": "Cross-sectional family quality-of-life study; caregiver/family quality of life is not the child’s own quality of life.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_096",
+      "title": "PSM_2610539 1..11",
+      "local_pdf": "full_texts/longitudinal-associations-among-autism-and-adhd-traits-social-maladjustment-and-mental-health-in-school-aged-children.pdf",
+      "sha256": "c948861647c06d60dfd250b63215e622ce422c1261ba5796f0f294da7f80ff55",
+      "duplicate_of": null,
+      "page_count": 11,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_097",
+      "title": "Maternal ADHD Diagnoses Before and After Childbirth: A Danish Population-Based Cohort Study",
+      "local_pdf": "full_texts/madsen-et-al-2025-maternal-adhd-diagnoses-before-and-after-childbirth-a-danish-population-based-cohort-study.pdf",
+      "sha256": "828af2140f5756ba0e37056ea7b62fc09b2fe0577444e585a4572d9b8274975f",
+      "duplicate_of": null,
+      "page_count": 9,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_098",
+      "title": "“Controlled by Female Hormones”: A Qualitative Interview Study of Swedish Women’s Experiences of Gender-Specific Aspects of Life With ADHD",
+      "local_pdf": "full_texts/mctaggart-et-al-2026-controlled-by-female-hormones-a-qualitative-interview-study-of-swedish-women-s-experiences-of.pdf",
+      "sha256": "6d2b9eab811fb34aac273687606db38d81a1ff076ddaf7eeb3fbc43d84df19bf",
+      "duplicate_of": null,
+      "page_count": 12,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_099",
+      "title": "Problematic Social Media Use and ADHD Symptoms in Adolescents",
+      "local_pdf": "full_texts/nagata_2026_oi_260668_1783701523.89945.pdf",
+      "sha256": "d33815302dc8be6a673d0ed96c229c14f616aaa64deb0a4099f0a3b476ee1901",
+      "duplicate_of": null,
+      "page_count": 17,
+      "evidence_scope": "Five-wave adolescent ABCD cohort, mean baseline age 12.1; small prospective bidirectional associations. Not age-eight or adult evidence, and problematic use differs from exposure hours.",
+      "cited_in_this_graph": true
+    },
+    {
+      "source_id": "PDF_100",
+      "title": "Dietary Carbohydrates and ADHD Symptoms: A Systematic Review",
+      "local_pdf": "full_texts/nutrients-18-01625.pdf",
+      "sha256": "794ede898dba70a9b598d28e8ec3132a928a5fc039ccac28c6156095dfd3e536",
+      "duplicate_of": null,
+      "page_count": 26,
+      "evidence_scope": "Carbohydrate-quality review of 48 studies; mixed ages/designs, confounding and heterogeneous interventions; no generic diet or exact-age causal estimate.",
+      "cited_in_this_graph": true
+    },
+    {
+      "source_id": "PDF_101",
+      "title": "Probiotic Supplementation in Children and Adolescents with ADHD: A Systematic Review and Meta-Analysis of ADHD-Related and Emotional–Behavioral Outcomes",
+      "local_pdf": "full_texts/nutrients-18-02357.pdf",
+      "sha256": "cf6284d3e87f874eca8316329f2aab92d107ed296931549baecdfc72b2c5b226",
+      "duplicate_of": null,
+      "page_count": 25,
+      "evidence_scope": "Nine pediatric probiotic RCTs; no clear core-symptom benefit. Probiotics are not interchangeable with overall diet quality.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_102",
+      "title": "Decoding Communication Difficulties in ADHD: A Narrative Review on the Potential Links with Dietary Patterns, the Microbiome, and Oxidative Stress",
+      "local_pdf": "full_texts/nutrients-18-02664-v2.pdf",
+      "sha256": "e693479c9fc73a0b4fdc64afced2e0401809886785fcaa4fd22a8949480fe76a",
+      "duplicate_of": null,
+      "page_count": 31,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_103",
+      "title": "Cognitive Profile of ADHD in Older Adults: A Systematic Review",
+      "local_pdf": "full_texts/pardo-palenzuela-et-al-2025-cognitive-profile-of-adhd-in-older-adults-a-systematic-review.pdf",
+      "sha256": "d7bf157f0bcd6b90bbd01942085d11da4ec51af4e4ce676c96d7e09a34fb95e7",
+      "duplicate_of": null,
+      "page_count": 11,
+      "evidence_scope": "Review restricted to adults 50 and older; cannot be transferred directly to age 45.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_104",
+      "title": "Impact of Medication Therapy on Social, Behavioral, and Employment Outcomes in Adults With ADHD",
+      "local_pdf": "full_texts/pathan-et-al-2026-impact-of-medication-therapy-on-social-behavioral-and-employment-outcomes-in-adults-with-adhd.pdf",
+      "sha256": "16f76f3f016555255c080de2f513cd5faa3558c5bf116522bee5d4f09994eb28",
+      "duplicate_of": null,
+      "page_count": 14,
+      "evidence_scope": "Retrospective cross-sectional adult stimulant study; no adjusted employment benefit, greater social limitations in treated participants. Confounding by indication precludes interpreting this as treatment harm.",
+      "cited_in_this_graph": true
+    },
+    {
+      "source_id": "PDF_105",
+      "title": "peerj-20603.pdf",
+      "local_pdf": "full_texts/peerj-20603.pdf",
+      "sha256": "920ebe4437c5ce1e6883f8163faa51eee02202deb1e48b095178eabdb2e4709a",
+      "duplicate_of": null,
+      "page_count": 22,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_106",
+      "title": "Maternal Attention Deficit Hyperactivity Disorder and Perinatal Depression: A Systematic Review",
+      "local_pdf": "full_texts/pierotti-jayakody-2025-maternal-attention-deficit-hyperactivity-disorder-and-perinatal-depression-a-systematic-review.pdf",
+      "sha256": "c4b2a4e887b81bc6c4c25833952386bf766853738ae9c94cc9309d5cdd1a7c61",
+      "duplicate_of": null,
+      "page_count": 15,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_107",
+      "title": "Quality assessment of ADHD-related short videos on Chinese social media: A cross-sectional study",
+      "local_pdf": "full_texts/quality-assessment-of-adhd-related-short-videos-on-chinese.pdf",
+      "sha256": "61a96c45fda62d05fbc1156f51ea0c1a38c3614c2988c75f617860257eaa3506",
+      "duplicate_of": null,
+      "page_count": 9,
+      "evidence_scope": "Cross-sectional audit of 228 videos measures content quality, not changes in viewer awareness, help-seeking, diagnosis or adherence.",
+      "cited_in_this_graph": true
+    },
+    {
+      "source_id": "PDF_108",
+      "title": "Attention Deficit/Hyperactivity Disorder (ADHD)-Related Strengths in Adults: A Scoping Review",
+      "local_pdf": "full_texts/rafael-et-al-2026-attention-deficit-hyperactivity-disorder-(adhd)-related-strengths-in-adults-a-scoping-review.pdf",
+      "sha256": "6e95a8db0fd7171e517f4abc7db6a80f8441cd6891e860e7e481d07bf3e7bea9",
+      "duplicate_of": null,
+      "page_count": 26,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_109",
+      "title": "resprot-2026-1-e79150.pdf",
+      "local_pdf": "full_texts/resprot-2026-1-e79150.pdf",
+      "sha256": "c6789989ef155bafab9da5bef728b82173620cd2c9576807e41ee884b0393677",
+      "duplicate_of": null,
+      "page_count": 15,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_110",
+      "title": "s00406-025-02148-z.pdf",
+      "local_pdf": "full_texts/s00406-025-02148-z.pdf",
+      "sha256": "a654511d4bf4880b2ef26784bb9407f3ffef9bad348b142a1b81d426f70dcdfd",
+      "duplicate_of": null,
+      "page_count": 10,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_111",
+      "title": "s00406-025-02162-1.pdf",
+      "local_pdf": "full_texts/s00406-025-02162-1.pdf",
+      "sha256": "2595a6e7e9e384a1c63f86f503ccee61a456b503f02053c0d07668e9eb69d4e0",
+      "duplicate_of": null,
+      "page_count": 11,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_112",
+      "title": "s00787-025-02822-6.pdf",
+      "local_pdf": "full_texts/s00787-025-02822-6.pdf",
+      "sha256": "ff4029e8514e8fcb73eb068cbbaca024178bb22dc0cbc483481c60835a258b7b",
+      "duplicate_of": null,
+      "page_count": 16,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_113",
+      "title": "s00787-025-02842-2.pdf",
+      "local_pdf": "full_texts/s00787-025-02842-2.pdf",
+      "sha256": "a97792a0b388987c6401f20c417c222bae5adb6eed0c575fb2e4611c264f561b",
+      "duplicate_of": null,
+      "page_count": 14,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_114",
+      "title": "s00787-025-02904-5.pdf",
+      "local_pdf": "full_texts/s00787-025-02904-5.pdf",
+      "sha256": "73a7977f9f8aaa7de0a5efd2d0a39d1aa6533da989ba37f6dcb7138710c75a58",
+      "duplicate_of": null,
+      "page_count": 21,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_115",
+      "title": "s00787-025-02906-3.pdf",
+      "local_pdf": "full_texts/s00787-025-02906-3.pdf",
+      "sha256": "bd547cda869faf59127ec0c4d3fd2d8dc00f142e58aae2ea5eac6c48c1a8c94e",
+      "duplicate_of": null,
+      "page_count": 17,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_116",
+      "title": "s00787-025-02947-8.pdf",
+      "local_pdf": "full_texts/s00787-025-02947-8.pdf",
+      "sha256": "e2ee6ad258b4502cd83ef976b2ca2d1c12cf109d3d67fd3e77a99069a3604676",
+      "duplicate_of": null,
+      "page_count": 17,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_117",
+      "title": "s00787-026-02987-8.pdf",
+      "local_pdf": "full_texts/s00787-026-02987-8.pdf",
+      "sha256": "b8d2a4456c4abeeb84988f45855c9c9302517b9b1b04a782d7cb61484278830e",
+      "duplicate_of": null,
+      "page_count": 8,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_118",
+      "title": "s00787-026-03059-7.pdf",
+      "local_pdf": "full_texts/s00787-026-03059-7.pdf",
+      "sha256": "9e675ebf7ce306349377167dfd4e2e1c8ba9391315bb4ee83cb697fc04d2ef01",
+      "duplicate_of": null,
+      "page_count": 20,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_119",
+      "title": "The Role of Self-Concept Clarity in the Relations Between Disordered Eating, Gender Diversity, and Autistic and ADHD Traits",
+      "local_pdf": "full_texts/s10508-026-03448-8.pdf",
+      "sha256": "47182bcd912cf3725b6104f664ff1bf526f0729a6c9a04d16f1a191c3c86dbfd",
+      "duplicate_of": null,
+      "page_count": 15,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_120",
+      "title": "s10567-026-00563-9.pdf",
+      "local_pdf": "full_texts/s10567-026-00563-9.pdf",
+      "sha256": "cb69c3192691527bdda64aa55f71ba4f57d6b0c968db02d02ae5cbf0770651e7",
+      "duplicate_of": null,
+      "page_count": 20,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_121",
+      "title": "The Association Between the Impact of COVID-19 and Internalizing Problems Among Children and Adolescents with ADHD: The Moderating Role of Parental Anxiety",
+      "local_pdf": "full_texts/s10578-024-01732-z.pdf",
+      "sha256": "70c99610e8724aa506ac7475318720e8354440ec9c8d0850ea76afbb99169db7",
+      "duplicate_of": null,
+      "page_count": 13,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_122",
+      "title": "s10802-026-01488-1.pdf",
+      "local_pdf": "full_texts/s10802-026-01488-1.pdf",
+      "sha256": "07e836843b76b6bd6afb9bf2054b6d15773f3cc8f7a5d6abca250fba86c55eaa",
+      "duplicate_of": null,
+      "page_count": 11,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_123",
+      "title": "s10803-024-06410-6.pdf",
+      "local_pdf": "full_texts/s10803-024-06410-6.pdf",
+      "sha256": "f66a1f856212fc6545f9e4b4d299a6a7063270dbc04500c03e102ae467bbb23b",
+      "duplicate_of": null,
+      "page_count": 9,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_124",
+      "title": "Sleep Problems in Children with ADHD: Associations with Internalizing Symptoms and Physical Activity",
+      "local_pdf": "full_texts/s10803-024-06623-9.pdf",
+      "sha256": "f386937ba8d80968e20c2832f88da47b46d2a9eb286962401a4582dc3bcbe232",
+      "duplicate_of": null,
+      "page_count": 10,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_125",
+      "title": "s10803-024-06682-y.pdf",
+      "local_pdf": "full_texts/s10803-024-06682-y.pdf",
+      "sha256": "526e853ecdf7a43d0e01c8ccd6906c37bc24b4abe0f958990d358396fefa0702",
+      "duplicate_of": null,
+      "page_count": 12,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_126",
+      "title": "Roles and impacts of pharmacists in attention-deficit hyperactivity disorder services: a scoping review",
+      "local_pdf": "full_texts/s11096-026-02184-2.pdf",
+      "sha256": "40c282ddbd06296cb4e625f5fa3471f511a2334066822c4bbc8e076b04223b5d",
+      "duplicate_of": null,
+      "page_count": 15,
+      "evidence_scope": "Scoping review of pharmacist roles; heterogeneous service evidence does not establish generic capacity-to-access effects.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_127",
+      "title": "Peripheral Inflammation In Adult ADHD: Sex Differences And Hematological Markers",
+      "local_pdf": "full_texts/s11126-025-10185-z.pdf",
+      "sha256": "ad6b7850de52273a5c57796faafe5153b020f98fb839776d015a37451eb4181e",
+      "duplicate_of": null,
+      "page_count": 14,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_128",
+      "title": "s11136-026-04244-6.pdf",
+      "local_pdf": "full_texts/s11136-026-04244-6.pdf",
+      "sha256": "3a63e8dcabc94dfd85c9ca7f8307b8360d4ec6ab725190b4f091ad75f0da52c7",
+      "duplicate_of": null,
+      "page_count": 18,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_129",
+      "title": "The Impact of Untreated Attention-Deficit/Hyperactivity Disorder on Motor Vehicle Accidents: A Systematic Review and Meta-Analysis",
+      "local_pdf": "full_texts/s12325-026-03638-9.pdf",
+      "sha256": "daa1618cdf49868b4a0a402c4624998f18d98835a409c744e6eef85a1faab185",
+      "duplicate_of": null,
+      "page_count": 13,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_130",
+      "title": "s12887-025-06465-z.pdf",
+      "local_pdf": "full_texts/s12887-025-06465-z.pdf",
+      "sha256": "29b52f67da0d2f62a01075256d341e0ea52911478afccb954d9dc487f9c5c5e0",
+      "duplicate_of": null,
+      "page_count": 10,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_131",
+      "title": "s12887-026-06646-4.pdf",
+      "local_pdf": "full_texts/s12887-026-06646-4.pdf",
+      "sha256": "eed7b8a2bce944b8ad73c72e0ff11cf2d1c4a0befa41629e57fd998cc9d2314a",
+      "duplicate_of": null,
+      "page_count": 7,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_132",
+      "title": "s12887-026-06963-8.pdf",
+      "local_pdf": "full_texts/s12887-026-06963-8.pdf",
+      "sha256": "e1b4d36d2eaf9cf84a7476fe15cbccb4b30d6a6fd16c121eeb68b2302f1ac2c7",
+      "duplicate_of": null,
+      "page_count": 8,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_133",
+      "title": "Socioeconomic burden of attention-deficit/hyperactivity disorder in adults in Japan",
+      "local_pdf": "full_texts/s12888-026-07953-x.pdf",
+      "sha256": "5e4480504cd245e00b88edb4bab784a4b182306d992e2a671f726ffe448622fc",
+      "duplicate_of": null,
+      "page_count": 15,
+      "evidence_scope": "Cross-sectional socioeconomic burden analysis; unemployment costs do not isolate impairment causing employment instability.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_134",
+      "title": "s12888-026-08293-6.pdf",
+      "local_pdf": "full_texts/s12888-026-08293-6.pdf",
+      "sha256": "4179979e5799d7772fd423a4456a5375177259a39bb7acf1ce80c33bb2a30724",
+      "duplicate_of": null,
+      "page_count": 22,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_135",
+      "title": "s12888-026-08296-3.pdf",
+      "local_pdf": "full_texts/s12888-026-08296-3.pdf",
+      "sha256": "09d451727c45137a84b4b0b1c2918cb4e74531a3e4a9a9fe7450c0ce4ec9386c",
+      "duplicate_of": null,
+      "page_count": 12,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_136",
+      "title": "s12889-026-27631-7.pdf",
+      "local_pdf": "full_texts/s12889-026-27631-7.pdf",
+      "sha256": "32c2a88108683d83aba07fddb5b2954198c75d093a5c28979faf1be6932484b9",
+      "duplicate_of": null,
+      "page_count": 12,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_137",
+      "title": "s12903-026-07704-0.pdf",
+      "local_pdf": "full_texts/s12903-026-07704-0.pdf",
+      "sha256": "9b36fa4552f300f486c047b69a7eb6d6da257a6574371d3b8d2e9f4f5e860fc1",
+      "duplicate_of": null,
+      "page_count": 10,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_138",
+      "title": "Dietary inflammatory index (DII) and attention deficit hyperactivity disorder: a cross-sectional study in US children and adolescents and Mendelian randomization study",
+      "local_pdf": "full_texts/s40001-025-03711-z.pdf",
+      "sha256": "727c0187a58bd774a2aba487e9b6fcc8ae9ec3b32c2014d2f70d727baeaf530a",
+      "duplicate_of": null,
+      "page_count": 17,
+      "evidence_scope": "Dietary inflammatory index observational/Mendelian-randomization study; diet measures and directions differ from a generic nutrition-quality claim.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_139",
+      "title": "s40359-026-04637-9.pdf",
+      "local_pdf": "full_texts/s40359-026-04637-9.pdf",
+      "sha256": "cda96e6156aafde238b5c7c1d8d2ef7c4bf5973ec3c8e8bf1d21e9275f4ef791",
+      "duplicate_of": null,
+      "page_count": 26,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_140",
+      "title": "s40359-026-05200-2.pdf",
+      "local_pdf": "full_texts/s40359-026-05200-2.pdf",
+      "sha256": "07000308031b0885540d3bae7d3dccf5ab4211a0f94f975a08ca7c18d68a4f68",
+      "duplicate_of": null,
+      "page_count": 11,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_141",
+      "title": "Prevalence of attention deficit hyperactivity disorder/hyperkinetic disorder of pediatric and adult populations in clinical settings: a systematic review, meta-analysis and meta-regression",
+      "local_pdf": "full_texts/s41380-025-03178-8.pdf",
+      "sha256": "efea3d0768e4034015d75d78f17a27a1af00b9eed4aab504251c4bd4342090cf",
+      "duplicate_of": null,
+      "page_count": 11,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_142",
+      "title": "A low frequency damaging SORCS2 variant identified in a family with ADHD compromises receptor stability and quenches activity",
+      "local_pdf": "full_texts/s41380-025-03242-3.pdf",
+      "sha256": "ce2bd020d1b9a62e19b2ab077253f921d7c9338df65ccc078c0022e8d460b1e2",
+      "duplicate_of": null,
+      "page_count": 14,
+      "evidence_scope": "Family rare-variant and laboratory study; not population-wide deterministic ADHD causation.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_143",
+      "title": "Genetic investigation of the association between maternal dietary patterns and offspring ADHD",
+      "local_pdf": "full_texts/s41380-026-03645-w.pdf",
+      "sha256": "2a0830aa2e7151bd78c821b9558fa78a101312108e3ecf2f02aa0657b93802c4",
+      "duplicate_of": null,
+      "page_count": 10,
+      "evidence_scope": "Maternal dietary-pattern genetic trio study; nonreplication and genetic confounding prevent a robust causal diet pathway; nutrition does not change inherited genotype.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_144",
+      "title": "Beyond binary comparisons: a Bayesian dose-response meta-analysis of exercise on executive function in children and adolescents with ADHD",
+      "local_pdf": "full_texts/s41390-025-04325-1.pdf",
+      "sha256": "e36c42eb2d43ce84c3f855ed86c7d026c2cd3d3e9f5a4d222b7e5a94f1684878",
+      "duplicate_of": null,
+      "page_count": 10,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_145",
+      "title": "Dynamic modeling in neurocognitive frameworks of childhood ADHD: a review of inhibitory control and reward systems",
+      "local_pdf": "full_texts/s41398-026-03972-0.pdf",
+      "sha256": "71c2876f4adacc296b029d700fd52ff9a515a46433bfb275ab65ea5dfaab5554",
+      "duplicate_of": null,
+      "page_count": 16,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_146",
+      "title": "Prenatal stress, excitatory-inhibitory imbalance, and ADHD risk: a hypothesis-driven perspective on psilocybin-induced neuroplasticity",
+      "local_pdf": "full_texts/s41398-026-04151-x.pdf",
+      "sha256": "bd9235312b07149a8bf1e2b9637f2a4969fcca8be5671fe229ad35b6621af53a",
+      "duplicate_of": null,
+      "page_count": 14,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_147",
+      "title": "Dynamic relationship and pleiotropic loci of attention deficit hyperactivity disorder with sleep traits",
+      "local_pdf": "full_texts/s41398-026-04166-4.pdf",
+      "sha256": "b74aefb63d0a2215a02ea6abd9d43ce588a7f8c8ecfec735d5a38e8788bbcc8e",
+      "duplicate_of": null,
+      "page_count": 13,
+      "evidence_scope": "Pediatric longitudinal sleep/genetic study; ADHD symptoms predicted later sleep traits, not evidence for adult sleep-to-executive-function causation.",
+      "cited_in_this_graph": true
+    },
+    {
+      "source_id": "PDF_148",
+      "title": "s41598-025-34570-7.pdf",
+      "local_pdf": "full_texts/s41598-025-34570-7.pdf",
+      "sha256": "b0171a85ba7fe8dd655b6f79b1052395f6457e1767910056d7e8ca88d511a456",
+      "duplicate_of": null,
+      "page_count": 13,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_149",
+      "title": "Evaluation of the relationship between vitamin levels and symptom severity in adults with attention-deficit/hyperactivity disorder",
+      "local_pdf": "full_texts/s41598-026-41493-4.pdf",
+      "sha256": "08e402ee319faf50661fe5c668d6579f44c933ace97cefe4a3cf73792642173a",
+      "duplicate_of": null,
+      "page_count": 7,
+      "evidence_scope": "Small adult cross-sectional biomarker study, 35 ADHD/36 controls. Serum vitamins are not a dietary intervention, and association cannot establish nutrition causing symptom reduction.",
+      "cited_in_this_graph": true
+    },
+    {
+      "source_id": "PDF_150",
+      "title": "s41598-026-54609-7.pdf",
+      "local_pdf": "full_texts/s41598-026-54609-7.pdf",
+      "sha256": "dcbd1b815afbfd70ce05ba79e2bbbc9c847c747285310b9943131fa7984d6134",
+      "duplicate_of": null,
+      "page_count": 13,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_151",
+      "title": "Neurophysiological Characterization of ADHD in Children Using EEG Signals: A Machine Learning Approach to Executive Function Networks",
+      "local_pdf": "full_texts/sensors-26-05684.pdf",
+      "sha256": "68cfb59c975aef98689196f7f138d88f9d5fa3f4de1e74689fd5b0ff4bd2ec43",
+      "duplicate_of": null,
+      "page_count": 39,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_152",
+      "title": "Equity-Centered Development of a Community Health Worker Intervention to Improve Engagement in Care for ADHD",
+      "local_pdf": "full_texts/spencer-et-al-2025-equity-centered-development-of-a-community-health-worker-intervention-to-improve-engagement-in-care.pdf",
+      "sha256": "189166e33d9ba96c22aa0d09065027e06dcdfd4d5e87985d487ef96eb423538a",
+      "duplicate_of": null,
+      "page_count": 13,
+      "evidence_scope": "Uncontrolled START community-worker pilot, ages 6–12, 18 families; increased treatment/school-service uptake, without isolating advocacy or care coordination as causes.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_153",
+      "title": "Parent Perspectives on Barriers to Behavioral Health Services for Children With ADHD",
+      "local_pdf": "full_texts/taylor-et-al-2026-parent-perspectives-on-barriers-to-behavioral-health-services-for-children-with-adhd.pdf",
+      "sha256": "e0aa3aeb59539bb08e7c31065d2d216e948f11325d37bbb8b8ac18830fdbd290",
+      "duplicate_of": null,
+      "page_count": 13,
+      "evidence_scope": "Qualitative parent focus groups about pediatric treatment barriers; not causal effect sizes, adult evidence, or proof barriers weakened over time.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_154",
+      "title": "the-association-between-asthma-and-adhd-in-children-and.pdf",
+      "local_pdf": "full_texts/the-association-between-asthma-and-adhd-in-children-and.pdf",
+      "sha256": "658c253da9f6cb575b1f476c28f20494748241b874bd7ef4d48a5a6d635191c5",
+      "duplicate_of": null,
+      "page_count": 10,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_155",
+      "title": "the-relationship-between-problematic-social-media-use-and.pdf",
+      "local_pdf": "full_texts/the-relationship-between-problematic-social-media-use-and.pdf",
+      "sha256": "52b26ace027941f42fbed6a7adbd24e1b3807ed3089802d96e2d75bfbc040a23",
+      "duplicate_of": null,
+      "page_count": 9,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_156",
+      "title": "What Predicts Attention-Deficit/Hyperactivity Disorder Literacy in Primary Schoolteachers?",
+      "local_pdf": "full_texts/what-predicts-attention-deficithyperactivity-disorder.pdf",
+      "sha256": "187503a08be0b7301d07eb0d91ae3c6c87d335c03d02fc3a53d8ad71aedad5ee",
+      "duplicate_of": null,
+      "page_count": 8,
+      "evidence_scope": "Indian teacher-literacy cross-sectional study; knowledge and school characteristics do not directly measure referral rates.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_157",
+      "title": "Effects of Exercise on Hyperactivity/Impulsivity and Inhibitory Control at Behavioral and Electrophysiological Levels in ADHD: A Systematic Review and Meta-Analysis",
+      "local_pdf": "full_texts/zhang-et-al-2025-effects-of-exercise-on-hyperactivity-impulsivity-and-inhibitory-control-at-behavioral-and.pdf",
+      "sha256": "7e4d3c70146f585c564214abaeca36672521f7c5e15c4f1907b4c41c190bf48b",
+      "duplicate_of": null,
+      "page_count": 17,
+      "evidence_scope": "Exercise review with effects especially in children/adolescents and no significant hyperactivity/impulsivity benefit; not an exact-age adult efficacy result.",
+      "cited_in_this_graph": true
+    },
+    {
+      "source_id": "PDF_158",
+      "title": "Optimizing exercise interventions for motor skills enhancement in attention deficit hyperactivity disorder: Evidence from meta-analysis",
+      "local_pdf": "full_texts/zhang-et-al-2026-optimizing-exercise-interventions-for-motor-skills-enhancement-in-attention-deficit-hyperactivity.pdf",
+      "sha256": "34257142eef6ab3051f30199aa343ea29b0e7095d38d0a3b73c795eda166dd7b",
+      "duplicate_of": null,
+      "page_count": 18,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    },
+    {
+      "source_id": "PDF_159",
+      "title": "Increased Serum Netrin-1 Levels Among Children Diagnosed With ADHD",
+      "local_pdf": "full_texts/öztürk-et-al-2026-increased-serum-netrin-1-levels-among-children-diagnosed-with-adhd.pdf",
+      "sha256": "df82a5a433340dc0b4561eda1fde9d743722310a068b46457cf1903e4525995e",
+      "duplicate_of": null,
+      "page_count": 8,
+      "evidence_scope": "Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.",
+      "cited_in_this_graph": false
+    }
+  ]
+}

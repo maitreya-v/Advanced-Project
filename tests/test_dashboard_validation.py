@@ -29,7 +29,7 @@ class DashboardValidationTests(unittest.TestCase):
         cls.functions = dashboard_functions()
 
     def test_all_validated_snapshots_preserve_layout_and_match_standalone_styles(self):
-        for year in [1970, 1990, 2010]:
+        for year in [1970, 1990, 2010, 2026]:
             for age in [8, 32, 45]:
                 with self.subTest(year=year, age=age):
                     original = self.functions["load_snapshot_from_script"](ROOT / f"{year}_{age} yo.py")
@@ -59,11 +59,33 @@ class DashboardValidationTests(unittest.TestCase):
         self.assertIn("dashboard-validation-edge", rendered)
         self.assertEqual(rendered, self.functions["build_network_html"](snapshot, 0.7, 600))
 
-    def test_2026_snapshots_remain_unannotated(self):
-        for age in [8, 32, 45]:
-            snapshot = self.functions["load_snapshot_from_script"](ROOT / f"2026_{age} yo.py")
-            self.assertIs(dashboard_validation.attach_validation(snapshot), snapshot)
-            self.assertNotIn("validation", snapshot)
+    def test_year_without_validation_remains_unannotated(self):
+        snapshot = {"year": 2000}
+        self.assertIs(dashboard_validation.attach_validation(snapshot), snapshot)
+
+    def test_2026_edge_selection_uses_existing_panel_and_pdf_route(self):
+        selection = {"edge_id": "validation-edge-1", "sequence": 1}
+        with patch.object(dashboard_validation, "graph_component", return_value=selection), \
+             patch.object(dashboard_validation, "popup_component", return_value=None) as popup:
+            app = AppTest.from_file(str(ROOT / "Dashboard.py"), default_timeout=60).run()
+            app.select_slider[0].set_value(2026).run()
+            for age in [8, 32, 45]:
+                with self.subTest(age=age):
+                    popup.reset_mock()
+                    app.select_slider[1].set_value(age).run()
+                    self.assertFalse(app.exception, [item.message for item in app.exception])
+                    self.assertEqual(app.session_state["snapshot_tabs"], "Validation")
+                    payload = popup.call_args.kwargs["payload"]
+                    self.assertEqual((payload["year"], payload["age"]), (2026, age))
+                    self.assertEqual(payload["edge_title"], "Genetic Risk → ADHD")
+                    self.assertEqual(payload["status"], "Supported")
+                    evidence = payload["evidence"][0]
+                    self.assertEqual(evidence["source_label"], "PDF_074")
+                    self.assertIn("heritability", evidence["exact_excerpt"])
+                    self.assertRegex(evidence["pdf_url"], r"^references/[a-f0-9]{64}\.pdf#page=14$")
+                    asset = ROOT / "dashboard_validation_popup" / evidence["pdf_url"].split("#")[0]
+                    self.assertEqual(asset.read_bytes(), (ROOT / f"validation_2026_age{age}" / evidence["local_file"]).read_bytes())
+                    self.assertEqual(len(app.get("download_button")), 0)
 
     def test_dashboard_renders_every_year_and_age(self):
         app = AppTest.from_file(str(ROOT / "Dashboard.py"), default_timeout=60).run()

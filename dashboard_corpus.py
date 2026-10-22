@@ -65,7 +65,8 @@ def corpus_counts(year, workbook=WORKBOOK, root=ROOT):
             continue
         has_reports = True
         for ref in json.loads(report_path.read_text())["references"]:
-            identity = ref.get("pmid") or ref.get("source_id")
+            # Alternate copies in the 2026 corpus share a canonical source ID.
+            identity = ref.get("duplicate_of") or ref.get("pmid") or ref.get("source_id")
             # Alternate HTML/PDF formats identified in the 2010 review.
             if year == 2010:
                 identity = {"PMID_20410711": "AGE_SEX", "CAUDATE_HTML": "CAUDATE_MRI"}.get(identity, identity)
