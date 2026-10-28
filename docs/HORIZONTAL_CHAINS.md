@@ -1,6 +1,6 @@
 # Horizontal chains — implementation and handoff
 
-Maitreya's chain implementation is complete locally: horizontal rendering, single-snapshot queries, selected-step text, persistent save/list/reopen, JSON/HTML exports and the legacy-export compatibility fix. The separate workspace is `Chain_Prototype.py`. `Dashboard.py`, `Dashboard_2_0.py`, the existing player and shared validation helpers keep their existing interfaces.
+Maitreya's chain implementation is on `codex/horizontal-chain-prototype`: horizontal rendering, single-snapshot queries, selected-step text, persistent save/list/reopen, JSON/HTML exports and the legacy-export compatibility fix. The separate workspace is `Chain_Prototype.py`. `Dashboard.py`, `Dashboard_2_0.py`, the existing player and shared validation helpers keep their existing interfaces.
 
 Run from the repository root:
 
@@ -93,7 +93,7 @@ The existing optional Qwen story workflow remains available in the original Path
 - Arnav: independent A/B controls and pairing/comparison logic; Story / Validation switching and evidence mapping; integration into the reserved dashboard panel.
 - Joint: agree on route-pairing behavior, then verify the populated four-panel dashboard.
 
-No Arnav-owned comparison or Dashboard 2.0 assembly was implemented here. Existing saved-story files were not rewritten, and no changes have been pushed to GitHub.
+No Arnav-owned comparison or Dashboard 2.0 assembly was implemented here. Existing saved-story files were not rewritten. The work is published on [codex/horizontal-chain-prototype](https://github.com/maitreya-v/Advanced-Project/tree/codex/horizontal-chain-prototype) for review and integration.
 
 ## Verification
 
