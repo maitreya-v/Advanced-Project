@@ -247,9 +247,16 @@ def validate_legacy_path_story(story: dict, snapshot: dict, route: dict) -> None
     if story["snapshot"] != {key: snapshot[key] for key in ("year", "age", "fingerprint")}:
         raise ValueError("The legacy story belongs to a different snapshot.")
     edges = attach_path_review(snapshot, route_edges(snapshot, route))
-    if [chapter["edge_id"] for chapter in story["chapters"]] != route["edge_ids"] or [chapter["relationship"] for chapter in story["chapters"]] != edges:
+    saved_edges = [chapter["relationship"] for chapter in story["chapters"]]
+    # Older records can predate a newly imported snapshot review. Compare
+    # every original field, and keep any review they actually captured strict.
+    # Their original cache key was computed from those archived relationships.
+    comparable_edges = [edge if "snapshot_review" in saved else
+                        {key: value for key, value in edge.items() if key != "snapshot_review"}
+                        for saved, edge in zip(saved_edges, edges)]
+    if [chapter["edge_id"] for chapter in story["chapters"]] != route["edge_ids"] or saved_edges != comparable_edges:
         raise ValueError("The legacy story's ordered source facts have been altered.")
-    payload = [version, route["path_id"], story.get("question", "").strip(), edges]
+    payload = [version, route["path_id"], story.get("question", "").strip(), saved_edges]
     if version == "edge-reasoning-v4":
         payload.insert(1, story["library_hash"])
     expected = hashlib.sha256(json.dumps(payload, sort_keys=True).encode()).hexdigest()[:24]
