@@ -9,7 +9,7 @@ import streamlit as st
 import streamlit.components.v1 as components
 
 ROOT = Path(__file__).resolve().parent
-VALIDATED_YEARS = {1970, 1990, 2010}
+VALIDATED_YEARS = {1970, 1990, 2010, 2026}
 STATUS_STYLES = {
     "supported": {"color": "#16a34a", "dashes": False, "label": "Supported"},
     "partially_supported": {"color": "#2563eb", "dashes": [10, 5], "label": "Partially supported"},

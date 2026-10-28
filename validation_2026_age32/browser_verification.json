@@ -1,0 +1,18 @@
+{
+  "browser": "Google Chrome headless",
+  "viewport": [
+    1500,
+    1000
+  ],
+  "graph_sha256": "cdbbfa33bd84dfa87b3045413ea6b5811f92bbc77f5564d4a10c81383f2a3f18",
+  "checks": {
+    "opensOnEdgeEvent": true,
+    "panelFitsViewport": true,
+    "showsDecision": true,
+    "showsQuote": true,
+    "pdfPageLink": true,
+    "closesOnButton": true,
+    "emptyEvidenceHasExplanation": true,
+    "allEdgesHaveDecisions": true
+  }
+}

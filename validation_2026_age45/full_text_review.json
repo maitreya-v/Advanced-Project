@@ -1,0 +1,220 @@
+{
+  "summary": {
+    "graph_file": "2026_45 yo.py",
+    "graph_sha256": "16ff29dbc2765bd6a84334e626717c38e30e1a0816e5004ca02261b23bb60740",
+    "graph_year": 2026,
+    "age": 45,
+    "edge_count": 70,
+    "pdf_file_count": 159,
+    "unique_document_count": 158,
+    "html_file_count": 0,
+    "total_pdf_pages": 2212,
+    "cited_document_count": 23,
+    "validation_updated_utc": "2026-10-22T05:12:21.620960+00:00",
+    "original_unchanged": true,
+    "strength_assessed": false,
+    "status_counts": {
+      "supported": 2,
+      "partially_supported": 22,
+      "contradicted": 0,
+      "mixed_evidence": 0,
+      "insufficient_evidence": 39,
+      "not_assessable": 7
+    },
+    "reviewed_corpus_sha256": "5dba64601f1a110cda86033104b1fc9c2379b0f02fa8764fe8b647c4dbedcd2b"
+  },
+  "excerpts": {
+    "genetics": {
+      "source_id": "PDF_074",
+      "exact_excerpt": "For ADHD, twin studies conducted across various European countries estimate a weighted average heritability of 76%, a value consistent across children, adolescents, and adults",
+      "location": "PDF page 14 (one-based file page)",
+      "relevance": "Supports inherited liability across the lifespan; heritability is not the original numeric edge strength."
+    },
+    "diet": {
+      "source_id": "PDF_100",
+      "exact_excerpt": "Conclusions: Poorer carbohydrate quality may be associated with greater ADHD-related symptom burden, whereas total carbohydrate intake showed inconsistent associations.",
+      "location": "PDF page 1 (one-based file page)",
+      "relevance": "Qualified diet-quality association; narrower exposure and heterogeneous ages/designs, without a generic causal nutrition effect."
+    },
+    "adult_vitamins": {
+      "source_id": "PDF_149",
+      "exact_excerpt": "These findings indicate that lower serum vitamin B12 and 25-hydroxyvitamin D levels are associated with greater ADHD symptom severity in adults.",
+      "location": "PDF page 1 (one-based file page)",
+      "relevance": "Adult biomarker association is narrower than diet quality and cannot establish benefit from changing diet."
+    },
+    "sleep_direction": {
+      "source_id": "PDF_147",
+      "exact_excerpt": "Latent growth curve modeling revealed that ADHD symptoms significantly impacted sleep traits with a lag effect.",
+      "location": "PDF page 1 (one-based file page)",
+      "relevance": "Documents a reverse temporal pathway; cautions against assuming sleep is always upstream."
+    },
+    "media_youth": {
+      "source_id": "PDF_099",
+      "exact_excerpt": "The analytic sample consisted of 11 286 youths with a mean (SD) age at year 2 of 12.1 (0.67)",
+      "location": "PDF page 1 (one-based file page)",
+      "relevance": "Makes the adolescent population explicit; cannot be transferred directly to age eight or adult personas."
+    },
+    "screens": {
+      "source_id": "PDF_056",
+      "exact_excerpt": "Conclusions: Children and adolescents with ADHD spent more time during weekdays using screens and were therefore more likely to exhibit excessive screen and computer use.",
+      "location": "PDF page 2 (one-based file page)",
+      "relevance": "ADHD group screen-use difference does not identify exposure causing symptoms."
+    },
+    "recognition": {
+      "source_id": "PDF_063",
+      "exact_excerpt": "The overall model predicting general ADHD knowledge was significant (p = 0.020) in multivariable linear regression, but no single independent predictor re mained significant.",
+      "location": "PDF page 1 (one-based file page)",
+      "relevance": "Preterm-preschool recognition study does not establish parental education causing recognition at age eight."
+    },
+    "race_prevalence": {
+      "source_id": "PDF_047",
+      "exact_excerpt": "The study demonstrates that the type of sample and method for assessing ADHD diagnosis are important to consider.",
+      "location": "PDF page 2 (one-based file page)",
+      "relevance": "Diagnostic prevalence differences depend on ascertainment and cannot by themselves validate institutional mechanisms."
+    },
+    "digital_planned": {
+      "source_id": "PDF_067",
+      "exact_excerpt": "Of 149 identified trials, 35 ongoing studies met inclusion criteria.",
+      "location": "PDF page 1 (one-based file page)",
+      "relevance": "Planned digital/telehealth trials do not establish completed access or clinical-effect evidence."
+    },
+    "adult_cbt_symptoms": {
+      "source_id": "PDF_018",
+      "exact_excerpt": "Analysis of 14 RCTs selected from 949 identified records showed significant benefits of CBT for core ADHD symptoms (SMD = −0.45, P < 0.00001)",
+      "location": "PDF page 1 (one-based file page)",
+      "relevance": "Supports adult ADHD-specific CBT effects, not every behavioral intervention or an exact-age estimate."
+    },
+    "adult_cbt_function": {
+      "source_id": "PDF_004",
+      "exact_excerpt": "CBT produced moderate effects on global functioning at post-treatment (SMD = 0.47) that increased at follow-up (SMD = 0.67).",
+      "location": "PDF page 1 (one-based file page)",
+      "relevance": "Adult CBT functional benefit; meta-analysis mixes designs and does not isolate age 32 or 45."
+    },
+    "function_qol_distinct": {
+      "source_id": "PDF_004",
+      "exact_excerpt": "The dissociation between symptom change, QoL, and functioning suggests that functional gains may not be fully explained by symptom reduction alone, although the mechanisms underlying these effects remain unclear.",
+      "location": "PDF page 1 (one-based file page)",
+      "relevance": "Functional impairment and quality of life are related but distinct; symptom or function improvement cannot automatically prove a direct QoL edge."
+    },
+    "adult_qol_null": {
+      "source_id": "PDF_090",
+      "exact_excerpt": "No significant between-group differences were found in the proportion of participants achieving clinically meaningful QoL improvements over time.",
+      "location": "PDF page 1 (one-based file page)",
+      "relevance": "Long-term CBT follow-up found no between-group QoL benefit; this does not test diagnosis alone."
+    },
+    "adult_comorbidity": {
+      "source_id": "PDF_080",
+      "exact_excerpt": "The average effect size (Hedges’s g) of anxiety scores in those with ADHD relative to controls was 0.77 (SE = 0.066); a medium effect.",
+      "location": "PDF page 1 (one-based file page)",
+      "relevance": "Adult anxiety co-occurrence; causal direction from ADHD is not established."
+    },
+    "adult_ef": {
+      "source_id": "PDF_033",
+      "exact_excerpt": "Findings were also consistent with the involvement of executive functioning deficits, emotion dysregulation, and motivational processes, although evidence was primarily based on cross-sectional designs.",
+      "location": "PDF page 1 (one-based file page)",
+      "relevance": "Executive/self-regulatory difficulties have associated functional consequences; does not prove universal ADHD-to-deficit causation."
+    },
+    "adult_phenotype": {
+      "source_id": "PDF_093",
+      "exact_excerpt": "both groups showed substantial clinical burden.",
+      "location": "PDF page 1 (one-based file page)",
+      "relevance": "Adult groups around the two persona ages have comorbidity/impairment; cross-sectional diagnosis-age groups do not identify diagnostic benefits or cumulative age effects."
+    },
+    "work_adjustment": {
+      "source_id": "PDF_045",
+      "exact_excerpt": "workplace adjustments equivalent to reasonable accommodations are associated with a lower risk of workplace maladjustment and improved workplace adaptation among employees with high ASD or ADHD trait levels",
+      "location": "PDF page 1 (one-based file page)",
+      "relevance": "Supports qualified adult workplace-support association, not randomized effects, general functional recovery or remote-work benefit."
+    },
+    "adult_med_function": {
+      "source_id": "PDF_104",
+      "exact_excerpt": "No significant differences were found in the employment outcomes between the two groups in adjusted models.",
+      "location": "PDF page 1 (one-based file page)",
+      "relevance": "No demonstrated adjusted employment benefit in this adult observational study; not proof of medication inefficacy for all functional outcomes."
+    },
+    "adult_med_social": {
+      "source_id": "PDF_104",
+      "exact_excerpt": "Stimulant-treated adults had higher odds of social limitations (OR = 3.16 [1.50, 6.69])",
+      "location": "PDF page 1 (one-based file page)",
+      "relevance": "Confounding by indication is possible; this association cannot be treated as causal medication harm."
+    },
+    "adherence_ses": {
+      "source_id": "PDF_092",
+      "exact_excerpt": "Low socioeconomic status households or uninsured households were more likely to discontinue treatment due to cost concerns.",
+      "location": "PDF page 13 (one-based file page)",
+      "relevance": "Mixed-age review links financial resources to continuity; initial evaluation access remains a distinct outcome."
+    },
+    "adherence_access": {
+      "source_id": "PDF_092",
+      "exact_excerpt": "Access to healthcare services and communication with providers significantly influenced adherence",
+      "location": "PDF page 12 (one-based file page)",
+      "relevance": "Mixed-age synthesis relates provider communication/access to adherence, not proof that generic access creates coordination or diagnosis."
+    },
+    "adherence_digital": {
+      "source_id": "PDF_092",
+      "exact_excerpt": "digital interventions and mobile-based reminders, psychoeducational and behavioral approaches, multimodal and long-term interventions, and consent-based strategies were all linked to improved adherence.",
+      "location": "PDF page 1 (one-based file page)",
+      "relevance": "Supports specified reminder/monitoring interventions; mixed ages and designs prevent universal age-specific digital-therapy effects."
+    },
+    "adherence_stigma": {
+      "source_id": "PDF_092",
+      "exact_excerpt": "addressing barriers such as stigma, system fragmentation, and cultural mismatch",
+      "location": "PDF page 1 (one-based file page)",
+      "relevance": "Stigma appears as an engagement barrier; not a controlled exact-age effect or proof all cultural norms increase stigma."
+    },
+    "side_adherence": {
+      "source_id": "PDF_092",
+      "exact_excerpt": "Adverse effects and side effects emerged as a major adherence barrier, with the majority of patients missing doses or stopping medication to avoid physical or mental distress",
+      "location": "PDF page 10 (one-based file page)",
+      "relevance": "Mixed-age review describes adverse effects as an adherence barrier."
+    },
+    "med_efficacy_child": {
+      "source_id": "PDF_043",
+      "exact_excerpt": "In children and adolescents, methylphenidate, amphetamines, and guanfacine showed increasing median efficacy",
+      "location": "PDF page 1 (one-based file page)",
+      "relevance": "Randomized medication evidence supports symptom reduction for specified agents and age bands."
+    },
+    "med_efficacy_adult": {
+      "source_id": "PDF_043",
+      "exact_excerpt": "In adults, amphetamines showed a plateau above approximatively 50 mg/day, whereas methylphenidate",
+      "location": "PDF page 1 (one-based file page)",
+      "relevance": "Adult RCT synthesis supports drug/dose-specific efficacy; not the graph strength or an exact-age dose recommendation."
+    },
+    "med_adverse": {
+      "source_id": "PDF_043",
+      "exact_excerpt": "Dose-dependent increases in discontinuation probability due to adverse events were observed for amphetamines",
+      "location": "PDF page 1 (one-based file page)",
+      "relevance": "Controlled treatment-emergent adverse-event evidence supports the medication-to-side-effects direction across pediatric/adult groups."
+    },
+    "lifespan": {
+      "source_id": "PDF_065",
+      "exact_excerpt": "Longitudinal evidence demonstrates that ADHD trajectories are heterogeneous and non-linear, with fluctuating symptom ex pression and variable relationships to functional impairment.",
+      "location": "PDF page 1 (one-based file page)",
+      "relevance": "Prevents a universal monotonic age-to-impairment slope or treating diagnosis as a fixed causal exposure."
+    },
+    "video_quality": {
+      "source_id": "PDF_107",
+      "exact_excerpt": "A total of 228 eligible videos were analyzed.",
+      "location": "PDF page 1 (one-based file page)",
+      "relevance": "Video-quality audit cannot estimate awareness, self-diagnosis, formal diagnosis, or treatment adherence effects."
+    },
+    "exercise_limits": {
+      "source_id": "PDF_157",
+      "exact_excerpt": "Exercise yielded a small-to-moderate improvement in inhibitory control but showed no significant effects on hyperactivity/ impulsivity or inhibition-related N2 and P3 components.",
+      "location": "PDF page 1 (one-based file page)",
+      "relevance": "Domain-specific exercise effects, especially pediatric; not a demonstrated adult core-symptom effect."
+    },
+    "adult_relationship": {
+      "source_id": "PDF_062",
+      "exact_excerpt": "Adults with ADHD (N = 355) answered an open‐ended survey question asking if and how their ADHD had negatively impacted their romantic relationships.",
+      "location": "PDF page 1 (one-based file page)",
+      "relevance": "Relationship accounts concern consequences and lived experience, not family stress causing core symptoms."
+    },
+    "comorbidity_overlap": {
+      "source_id": "PDF_104",
+      "exact_excerpt": "its symptoms frequently overlap with other conditions, such as anxiety, depression, and mood disorders, further complicating its diagnosis",
+      "location": "PDF page 1 (one-based file page)",
+      "relevance": "Review context for diagnostic overlap, not a measured comorbidity-to-misdiagnosis rate."
+    }
+  }
+}

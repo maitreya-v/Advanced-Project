@@ -29,7 +29,7 @@ class DashboardValidationTests(unittest.TestCase):
         cls.functions = dashboard_functions()
 
     def test_all_validated_snapshots_preserve_layout_and_match_standalone_styles(self):
-        for year in [1970, 1990, 2010]:
+        for year in [1970, 1990, 2010, 2026]:
             for age in [8, 32, 45]:
                 with self.subTest(year=year, age=age):
                     original = self.functions["load_snapshot_from_script"](ROOT / f"{year}_{age} yo.py")
@@ -59,11 +59,11 @@ class DashboardValidationTests(unittest.TestCase):
         self.assertIn("dashboard-validation-edge", rendered)
         self.assertEqual(rendered, self.functions["build_network_html"](snapshot, 0.7, 600))
 
-    def test_2026_snapshots_remain_unannotated(self):
+    def test_2026_snapshots_have_validation_for_every_edge(self):
         for age in [8, 32, 45]:
             snapshot = self.functions["load_snapshot_from_script"](ROOT / f"2026_{age} yo.py")
-            self.assertIs(dashboard_validation.attach_validation(snapshot), snapshot)
-            self.assertNotIn("validation", snapshot)
+            annotated = dashboard_validation.attach_validation(snapshot)
+            self.assertEqual(len(annotated["validation"]["decisions"]), len(snapshot["edges"]))
 
     def test_dashboard_renders_every_year_and_age(self):
         app = AppTest.from_file(str(ROOT / "Dashboard.py"), default_timeout=60).run()

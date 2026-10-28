@@ -19,7 +19,7 @@ Open the local URL printed by Streamlit. **Explore graph** is the default and co
 
 The original GitHub dependency snapshot is preserved in `requirements-research.txt` for reference. The main `requirements.txt` installs the combined dashboard dependencies; optional clustering and CausalChat experiments may need separate environments and their own dependencies.
 
-The explorer attaches the existing snapshot-specific validation reports for 1970, 1990 and 2010. **Path story** combines those review decisions with the contextual literature registry while preserving stable relationship IDs. The older comparison-based Story mode retains its separate literature interface. No snapshot-specific report is available for 2026.
+The explorer attaches the existing snapshot-specific validation reports for 1970, 1990, 2010 and 2026, for ages 8, 32 and 45. **Path story** combines those review decisions with the contextual literature registry while preserving stable relationship IDs. The older comparison-based Story mode retains its separate literature interface.
 
 ## Understand a selected path through reasons and tiny stories
 
@@ -132,7 +132,7 @@ These are **authored model snapshots**, not validated longitudinal observations.
 - Different ages are separate scenarios; the app does not present them as one person's life history.
 - Rankings are prototype editorial choices. Expert relevance rankings and user comprehension should be used to tune them.
 
-The GitHub validation reports are retained unchanged, including source-hash checks. They do not assess the numeric strengths, and 2026 has no matching snapshot-specific review report. The local story registry remains literature context rather than validation of a complete route.
+The GitHub validation reports are retained unchanged, including source-hash checks. They do not assess the numeric strengths. The 2026 reports were imported from `main` with their supporting corpus. The local story registry remains literature context rather than validation of a complete route.
 
 ## Checks
 

@@ -1,3 +1,4 @@
+"""Combined dashboard with snapshot validation for 1970, 1990, 2010 and 2026."""
 from dashboard_corpus import render_corpus_counts
 from story_paths import render_story_paths
 from storytelling.data import load_snapshots as load_story_snapshots

@@ -9,7 +9,7 @@ class CorpusTests(unittest.TestCase):
             1970: (13, 5, 0, 0, 0, 4, 4, 0),
             1990: (200, 35, 32, 0, 32, 29, 4, 25),
             2010: (1294, 56, 54, 12, 42, 39, 24, 15),
-            2026: (1339, 183, 183, 85, 98, None, 0, 0),
+            2026: (1339, 183, 183, 85, 98, 158, 158, 0),
         }
         keys = ('total', 'selected', 'accessible', 'full_text', 'abstract_only', 'reviewed', 'reviewed_pdf', 'reviewed_abstract')
         for year, values in expected.items():

@@ -1,0 +1,478 @@
+[
+  [
+    "Genetic Risk",
+    "ADHD",
+    "+",
+    0.88,
+    "Genetic liability contributes strongly to childhood ADHD."
+  ],
+  [
+    "ADHD",
+    "Symptom Severity",
+    "+",
+    0.9,
+    "Underlying ADHD increases symptom severity."
+  ],
+  [
+    "ADHD",
+    "Symptom Type",
+    "+",
+    0.84,
+    "Underlying ADHD shapes visible behavioral presentation."
+  ],
+  [
+    "Age",
+    "Symptom Severity",
+    "+",
+    0.44,
+    "At age 8, symptoms are highly visible through behavior and school functioning."
+  ],
+  [
+    "Gender",
+    "Symptom Type",
+    "+",
+    0.36,
+    "Gender norms still influence which childhood behaviors are noticed."
+  ],
+  [
+    "Early Life Nutrition",
+    "Genetic Risk",
+    "-",
+    0.16,
+    "Early nutrition can modulate developmental vulnerability."
+  ],
+  [
+    "Nutrition Quality",
+    "Symptom Severity",
+    "-",
+    0.58,
+    "Poor nutrition may worsen behavioral regulation."
+  ],
+  [
+    "Sleep Quality",
+    "Symptom Severity",
+    "-",
+    0.68,
+    "Better sleep reduces dysregulation."
+  ],
+  [
+    "Environmental Exposure",
+    "Symptom Severity",
+    "+",
+    0.34,
+    "Environmental stressors can worsen symptoms."
+  ],
+  [
+    "Digital Media Exposure",
+    "Symptom Severity",
+    "+",
+    0.4,
+    "High digital media exposure can intensify attention dysregulation in 2026."
+  ],
+  [
+    "Symptom Severity",
+    "Functional Impairment",
+    "+",
+    0.84,
+    "More severe symptoms increase impairment."
+  ],
+  [
+    "Symptom Type",
+    "Teacher Referral Rate",
+    "+",
+    0.76,
+    "Certain symptom patterns are likely to trigger teacher concern."
+  ],
+  [
+    "School Resources",
+    "Teacher Referral Rate",
+    "+",
+    0.74,
+    "School resources strongly support detection in 2026."
+  ],
+  [
+    "Education System Pressure",
+    "Teacher Referral Rate",
+    "+",
+    0.54,
+    "Institutional pressure still influences school referral."
+  ],
+  [
+    "Teacher Referral Rate",
+    "Parental Awareness",
+    "+",
+    0.88,
+    "Teacher concerns strongly increase parental awareness."
+  ],
+  [
+    "Peer Comparison",
+    "Parental Awareness",
+    "+",
+    0.62,
+    "Peer comparison strongly contributes to family noticing."
+  ],
+  [
+    "Parental Education",
+    "Parental Awareness",
+    "+",
+    0.66,
+    "More educated parents better recognize childhood issues."
+  ],
+  [
+    "Parental Awareness",
+    "Parental Advocacy",
+    "+",
+    0.82,
+    "Awareness readily turns into family advocacy in 2026."
+  ],
+  [
+    "Parental Advocacy",
+    "Diagnosis Status",
+    "+",
+    0.82,
+    "Advocacy strongly supports evaluation and diagnosis."
+  ],
+  [
+    "Parental Advocacy",
+    "School Support Plan",
+    "+",
+    0.76,
+    "Advocating families are highly likely to secure formal school supports."
+  ],
+  [
+    "Family Stress",
+    "Symptom Severity",
+    "+",
+    0.52,
+    "Family stress can amplify visible symptoms."
+  ],
+  [
+    "Diagnosis Status",
+    "School Support Plan",
+    "+",
+    0.84,
+    "Diagnosis strongly enables formal school support."
+  ],
+  [
+    "School Support Plan",
+    "Learning Accommodations",
+    "+",
+    0.82,
+    "Support planning leads to concrete learning accommodations."
+  ],
+  [
+    "Learning Accommodations",
+    "Functional Impairment",
+    "-",
+    0.42,
+    "Accommodations reduce school-related impairment."
+  ],
+  [
+    "Socioeconomic Status",
+    "Access to Mental Health Care",
+    "+",
+    0.76,
+    "Higher SES improves access to evaluation."
+  ],
+  [
+    "Financial Status",
+    "Access to Mental Health Care",
+    "+",
+    0.78,
+    "Affordability strongly controls access."
+  ],
+  [
+    "Neighborhood Quality",
+    "Access to Mental Health Care",
+    "+",
+    0.5,
+    "Better neighborhoods provide more resources."
+  ],
+  [
+    "Provider Availability",
+    "Access to Mental Health Care",
+    "+",
+    0.86,
+    "Provider supply strongly improves access."
+  ],
+  [
+    "Telehealth Access",
+    "Access to Mental Health Care",
+    "+",
+    0.68,
+    "Telehealth expands access to evaluation and care in 2026."
+  ],
+  [
+    "Access to Mental Health Care",
+    "Diagnosis Status",
+    "+",
+    0.88,
+    "Access strongly improves diagnosis likelihood."
+  ],
+  [
+    "Access to Mental Health Care",
+    "Care Coordination",
+    "+",
+    0.72,
+    "Access increasingly leads to coordinated care pathways."
+  ],
+  [
+    "Care Coordination",
+    "School Support Plan",
+    "+",
+    0.72,
+    "Coordinated care improves school support planning."
+  ],
+  [
+    "Cost of Evaluation",
+    "Diagnosis Status",
+    "-",
+    0.5,
+    "Cost remains a barrier, though weaker than before."
+  ],
+  [
+    "Race / Ethnicity",
+    "Institutional Bias",
+    "+",
+    0.58,
+    "Structural inequities still influence institutional behavior."
+  ],
+  [
+    "Institutional Bias",
+    "Teacher Referral Rate",
+    "+",
+    0.36,
+    "Bias still affects referral patterns."
+  ],
+  [
+    "Institutional Bias",
+    "Diagnosis Status",
+    "-",
+    0.3,
+    "Bias still suppresses equitable diagnosis access."
+  ],
+  [
+    "Misdiagnosis Rate",
+    "Diagnosis Status",
+    "-",
+    0.4,
+    "Misdiagnosis still reduces accurate identification."
+  ],
+  [
+    "Cultural Norms",
+    "Stigma",
+    "+",
+    0.42,
+    "Stigma remains, but much weaker than earlier decades."
+  ],
+  [
+    "Stigma",
+    "Diagnosis Status",
+    "-",
+    0.34,
+    "Stigma still suppresses recognition somewhat."
+  ],
+  [
+    "Social Media Awareness",
+    "Parental Awareness",
+    "+",
+    0.58,
+    "Online awareness contributes to parent recognition in 2026."
+  ],
+  [
+    "Diagnosis Status",
+    "Treatment Access",
+    "+",
+    0.88,
+    "Diagnosis strongly opens structured treatment pathways for children in 2026."
+  ],
+  [
+    "Access to Mental Health Care",
+    "Treatment Access",
+    "+",
+    0.88,
+    "Healthcare access strongly controls treatment availability."
+  ],
+  [
+    "Telehealth Access",
+    "Telehealth Treatment",
+    "+",
+    0.78,
+    "Telehealth directly increases remote treatment options."
+  ],
+  [
+    "Telehealth Treatment",
+    "Treatment Access",
+    "+",
+    0.7,
+    "Telehealth expands practical treatment access."
+  ],
+  [
+    "Provider Availability",
+    "Treatment Access",
+    "+",
+    0.84,
+    "Provider supply strongly improves treatment access."
+  ],
+  [
+    "Care Coordination",
+    "Treatment Access",
+    "+",
+    0.76,
+    "Coordinated care improves treatment continuity."
+  ],
+  [
+    "Socioeconomic Status",
+    "Treatment Access",
+    "+",
+    0.72,
+    "Higher SES improves treatment access and continuity."
+  ],
+  [
+    "Treatment Access",
+    "Medication Treatment",
+    "+",
+    0.88,
+    "Treatment access makes medication treatment highly likely when clinically appropriate."
+  ],
+  [
+    "Treatment Access",
+    "Behavioral Therapy",
+    "+",
+    0.82,
+    "Treatment access enables behavioral therapy."
+  ],
+  [
+    "Treatment Access",
+    "School Accommodations",
+    "+",
+    0.84,
+    "Treatment access supports formal school accommodations."
+  ],
+  [
+    "Treatment Access",
+    "Digital Therapeutics",
+    "+",
+    0.62,
+    "Modern treatment access may include app-based or digital ADHD tools."
+  ],
+  [
+    "Medication Treatment",
+    "Symptom Severity",
+    "-",
+    0.78,
+    "Medication can substantially reduce childhood symptom burden."
+  ],
+  [
+    "Behavioral Therapy",
+    "Symptom Severity",
+    "-",
+    0.5,
+    "Behavioral therapy improves self-regulation and routines."
+  ],
+  [
+    "Behavioral Therapy",
+    "Functional Impairment",
+    "-",
+    0.6,
+    "Behavioral therapy reduces practical impairment."
+  ],
+  [
+    "School Accommodations",
+    "Functional Impairment",
+    "-",
+    0.68,
+    "School accommodations reduce academic impairment."
+  ],
+  [
+    "Digital Therapeutics",
+    "Symptom Severity",
+    "-",
+    0.36,
+    "Digital tools may modestly improve attention and structure."
+  ],
+  [
+    "Digital Therapeutics",
+    "Treatment Adherence",
+    "+",
+    0.34,
+    "Digital reminders and tracking can improve adherence."
+  ],
+  [
+    "Treatment Adherence",
+    "Medication Treatment",
+    "+",
+    0.72,
+    "Adherence increases real-world medication benefit."
+  ],
+  [
+    "Treatment Adherence",
+    "Behavioral Therapy",
+    "+",
+    0.66,
+    "Consistent participation improves therapy effect."
+  ],
+  [
+    "Treatment Dependency",
+    "Treatment Access",
+    "+",
+    0.66,
+    "Diagnosis often leads into structured treatment pathways."
+  ],
+  [
+    "Treatment Dependency",
+    "Functional Impairment",
+    "-",
+    0.58,
+    "Treatment can meaningfully reduce impairment."
+  ],
+  [
+    "Stigma",
+    "Treatment Adherence",
+    "-",
+    0.3,
+    "Stigma can still reduce consistent treatment participation."
+  ],
+  [
+    "Medication Treatment",
+    "Treatment Side Effects",
+    "+",
+    0.52,
+    "Medication side effects remain relevant to tolerability."
+  ],
+  [
+    "Treatment Side Effects",
+    "Treatment Adherence",
+    "-",
+    0.44,
+    "Side effects can reduce adherence."
+  ],
+  [
+    "Treatment Side Effects",
+    "Quality of Life",
+    "-",
+    0.18,
+    "Side effects can slightly reduce quality of life."
+  ],
+  [
+    "Overdiagnosis Pressure",
+    "Diagnosis Status",
+    "+",
+    0.58,
+    "Overdiagnosis discourse is highly visible in 2026."
+  ],
+  [
+    "Functional Impairment",
+    "Quality of Life",
+    "-",
+    0.86,
+    "Impairment reduces quality of life."
+  ],
+  [
+    "Diagnosis Status",
+    "Quality of Life",
+    "+",
+    0.82,
+    "Diagnosis can strongly improve support and quality of life."
+  ]
+]

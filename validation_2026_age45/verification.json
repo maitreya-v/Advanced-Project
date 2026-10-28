@@ -1,0 +1,37 @@
+{
+  "graph": "2026_45 yo.py",
+  "edges_reviewed": 70,
+  "pdf_files_screened": 159,
+  "unique_documents_screened": 158,
+  "selected_pdf_quotations_verified": 53,
+  "original_sha256": "16ff29dbc2765bd6a84334e626717c38e30e1a0816e5004ca02261b23bb60740",
+  "original_unchanged": true,
+  "all_edge_reasons_and_signs_preserved": true,
+  "all_original_strengths_preserved": true,
+  "strength_assessed": false,
+  "all_source_pdf_hashes_verified": true,
+  "all_citations_in_supplied_corpus": true,
+  "all_selected_excerpts_verified_against_source_pdfs": true,
+  "xlsx_xml_valid": true,
+  "xlsx_json_rows_match": true,
+  "xlsx_data_rows": 70,
+  "status_counts": {
+    "supported": 2,
+    "partially_supported": 22,
+    "contradicted": 0,
+    "mixed_evidence": 0,
+    "insufficient_evidence": 39,
+    "not_assessable": 7
+  },
+  "compact_edge_fields": [
+    "edge_id",
+    "source",
+    "dest",
+    "existing_reasoning",
+    "sign",
+    "validation_status",
+    "observation_from_validation",
+    "recommended_action",
+    "evidence"
+  ]
+}

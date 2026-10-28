@@ -1,0 +1,520 @@
+[
+  [
+    "Genetic Risk",
+    "ADHD",
+    "+",
+    0.9,
+    "Genetic vulnerability contributes to adult ADHD."
+  ],
+  [
+    "ADHD",
+    "Symptom Severity",
+    "+",
+    0.88,
+    "Underlying ADHD increases adult symptom severity."
+  ],
+  [
+    "ADHD",
+    "Symptom Type",
+    "+",
+    0.82,
+    "ADHD shapes inattentive, hyperactive, or combined presentation."
+  ],
+  [
+    "ADHD",
+    "Executive Function Deficit",
+    "+",
+    0.88,
+    "ADHD strongly affects executive functioning."
+  ],
+  [
+    "ADHD",
+    "Comorbid Conditions",
+    "+",
+    0.68,
+    "ADHD commonly co-occurs with anxiety, mood, or learning difficulties."
+  ],
+  [
+    "Age",
+    "Symptom Severity",
+    "-",
+    0.24,
+    "At age 32, overt hyperactivity may reduce but inattentive impairment can remain."
+  ],
+  [
+    "Gender",
+    "Symptom Type",
+    "+",
+    0.34,
+    "Gender norms still influence which adult symptoms are noticed."
+  ],
+  [
+    "Nutrition Quality",
+    "Symptom Severity",
+    "-",
+    0.46,
+    "Better nutrition may support regulation and attention."
+  ],
+  [
+    "Sleep Quality",
+    "Symptom Severity",
+    "-",
+    0.7,
+    "Better sleep improves attention and regulation."
+  ],
+  [
+    "Physical Activity",
+    "Symptom Severity",
+    "-",
+    0.5,
+    "Physical activity may reduce symptom burden."
+  ],
+  [
+    "Screen Time",
+    "Symptom Severity",
+    "+",
+    0.34,
+    "Screen exposure may affect attention."
+  ],
+  [
+    "Digital Media Exposure",
+    "Symptom Severity",
+    "+",
+    0.36,
+    "Digital media exposure can intensify attention dysregulation."
+  ],
+  [
+    "Chronic Stress Load",
+    "Symptom Severity",
+    "+",
+    0.68,
+    "Stress amplifies adult symptoms."
+  ],
+  [
+    "Symptom Severity",
+    "Functional Impairment",
+    "+",
+    0.84,
+    "Higher symptoms increase occupational and daily impairment."
+  ],
+  [
+    "Executive Function Deficit",
+    "Functional Impairment",
+    "+",
+    0.84,
+    "Executive dysfunction creates practical impairment."
+  ],
+  [
+    "Comorbid Conditions",
+    "Functional Impairment",
+    "+",
+    0.74,
+    "Comorbid burden increases impairment."
+  ],
+  [
+    "Functional Impairment",
+    "Employment Instability",
+    "+",
+    0.68,
+    "Impairment can destabilize employment."
+  ],
+  [
+    "Performance Pressure",
+    "Functional Impairment",
+    "+",
+    0.34,
+    "Performance demands make executive dysfunction more visible."
+  ],
+  [
+    "Workplace Accommodations",
+    "Functional Impairment",
+    "-",
+    0.5,
+    "Workplace accommodations reduce impairment."
+  ],
+  [
+    "Remote Work Flexibility",
+    "Functional Impairment",
+    "-",
+    0.42,
+    "Flexible work can reduce adult ADHD-related impairment."
+  ],
+  [
+    "Family Stress",
+    "Symptom Severity",
+    "+",
+    0.54,
+    "Adult family stress can intensify symptoms."
+  ],
+  [
+    "Household Stability",
+    "Family Stress",
+    "-",
+    0.64,
+    "Stable household context reduces family stress."
+  ],
+  [
+    "Socioeconomic Status",
+    "Access to Mental Health Care",
+    "+",
+    0.82,
+    "Higher SES improves access to specialists and services."
+  ],
+  [
+    "Financial Status",
+    "Access to Mental Health Care",
+    "+",
+    0.76,
+    "Income controls access to healthcare."
+  ],
+  [
+    "Neighborhood Quality",
+    "Access to Mental Health Care",
+    "+",
+    0.5,
+    "Better neighborhood conditions improve resource access."
+  ],
+  [
+    "Provider Availability",
+    "Access to Mental Health Care",
+    "+",
+    0.84,
+    "More providers improve assessment chances."
+  ],
+  [
+    "Telehealth Access",
+    "Access to Mental Health Care",
+    "+",
+    0.72,
+    "Telehealth expands assessment and care access."
+  ],
+  [
+    "Cost of Evaluation",
+    "Diagnosis Status",
+    "-",
+    0.52,
+    "Evaluation cost remains a diagnosis barrier."
+  ],
+  [
+    "Access to Mental Health Care",
+    "Diagnosis Status",
+    "+",
+    0.86,
+    "Access to care strongly affects adult diagnosis."
+  ],
+  [
+    "Online Health Information",
+    "Self-Diagnosis Behavior",
+    "+",
+    0.7,
+    "Online information increases adult self-recognition."
+  ],
+  [
+    "Social Media Awareness",
+    "Self-Diagnosis Behavior",
+    "+",
+    0.66,
+    "Social media awareness increases self-recognition."
+  ],
+  [
+    "Self-Diagnosis Behavior",
+    "Diagnosis Status",
+    "+",
+    0.58,
+    "Self-recognition increases help-seeking."
+  ],
+  [
+    "Care Coordination",
+    "Functional Impairment",
+    "-",
+    0.42,
+    "Coordinated care can reduce impairment."
+  ],
+  [
+    "Race / Ethnicity",
+    "Institutional Bias",
+    "+",
+    0.56,
+    "Structural inequities influence institutions and healthcare pathways."
+  ],
+  [
+    "Institutional Bias",
+    "Misdiagnosis Rate",
+    "+",
+    0.5,
+    "Bias increases diagnostic errors."
+  ],
+  [
+    "Institutional Bias",
+    "Diagnosis Status",
+    "-",
+    0.36,
+    "Bias suppresses equitable diagnosis access."
+  ],
+  [
+    "Diagnostic Criteria Variability",
+    "Misdiagnosis Rate",
+    "+",
+    0.66,
+    "Different interpretations increase misdiagnosis risk."
+  ],
+  [
+    "Comorbid Conditions",
+    "Misdiagnosis Rate",
+    "+",
+    0.64,
+    "Comorbidity can obscure accurate ADHD diagnosis."
+  ],
+  [
+    "Misdiagnosis Rate",
+    "Diagnosis Status",
+    "-",
+    0.62,
+    "Misdiagnosis reduces accurate diagnosis."
+  ],
+  [
+    "Cultural Norms",
+    "Stigma",
+    "+",
+    0.44,
+    "Cultural norms shape stigma."
+  ],
+  [
+    "Stigma",
+    "Diagnosis Status",
+    "-",
+    0.34,
+    "Stigma reduces willingness to seek diagnosis."
+  ],
+  [
+    "Stigma",
+    "Access to Mental Health Care",
+    "-",
+    0.3,
+    "Stigma suppresses help-seeking."
+  ],
+  [
+    "Gender Bias",
+    "Misdiagnosis Rate",
+    "+",
+    0.4,
+    "Gender stereotypes still increase diagnostic error."
+  ],
+  [
+    "Diagnosis Status",
+    "Treatment Access",
+    "+",
+    0.82,
+    "By 2026, adult diagnosis commonly opens treatment pathways."
+  ],
+  [
+    "Access to Mental Health Care",
+    "Treatment Access",
+    "+",
+    0.86,
+    "Mental healthcare access strongly improves treatment availability."
+  ],
+  [
+    "Provider Availability",
+    "Treatment Access",
+    "+",
+    0.8,
+    "Provider supply improves adult treatment access."
+  ],
+  [
+    "Telehealth Access",
+    "Telehealth Treatment",
+    "+",
+    0.78,
+    "Telehealth directly improves remote treatment availability."
+  ],
+  [
+    "Telehealth Treatment",
+    "Treatment Access",
+    "+",
+    0.72,
+    "Telehealth expands practical treatment access."
+  ],
+  [
+    "Socioeconomic Status",
+    "Treatment Access",
+    "+",
+    0.74,
+    "Higher SES improves treatment access and continuity."
+  ],
+  [
+    "Self-Diagnosis Behavior",
+    "Treatment Access",
+    "+",
+    0.56,
+    "Self-recognition increases treatment seeking."
+  ],
+  [
+    "Care Coordination",
+    "Treatment Access",
+    "+",
+    0.66,
+    "Coordinated care improves treatment continuity."
+  ],
+  [
+    "Treatment Access",
+    "Medication Treatment",
+    "+",
+    0.8,
+    "Treatment access makes medication more likely."
+  ],
+  [
+    "Treatment Access",
+    "Behavioral Therapy",
+    "+",
+    0.74,
+    "Treatment access supports behavioral therapy."
+  ],
+  [
+    "Treatment Access",
+    "Workplace Support",
+    "+",
+    0.54,
+    "Treatment access can support workplace accommodations."
+  ],
+  [
+    "Treatment Access",
+    "Digital Therapeutics",
+    "+",
+    0.6,
+    "Modern care may include digital ADHD tools."
+  ],
+  [
+    "Medication Treatment",
+    "Symptom Severity",
+    "-",
+    0.72,
+    "Medication can reduce adult symptom severity."
+  ],
+  [
+    "Medication Treatment",
+    "Functional Impairment",
+    "-",
+    0.5,
+    "Medication may reduce adult impairment."
+  ],
+  [
+    "Behavioral Therapy",
+    "Symptom Severity",
+    "-",
+    0.42,
+    "Behavioral therapy can modestly reduce symptom expression."
+  ],
+  [
+    "Behavioral Therapy",
+    "Functional Impairment",
+    "-",
+    0.54,
+    "Behavioral therapy reduces practical impairment."
+  ],
+  [
+    "Workplace Support",
+    "Functional Impairment",
+    "-",
+    0.5,
+    "Workplace support reduces occupational impairment."
+  ],
+  [
+    "Digital Therapeutics",
+    "Symptom Severity",
+    "-",
+    0.34,
+    "Digital tools may modestly improve attention and structure."
+  ],
+  [
+    "Digital Therapeutics",
+    "Treatment Adherence",
+    "+",
+    0.36,
+    "Digital tracking and reminders can improve adherence."
+  ],
+  [
+    "Treatment Adherence",
+    "Medication Treatment",
+    "+",
+    0.66,
+    "Adherence increases medication benefit."
+  ],
+  [
+    "Treatment Adherence",
+    "Behavioral Therapy",
+    "+",
+    0.6,
+    "Participation improves behavioral therapy effect."
+  ],
+  [
+    "Online Health Information",
+    "Treatment Adherence",
+    "+",
+    0.38,
+    "Online information can improve understanding and follow-up."
+  ],
+  [
+    "Treatment Dependency",
+    "Treatment Access",
+    "+",
+    0.58,
+    "Diagnosis often leads into structured treatment pathways."
+  ],
+  [
+    "Stigma",
+    "Treatment Adherence",
+    "-",
+    0.34,
+    "Stigma can reduce treatment continuation."
+  ],
+  [
+    "Medication Treatment",
+    "Treatment Side Effects",
+    "+",
+    0.5,
+    "Medication side effects affect tolerability."
+  ],
+  [
+    "Treatment Side Effects",
+    "Treatment Adherence",
+    "-",
+    0.48,
+    "Side effects can reduce adherence."
+  ],
+  [
+    "Treatment Side Effects",
+    "Quality of Life",
+    "-",
+    0.22,
+    "Side effects can slightly reduce quality of life."
+  ],
+  [
+    "Overdiagnosis Pressure",
+    "Diagnosis Status",
+    "+",
+    0.48,
+    "Overdiagnosis discourse affects diagnosis patterns."
+  ],
+  [
+    "Diagnosis Status",
+    "Functional Impairment",
+    "-",
+    0.54,
+    "Diagnosis can reduce impairment through treatment and support."
+  ],
+  [
+    "Functional Impairment",
+    "Quality of Life",
+    "-",
+    0.88,
+    "Impairment lowers adult quality of life."
+  ],
+  [
+    "Diagnosis Status",
+    "Quality of Life",
+    "+",
+    0.7,
+    "Diagnosis can improve quality of life through support and treatment."
+  ]
+]

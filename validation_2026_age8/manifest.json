@@ -1,0 +1,1457 @@
+{
+  "graph_file": "2026_8 yo.py",
+  "graph_sha256": "528fd62b72ebb4aa514344a46cf98b72c1658f15a9517ffc8ee85841d2a21868",
+  "graph_year": 2026,
+  "age": 8,
+  "edge_count": 68,
+  "pdf_file_count": 159,
+  "unique_document_count": 158,
+  "html_file_count": 0,
+  "total_pdf_pages": 2212,
+  "cited_document_count": 26,
+  "validation_updated_utc": "2026-10-22T05:12:14.158850+00:00",
+  "original_unchanged": true,
+  "strength_assessed": false,
+  "status_counts": {
+    "supported": 2,
+    "partially_supported": 31,
+    "contradicted": 0,
+    "mixed_evidence": 0,
+    "insufficient_evidence": 22,
+    "not_assessable": 13
+  },
+  "reviewed_corpus_sha256": "5dba64601f1a110cda86033104b1fc9c2379b0f02fa8764fe8b647c4dbedcd2b",
+  "documents": [
+    {
+      "file": "full_texts/1-s2.0-S0001691826002933-main.pdf",
+      "source_file": "2026 ADHD Papers/1-s2.0-S0001691826002933-main.pdf",
+      "source_id": "PDF_001",
+      "sha256": "8fc13d7191fd0f644ef2f6f1d30f74dadced6a724dc24e220877ee36f0ecb759",
+      "text_sha256": "bf03338f2b784e2d245be5f69f7b2da379f83ae8ee3c5dfcb4a1ebfcadab43a3",
+      "duplicate_of": null,
+      "page_count": 12
+    },
+    {
+      "file": "full_texts/1-s2.0-S0001691826006839-main.pdf",
+      "source_file": "2026 ADHD Papers/1-s2.0-S0001691826006839-main.pdf",
+      "source_id": "PDF_002",
+      "sha256": "85413ec030801560f43a9be4aa89fdb3028d34e4dc67e2cdabaca08ff511d712",
+      "text_sha256": "363be11daa2f5009fde780a4d0d99c6dc931598ceea22da7b8741d2875064a9c",
+      "duplicate_of": null,
+      "page_count": 9
+    },
+    {
+      "file": "full_texts/1-s2.0-S0001691826009352-main.pdf",
+      "source_file": "2026 ADHD Papers/1-s2.0-S0001691826009352-main.pdf",
+      "source_id": "PDF_003",
+      "sha256": "b694ea25820cd89cf88ed7e3ad872aecc12f3c1d03354cfc643b6c33779c3dcc",
+      "text_sha256": "dfa583e2f488a811da6a5b7f41133698ba27560bbcd9f7f40c05860734368f89",
+      "duplicate_of": null,
+      "page_count": 7
+    },
+    {
+      "file": "full_texts/1-s2.0-S0005796726000781-main.pdf",
+      "source_file": "2026 ADHD Papers/1-s2.0-S0005796726000781-main.pdf",
+      "source_id": "PDF_004",
+      "sha256": "b88bfea13eebb86c0469c0a0dcbd20ee529763b496ef7027d2c19200dabdf58c",
+      "text_sha256": "14ce95618c0337d16d8e3bdc0001e86cfeafa7ea86a8740c36d945dd044a020d",
+      "duplicate_of": null,
+      "page_count": 18
+    },
+    {
+      "file": "full_texts/1-s2.0-S0006322325015306-main.pdf",
+      "source_file": "2026 ADHD Papers/1-s2.0-S0006322325015306-main.pdf",
+      "source_id": "PDF_005",
+      "sha256": "b4df3914d6b7755ff41bd634ba4350365c9a260e72bb20dc6b96a13171a3bd0e",
+      "text_sha256": "8142f1734e74d6310b0be34f46e58530feccb1acc3655cfc32b6cda00233a26c",
+      "duplicate_of": null,
+      "page_count": 10
+    },
+    {
+      "file": "full_texts/1-s2.0-S0022395625006776.pdf",
+      "source_file": "2026 ADHD Papers/1-s2.0-S0022395625006776.pdf",
+      "source_id": "PDF_006",
+      "sha256": "4fe395f944e5bb9b49558e59efe1f721460d8a152fc3414adfb4a2350fa106f0",
+      "text_sha256": "feaf997393519c5d0e2acfc288d259119157f7e66f825173e7080fae76da7d27",
+      "duplicate_of": null,
+      "page_count": 7
+    },
+    {
+      "file": "full_texts/1-s2.0-S0022395625007563.pdf",
+      "source_file": "2026 ADHD Papers/1-s2.0-S0022395625007563.pdf",
+      "source_id": "PDF_007",
+      "sha256": "62952ebe398faaecaf548962d3ed254fe53e3e0f2bee4ec5ed0d6a265e49c547",
+      "text_sha256": "d089d3c56a0614aee903b62ed8daa349cc4e5f869d16ac2c4582853c7618169d",
+      "duplicate_of": null,
+      "page_count": 6
+    },
+    {
+      "file": "full_texts/1-s2.0-S0022395626000300.pdf",
+      "source_file": "2026 ADHD Papers/1-s2.0-S0022395626000300.pdf",
+      "source_id": "PDF_008",
+      "sha256": "53b9b4ed5efc0c7541ad1886b6f73d6d137ed1efb5161791c1a120ef21d9b605",
+      "text_sha256": "558a30dc5a2bdd7284b7a51269a764a116a2a10eeda804288411b565e2ea9418",
+      "duplicate_of": null,
+      "page_count": 11
+    },
+    {
+      "file": "full_texts/1-s2.0-S0022395626000506.pdf",
+      "source_file": "2026 ADHD Papers/1-s2.0-S0022395626000506.pdf",
+      "source_id": "PDF_009",
+      "sha256": "4def5a6cff787109134d95316a5fe690f9aef883c102e9ed53c739609348b845",
+      "text_sha256": "90cf0d43fef56c8975495fe368167bd80fa88a4c737e00322d90b70870d29ff7",
+      "duplicate_of": null,
+      "page_count": 13
+    },
+    {
+      "file": "full_texts/1-s2.0-S0033350626001411.pdf",
+      "source_file": "2026 ADHD Papers/1-s2.0-S0033350626001411.pdf",
+      "source_id": "PDF_010",
+      "sha256": "1dca21b384dbf7ded4737d11552d9f0dc6eadb3b247e820441b4c59708be10f5",
+      "text_sha256": "191a233dc8b08dda435f0c38f62a7a1ff908d0c3dfacd2c10bc6bac1d353e12a",
+      "duplicate_of": null,
+      "page_count": 11
+    },
+    {
+      "file": "full_texts/1-s2.0-S0147651326004987-main.pdf",
+      "source_file": "2026 ADHD Papers/1-s2.0-S0147651326004987-main.pdf",
+      "source_id": "PDF_011",
+      "sha256": "9b6d8e741d60a2b504acf46c5b9476392eda86ba61c14814db971ab1aacf7239",
+      "text_sha256": "06f9cca3ba1523927e936e51783db7865a11aac95157b141c3d1f48a09c03398",
+      "duplicate_of": null,
+      "page_count": 20
+    },
+    {
+      "file": "full_texts/1-s2.0-S0149763426000254-main.pdf",
+      "source_file": "2026 ADHD Papers/1-s2.0-S0149763426000254-main.pdf",
+      "source_id": "PDF_012",
+      "sha256": "59ea5d725888a39ba8e41c4c1f1177aaa8ab4093dc683997937758e6525a177e",
+      "text_sha256": "8b79a83bce630888b43da2471b00ca513af7518b79f01384d7f6221b05c3fc92",
+      "duplicate_of": null,
+      "page_count": 16
+    },
+    {
+      "file": "full_texts/1-s2.0-S0149763426001806-main.pdf",
+      "source_file": "2026 ADHD Papers/1-s2.0-S0149763426001806-main.pdf",
+      "source_id": "PDF_013",
+      "sha256": "b43eb966c6f7d1d2740f7f3144fa1e860ef774a2576437a97211405c97f60445",
+      "text_sha256": "2818cbf8580a680c3c9d92d95cb083d33dc5d9d883255d5f557670b298247719",
+      "duplicate_of": null,
+      "page_count": 16
+    },
+    {
+      "file": "full_texts/1-s2.0-S0163834326000253.pdf",
+      "source_file": "2026 ADHD Papers/1-s2.0-S0163834326000253.pdf",
+      "source_id": "PDF_014",
+      "sha256": "905737fb6e059d0c9545bea278fa16f90a3e0dc7657f4e1f402306d54b7bb932",
+      "text_sha256": "30a6bbe703408d40e32282d7a69bef81981c6c07e615a7d6c31133eb07e02058",
+      "duplicate_of": null,
+      "page_count": 10
+    },
+    {
+      "file": "full_texts/1-s2.0-S0165032725016106-main.pdf",
+      "source_file": "2026 ADHD Papers/1-s2.0-S0165032725016106-main.pdf",
+      "source_id": "PDF_015",
+      "sha256": "754c9337378b61baeff6b289532b09471a7083f0f5fb3258b5f082beb42bfb86",
+      "text_sha256": "3b9a180080444ecd2b9763a3480bed5a830cb5d9f4454aa4151dcc0eb7aa9321",
+      "duplicate_of": null,
+      "page_count": 10
+    },
+    {
+      "file": "full_texts/1-s2.0-S0165032725017641-main.pdf",
+      "source_file": "2026 ADHD Papers/1-s2.0-S0165032725017641-main.pdf",
+      "source_id": "PDF_016",
+      "sha256": "3373a980cd97778e2334697afc0bdc1db12193e45b7382b307b36034a94ec61c",
+      "text_sha256": "a552fad5047b419d0be28df167bdb38d676629f0e3c8bb2a487a1b3de75d2918",
+      "duplicate_of": null,
+      "page_count": 7
+    },
+    {
+      "file": "full_texts/1-s2.0-S016503272502172X-main.pdf",
+      "source_file": "2026 ADHD Papers/1-s2.0-S016503272502172X-main.pdf",
+      "source_id": "PDF_017",
+      "sha256": "41eaf68ebcde87f7176c6522ac928e17c6f66bd163b8b0529cf7e850160610bb",
+      "text_sha256": "6872cfa740e170ca6e8720f321907f47730d7ec9f8563efbabdac8a1e4a33de5",
+      "duplicate_of": null,
+      "page_count": 10
+    },
+    {
+      "file": "full_texts/1-s2.0-S0165032725025492-main.pdf",
+      "source_file": "2026 ADHD Papers/1-s2.0-S0165032725025492-main.pdf",
+      "source_id": "PDF_018",
+      "sha256": "365b02225b379d55d3ec284269c588569a787b51e73d44ac2ec6b75579dca85f",
+      "text_sha256": "353740952897c91ee5155325dd2ba58d00261c350e95d28d9c1684cec22b4409",
+      "duplicate_of": null,
+      "page_count": 17
+    },
+    {
+      "file": "full_texts/1-s2.0-S0165032726000984-main.pdf",
+      "source_file": "2026 ADHD Papers/1-s2.0-S0165032726000984-main.pdf",
+      "source_id": "PDF_019",
+      "sha256": "6594b9d70ca7cf6524ed3ddd71b194fceae39cc0c37534832a5466b4cd947ddf",
+      "text_sha256": "03a99c5b40e530616f0d43d4e53e941e92dd839bc4946378dc20c6bb1a0098d5",
+      "duplicate_of": null,
+      "page_count": 10
+    },
+    {
+      "file": "full_texts/1-s2.0-S0165032726009894-main.pdf",
+      "source_file": "2026 ADHD Papers/1-s2.0-S0165032726009894-main.pdf",
+      "source_id": "PDF_020",
+      "sha256": "eb97e6ee7889336ad1a0a1a57c68dde2d19888b38c719d198cdd7e07d3c4c7e4",
+      "text_sha256": "1ca73fb2ddc76144e7d94aeb440cb82ddb99ff2e6c438f66adc166ae63ae8fc5",
+      "duplicate_of": null,
+      "page_count": 20
+    },
+    {
+      "file": "full_texts/1-s2.0-S0165178125005293-main.pdf",
+      "source_file": "2026 ADHD Papers/1-s2.0-S0165178125005293-main.pdf",
+      "source_id": "PDF_021",
+      "sha256": "40d48ead3b55e4e3124763a59d049e11a3b8b597cc43fbc9c797c011aabccf3b",
+      "text_sha256": "138d50b062973f9128084b54a09df8d4a237969ed82ee18d9151db31716d4703",
+      "duplicate_of": null,
+      "page_count": 6
+    },
+    {
+      "file": "full_texts/1-s2.0-S0165178126000363-main.pdf",
+      "source_file": "2026 ADHD Papers/1-s2.0-S0165178126000363-main.pdf",
+      "source_id": "PDF_022",
+      "sha256": "41ab447540521e8d41f5684171c0af5140016a380174b2999cbb14486b0014fd",
+      "text_sha256": "b6d0361f2fe71fd93741926906cbca8bf8fa31b2a6573bfda5e5469f2d0b03cc",
+      "duplicate_of": null,
+      "page_count": 10
+    },
+    {
+      "file": "full_texts/1-s2.0-S0165178126001460-main.pdf",
+      "source_file": "2026 ADHD Papers/1-s2.0-S0165178126001460-main.pdf",
+      "source_id": "PDF_023",
+      "sha256": "bc822555dc817b718ad8c160c5a5c05a812b662ba669ffb09a6dc4a293f85a38",
+      "text_sha256": "22ec1f60aa6e84e96bf187a37f9c5d945f3a77fb923083d00ae61ff5db6a1ae0",
+      "duplicate_of": null,
+      "page_count": 11
+    },
+    {
+      "file": "full_texts/1-s2.0-S0165178126003276-main.pdf",
+      "source_file": "2026 ADHD Papers/1-s2.0-S0165178126003276-main.pdf",
+      "source_id": "PDF_024",
+      "sha256": "9ae953f870315c61ad963795ac6cebbca04cbea63050bddc67a558feda681168",
+      "text_sha256": "d82de6662873cf40322d118c417c7df5e6c88ae1d705f203b827b8f65426f1e1",
+      "duplicate_of": null,
+      "page_count": 17
+    },
+    {
+      "file": "full_texts/1-s2.0-S0272735825001552-main.pdf",
+      "source_file": "2026 ADHD Papers/1-s2.0-S0272735825001552-main.pdf",
+      "source_id": "PDF_025",
+      "sha256": "7efdef3f5fb28b158f0a7246ac4665c62ce7b0a8f56b703ecafb3d8a101373be",
+      "text_sha256": "c817a5de55f3c0b6b34ecac6ef97d5c32be9488dd03aa72603023a2ef2c259f6",
+      "duplicate_of": null,
+      "page_count": 15
+    },
+    {
+      "file": "full_texts/1-s2.0-S0277953626006258-main.pdf",
+      "source_file": "2026 ADHD Papers/1-s2.0-S0277953626006258-main.pdf",
+      "source_id": "PDF_026",
+      "sha256": "06f94b3a5e61cc11e235a19a7c9410cf663668ba3f1cc02c040b908fe7be4af7",
+      "text_sha256": "8adb8b49de6f9d9343af81e15180710f45103fb0d0375e2fd1b02cb8c27a506a",
+      "duplicate_of": null,
+      "page_count": 9
+    },
+    {
+      "file": "full_texts/1-s2.0-S0387760426000343.pdf",
+      "source_file": "2026 ADHD Papers/1-s2.0-S0387760426000343.pdf",
+      "source_id": "PDF_027",
+      "sha256": "11ae74cfd41922d8824624f24d941816da89b4d91c2e237b2ae9f79068f2d8da",
+      "text_sha256": "fb023bd31710beec06f815d2016bb698d35e1edf1b1dc046893f700bba56c694",
+      "duplicate_of": null,
+      "page_count": 9
+    },
+    {
+      "file": "full_texts/1-s2.0-S088259632600151X-main.pdf",
+      "source_file": "2026 ADHD Papers/1-s2.0-S088259632600151X-main.pdf",
+      "source_id": "PDF_028",
+      "sha256": "97527dc3b4e297c6819e30d25d96997fbbd87081531a4e477ef8910eb295db3b",
+      "text_sha256": "df56ac66d85a465893f488511d72384c06d7abad16341fe44743b00397a7201e",
+      "duplicate_of": null,
+      "page_count": 8
+    },
+    {
+      "file": "full_texts/1-s2.0-S0890856725002151-main.pdf",
+      "source_file": "2026 ADHD Papers/1-s2.0-S0890856725002151-main.pdf",
+      "source_id": "PDF_029",
+      "sha256": "d3819deebe9b0430c1d3c256db43c7a7dab7c569a7262bf45ea84fba4411be02",
+      "text_sha256": "cc5b8fd3abf5b1db73569e536e2288bc283938e4a6b42cae1a386d1a084522ca",
+      "duplicate_of": null,
+      "page_count": 19
+    },
+    {
+      "file": "full_texts/1-s2.0-S0890856725003399-main.pdf",
+      "source_file": "2026 ADHD Papers/1-s2.0-S0890856725003399-main.pdf",
+      "source_id": "PDF_030",
+      "sha256": "16320b9c186da82d69859ff1bc1c97e829aa3704f07b9810755eab8f53a868a3",
+      "text_sha256": "ae589b917c27ef02a59eb1bd031515e7247a5de61d0ae01d4e3482ff82d56b1b",
+      "duplicate_of": null,
+      "page_count": 23
+    },
+    {
+      "file": "full_texts/1-s2.0-S0890856725020519-main.pdf",
+      "source_file": "2026 ADHD Papers/1-s2.0-S0890856725020519-main.pdf",
+      "source_id": "PDF_031",
+      "sha256": "267b1f41fce6b875c4b52b75e09e8dd1fc383622898e3ed6e695bbbf175d6d86",
+      "text_sha256": "4a683fb65f0f7c9356911b921f79b47100c83c864f76fa81edddacbec7fd189b",
+      "duplicate_of": null,
+      "page_count": 12
+    },
+    {
+      "file": "full_texts/1-s2.0-S0891422226000715-main.pdf",
+      "source_file": "2026 ADHD Papers/1-s2.0-S0891422226000715-main.pdf",
+      "source_id": "PDF_032",
+      "sha256": "179747879a5cc9a6af50c06cce215d21f37b9427b6706f7d8d1bfd7aa9c9d313",
+      "text_sha256": "34c7e42f16bef09bd89f675050be30cce3687cf9b7f1598dabc3a6dccc94da30",
+      "duplicate_of": null,
+      "page_count": 12
+    },
+    {
+      "file": "full_texts/1-s2.0-S089142222600137X-main.pdf",
+      "source_file": "2026 ADHD Papers/1-s2.0-S089142222600137X-main.pdf",
+      "source_id": "PDF_033",
+      "sha256": "6ba0cb3f2b5a1c6ba762505db2034f4992144a8416bc8a9caad400acb6648392",
+      "text_sha256": "dd6754b7e29660ceb78afac27b581675d9658b12d217d25a3ff3aa1a922ace6f",
+      "duplicate_of": null,
+      "page_count": 11
+    },
+    {
+      "file": "full_texts/1-s2.0-S0925492726001502.pdf",
+      "source_file": "2026 ADHD Papers/1-s2.0-S0925492726001502.pdf",
+      "source_id": "PDF_034",
+      "sha256": "02bd8f685d38edb3ecb6752e2a57182324c4bc808580a2a8613332ed5e29cfef",
+      "text_sha256": "44a60e7b9dacd07962c10006876101a0f61cf13dc6bf047882ac59aec492b26e",
+      "duplicate_of": null,
+      "page_count": 7
+    },
+    {
+      "file": "full_texts/1-s2.0-S0929693X26001296-main.pdf",
+      "source_file": "2026 ADHD Papers/1-s2.0-S0929693X26001296-main.pdf",
+      "source_id": "PDF_035",
+      "sha256": "93fdd7a3ae22b5a31d2f0c6a08339210478053280b07397a9ae8750c21bfc06d",
+      "text_sha256": "5efb58f4c4d37295f035b32b89f700c4aa1f91fb989d001b07f233c03c33d19f",
+      "duplicate_of": null,
+      "page_count": 12
+    },
+    {
+      "file": "full_texts/1-s2.0-S1087079226000754-main (1).pdf",
+      "source_file": "2026 ADHD Papers/1-s2.0-S1087079226000754-main (1).pdf",
+      "source_id": "PDF_036",
+      "sha256": "41f0606914603cd707c8d7e273c4f3c80d88ce0a43ff09805090ec323952f5d0",
+      "text_sha256": "2a37257ee155a09c0087b30268ddf80856204cc08ba87e3287f3dfa58f1122b6",
+      "duplicate_of": null,
+      "page_count": 11
+    },
+    {
+      "file": "full_texts/1-s2.0-S1087079226000754-main.pdf",
+      "source_file": "2026 ADHD Papers/1-s2.0-S1087079226000754-main.pdf",
+      "source_id": "PDF_037",
+      "sha256": "9eece4bed6b9664d843433b78fa0f69574b0181b2a2819efa28323b04a8a2e3b",
+      "text_sha256": "2a37257ee155a09c0087b30268ddf80856204cc08ba87e3287f3dfa58f1122b6",
+      "duplicate_of": "PDF_036",
+      "page_count": 11
+    },
+    {
+      "file": "full_texts/1-s2.0-S1386505626001577.pdf",
+      "source_file": "2026 ADHD Papers/1-s2.0-S1386505626001577.pdf",
+      "source_id": "PDF_038",
+      "sha256": "06ce35e2f188c28fbfa621efb92e7a668e2f5a151386c3e769ca5530bb84944a",
+      "text_sha256": "3586f7d28c6874ef54251375a1132650f8e0986cdbd0eb615ba129713efc0479",
+      "duplicate_of": null,
+      "page_count": 15
+    },
+    {
+      "file": "full_texts/1-s2.0-S1389945726003771-main.pdf",
+      "source_file": "2026 ADHD Papers/1-s2.0-S1389945726003771-main.pdf",
+      "source_id": "PDF_039",
+      "sha256": "a6cf567c11b42b8a159967d35883a7252746e1274e5a2c94a2b147cb01ba0aa1",
+      "text_sha256": "093f3b639733daa96ae17a8ee7c8517befa577781f69c6d7690eaf263800a141",
+      "duplicate_of": null,
+      "page_count": 9
+    },
+    {
+      "file": "full_texts/1-s2.0-S152550502500592X.pdf",
+      "source_file": "2026 ADHD Papers/1-s2.0-S152550502500592X.pdf",
+      "source_id": "PDF_040",
+      "sha256": "5ebc3650701d024f6dbbb828234de448b59f0cb3716bcd932b69e26477986f31",
+      "text_sha256": "f2d3416560e6a3de6518454cc3ed48ef59e2c5239682a4368503ddf4a2a473d3",
+      "duplicate_of": null,
+      "page_count": 12
+    },
+    {
+      "file": "full_texts/1-s2.0-S1525505026000867.pdf",
+      "source_file": "2026 ADHD Papers/1-s2.0-S1525505026000867.pdf",
+      "source_id": "PDF_041",
+      "sha256": "8ac5b08701c39988d866c39eb10a8337e7cbfcf2356dee234d789da405dbee15",
+      "text_sha256": "afe0658b8d756c52469064ef52e6aa057a56d66fd1f9e4b920a76c354e559cb9",
+      "duplicate_of": null,
+      "page_count": 14
+    },
+    {
+      "file": "full_texts/1-s2.0-S1878929326000575-main.pdf",
+      "source_file": "2026 ADHD Papers/1-s2.0-S1878929326000575-main.pdf",
+      "source_id": "PDF_042",
+      "sha256": "1679e1b10c4c8a421a77a1db14389fd00a606307798e736c28eb1d2d123a762a",
+      "text_sha256": "0e323607aab9240a9a18afb2cc1e27dc05d3143a4b3729c16c01aa264ab294cd",
+      "duplicate_of": null,
+      "page_count": 16
+    },
+    {
+      "file": "full_texts/1-s2.0-S221503662600091X.pdf",
+      "source_file": "2026 ADHD Papers/1-s2.0-S221503662600091X.pdf",
+      "source_id": "PDF_043",
+      "sha256": "183526ce386bc37ee699b2d661130f8e101edcfee110bd0f8d89188830e22c84",
+      "text_sha256": "2268e737b5b6ad144e53c9b882c126ec2676d5e3310cb5811cee584ca22dedc8",
+      "duplicate_of": null,
+      "page_count": 11
+    },
+    {
+      "file": "full_texts/167.full.pdf",
+      "source_file": "2026 ADHD Papers/167.full.pdf",
+      "source_id": "PDF_044",
+      "sha256": "996b232a2993607242162781c0a5c0a063a7b41aa6dd2fc0f0979692a1200e95",
+      "text_sha256": "77b05b50091641f4c2c0b22d98455e701d792899845340d2ae75eea8cb4efc65",
+      "duplicate_of": null,
+      "page_count": 6
+    },
+    {
+      "file": "full_texts/31_26-00080.pdf",
+      "source_file": "2026 ADHD Papers/31_26-00080.pdf",
+      "source_id": "PDF_045",
+      "sha256": "ec624f14468d9c57bb8b40367a9845075e5704554598bfc9e1af6210072626a6",
+      "text_sha256": "6380b0344d4ad7ea753ae2cced9e3cad096c40c77f84ea1eaecb0fc4517e5109",
+      "duplicate_of": null,
+      "page_count": 12
+    },
+    {
+      "file": "full_texts/784.full.pdf",
+      "source_file": "2026 ADHD Papers/784.full.pdf",
+      "source_id": "PDF_046",
+      "sha256": "15e75f0e84e4e7a3518323368178a2c1db1ea668c9ccf92667491c2e5a9dfdc9",
+      "text_sha256": "b3991615c7f96fba42822dce77de7274c0940f3e22936db5cf608d0b9579a81d",
+      "duplicate_of": null,
+      "page_count": 6
+    },
+    {
+      "file": "full_texts/A Meta-Analysis of the Prevalence of ADHD in Youth Across Racial and Ethnic Groups.pdf",
+      "source_file": "2026 ADHD Papers/A Meta-Analysis of the Prevalence of ADHD in Youth Across Racial and Ethnic Groups.pdf",
+      "source_id": "PDF_047",
+      "sha256": "4335feb2cb8b5d27eaa92cace1954a08340db6e8635ed6522687e861fc6045db",
+      "text_sha256": "1224233e41f9368b6b287458cf472b8acfe22aece9f62b4fe0bf8011c8f70ec4",
+      "duplicate_of": null,
+      "page_count": 16
+    },
+    {
+      "file": "full_texts/A multi stakeholder preliminary needs assessment to inform the co design of a digital telerehabilitation tool for children and adolescents with ADHD.pdf",
+      "source_file": "2026 ADHD Papers/A multi stakeholder preliminary needs assessment to inform the co design of a digital telerehabilitation tool for children and adolescents with ADHD.pdf",
+      "source_id": "PDF_048",
+      "sha256": "7e3e96db0a28add89176dc10ff3d67c6caedb04d458a5b5959bf3f45646b2808",
+      "text_sha256": "34a63e64a2dac6920a7b681fa45e23fea33af400997cf4cdc3cfcc81de8bc948",
+      "duplicate_of": null,
+      "page_count": 22
+    },
+    {
+      "file": "full_texts/Basic Clin Pharma Tox - 2026 - Sonne - Regional Variation in ADHD Treatment and Diagnosis Among Children and Adolescents in.pdf",
+      "source_file": "2026 ADHD Papers/Basic Clin Pharma Tox - 2026 - Sonne - Regional Variation in ADHD Treatment and Diagnosis Among Children and Adolescents in.pdf",
+      "source_id": "PDF_049",
+      "sha256": "a3f20a330c7d03e7da408d129b4ad8340b268a38f878ec24050af92236343819",
+      "text_sha256": "22b7ff4f5216da26bbdee1a8baa7cd2c719ada9e8ee0a1f804d5b4197d7b506c",
+      "duplicate_of": null,
+      "page_count": 8
+    },
+    {
+      "file": "full_texts/Child - 2025 - Denis - Parenting Practices in Families of Children With Comorbid ADHD and Anxiety Disorders  A Systematic.pdf",
+      "source_file": "2026 ADHD Papers/Child - 2025 - Denis - Parenting Practices in Families of Children With Comorbid ADHD and Anxiety Disorders  A Systematic.pdf",
+      "source_id": "PDF_050",
+      "sha256": "3f82ecf855ed0796783d9bafa2daf62228ab81a2ff938cfb60743feba700ecad",
+      "text_sha256": "a9f5f9cc25568a690de9b126c01210c7ec9a4fdb9d1fb3a85506132f67f1ee14",
+      "duplicate_of": null,
+      "page_count": 10
+    },
+    {
+      "file": "full_texts/Child - 2025 - Tang - Barriers to and Enablers of the Transition From Child to Adult Mental Health Services for Autistic.pdf",
+      "source_file": "2026 ADHD Papers/Child - 2025 - Tang - Barriers to and Enablers of the Transition From Child to Adult Mental Health Services for Autistic.pdf",
+      "source_id": "PDF_051",
+      "sha256": "894db49b7ce7592e73304c185843fead840d408fe38f82ef9ca8cca3b4b7b146",
+      "text_sha256": "32ab1ae9545cbfa1a9751142e7778a9c0ea03dc99e0214bc54e8f5ff76ced08e",
+      "duplicate_of": null,
+      "page_count": 12
+    },
+    {
+      "file": "full_texts/Child - 2026 - Smith - Mind the Gap  Sleep Problems in Children With ADHD A Qualitative Analysis of Clinician Training.pdf",
+      "source_file": "2026 ADHD Papers/Child - 2026 - Smith - Mind the Gap  Sleep Problems in Children With ADHD A Qualitative Analysis of Clinician Training.pdf",
+      "source_id": "PDF_052",
+      "sha256": "cd47251803c254b4ebc88d3ece5144ebe264bc0b73e4b43adc760c60839688aa",
+      "text_sha256": "294f7bd5335bb2c97fb23e8f7e1b1944c924942d1f527297820899221a459b7f",
+      "duplicate_of": null,
+      "page_count": 9
+    },
+    {
+      "file": "full_texts/Child Psychology Psychiatry - 2025 - Shakeshaft - Mapping phenotypic and genetic relationships among irritability .pdf",
+      "source_file": "2026 ADHD Papers/Child Psychology Psychiatry - 2025 - Shakeshaft - Mapping phenotypic and genetic relationships among irritability .pdf",
+      "source_id": "PDF_053",
+      "sha256": "b904b2e5be2418264c293aa432e9250336b7ba52ec5a7f823fcdb0c12843c29b",
+      "text_sha256": "32b79bb9f29350cd969e7b0098295bb4c72487e163a2051e0f6e9d6baa6074f7",
+      "duplicate_of": null,
+      "page_count": 11
+    },
+    {
+      "file": "full_texts/Child Psychology Psychiatry - 2025 - You - The role of comorbid childhood mental health and neurodevelopmental conditions.pdf",
+      "source_file": "2026 ADHD Papers/Child Psychology Psychiatry - 2025 - You - The role of comorbid childhood mental health and neurodevelopmental conditions.pdf",
+      "source_id": "PDF_054",
+      "sha256": "816bc94d1314b2fe874a387640d6873dfd083caee3f6112c4102dadd93c7281a",
+      "text_sha256": "fc19e1f225d4a70d9b2a8550c810691c35cfca72e9444979c5f3007f06c28a22",
+      "duplicate_of": null,
+      "page_count": 19
+    },
+    {
+      "file": "full_texts/Child Psychology Psychiatry - 2026 - Thomson - Editorial  ADHD persistence   the interplay of genes  socioeconomic context .pdf",
+      "source_file": "2026 ADHD Papers/Child Psychology Psychiatry - 2026 - Thomson - Editorial  ADHD persistence   the interplay of genes  socioeconomic context .pdf",
+      "source_id": "PDF_055",
+      "sha256": "953036a6b2596affcda4479d53e25d832a69c1822c8659f9cb7cec49160878f7",
+      "text_sha256": "ecabc839859e9860d8f1607fbef5220007e75d4a1d15a5ff040c1ba73ce9c8d8",
+      "duplicate_of": null,
+      "page_count": 4
+    },
+    {
+      "file": "full_texts/Do Children and Adolescents with Attention Deficit Hyperactivity Disorder Use Screens More  A Systematic Review and Meta-Analysis.pdf",
+      "source_file": "2026 ADHD Papers/Do Children and Adolescents with Attention Deficit Hyperactivity Disorder Use Screens More  A Systematic Review and Meta-Analysis.pdf",
+      "source_id": "PDF_056",
+      "sha256": "05d48164e52c0f25aaf1cfb976336b2c99cb96774a166c4b7974b27f6a83b756",
+      "text_sha256": "55637b90fe9248745fb9c46267f4c9ca792692879975a4322d2800b664496bf3",
+      "duplicate_of": null,
+      "page_count": 25
+    },
+    {
+      "file": "full_texts/Do Wechsler intelligence scales predict academic achievement in children with ADHD or autism  A systematic review and meta-analysis.pdf",
+      "source_file": "2026 ADHD Papers/Do Wechsler intelligence scales predict academic achievement in children with ADHD or autism  A systematic review and meta-analysis.pdf",
+      "source_id": "PDF_057",
+      "sha256": "fb2cc11caed323bd1a760142be444d5ebc2805b31c1d3e2490a8bdb6f5433cab",
+      "text_sha256": "78b5c0f3efc81afa455473840140d4debcf6ecaafdd9eeebd376a9595002c915",
+      "duplicate_of": null,
+      "page_count": 16
+    },
+    {
+      "file": "full_texts/Early Intervention Psych - 2026 - Ricci - Neurodevelopmental  Pharmacological and Substance Use Factors in the Association.pdf",
+      "source_file": "2026 ADHD Papers/Early Intervention Psych - 2026 - Ricci - Neurodevelopmental  Pharmacological and Substance Use Factors in the Association.pdf",
+      "source_id": "PDF_058",
+      "sha256": "b6f929023772671c65fc5ca157eca06652bd4ab6c68f96537c6e59eace21cd50",
+      "text_sha256": "9b908b1525df6f3d6dbb8c6ffd712d20946e2839328b65b3871bc657f7376948",
+      "duplicate_of": null,
+      "page_count": 13
+    },
+    {
+      "file": "full_texts/Family Process - 2026 - Guerin - The Stigmatization of Caregivers of Children With Attention‐Deficit Hyperactivity Disorder.pdf",
+      "source_file": "2026 ADHD Papers/Family Process - 2026 - Guerin - The Stigmatization of Caregivers of Children With Attention‐Deficit Hyperactivity Disorder.pdf",
+      "source_id": "PDF_059",
+      "sha256": "eddba559426435029433a68816aa339e678f5e9fef0e24dd09ed28e96b71ffac",
+      "text_sha256": "57b0494c2a25c466f22099b6d83dbbf97f5a7f83e40fc28a4d544059ad8ec37b",
+      "duplicate_of": null,
+      "page_count": 13
+    },
+    {
+      "file": "full_texts/Int J Methods Psych Res - 2026 - Assaf - Psychometric Assessment of the Arabic Translation of the Adult ADHD Self‐Report.pdf",
+      "source_file": "2026 ADHD Papers/Int J Methods Psych Res - 2026 - Assaf - Psychometric Assessment of the Arabic Translation of the Adult ADHD Self‐Report.pdf",
+      "source_id": "PDF_060",
+      "sha256": "679b4f647c7cce1d0c9820197d37407267ee4072f3de2ae6540c853a36850a25",
+      "text_sha256": "7f438a1ff2ebf80bd0d27c13ca668f8c6bb093014e1c9b7d58552dab0c9e5ab2",
+      "duplicate_of": null,
+      "page_count": 11
+    },
+    {
+      "file": "full_texts/J Human Nutrition Diet - 2026 - Sadowska - Gut Microbiome and ADHD  A Narrative Review of Clinical Evidence and Practice.pdf",
+      "source_file": "2026 ADHD Papers/J Human Nutrition Diet - 2026 - Sadowska - Gut Microbiome and ADHD  A Narrative Review of Clinical Evidence and Practice.pdf",
+      "source_id": "PDF_061",
+      "sha256": "caf9aeea912da68099df182fc3364a1bdfb1e3a3808d483ee651ed3aecabed8e",
+      "text_sha256": "cfb33dcc91160db072f9ad5f70d9052a7343780a36a4b947829f47d051aeae43",
+      "duplicate_of": null,
+      "page_count": 10
+    },
+    {
+      "file": "full_texts/J Marital Family Therapy - 2025 - O'Brien - I Felt Like a Burden   An Exploration Into the Experience of Romantic.pdf",
+      "source_file": "2026 ADHD Papers/J Marital Family Therapy - 2025 - O'Brien - I Felt Like a Burden   An Exploration Into the Experience of Romantic.pdf",
+      "source_id": "PDF_062",
+      "sha256": "ac5c2400db0eadda2df6b37669d44231ff1f981f510ecd76ba821c11fa9cdd71",
+      "text_sha256": "485221968ad27bfe1d515f1be3e5515419de15744f27e8bbf5ae0c7b3be3afe7",
+      "duplicate_of": null,
+      "page_count": 14
+    },
+    {
+      "file": "full_texts/J Paediatrics Child Health - 2026 - Pehlevan - Parental Knowledge and Recognition of Preschool Manifestations of ADHD in.pdf",
+      "source_file": "2026 ADHD Papers/J Paediatrics Child Health - 2026 - Pehlevan - Parental Knowledge and Recognition of Preschool Manifestations of ADHD in.pdf",
+      "source_id": "PDF_063",
+      "sha256": "37760d221f995039bf9265de3b100879f4fa91ebc629ffa7342e42b4b9ecf634",
+      "text_sha256": "71372ae6032c96d5660adf64f9eb4ea3d3ca4dfdedb2c3732c37ee30adc312e1",
+      "duplicate_of": null,
+      "page_count": 6
+    },
+    {
+      "file": "full_texts/Medical Journal of Australia - 2026 - Morgan - Stigmatising Attitudes Towards People With Depression  Bipolar Disorder .pdf",
+      "source_file": "2026 ADHD Papers/Medical Journal of Australia - 2026 - Morgan - Stigmatising Attitudes Towards People With Depression  Bipolar Disorder .pdf",
+      "source_id": "PDF_064",
+      "sha256": "af3a38ca55543c96d1b25aca58eb427ee43b93f171d3a686c2f8c3b0569ee8b5",
+      "text_sha256": "292222a59c3a263f7b28e489d9b234f3ae1e7a23b717abc0a0819d9dbcc54834",
+      "duplicate_of": null,
+      "page_count": 11
+    },
+    {
+      "file": "full_texts/Medical Journal of Australia - 2026 - Ouliaris - ADHD Across the Lifespan  Reconsidering Assumptions of Diagnostic.pdf",
+      "source_file": "2026 ADHD Papers/Medical Journal of Australia - 2026 - Ouliaris - ADHD Across the Lifespan  Reconsidering Assumptions of Diagnostic.pdf",
+      "source_id": "PDF_065",
+      "sha256": "244dc2a6389a2ed2800a0a99b584e7bd03fca6d1af44ffa9290be99ed91e8ada",
+      "text_sha256": "05f3ed96574ce251eaefb54592ff30b4e68d946f5033b4881feb5b0f9c6ee6b5",
+      "duplicate_of": null,
+      "page_count": 4
+    },
+    {
+      "file": "full_texts/Prevalence of the Prescribing of Attention-Deficit Hyperactivity Disorder Medication During Pregnancy  A Systematic Review.pdf",
+      "source_file": "2026 ADHD Papers/Prevalence of the Prescribing of Attention-Deficit Hyperactivity Disorder Medication During Pregnancy  A Systematic Review.pdf",
+      "source_id": "PDF_066",
+      "sha256": "8a7c87131409493b7d7dcc63ee1982090a84afa731dc43af9c9819741b089684",
+      "text_sha256": "1894d04e9db4994d79da714242f4b65de55e426215f672371f86813a1bce2eaf",
+      "duplicate_of": null,
+      "page_count": 12
+    },
+    {
+      "file": "full_texts/SHTI-336-SHTI260681.pdf",
+      "source_file": "2026 ADHD Papers/SHTI-336-SHTI260681.pdf",
+      "source_id": "PDF_067",
+      "sha256": "7c10b69ac416e24ae459e5b0207f536281d83e077266b47241a3ef0de006b8eb",
+      "text_sha256": "92bbcda1c4f7a1bbd368c48d37146940aaf65a47ab62d8c17c2fbb6e7992d364",
+      "duplicate_of": null,
+      "page_count": 5
+    },
+    {
+      "file": "full_texts/Scandinavian J Psychology - 2025 - Isaksson - Feasibility of the Psychoeducational Programme SKILLS for the Child s Social.pdf",
+      "source_file": "2026 ADHD Papers/Scandinavian J Psychology - 2025 - Isaksson - Feasibility of the Psychoeducational Programme SKILLS for the Child s Social.pdf",
+      "source_id": "PDF_068",
+      "sha256": "ed06db9aa15aa0e1e00f1f78f601b40ea621ffd26fa115c6699d925a37aa8e97",
+      "text_sha256": "fc6e41e1a2533fca07d5859bd0ba4b4bbda5a01101336435845e9c10981f78df",
+      "duplicate_of": null,
+      "page_count": 13
+    },
+    {
+      "file": "full_texts/Scandinavian Med Sci Sports - 2026 - Liang - The Effects of Physical Activity Timing and Adherence to Physical Activity.pdf",
+      "source_file": "2026 ADHD Papers/Scandinavian Med Sci Sports - 2026 - Liang - The Effects of Physical Activity Timing and Adherence to Physical Activity.pdf",
+      "source_id": "PDF_069",
+      "sha256": "0977deb3466902925006429243ab0dbe62037c68ded5d23d5f413480e7c60e23",
+      "text_sha256": "cb81990b3578075eefb9340f589930e6af95456540c8dff0dd59cc343134f398",
+      "duplicate_of": null,
+      "page_count": 9
+    },
+    {
+      "file": "full_texts/a-2689-4911.pdf",
+      "source_file": "2026 ADHD Papers/a-2689-4911.pdf",
+      "source_id": "PDF_070",
+      "sha256": "63fdd2dd10f521c40923b44ee4efc83b2475de595c2400c52763b3d198f15e60",
+      "text_sha256": "4cd721912e6b813b0571335aa9d38311aed841722a55b65ed3891373a04402e0",
+      "duplicate_of": null,
+      "page_count": 20
+    },
+    {
+      "file": "full_texts/acag057.pdf",
+      "source_file": "2026 ADHD Papers/acag057.pdf",
+      "source_id": "PDF_071",
+      "sha256": "e58db87511d677bea1419d664f3cc2d5b7a136653f26819d516af11f81591e50",
+      "text_sha256": "96eefc9eada42f1a76afaf7a77f0694afb542930c181662c03f323d36dcee1a7",
+      "duplicate_of": null,
+      "page_count": 17
+    },
+    {
+      "file": "full_texts/acs.est.6c01402.pdf",
+      "source_file": "2026 ADHD Papers/acs.est.6c01402.pdf",
+      "source_id": "PDF_072",
+      "sha256": "2a212b414308b1b359b840fb3fdebdcf0e9ce497f907149e215fc072b526c6c5",
+      "text_sha256": "cf8f470ecf03363bf8ba570409b8cc142b659cb6cbe48029012fea85a74fddfd",
+      "duplicate_of": null,
+      "page_count": 15
+    },
+    {
+      "file": "full_texts/altunkılıc-et-al-2026-the-effect-of-methylphenidate-treatment-on-oxidative-stress-levels-in-children-diagnosed-with.pdf",
+      "source_file": "2026 ADHD Papers/altunkılıc-et-al-2026-the-effect-of-methylphenidate-treatment-on-oxidative-stress-levels-in-children-diagnosed-with.pdf",
+      "source_id": "PDF_073",
+      "sha256": "54bbe96b07e64f67ae37928ef85b3afde1262e1a8288b96fb1b3c19992a2fc0e",
+      "text_sha256": "7e4460c2694bbfb85a933bd8feadbf2bbfc18984bfa7f6e1a518d7e919659569",
+      "duplicate_of": null,
+      "page_count": 10
+    },
+    {
+      "file": "full_texts/bsr-2025-4061.pdf",
+      "source_file": "2026 ADHD Papers/bsr-2025-4061.pdf",
+      "source_id": "PDF_074",
+      "sha256": "18f9e9de672665003f442a769ee32e220e15ec7c4681b9f9120e7af4c904fe8e",
+      "text_sha256": "92660bb0ecdfd31a4a91a058ed1429636e64ae910d35a304f3b14a6513f1c5f5",
+      "duplicate_of": null,
+      "page_count": 47
+    },
+    {
+      "file": "full_texts/bussanich-et-al-2025-school-based-social-skills-interventions-for-youth-with-adhd-a-systematic-review-and-meta-analysis.pdf",
+      "source_file": "2026 ADHD Papers/bussanich-et-al-2025-school-based-social-skills-interventions-for-youth-with-adhd-a-systematic-review-and-meta-analysis.pdf",
+      "source_id": "PDF_075",
+      "sha256": "f00751579ffc87db44d7beac47c0a95742127de0ac91f3a0157a0c8c94e6203d",
+      "text_sha256": "41f241aab605a0b61b8ed2b0a2bf0cb4319d86e92b8344fb9f3e0ac2100a837c",
+      "duplicate_of": null,
+      "page_count": 22
+    },
+    {
+      "file": "full_texts/download.pdf",
+      "source_file": "2026 ADHD Papers/download.pdf",
+      "source_id": "PDF_076",
+      "sha256": "18d693db9c55bc1db25f62745ded3f20217f24367d9c90253fe91b02f7f9223e",
+      "text_sha256": "dd4e8f79e78be4c72a4eec4990687aaed2bbaebc7ab0479465035614d930080c",
+      "duplicate_of": null,
+      "page_count": 8
+    },
+    {
+      "file": "full_texts/e119568.full.pdf",
+      "source_file": "2026 ADHD Papers/e119568.full.pdf",
+      "source_id": "PDF_077",
+      "sha256": "4c4a6aa60e3b495ae49a9c3eed7e756f8a125a375c6705f7e41d67044d818300",
+      "text_sha256": "099d34ab260413f6ffacd422e4b325c595f0a9b863a597094811b6f3f503f71d",
+      "duplicate_of": null,
+      "page_count": 8
+    },
+    {
+      "file": "full_texts/formative-2026-1-e82164.pdf",
+      "source_file": "2026 ADHD Papers/formative-2026-1-e82164.pdf",
+      "source_id": "PDF_078",
+      "sha256": "4b9ddd6d2bb28f331d22a7777019bb4b955711d6c09aa8117859fb80ddef1c67",
+      "text_sha256": "d745f8ae47a6ffc4493b0e34a76750aa6d79c73a6c7ec71328e48feb79a1429d",
+      "duplicate_of": null,
+      "page_count": 11
+    },
+    {
+      "file": "full_texts/hill-et-al-2025-narrative-and-non-narrative-discourse-skills-in-adhd-across-the-lifespan-a-systematic-review-of-the.pdf",
+      "source_file": "2026 ADHD Papers/hill-et-al-2025-narrative-and-non-narrative-discourse-skills-in-adhd-across-the-lifespan-a-systematic-review-of-the.pdf",
+      "source_id": "PDF_079",
+      "sha256": "7c6bb684c9e0987746e65350e1caf57fff82f27a3dab5d0d694391accdc5c633",
+      "text_sha256": "e2a5930d277e94c6e8c42eb156a1c0d7ea7ef274d49c8f1de1e09e3ba759e223",
+      "duplicate_of": null,
+      "page_count": 20
+    },
+    {
+      "file": "full_texts/hoskins-et-al-2026-symptoms-of-anxiety-in-adults-with-adhd-a-systematic-review-and-meta-analysis-of-case-control-studies.pdf",
+      "source_file": "2026 ADHD Papers/hoskins-et-al-2026-symptoms-of-anxiety-in-adults-with-adhd-a-systematic-review-and-meta-analysis-of-case-control-studies.pdf",
+      "source_id": "PDF_080",
+      "sha256": "66e40b33f8126b0ac4d7a8ad1c1331b9df92ecdf03d1600708d47a38991cae35",
+      "text_sha256": "58012e8cc5920d765cb1ea5e790f76308105a2142c57cbc2ab031e7d5df3cd12",
+      "duplicate_of": null,
+      "page_count": 33
+    },
+    {
+      "file": "full_texts/ijms-27-03453-v3.pdf",
+      "source_file": "2026 ADHD Papers/ijms-27-03453-v3.pdf",
+      "source_id": "PDF_081",
+      "sha256": "2a0ebbb7debec52cbf546b6c38a4dbf1866c523a4f65073ac1f67931803a8b2f",
+      "text_sha256": "aaeff5bb6cc151af2cf51ab370628db42e3b2a1311746eb8c13b3f4abc0af1ed",
+      "duplicate_of": null,
+      "page_count": 46
+    },
+    {
+      "file": "full_texts/jamainternal_luo_2026_oi_260035_1788184625.4213.pdf",
+      "source_file": "2026 ADHD Papers/jamainternal_luo_2026_oi_260035_1788184625.4213.pdf",
+      "source_id": "PDF_082",
+      "sha256": "01dd19e53d33ba5df118e942be27bc79f8c9936b9a8a1e8ae3b70191a582ec59",
+      "text_sha256": "d4fb0896b2472005f0f7e18a5604814898c1366b8aa93532335a7ebe519a586d",
+      "duplicate_of": null,
+      "page_count": 10
+    },
+    {
+      "file": "full_texts/jamapsychiatry_labianca_2026_oi_260031_1788289932.03306.pdf",
+      "source_file": "2026 ADHD Papers/jamapsychiatry_labianca_2026_oi_260031_1788289932.03306.pdf",
+      "source_id": "PDF_083",
+      "sha256": "a2287fb3f978b18da386fcf6c1f5bd22c7247b29286cbbcd8b4542eb4e8064b6",
+      "text_sha256": "3ecbb240e8ea2ecd7d4720f6ee0af9228ff6eb479bb871bc184f125af1bd506d",
+      "duplicate_of": null,
+      "page_count": 9
+    },
+    {
+      "file": "full_texts/jamapsychiatry_pan_2026_oi_260001_1777052922.67615.pdf",
+      "source_file": "2026 ADHD Papers/jamapsychiatry_pan_2026_oi_260001_1777052922.67615.pdf",
+      "source_id": "PDF_084",
+      "sha256": "bd38021913c2380fdc48ea5b6f4ec2af4a903147e9ac55f5a2579a6ab08d2112",
+      "text_sha256": "62a8841c91c7666c71d57b1ac4949e381cd3cb23d717e2b03b229731994b2670",
+      "duplicate_of": null,
+      "page_count": 13
+    },
+    {
+      "file": "full_texts/jamapsychiatry_volotinen_2026_oi_260011_1779900161.36996.pdf",
+      "source_file": "2026 ADHD Papers/jamapsychiatry_volotinen_2026_oi_260011_1779900161.36996.pdf",
+      "source_id": "PDF_085",
+      "sha256": "c06c894ae9eb70fdc683ccdbfd070d364fbb217c9b1b4a5b533d0967690ee092",
+      "text_sha256": "0e83e0ec3a6930246e96e53cffa18b68f89f4c13a739fda2c2878c4cbff6ab62",
+      "duplicate_of": null,
+      "page_count": 10
+    },
+    {
+      "file": "full_texts/jmir-2026-1-e95043.pdf",
+      "source_file": "2026 ADHD Papers/jmir-2026-1-e95043.pdf",
+      "source_id": "PDF_086",
+      "sha256": "209dc461c080a704ef0e889f2eaf937313bc004d830dcecde467972cb43c0ab0",
+      "text_sha256": "aa5f8de5e650aa34308b4a516d2fb3390121962d3a855c1d7f442bc1897b2a82",
+      "duplicate_of": null,
+      "page_count": 34
+    },
+    {
+      "file": "full_texts/jogh-16-04233n.pdf",
+      "source_file": "2026 ADHD Papers/jogh-16-04233n.pdf",
+      "source_id": "PDF_087",
+      "sha256": "897fe8d2b41d92afc136f2811183c5e8a0f37a309ea8ed0af3fd03f46ce4c5cc",
+      "text_sha256": "7a85266162e8397f6e43e67957a514c8347a47ceec02d083aac7b0ce521ece91",
+      "duplicate_of": null,
+      "page_count": 18
+    },
+    {
+      "file": "full_texts/journal.pone.0314669.pdf",
+      "source_file": "2026 ADHD Papers/journal.pone.0314669.pdf",
+      "source_id": "PDF_088",
+      "sha256": "2b74158251644f398ba2053a9312a58c2ac86c1b8dd28545dc7e4d32078ae1e0",
+      "text_sha256": "08af5cbcb0b4a90608130a3772216e51773211496f6a63d89dbbacacbabdb064",
+      "duplicate_of": null,
+      "page_count": 10
+    },
+    {
+      "file": "full_texts/journal.pone.0341817.pdf",
+      "source_file": "2026 ADHD Papers/journal.pone.0341817.pdf",
+      "source_id": "PDF_089",
+      "sha256": "6f3605c020fa214b4cc77a1a74d3268f78d40f24baba8fbd7e86bd47ba50a999",
+      "text_sha256": "9713fd5b33d057cf76b732c01a27302d0bdde8e53db32b096df7344d9e9656c6",
+      "duplicate_of": null,
+      "page_count": 15
+    },
+    {
+      "file": "full_texts/journal.pone.0356825.pdf",
+      "source_file": "2026 ADHD Papers/journal.pone.0356825.pdf",
+      "source_id": "PDF_090",
+      "sha256": "61c187a3772f7ce72ab790426f99ca79ad7b8b2576fa00a50e07dd7630bb5325",
+      "text_sha256": "c3a2ee96204bb6a58522303c2324f4ecdfd7a8e32d4b9b674036999ab171b818",
+      "duplicate_of": null,
+      "page_count": 14
+    },
+    {
+      "file": "full_texts/journal.pone.0357837.pdf",
+      "source_file": "2026 ADHD Papers/journal.pone.0357837.pdf",
+      "source_id": "PDF_091",
+      "sha256": "27158987aa5e053239d759135a8cdc36a936e4a5a0e2ebe0cac2bb75ffa038ad",
+      "text_sha256": "6e7cc45191e1d93557276d9cf42e731ca0216dafda20976ccabdaa92ced25cba",
+      "duplicate_of": null,
+      "page_count": 8
+    },
+    {
+      "file": "full_texts/karimi-et-al-2025-treatment-adherence-in-adhd-a-systematic-review-of-influencing-factors-and-strategies-for-improvement.pdf",
+      "source_file": "2026 ADHD Papers/karimi-et-al-2025-treatment-adherence-in-adhd-a-systematic-review-of-influencing-factors-and-strategies-for-improvement.pdf",
+      "source_id": "PDF_092",
+      "sha256": "fa2bd4e9eac45a5970bc54e2f19301f9bcfb5b70ca2fb8650e643d6beb1c1ecd",
+      "text_sha256": "e017c2b4f2ac9ddd93229d92a7687d46d461d0ac09b1fa17e2e1079a79960184",
+      "duplicate_of": null,
+      "page_count": 25
+    },
+    {
+      "file": "full_texts/leffa_2026_oi_260927_1788960869.95197.pdf",
+      "source_file": "2026 ADHD Papers/leffa_2026_oi_260927_1788960869.95197.pdf",
+      "source_id": "PDF_093",
+      "sha256": "968849be03f4e0489a7d814bb2d822000d6ce2e33edb2f0692ed11e583ac71a4",
+      "text_sha256": "a745946a8d79f1bc323da1961c9a216b20cc76be3aaedb22a016185eb5f31ed1",
+      "duplicate_of": null,
+      "page_count": 16
+    },
+    {
+      "file": "full_texts/leow-et-al-2026-association-between-attention-deficit-hyperactivity-disorder-and-obstructive-sleep-apnea-in-children-a.pdf",
+      "source_file": "2026 ADHD Papers/leow-et-al-2026-association-between-attention-deficit-hyperactivity-disorder-and-obstructive-sleep-apnea-in-children-a.pdf",
+      "source_id": "PDF_094",
+      "sha256": "d957dd36a61f6979ac7e9d3c2dc4445849d63e3c39a3ebed7cb5739cc6468d65",
+      "text_sha256": "90b093387d7be48279047ce62a9547b9b1175ef7ad8dbdd0753ec9b677a39ff1",
+      "duplicate_of": null,
+      "page_count": 11
+    },
+    {
+      "file": "full_texts/liang-et-al-2025-the-family-quality-of-life-of-children-with-specific-learning-disabilities-attention-deficit.pdf",
+      "source_file": "2026 ADHD Papers/liang-et-al-2025-the-family-quality-of-life-of-children-with-specific-learning-disabilities-attention-deficit.pdf",
+      "source_id": "PDF_095",
+      "sha256": "945c714cc6bc2729f0487ac441131d653f7a26798a2b54ba460b1932e4a9d5a6",
+      "text_sha256": "0bff52ae503bef44e79dfa6366aaee5d6cce8e47c3456fb099bab45124ec5876",
+      "duplicate_of": null,
+      "page_count": 12
+    },
+    {
+      "file": "full_texts/longitudinal-associations-among-autism-and-adhd-traits-social-maladjustment-and-mental-health-in-school-aged-children.pdf",
+      "source_file": "2026 ADHD Papers/longitudinal-associations-among-autism-and-adhd-traits-social-maladjustment-and-mental-health-in-school-aged-children.pdf",
+      "source_id": "PDF_096",
+      "sha256": "c948861647c06d60dfd250b63215e622ce422c1261ba5796f0f294da7f80ff55",
+      "text_sha256": "79a8f7ff8868b70ff469eec06d9c22e7c5fb4bbac87854f31264d37e0f115512",
+      "duplicate_of": null,
+      "page_count": 11
+    },
+    {
+      "file": "full_texts/madsen-et-al-2025-maternal-adhd-diagnoses-before-and-after-childbirth-a-danish-population-based-cohort-study.pdf",
+      "source_file": "2026 ADHD Papers/madsen-et-al-2025-maternal-adhd-diagnoses-before-and-after-childbirth-a-danish-population-based-cohort-study.pdf",
+      "source_id": "PDF_097",
+      "sha256": "828af2140f5756ba0e37056ea7b62fc09b2fe0577444e585a4572d9b8274975f",
+      "text_sha256": "7ecb1c651dda13cd3289797ee1a96f0a3dde7bbca54ea77a35cda62a38759db6",
+      "duplicate_of": null,
+      "page_count": 9
+    },
+    {
+      "file": "full_texts/mctaggart-et-al-2026-controlled-by-female-hormones-a-qualitative-interview-study-of-swedish-women-s-experiences-of.pdf",
+      "source_file": "2026 ADHD Papers/mctaggart-et-al-2026-controlled-by-female-hormones-a-qualitative-interview-study-of-swedish-women-s-experiences-of.pdf",
+      "source_id": "PDF_098",
+      "sha256": "6d2b9eab811fb34aac273687606db38d81a1ff076ddaf7eeb3fbc43d84df19bf",
+      "text_sha256": "50829932b991fa80af87d5cd65bbba8bf52bbc9afcd9f71d2ca456aa326e688b",
+      "duplicate_of": null,
+      "page_count": 12
+    },
+    {
+      "file": "full_texts/nagata_2026_oi_260668_1783701523.89945.pdf",
+      "source_file": "2026 ADHD Papers/nagata_2026_oi_260668_1783701523.89945.pdf",
+      "source_id": "PDF_099",
+      "sha256": "d33815302dc8be6a673d0ed96c229c14f616aaa64deb0a4099f0a3b476ee1901",
+      "text_sha256": "511e53fbb53da0433e254d92b66506a817545b642f1fe171a32d198c07e0ebae",
+      "duplicate_of": null,
+      "page_count": 17
+    },
+    {
+      "file": "full_texts/nutrients-18-01625.pdf",
+      "source_file": "2026 ADHD Papers/nutrients-18-01625.pdf",
+      "source_id": "PDF_100",
+      "sha256": "794ede898dba70a9b598d28e8ec3132a928a5fc039ccac28c6156095dfd3e536",
+      "text_sha256": "3a8f99c5220d27e014d39aed19f8f054294735b28366d95b0acdb3492b252952",
+      "duplicate_of": null,
+      "page_count": 26
+    },
+    {
+      "file": "full_texts/nutrients-18-02357.pdf",
+      "source_file": "2026 ADHD Papers/nutrients-18-02357.pdf",
+      "source_id": "PDF_101",
+      "sha256": "cf6284d3e87f874eca8316329f2aab92d107ed296931549baecdfc72b2c5b226",
+      "text_sha256": "cac9b0a7059d6146647358edd5b97083a29c954f3fdc70465a2f551128677404",
+      "duplicate_of": null,
+      "page_count": 25
+    },
+    {
+      "file": "full_texts/nutrients-18-02664-v2.pdf",
+      "source_file": "2026 ADHD Papers/nutrients-18-02664-v2.pdf",
+      "source_id": "PDF_102",
+      "sha256": "e693479c9fc73a0b4fdc64afced2e0401809886785fcaa4fd22a8949480fe76a",
+      "text_sha256": "123d0f7deece9d54daf7d472c9d0103348d8175ab7b73ef6d26e2ccf39ce9bd8",
+      "duplicate_of": null,
+      "page_count": 31
+    },
+    {
+      "file": "full_texts/pardo-palenzuela-et-al-2025-cognitive-profile-of-adhd-in-older-adults-a-systematic-review.pdf",
+      "source_file": "2026 ADHD Papers/pardo-palenzuela-et-al-2025-cognitive-profile-of-adhd-in-older-adults-a-systematic-review.pdf",
+      "source_id": "PDF_103",
+      "sha256": "d7bf157f0bcd6b90bbd01942085d11da4ec51af4e4ce676c96d7e09a34fb95e7",
+      "text_sha256": "fbac6ff438b3b61f667f60c626bdcf366f67ce627fc314cb43ce29c9780c4b6b",
+      "duplicate_of": null,
+      "page_count": 11
+    },
+    {
+      "file": "full_texts/pathan-et-al-2026-impact-of-medication-therapy-on-social-behavioral-and-employment-outcomes-in-adults-with-adhd.pdf",
+      "source_file": "2026 ADHD Papers/pathan-et-al-2026-impact-of-medication-therapy-on-social-behavioral-and-employment-outcomes-in-adults-with-adhd.pdf",
+      "source_id": "PDF_104",
+      "sha256": "16f76f3f016555255c080de2f513cd5faa3558c5bf116522bee5d4f09994eb28",
+      "text_sha256": "667550b71408acde13baec3f30a569e823c7e332e6f739e621de5c8c58cf407f",
+      "duplicate_of": null,
+      "page_count": 14
+    },
+    {
+      "file": "full_texts/peerj-20603.pdf",
+      "source_file": "2026 ADHD Papers/peerj-20603.pdf",
+      "source_id": "PDF_105",
+      "sha256": "920ebe4437c5ce1e6883f8163faa51eee02202deb1e48b095178eabdb2e4709a",
+      "text_sha256": "26a476c817a42f2113f2830aa7e3902f1dfb5e4baa31255adcec60e579c6df20",
+      "duplicate_of": null,
+      "page_count": 22
+    },
+    {
+      "file": "full_texts/pierotti-jayakody-2025-maternal-attention-deficit-hyperactivity-disorder-and-perinatal-depression-a-systematic-review.pdf",
+      "source_file": "2026 ADHD Papers/pierotti-jayakody-2025-maternal-attention-deficit-hyperactivity-disorder-and-perinatal-depression-a-systematic-review.pdf",
+      "source_id": "PDF_106",
+      "sha256": "c4b2a4e887b81bc6c4c25833952386bf766853738ae9c94cc9309d5cdd1a7c61",
+      "text_sha256": "2b4980375c7103a0a6bdad50bcb446dd927c6bae5b7554f5d8d5fb3d718c6093",
+      "duplicate_of": null,
+      "page_count": 15
+    },
+    {
+      "file": "full_texts/quality-assessment-of-adhd-related-short-videos-on-chinese.pdf",
+      "source_file": "2026 ADHD Papers/quality-assessment-of-adhd-related-short-videos-on-chinese.pdf",
+      "source_id": "PDF_107",
+      "sha256": "61a96c45fda62d05fbc1156f51ea0c1a38c3614c2988c75f617860257eaa3506",
+      "text_sha256": "67fccbc79d1e51c412d76a93de3a0c1da56c2c520624ed8003ff64edc41d5127",
+      "duplicate_of": null,
+      "page_count": 9
+    },
+    {
+      "file": "full_texts/rafael-et-al-2026-attention-deficit-hyperactivity-disorder-(adhd)-related-strengths-in-adults-a-scoping-review.pdf",
+      "source_file": "2026 ADHD Papers/rafael-et-al-2026-attention-deficit-hyperactivity-disorder-(adhd)-related-strengths-in-adults-a-scoping-review.pdf",
+      "source_id": "PDF_108",
+      "sha256": "6e95a8db0fd7171e517f4abc7db6a80f8441cd6891e860e7e481d07bf3e7bea9",
+      "text_sha256": "4513a91a94e16d62f51397cdceeb50f4a25d15b780ac70e2c20098fb99dd8d7f",
+      "duplicate_of": null,
+      "page_count": 26
+    },
+    {
+      "file": "full_texts/resprot-2026-1-e79150.pdf",
+      "source_file": "2026 ADHD Papers/resprot-2026-1-e79150.pdf",
+      "source_id": "PDF_109",
+      "sha256": "c6789989ef155bafab9da5bef728b82173620cd2c9576807e41ee884b0393677",
+      "text_sha256": "cb1147783c06237fc8322c2b10f0ccd7a8f995104f236d71073c8e5aeaee0a74",
+      "duplicate_of": null,
+      "page_count": 15
+    },
+    {
+      "file": "full_texts/s00406-025-02148-z.pdf",
+      "source_file": "2026 ADHD Papers/s00406-025-02148-z.pdf",
+      "source_id": "PDF_110",
+      "sha256": "a654511d4bf4880b2ef26784bb9407f3ffef9bad348b142a1b81d426f70dcdfd",
+      "text_sha256": "c78a910711d1865d9583982c5344c44914fea2690a3ed7debbefde4212a693c9",
+      "duplicate_of": null,
+      "page_count": 10
+    },
+    {
+      "file": "full_texts/s00406-025-02162-1.pdf",
+      "source_file": "2026 ADHD Papers/s00406-025-02162-1.pdf",
+      "source_id": "PDF_111",
+      "sha256": "2595a6e7e9e384a1c63f86f503ccee61a456b503f02053c0d07668e9eb69d4e0",
+      "text_sha256": "269a0d3540fd108e1d076c05520ef60739d4a53c4d2625bc5f6f5fd5c07f1b94",
+      "duplicate_of": null,
+      "page_count": 11
+    },
+    {
+      "file": "full_texts/s00787-025-02822-6.pdf",
+      "source_file": "2026 ADHD Papers/s00787-025-02822-6.pdf",
+      "source_id": "PDF_112",
+      "sha256": "ff4029e8514e8fcb73eb068cbbaca024178bb22dc0cbc483481c60835a258b7b",
+      "text_sha256": "3b22d75a25a1b52029c7ed40c21483d587c099c39529070f7c5fa2c9b15777b1",
+      "duplicate_of": null,
+      "page_count": 16
+    },
+    {
+      "file": "full_texts/s00787-025-02842-2.pdf",
+      "source_file": "2026 ADHD Papers/s00787-025-02842-2.pdf",
+      "source_id": "PDF_113",
+      "sha256": "a97792a0b388987c6401f20c417c222bae5adb6eed0c575fb2e4611c264f561b",
+      "text_sha256": "dbaf5a368ac233e77f29e25a5413afe9be1dee193ff77ab2f7293fbc0ab67ed5",
+      "duplicate_of": null,
+      "page_count": 14
+    },
+    {
+      "file": "full_texts/s00787-025-02904-5.pdf",
+      "source_file": "2026 ADHD Papers/s00787-025-02904-5.pdf",
+      "source_id": "PDF_114",
+      "sha256": "73a7977f9f8aaa7de0a5efd2d0a39d1aa6533da989ba37f6dcb7138710c75a58",
+      "text_sha256": "746c435bd960d83700393d0532200f812e0151f11204558a7a654b065a2b3d63",
+      "duplicate_of": null,
+      "page_count": 21
+    },
+    {
+      "file": "full_texts/s00787-025-02906-3.pdf",
+      "source_file": "2026 ADHD Papers/s00787-025-02906-3.pdf",
+      "source_id": "PDF_115",
+      "sha256": "bd547cda869faf59127ec0c4d3fd2d8dc00f142e58aae2ea5eac6c48c1a8c94e",
+      "text_sha256": "b05878f289e342bcad554c918e98dddb0e00eca0df14c4ef7b0086803a72e2e5",
+      "duplicate_of": null,
+      "page_count": 17
+    },
+    {
+      "file": "full_texts/s00787-025-02947-8.pdf",
+      "source_file": "2026 ADHD Papers/s00787-025-02947-8.pdf",
+      "source_id": "PDF_116",
+      "sha256": "e2ee6ad258b4502cd83ef976b2ca2d1c12cf109d3d67fd3e77a99069a3604676",
+      "text_sha256": "49ccc452b47b49a6d605c0cecf4218f8adb8890b7eb62cda6486e37078a79412",
+      "duplicate_of": null,
+      "page_count": 17
+    },
+    {
+      "file": "full_texts/s00787-026-02987-8.pdf",
+      "source_file": "2026 ADHD Papers/s00787-026-02987-8.pdf",
+      "source_id": "PDF_117",
+      "sha256": "b8d2a4456c4abeeb84988f45855c9c9302517b9b1b04a782d7cb61484278830e",
+      "text_sha256": "9eb14ecd52225fa4b7a3ad8c6e85a25f743c03db194dc4b105eaca2097e5d027",
+      "duplicate_of": null,
+      "page_count": 8
+    },
+    {
+      "file": "full_texts/s00787-026-03059-7.pdf",
+      "source_file": "2026 ADHD Papers/s00787-026-03059-7.pdf",
+      "source_id": "PDF_118",
+      "sha256": "9e675ebf7ce306349377167dfd4e2e1c8ba9391315bb4ee83cb697fc04d2ef01",
+      "text_sha256": "160a256301100f1f1fc45ba8bf5322e1ec433ebf8979be6c6144376ccf2fa669",
+      "duplicate_of": null,
+      "page_count": 20
+    },
+    {
+      "file": "full_texts/s10508-026-03448-8.pdf",
+      "source_file": "2026 ADHD Papers/s10508-026-03448-8.pdf",
+      "source_id": "PDF_119",
+      "sha256": "47182bcd912cf3725b6104f664ff1bf526f0729a6c9a04d16f1a191c3c86dbfd",
+      "text_sha256": "7774bb5929d3636cc0c34d78a4a4181bf3c18d045b073568faf2c2cfbc7c281a",
+      "duplicate_of": null,
+      "page_count": 15
+    },
+    {
+      "file": "full_texts/s10567-026-00563-9.pdf",
+      "source_file": "2026 ADHD Papers/s10567-026-00563-9.pdf",
+      "source_id": "PDF_120",
+      "sha256": "cb69c3192691527bdda64aa55f71ba4f57d6b0c968db02d02ae5cbf0770651e7",
+      "text_sha256": "c6d8f5a5adf23572cbeac68524e6e8eab199624371613de33c827234ca95850d",
+      "duplicate_of": null,
+      "page_count": 20
+    },
+    {
+      "file": "full_texts/s10578-024-01732-z.pdf",
+      "source_file": "2026 ADHD Papers/s10578-024-01732-z.pdf",
+      "source_id": "PDF_121",
+      "sha256": "70c99610e8724aa506ac7475318720e8354440ec9c8d0850ea76afbb99169db7",
+      "text_sha256": "b7b082ae2717832d9bc08f8988a1b0d6c0410f3744048a48f58efac2646cfdfd",
+      "duplicate_of": null,
+      "page_count": 13
+    },
+    {
+      "file": "full_texts/s10802-026-01488-1.pdf",
+      "source_file": "2026 ADHD Papers/s10802-026-01488-1.pdf",
+      "source_id": "PDF_122",
+      "sha256": "07e836843b76b6bd6afb9bf2054b6d15773f3cc8f7a5d6abca250fba86c55eaa",
+      "text_sha256": "accf5a4bf4bdeb818c5e2c590859e7ee49a4ba31398136fbf873fc8fa6123e2e",
+      "duplicate_of": null,
+      "page_count": 11
+    },
+    {
+      "file": "full_texts/s10803-024-06410-6.pdf",
+      "source_file": "2026 ADHD Papers/s10803-024-06410-6.pdf",
+      "source_id": "PDF_123",
+      "sha256": "f66a1f856212fc6545f9e4b4d299a6a7063270dbc04500c03e102ae467bbb23b",
+      "text_sha256": "27cfd6fe7229715e071303159f34c6d8ee978c275921a7adfc81a41641b60c9a",
+      "duplicate_of": null,
+      "page_count": 9
+    },
+    {
+      "file": "full_texts/s10803-024-06623-9.pdf",
+      "source_file": "2026 ADHD Papers/s10803-024-06623-9.pdf",
+      "source_id": "PDF_124",
+      "sha256": "f386937ba8d80968e20c2832f88da47b46d2a9eb286962401a4582dc3bcbe232",
+      "text_sha256": "6ec60f0a1bf6a5fa93f237a06d12aaf8319ec18a0ebe258f02145772c756e10d",
+      "duplicate_of": null,
+      "page_count": 10
+    },
+    {
+      "file": "full_texts/s10803-024-06682-y.pdf",
+      "source_file": "2026 ADHD Papers/s10803-024-06682-y.pdf",
+      "source_id": "PDF_125",
+      "sha256": "526e853ecdf7a43d0e01c8ccd6906c37bc24b4abe0f958990d358396fefa0702",
+      "text_sha256": "487195389061df1535e3ed156ed27a6a5b9f6ab8c2fde1d12ebb7b43d84fbefb",
+      "duplicate_of": null,
+      "page_count": 12
+    },
+    {
+      "file": "full_texts/s11096-026-02184-2.pdf",
+      "source_file": "2026 ADHD Papers/s11096-026-02184-2.pdf",
+      "source_id": "PDF_126",
+      "sha256": "40c282ddbd06296cb4e625f5fa3471f511a2334066822c4bbc8e076b04223b5d",
+      "text_sha256": "88da134a1ac4741dadd02f981b41eaa864bf54522e86719316cdc28556b6f069",
+      "duplicate_of": null,
+      "page_count": 15
+    },
+    {
+      "file": "full_texts/s11126-025-10185-z.pdf",
+      "source_file": "2026 ADHD Papers/s11126-025-10185-z.pdf",
+      "source_id": "PDF_127",
+      "sha256": "ad6b7850de52273a5c57796faafe5153b020f98fb839776d015a37451eb4181e",
+      "text_sha256": "d3f7f74917fdafb5bae9b5bd6b23c14a5f8265a5601439197e9285c7f131effd",
+      "duplicate_of": null,
+      "page_count": 14
+    },
+    {
+      "file": "full_texts/s11136-026-04244-6.pdf",
+      "source_file": "2026 ADHD Papers/s11136-026-04244-6.pdf",
+      "source_id": "PDF_128",
+      "sha256": "3a63e8dcabc94dfd85c9ca7f8307b8360d4ec6ab725190b4f091ad75f0da52c7",
+      "text_sha256": "8c37bde172ec5746ca8be1e03b99cf139e141bad5532870454aba123c9901e86",
+      "duplicate_of": null,
+      "page_count": 18
+    },
+    {
+      "file": "full_texts/s12325-026-03638-9.pdf",
+      "source_file": "2026 ADHD Papers/s12325-026-03638-9.pdf",
+      "source_id": "PDF_129",
+      "sha256": "daa1618cdf49868b4a0a402c4624998f18d98835a409c744e6eef85a1faab185",
+      "text_sha256": "ecd42389cb4447e892480c3676fdeee7b10d3d07c99bbddf0053f4789394a45e",
+      "duplicate_of": null,
+      "page_count": 13
+    },
+    {
+      "file": "full_texts/s12887-025-06465-z.pdf",
+      "source_file": "2026 ADHD Papers/s12887-025-06465-z.pdf",
+      "source_id": "PDF_130",
+      "sha256": "29b52f67da0d2f62a01075256d341e0ea52911478afccb954d9dc487f9c5c5e0",
+      "text_sha256": "049cec424022127ee98e8f48948678725c8084768b528cb90a53a078586e028c",
+      "duplicate_of": null,
+      "page_count": 10
+    },
+    {
+      "file": "full_texts/s12887-026-06646-4.pdf",
+      "source_file": "2026 ADHD Papers/s12887-026-06646-4.pdf",
+      "source_id": "PDF_131",
+      "sha256": "eed7b8a2bce944b8ad73c72e0ff11cf2d1c4a0befa41629e57fd998cc9d2314a",
+      "text_sha256": "3a3608b50c544eb6079f1c161f5fafc1a4802eed3ab3268bed3ab5c8c57373e1",
+      "duplicate_of": null,
+      "page_count": 7
+    },
+    {
+      "file": "full_texts/s12887-026-06963-8.pdf",
+      "source_file": "2026 ADHD Papers/s12887-026-06963-8.pdf",
+      "source_id": "PDF_132",
+      "sha256": "e1b4d36d2eaf9cf84a7476fe15cbccb4b30d6a6fd16c121eeb68b2302f1ac2c7",
+      "text_sha256": "a72cfde75ba5fe40ec907b51d6bf9000ad7e47dbd5ab3ecd314a51bcadaa98a7",
+      "duplicate_of": null,
+      "page_count": 8
+    },
+    {
+      "file": "full_texts/s12888-026-07953-x.pdf",
+      "source_file": "2026 ADHD Papers/s12888-026-07953-x.pdf",
+      "source_id": "PDF_133",
+      "sha256": "5e4480504cd245e00b88edb4bab784a4b182306d992e2a671f726ffe448622fc",
+      "text_sha256": "75bfa69667c7bb9cfcb410490db313bb59fd8d4692e974155456dc300861656a",
+      "duplicate_of": null,
+      "page_count": 15
+    },
+    {
+      "file": "full_texts/s12888-026-08293-6.pdf",
+      "source_file": "2026 ADHD Papers/s12888-026-08293-6.pdf",
+      "source_id": "PDF_134",
+      "sha256": "4179979e5799d7772fd423a4456a5375177259a39bb7acf1ce80c33bb2a30724",
+      "text_sha256": "03871b3553046da798e79232a7d7e666f46cf50d627ddc8641a6139b015962cd",
+      "duplicate_of": null,
+      "page_count": 22
+    },
+    {
+      "file": "full_texts/s12888-026-08296-3.pdf",
+      "source_file": "2026 ADHD Papers/s12888-026-08296-3.pdf",
+      "source_id": "PDF_135",
+      "sha256": "09d451727c45137a84b4b0b1c2918cb4e74531a3e4a9a9fe7450c0ce4ec9386c",
+      "text_sha256": "e346183bf74f0e78961d87a3853d0ad172c5380363a0a38bc85d6a5db3493f17",
+      "duplicate_of": null,
+      "page_count": 12
+    },
+    {
+      "file": "full_texts/s12889-026-27631-7.pdf",
+      "source_file": "2026 ADHD Papers/s12889-026-27631-7.pdf",
+      "source_id": "PDF_136",
+      "sha256": "32c2a88108683d83aba07fddb5b2954198c75d093a5c28979faf1be6932484b9",
+      "text_sha256": "e67b7203f3b06d3526fbdb6364fd40052aa5b006cb018e1f2436117b4037d059",
+      "duplicate_of": null,
+      "page_count": 12
+    },
+    {
+      "file": "full_texts/s12903-026-07704-0.pdf",
+      "source_file": "2026 ADHD Papers/s12903-026-07704-0.pdf",
+      "source_id": "PDF_137",
+      "sha256": "9b36fa4552f300f486c047b69a7eb6d6da257a6574371d3b8d2e9f4f5e860fc1",
+      "text_sha256": "3d80c277330c7e1c1cdcba4cccd2420eab04452cd6c578bc0394abd0cedf024a",
+      "duplicate_of": null,
+      "page_count": 10
+    },
+    {
+      "file": "full_texts/s40001-025-03711-z.pdf",
+      "source_file": "2026 ADHD Papers/s40001-025-03711-z.pdf",
+      "source_id": "PDF_138",
+      "sha256": "727c0187a58bd774a2aba487e9b6fcc8ae9ec3b32c2014d2f70d727baeaf530a",
+      "text_sha256": "38f15c9017a24e64ea5bfdd499c7e6471a9458f5261f4d1f4e3fcdf20a6eb383",
+      "duplicate_of": null,
+      "page_count": 17
+    },
+    {
+      "file": "full_texts/s40359-026-04637-9.pdf",
+      "source_file": "2026 ADHD Papers/s40359-026-04637-9.pdf",
+      "source_id": "PDF_139",
+      "sha256": "cda96e6156aafde238b5c7c1d8d2ef7c4bf5973ec3c8e8bf1d21e9275f4ef791",
+      "text_sha256": "c2ecca882ed592125f95fa1673fdf7704dafe884725ab794e3e2041a1e32d747",
+      "duplicate_of": null,
+      "page_count": 26
+    },
+    {
+      "file": "full_texts/s40359-026-05200-2.pdf",
+      "source_file": "2026 ADHD Papers/s40359-026-05200-2.pdf",
+      "source_id": "PDF_140",
+      "sha256": "07000308031b0885540d3bae7d3dccf5ab4211a0f94f975a08ca7c18d68a4f68",
+      "text_sha256": "837e4b1c8f9e6895900c6081eba1b8a8f760aad771e15b12780f885fda335a3d",
+      "duplicate_of": null,
+      "page_count": 11
+    },
+    {
+      "file": "full_texts/s41380-025-03178-8.pdf",
+      "source_file": "2026 ADHD Papers/s41380-025-03178-8.pdf",
+      "source_id": "PDF_141",
+      "sha256": "efea3d0768e4034015d75d78f17a27a1af00b9eed4aab504251c4bd4342090cf",
+      "text_sha256": "856e188b747710496239d062068a15ff39c914aad4402f69a7afd59f9f94b5f2",
+      "duplicate_of": null,
+      "page_count": 11
+    },
+    {
+      "file": "full_texts/s41380-025-03242-3.pdf",
+      "source_file": "2026 ADHD Papers/s41380-025-03242-3.pdf",
+      "source_id": "PDF_142",
+      "sha256": "ce2bd020d1b9a62e19b2ab077253f921d7c9338df65ccc078c0022e8d460b1e2",
+      "text_sha256": "553f1f06fa0d4a290bbafff7f370764786e447bf2bfa9fd456759a63200217a6",
+      "duplicate_of": null,
+      "page_count": 14
+    },
+    {
+      "file": "full_texts/s41380-026-03645-w.pdf",
+      "source_file": "2026 ADHD Papers/s41380-026-03645-w.pdf",
+      "source_id": "PDF_143",
+      "sha256": "2a0830aa2e7151bd78c821b9558fa78a101312108e3ecf2f02aa0657b93802c4",
+      "text_sha256": "069206d4b6b2f03787dc0f084f6b282040aeae8f063f27c4c3666a5c9a73bdaf",
+      "duplicate_of": null,
+      "page_count": 10
+    },
+    {
+      "file": "full_texts/s41390-025-04325-1.pdf",
+      "source_file": "2026 ADHD Papers/s41390-025-04325-1.pdf",
+      "source_id": "PDF_144",
+      "sha256": "e36c42eb2d43ce84c3f855ed86c7d026c2cd3d3e9f5a4d222b7e5a94f1684878",
+      "text_sha256": "8b299aeb9ca28da425b5e3b93d7aea0efcfa162b8f3bf3763de412adbc5bc5a6",
+      "duplicate_of": null,
+      "page_count": 10
+    },
+    {
+      "file": "full_texts/s41398-026-03972-0.pdf",
+      "source_file": "2026 ADHD Papers/s41398-026-03972-0.pdf",
+      "source_id": "PDF_145",
+      "sha256": "71c2876f4adacc296b029d700fd52ff9a515a46433bfb275ab65ea5dfaab5554",
+      "text_sha256": "2488bb25086594ea6fea398001186da31c0f7b9b3a5b0a4331d52fc8c0fb7ee2",
+      "duplicate_of": null,
+      "page_count": 16
+    },
+    {
+      "file": "full_texts/s41398-026-04151-x.pdf",
+      "source_file": "2026 ADHD Papers/s41398-026-04151-x.pdf",
+      "source_id": "PDF_146",
+      "sha256": "bd9235312b07149a8bf1e2b9637f2a4969fcca8be5671fe229ad35b6621af53a",
+      "text_sha256": "2f21ed9c2f1e064f6a1459bd6a89ab6ffe69e77e8f7d5ebc1bd6096780c8eb0e",
+      "duplicate_of": null,
+      "page_count": 14
+    },
+    {
+      "file": "full_texts/s41398-026-04166-4.pdf",
+      "source_file": "2026 ADHD Papers/s41398-026-04166-4.pdf",
+      "source_id": "PDF_147",
+      "sha256": "b74aefb63d0a2215a02ea6abd9d43ce588a7f8c8ecfec735d5a38e8788bbcc8e",
+      "text_sha256": "b07dfbbacf9969034d37c1b3b07e3de344d13817cd6fd719f53af1d824dc205e",
+      "duplicate_of": null,
+      "page_count": 13
+    },
+    {
+      "file": "full_texts/s41598-025-34570-7.pdf",
+      "source_file": "2026 ADHD Papers/s41598-025-34570-7.pdf",
+      "source_id": "PDF_148",
+      "sha256": "b0171a85ba7fe8dd655b6f79b1052395f6457e1767910056d7e8ca88d511a456",
+      "text_sha256": "933c3e8a15a6e23c440b349bb37ec63046933266c7a6c77617473610e2b30ce4",
+      "duplicate_of": null,
+      "page_count": 13
+    },
+    {
+      "file": "full_texts/s41598-026-41493-4.pdf",
+      "source_file": "2026 ADHD Papers/s41598-026-41493-4.pdf",
+      "source_id": "PDF_149",
+      "sha256": "08e402ee319faf50661fe5c668d6579f44c933ace97cefe4a3cf73792642173a",
+      "text_sha256": "a13736efcf4b40f7b2b03365bb195824737194b6cebe79569deb264751154cad",
+      "duplicate_of": null,
+      "page_count": 7
+    },
+    {
+      "file": "full_texts/s41598-026-54609-7.pdf",
+      "source_file": "2026 ADHD Papers/s41598-026-54609-7.pdf",
+      "source_id": "PDF_150",
+      "sha256": "dcbd1b815afbfd70ce05ba79e2bbbc9c847c747285310b9943131fa7984d6134",
+      "text_sha256": "7e7747afa200ba83876c09aed18d20b2b156dc05e9b7bd20412953da03d5a129",
+      "duplicate_of": null,
+      "page_count": 13
+    },
+    {
+      "file": "full_texts/sensors-26-05684.pdf",
+      "source_file": "2026 ADHD Papers/sensors-26-05684.pdf",
+      "source_id": "PDF_151",
+      "sha256": "68cfb59c975aef98689196f7f138d88f9d5fa3f4de1e74689fd5b0ff4bd2ec43",
+      "text_sha256": "0e64c28812a5d8ebfec97cf4ada40fcea5fd8e60afed88d4c73d51ce327f4966",
+      "duplicate_of": null,
+      "page_count": 39
+    },
+    {
+      "file": "full_texts/spencer-et-al-2025-equity-centered-development-of-a-community-health-worker-intervention-to-improve-engagement-in-care.pdf",
+      "source_file": "2026 ADHD Papers/spencer-et-al-2025-equity-centered-development-of-a-community-health-worker-intervention-to-improve-engagement-in-care.pdf",
+      "source_id": "PDF_152",
+      "sha256": "189166e33d9ba96c22aa0d09065027e06dcdfd4d5e87985d487ef96eb423538a",
+      "text_sha256": "a34365952d84494571ca41fefb7c1fa77a8a4f2059059bf5ed176338f5a464b2",
+      "duplicate_of": null,
+      "page_count": 13
+    },
+    {
+      "file": "full_texts/taylor-et-al-2026-parent-perspectives-on-barriers-to-behavioral-health-services-for-children-with-adhd.pdf",
+      "source_file": "2026 ADHD Papers/taylor-et-al-2026-parent-perspectives-on-barriers-to-behavioral-health-services-for-children-with-adhd.pdf",
+      "source_id": "PDF_153",
+      "sha256": "e0aa3aeb59539bb08e7c31065d2d216e948f11325d37bbb8b8ac18830fdbd290",
+      "text_sha256": "2f27abe2c1509fb1360ddd9df28a37fd545f80c4de58c91408ab4b08d9ced520",
+      "duplicate_of": null,
+      "page_count": 13
+    },
+    {
+      "file": "full_texts/the-association-between-asthma-and-adhd-in-children-and.pdf",
+      "source_file": "2026 ADHD Papers/the-association-between-asthma-and-adhd-in-children-and.pdf",
+      "source_id": "PDF_154",
+      "sha256": "658c253da9f6cb575b1f476c28f20494748241b874bd7ef4d48a5a6d635191c5",
+      "text_sha256": "6889f88dd47dfd752458548294d9eab4edd6fcbe2a1281784ebd544074eb9c8b",
+      "duplicate_of": null,
+      "page_count": 10
+    },
+    {
+      "file": "full_texts/the-relationship-between-problematic-social-media-use-and.pdf",
+      "source_file": "2026 ADHD Papers/the-relationship-between-problematic-social-media-use-and.pdf",
+      "source_id": "PDF_155",
+      "sha256": "52b26ace027941f42fbed6a7adbd24e1b3807ed3089802d96e2d75bfbc040a23",
+      "text_sha256": "6459485763140d00bb94def0d8eed5f88d8429b17e6ad834fa32efc16e70e8b4",
+      "duplicate_of": null,
+      "page_count": 9
+    },
+    {
+      "file": "full_texts/what-predicts-attention-deficithyperactivity-disorder.pdf",
+      "source_file": "2026 ADHD Papers/what-predicts-attention-deficithyperactivity-disorder.pdf",
+      "source_id": "PDF_156",
+      "sha256": "187503a08be0b7301d07eb0d91ae3c6c87d335c03d02fc3a53d8ad71aedad5ee",
+      "text_sha256": "531691446ee439d7e5bcb375c79a704d9fb8b7aca45cdeb48ae02027a0dac509",
+      "duplicate_of": null,
+      "page_count": 8
+    },
+    {
+      "file": "full_texts/zhang-et-al-2025-effects-of-exercise-on-hyperactivity-impulsivity-and-inhibitory-control-at-behavioral-and.pdf",
+      "source_file": "2026 ADHD Papers/zhang-et-al-2025-effects-of-exercise-on-hyperactivity-impulsivity-and-inhibitory-control-at-behavioral-and.pdf",
+      "source_id": "PDF_157",
+      "sha256": "7e4d3c70146f585c564214abaeca36672521f7c5e15c4f1907b4c41c190bf48b",
+      "text_sha256": "93d9850f48a93622e4e02d2745b2e4d9ce9226c386822ca3356c9a848e7ec8cd",
+      "duplicate_of": null,
+      "page_count": 17
+    },
+    {
+      "file": "full_texts/zhang-et-al-2026-optimizing-exercise-interventions-for-motor-skills-enhancement-in-attention-deficit-hyperactivity.pdf",
+      "source_file": "2026 ADHD Papers/zhang-et-al-2026-optimizing-exercise-interventions-for-motor-skills-enhancement-in-attention-deficit-hyperactivity.pdf",
+      "source_id": "PDF_158",
+      "sha256": "34257142eef6ab3051f30199aa343ea29b0e7095d38d0a3b73c795eda166dd7b",
+      "text_sha256": "c85d5a4da68fa0e9c481aab7dd6f0bfaeec6b3c20d505fa19b6122a7eb72d68e",
+      "duplicate_of": null,
+      "page_count": 18
+    },
+    {
+      "file": "full_texts/öztürk-et-al-2026-increased-serum-netrin-1-levels-among-children-diagnosed-with-adhd.pdf",
+      "source_file": "2026 ADHD Papers/öztürk-et-al-2026-increased-serum-netrin-1-levels-among-children-diagnosed-with-adhd.pdf",
+      "source_id": "PDF_159",
+      "sha256": "df82a5a433340dc0b4561eda1fde9d743722310a068b46457cf1903e4525995e",
+      "text_sha256": "d96c2b25f6898996eb1bb5b4dc4d7baa8cd13b8e8a6c46763861ae3111fb664a",
+      "duplicate_of": null,
+      "page_count": 8
+    }
+  ]
+}
