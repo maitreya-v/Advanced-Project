@@ -30,15 +30,16 @@ validation decisions remain unchanged.
 - `2026 ADHD Papers/`: 159 PDFs, kept byte-for-byte from `main`.
 - `paper_reviews/2026/` and `validation_2026_utils.py`: provenance and rebuild sources.
 
-On this Windows checkout, each report folder's `full_texts` is a directory junction
-to `2026 ADHD Papers`, equivalent to the relative directory symlink on `main`.
-These links support the supplied standalone `validated_graph.html` files; dashboard
-PDF links resolve through the original reference renderer. If checking out on
-another Windows machine, recreate these junctions if Git did not create working
-directory links.
+Standalone graphs, reports and workbooks link directly to `../2026 ADHD Papers/`.
+No symlinks, Windows junctions or local Git exclusions are needed. Keep the corpus
+folder beside the report folders. Dashboard PDF links continue to resolve through
+the existing reference renderer. Report rebuilding accepts Git checkout newline
+conversions while retaining source-text and PDF integrity checks.
 
-`scripts/import_2026_validation.py` reproduces the import from the local `main`
-ref and refuses to overwrite a differing existing file. It skips symlinks.
+`scripts/import_2026_validation.py` records the original import from the local
+`main` ref and refuses to overwrite differing files. It is not needed after a
+checkout; the portable artifacts are committed directly. Do not re-import the
+older reports over the rebuilt portable reports.
 
 ## Verification
 
@@ -50,6 +51,15 @@ The three integration tests cover all 212 edges, preserved layout and styling,
 graph rendering with a strength filter, hashes for all 159 source PDFs,
 deduplicated corpus counts, and simulated edge clicks into page-linked validation
 panels for each age.
+
+The portability checks additionally copy the artifacts and PDF corpus into a
+fresh directory tree without any symlinks or junctions, resolve every standalone
+page-linked PDF URL, compare workbook paths, and verify the selected quotations
+against the source PDFs. Install `requirements-dev.txt`, then run:
+
+```powershell
+.\.venv\Scripts\python.exe -m unittest discover -s tests -p test_2026_portability.py -v
+```
 
 ## Next phase
 

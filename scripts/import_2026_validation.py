@@ -23,7 +23,8 @@ def main():
         path = ROOT / name.decode("utf-8")
         path.resolve().relative_to(ROOT.resolve())
         if mode == b"120000":
-            # Windows directory junctions are created separately for standalone HTML.
+            # Legacy directory links are not imported. Portable reports use
+            # direct relative references to the committed corpus instead.
             continue
         data = git("cat-file", "blob", oid.decode())
         if path.exists():
