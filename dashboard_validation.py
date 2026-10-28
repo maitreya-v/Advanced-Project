@@ -79,7 +79,7 @@ network.on('selectEdge', function(params) {
     return graph_html.replace("</body>", bridge + "</body>", 1)
 
 
-def render_validation(snapshot, selected_edge, panel_height=570):
+def render_validation(snapshot, selected_edge, panel_height=570, *, minimum_content_height=0):
     validation = snapshot.get("validation")
     if not validation:
         st.caption("No validation report is available for this snapshot.")
@@ -94,7 +94,7 @@ def render_validation(snapshot, selected_edge, panel_height=570):
         return
 
     if st.session_state.get("snapshot_tabs") == "Validation":
-        show_validation_panel(snapshot, selected_edge, panel_height)
+        show_validation_panel(snapshot, selected_edge, panel_height, minimum_content_height=minimum_content_height)
     else:
         st.caption("Select the Validation tab to read the selected edge's evidence.")
 
@@ -150,10 +150,10 @@ def popup_payload(snapshot, selected_edge):
     }
 
 
-def show_validation_panel(snapshot, selected_edge, panel_height):
+def show_validation_panel(snapshot, selected_edge, panel_height, *, minimum_content_height=0):
     payload = popup_payload(snapshot, selected_edge)
     result = popup_component(
-        payload=payload, height=panel_height,
+        payload=payload, height=panel_height, minimum_content_height=minimum_content_height,
         key=f"validation-panel-{snapshot['year']}-{snapshot['age']}-{selected_edge}-{st.session_state.get('validation_selection_token')}-{st.session_state.get('validation_panel_generation', 0)}",
         default=None,
     )

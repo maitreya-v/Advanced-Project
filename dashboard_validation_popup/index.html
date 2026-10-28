@@ -72,6 +72,7 @@
     let payload = null;
     let payloadKey = null;
     let requestedHeight = 570;
+    let minimumContentHeight = 0;
     let pages = [];
     let pageIndex = 0;
     let lastSentPage = null;
@@ -208,7 +209,15 @@
       let viewportHeight;
       try { viewportHeight = window.parent.innerHeight; }
       catch (_) { viewportHeight = window.innerHeight + 240; }
-      const height = Math.max(200, Math.min(requestedHeight, viewportHeight - 300));
+      // Compact dashboards scroll inside their Snapshot section. Let this
+      // iframe grow enough to paginate readable content rather than failing
+      // when its header and navigation consume the requested height.
+      const readableHeight = minimumContentHeight > 0
+        ? document.querySelector('header').getBoundingClientRect().height
+          + document.querySelector('footer').getBoundingClientRect().height
+          + 24 + minimumContentHeight
+        : 0;
+      const height = Math.max(200, readableHeight, Math.min(requestedHeight, viewportHeight - 300));
       app.style.height = height + 'px';
       send('streamlit:setFrameHeight', { height });
     }
@@ -225,7 +234,7 @@
     let resizeFrame;
     new ResizeObserver(() => {
       cancelAnimationFrame(resizeFrame);
-      resizeFrame = requestAnimationFrame(rebuildPages);
+      resizeFrame = requestAnimationFrame(() => { sizeToViewport(); rebuildPages(); });
     }).observe(content);
     window.addEventListener('resize', () => { sizeToViewport(); rebuildPages(); });
     window.addEventListener('message', event => {
@@ -233,6 +242,7 @@
       applyTheme(event.data.theme);
       const incoming = event.data.args.payload;
       requestedHeight = event.data.args.height || 570;
+      minimumContentHeight = Math.max(0, Number(event.data.args.minimum_content_height) || 0);
       const key = JSON.stringify(incoming);
       if (key !== payloadKey) {
         payload = incoming; payloadKey = key; pageIndex = 0; lastSentPage = null;
