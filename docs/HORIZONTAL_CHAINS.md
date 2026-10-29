@@ -1,5 +1,33 @@
 # Horizontal chains — implementation and handoff
 
+## Dashboard 2.0 integration
+
+The chain prototype is now available inside `Dashboard_2_0.py` with independent
+Year A/Age A and Year B/Age B selectors. Any pair of scenarios can be compared,
+including changes to both year and age or reverse ordering. **Choose routes**
+sets independent Start A/End A and Start B/End B endpoints and routes, with a
+shared maximum step limit. Endpoint edits refresh and focus their own chain;
+the other scenario retains its route and selected step. The graph's
+minimum-strength slider filters both chains. Unavailable routes show the
+scenario and requested endpoints instead of a previous chain.
+
+The comparison summary and **Changes** tab report added/removed nodes and directed
+edges, sign changes, and A/B strengths with B-minus-A deltas across the complete
+snapshots. Chain filters do not change these differences. Each chain has its own
+step state. Select an arrow or Scenario A/B and use the **Story / Validation**
+toggle for its authored explanation/examples or its own year/age-specific
+paginated evidence. The chosen mode persists while navigating between steps.
+
+Named saves, the Saved chains library, frozen saved views, reload links and
+standalone HTML/JSON exports are available in the chain panel. Saved records
+retain their own evidence scenario when the live graph changes. Existing
+two-chain records reopen as Scenario A and B, while legacy single-chain saves
+also work. Route selection is independent for each side; the app never combines
+edges from different scenarios. The standalone prototype remains available.
+See [Dashboard 2.0](DASHBOARD_2_0.md) for current usage and checks.
+
+The original prototype handoff below describes the branch before this integration.
+
 Maitreya's chain implementation is on `codex/horizontal-chain-prototype`: horizontal rendering, single-snapshot queries, selected-step text, persistent save/list/reopen, JSON/HTML exports and the legacy-export compatibility fix. The separate workspace is `Chain_Prototype.py`. `Dashboard.py`, `Dashboard_2_0.py`, the existing player and shared validation helpers keep their existing interfaces.
 
 Run from the repository root:

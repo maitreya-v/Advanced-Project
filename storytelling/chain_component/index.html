@@ -38,6 +38,17 @@ button:focus-visible, .scroller:focus-visible { outline:3px solid #258fbe; outli
 .examples strong, .reading summary { font-size:12px; color:#637b8c; }
 .reading .note { font-size:11px; color:#637b8c; }
 .standalone #chain-document { padding:16px; }
+.compact .heading { padding:8px 12px; }
+.compact .track { padding:10px 12px; }
+.compact .node { min-height:84px; padding:7px 10px; }
+.compact .node-name { font-size:12px; margin:5px 0; }
+.compact .footer { padding:7px 12px; }
+.comparison .heading { padding:5px 10px; }
+.comparison .track { padding:6px 10px; }
+.comparison .node { flex-basis:132px; width:132px; min-height:58px; padding:6px 8px; }
+.comparison .role, .comparison .domain, .comparison .hint { display:none; }
+.comparison .footer { padding:5px 10px; }
+.active-chain .shell { border-color:#28717b; box-shadow:inset 0 0 0 1px #28717b; }
 @media (max-width:600px) { .examples { grid-template-columns:1fr; gap:4px; } }
 @media (prefers-reduced-motion:reduce) { * { scroll-behavior:auto !important; } }
 </style>
@@ -151,7 +162,13 @@ byId('next').onclick = () => selectStep(selected + 1, true, true, true);
 window.addEventListener('message', event => {
   if (event.source !== window.parent || event.data?.type !== 'streamlit:render') return;
   const args = event.data.args;
-  if (args?.chain?.version === 'horizontal-chain-v1') render(args.chain, args.selected_step ?? 0);
+  if (args?.chain?.version === 'horizontal-chain-v1') {
+    document.body.classList.toggle('compact', args.compact === true);
+    document.body.classList.toggle('comparison', args.comparison === true);
+    document.body.classList.toggle('active-chain', args.active === true);
+    document.querySelector('.heading strong').textContent = args.label || 'Story chain';
+    render(args.chain, args.selected_step ?? 0);
+  }
 });
 new ResizeObserver(sizeFrame).observe(byId('chain-document'));
 send('streamlit:componentReady', {apiVersion:1});

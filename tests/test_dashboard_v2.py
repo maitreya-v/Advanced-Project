@@ -19,7 +19,7 @@ class DashboardV2Tests(unittest.TestCase):
                 with self.subTest(year=year, age=age):
                     app.select_slider(key='v2_age').set_value(age).run()
                     self.assertFalse(app.exception, [e.message for e in app.exception])
-                    self.assertEqual([tab.label for tab in app.tabs], ['Info', 'Edges', 'Groups', 'Legend', 'Validation'])
+                    self.assertEqual([tab.label for tab in app.tabs], ['Info', 'Edges', 'Groups', 'Legend', 'Changes', 'Story', 'Validation'])
                     self.assertIsNone(app.session_state['v2_selected_edge'])
         app.slider(key='v2_strength').set_value(1.0).run()
         self.assertFalse(app.exception)

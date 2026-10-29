@@ -10,6 +10,10 @@ from dashboard_v2_graph import (
     load_all_snapshots, build_network_html, extract_strength_from_title,
     clean_multiline_text, clean_text,
 )
+from dashboard_v2_chains import (
+    load_chain_snapshots, render_chain_workspace, render_step_story, validation_edge_for_step,
+    render_scenario_changes,
+)
 
 ROOT = Path(__file__).resolve().parent
 viewport_component = components.declare_component("dashboard_v2_viewport", path=str(ROOT / "dashboard_v2_viewport"))
@@ -30,14 +34,17 @@ st.html("""
 .v2-header h1 { color:var(--v2-ink); font:600 29px/1.1 system-ui,sans-serif; letter-spacing:-0.8px; margin:0; padding:0; }
 .v2-version { position:absolute; left:16px; font:600 10px system-ui,sans-serif;
   letter-spacing:1.3px; color:var(--v2-muted); text-transform:uppercase; }
-.st-key-v2_controls, .st-key-v2_future, .st-key-v2_graph, .st-key-v2_snapshot {
+.st-key-v2_controls, .st-key-v2_chains, .st-key-v2_graph, .st-key-v2_snapshot {
   background:#fff; border:1px solid var(--v2-line); border-radius:14px; padding:12px 15px;
   box-shadow:0 2px 5px #183e5510;
 }
 .st-key-v2_controls { padding:7px 12px; }
-.st-key-v2_future { background:linear-gradient(135deg,#f9fcfc,#f3f8fa); }
-.v2-future { display:flex; align-items:flex-start; }
-.v2-future span { color:#879da9; font:600 10px system-ui,sans-serif; letter-spacing:1.5px; text-transform:uppercase; }
+.st-key-v2_chains [data-testid="stWidgetLabel"] p { font-size:11px; }
+.st-key-v2_chains [data-testid="stCaptionContainer"] p { font-size:11px; margin-bottom:3px; }
+.v2-change-counts { display:grid; grid-template-columns:repeat(4,1fr); gap:6px; margin:3px 0; }
+.v2-change-counts div { background:#f2f7f9; border-radius:7px; padding:6px 8px; }
+.v2-change-counts b { color:var(--v2-ink); font-size:13px; margin-right:6px; }
+.v2-change-counts span { color:var(--v2-muted); font-size:10px; }
 .st-key-v2_controls [data-testid="stWidgetLabel"] p { font-size:12px; color:var(--v2-ink); }
 .st-key-v2_controls [data-testid="stSlider"], .st-key-v2_controls [data-testid="stSelectSlider"] { padding:0; }
 .st-key-v2_controls [data-testid="stVerticalBlock"] { gap:0; }
@@ -87,11 +94,11 @@ def graph_html(snapshot, threshold, height):
     return build_network_html(snapshot, threshold, height)
 
 
-def render_snapshot(snapshot, selected_edge, visible_edges, panel_height):
+def render_snapshot(snapshot, selected_edge, visible_edges, panel_height, chain_selection=None, *, source="Graph", comparison=None):
     """Keep the original Snapshot tabs and the shared validation pagination."""
-    st.html(f'<div class="v2-section"><h2>Snapshot</h2><span class="v2-context">{snapshot["year"]} · Age {snapshot["age"]}</span></div>')
-    info, edges, groups, legend, validation = st.tabs(
-        ["Info", "Edges", "Groups", "Legend", "Validation"], key="snapshot_tabs", on_change="rerun",
+    st.html(f'<div class="v2-section"><h2>Snapshot</h2><span class="v2-context">{source} · {snapshot["year"]} · Age {snapshot["age"]}</span></div>')
+    info, edges, groups, legend, changes, story, validation = st.tabs(
+        ["Info", "Edges", "Groups", "Legend", "Changes", "Story", "Validation"], key="snapshot_tabs", on_change="rerun",
     )
     with info:
         facts = [(snapshot["year"], "Year"), (snapshot["age"], "Age"),
@@ -104,7 +111,7 @@ def render_snapshot(snapshot, selected_edge, visible_edges, panel_height):
         if description:
             st.markdown("**Description**")
             st.caption(description)
-        st.caption("Click a graph edge to open its validation and research references.")
+        st.caption("Click a graph edge for validation, or select a chain arrow to read its story.")
     with edges:
         st.markdown("**Edge color and dashes:** validation status  \n"
                     "**Sign (+ / −):** positive / negative effect  \n"
@@ -126,6 +133,10 @@ def render_snapshot(snapshot, selected_edge, visible_edges, panel_height):
                     "**Hover:** domain, original reasoning and strength.")
         st.markdown("**Validation status**")
         st.html(''.join(f'<div style="font-size:12px;margin:5px 0"><span class="v2-dot" style="background:{style["color"]}"></span>{style["label"]}</div>' for style in STATUS_STYLES.values()))
+    with changes:
+        render_scenario_changes(comparison)
+    with story:
+        render_step_story(chain_selection)
     with validation:
         render_validation(snapshot, selected_edge, panel_height, minimum_content_height=144)
 
@@ -133,6 +144,7 @@ def render_snapshot(snapshot, selected_edge, visible_edges, panel_height):
 source_files = [ROOT / "clusters.json", *sorted(ROOT.glob("*yo.py"))]
 signature = tuple((path.name, path.stat().st_mtime_ns, path.stat().st_size) for path in source_files)
 snapshots = load_all_snapshots(signature)
+chain_snapshots = load_chain_snapshots(signature)
 if not snapshots:
     st.error("No year and age snapshots were found.")
     st.stop()
@@ -145,7 +157,7 @@ except (TypeError, KeyError, ValueError):
     viewport_height = 900
 workspace_height = max(220, viewport_height - 82)
 controls_height = min(168, int(workspace_height * 0.4))
-chain_height = int(workspace_height * 0.45)
+chain_height = int(workspace_height * 0.64)
 graph_panel_height = workspace_height - controls_height - 8
 snapshot_height = workspace_height - chain_height - 8
 height = max(100, graph_panel_height - 64)
@@ -167,10 +179,12 @@ snapshot = attach_validation(snapshots[year][age])
 visible_edges = [edge for edge in snapshot["edges"] if extract_strength_from_title(edge.get("title", "")) >= threshold]
 context = (year, age, threshold)
 if st.session_state.get("v2_context") != context:
-    st.session_state.update(v2_context=context, v2_selected_edge=None,
-                            snapshot_tabs="Info", validation_selection_token=None)
-    st.session_state.pop("validation_pending_tab", None)
+    st.session_state.update(v2_context=context, v2_selected_edge=None, v2_graph_selection_token=None)
+    if st.session_state.get("v2_detail_source") != "chain":
+        st.session_state.update(snapshot_tabs="Info", validation_selection_token=None)
+        st.session_state.pop("validation_pending_tab", None)
 
+graph_selection_changed = False
 with graph_col, st.container(key="v2_graph", height=graph_panel_height):
     st.html(f'<div class="v2-section"><h2>Graph</h2><span class="v2-context">{year} · Age {age} · {len(visible_edges)} edges</span></div>')
     selection = graph_component(
@@ -180,9 +194,12 @@ with graph_col, st.container(key="v2_graph", height=graph_panel_height):
     if isinstance(selection, dict):
         edge_id = selection.get("edge_id")
         token = (*context, selection.get("sequence"))
-        if edge_id in {edge["id"] for edge in visible_edges} and st.session_state.get("validation_selection_token") != token:
+        if edge_id in {edge["id"] for edge in visible_edges} and st.session_state.get("v2_graph_selection_token") != token:
+            graph_selection_changed = True
             st.session_state["v2_selected_edge"] = edge_id
+            st.session_state["v2_graph_selection_token"] = token
             st.session_state["validation_selection_token"] = token
+            st.session_state["v2_detail_source"] = "graph"
             st.session_state["snapshot_tabs"] = "Validation"
     if not visible_edges:
         st.caption("No edges meet this threshold. Lower minimum edge strength to show connections.")
@@ -191,7 +208,32 @@ if "validation_pending_tab" in st.session_state:
     st.session_state["snapshot_tabs"] = st.session_state.pop("validation_pending_tab")
 
 with detail_col:
-    with st.container(key="v2_future", height=chain_height):
-        st.html('<div class="v2-future" aria-label="Reserved future chain workspace"><span>Chain workspace</span></div>')
+    if st.session_state.get("snapshot_tabs") == "Story":
+        st.session_state.update(v2_detail_source="chain", v2_step_detail_mode="Story")
+    elif st.session_state.get("v2_detail_source") == "chain" and st.session_state.get("snapshot_tabs") == "Validation":
+        st.session_state["v2_step_detail_mode"] = "Validation"
+    with st.container(key="v2_chains", height=chain_height):
+        chain_workspace = render_chain_workspace(chain_snapshots, year, age, threshold)
+        chain_selection = chain_workspace["selection"]
+    if chain_selection and chain_selection["changed"] and not graph_selection_changed:
+        st.session_state.update(v2_detail_source="chain", snapshot_tabs=st.session_state["v2_step_detail_mode"])
+        st.session_state.pop("validation_pending_tab", None)
+    if chain_selection and st.session_state.get("snapshot_tabs") == "Story":
+        st.session_state["v2_detail_source"] = "chain"
+    if chain_selection is None and st.session_state.get("v2_detail_source") == "chain":
+        st.session_state.update(v2_detail_source="graph", snapshot_tabs="Info", validation_selection_token=None)
+    detail_snapshot, detail_edges = snapshot, visible_edges
+    detail_edge = st.session_state.get("v2_selected_edge")
+    source = "Graph"
+    if chain_selection and st.session_state.get("v2_detail_source") == "chain":
+        chain, step = chain_selection["chain"], chain_selection["step"]
+        scope = chain["scenario"]
+        detail_snapshot = attach_validation(snapshots[scope["year"]][scope["age"]])
+        detail_edges = [edge for edge in detail_snapshot["edges"]
+                        if extract_strength_from_title(edge.get("title", "")) >= chain["query"]["minimum_strength"]]
+        detail_edge = validation_edge_for_step(chain, step, detail_snapshot)
+        st.session_state["validation_selection_token"] = ("chain", chain_selection["side"], chain["query_id"], chain["chain_id"], step["index"])
+        source = ("Saved chain " if chain_selection["saved"] else "Chain ") + chain_selection["side"]
     with st.container(key="v2_snapshot", height=snapshot_height):
-        render_snapshot(snapshot, st.session_state.get("v2_selected_edge"), visible_edges, max(200, snapshot_height - 110))
+        render_snapshot(detail_snapshot, detail_edge, detail_edges, max(200, snapshot_height - 110),
+                        chain_selection, source=source, comparison=chain_workspace["comparison"])
