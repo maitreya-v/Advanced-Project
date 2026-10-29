@@ -1,0 +1,189 @@
+{
+  "version": "1",
+  "reviewed_on": "2026-10-01",
+  "method_note": "Labels describe how closely a source relates to an authored graph edge. They are not GRADE ratings and do not validate the edge direction or weight.",
+  "edges": {
+    "e_67931222b9095196": {
+      "quality_label": "Contextual trial evidence",
+      "summary": "A randomized trial studied an ADHD telehealth service model in underserved communities. It supports the feasibility of remote treatment delivery, not this exact access-to-treatment edge or its weight.",
+      "citations": [
+        {
+          "title": "Effectiveness of a telehealth service delivery model for treating ADHD: a community-based randomized controlled trial",
+          "authors": "Myers et al.",
+          "year": 2015,
+          "type": "Randomized controlled trial",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/25791143/",
+          "doi": "10.1016/j.jaac.2015.01.009"
+        }
+      ]
+    },
+    "e_cb56ee2abd578fcd": {
+      "quality_label": "Directly relevant trial; not edge-validated",
+      "summary": "The CATTS randomized trial tested a telehealth service model for children in communities with limited specialty access. It is directly relevant to remote treatment delivery and access, but it does not estimate this graph weight.",
+      "citations": [
+        {
+          "title": "Effectiveness of a telehealth service delivery model for treating ADHD: a community-based randomized controlled trial",
+          "authors": "Myers et al.",
+          "year": 2015,
+          "type": "Randomized controlled trial",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/25791143/",
+          "doi": "10.1016/j.jaac.2015.01.009"
+        }
+      ]
+    },
+    "e_c881203730e5cdc7": {
+      "quality_label": "Indirect trial evidence",
+      "summary": "A pediatric randomized trial evaluated one digital therapeutic. It supports the existence of a digital treatment option, but it does not test whether treatment access causes adoption of digital therapeutics.",
+      "citations": [
+        {
+          "title": "A novel digital intervention for actively reducing severity of paediatric ADHD (STARS-ADHD): a randomised controlled trial",
+          "authors": "Kollins et al.",
+          "year": 2020,
+          "type": "Randomized controlled trial",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33334505/",
+          "doi": "10.1016/S2589-7500(20)30017-0"
+        }
+      ]
+    },
+    "e_317d3532f4ac351e": {
+      "quality_label": "Directly relevant trial; outcome-specific",
+      "summary": "STARS-ADHD tested one digital therapeutic in children aged 8–12 and found improvement on its primary objective attention outcome. This does not establish a general effect for every digital therapeutic or validate this edge weight.",
+      "citations": [
+        {
+          "title": "A novel digital intervention for actively reducing severity of paediatric ADHD (STARS-ADHD): a randomised controlled trial",
+          "authors": "Kollins et al.",
+          "year": 2020,
+          "type": "Randomized controlled trial",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33334505/",
+          "doi": "10.1016/S2589-7500(20)30017-0"
+        }
+      ]
+    },
+    "e_d0a0449bcaeeaacb": {
+      "quality_label": "Guideline context; not edge-specific",
+      "summary": "The American Academy of Pediatrics guideline links confirmed diagnosis with age-appropriate treatment planning. It does not estimate this graph edge or imply that diagnosis automatically leads to medication.",
+      "citations": [
+        {
+          "title": "Clinical Practice Guideline for the Diagnosis, Evaluation, and Treatment of ADHD in Children and Adolescents",
+          "authors": "Wolraich et al.",
+          "year": 2019,
+          "type": "Clinical practice guideline",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/31570648/",
+          "doi": "10.1542/peds.2019-2528"
+        }
+      ]
+    },
+    "e_5a8510b8d4f89cb8": {
+      "quality_label": "Guideline context; not edge-specific",
+      "summary": "The American Academy of Pediatrics guideline recommends age-appropriate behavioral interventions as part of treatment planning. It does not estimate this graph edge or imply an automatic pathway.",
+      "citations": [
+        {
+          "title": "Clinical Practice Guideline for the Diagnosis, Evaluation, and Treatment of ADHD in Children and Adolescents",
+          "authors": "Wolraich et al.",
+          "year": 2019,
+          "type": "Clinical practice guideline",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/31570648/",
+          "doi": "10.1542/peds.2019-2528"
+        }
+      ]
+    },
+    "e_39250567215b8b8e": {
+      "quality_label": "Guideline context; not edge-specific",
+      "summary": "The guideline recommends medication for appropriate pediatric age groups within a treatment plan. It does not establish that access alone produces medication treatment or validate the authored weight.",
+      "citations": [
+        {
+          "title": "Clinical Practice Guideline for the Diagnosis, Evaluation, and Treatment of ADHD in Children and Adolescents",
+          "authors": "Wolraich et al.",
+          "year": 2019,
+          "type": "Clinical practice guideline",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/31570648/",
+          "doi": "10.1542/peds.2019-2528"
+        }
+      ]
+    },
+    "e_ba5abe9d3b46c18b": {
+      "quality_label": "Guideline context; not edge-specific",
+      "summary": "The guideline includes behavioral interventions in pediatric ADHD treatment. It does not test this access pathway or validate the authored weight.",
+      "citations": [
+        {
+          "title": "Clinical Practice Guideline for the Diagnosis, Evaluation, and Treatment of ADHD in Children and Adolescents",
+          "authors": "Wolraich et al.",
+          "year": 2019,
+          "type": "Clinical practice guideline",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/31570648/",
+          "doi": "10.1542/peds.2019-2528"
+        }
+      ]
+    },
+    "e_dcc8fc81d69a405e": {
+      "quality_label": "Guideline context; not edge-specific",
+      "summary": "The guideline treats educational interventions and individualized school supports as necessary parts of pediatric ADHD care. It does not test the direction or magnitude of this graph edge.",
+      "citations": [
+        {
+          "title": "Clinical Practice Guideline for the Diagnosis, Evaluation, and Treatment of ADHD in Children and Adolescents",
+          "authors": "Wolraich et al.",
+          "year": 2019,
+          "type": "Clinical practice guideline",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/31570648/",
+          "doi": "10.1542/peds.2019-2528"
+        }
+      ]
+    },
+    "e_38f8f62026976763": {
+      "quality_label": "Direct trial evidence; population-specific",
+      "summary": "The MTA randomized trial compared medication management, behavioral treatment, combined treatment, and community care in children. Its findings are relevant to medication and ADHD symptoms but do not validate this graph weight across years and ages.",
+      "citations": [
+        {
+          "title": "A 14-month randomized clinical trial of treatment strategies for attention-deficit/hyperactivity disorder",
+          "authors": "MTA Cooperative Group",
+          "year": 1999,
+          "type": "Randomized clinical trial",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/10591283/",
+          "doi": "10.1001/archpsyc.56.12.1073"
+        }
+      ]
+    },
+    "e_b4fa866d72a2f86e": {
+      "quality_label": "Direct trial evidence; population-specific",
+      "summary": "The MTA randomized trial included an intensive behavioral-treatment arm and measured symptom outcomes in children. It does not validate this graph weight across years and ages.",
+      "citations": [
+        {
+          "title": "A 14-month randomized clinical trial of treatment strategies for attention-deficit/hyperactivity disorder",
+          "authors": "MTA Cooperative Group",
+          "year": 1999,
+          "type": "Randomized clinical trial",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/10591283/",
+          "doi": "10.1001/archpsyc.56.12.1073"
+        }
+      ]
+    },
+    "e_29a0e686b719e5b7": {
+      "quality_label": "Direct trial evidence; outcome-specific",
+      "summary": "The MTA trial measured multiple functional outcomes alongside symptoms. It is relevant to behavioral treatment and functioning but does not validate this exact directed edge or weight.",
+      "citations": [
+        {
+          "title": "A 14-month randomized clinical trial of treatment strategies for attention-deficit/hyperactivity disorder",
+          "authors": "MTA Cooperative Group",
+          "year": 1999,
+          "type": "Randomized clinical trial",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/10591283/",
+          "doi": "10.1001/archpsyc.56.12.1073"
+        }
+      ]
+    },
+    "e_9fc62625cba8f72e": {
+      "quality_label": "Guideline context; not edge-specific",
+      "summary": "The guideline recommends educational interventions and individualized supports. It does not directly estimate how accommodations affect functional impairment or validate this graph weight.",
+      "citations": [
+        {
+          "title": "Clinical Practice Guideline for the Diagnosis, Evaluation, and Treatment of ADHD in Children and Adolescents",
+          "authors": "Wolraich et al.",
+          "year": 2019,
+          "type": "Clinical practice guideline",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/31570648/",
+          "doi": "10.1542/peds.2019-2528"
+        }
+      ]
+    }
+  }
+}

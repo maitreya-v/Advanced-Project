@@ -59,6 +59,12 @@ class DashboardValidationTests(unittest.TestCase):
         self.assertIn("dashboard-validation-edge", rendered)
         self.assertEqual(rendered, self.functions["build_network_html"](snapshot, 0.7, 600))
 
+    def test_2026_snapshots_have_validation_for_every_edge(self):
+        for age in [8, 32, 45]:
+            snapshot = self.functions["load_snapshot_from_script"](ROOT / f"2026_{age} yo.py")
+            annotated = dashboard_validation.attach_validation(snapshot)
+            self.assertEqual(len(annotated["validation"]["decisions"]), len(snapshot["edges"]))
+
     def test_year_without_validation_remains_unannotated(self):
         snapshot = {"year": 2000}
         self.assertIs(dashboard_validation.attach_validation(snapshot), snapshot)

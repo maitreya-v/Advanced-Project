@@ -1,0 +1,394 @@
+{
+  "version": "1",
+  "key": "5e9ee2f907ab9aebefccdfb2",
+  "title": "How treatment access changes in the model",
+  "origin": "local-qwen",
+  "theme": "Treatment and access",
+  "question": "How do telehealth and treatment access change?",
+  "before": {
+    "year": 2010,
+    "age": 8,
+    "fingerprint": "254f46fd7f4a165bf5710fc994c7caa10cbe6ce291a69cb0d4800458a6ba89a8"
+  },
+  "after": {
+    "year": 2026,
+    "age": 8,
+    "fingerprint": "a7880db22199911098c912389bdca8962d0d52bd9bf6d2f50ce2d295b77b3fa7"
+  },
+  "comparison": {
+    "mode": "historical",
+    "added": [
+      "e_317d3532f4ac351e",
+      "e_3ac94080137ee029",
+      "e_4c2ece07fbe7ebb5",
+      "e_4cd58a8bf4c45803",
+      "e_6658bebc3d8bfeaa",
+      "e_67931222b9095196",
+      "e_94c9c8761fa662e5",
+      "e_968e07e6e6b8e6d5",
+      "e_acb31d861883caf4",
+      "e_bfbb53f3e20098b3",
+      "e_c14d14fe1b00d587",
+      "e_c881203730e5cdc7",
+      "e_cb56ee2abd578fcd",
+      "e_d0c425d2c6b80a35"
+    ],
+    "removed": [
+      "e_5a8510b8d4f89cb8",
+      "e_bcd96e7728ae35b1",
+      "e_d0a0449bcaeeaacb",
+      "e_f237b62d5bfeffcc"
+    ],
+    "changed": [
+      "e_0320d6c4c4c5a636",
+      "e_0ad1275673668fdb",
+      "e_0be10c543f01344f",
+      "e_146a9b5df2d79aa3",
+      "e_15503e0aabdda4d3",
+      "e_18b0e38ac3ad7709",
+      "e_1a20aec4702c5382",
+      "e_1be07f07281b248f",
+      "e_1c9a563731c4e73d",
+      "e_29a0e686b719e5b7",
+      "e_3075be8438de71b2",
+      "e_38f8f62026976763",
+      "e_39250567215b8b8e",
+      "e_3989756d2e9a2366",
+      "e_4377e22053683326",
+      "e_441b1a6b0471580e",
+      "e_4642a51874329c3c",
+      "e_5165a3c84e0c1a82",
+      "e_5513f056f55028b9",
+      "e_5530716342453280",
+      "e_59239d33fd9db496",
+      "e_6cb586a6240f0630",
+      "e_6e6907aa3047607c",
+      "e_701279553dad7e32",
+      "e_72621275110273fd",
+      "e_7aed15362ac8a613",
+      "e_7afbb52cf1715ed7",
+      "e_818c16ecd9c3a5d4",
+      "e_835bb57a3e2f6f57",
+      "e_8c8c29865e45ffcf",
+      "e_9fc62625cba8f72e",
+      "e_a02e085dd9e91909",
+      "e_ada031f1679f8c68",
+      "e_ae9d53dbf021aabc",
+      "e_b4fa866d72a2f86e",
+      "e_ba5abe9d3b46c18b",
+      "e_c271b3c242989f93",
+      "e_c7ac70ab080823f3",
+      "e_cec6a9bbd70b5ab8",
+      "e_d8d8d5ee5daa9697",
+      "e_dcc8fc81d69a405e",
+      "e_e21b328d527eac55",
+      "e_e3d79a867eb1cc20",
+      "e_e6e4323f41d330ff",
+      "e_e8e8e337eaeda238",
+      "e_e9427cf27ec8ed7b",
+      "e_f60df02c31455b35"
+    ],
+    "unchanged": [
+      "e_03ee224f9c6d111f",
+      "e_11749cf7db5bbb3d",
+      "e_40a1ccb0a6c5c1ad",
+      "e_818a49ac682345ce",
+      "e_d2c537b593d24ce6",
+      "e_e53ecb33f01d295c",
+      "e_ed5e4d0e13ebae65"
+    ],
+    "added_nodes": [
+      "Digital Media Exposure",
+      "Digital Therapeutics",
+      "Learning Accommodations",
+      "Peer Comparison",
+      "Social Media Awareness",
+      "Telehealth Access",
+      "Telehealth Treatment",
+      "Treatment Dependency"
+    ],
+    "removed_nodes": []
+  },
+  "scenes": [
+    {
+      "fact_id": "f_774c987c661b",
+      "title": "Telehealth enters the access pathway",
+      "narration": "The 2026 snapshot adds a modeled link from Telehealth Treatment to Treatment Access, a connection not included in the 2010 snapshot. This introduces remote treatment into the graph's represented access pathway.",
+      "fact": {
+        "id": "f_774c987c661b",
+        "kind": "added",
+        "title": "A new connection: Telehealth Treatment",
+        "claim": "The later snapshot includes Telehealth Treatment → Treatment Access (sign +, modeled strength 0.70); this edge is absent from the earlier snapshot. Absence does not establish that the relationship did not exist in reality.",
+        "nodes": [
+          "Telehealth Treatment",
+          "Treatment Access"
+        ],
+        "before_edges": [],
+        "after_edges": [
+          {
+            "id": "e_cb56ee2abd578fcd",
+            "from": "Telehealth Treatment",
+            "to": "Treatment Access",
+            "sign": "+",
+            "strength": 0.7,
+            "explanation": "Telehealth expands practical treatment access.",
+            "evidence_status": "Authored model; scientific validation pending",
+            "source_file": "2026_8 yo.py",
+            "color": "#48a88d",
+            "width": 4.199999999999999,
+            "arrows": "to",
+            "title": "Telehealth Treatment → Treatment Access\nSign: +\nStrength: 0.70\nTelehealth expands practical treatment access.\nAuthored model; scientific validation pending"
+          }
+        ],
+        "score": 80.0,
+        "score_parts": {
+          "relevance": 40.0,
+          "novelty": 25,
+          "weight_change": 0.0,
+          "outcome_connection": 15.0
+        },
+        "rank_reason": "Theme relevance 40/40 · novelty 25/25 · weight change 0/20 · outcome connection 15/15",
+        "matched_terms": [
+          "access",
+          "telehealth",
+          "treatment"
+        ]
+      },
+      "focus_nodes": [
+        "Telehealth Treatment",
+        "Treatment Access"
+      ],
+      "before_edge_ids": [],
+      "after_edge_ids": [
+        "e_cb56ee2abd578fcd"
+      ]
+    },
+    {
+      "fact_id": "f_b4a8d57e6d22",
+      "title": "Access branches toward digital tools",
+      "narration": "The 2026 snapshot also adds a modeled link from Treatment Access to Digital Therapeutics; the 2010 snapshot has no corresponding edge. Together with the first scene, the graph represents a broader set of routes around access.",
+      "fact": {
+        "id": "f_b4a8d57e6d22",
+        "kind": "added",
+        "title": "A new connection: Treatment Access",
+        "claim": "The later snapshot includes Treatment Access → Digital Therapeutics (sign +, modeled strength 0.62); this edge is absent from the earlier snapshot. Absence does not establish that the relationship did not exist in reality.",
+        "nodes": [
+          "Treatment Access",
+          "Digital Therapeutics"
+        ],
+        "before_edges": [],
+        "after_edges": [
+          {
+            "id": "e_c881203730e5cdc7",
+            "from": "Treatment Access",
+            "to": "Digital Therapeutics",
+            "sign": "+",
+            "strength": 0.62,
+            "explanation": "Modern treatment access may include app-based or digital ADHD tools.",
+            "evidence_status": "Authored model; scientific validation pending",
+            "source_file": "2026_8 yo.py",
+            "color": "#48a88d",
+            "width": 3.7199999999999998,
+            "arrows": "to",
+            "title": "Treatment Access → Digital Therapeutics\nSign: +\nStrength: 0.62\nModern treatment access may include app-based or digital ADHD tools.\nAuthored model; scientific validation pending"
+          }
+        ],
+        "score": 80.0,
+        "score_parts": {
+          "relevance": 40.0,
+          "novelty": 25,
+          "weight_change": 0.0,
+          "outcome_connection": 15.0
+        },
+        "rank_reason": "Theme relevance 40/40 · novelty 25/25 · weight change 0/20 · outcome connection 15/15",
+        "matched_terms": [
+          "access",
+          "treatment"
+        ]
+      },
+      "focus_nodes": [
+        "Treatment Access",
+        "Digital Therapeutics"
+      ],
+      "before_edge_ids": [],
+      "after_edge_ids": [
+        "e_c881203730e5cdc7"
+      ]
+    },
+    {
+      "fact_id": "f_1deefba48fdd",
+      "title": "Treatment Access becomes an intermediate step",
+      "narration": "The 2010 snapshot directly links Diagnosis Status to Behavioral Therapy. In 2026, the graph instead represents Diagnosis Status → Treatment Access → Behavioral Therapy; this is a structural comparison, not a claim of causal equivalence.",
+      "fact": {
+        "id": "f_1deefba48fdd",
+        "kind": "restructured",
+        "title": "A different route to Behavioral Therapy",
+        "claim": "The earlier snapshot directly links Diagnosis Status to Behavioral Therapy. That direct edge is absent in the later snapshot, which contains the path Diagnosis Status → Treatment Access → Behavioral Therapy. This is a structural comparison, not proof that the path is causally equivalent.",
+        "nodes": [
+          "Diagnosis Status",
+          "Behavioral Therapy",
+          "Treatment Access"
+        ],
+        "before_edges": [
+          {
+            "id": "e_5a8510b8d4f89cb8",
+            "from": "Diagnosis Status",
+            "to": "Behavioral Therapy",
+            "sign": "+",
+            "strength": 0.72,
+            "explanation": "Diagnosis connects children to behavioral and parent-focused interventions.",
+            "evidence_status": "Authored model; scientific validation pending",
+            "source_file": "2010_8 yo.py",
+            "color": "#48a88d",
+            "width": 4.32,
+            "arrows": "to",
+            "title": "Diagnosis Status → Behavioral Therapy\nSign: +\nStrength: 0.72\nDiagnosis connects children to behavioral and parent-focused interventions.\nAuthored model; scientific validation pending"
+          }
+        ],
+        "after_edges": [
+          {
+            "id": "e_4c2ece07fbe7ebb5",
+            "from": "Diagnosis Status",
+            "to": "Treatment Access",
+            "sign": "+",
+            "strength": 0.88,
+            "explanation": "Diagnosis strongly opens structured treatment pathways for children in 2026.",
+            "evidence_status": "Authored model; scientific validation pending",
+            "source_file": "2026_8 yo.py",
+            "color": "#48a88d",
+            "width": 5.28,
+            "arrows": "to",
+            "title": "Diagnosis Status → Treatment Access\nSign: +\nStrength: 0.88\nDiagnosis strongly opens structured treatment pathways for children in 2026.\nAuthored model; scientific validation pending"
+          },
+          {
+            "id": "e_ba5abe9d3b46c18b",
+            "from": "Treatment Access",
+            "to": "Behavioral Therapy",
+            "sign": "+",
+            "strength": 0.82,
+            "explanation": "Treatment access enables behavioral therapy.",
+            "evidence_status": "Authored model; scientific validation pending",
+            "source_file": "2026_8 yo.py",
+            "color": "#48a88d",
+            "width": 4.92,
+            "arrows": "to",
+            "title": "Treatment Access → Behavioral Therapy\nSign: +\nStrength: 0.82\nTreatment access enables behavioral therapy.\nAuthored model; scientific validation pending"
+          }
+        ],
+        "score": 66.67,
+        "score_parts": {
+          "relevance": 26.67,
+          "novelty": 25,
+          "weight_change": 0.0,
+          "outcome_connection": 15.0
+        },
+        "rank_reason": "Theme relevance 26.67/40 · novelty 25/25 · weight change 0/20 · outcome connection 15/15",
+        "matched_terms": [
+          "access",
+          "treatment"
+        ]
+      },
+      "focus_nodes": [
+        "Diagnosis Status",
+        "Behavioral Therapy",
+        "Treatment Access"
+      ],
+      "before_edge_ids": [
+        "e_5a8510b8d4f89cb8"
+      ],
+      "after_edge_ids": [
+        "e_4c2ece07fbe7ebb5",
+        "e_ba5abe9d3b46c18b"
+      ]
+    },
+    {
+      "fact_id": "f_5dec79bcf0bd",
+      "title": "School support remains connected",
+      "narration": "One link persists across both snapshots: Treatment Access → School Accommodations. Its authored model weight rises from 0.72 to 0.84, but these values are modeled magnitudes, not measured effects.",
+      "fact": {
+        "id": "f_5dec79bcf0bd",
+        "kind": "strengthened",
+        "title": "Treatment Access and School Accommodations",
+        "claim": "For Treatment Access → School Accommodations, modeled strength changes from 0.72 to 0.84. Its + sign is unchanged. These are authored model weights, not measured effect sizes or probabilities.",
+        "nodes": [
+          "Treatment Access",
+          "School Accommodations"
+        ],
+        "before_edges": [
+          {
+            "id": "e_dcc8fc81d69a405e",
+            "from": "Treatment Access",
+            "to": "School Accommodations",
+            "sign": "+",
+            "strength": 0.72,
+            "explanation": "Treatment access supports school accommodation pathways.",
+            "evidence_status": "Authored model; scientific validation pending",
+            "source_file": "2010_8 yo.py",
+            "color": "#48a88d",
+            "width": 4.32,
+            "arrows": "to",
+            "title": "Treatment Access → School Accommodations\nSign: +\nStrength: 0.72\nTreatment access supports school accommodation pathways.\nAuthored model; scientific validation pending"
+          }
+        ],
+        "after_edges": [
+          {
+            "id": "e_dcc8fc81d69a405e",
+            "from": "Treatment Access",
+            "to": "School Accommodations",
+            "sign": "+",
+            "strength": 0.84,
+            "explanation": "Treatment access supports formal school accommodations.",
+            "evidence_status": "Authored model; scientific validation pending",
+            "source_file": "2026_8 yo.py",
+            "color": "#48a88d",
+            "width": 5.04,
+            "arrows": "to",
+            "title": "Treatment Access → School Accommodations\nSign: +\nStrength: 0.84\nTreatment access supports formal school accommodations.\nAuthored model; scientific validation pending"
+          }
+        ],
+        "score": 66.15,
+        "score_parts": {
+          "relevance": 40.0,
+          "novelty": 8.75,
+          "weight_change": 2.4,
+          "outcome_connection": 15.0
+        },
+        "rank_reason": "Theme relevance 40/40 · novelty 8.75/25 · weight change 2.4/20 · outcome connection 15/15",
+        "matched_terms": [
+          "access",
+          "treatment"
+        ]
+      },
+      "focus_nodes": [
+        "Treatment Access",
+        "School Accommodations"
+      ],
+      "before_edge_ids": [
+        "e_dcc8fc81d69a405e"
+      ],
+      "after_edge_ids": [
+        "e_dcc8fc81d69a405e"
+      ]
+    }
+  ],
+  "created_at": "2026-09-17T05:33:05.763310+00:00",
+  "elapsed_seconds": 60.7,
+  "trace": [
+    {
+      "tool": "get_ranked_changes",
+      "arguments": {
+        "theme": "Treatment and access",
+        "comparison_mode": "historical",
+        "earlier": {
+          "age": 8,
+          "year": 2010
+        },
+        "later": {
+          "age": 8,
+          "year": 2026
+        }
+      }
+    }
+  ],
+  "validation": "Fact, graph-entity and numerical references checked. Narration is not medically validated."
+}

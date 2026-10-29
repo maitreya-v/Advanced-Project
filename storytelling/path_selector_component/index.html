@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+html, body { margin: 0; padding: 0; overflow: hidden; }
+iframe { display: block; width: 100%; border: 0; }
+</style>
+</head>
+<body>
+<iframe id="selector" title="Full graph: select starting and ending nodes"></iframe>
+<script>
+const frame = document.getElementById('selector');
+let previousHtml = null;
+let configuration = {};
+function send(type, payload = {}) {
+  window.parent.postMessage({ isStreamlitMessage: true, type, ...payload }, '*');
+}
+function configure() {
+  frame.contentWindow.postMessage({ type: 'story-picker-config', ...configuration }, '*');
+}
+frame.addEventListener('load', configure);
+window.addEventListener('message', event => {
+  if (event.source === frame.contentWindow && event.data?.type === 'story-picker-selection') {
+    const value = event.data.value;
+    if (!value || typeof value.event_id !== 'string' || typeof value.fingerprint !== 'string') return;
+    send('streamlit:setComponentValue', { dataType: 'json', value });
+    return;
+  }
+  if (event.source !== window.parent || event.data?.type !== 'streamlit:render') return;
+  const args = event.data.args;
+  configuration = { start: args.start, end: args.end };
+  frame.style.height = args.height + 'px';
+  if (args.html !== previousHtml) {
+    previousHtml = args.html;
+    frame.srcdoc = args.html;
+  } else {
+    configure();
+  }
+  send('streamlit:setFrameHeight', { height: args.height });
+});
+send('streamlit:componentReady', { apiVersion: 1 });
+</script>
+</body>
+</html>

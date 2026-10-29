@@ -1,5 +1,10 @@
+"""Combined dashboard with snapshot validation for 1970, 1990, 2010 and 2026."""
 from dashboard_corpus import render_corpus_counts
 from story_paths import render_story_paths
+from storytelling.data import load_snapshots as load_story_snapshots
+from storytelling.evaluation import render_evaluation_lab
+from storytelling.ui import render_story_mode
+from storytelling.path_ui import render_path_story
 from pathlib import Path
 import re
 import base64
@@ -208,7 +213,7 @@ def load_snapshot_from_script(script_path: Path) -> dict:
 
 
 @st.cache_data(show_spinner=False)
-def load_all_snapshots() -> dict[int, dict[int, dict]]:
+def load_all_snapshots(source_signature=None) -> dict[int, dict[int, dict]]:
     file_map = discover_source_files()
     snapshot_map: dict[int, dict[int, dict]] = {}
 
@@ -606,7 +611,21 @@ def build_network_html(snapshot: dict, strength_threshold: float, graph_height: 
     return graph_html
 
 
-SNAPSHOTS = load_all_snapshots()
+view = st.sidebar.radio("Workspace", ["Explore graph", "Path story", "Story mode", "Evaluation lab"],
+                        index=1 if st.query_params.get("workspace") == "path" else 0)
+if view in {"Path story", "Story mode", "Evaluation lab"}:
+    story_snapshots = load_story_snapshots(BASE_DIR)
+    if view == "Path story":
+        render_path_story(story_snapshots)
+    elif view == "Story mode":
+        render_story_mode(story_snapshots)
+    else:
+        render_evaluation_lab(story_snapshots)
+    st.stop()
+
+SOURCE_FILES = [BASE_DIR / "clusters.json", *sorted(BASE_DIR.glob("*yo.py"))]
+SOURCE_SIGNATURE = tuple((path.name, path.stat().st_mtime_ns, path.stat().st_size) for path in SOURCE_FILES)
+SNAPSHOTS = load_all_snapshots(SOURCE_SIGNATURE)
 
 if not SNAPSHOTS:
     st.error("No year-age graph source files were found next to this app.")
@@ -654,6 +673,8 @@ with explorer_tab:
     )
 
     selected_snapshot = attach_validation(SNAPSHOTS[selected_year][selected_age])
+    st.link_button("Choose nodes and create a story from this graph",
+                   f"?workspace=path&year={selected_year}&age={selected_age}", width="stretch")
 
     with st.sidebar.expander("Node Changes", expanded=False):
         compare_mode = st.radio(
@@ -825,7 +846,7 @@ with explorer_tab:
                     "**Edge color:** validation status (see Validation tab)  \n"
                     "**Sign (+ / -):** positive / negative effect  \n"
                     "**Arrow:** source influences target  \n"
-                    "**Thickness:** original strength (unvalidated)  \n"
+                    "**Thickness:** authored model strength  \n"
                     "**Hover:** reason + strength  \n"
                     "**Click:** validation references"
                 )
@@ -834,7 +855,7 @@ with explorer_tab:
     **Pastel teal edge (+):** positive effect  
     **Dusty rose edge (-):** negative effect  
     **Arrow:** source influences target  
-    **Thickness:** causal strength  
+    **Thickness:** authored model strength<br>
     **Hover:** reason + strength
     """)
 

@@ -88,11 +88,11 @@ class Validation2026Tests(unittest.TestCase):
             self.assertEqual(rows[('Diagnosis Status','Quality of Life')]['validation_status'],'insufficient_evidence')
 
     def test_changed_inputs_require_reassessment(self):
-        real_sha = validation.sha
-        with patch.object(validation,'sha',side_effect=lambda path: 'changed' if Path(path).name=='2026_8 yo.py' else real_sha(path)):
+        real_check = validation.text_hash_matches
+        with patch.object(validation,'text_hash_matches',side_effect=lambda path, expected: False if Path(path).name=='2026_8 yo.py' else real_check(path, expected)):
             with self.assertRaisesRegex(ValueError,'Graph changed'):
                 validation.load_review(8)
-        with patch.object(validation,'sha',return_value='changed'):
+        with patch.object(validation,'text_hash_matches',return_value=False):
             with self.assertRaisesRegex(ValueError,'Extracted corpus changed'):
                 validation.load_review(8)
 

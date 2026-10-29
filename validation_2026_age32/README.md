@@ -33,7 +33,7 @@ Review [edge_validation.xlsx](edge_validation.xlsx) for the edge, reference and 
 
 **Quotations**: PDF locations use one-based file pages. Native PDF reading order preserves columns; Unicode NFKC, soft-hyphen removal, end-of-line word dehyphenation and whitespace normalization are documented in extract_corpus.py. Every selected quotation is checked against actual source PDF-page text at build time.
 
-**Provenance**: Graph SHA-256, every supplied PDF SHA-256, text hashes and reviewed corpus hash are checked. New/changed graphs or source PDFs require reassessment before rebuilding. full_texts is a relative directory link to the original supplied corpus; keep these folders beside 2026 ADHD Papers.
+**Provenance**: Graph SHA-256, every supplied PDF SHA-256, text hashes and reviewed corpus hash are checked. New/changed graphs or source PDFs require reassessment before rebuilding. PDF references point directly to the committed 2026 ADHD Papers folder through relative paths; no directory links are required. Git checkout newline conversions are accepted for reviewed text files only.
 
 **Limits**: Insufficient evidence means this corpus does not establish the claim; it does not mean the edge is false. Supported refers to the declared qualitative pathway, not clinical recommendations or personalized treatment advice. No external papers were added.
 
@@ -46,4 +46,4 @@ From the project root, run:
 .venv/bin/python validation_2026_age32/build_validated_graph.py
 ```
 
-Requires the project environment (`pyvis`, `pymupdf`). Reports validate against the saved, manually reviewed decisions; they do not automatically re-review changed literature. Shared review sources and reproducible text extraction are in [paper_reviews/2026](../paper_reviews/2026/README.md). The `full_texts` directory links to the supplied PDFs; no original graph or paper is modified.
+Requires the project environment (`pyvis`, `pymupdf`). Reports validate against the saved, manually reviewed decisions; they do not automatically re-review changed literature. Shared review sources and reproducible text extraction are in [paper_reviews/2026](../paper_reviews/2026/README.md). PDF references point directly to `../2026 ADHD Papers/`; no directory links are required and no original graph or paper is modified.

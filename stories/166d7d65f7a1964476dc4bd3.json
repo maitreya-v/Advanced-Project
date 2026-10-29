@@ -1,0 +1,141 @@
+{
+  "version": "character-path-v3",
+  "mode": "path",
+  "style": "Slower fictional character story, approved October 15, 2026",
+  "path_id": "p_c713b86a9ef6e0563208",
+  "route": {
+    "path_id": "p_c713b86a9ef6e0563208",
+    "node_ids": [
+      "School Resources",
+      "Teacher Referral Rate",
+      "Parental Awareness",
+      "Parental Advocacy",
+      "School Support Plan"
+    ],
+    "edge_ids": [
+      "e_ae9d53dbf021aabc",
+      "e_a02e085dd9e91909",
+      "e_0320d6c4c4c5a636",
+      "e_0ad1275673668fdb"
+    ],
+    "hop_count": 4,
+    "domains": [
+      "school",
+      "family"
+    ]
+  },
+  "question": "",
+  "snapshot": {
+    "year": 2026,
+    "age": 8,
+    "fingerprint": "a7880db22199911098c912389bdca8962d0d52bd9bf6d2f50ce2d295b77b3fa7"
+  },
+  "key": "166d7d65f7a1964476dc4bd3",
+  "title": "Someone at school notices",
+  "origin": "local-qwen",
+  "character": {
+    "name": "Mira",
+    "pronoun": "she",
+    "possessive": "her",
+    "companion": "her father",
+    "goal": "finish the story she is writing about a fox who steals the moon",
+    "anchor": "the fox and the missing moon",
+    "opening": "Mira loves making up stories. Her newest one is about a fox who steals the moon. She knows exactly how it begins. The ending is still scattered across three notebooks.\n\nOne evening, her father sits beside her while she searches for the page she needs. ‘I know what happens next,’ she says. ‘I just keep losing where I am.’ He stays at the table. For once, finishing the assignment becomes less urgent than understanding what makes it difficult."
+  },
+  "fiction_note": "The character, dialogue and everyday scenes are fictional. Relationship claims come from the selected authored graph. The story does not report patient outcomes or establish a causal effect for the route.",
+  "opening": "Mira loves making up stories. Her newest one is about a fox who steals the moon. She knows exactly how it begins. The ending is still scattered across three notebooks.\n\nOne evening, her father sits beside her while she searches for the page she needs. ‘I know what happens next,’ she says. ‘I just keep losing where I am.’ He stays at the table. For once, finishing the assignment becomes less urgent than understanding what makes it difficult.",
+  "closing": "We leave Mira with the fox and the missing moon, and with the goal that gave this story its shape: to finish the story she is writing about a fox who steals the moon. The selected route began at School Resources and arrived at School Support Plan. Its intermediate relationships are now visible as a complete sequence. The character's future stays open. A different route between the same endpoints would place different questions at the center of the story.",
+  "chapters": [
+    {
+      "edge_id": "e_ae9d53dbf021aabc",
+      "title": "Someone at school notices",
+      "narration": "They carry their questions about school resources into a discussion of teacher referral rate. Mira's family brings a notebook to a conversation at school. Before discussing a teacher's referral, they ask about school resources: what would it help a teacher to know, and who can help a teacher decide what to do with that concern? The notebook stays open between them. They want to understand the step between noticing something in a classroom and raising it with someone else, without assuming a referral has already happened.",
+      "relationship": {
+        "id": "e_ae9d53dbf021aabc",
+        "from": "School Resources",
+        "to": "Teacher Referral Rate",
+        "sign": "+",
+        "strength": 0.74,
+        "explanation": "School resources strongly support detection in 2026.",
+        "evidence_status": "Not yet reviewed",
+        "source_file": "2026_8 yo.py",
+        "color": "#48a88d",
+        "width": 4.4399999999999995,
+        "arrows": "to",
+        "title": "School Resources → Teacher Referral Rate\nSign: +\nStrength: 0.74\nSchool resources strongly support detection in 2026.\nAuthored model; scientific validation pending\nEvidence: Not yet reviewed",
+        "evidence_quality": "Not yet reviewed",
+        "evidence_summary": "No literature source has been attached to this authored relationship yet.",
+        "citations": []
+      }
+    },
+    {
+      "edge_id": "e_a02e085dd9e91909",
+      "title": "The question comes home",
+      "narration": "At home, Mira and her father leave a space beside the unfinished project for a new conversation. What might a discussion of teacher referral rate help a family notice or ask about? Parental awareness becomes something more personal than a heading: listening closely and finding words for a concern. They compare the questions they have brought from school with the ordinary moments they know at home. Understanding remains a conversation, not a verdict.",
+      "relationship": {
+        "id": "e_a02e085dd9e91909",
+        "from": "Teacher Referral Rate",
+        "to": "Parental Awareness",
+        "sign": "+",
+        "strength": 0.88,
+        "explanation": "Teacher concerns strongly increase parental awareness.",
+        "evidence_status": "Not yet reviewed",
+        "source_file": "2026_8 yo.py",
+        "color": "#48a88d",
+        "width": 5.28,
+        "arrows": "to",
+        "title": "Teacher Referral Rate → Parental Awareness\nSign: +\nStrength: 0.88\nTeacher concerns strongly increase parental awareness.\nAuthored model; scientific validation pending\nEvidence: Not yet reviewed",
+        "evidence_quality": "Not yet reviewed",
+        "evidence_summary": "No literature source has been attached to this authored relationship yet.",
+        "citations": []
+      }
+    },
+    {
+      "edge_id": "e_0320d6c4c4c5a636",
+      "title": "Finding words for the next meeting",
+      "narration": "Mira's family looks again at the questions gathered at home. Their discussion of parental awareness has given them something to consider; parental advocacy asks how they might carry that concern into a conversation with others. They practice explaining what matters without speaking over Mira. The unfinished project gives them a starting point: this is something worth listening to, not just something to complete. They make a note of what they want to ask at the next meeting.",
+      "relationship": {
+        "id": "e_0320d6c4c4c5a636",
+        "from": "Parental Awareness",
+        "to": "Parental Advocacy",
+        "sign": "+",
+        "strength": 0.82,
+        "explanation": "Awareness readily turns into family advocacy in 2026.",
+        "evidence_status": "Not yet reviewed",
+        "source_file": "2026_8 yo.py",
+        "color": "#48a88d",
+        "width": 4.92,
+        "arrows": "to",
+        "title": "Parental Awareness → Parental Advocacy\nSign: +\nStrength: 0.82\nAwareness readily turns into family advocacy in 2026.\nAuthored model; scientific validation pending\nEvidence: Not yet reviewed",
+        "evidence_quality": "Not yet reviewed",
+        "evidence_summary": "No literature source has been attached to this authored relationship yet.",
+        "citations": []
+      }
+    },
+    {
+      "edge_id": "e_0ad1275673668fdb",
+      "title": "Put the questions into a plan",
+      "narration": "They carry their questions about parental advocacy into a discussion of school support plan. Mira's family brings the conversation to school. They describe what happens during an ordinary task and ask what a formal support plan could address. The scene slows down here: naming a difficulty and organizing a response are different parts of the story. A written plan gives the next conversation a place to begin. They want the questions they have raised to remain visible after everyone leaves the room.",
+      "relationship": {
+        "id": "e_0ad1275673668fdb",
+        "from": "Parental Advocacy",
+        "to": "School Support Plan",
+        "sign": "+",
+        "strength": 0.76,
+        "explanation": "Advocating families are highly likely to secure formal school supports.",
+        "evidence_status": "Not yet reviewed",
+        "source_file": "2026_8 yo.py",
+        "color": "#48a88d",
+        "width": 4.5600000000000005,
+        "arrows": "to",
+        "title": "Parental Advocacy → School Support Plan\nSign: +\nStrength: 0.76\nAdvocating families are highly likely to secure formal school supports.\nAuthored model; scientific validation pending\nEvidence: Not yet reviewed",
+        "evidence_quality": "Not yet reviewed",
+        "evidence_summary": "No literature source has been attached to this authored relationship yet.",
+        "citations": []
+      }
+    }
+  ],
+  "created_at": "2026-10-15T17:51:01.865516+00:00",
+  "elapsed_seconds": 40.3,
+  "validation": "Route order, relationship references and numeric literals checked. Fictional narration requires human review."
+}

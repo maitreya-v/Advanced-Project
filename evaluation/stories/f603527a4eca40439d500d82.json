@@ -1,0 +1,383 @@
+{
+  "version": "1",
+  "key": "f603527a4eca40439d500d82",
+  "title": "Treatment and Access Relationships in 1970 vs. 1990",
+  "origin": "local-qwen",
+  "theme": "Treatment and access",
+  "question": "Which treatment and access relationships differ most?",
+  "before": {
+    "year": 1970,
+    "age": 8,
+    "fingerprint": "71bfdf6b3b93fc004e4f511b643a89cab5683444541163fa3386e4fabd11dcf1"
+  },
+  "after": {
+    "year": 1990,
+    "age": 8,
+    "fingerprint": "02e0911d62ec9e3d839bff0115488defc268ccd31ea692367f39b21b60763e8f"
+  },
+  "comparison": {
+    "mode": "historical",
+    "added": [
+      "e_29a0e686b719e5b7",
+      "e_5a8510b8d4f89cb8",
+      "e_701279553dad7e32",
+      "e_835bb57a3e2f6f57",
+      "e_9fc62625cba8f72e",
+      "e_ae9d53dbf021aabc",
+      "e_ba5abe9d3b46c18b",
+      "e_d8d8d5ee5daa9697",
+      "e_dcc8fc81d69a405e",
+      "e_e9427cf27ec8ed7b",
+      "e_f237b62d5bfeffcc"
+    ],
+    "removed": [],
+    "changed": [
+      "e_0be10c543f01344f",
+      "e_146a9b5df2d79aa3",
+      "e_18b0e38ac3ad7709",
+      "e_1be07f07281b248f",
+      "e_1c9a563731c4e73d",
+      "e_1fecbed0eb494474",
+      "e_3075be8438de71b2",
+      "e_38f8f62026976763",
+      "e_39250567215b8b8e",
+      "e_3989756d2e9a2366",
+      "e_3cca1a89d439bff8",
+      "e_4377e22053683326",
+      "e_441b1a6b0471580e",
+      "e_4642a51874329c3c",
+      "e_5165a3c84e0c1a82",
+      "e_5513f056f55028b9",
+      "e_5530716342453280",
+      "e_59239d33fd9db496",
+      "e_6e6907aa3047607c",
+      "e_7aed15362ac8a613",
+      "e_7afbb52cf1715ed7",
+      "e_818c16ecd9c3a5d4",
+      "e_8c8c29865e45ffcf",
+      "e_9c33959174269e5a",
+      "e_a02e085dd9e91909",
+      "e_ada031f1679f8c68",
+      "e_bcd96e7728ae35b1",
+      "e_be4ad22eb33c8668",
+      "e_c271b3c242989f93",
+      "e_cec6a9bbd70b5ab8",
+      "e_cf51a336e171cca1",
+      "e_d0a0449bcaeeaacb",
+      "e_d2c537b593d24ce6",
+      "e_d373bf42732860db",
+      "e_d8ca691e82f8b662",
+      "e_e21b328d527eac55",
+      "e_e53ecb33f01d295c",
+      "e_e6e4323f41d330ff",
+      "e_f60df02c31455b35"
+    ],
+    "unchanged": [
+      "e_03ee224f9c6d111f",
+      "e_11749cf7db5bbb3d",
+      "e_40a1ccb0a6c5c1ad",
+      "e_6446f63fb742a056",
+      "e_7d665038fee923c2",
+      "e_818a49ac682345ce",
+      "e_d0f449ed5dbc3c08",
+      "e_ed5e4d0e13ebae65"
+    ],
+    "added_nodes": [
+      "Behavioral Therapy",
+      "Education System Pressure",
+      "Misdiagnosis Rate",
+      "Provider Availability",
+      "School Accommodations",
+      "School Resources"
+    ],
+    "removed_nodes": []
+  },
+  "opening": {
+    "title": "Treatment and access: 1970 to 1990",
+    "narration": "This story compares the 1970 and 1990 authored graph snapshots for age 8. It follows 4 selected differences; they describe changes in the model, not proof of real-world historical change."
+  },
+  "scenes": [
+    {
+      "fact_id": "f_1a994225629b",
+      "title": "New Connection: Treatment Access → School Accommodations",
+      "narration": "The 1990 snapshot includes **Treatment Access** → **School Accommodations** (sign +, modeled strength 0.54); this edge is absent from the 1970 snapshot. Absence does not establish that the relationship did not exist in reality.",
+      "fact": {
+        "id": "f_1a994225629b",
+        "kind": "added",
+        "title": "A new connection: Treatment Access",
+        "claim": "The 1990 snapshot includes Treatment Access → School Accommodations (sign +, modeled strength 0.54); this edge is absent from the 1970 snapshot. Absence does not establish that the relationship did not exist in reality.",
+        "nodes": [
+          "Treatment Access",
+          "School Accommodations"
+        ],
+        "before_edges": [],
+        "after_edges": [
+          {
+            "id": "e_dcc8fc81d69a405e",
+            "from": "Treatment Access",
+            "to": "School Accommodations",
+            "sign": "+",
+            "strength": 0.54,
+            "explanation": "Treatment access supports school accommodation pathways.",
+            "evidence_status": "Guideline context; not edge-specific",
+            "source_file": "1990_8 yo.py",
+            "color": "#48a88d",
+            "width": 3.24,
+            "arrows": "to",
+            "title": "Treatment Access → School Accommodations\nSign: +\nStrength: 0.54\nTreatment access supports school accommodation pathways.\nAuthored model; scientific validation pending\nEvidence: Guideline context; not edge-specific",
+            "evidence_quality": "Guideline context; not edge-specific",
+            "evidence_summary": "The guideline treats educational interventions and individualized school supports as necessary parts of pediatric ADHD care. It does not test the direction or magnitude of this graph edge.",
+            "citations": [
+              {
+                "title": "Clinical Practice Guideline for the Diagnosis, Evaluation, and Treatment of ADHD in Children and Adolescents",
+                "authors": "Wolraich et al.",
+                "year": 2019,
+                "type": "Clinical practice guideline",
+                "url": "https://pubmed.ncbi.nlm.nih.gov/31570648/",
+                "doi": "10.1542/peds.2019-2528"
+              }
+            ]
+          }
+        ],
+        "score": 80.0,
+        "score_parts": {
+          "relevance": 40.0,
+          "novelty": 25,
+          "weight_change": 0.0,
+          "outcome_connection": 15.0
+        },
+        "rank_reason": "Theme relevance 40/40 · novelty 25/25 · weight change 0/20 · outcome connection 15/15",
+        "matched_terms": [
+          "access",
+          "treatment"
+        ]
+      },
+      "focus_nodes": [
+        "Treatment Access",
+        "School Accommodations"
+      ],
+      "before_edge_ids": [],
+      "after_edge_ids": [
+        "e_dcc8fc81d69a405e"
+      ]
+    },
+    {
+      "fact_id": "f_9241069ba1b3",
+      "title": "New Connection: Provider Availability → Treatment Access",
+      "narration": "The 1990 snapshot includes **Provider Availability** → **Treatment Access** (sign +, modeled strength 0.66); this edge is absent from the 1970 snapshot. Absence does not establish that the relationship did not exist in reality.",
+      "fact": {
+        "id": "f_9241069ba1b3",
+        "kind": "added",
+        "title": "A new connection: Provider Availability",
+        "claim": "The 1990 snapshot includes Provider Availability → Treatment Access (sign +, modeled strength 0.66); this edge is absent from the 1970 snapshot. Absence does not establish that the relationship did not exist in reality.",
+        "nodes": [
+          "Provider Availability",
+          "Treatment Access"
+        ],
+        "before_edges": [],
+        "after_edges": [
+          {
+            "id": "e_835bb57a3e2f6f57",
+            "from": "Provider Availability",
+            "to": "Treatment Access",
+            "sign": "+",
+            "strength": 0.66,
+            "explanation": "More providers improve treatment access by 1990.",
+            "evidence_status": "Not yet reviewed",
+            "source_file": "1990_8 yo.py",
+            "color": "#48a88d",
+            "width": 3.96,
+            "arrows": "to",
+            "title": "Provider Availability → Treatment Access\nSign: +\nStrength: 0.66\nMore providers improve treatment access by 1990.\nAuthored model; scientific validation pending\nEvidence: Not yet reviewed",
+            "evidence_quality": "Not yet reviewed",
+            "evidence_summary": "No literature source has been attached to this authored relationship yet.",
+            "citations": []
+          }
+        ],
+        "score": 80.0,
+        "score_parts": {
+          "relevance": 40.0,
+          "novelty": 25,
+          "weight_change": 0.0,
+          "outcome_connection": 15.0
+        },
+        "rank_reason": "Theme relevance 40/40 · novelty 25/25 · weight change 0/20 · outcome connection 15/15",
+        "matched_terms": [
+          "access",
+          "treatment"
+        ]
+      },
+      "focus_nodes": [
+        "Provider Availability",
+        "Treatment Access"
+      ],
+      "before_edge_ids": [],
+      "after_edge_ids": [
+        "e_835bb57a3e2f6f57"
+      ]
+    },
+    {
+      "fact_id": "f_9dd77549e2b3",
+      "title": "New Connection: Treatment Access → Behavioral Therapy",
+      "narration": "The 1990 snapshot includes **Treatment Access** → **Behavioral Therapy** (sign +, modeled strength 0.62); this edge is absent from the 1970 snapshot. Absence does not establish that the relationship did not exist in reality.",
+      "fact": {
+        "id": "f_9dd77549e2b3",
+        "kind": "added",
+        "title": "A new connection: Treatment Access",
+        "claim": "The 1990 snapshot includes Treatment Access → Behavioral Therapy (sign +, modeled strength 0.62); this edge is absent from the 1970 snapshot. Absence does not establish that the relationship did not exist in reality.",
+        "nodes": [
+          "Treatment Access",
+          "Behavioral Therapy"
+        ],
+        "before_edges": [],
+        "after_edges": [
+          {
+            "id": "e_ba5abe9d3b46c18b",
+            "from": "Treatment Access",
+            "to": "Behavioral Therapy",
+            "sign": "+",
+            "strength": 0.62,
+            "explanation": "Treatment access enables behavioral therapy.",
+            "evidence_status": "Guideline context; not edge-specific",
+            "source_file": "1990_8 yo.py",
+            "color": "#48a88d",
+            "width": 3.7199999999999998,
+            "arrows": "to",
+            "title": "Treatment Access → Behavioral Therapy\nSign: +\nStrength: 0.62\nTreatment access enables behavioral therapy.\nAuthored model; scientific validation pending\nEvidence: Guideline context; not edge-specific",
+            "evidence_quality": "Guideline context; not edge-specific",
+            "evidence_summary": "The guideline includes behavioral interventions in pediatric ADHD treatment. It does not test this access pathway or validate the authored weight.",
+            "citations": [
+              {
+                "title": "Clinical Practice Guideline for the Diagnosis, Evaluation, and Treatment of ADHD in Children and Adolescents",
+                "authors": "Wolraich et al.",
+                "year": 2019,
+                "type": "Clinical practice guideline",
+                "url": "https://pubmed.ncbi.nlm.nih.gov/31570648/",
+                "doi": "10.1542/peds.2019-2528"
+              }
+            ]
+          }
+        ],
+        "score": 80.0,
+        "score_parts": {
+          "relevance": 40.0,
+          "novelty": 25,
+          "weight_change": 0.0,
+          "outcome_connection": 15.0
+        },
+        "rank_reason": "Theme relevance 40/40 · novelty 25/25 · weight change 0/20 · outcome connection 15/15",
+        "matched_terms": [
+          "access",
+          "treatment"
+        ]
+      },
+      "focus_nodes": [
+        "Treatment Access",
+        "Behavioral Therapy"
+      ],
+      "before_edge_ids": [],
+      "after_edge_ids": [
+        "e_ba5abe9d3b46c18b"
+      ]
+    },
+    {
+      "fact_id": "f_2f8c202b80e6",
+      "title": "Strengthened: Access to Mental Health Care → Treatment Access",
+      "narration": "Between the 1970 snapshot and the 1990 snapshot, modeled strength for **Access to Mental Health Care** → **Treatment Access** changes from 0.62 to 0.70. Its + sign is unchanged. These are authored model weights, not measured effect sizes or probabilities.",
+      "fact": {
+        "id": "f_2f8c202b80e6",
+        "kind": "strengthened",
+        "title": "Access to Mental Health Care and Treatment Access",
+        "claim": "Between the 1970 snapshot and the 1990 snapshot, modeled strength for Access to Mental Health Care → Treatment Access changes from 0.62 to 0.70. Its + sign is unchanged. These are authored model weights, not measured effect sizes or probabilities.",
+        "nodes": [
+          "Access to Mental Health Care",
+          "Treatment Access"
+        ],
+        "before_edges": [
+          {
+            "id": "e_7aed15362ac8a613",
+            "from": "Access to Mental Health Care",
+            "to": "Treatment Access",
+            "sign": "+",
+            "strength": 0.62,
+            "explanation": "Child treatment access depends on available pediatric or mental health services.",
+            "evidence_status": "Not yet reviewed",
+            "source_file": "1970_8 yo.py",
+            "color": "#48a88d",
+            "width": 3.7199999999999998,
+            "arrows": "to",
+            "title": "Access to Mental Health Care → Treatment Access\nSign: +\nStrength: 0.62\nChild treatment access depends on available pediatric or mental health services.\nAuthored model; scientific validation pending\nEvidence: Not yet reviewed",
+            "evidence_quality": "Not yet reviewed",
+            "evidence_summary": "No literature source has been attached to this authored relationship yet.",
+            "citations": []
+          }
+        ],
+        "after_edges": [
+          {
+            "id": "e_7aed15362ac8a613",
+            "from": "Access to Mental Health Care",
+            "to": "Treatment Access",
+            "sign": "+",
+            "strength": 0.7,
+            "explanation": "Care access strongly improves treatment availability for children.",
+            "evidence_status": "Not yet reviewed",
+            "source_file": "1990_8 yo.py",
+            "color": "#48a88d",
+            "width": 4.199999999999999,
+            "arrows": "to",
+            "title": "Access to Mental Health Care → Treatment Access\nSign: +\nStrength: 0.70\nCare access strongly improves treatment availability for children.\nAuthored model; scientific validation pending\nEvidence: Not yet reviewed",
+            "evidence_quality": "Not yet reviewed",
+            "evidence_summary": "No literature source has been attached to this authored relationship yet.",
+            "citations": []
+          }
+        ],
+        "score": 65.35,
+        "score_parts": {
+          "relevance": 40.0,
+          "novelty": 8.75,
+          "weight_change": 1.6,
+          "outcome_connection": 15.0
+        },
+        "rank_reason": "Theme relevance 40/40 · novelty 8.75/25 · weight change 1.6/20 · outcome connection 15/15",
+        "matched_terms": [
+          "access",
+          "treatment"
+        ]
+      },
+      "focus_nodes": [
+        "Access to Mental Health Care",
+        "Treatment Access"
+      ],
+      "before_edge_ids": [
+        "e_7aed15362ac8a613"
+      ],
+      "after_edge_ids": [
+        "e_7aed15362ac8a613"
+      ]
+    }
+  ],
+  "closing": {
+    "title": "What this story establishes—and what it does not",
+    "narration": "Across the selected scenes, the graph shows 3 newly represented edges, 1 increased model weight. Literature context is attached to 2 of 4 displayed relationships. These sources add context but do not validate the authored directions, signs, or weights."
+  },
+  "created_at": "2026-10-01T16:03:24.094740+00:00",
+  "elapsed_seconds": 63.0,
+  "trace": [
+    {
+      "tool": "get_ranked_changes",
+      "arguments": {
+        "theme": "Treatment and access",
+        "comparison_mode": "historical",
+        "earlier": {
+          "age": 8,
+          "year": 1970
+        },
+        "later": {
+          "age": 8,
+          "year": 1990
+        }
+      }
+    }
+  ],
+  "validation": "Fact, graph-entity and numerical references checked. Narration is not medically validated."
+}
