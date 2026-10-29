@@ -18,15 +18,25 @@ def sha(path):
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
 
+def text_hash_matches(path, expected):
+    """Accept Git checkout newline conversion, while still checking exact text."""
+    data = Path(path).read_bytes()
+    normalized = data.replace(b'\r\n', b'\n')
+    return expected in {
+        hashlib.sha256(candidate).hexdigest()
+        for candidate in (data, normalized, normalized.replace(b'\n', b'\r\n'))
+    }
+
+
 def load_review(age):
-    ledger = json.loads((REVIEW_DIR / 'reviewed_decisions.json').read_text())
-    if sha(REVIEW_DIR / 'extracted_papers.json') != ledger['corpus_sha256']:
+    ledger = json.loads((REVIEW_DIR / 'reviewed_decisions.json').read_text(encoding='utf-8'))
+    if not text_hash_matches(REVIEW_DIR / 'extracted_papers.json', ledger['corpus_sha256']):
         raise ValueError('Extracted corpus changed; review evidence before rebuilding.')
     review = ledger['reviews'][str(age)]
     graph = ROOT / f'2026_{age} yo.py'
-    if sha(graph) != review['graph_sha256']:
+    if not text_hash_matches(graph, review['graph_sha256']):
         raise ValueError('Graph changed; reassess its edges before rebuilding.')
-    tree = ast.parse(graph.read_text())
+    tree = ast.parse(graph.read_text(encoding='utf-8'))
     edges = next(ast.literal_eval(n.value) for n in tree.body if isinstance(n, ast.Assign)
                  and any(isinstance(t, ast.Name) and t.id == 'edges' for t in n.targets))
     if [list(e) for e in edges] != review['original_edges']:
@@ -41,9 +51,9 @@ def load_review(age):
 
 def verify_corpus(ledger):
     """Check every supplied PDF and selected quotation against actual PDF pages."""
-    corpus = json.loads((REVIEW_DIR / 'extracted_papers.json').read_text())
+    corpus = json.loads((REVIEW_DIR / 'extracted_papers.json').read_text(encoding='utf-8'))
     expected = {record['file'] for record in corpus}
-    actual = {str(p.relative_to(ROOT)) for p in (ROOT / '2026 ADHD Papers').glob('*.pdf')}
+    actual = {p.relative_to(ROOT).as_posix() for p in (ROOT / '2026 ADHD Papers').glob('*.pdf')}
     if actual != expected:
         raise ValueError('Supplied PDF membership changed; screen the corpus again.')
     by_id = {r['source_id']:r for r in corpus}
@@ -140,13 +150,8 @@ def build_report(folder):
     age = int(re.fullmatch(r'validation_2026_age(8|32|45)',folder.name)[1])
     ledger,review = load_review(age)
     corpus = verify_corpus(ledger)
-    # Share the supplied PDFs through relative directory links, preserving the
-    # previous full_texts/ URL convention without making three 274 MB copies.
-    pdf_dir = folder / 'full_texts'
-    if not pdf_dir.exists():
-        pdf_dir.symlink_to(Path('..')/'2026 ADHD Papers',target_is_directory=True)
-    if pdf_dir.resolve() != (ROOT / '2026 ADHD Papers').resolve():
-        raise ValueError('Unexpected full_texts target')
+    # Point directly at the committed corpus. No directory links or PDF copies
+    # are required on Windows, macOS or Linux.
     rows = review['edges']
     cited = {ev['source_id'] for row in rows for ev in row['evidence']}
     counts = {status:Counter(r['validation_status'] for r in rows)[status] for status in ledger['status_definitions']}
@@ -155,7 +160,7 @@ def build_report(folder):
         note = ledger['source_notes'].get(record['source_id'],{})
         title = note.get('title') or record['metadata_title'] or Path(record['file']).name
         ref = dict(source_id=record['source_id'],title=title,
-                   local_pdf='full_texts/'+Path(record['file']).name,sha256=record['sha256'],
+                   local_pdf='../'+Path(record['file']).as_posix(),sha256=record['sha256'],
                    duplicate_of=record['duplicate_of'],page_count=record['page_count'],
                    evidence_scope=note.get('evidence_scope','Screened supplied document; no passage selected for this age graph. This is not a claim that the study is irrelevant or negative.'),
                    cited_in_this_graph=record['source_id'] in cited)
@@ -172,7 +177,7 @@ def build_report(folder):
         'constructs':'Categorical variables require comparator coding; undefined treatment dependency/overdiagnosis pressure and treatment-receipt-versus-benefit mismatches are not assessable. Treatment effects do not establish diagnosis-only benefits.',
         'duplicates':'The two 1-s2.0-S1087079226000754-main PDFs have different binary hashes but identical normalized page text and represent one sleep-intervention review. Duplicate copies are not independent evidence. Other reviews may share primary studies; 158 distinct documents are not 158 independent studies.',
         'quotations':'PDF locations use one-based file pages. Native PDF reading order preserves columns; Unicode NFKC, soft-hyphen removal, end-of-line word dehyphenation and whitespace normalization are documented in extract_corpus.py. Every selected quotation is checked against actual source PDF-page text at build time.',
-        'provenance':'Graph SHA-256, every supplied PDF SHA-256, text hashes and reviewed corpus hash are checked. New/changed graphs or source PDFs require reassessment before rebuilding. full_texts is a relative directory link to the original supplied corpus; keep these folders beside 2026 ADHD Papers.',
+        'provenance':'Graph SHA-256, every supplied PDF SHA-256, text hashes and reviewed corpus hash are checked. New/changed graphs or source PDFs require reassessment before rebuilding. PDF references point directly to the committed 2026 ADHD Papers folder through relative paths; no directory links are required. Git checkout newline conversions are accepted for reviewed text files only.',
         'limits':'Insufficient evidence means this corpus does not establish the claim; it does not mean the edge is false. Supported refers to the declared qualitative pathway, not clinical recommendations or personalized treatment advice. No external papers were added.',
     }
     metadata = dict(graph_file=f'2026_{age} yo.py',graph_sha256=review['graph_sha256'],graph_year=2026,
@@ -186,7 +191,7 @@ def build_report(folder):
                'edge_validation.json':report,'supplied_papers.json':references,
                'full_text_review.json':{'summary':metadata,'excerpts':{k:v for k,v in ledger['excerpts'].items() if v['source_id'] in cited}}}
     for name,data in outputs.items():
-        (folder/name).write_text(json.dumps(data,indent=2,ensure_ascii=False))
+        (folder/name).write_text(json.dumps(data,indent=2,ensure_ascii=False), encoding='utf-8', newline='\n')
     headers = ['Edge ID','Source','Destination','Existing reasoning','Sign','Validation status','Observation','Recommended action','Evidence']
     fields = ['edge_id','source','dest','existing_reasoning','sign','validation_status','observation_from_validation','recommended_action']
     edge_data = [headers]+[[row[f] for f in fields]+['\n\n'.join(f'{e["source_id"]}: {e["exact_excerpt"]}\nLocation: {e["location"]}\nRelevance: {e["relevance"]}' for e in row['evidence']) or 'No directly relevant excerpt selected'] for row in rows]
@@ -194,14 +199,15 @@ def build_report(folder):
     method_data = [['Item','Explanation']]+list(map(list,methodology.items()))+[[f'Status: {k}',v] for k,v in ledger['status_definitions'].items()]
     write_workbook(folder/'edge_validation.xlsx',[('Edge validation',edge_data,[10,28,28,65,9,30,90,75,100]),('References',reference_data,[18,90,80,68,18,110,15]),('Read me',method_data,[28,145])])
     readme = f'# 2026 age-{age} graph validation\n\nValidation of **2026_{age} yo.py**: **{len(rows)} edges**, using the supplied **159 PDFs / 158 distinct full-text documents** in `2026 ADHD Papers`.\n\nOpen [validated_graph.html](validated_graph.html) in a browser and click any edge for its status, decision and page-linked evidence. Colors and dashes encode validation; original widths retain unvalidated strengths.\n\nReview [edge_validation.xlsx](edge_validation.xlsx) for the edge, reference and methodology worksheets. Machine-readable decisions are in [edge_validation.json](edge_validation.json), with provenance in [manifest.json](manifest.json) and checks in [verification.json](verification.json).\n\n## Status counts\n\n'+''.join(f'- `{s}`: {n}\n' for s,n in counts.items())+'\n## Method and limitations\n\n'+'\n\n'.join(f'**{k.replace("_"," ").title()}**: {v}' for k,v in methodology.items())+'\n\n## Reproduce\n\nFrom the project root, run:\n\n```sh\n'+f'.venv/bin/python validation_2026_age{age}/build_report.py\n.venv/bin/python validation_2026_age{age}/build_validated_graph.py\n```\n\n'+'Requires the project environment (`pyvis`, `pymupdf`). Reports validate against the saved, manually reviewed decisions; they do not automatically re-review changed literature. Shared review sources and reproducible text extraction are in [paper_reviews/2026](../paper_reviews/2026/README.md). The `full_texts` directory links to the supplied PDFs; no original graph or paper is modified.\n'
-    (folder/'README.md').write_text(readme)
+    readme = readme.replace('The `full_texts` directory links to the supplied PDFs;', 'PDF references point directly to `../2026 ADHD Papers/`; no directory links are required and')
+    (folder/'README.md').write_text(readme, encoding='utf-8', newline='\n')
     checks = dict(graph=metadata['graph_file'],edges_reviewed=len(rows),pdf_files_screened=len(corpus),
                   unique_documents_screened=metadata['unique_document_count'],selected_pdf_quotations_verified=len(ledger['excerpts']),
-                  original_sha256=metadata['graph_sha256'],original_unchanged=sha(ROOT/metadata['graph_file'])==metadata['graph_sha256'],
+                  original_sha256=metadata['graph_sha256'],original_unchanged=text_hash_matches(ROOT/metadata['graph_file'],metadata['graph_sha256']),
                   all_edge_reasons_and_signs_preserved=True,all_original_strengths_preserved=True,strength_assessed=False,
                   all_source_pdf_hashes_verified=True,all_citations_in_supplied_corpus=True,
                   all_selected_excerpts_verified_against_source_pdfs=True,xlsx_xml_valid=True,xlsx_json_rows_match=True,
                   xlsx_data_rows=len(rows),status_counts=counts,compact_edge_fields=list(rows[0]))
-    (folder/'verification.json').write_text(json.dumps(checks,indent=2))
+    (folder/'verification.json').write_text(json.dumps(checks,indent=2), encoding='utf-8', newline='\n')
     print(json.dumps({'age':age,'edges':len(rows),'status_counts':counts}))
     return report

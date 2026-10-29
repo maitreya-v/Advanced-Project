@@ -1,0 +1,184 @@
+{
+  "version": "character-path-v3",
+  "mode": "path",
+  "style": "Slower fictional character story, approved October 15, 2026",
+  "path_id": "p_eeefe26923a1955b5a8e",
+  "route": {
+    "path_id": "p_eeefe26923a1955b5a8e",
+    "node_ids": [
+      "Diagnosis Status",
+      "Treatment Access",
+      "Medication Treatment",
+      "Symptom Severity",
+      "Functional Impairment",
+      "Quality of Life"
+    ],
+    "edge_ids": [
+      "e_4c2ece07fbe7ebb5",
+      "e_39250567215b8b8e",
+      "e_38f8f62026976763",
+      "e_03ee224f9c6d111f",
+      "e_40a1ccb0a6c5c1ad"
+    ],
+    "hop_count": 5,
+    "domains": [
+      "core",
+      "treatment",
+      "clinical"
+    ]
+  },
+  "question": "",
+  "snapshot": {
+    "year": 2026,
+    "age": 8,
+    "fingerprint": "a7880db22199911098c912389bdca8962d0d52bd9bf6d2f50ce2d295b77b3fa7"
+  },
+  "key": "75d0e79eac337061d3389189",
+  "title": "Help has to become available",
+  "origin": "local-qwen",
+  "character": {
+    "name": "Mira",
+    "pronoun": "she",
+    "possessive": "her",
+    "companion": "her father",
+    "goal": "finish the story she is writing about a fox who steals the moon",
+    "anchor": "the fox and the missing moon",
+    "opening": "Mira loves making up stories. Her newest one is about a fox who steals the moon. She knows exactly how it begins. The ending is still scattered across three notebooks.\n\nOne evening, her father sits beside her while she searches for the page she needs. ‘I know what happens next,’ she says. ‘I just keep losing where I am.’ He stays at the table. For once, finishing the assignment becomes less urgent than understanding what makes it difficult."
+  },
+  "fiction_note": "The character, dialogue and everyday scenes are fictional. Relationship claims come from the selected authored graph. The story does not report patient outcomes or establish a causal effect for the route.",
+  "opening": "Mira loves making up stories. Her newest one is about a fox who steals the moon. She knows exactly how it begins. The ending is still scattered across three notebooks.\n\nOne evening, her father sits beside her while she searches for the page she needs. ‘I know what happens next,’ she says. ‘I just keep losing where I am.’ He stays at the table. For once, finishing the assignment becomes less urgent than understanding what makes it difficult.",
+  "closing": "We leave Mira with the fox and the missing moon, and with the goal that gave this story its shape: to finish the story she is writing about a fox who steals the moon. The selected route began at Diagnosis Status and arrived at Quality of Life. Its intermediate relationships are now visible as a complete sequence. The character's future stays open. A different route between the same endpoints would place different questions at the center of the story.",
+  "chapters": [
+    {
+      "edge_id": "e_4c2ece07fbe7ebb5",
+      "title": "Help has to become available",
+      "narration": "Mira and her father turn from naming the difficulty to finding someone they can speak with. A question written on paper does not put an appointment on a calendar. They make room for the practical questions: who can they reach, what support is available, and how can they begin a conversation? A second page takes shape beside the unfinished project. It holds the questions they want to bring to someone who can help them think through the next step.",
+      "relationship": {
+        "id": "e_4c2ece07fbe7ebb5",
+        "from": "Diagnosis Status",
+        "to": "Treatment Access",
+        "sign": "+",
+        "strength": 0.88,
+        "explanation": "Diagnosis strongly opens structured treatment pathways for children in 2026.",
+        "evidence_status": "Not yet reviewed",
+        "source_file": "2026_8 yo.py",
+        "color": "#48a88d",
+        "width": 5.28,
+        "arrows": "to",
+        "title": "Diagnosis Status → Treatment Access\nSign: +\nStrength: 0.88\nDiagnosis strongly opens structured treatment pathways for children in 2026.\nAuthored model; scientific validation pending\nEvidence: Not yet reviewed",
+        "evidence_quality": "Not yet reviewed",
+        "evidence_summary": "No literature source has been attached to this authored relationship yet.",
+        "citations": []
+      }
+    },
+    {
+      "edge_id": "e_39250567215b8b8e",
+      "title": "A conversation about one option",
+      "narration": "In the next scene, Mira and her father bring their questions to a conversation about medication. They return to an ordinary goal instead of treating the word ‘treatment’ as an ending. What might support mean for the wish to finish the story she is writing about a fox who steals the moon? They ask what the conversation should take into account and what they would want to understand before a decision. The appointment becomes a place for those questions. The next page of the story stays open.",
+      "relationship": {
+        "id": "e_39250567215b8b8e",
+        "from": "Treatment Access",
+        "to": "Medication Treatment",
+        "sign": "+",
+        "strength": 0.88,
+        "explanation": "Treatment access makes medication treatment highly likely when clinically appropriate.",
+        "evidence_status": "Guideline context; not edge-specific",
+        "source_file": "2026_8 yo.py",
+        "color": "#48a88d",
+        "width": 5.28,
+        "arrows": "to",
+        "title": "Treatment Access → Medication Treatment\nSign: +\nStrength: 0.88\nTreatment access makes medication treatment highly likely when clinically appropriate.\nAuthored model; scientific validation pending\nEvidence: Guideline context; not edge-specific",
+        "evidence_quality": "Guideline context; not edge-specific",
+        "evidence_summary": "The guideline recommends medication for appropriate pediatric age groups within a treatment plan. It does not establish that access alone produces medication treatment or validate the authored weight.",
+        "citations": [
+          {
+            "title": "Clinical Practice Guideline for the Diagnosis, Evaluation, and Treatment of ADHD in Children and Adolescents",
+            "authors": "Wolraich et al.",
+            "year": 2019,
+            "type": "Clinical practice guideline",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/31570648/",
+            "doi": "10.1542/peds.2019-2528"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "e_38f8f62026976763",
+      "title": "What would a change feel like?",
+      "narration": "The conversation about medication treatment returns to the moments that made Mira ask for help. Staying with an idea, finding the place where a task was interrupted, and returning to it become questions they can put into words. A broad description becomes a handful of recognizable moments. They talk about what they would want to notice if the symptom burden changed, keeping their questions close to the experience that began the conversation.",
+      "relationship": {
+        "id": "e_38f8f62026976763",
+        "from": "Medication Treatment",
+        "to": "Symptom Severity",
+        "sign": "-",
+        "strength": 0.78,
+        "explanation": "Medication can substantially reduce childhood symptom burden.",
+        "evidence_status": "Direct trial evidence; population-specific",
+        "source_file": "2026_8 yo.py",
+        "color": "#cf7b8a",
+        "width": 4.68,
+        "arrows": "to",
+        "title": "Medication Treatment → Symptom Severity\nSign: -\nStrength: 0.78\nMedication can substantially reduce childhood symptom burden.\nAuthored model; scientific validation pending\nEvidence: Direct trial evidence; population-specific",
+        "evidence_quality": "Direct trial evidence; population-specific",
+        "evidence_summary": "The MTA randomized trial compared medication management, behavioral treatment, combined treatment, and community care in children. Its findings are relevant to medication and ADHD symptoms but do not validate this graph weight across years and ages.",
+        "citations": [
+          {
+            "title": "A 14-month randomized clinical trial of treatment strategies for attention-deficit/hyperactivity disorder",
+            "authors": "MTA Cooperative Group",
+            "year": 1999,
+            "type": "Randomized clinical trial",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/10591283/",
+            "doi": "10.1001/archpsyc.56.12.1073"
+          }
+        ]
+      }
+    },
+    {
+      "edge_id": "e_03ee224f9c6d111f",
+      "title": "Bring the question back to the day",
+      "narration": "Mira brings the conversation about symptom severity back to the kitchen table. The discussion becomes more specific: which parts of an ordinary day feel difficult, and how do those difficulties interrupt something that matters? The wish to finish the story she is writing about a fox who steals the moon gives the question a concrete shape. This is where the route moves toward everyday functioning. The discussion moves beyond naming concerns to asking what they interrupt: participation, a task, an idea that the character wants to carry through.",
+      "relationship": {
+        "id": "e_03ee224f9c6d111f",
+        "from": "Symptom Severity",
+        "to": "Functional Impairment",
+        "sign": "+",
+        "strength": 0.84,
+        "explanation": "More severe symptoms increase impairment.",
+        "evidence_status": "Not yet reviewed",
+        "source_file": "2026_8 yo.py",
+        "color": "#48a88d",
+        "width": 5.04,
+        "arrows": "to",
+        "title": "Symptom Severity → Functional Impairment\nSign: +\nStrength: 0.84\nMore severe symptoms increase impairment.\nAuthored model; scientific validation pending\nEvidence: Not yet reviewed",
+        "evidence_quality": "Not yet reviewed",
+        "evidence_summary": "No literature source has been attached to this authored relationship yet.",
+        "citations": []
+      }
+    },
+    {
+      "edge_id": "e_40a1ccb0a6c5c1ad",
+      "title": "An ending worth reaching",
+      "narration": "The questions about functional impairment bring us back to the fox and the missing moon. Mira's goal has stayed with the story even as the conversation moved through several different concepts. The destination is a day with room for the things the character cares about. There is still a project on the table and a future to work out. The story arrives here because the goal was always larger than a label or an appointment: making room for an ordinary life that feels meaningful to the person living it.",
+      "relationship": {
+        "id": "e_40a1ccb0a6c5c1ad",
+        "from": "Functional Impairment",
+        "to": "Quality of Life",
+        "sign": "-",
+        "strength": 0.86,
+        "explanation": "Impairment reduces quality of life.",
+        "evidence_status": "Not yet reviewed",
+        "source_file": "2026_8 yo.py",
+        "color": "#cf7b8a",
+        "width": 5.16,
+        "arrows": "to",
+        "title": "Functional Impairment → Quality of Life\nSign: -\nStrength: 0.86\nImpairment reduces quality of life.\nAuthored model; scientific validation pending\nEvidence: Not yet reviewed",
+        "evidence_quality": "Not yet reviewed",
+        "evidence_summary": "No literature source has been attached to this authored relationship yet.",
+        "citations": []
+      }
+    }
+  ],
+  "created_at": "2026-10-15T17:14:21.039345+00:00",
+  "elapsed_seconds": 45.4,
+  "validation": "Route order, relationship references and numeric literals checked. Fictional narration requires human review."
+}

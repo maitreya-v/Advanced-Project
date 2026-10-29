@@ -38,7 +38,7 @@ The main `Dashboard.py` also displays these reports when 2026 and age 8, 32 or 4
 
 `review_evidence.py` contains manually selected quotations and source-scope notes. `review_rules.py` explicitly maps every original graph edge to a judgment. Unmatched constructs fail rather than receiving an automatic status. `reviewed_decisions.json` records the reviewed graph bytes/edges and corpus hash.
 
-Each age folder contains `validated_graph.html`, `edge_validation.xlsx`, `edge_validation.json`, `original_edges.json`, `manifest.json`, `supplied_papers.json`, `full_text_review.json`, `verification.json`, and reproduction entrypoints. Its `full_texts` directory is a relative link to the original supplied folder, avoiding three duplicate copies. Keep the age folders beside `2026 ADHD Papers` to preserve PDF links.
+Each age folder contains `validated_graph.html`, `edge_validation.xlsx`, `edge_validation.json`, `original_edges.json`, `manifest.json`, `supplied_papers.json`, `full_text_review.json`, `verification.json`, and reproduction entrypoints. PDF references point directly to `../2026 ADHD Papers/`, avoiding directory links and duplicate copies. Keep the age folders beside `2026 ADHD Papers` to preserve PDF links on Windows, macOS and Linux.
 
 To rebuild existing reviewed outputs from the project root:
 

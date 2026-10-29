@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+*{box-sizing:border-box}body{margin:0;background:#fff;color:#24344a;font:14px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+button{font:inherit;cursor:pointer;border:1px solid #d9e2eb;background:white;color:#40536a;border-radius:8px;padding:9px 13px;transition:background .15s}
+button:hover{background:#edf4f6}button:focus-visible{outline:3px solid #4498bd;outline-offset:2px}button:disabled{opacity:.35;cursor:default}
+.player{border:1px solid #dae3eb;border-radius:16px;overflow:hidden;background:#fff}.toolbar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 18px;background:#f8fafc;border-bottom:1px solid #e3eaf0}
+.tabs,.zoom,.steps{display:flex;gap:6px;align-items:center;flex-wrap:wrap}.tabs button.active{background:#173f4f;border-color:#173f4f;color:white}.tabs button{font-size:12px;padding:7px 12px}
+.eyebrow{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#738599;font-weight:700}.layout{display:grid;grid-template-columns:minmax(0,1fr) 350px;min-height:500px}
+.graph-wrap{position:relative;background:radial-gradient(ellipse at 40% 40%,#fff 30%,#f4f7fa);border-right:1px solid #e3eaf0}#graph{height:500px;width:100%}
+.zoom{position:absolute;left:16px;top:16px;z-index:2}.zoom button{padding:6px 11px;background:#ffffffed;font-size:12px;box-shadow:0 2px 6px #24344a0a}
+.legend{position:absolute;left:16px;right:16px;bottom:12px;display:flex;gap:16px;flex-wrap:wrap;font-size:11px;color:#64778d;pointer-events:none;background:#ffffffdd;border-radius:7px;padding:8px 10px}
+.line{display:inline-block;width:17px;border-top:3px solid #48a88d;margin-right:5px;vertical-align:middle}.line.minus{border-color:#cf7b8a}.line.earlier{border-top:2px dashed #91a0b0}
+.panel{padding:24px 23px;max-height:500px;overflow:auto}h2{font-size:23px;line-height:1.25;letter-spacing:-.65px;margin:14px 0 15px;color:#173f4f}p{line-height:1.65;margin:0 0 17px}#narration{font-size:15px;color:#4b5f73}.tag{display:inline-block;border:1px solid #d3e6e7;color:#28717b;background:#f0f8f8;padding:4px 8px;border-radius:6px;font-size:10px;text-transform:uppercase;letter-spacing:.8px}
+.source-note{font-size:11px;color:#8290a0;line-height:1.5;margin-top:16px}.fact-box{border-left:3px solid #64a6ad;background:#f4f8fa;padding:11px 12px;font-size:12px;line-height:1.65;margin:12px 0}details{border-top:1px solid #e6edf2;padding-top:12px;margin-top:15px}summary{font-size:12px;font-weight:600;cursor:pointer;color:#456477}.evidence{font-size:11px;line-height:1.55;border-bottom:1px solid #edf0f4;padding:9px 0}.evidence b{display:block;font-size:12px;color:#34495f}.evidence small{display:block;color:#8593a4;margin-top:4px}.evidence-label{display:inline-block;margin:6px 0 3px;padding:2px 6px;border-radius:5px;background:#eef4f5;color:#386f76;font-size:10px;font-weight:700}.citation{display:block;color:#246b85;margin-top:5px;text-decoration:none}.citation:hover{text-decoration:underline}
+.nav{border-top:1px solid #e3eaf0;padding:14px 18px;display:flex;justify-content:space-between;gap:12px;align-items:center}.steps button{width:28px;height:28px;padding:0;border-radius:50%;font-size:11px}.steps button.active{background:#28717b;color:white;border-color:#28717b}#next{background:#173f4f;color:white;border-color:#173f4f}.nav-buttons{display:flex;gap:7px}.nav-buttons button{font-size:12px}.stat-grid{display:flex;gap:10px;margin:18px 0}.stat{flex:1;background:#f4f8fa;border-radius:8px;padding:12px 8px;text-align:center}.stat b{display:block;font-size:24px;color:#28717b;margin-bottom:4px}.stat span{font-size:10px;color:#6b7e92}
+.recap-item{font-size:12px;line-height:1.6;padding:8px 0;border-bottom:1px solid #e6edf2}.vis-tooltip{position:absolute;visibility:hidden;padding:9px 12px;white-space:pre-wrap;max-width:350px;background:#fff;border:1px solid #d0dbe5;border-radius:8px;box-shadow:0 4px 16px #24344a22;font:12px/1.5 sans-serif;z-index:10;pointer-events:none}
+@media(max-width:760px){.layout{grid-template-columns:1fr}.graph-wrap{border-right:0;border-bottom:1px solid #e3eaf0}#graph{height:340px}.panel{max-height:350px;padding:18px}.toolbar{padding:10px;flex-wrap:wrap}.nav{padding:10px}.steps{gap:3px}.nav-buttons button{padding:7px}.legend{font-size:10px;gap:8px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+<script>/* VIS_LIBRARY */</script></head><body>
+<main class="player" aria-label="Interactive graph story">
+  <div class="toolbar"><div><div class="eyebrow" style="margin-bottom:5px">Snapshot on canvas</div><div class="tabs"><button id="before"></button><button id="after"></button></div></div><span class="tag" id="origin"></span></div>
+  <div class="layout"><div class="graph-wrap"><div class="zoom"><button id="zoom-in" aria-label="Zoom in">＋</button><button id="zoom-out" aria-label="Zoom out">−</button><button id="fit">Fit graph</button><button id="focus">Focus scene</button></div><div id="graph" aria-label="ADHD relationship graph"></div><div class="legend"><span><i class="line"></i>Positive sign</span><span><i class="line minus"></i>Negative sign</span><span><i class="line earlier"></i>Other snapshot</span><span>Width = modeled strength</span></div></div>
+    <article class="panel" aria-live="polite"><div class="eyebrow" id="chapter"></div><h2 id="title"></h2><p id="narration"></p><div id="content"></div><details id="evidence-details"><summary>Inspect supporting relationships and citations</summary><div id="evidence"></div></details><details id="ranking-details"><summary>Why this scene?</summary><p id="reason" class="source-note"></p></details><p class="source-note">Edge signs and weights describe the authored model. Citation labels describe source relevance; they do not validate the edge direction or weight.</p></article>
+  </div>
+  <div class="nav"><div class="steps" id="steps" aria-label="Story chapters"></div><div class="nav-buttons"><button id="back">← Back</button><button id="next">Start story →</button></div></div>
+</main>
+<script>
+const DATA = /* STORY_DATA */;
+const story=DATA.story, $=id=>document.getElementById(id);
+const reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const explorerOnly=story.presentation==='explorer';
+let index=-1, side='after';
+const union=new Map([...DATA.before.nodes,...DATA.after.nodes].map(n=>[n.id,n]));
+const nodes=new vis.DataSet(), edges=new vis.DataSet();
+const network=new vis.Network($('graph'),{nodes,edges},{layout:{improvedLayout:false},physics:false,interaction:{dragNodes:false,hover:true,zoomView:true},nodes:{shape:'dot'},edges:{smooth:false,font:{size:10,align:'middle'},selectionWidth:0,hoverWidth:0}});
+const snapshotLabel=s=>`${s.year} · age ${s.age}`;
+$('before').textContent=snapshotLabel(DATA.before);$('after').textContent=snapshotLabel(DATA.after);
+$('origin').textContent=explorerOnly?'Explorer':story.origin==='local-qwen'?'Qwen · local AI':'Rule-based story';
+if(explorerOnly){document.querySelector('.panel').hidden=true;document.querySelector('.nav').hidden=true;document.querySelector('.layout').style.gridTemplateColumns='1fr';document.querySelector('.graph-wrap').style.borderRight='0';$('graph').style.height='620px';}
+function element(tag,text,cls){const el=document.createElement(tag);if(text!==undefined)el.textContent=text;if(cls)el.className=cls;return el;}
+function currentScene(){return index>=0&&index<story.scenes.length?story.scenes[index]:null;}
+function fit(focused=true){const scene=currentScene();const target=focused&&scene?scene.focus_nodes:nodes.getIds();network.fit({nodes:target,animation:reduceMotion?false:{duration:450,easingFunction:'easeInOutQuad'}});}
+function draw(){
+ const scene=currentScene(), snapshot=DATA[side], others=DATA[side==='after'?'before':'after'];
+ const activeNodes=new Set(scene?scene.focus_nodes:[]);
+ const activeEdges=new Set(scene?[...scene.before_edge_ids,...scene.after_edge_ids]:[]);
+ const visibleNodes=new Set(snapshot.nodes.map(n=>n.id));
+ if(scene)scene.focus_nodes.forEach(n=>visibleNodes.add(n));
+ nodes.clear();edges.clear();
+ nodes.add([...union.values()].filter(n=>visibleNodes.has(n.id)).map(n=>{
+   const active=!scene||activeNodes.has(n.id), present=snapshot.nodes.some(x=>x.id===n.id);
+   return {...n,label:active&&(scene||explorerOnly||n.domain==='core')?n.label:'',color:{background:active?'#f6fafb':'#f4f6f8',border:active?n.color.border:'#e0e6ed'},font:{color:active?'#34495f':'#cbd4dd',size:13},borderWidth:active?3:1,opacity:present?1:.55,shadow:scene&&active?{enabled:true,color:'#4b9aa844',size:14,x:0,y:0}:false};
+ }));
+ const presentEdges=new Set(snapshot.edges.map(e=>e.id));
+ const shown=snapshot.edges.map(e=>({...e,ghost:false}));
+ if(scene)others.edges.filter(e=>activeEdges.has(e.id)&&!presentEdges.has(e.id)).forEach(e=>shown.push({...e,ghost:true}));
+ edges.add(shown.map(e=>{
+   const active=!scene||activeEdges.has(e.id);
+   return {...e,label:e.ghost?'Other snapshot':'',dashes:e.ghost,hidden:false,
+    color:{color:e.color,highlight:e.color,hover:e.color,opacity:active?(e.ghost?.55:.95):.10},
+    shadow:scene&&active&&!e.ghost?{enabled:true,color:'#4b9aa855',size:10,x:0,y:0}:false,
+    title:(e.ghost?'Shown for comparison from the other snapshot.\n':'')+e.title};
+ }));
+ $('before').classList.toggle('active',side==='before');$('after').classList.toggle('active',side==='after');
+ $('before').setAttribute('aria-pressed',side==='before');$('after').setAttribute('aria-pressed',side==='after');
+ fit(true);
+}
+function update(){
+ const scene=currentScene(), overview=index===-1, recap=index===story.scenes.length;
+ $('chapter').textContent=overview?'The overview':recap?'Your takeaways':`Scene ${index+1} of ${story.scenes.length} · ${scene.fact.kind.replaceAll('_',' ')}`;
+ $('title').textContent=overview?(story.opening?.title||story.title):recap?(story.closing?.title||'Return to the whole picture'):scene.title;
+ $('content').replaceChildren();$('evidence').replaceChildren();
+ $('evidence-details').hidden=!scene;$('ranking-details').hidden=!scene;
+ if(overview){
+  $('narration').textContent=story.opening?.narration||(story.comparison.mode==='historical'?`Compare ${DATA.before.year} with ${DATA.after.year}, keeping age ${DATA.after.age} fixed. Follow selected changes, then explore the relationships behind each scene.`:`Compare age ${DATA.before.age} with age ${DATA.after.age} in ${DATA.after.year}. These are separate age scenarios, not a single person's history.`);
+  const grid=element('div',undefined,'stat-grid');
+  [['added','New edges'],['removed','Absent edges'],['changed','Changed weights / signs']].forEach(([key,label])=>{const stat=element('div',undefined,'stat');stat.append(element('b',String(story.comparison[key].length)),element('span',label));grid.append(stat);});$('content').append(grid);
+  $('content').append(element('p','Use the snapshot buttons to compare the two graphs at any point. Highlighting guides attention; it does not change edge strength.','source-note'));
+ }else if(recap){
+  $('narration').textContent=story.closing?.narration||'These are selected differences in the authored model. Explore either snapshot or revisit a scene to inspect its supporting relationships.';
+  story.scenes.forEach((s,i)=>$('content').append(element('div',`${i+1}. ${s.title}`,'recap-item')));
+ }else{
+  $('narration').textContent=scene.narration;
+  if(scene.narration!==scene.fact.claim)$('content').append(element('div',scene.fact.claim,'fact-box'));
+  $('reason').textContent=scene.fact.rank_reason+'. The director can reorder ranked facts for coverage and flow. This is an editorial score, not scientific confidence.';
+  const labels=story.comparison.mode==='historical'?[String(DATA.before.year),String(DATA.after.year)]:[`Age ${DATA.before.age}`,`Age ${DATA.after.age}`];
+  [[labels[0],scene.fact.before_edges],[labels[1],scene.fact.after_edges]].forEach(([label,items])=>{
+   if(!items.length)$('evidence').append(element('div',label+': selected relationship absent from this snapshot.','evidence'));
+   items.forEach(e=>{const row=element('div',undefined,'evidence');row.append(element('b',`${label}: ${e.from} → ${e.to}`),element('div',`Sign ${e.sign} · modeled strength ${e.strength.toFixed(2)}`),element('div',e.explanation),element('span',e.evidence_quality||e.evidence_status||'Not yet reviewed','evidence-label'),element('div',e.evidence_summary||'No literature source has been attached yet.'),element('small',`Graph source: ${e.source_file}`));(e.citations||[]).forEach(c=>{const link=element('a',`${c.authors} (${c.year}). ${c.title}`,'citation');link.href=c.url;link.target='_blank';link.rel='noopener noreferrer';row.append(link);});$('evidence').append(row);});
+  });
+ }
+ $('back').disabled=overview;$('next').textContent=overview?'Start story →':recap?'Replay ↺':'Next →';
+ [...$('steps').children].forEach((b,i)=>{b.classList.toggle('active',i===index+1);b.setAttribute('aria-current',i===index+1?'step':'false');});
+ draw();
+}
+['Overview',...story.scenes.map((_,i)=>`Scene ${i+1}`),'Recap'].forEach((label,i)=>{const b=element('button',i===0?'•':i===story.scenes.length+1?'✓':String(i));b.title=label;b.setAttribute('aria-label',label);b.addEventListener('click',()=>{index=i-1;update();});$('steps').append(b);});
+$('back').onclick=()=>{index=Math.max(-1,index-1);update();};$('next').onclick=()=>{index=index===story.scenes.length?-1:index+1;update();};
+$('before').onclick=()=>{side='before';draw();};$('after').onclick=()=>{side='after';draw();};
+$('fit').onclick=()=>fit(false);$('focus').onclick=()=>fit(true);
+$('zoom-in').onclick=()=>network.moveTo({scale:Math.min(3,network.getScale()*1.3)});$('zoom-out').onclick=()=>network.moveTo({scale:Math.max(.1,network.getScale()/1.3)});
+document.addEventListener('keydown',e=>{if(e.target.tagName==='INPUT')return;if(e.key==='ArrowRight')$('next').click();if(e.key==='ArrowLeft')$('back').click();});
+update();
+</script></body></html>
